@@ -6,8 +6,6 @@
 //
 //----------------------------------------
 
-//go:build !memorydll
-
 package api
 
 import (

@@ -6,9 +6,7 @@
 //
 //----------------------------------------
 
-//go:build !tempdll && !memorydll
-
-// 指令为：!tempdll && !memorydll
+//go:build !tempdll
 
 package api
 
