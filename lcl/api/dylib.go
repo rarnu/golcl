@@ -38,6 +38,10 @@ var (
 
 func getDLLName() string {
 	libName := "liblcl"
+	if runtime.GOARCH == "arm64" {
+		// 对于 aarch64，加个后缀来区分
+		libName += "a"
+	}
 	if ext, ok := platformExtNames[runtime.GOOS]; ok {
 		return libName + ext
 	}

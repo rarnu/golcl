@@ -31,7 +31,7 @@ func loadUILib() *dylib.LazyDLL {
 	}
 	if getLibType(lib) != 1 {
 		// 当前已经不再支持VCL库了
-		panic("The VCL library is no longer supported. If necessary, please use the last code that supports VCL version: https://github.com/ying32/govcl/tree/last-vcl-support.")
+		panic("The VCL library is not supported.")
 	}
 	return lib
 }
