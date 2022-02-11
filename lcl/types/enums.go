@@ -2308,3 +2308,177 @@ const (
 	PcfComponent
 	PcfCustomData
 )
+
+type TSynEditorOptions TSet
+
+type TSynEditorOption int32
+
+const (
+	eoAutoIndent = iota + 0
+	eoBracketHighlight
+	eoEnhanceHomeKey
+	eoGroupUndo
+	eoHalfPageScroll
+	eoHideRightMargin
+	eoKeepCaretX
+	eoNoCaret
+	eoNoSelection
+	eoPersistentCaret
+	eoScrollByOneLess
+	eoScrollPastEof
+	eoScrollPastEol
+	eoScrollHintFollows
+	eoShowScrollHint
+	eoShowSpecialChars
+	eoSmartTabs
+	eoTabIndent
+	eoTabsToSpaces
+	eoTrimTrailingSpaces
+	eoAutoSizeMaxScrollWidth
+	eoDisableScrollArrows
+	eoHideShowScrollbars
+	eoDropFiles
+	eoSmartTabDelete
+	eoSpacesToTabs
+	eoAutoIndentOnPaste
+	eoAltSetsColumnMode
+	eoDragDropEditing
+	eoRightMouseMovesCursor
+	eoDoubleClickSelectsLine
+	eoShowCtrlMouseLinks
+)
+
+type TSynEditorOptions2 TSet
+
+type TSynEditorOption2 int32
+
+const (
+	eoCaretSkipsSelection = iota + 0
+	eoCaretMoveEndsSelection
+	eoCaretSkipTab
+	eoAlwaysVisibleCaret
+	eoEnhanceEndKey
+	eoFoldedCopyPaste
+	eoPersistentBlock
+	eoOverwriteBlock
+	eoAutoHideCursor
+	eoColorSelectionTillEol
+	eoPersistentCaretStopBlink
+	eoNoScrollOnSelectRange
+	eoAcceptDragDropEditing
+)
+
+type TSynEditorMouseOptions TSet
+
+type TSynEditorMouseOption int32
+
+const (
+	emUseMouseActions = iota + 0
+	emAltSetsColumnMode
+	emDragDropEditing
+	emRightMouseMovesCursor
+	emDoubleClickSelectsLine
+	emShowCtrlMouseLinks
+	emCtrlWheelZoom
+)
+
+type TSynVisibleSpecialChars TSet
+
+type TSynVisibleSpecialChar int32
+
+const (
+	vscSpace = iota + 0
+	vscTabAtFirst
+	vscTabAtLast
+)
+
+type TSynCompletionLongHintType int32
+
+const (
+	sclpNone = iota + 0
+	sclpExtendRightOnly
+	sclpExtendHalfLeft
+	sclpExtendUnlimitedLeft
+)
+
+type TSynLineStyle int32
+
+const (
+	slsSolid = iota + 0
+	slsDashed
+	slsDotted
+	slsWaved
+)
+
+type TSynFrameEdges int32
+
+const (
+	sfeNone = iota + 0
+	sfeAround
+	sfeBottom
+	sfeLeft
+)
+
+type TPascalCompilerMode int32
+
+const (
+	pcmObjFPC = iota + 0
+	pcmDelphi
+	pcmFPC
+	pcmTP
+	pcmGPC
+	pcmMacPas
+)
+
+type TSynPasStringMode int32
+
+const (
+	spsmDefault = iota + 0
+	spsmStringOnly
+	spsmNone
+)
+
+type CommentStyles TSet
+
+type TCommentStyle int32
+
+const (
+	csAnsiStyle = iota + 0
+	csPasStyle
+	csCStyle
+	csAsmStyle
+	csBasStyle
+	csVBStyle
+)
+
+type TStringDelim int32
+
+const (
+	sdSingleQuote = iota + 0
+	sdDoubleQuote
+)
+
+type TSynHTMLSynMode int32
+
+const (
+	shmHtml = iota + 0
+	shmXHtml
+)
+
+type TSQLDialect int32
+
+const (
+	sqlStandard = iota + 0
+	sqlInterbase6
+	sqlMSSQL7
+	sqlMySQL
+	sqlOracle
+	sqlSybase
+	sqlIngres
+	sqlMSSQL2K
+	sqlPostgres
+	sqlSQLite
+	sqlFirebird25
+	sqlFirebird30
+	sqlFirebird40
+)

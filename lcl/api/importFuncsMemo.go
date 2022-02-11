@@ -99,7 +99,7 @@ func Memo_Invalidate(obj uintptr) {
 }
 
 func Memo_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("Memo_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	getLazyProc("Memo_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func Memo_RemoveControl(obj uintptr, AControl uintptr) {
