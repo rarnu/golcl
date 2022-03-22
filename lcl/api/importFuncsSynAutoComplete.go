@@ -27,6 +27,79 @@ func SynAutoComplete_StaticClassType() TClass {
 	return TClass(r)
 }
 
+func SynAutoComplete_ClassName(obj uintptr) string {
+	r, _, _ := getLazyProc("SynAutoComplete_ClassName").Call(obj)
+	return DStrToGoStr(r)
+}
+
+func SynAutoComplete_GetHashCode(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynAutoComplete_GetHashCode").Call(obj)
+	return int32(r)
+}
+
+func SynAutoComplete_Equals(obj uintptr, other uintptr) bool {
+	r, _, _ := getLazyProc("SynAutoComplete_Equals").Call(obj, other)
+	return DBoolToGoBool(r)
+}
+
+func SynAutoComplete_ClassType(obj uintptr) TClass {
+	r, _, _ := getLazyProc("SynAutoComplete_ClassType").Call(obj)
+	return TClass(r)
+}
+
+func SynAutoComplete_InstanceSize(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynAutoComplete_InstanceSize").Call(obj)
+	return int32(r)
+}
+
+func SynAutoComplete_InheritsFrom(obj uintptr, classType TClass) bool {
+	r, _, _ := getLazyProc("SynAutoComplete_InheritsFrom").Call(obj, uintptr(classType))
+	return DBoolToGoBool(r)
+}
+
+func SynAutoComplete_FindComponent(obj uintptr, AName string) uintptr {
+	r, _, _ := getLazyProc("SynAutoComplete_FindComponent").Call(obj, GoStrToDStr(AName))
+	return r
+}
+
+func SynAutoComplete_GetNamePath(obj uintptr) string {
+	r, _, _ := getLazyProc("SynAutoComplete_GetNamePath").Call(obj)
+	return DStrToGoStr(r)
+}
+
+func SynAutoComplete_HasParent(obj uintptr) bool {
+	r, _, _ := getLazyProc("SynAutoComplete_HasParent").Call(obj)
+	return DBoolToGoBool(r)
+}
+
+func SynAutoComplete_Assign(obj uintptr, Source uintptr) {
+	_, _, _ = getLazyProc("SynAutoComplete_Assign").Call(obj, Source)
+}
+
+func SynAutoComplete_ComponentCount(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynAutoComplete_GetComponentCount").Call(obj)
+	return int32(r)
+}
+
+func SynAutoComplete_ComponentIndex(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynAutoComplete_GetComponentIndex").Call(obj)
+	return int32(r)
+}
+
+func SynAutoComplete_SetComponentIndex(obj uintptr, index int32) {
+	_, _, _ = getLazyProc("SynAutoComplete_SetComponentIndex").Call(obj, uintptr(index))
+}
+
+func SynAutoComplete_Components(obj uintptr, index int32) uintptr {
+	r, _, _ := getLazyProc("SynAutoComplete_GetComponents").Call(obj, uintptr(index))
+	return r
+}
+
+func SynAutoComplete_Owner(obj uintptr) uintptr {
+	r, _, _ := getLazyProc("SynAutoComplete_GetOwner").Call(obj)
+	return r
+}
+
 func SynAutoComplete_GetEditor(obj uintptr) uintptr {
 	r, _, _ := getLazyProc("SynAutoComplete_GetEditor").Call(obj)
 	return r
@@ -72,11 +145,11 @@ func SynAutoComplete_SetShortCut(obj uintptr, value TShortCut) {
 	_, _, _ = getLazyProc("SynAutoComplete_SetShortCut").Call(obj, uintptr(value))
 }
 
-func SynAutoComplete_GetTag(obj uintptr) int32 {
+func SynAutoComplete_GetTag(obj uintptr) int {
 	r, _, _ := getLazyProc("SynAutoComplete_GetTag").Call(obj)
-	return int32(r)
+	return int(r)
 }
 
-func SynAutoComplete_SetTag(obj uintptr, value int32) {
+func SynAutoComplete_SetTag(obj uintptr, value int) {
 	_, _, _ = getLazyProc("SynAutoComplete_SetTag").Call(obj, uintptr(value))
 }

@@ -31,13 +31,13 @@ func SynCompletion_SetCaseSensitive(obj uintptr, value bool) {
 	_, _, _ = getLazyProc("SynCompletion_SetCaseSensitive").Call(obj, GoBoolToDBool(value))
 }
 
-func SynCompletion_GetDoubleClickSelectsAll(obj uintptr) bool {
-	r, _, _ := getLazyProc("SynCompletion_GetDoubleClickSelectsAll").Call(obj)
+func SynCompletion_GetDoubleClickSelects(obj uintptr) bool {
+	r, _, _ := getLazyProc("SynCompletion_GetDoubleClickSelects").Call(obj)
 	return DBoolToGoBool(r)
 }
 
-func SynCompletion_SetDoubleClickSelectsAll(obj uintptr, value bool) {
-	_, _, _ = getLazyProc("SynCompletion_SetDoubleClickSelectsAll").Call(obj, GoBoolToDBool(value))
+func SynCompletion_SetDoubleClickSelects(obj uintptr, value bool) {
+	_, _, _ = getLazyProc("SynCompletion_SetDoubleClickSelects").Call(obj, GoBoolToDBool(value))
 }
 
 func SynCompletion_GetEditor(obj uintptr) uintptr {
@@ -148,22 +148,22 @@ func SynCompletion_SetShowSizeDrag(obj uintptr, value bool) {
 	_, _, _ = getLazyProc("SynCompletion_SetShowSizeDrag").Call(obj, GoBoolToDBool(value))
 }
 
-func SynCompletion_GetTag(obj uintptr) int32 {
+func SynCompletion_GetTag(obj uintptr) int {
 	r, _, _ := getLazyProc("SynCompletion_GetTag").Call(obj)
-	return int32(r)
+	return int(r)
 }
 
-func SynCompletion_SetTag(obj uintptr, value int32) {
+func SynCompletion_SetTag(obj uintptr, value int) {
 	_, _, _ = getLazyProc("SynCompletion_SetTag").Call(obj, uintptr(value))
 }
 
-func SynCompletion_GetToggleReplaceWholeWord(obj uintptr) bool {
-	r, _, _ := getLazyProc("SynCompletion_GetToggleReplaceWholeWord").Call(obj)
+func SynCompletion_GetToggleReplaceWhole(obj uintptr) bool {
+	r, _, _ := getLazyProc("SynCompletion_GetToggleReplaceWhole").Call(obj)
 	return DBoolToGoBool(r)
 }
 
-func SynCompletion_SetToggleReplaceWholeWord(obj uintptr, value bool) {
-	_, _, _ = getLazyProc("SynCompletion_SetToggleReplaceWholeWord").Call(obj, GoBoolToDBool(value))
+func SynCompletion_SetToggleReplaceWhole(obj uintptr, value bool) {
+	_, _, _ = getLazyProc("SynCompletion_SetToggleReplaceWhole").Call(obj, GoBoolToDBool(value))
 }
 
 func SynCompletion_GetWidth(obj uintptr) int32 {
@@ -219,4 +219,77 @@ func SynCompletion_IsActive(obj uintptr) bool {
 func SynCompletion_StaticClassType() TClass {
 	r, _, _ := getLazyProc("SynCompletion_StaticClassType").Call()
 	return TClass(r)
+}
+
+func SynCompletion_ClassName(obj uintptr) string {
+	r, _, _ := getLazyProc("SynCompletion_ClassName").Call(obj)
+	return DStrToGoStr(r)
+}
+
+func SynCompletion_GetHashCode(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynCompletion_GetHashCode").Call(obj)
+	return int32(r)
+}
+
+func SynCompletion_Equals(obj uintptr, other uintptr) bool {
+	r, _, _ := getLazyProc("SynCompletion_Equals").Call(obj, other)
+	return DBoolToGoBool(r)
+}
+
+func SynCompletion_ClassType(obj uintptr) TClass {
+	r, _, _ := getLazyProc("SynCompletion_ClassType").Call(obj)
+	return TClass(r)
+}
+
+func SynCompletion_InstanceSize(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynCompletion_InstanceSize").Call(obj)
+	return int32(r)
+}
+
+func SynCompletion_InheritsFrom(obj uintptr, classType TClass) bool {
+	r, _, _ := getLazyProc("SynCompletion_InheritsFrom").Call(obj, uintptr(classType))
+	return DBoolToGoBool(r)
+}
+
+func SynCompletion_FindComponent(obj uintptr, AName string) uintptr {
+	r, _, _ := getLazyProc("SynCompletion_FindComponent").Call(obj, GoStrToDStr(AName))
+	return r
+}
+
+func SynCompletion_GetNamePath(obj uintptr) string {
+	r, _, _ := getLazyProc("SynCompletion_GetNamePath").Call(obj)
+	return DStrToGoStr(r)
+}
+
+func SynCompletion_HasParent(obj uintptr) bool {
+	r, _, _ := getLazyProc("SynCompletion_HasParent").Call(obj)
+	return DBoolToGoBool(r)
+}
+
+func SynCompletion_Assign(obj uintptr, Source uintptr) {
+	_, _, _ = getLazyProc("SynCompletion_Assign").Call(obj, Source)
+}
+
+func SynCompletion_ComponentCount(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynCompletion_GetComponentCount").Call(obj)
+	return int32(r)
+}
+
+func SynCompletion_ComponentIndex(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynCompletion_GetComponentIndex").Call(obj)
+	return int32(r)
+}
+
+func SynCompletion_SetComponentIndex(obj uintptr, index int32) {
+	_, _, _ = getLazyProc("SynCompletion_SetComponentIndex").Call(obj, uintptr(index))
+}
+
+func SynCompletion_Components(obj uintptr, index int32) uintptr {
+	r, _, _ := getLazyProc("SynCompletion_GetComponents").Call(obj, uintptr(index))
+	return r
+}
+
+func SynCompletion_Owner(obj uintptr) uintptr {
+	r, _, _ := getLazyProc("SynCompletion_GetOwner").Call(obj)
+	return r
 }

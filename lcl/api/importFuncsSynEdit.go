@@ -32,12 +32,16 @@ func SynEdit_CutToClipboard(obj uintptr) {
 	_, _, _ = getLazyProc("SynEdit_CutToClipboard").Call(obj)
 }
 
-func SynEdit_PastFromClipboard(obj uintptr) {
-	_, _, _ = getLazyProc("SynEdit_PastFromClipboard").Call(obj)
+func SynEdit_PasteFromClipboard(obj uintptr) {
+	_, _, _ = getLazyProc("SynEdit_PasteFromClipboard").Call(obj)
 }
 
 func SynEdit_Undo(obj uintptr) {
 	_, _, _ = getLazyProc("SynEdit_Undo").Call(obj)
+}
+
+func SynEdit_Redo(obj uintptr) {
+	_, _, _ = getLazyProc("SynEdit_Redo").Call(obj)
 }
 
 func SynEdit_SelectAll(obj uintptr) {
@@ -160,9 +164,9 @@ func SynEdit_Hide(obj uintptr) {
 	_, _, _ = getLazyProc("SynEdit_Hide").Call(obj)
 }
 
-func SynEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) uintptr {
+func SynEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 	ret, _, _ := getLazyProc("SynEdit_Perform").Call(obj, uintptr(Msg), WParam, uintptr(LParam))
-	return ret
+	return int(ret)
 }
 
 func SynEdit_Refresh(obj uintptr) {
@@ -189,12 +193,12 @@ func SynEdit_Show(obj uintptr) {
 	_, _, _ = getLazyProc("SynEdit_Show").Call(obj)
 }
 
-func SynEdit_GetTextBuffer(obj uintptr, Buffer *string, BufSize int32) int32 {
+func SynEdit_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
 	if Buffer == nil || BufSize == 0 {
 		return 0
 	}
 	strPtr := getBuff(BufSize)
-	ret, _, _ := getLazyProc("SynEdit_GetTextBuffer").Call(obj, getBuffPtr(strPtr), uintptr(BufSize))
+	ret, _, _ := getLazyProc("SynEdit_GetTextBuf").Call(obj, getBuffPtr(strPtr), uintptr(BufSize))
 	getTextBuf(strPtr, Buffer, int(ret))
 	return int32(ret)
 }
@@ -446,6 +450,15 @@ func SynEdit_SetHideSelection(obj uintptr, value bool) {
 	getLazyProc("SynEdit_SetHideSelection").Call(obj, GoBoolToDBool(value))
 }
 
+func SynEdit_GetLines(obj uintptr) uintptr {
+	ret, _, _ := getLazyProc("SynEdit_GetLines").Call(obj)
+	return ret
+}
+
+func SynEdit_SetLines(obj uintptr, value uintptr) {
+	getLazyProc("SynEdit_SetLines").Call(obj, value)
+}
+
 func SynEdit_GetParentColor(obj uintptr) bool {
 	ret, _, _ := getLazyProc("SynEdit_GetParentColor").Call(obj)
 	return DBoolToGoBool(ret)
@@ -498,6 +511,15 @@ func SynEdit_GetReadOnly(obj uintptr) bool {
 
 func SynEdit_SetReadOnly(obj uintptr, value bool) {
 	getLazyProc("SynEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
+}
+
+func SynEdit_GetScrollBars(obj uintptr) TScrollStyle {
+	ret, _, _ := getLazyProc("SynEdit_GetScrollBars").Call(obj)
+	return TScrollStyle(ret)
+}
+
+func SynEdit_SetScrollBars(obj uintptr, value TScrollStyle) {
+	_, _, _ = getLazyProc("SynEdit_SetScrollBars").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetShowHint(obj uintptr) bool {
@@ -615,6 +637,11 @@ func SynEdit_SetOnMouseUp(obj uintptr, fn interface{}) {
 
 func SynEdit_GetCanUndo(obj uintptr) bool {
 	ret, _, _ := getLazyProc("SynEdit_GetCanUndo").Call(obj)
+	return DBoolToGoBool(ret)
+}
+
+func SynEdit_GetCanRedo(obj uintptr) bool {
+	ret, _, _ := getLazyProc("SynEdit_GetCanRedo").Call(obj)
 	return DBoolToGoBool(ret)
 }
 

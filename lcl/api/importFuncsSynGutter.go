@@ -6,6 +6,40 @@ import (
 
 //--------------------------- TSynGutter ---------------------------
 
+func SynGutter_Free(obj uintptr) {
+	_, _, _ = getLazyProc("SynGutter_Free").Call(obj)
+}
+
+func SynGutter_ClassName(obj uintptr) string {
+	r, _, _ := getLazyProc("SynGutter_ClassName").Call(obj)
+	return DStrToGoStr(r)
+}
+
+func SynGutter_GetHashCode(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynGutter_GetHashCode").Call(obj)
+	return int32(r)
+}
+
+func SynGutter_Equals(obj, obj2 uintptr) bool {
+	r, _, _ := getLazyProc("SynGutter_Equals").Call(obj, obj2)
+	return DBoolToGoBool(r)
+}
+
+func SynGutter_ClassType(obj uintptr) TClass {
+	r, _, _ := getLazyProc("SynGutter_ClassType").Call(obj)
+	return TClass(r)
+}
+
+func SynGutter_InstanceSize(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynGutter_InstanceSize").Call(obj)
+	return int32(r)
+}
+
+func SynGutter_InheritsFrom(obj uintptr, AClass TClass) bool {
+	r, _, _ := getLazyProc("SynGutter_InheritsFrom").Call(obj, uintptr(AClass))
+	return DBoolToGoBool(r)
+}
+
 func SynGutter_GetAutoSize(obj uintptr) bool {
 	r, _, _ := getLazyProc("SynGutter_GetAutoSize").Call(obj)
 	return DBoolToGoBool(r)

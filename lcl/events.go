@@ -362,4 +362,13 @@ type TUserCheckBoxBitmapEvent func(sender IObject, aCol, aRow int32, CheckedStat
 type TValidateEntryEvent func(sender IObject, aCol, aRow int32, oldValue string, newValue *string)
 
 // TOnPrepareCanvasEvent = procedure(sender: TObject; aCol, aRow: Integer; aState: TGridDrawState) of object;
-type TOnPrepareCanvasEvent = func(sender IObject, aCol, aRow int32, aState TGridDrawState)
+type TOnPrepareCanvasEvent func(sender IObject, aCol, aRow int32, aState TGridDrawState)
+
+// TOnMouseLinkEvent = procedure(Sender: TObject; aX, aY: Integer; var aAllowMouseLink Boolean) of object;
+type TOnMouseLinkEvent func(sender IObject, aX, aY int32, aAllowMouseLink *bool)
+
+// TCodeCompletionEvent = procedure(var Value: string; SourceValue: string; var SourceStart, SourceEnd: TPoint; KeyChar: TUTF8Char; Shift: TShiftState) of object;
+type TCodeCompletionEvent func(value *string, sourceValue string, sourceStart *TPoint, sourceEnd *TPoint, keyChar string, shift TShiftState)
+
+// TSynBaseCompletionSearchPosition = procedure(var APosition :integer) of object;
+type TSynBaseCompletionSearchPosition func(aPosition *int32)

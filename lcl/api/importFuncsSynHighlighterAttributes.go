@@ -4,6 +4,40 @@ import (
 	. "github.com/rarnu/golcl/lcl/types"
 )
 
+func SynHighlighterAttributes_Equals(obj uintptr, obj2 uintptr) bool {
+	r, _, _ := getLazyProc("SynHighlighterAttributes_Equals").Call(obj, obj2)
+	return DBoolToGoBool(r)
+}
+
+func SynHighlighterAttributes_ClassType(obj uintptr) TClass {
+	r, _, _ := getLazyProc("SynHighlighterAttributes_ClassType").Call(obj)
+	return TClass(r)
+}
+
+func SynHighlighterAttributes_InstanceSize(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynHighlighterAttributes_InstanceSize").Call(obj)
+	return int32(r)
+}
+
+func SynHighlighterAttributes_InheritsFrom(obj uintptr, class TClass) bool {
+	r, _, _ := getLazyProc("SynHighlighterAttributes_InheritsFrom").Call(obj, uintptr(class))
+	return DBoolToGoBool(r)
+}
+
+func SynHighlighterAttributes_GetHashCode(obj uintptr) int32 {
+	r, _, _ := getLazyProc("SynHighlighterAttributes_GetHashCode").Call(obj)
+	return int32(r)
+}
+
+func SynHighlighterAttributes_Free(obj uintptr) {
+	_, _, _ = getLazyProc("SynHighlighterAttributes_Free").Call(obj)
+}
+
+func SynHighlighterAttributes_ClassName(obj uintptr) string {
+	r, _, _ := getLazyProc("SynHighlighterAttributes_ClassName").Call(obj)
+	return DStrToGoStr(r)
+}
+
 func SynHighlighterAttributes_StaticClassType() TClass {
 	r, _, _ := getLazyProc("SynHighlighterAttributes_StaticClassType").Call()
 	return TClass(r)
