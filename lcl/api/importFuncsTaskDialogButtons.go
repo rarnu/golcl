@@ -22,23 +22,23 @@ func TaskDialogButtons_Owner(obj uintptr) uintptr {
 }
 
 func TaskDialogButtons_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TaskDialogButtons_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TaskDialogButtons_Assign").Call(obj, Source)
 }
 
 func TaskDialogButtons_BeginUpdate(obj uintptr) {
-	getLazyProc("TaskDialogButtons_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("TaskDialogButtons_BeginUpdate").Call(obj)
 }
 
 func TaskDialogButtons_Clear(obj uintptr) {
-	getLazyProc("TaskDialogButtons_Clear").Call(obj)
+	_, _, _ = getLazyProc("TaskDialogButtons_Clear").Call(obj)
 }
 
 func TaskDialogButtons_Delete(obj uintptr, Index int32) {
-	getLazyProc("TaskDialogButtons_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("TaskDialogButtons_Delete").Call(obj, uintptr(Index))
 }
 
 func TaskDialogButtons_EndUpdate(obj uintptr) {
-	getLazyProc("TaskDialogButtons_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("TaskDialogButtons_EndUpdate").Call(obj)
 }
 
 func TaskDialogButtons_FindItemID(obj uintptr, ID int32) uintptr {
@@ -97,7 +97,7 @@ func TaskDialogButtons_GetDefaultButton(obj uintptr) uintptr {
 }
 
 func TaskDialogButtons_SetDefaultButton(obj uintptr, value uintptr) {
-	getLazyProc("TaskDialogButtons_SetDefaultButton").Call(obj, value)
+	_, _, _ = getLazyProc("TaskDialogButtons_SetDefaultButton").Call(obj, value)
 }
 
 func TaskDialogButtons_GetCount(obj uintptr) int32 {
@@ -111,7 +111,7 @@ func TaskDialogButtons_GetItems(obj uintptr, Index int32) uintptr {
 }
 
 func TaskDialogButtons_SetItems(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("TaskDialogButtons_SetItems").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("TaskDialogButtons_SetItems").Call(obj, uintptr(Index), value)
 }
 
 func TaskDialogButtons_StaticClassType() TClass {

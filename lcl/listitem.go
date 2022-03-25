@@ -35,7 +35,7 @@ func NewListItem(AOwner *TListItems) *TListItem {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsListItem(obj interface{}) *TListItem {
+func AsListItem(obj any) *TListItem {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

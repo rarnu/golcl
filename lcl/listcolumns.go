@@ -35,7 +35,7 @@ func NewListColumns(AOwner *TListView) *TListColumns {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsListColumns(obj interface{}) *TListColumns {
+func AsListColumns(obj any) *TListColumns {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

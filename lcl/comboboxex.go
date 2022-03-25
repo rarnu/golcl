@@ -34,7 +34,7 @@ func NewComboBoxEx(owner IComponent) *TComboBoxEx {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsComboBoxEx(obj interface{}) *TComboBoxEx {
+func AsComboBoxEx(obj any) *TComboBoxEx {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

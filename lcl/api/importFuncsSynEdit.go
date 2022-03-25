@@ -340,15 +340,15 @@ func SynEdit_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func SynEdit_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("SynEdit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("SynEdit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func SynEdit_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("SynEdit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("SynEdit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func SynEdit_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("SynEdit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("SynEdit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func SynEdit_GetAlign(obj uintptr) TAlign {
@@ -357,7 +357,7 @@ func SynEdit_GetAlign(obj uintptr) TAlign {
 }
 
 func SynEdit_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("SynEdit_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetAlign").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetAnchors(obj uintptr) TAnchors {
@@ -366,7 +366,7 @@ func SynEdit_GetAnchors(obj uintptr) TAnchors {
 }
 
 func SynEdit_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("SynEdit_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetAnchors").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetAutoSize(obj uintptr) bool {
@@ -384,7 +384,7 @@ func SynEdit_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func SynEdit_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("SynEdit_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -393,7 +393,7 @@ func SynEdit_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func SynEdit_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("SynEdit_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetColor(obj uintptr) TColor {
@@ -402,7 +402,7 @@ func SynEdit_GetColor(obj uintptr) TColor {
 }
 
 func SynEdit_SetColor(obj uintptr, value TColor) {
-	getLazyProc("SynEdit_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetColor").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetConstraints(obj uintptr) uintptr {
@@ -411,7 +411,7 @@ func SynEdit_GetConstraints(obj uintptr) uintptr {
 }
 
 func SynEdit_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetConstraints").Call(obj, value)
 }
 
 func SynEdit_GetDoubleBuffered(obj uintptr) bool {
@@ -420,7 +420,7 @@ func SynEdit_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func SynEdit_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetEnabled(obj uintptr) bool {
@@ -429,7 +429,7 @@ func SynEdit_GetEnabled(obj uintptr) bool {
 }
 
 func SynEdit_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetFont(obj uintptr) uintptr {
@@ -438,7 +438,7 @@ func SynEdit_GetFont(obj uintptr) uintptr {
 }
 
 func SynEdit_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetFont").Call(obj, value)
 }
 
 func SynEdit_GetHideSelection(obj uintptr) bool {
@@ -447,7 +447,7 @@ func SynEdit_GetHideSelection(obj uintptr) bool {
 }
 
 func SynEdit_SetHideSelection(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetHideSelection").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetHideSelection").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetLines(obj uintptr) uintptr {
@@ -456,7 +456,7 @@ func SynEdit_GetLines(obj uintptr) uintptr {
 }
 
 func SynEdit_SetLines(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetLines").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetLines").Call(obj, value)
 }
 
 func SynEdit_GetParentColor(obj uintptr) bool {
@@ -465,7 +465,7 @@ func SynEdit_GetParentColor(obj uintptr) bool {
 }
 
 func SynEdit_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetParentDoubleBuffered(obj uintptr) bool {
@@ -474,7 +474,7 @@ func SynEdit_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func SynEdit_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetParentFont(obj uintptr) bool {
@@ -483,7 +483,7 @@ func SynEdit_GetParentFont(obj uintptr) bool {
 }
 
 func SynEdit_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetParentShowHint(obj uintptr) bool {
@@ -492,7 +492,7 @@ func SynEdit_GetParentShowHint(obj uintptr) bool {
 }
 
 func SynEdit_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetPopupMenu(obj uintptr) uintptr {
@@ -501,7 +501,7 @@ func SynEdit_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func SynEdit_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetPopupMenu").Call(obj, value)
 }
 
 func SynEdit_GetReadOnly(obj uintptr) bool {
@@ -510,7 +510,7 @@ func SynEdit_GetReadOnly(obj uintptr) bool {
 }
 
 func SynEdit_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetScrollBars(obj uintptr) TScrollStyle {
@@ -528,7 +528,7 @@ func SynEdit_GetShowHint(obj uintptr) bool {
 }
 
 func SynEdit_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetTabOrder(obj uintptr) TTabOrder {
@@ -537,7 +537,7 @@ func SynEdit_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func SynEdit_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("SynEdit_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetTabStop(obj uintptr) bool {
@@ -546,7 +546,7 @@ func SynEdit_GetTabStop(obj uintptr) bool {
 }
 
 func SynEdit_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetText(obj uintptr) string {
@@ -555,7 +555,7 @@ func SynEdit_GetText(obj uintptr) string {
 }
 
 func SynEdit_SetText(obj uintptr, value string) {
-	getLazyProc("SynEdit_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SynEdit_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func SynEdit_GetVisible(obj uintptr) bool {
@@ -564,75 +564,75 @@ func SynEdit_GetVisible(obj uintptr) bool {
 }
 
 func SynEdit_SetVisible(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func SynEdit_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func SynEdit_GetCanUndo(obj uintptr) bool {
@@ -651,7 +651,7 @@ func SynEdit_GetModified(obj uintptr) bool {
 }
 
 func SynEdit_SetModified(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetSelStart(obj uintptr) int32 {
@@ -660,7 +660,7 @@ func SynEdit_GetSelStart(obj uintptr) int32 {
 }
 
 func SynEdit_SetSelStart(obj uintptr, value int32) {
-	getLazyProc("SynEdit_SetSelStart").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetSelStart").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetSelText(obj uintptr) string {
@@ -669,7 +669,7 @@ func SynEdit_GetSelText(obj uintptr) string {
 }
 
 func SynEdit_SetSelText(obj uintptr, value string) {
-	getLazyProc("SynEdit_SetSelText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SynEdit_SetSelText").Call(obj, GoStrToDStr(value))
 }
 
 func SynEdit_GetDockClientCount(obj uintptr) int32 {
@@ -683,7 +683,7 @@ func SynEdit_GetDockSite(obj uintptr) bool {
 }
 
 func SynEdit_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetMouseInClient(obj uintptr) bool {
@@ -708,16 +708,16 @@ func SynEdit_GetControlCount(obj uintptr) int32 {
 
 func SynEdit_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("SynEdit_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func SynEdit_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("SynEdit_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func SynEdit_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("SynEdit_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetParentWindow").Call(obj, value)
 }
 
 func SynEdit_GetShowing(obj uintptr) bool {
@@ -731,7 +731,7 @@ func SynEdit_GetUseDockManager(obj uintptr) bool {
 }
 
 func SynEdit_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("SynEdit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SynEdit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func SynEdit_GetAction(obj uintptr) uintptr {
@@ -740,17 +740,17 @@ func SynEdit_GetAction(obj uintptr) uintptr {
 }
 
 func SynEdit_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetAction").Call(obj, value)
 }
 
 func SynEdit_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("SynEdit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SynEdit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SynEdit_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("SynEdit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("SynEdit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func SynEdit_GetClientHeight(obj uintptr) int32 {
@@ -759,18 +759,18 @@ func SynEdit_GetClientHeight(obj uintptr) int32 {
 }
 
 func SynEdit_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("SynEdit_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("SynEdit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SynEdit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SynEdit_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("SynEdit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SynEdit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -780,7 +780,7 @@ func SynEdit_GetClientWidth(obj uintptr) int32 {
 }
 
 func SynEdit_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("SynEdit_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetControlState(obj uintptr) TControlState {
@@ -789,7 +789,7 @@ func SynEdit_GetControlState(obj uintptr) TControlState {
 }
 
 func SynEdit_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("SynEdit_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetControlState").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetControlStyle(obj uintptr) TControlStyle {
@@ -798,7 +798,7 @@ func SynEdit_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func SynEdit_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("SynEdit_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetFloating(obj uintptr) bool {
@@ -812,7 +812,7 @@ func SynEdit_GetParent(obj uintptr) uintptr {
 }
 
 func SynEdit_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetParent").Call(obj, value)
 }
 
 func SynEdit_GetLeft(obj uintptr) int32 {
@@ -821,7 +821,7 @@ func SynEdit_GetLeft(obj uintptr) int32 {
 }
 
 func SynEdit_SetLeft(obj uintptr, value int32) {
-	getLazyProc("SynEdit_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetLeft").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetTop(obj uintptr) int32 {
@@ -830,7 +830,7 @@ func SynEdit_GetTop(obj uintptr) int32 {
 }
 
 func SynEdit_SetTop(obj uintptr, value int32) {
-	getLazyProc("SynEdit_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetTop").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetWidth(obj uintptr) int32 {
@@ -839,7 +839,7 @@ func SynEdit_GetWidth(obj uintptr) int32 {
 }
 
 func SynEdit_SetWidth(obj uintptr, value int32) {
-	getLazyProc("SynEdit_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetWidth").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetHeight(obj uintptr) int32 {
@@ -848,7 +848,7 @@ func SynEdit_GetHeight(obj uintptr) int32 {
 }
 
 func SynEdit_SetHeight(obj uintptr, value int32) {
-	getLazyProc("SynEdit_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetHeight").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetCursor(obj uintptr) TCursor {
@@ -857,7 +857,7 @@ func SynEdit_GetCursor(obj uintptr) TCursor {
 }
 
 func SynEdit_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("SynEdit_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetCursor").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetHint(obj uintptr) string {
@@ -866,7 +866,7 @@ func SynEdit_GetHint(obj uintptr) string {
 }
 
 func SynEdit_SetHint(obj uintptr, value string) {
-	getLazyProc("SynEdit_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SynEdit_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func SynEdit_GetComponentCount(obj uintptr) int32 {
@@ -880,7 +880,7 @@ func SynEdit_GetComponentIndex(obj uintptr) int32 {
 }
 
 func SynEdit_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("SynEdit_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetOwner(obj uintptr) uintptr {
@@ -894,7 +894,7 @@ func SynEdit_GetName(obj uintptr) string {
 }
 
 func SynEdit_SetName(obj uintptr, value string) {
-	getLazyProc("SynEdit_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SynEdit_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func SynEdit_GetTag(obj uintptr) int {
@@ -903,7 +903,7 @@ func SynEdit_GetTag(obj uintptr) int {
 }
 
 func SynEdit_SetTag(obj uintptr, value int) {
-	getLazyProc("SynEdit_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SynEdit_SetTag").Call(obj, uintptr(value))
 }
 
 func SynEdit_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -912,7 +912,7 @@ func SynEdit_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func SynEdit_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetAnchorSideLeft").Call(obj, value)
 }
 
 func SynEdit_GetAnchorSideTop(obj uintptr) uintptr {
@@ -921,7 +921,7 @@ func SynEdit_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func SynEdit_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetAnchorSideTop").Call(obj, value)
 }
 
 func SynEdit_GetAnchorSideRight(obj uintptr) uintptr {
@@ -930,7 +930,7 @@ func SynEdit_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func SynEdit_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetAnchorSideRight").Call(obj, value)
 }
 
 func SynEdit_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -939,7 +939,7 @@ func SynEdit_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func SynEdit_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetAnchorSideBottom").Call(obj, value)
 }
 
 func SynEdit_GetChildSizing(obj uintptr) uintptr {
@@ -948,7 +948,7 @@ func SynEdit_GetChildSizing(obj uintptr) uintptr {
 }
 
 func SynEdit_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetChildSizing").Call(obj, value)
 }
 
 func SynEdit_GetBorderSpacing(obj uintptr) uintptr {
@@ -957,7 +957,7 @@ func SynEdit_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func SynEdit_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("SynEdit_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("SynEdit_SetBorderSpacing").Call(obj, value)
 }
 
 func SynEdit_GetDockClients(obj uintptr, Index int32) uintptr {
@@ -994,12 +994,12 @@ func SynEdit_SetBlockIndent(obj uintptr, AValue int32) {
 	_, _, _ = getLazyProc("SynEdit_SetBlockIndent").Call(obj, uintptr(AValue))
 }
 
-func SynEdit_SetOnMouseLink(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnMouseLink").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnMouseLink(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnMouseLink").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynEdit_SetOnClickLink(obj uintptr, fn interface{}) {
-	getLazyProc("SynEdit_SetOnClickLink").Call(obj, addEventToMap(obj, fn))
+func SynEdit_SetOnClickLink(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SynEdit_SetOnClickLink").Call(obj, addEventToMap(obj, fn))
 }
 
 func SynEdit_GetBlockTabIndent(obj uintptr) int32 {

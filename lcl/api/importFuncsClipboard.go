@@ -12,21 +12,21 @@ func Clipboard_Create() uintptr {
 }
 
 func Clipboard_Free(obj uintptr) {
-	getLazyProc("Clipboard_Free").Call(obj)
+	_, _, _ = getLazyProc("Clipboard_Free").Call(obj)
 }
 
 func Clipboard_FindPictureFormatID(obj uintptr) TClipboardFormat {
 	ret, _, _ := getLazyProc("Clipboard_FindPictureFormatID").Call(obj)
-	return TClipboardFormat(ret)
+	return ret
 }
 
 func Clipboard_FindFormatID(obj uintptr, FormatName string) TClipboardFormat {
 	ret, _, _ := getLazyProc("Clipboard_FindFormatID").Call(obj, GoStrToDStr(FormatName))
-	return TClipboardFormat(ret)
+	return ret
 }
 
 func Clipboard_SupportedFormats(obj uintptr, List uintptr) {
-	getLazyProc("Clipboard_SupportedFormats").Call(obj, List)
+	_, _, _ = getLazyProc("Clipboard_SupportedFormats").Call(obj, List)
 }
 
 func Clipboard_HasFormatName(obj uintptr, FormatName string) bool {
@@ -40,32 +40,32 @@ func Clipboard_HasPictureFormat(obj uintptr) bool {
 }
 
 func Clipboard_SetAsHtml(obj uintptr, Html string, PlainText string) {
-	getLazyProc("Clipboard_SetAsHtml").Call(obj, GoStrToDStr(Html), GoStrToDStr(PlainText))
+	_, _, _ = getLazyProc("Clipboard_SetAsHtml").Call(obj, GoStrToDStr(Html), GoStrToDStr(PlainText))
 }
 
 func Clipboard_GetFormat(obj uintptr, FormatID TClipboardFormat, Stream uintptr) bool {
-	ret, _, _ := getLazyProc("Clipboard_GetFormat").Call(obj, uintptr(FormatID), Stream)
+	ret, _, _ := getLazyProc("Clipboard_GetFormat").Call(obj, FormatID, Stream)
 	return DBoolToGoBool(ret)
 }
 
 func Clipboard_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Clipboard_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Clipboard_Assign").Call(obj, Source)
 }
 
 func Clipboard_Clear(obj uintptr) {
-	getLazyProc("Clipboard_Clear").Call(obj)
+	_, _, _ = getLazyProc("Clipboard_Clear").Call(obj)
 }
 
 func Clipboard_Close(obj uintptr) {
-	getLazyProc("Clipboard_Close").Call(obj)
+	_, _, _ = getLazyProc("Clipboard_Close").Call(obj)
 }
 
 func Clipboard_Open(obj uintptr) {
-	getLazyProc("Clipboard_Open").Call(obj)
+	_, _, _ = getLazyProc("Clipboard_Open").Call(obj)
 }
 
 func Clipboard_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Clipboard_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Clipboard_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Clipboard_GetNamePath(obj uintptr) string {
@@ -115,7 +115,7 @@ func Clipboard_GetFormatCount(obj uintptr) int32 {
 
 func Clipboard_GetFormats(obj uintptr, Index int32) TClipboardFormat {
 	ret, _, _ := getLazyProc("Clipboard_GetFormats").Call(obj, uintptr(Index))
-	return TClipboardFormat(ret)
+	return ret
 }
 
 func Clipboard_StaticClassType() TClass {

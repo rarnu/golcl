@@ -13,39 +13,39 @@ func MiniWebview_Create(obj uintptr) uintptr {
 }
 
 func MiniWebview_Free(obj uintptr) {
-	getLazyProc("MiniWebview_Free").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Free").Call(obj)
 }
 
 func MiniWebview_Navigate(obj uintptr, AURL string) {
-	getLazyProc("MiniWebview_Navigate").Call(obj, GoStrToDStr(AURL))
+	_, _, _ = getLazyProc("MiniWebview_Navigate").Call(obj, GoStrToDStr(AURL))
 }
 
 func MiniWebview_GoBack(obj uintptr) {
-	getLazyProc("MiniWebview_GoBack").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_GoBack").Call(obj)
 }
 
 func MiniWebview_GoForward(obj uintptr) {
-	getLazyProc("MiniWebview_GoForward").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_GoForward").Call(obj)
 }
 
 func MiniWebview_GoHome(obj uintptr) {
-	getLazyProc("MiniWebview_GoHome").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_GoHome").Call(obj)
 }
 
 func MiniWebview_GoSearch(obj uintptr) {
-	getLazyProc("MiniWebview_GoSearch").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_GoSearch").Call(obj)
 }
 
 func MiniWebview_Refresh(obj uintptr) {
-	getLazyProc("MiniWebview_Refresh").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Refresh").Call(obj)
 }
 
 func MiniWebview_Stop(obj uintptr) {
-	getLazyProc("MiniWebview_Stop").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Stop").Call(obj)
 }
 
 func MiniWebview_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("MiniWebview_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("MiniWebview_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func MiniWebview_ExecuteScript(obj uintptr, AScriptText string, AScriptType string) string {
@@ -59,7 +59,7 @@ func MiniWebview_ExecuteJS(obj uintptr, AScriptText string) string {
 }
 
 func MiniWebview_LoadHTML(obj uintptr, AStr string) {
-	getLazyProc("MiniWebview_LoadHTML").Call(obj, GoStrToDStr(AStr))
+	_, _, _ = getLazyProc("MiniWebview_LoadHTML").Call(obj, GoStrToDStr(AStr))
 }
 
 func MiniWebview_CanFocus(obj uintptr) bool {
@@ -78,11 +78,11 @@ func MiniWebview_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, Allow
 }
 
 func MiniWebview_DisableAlign(obj uintptr) {
-	getLazyProc("MiniWebview_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_DisableAlign").Call(obj)
 }
 
 func MiniWebview_EnableAlign(obj uintptr) {
-	getLazyProc("MiniWebview_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_EnableAlign").Call(obj)
 }
 
 func MiniWebview_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -91,7 +91,7 @@ func MiniWebview_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func MiniWebview_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("MiniWebview_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("MiniWebview_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func MiniWebview_Focused(obj uintptr) bool {
@@ -105,58 +105,58 @@ func MiniWebview_HandleAllocated(obj uintptr) bool {
 }
 
 func MiniWebview_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("MiniWebview_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("MiniWebview_InsertControl").Call(obj, AControl)
 }
 
 func MiniWebview_Invalidate(obj uintptr) {
-	getLazyProc("MiniWebview_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Invalidate").Call(obj)
 }
 
 func MiniWebview_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("MiniWebview_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("MiniWebview_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func MiniWebview_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("MiniWebview_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("MiniWebview_RemoveControl").Call(obj, AControl)
 }
 
 func MiniWebview_Realign(obj uintptr) {
-	getLazyProc("MiniWebview_Realign").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Realign").Call(obj)
 }
 
 func MiniWebview_Repaint(obj uintptr) {
-	getLazyProc("MiniWebview_Repaint").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Repaint").Call(obj)
 }
 
 func MiniWebview_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("MiniWebview_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("MiniWebview_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func MiniWebview_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("MiniWebview_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("MiniWebview_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func MiniWebview_SetFocus(obj uintptr) {
-	getLazyProc("MiniWebview_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_SetFocus").Call(obj)
 }
 
 func MiniWebview_Update(obj uintptr) {
-	getLazyProc("MiniWebview_Update").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Update").Call(obj)
 }
 
 func MiniWebview_BringToFront(obj uintptr) {
-	getLazyProc("MiniWebview_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_BringToFront").Call(obj)
 }
 
 func MiniWebview_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("MiniWebview_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MiniWebview_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MiniWebview_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("MiniWebview_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MiniWebview_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -171,7 +171,7 @@ func MiniWebview_HasParent(obj uintptr) bool {
 }
 
 func MiniWebview_Hide(obj uintptr) {
-	getLazyProc("MiniWebview_Hide").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Hide").Call(obj)
 }
 
 func MiniWebview_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -181,22 +181,22 @@ func MiniWebview_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) in
 
 func MiniWebview_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("MiniWebview_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MiniWebview_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MiniWebview_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("MiniWebview_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MiniWebview_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MiniWebview_SendToBack(obj uintptr) {
-	getLazyProc("MiniWebview_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_SendToBack").Call(obj)
 }
 
 func MiniWebview_Show(obj uintptr) {
-	getLazyProc("MiniWebview_Show").Call(obj)
+	_, _, _ = getLazyProc("MiniWebview_Show").Call(obj)
 }
 
 func MiniWebview_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -215,7 +215,7 @@ func MiniWebview_GetTextLen(obj uintptr) int32 {
 }
 
 func MiniWebview_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("MiniWebview_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("MiniWebview_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func MiniWebview_FindComponent(obj uintptr, AName string) uintptr {
@@ -229,7 +229,7 @@ func MiniWebview_GetNamePath(obj uintptr) string {
 }
 
 func MiniWebview_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("MiniWebview_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("MiniWebview_Assign").Call(obj, Source)
 }
 
 func MiniWebview_ClassType(obj uintptr) TClass {
@@ -268,31 +268,31 @@ func MiniWebview_ToString(obj uintptr) string {
 }
 
 func MiniWebview_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("MiniWebview_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("MiniWebview_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func MiniWebview_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("MiniWebview_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("MiniWebview_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func MiniWebview_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("MiniWebview_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("MiniWebview_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func MiniWebview_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("MiniWebview_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("MiniWebview_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func MiniWebview_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("MiniWebview_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("MiniWebview_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func MiniWebview_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("MiniWebview_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("MiniWebview_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func MiniWebview_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("MiniWebview_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("MiniWebview_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func MiniWebview_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -346,15 +346,15 @@ func MiniWebview_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func MiniWebview_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("MiniWebview_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("MiniWebview_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func MiniWebview_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("MiniWebview_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("MiniWebview_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func MiniWebview_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("MiniWebview_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("MiniWebview_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func MiniWebview_GetReadyState(obj uintptr) TReadyState {
@@ -368,7 +368,7 @@ func MiniWebview_GetAlign(obj uintptr) TAlign {
 }
 
 func MiniWebview_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("MiniWebview_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetAlign").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetAnchors(obj uintptr) TAnchors {
@@ -377,7 +377,7 @@ func MiniWebview_GetAnchors(obj uintptr) TAnchors {
 }
 
 func MiniWebview_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("MiniWebview_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetAnchors").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetConstraints(obj uintptr) uintptr {
@@ -386,7 +386,7 @@ func MiniWebview_GetConstraints(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetConstraints").Call(obj, value)
 }
 
 func MiniWebview_GetEnabled(obj uintptr) bool {
@@ -395,7 +395,7 @@ func MiniWebview_GetEnabled(obj uintptr) bool {
 }
 
 func MiniWebview_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("MiniWebview_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MiniWebview_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func MiniWebview_GetVisible(obj uintptr) bool {
@@ -404,15 +404,15 @@ func MiniWebview_GetVisible(obj uintptr) bool {
 }
 
 func MiniWebview_SetVisible(obj uintptr, value bool) {
-	getLazyProc("MiniWebview_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MiniWebview_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func MiniWebview_SetOnTitleChange(obj uintptr, fn interface{}) {
-	getLazyProc("MiniWebview_SetOnTitleChange").Call(obj, addEventToMap(obj, fn))
+func MiniWebview_SetOnTitleChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MiniWebview_SetOnTitleChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func MiniWebview_SetOnJSExternal(obj uintptr, fn interface{}) {
-	getLazyProc("MiniWebview_SetOnJSExternal").Call(obj, addEventToMap(obj, fn))
+func MiniWebview_SetOnJSExternal(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MiniWebview_SetOnJSExternal").Call(obj, addEventToMap(obj, fn))
 }
 
 func MiniWebview_GetDockClientCount(obj uintptr) int32 {
@@ -426,7 +426,7 @@ func MiniWebview_GetDockSite(obj uintptr) bool {
 }
 
 func MiniWebview_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("MiniWebview_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MiniWebview_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func MiniWebview_GetDoubleBuffered(obj uintptr) bool {
@@ -435,7 +435,7 @@ func MiniWebview_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func MiniWebview_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("MiniWebview_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MiniWebview_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func MiniWebview_GetMouseInClient(obj uintptr) bool {
@@ -460,7 +460,7 @@ func MiniWebview_GetControlCount(obj uintptr) int32 {
 
 func MiniWebview_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("MiniWebview_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func MiniWebview_GetParentDoubleBuffered(obj uintptr) bool {
@@ -469,16 +469,16 @@ func MiniWebview_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func MiniWebview_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("MiniWebview_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MiniWebview_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func MiniWebview_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("MiniWebview_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func MiniWebview_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("MiniWebview_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetParentWindow").Call(obj, value)
 }
 
 func MiniWebview_GetShowing(obj uintptr) bool {
@@ -492,7 +492,7 @@ func MiniWebview_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func MiniWebview_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("MiniWebview_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetTabStop(obj uintptr) bool {
@@ -501,7 +501,7 @@ func MiniWebview_GetTabStop(obj uintptr) bool {
 }
 
 func MiniWebview_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("MiniWebview_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MiniWebview_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func MiniWebview_GetUseDockManager(obj uintptr) bool {
@@ -510,7 +510,7 @@ func MiniWebview_GetUseDockManager(obj uintptr) bool {
 }
 
 func MiniWebview_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("MiniWebview_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MiniWebview_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func MiniWebview_GetAction(obj uintptr) uintptr {
@@ -519,7 +519,7 @@ func MiniWebview_GetAction(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetAction").Call(obj, value)
 }
 
 func MiniWebview_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -528,17 +528,17 @@ func MiniWebview_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func MiniWebview_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("MiniWebview_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("MiniWebview_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MiniWebview_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MiniWebview_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("MiniWebview_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("MiniWebview_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func MiniWebview_GetClientHeight(obj uintptr) int32 {
@@ -547,18 +547,18 @@ func MiniWebview_GetClientHeight(obj uintptr) int32 {
 }
 
 func MiniWebview_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("MiniWebview_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("MiniWebview_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MiniWebview_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MiniWebview_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("MiniWebview_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MiniWebview_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -568,7 +568,7 @@ func MiniWebview_GetClientWidth(obj uintptr) int32 {
 }
 
 func MiniWebview_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("MiniWebview_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetControlState(obj uintptr) TControlState {
@@ -577,7 +577,7 @@ func MiniWebview_GetControlState(obj uintptr) TControlState {
 }
 
 func MiniWebview_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("MiniWebview_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetControlState").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetControlStyle(obj uintptr) TControlStyle {
@@ -586,7 +586,7 @@ func MiniWebview_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func MiniWebview_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("MiniWebview_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetFloating(obj uintptr) bool {
@@ -600,7 +600,7 @@ func MiniWebview_GetShowHint(obj uintptr) bool {
 }
 
 func MiniWebview_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("MiniWebview_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MiniWebview_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func MiniWebview_GetParent(obj uintptr) uintptr {
@@ -609,7 +609,7 @@ func MiniWebview_GetParent(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetParent").Call(obj, value)
 }
 
 func MiniWebview_GetLeft(obj uintptr) int32 {
@@ -618,7 +618,7 @@ func MiniWebview_GetLeft(obj uintptr) int32 {
 }
 
 func MiniWebview_SetLeft(obj uintptr, value int32) {
-	getLazyProc("MiniWebview_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetLeft").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetTop(obj uintptr) int32 {
@@ -627,7 +627,7 @@ func MiniWebview_GetTop(obj uintptr) int32 {
 }
 
 func MiniWebview_SetTop(obj uintptr, value int32) {
-	getLazyProc("MiniWebview_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetTop").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetWidth(obj uintptr) int32 {
@@ -636,7 +636,7 @@ func MiniWebview_GetWidth(obj uintptr) int32 {
 }
 
 func MiniWebview_SetWidth(obj uintptr, value int32) {
-	getLazyProc("MiniWebview_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetWidth").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetHeight(obj uintptr) int32 {
@@ -645,7 +645,7 @@ func MiniWebview_GetHeight(obj uintptr) int32 {
 }
 
 func MiniWebview_SetHeight(obj uintptr, value int32) {
-	getLazyProc("MiniWebview_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetHeight").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetCursor(obj uintptr) TCursor {
@@ -654,7 +654,7 @@ func MiniWebview_GetCursor(obj uintptr) TCursor {
 }
 
 func MiniWebview_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("MiniWebview_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetCursor").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetHint(obj uintptr) string {
@@ -663,7 +663,7 @@ func MiniWebview_GetHint(obj uintptr) string {
 }
 
 func MiniWebview_SetHint(obj uintptr, value string) {
-	getLazyProc("MiniWebview_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func MiniWebview_GetComponentCount(obj uintptr) int32 {
@@ -677,7 +677,7 @@ func MiniWebview_GetComponentIndex(obj uintptr) int32 {
 }
 
 func MiniWebview_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("MiniWebview_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetOwner(obj uintptr) uintptr {
@@ -691,7 +691,7 @@ func MiniWebview_GetName(obj uintptr) string {
 }
 
 func MiniWebview_SetName(obj uintptr, value string) {
-	getLazyProc("MiniWebview_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func MiniWebview_GetTag(obj uintptr) int {
@@ -700,7 +700,7 @@ func MiniWebview_GetTag(obj uintptr) int {
 }
 
 func MiniWebview_SetTag(obj uintptr, value int) {
-	getLazyProc("MiniWebview_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MiniWebview_SetTag").Call(obj, uintptr(value))
 }
 
 func MiniWebview_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -709,7 +709,7 @@ func MiniWebview_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetAnchorSideLeft").Call(obj, value)
 }
 
 func MiniWebview_GetAnchorSideTop(obj uintptr) uintptr {
@@ -718,7 +718,7 @@ func MiniWebview_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetAnchorSideTop").Call(obj, value)
 }
 
 func MiniWebview_GetAnchorSideRight(obj uintptr) uintptr {
@@ -727,7 +727,7 @@ func MiniWebview_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetAnchorSideRight").Call(obj, value)
 }
 
 func MiniWebview_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -736,7 +736,7 @@ func MiniWebview_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetAnchorSideBottom").Call(obj, value)
 }
 
 func MiniWebview_GetChildSizing(obj uintptr) uintptr {
@@ -745,7 +745,7 @@ func MiniWebview_GetChildSizing(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetChildSizing").Call(obj, value)
 }
 
 func MiniWebview_GetBorderSpacing(obj uintptr) uintptr {
@@ -754,7 +754,7 @@ func MiniWebview_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func MiniWebview_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("MiniWebview_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("MiniWebview_SetBorderSpacing").Call(obj, value)
 }
 
 func MiniWebview_GetDockClients(obj uintptr, Index int32) uintptr {

@@ -13,22 +13,22 @@ func BoundLabel_Create(obj uintptr) uintptr {
 }
 
 func BoundLabel_Free(obj uintptr) {
-	getLazyProc("BoundLabel_Free").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_Free").Call(obj)
 }
 
 func BoundLabel_BringToFront(obj uintptr) {
-	getLazyProc("BoundLabel_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_BringToFront").Call(obj)
 }
 
 func BoundLabel_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("BoundLabel_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BoundLabel_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BoundLabel_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("BoundLabel_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BoundLabel_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -43,11 +43,11 @@ func BoundLabel_HasParent(obj uintptr) bool {
 }
 
 func BoundLabel_Hide(obj uintptr) {
-	getLazyProc("BoundLabel_Hide").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_Hide").Call(obj)
 }
 
 func BoundLabel_Invalidate(obj uintptr) {
-	getLazyProc("BoundLabel_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_Invalidate").Call(obj)
 }
 
 func BoundLabel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -56,39 +56,39 @@ func BoundLabel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int
 }
 
 func BoundLabel_Refresh(obj uintptr) {
-	getLazyProc("BoundLabel_Refresh").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_Refresh").Call(obj)
 }
 
 func BoundLabel_Repaint(obj uintptr) {
-	getLazyProc("BoundLabel_Repaint").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_Repaint").Call(obj)
 }
 
 func BoundLabel_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("BoundLabel_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BoundLabel_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BoundLabel_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("BoundLabel_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BoundLabel_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BoundLabel_SendToBack(obj uintptr) {
-	getLazyProc("BoundLabel_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_SendToBack").Call(obj)
 }
 
 func BoundLabel_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("BoundLabel_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("BoundLabel_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func BoundLabel_Show(obj uintptr) {
-	getLazyProc("BoundLabel_Show").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_Show").Call(obj)
 }
 
 func BoundLabel_Update(obj uintptr) {
-	getLazyProc("BoundLabel_Update").Call(obj)
+	_, _, _ = getLazyProc("BoundLabel_Update").Call(obj)
 }
 
 func BoundLabel_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -107,7 +107,7 @@ func BoundLabel_GetTextLen(obj uintptr) int32 {
 }
 
 func BoundLabel_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("BoundLabel_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("BoundLabel_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func BoundLabel_FindComponent(obj uintptr, AName string) uintptr {
@@ -121,7 +121,7 @@ func BoundLabel_GetNamePath(obj uintptr) string {
 }
 
 func BoundLabel_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("BoundLabel_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("BoundLabel_Assign").Call(obj, Source)
 }
 
 func BoundLabel_ClassType(obj uintptr) TClass {
@@ -160,31 +160,31 @@ func BoundLabel_ToString(obj uintptr) string {
 }
 
 func BoundLabel_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("BoundLabel_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("BoundLabel_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func BoundLabel_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("BoundLabel_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("BoundLabel_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func BoundLabel_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("BoundLabel_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("BoundLabel_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func BoundLabel_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("BoundLabel_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("BoundLabel_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func BoundLabel_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("BoundLabel_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("BoundLabel_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func BoundLabel_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("BoundLabel_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("BoundLabel_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func BoundLabel_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("BoundLabel_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("BoundLabel_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func BoundLabel_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -238,15 +238,15 @@ func BoundLabel_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func BoundLabel_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("BoundLabel_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("BoundLabel_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func BoundLabel_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("BoundLabel_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("BoundLabel_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func BoundLabel_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("BoundLabel_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("BoundLabel_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func BoundLabel_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -255,7 +255,7 @@ func BoundLabel_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func BoundLabel_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("BoundLabel_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetCaption(obj uintptr) string {
@@ -264,7 +264,7 @@ func BoundLabel_GetCaption(obj uintptr) string {
 }
 
 func BoundLabel_SetCaption(obj uintptr, value string) {
-	getLazyProc("BoundLabel_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func BoundLabel_GetColor(obj uintptr) TColor {
@@ -273,7 +273,7 @@ func BoundLabel_GetColor(obj uintptr) TColor {
 }
 
 func BoundLabel_SetColor(obj uintptr, value TColor) {
-	getLazyProc("BoundLabel_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetColor").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetDragCursor(obj uintptr) TCursor {
@@ -282,7 +282,7 @@ func BoundLabel_GetDragCursor(obj uintptr) TCursor {
 }
 
 func BoundLabel_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("BoundLabel_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetDragMode(obj uintptr) TDragMode {
@@ -291,7 +291,7 @@ func BoundLabel_GetDragMode(obj uintptr) TDragMode {
 }
 
 func BoundLabel_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("BoundLabel_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetDragMode").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetFont(obj uintptr) uintptr {
@@ -300,7 +300,7 @@ func BoundLabel_GetFont(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetFont").Call(obj, value)
 }
 
 func BoundLabel_GetHeight(obj uintptr) int32 {
@@ -309,7 +309,7 @@ func BoundLabel_GetHeight(obj uintptr) int32 {
 }
 
 func BoundLabel_SetHeight(obj uintptr, value int32) {
-	getLazyProc("BoundLabel_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetHeight").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetLeft(obj uintptr) int32 {
@@ -323,7 +323,7 @@ func BoundLabel_GetParentColor(obj uintptr) bool {
 }
 
 func BoundLabel_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("BoundLabel_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BoundLabel_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func BoundLabel_GetParentFont(obj uintptr) bool {
@@ -332,7 +332,7 @@ func BoundLabel_GetParentFont(obj uintptr) bool {
 }
 
 func BoundLabel_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("BoundLabel_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BoundLabel_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func BoundLabel_GetParentShowHint(obj uintptr) bool {
@@ -341,7 +341,7 @@ func BoundLabel_GetParentShowHint(obj uintptr) bool {
 }
 
 func BoundLabel_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("BoundLabel_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BoundLabel_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func BoundLabel_GetPopupMenu(obj uintptr) uintptr {
@@ -350,7 +350,7 @@ func BoundLabel_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetPopupMenu").Call(obj, value)
 }
 
 func BoundLabel_GetShowAccelChar(obj uintptr) bool {
@@ -359,7 +359,7 @@ func BoundLabel_GetShowAccelChar(obj uintptr) bool {
 }
 
 func BoundLabel_SetShowAccelChar(obj uintptr, value bool) {
-	getLazyProc("BoundLabel_SetShowAccelChar").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BoundLabel_SetShowAccelChar").Call(obj, GoBoolToDBool(value))
 }
 
 func BoundLabel_GetShowHint(obj uintptr) bool {
@@ -368,7 +368,7 @@ func BoundLabel_GetShowHint(obj uintptr) bool {
 }
 
 func BoundLabel_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("BoundLabel_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BoundLabel_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func BoundLabel_GetTop(obj uintptr) int32 {
@@ -382,7 +382,7 @@ func BoundLabel_GetLayout(obj uintptr) TTextLayout {
 }
 
 func BoundLabel_SetLayout(obj uintptr, value TTextLayout) {
-	getLazyProc("BoundLabel_SetLayout").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetLayout").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetWordWrap(obj uintptr) bool {
@@ -391,7 +391,7 @@ func BoundLabel_GetWordWrap(obj uintptr) bool {
 }
 
 func BoundLabel_SetWordWrap(obj uintptr, value bool) {
-	getLazyProc("BoundLabel_SetWordWrap").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BoundLabel_SetWordWrap").Call(obj, GoBoolToDBool(value))
 }
 
 func BoundLabel_GetWidth(obj uintptr) int32 {
@@ -400,39 +400,39 @@ func BoundLabel_GetWidth(obj uintptr) int32 {
 }
 
 func BoundLabel_SetWidth(obj uintptr, value int32) {
-	getLazyProc("BoundLabel_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetWidth").Call(obj, uintptr(value))
 }
 
-func BoundLabel_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("BoundLabel_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func BoundLabel_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BoundLabel_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func BoundLabel_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("BoundLabel_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func BoundLabel_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BoundLabel_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func BoundLabel_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("BoundLabel_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func BoundLabel_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BoundLabel_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func BoundLabel_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("BoundLabel_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func BoundLabel_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BoundLabel_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func BoundLabel_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("BoundLabel_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func BoundLabel_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BoundLabel_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func BoundLabel_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("BoundLabel_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func BoundLabel_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BoundLabel_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func BoundLabel_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("BoundLabel_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func BoundLabel_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BoundLabel_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func BoundLabel_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("BoundLabel_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func BoundLabel_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BoundLabel_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func BoundLabel_GetCanvas(obj uintptr) uintptr {
@@ -446,7 +446,7 @@ func BoundLabel_GetEnabled(obj uintptr) bool {
 }
 
 func BoundLabel_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("BoundLabel_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BoundLabel_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func BoundLabel_GetAction(obj uintptr) uintptr {
@@ -455,7 +455,7 @@ func BoundLabel_GetAction(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetAction").Call(obj, value)
 }
 
 func BoundLabel_GetAlign(obj uintptr) TAlign {
@@ -464,7 +464,7 @@ func BoundLabel_GetAlign(obj uintptr) TAlign {
 }
 
 func BoundLabel_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("BoundLabel_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetAlign").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetAnchors(obj uintptr) TAnchors {
@@ -473,17 +473,17 @@ func BoundLabel_GetAnchors(obj uintptr) TAnchors {
 }
 
 func BoundLabel_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("BoundLabel_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetAnchors").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("BoundLabel_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BoundLabel_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BoundLabel_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("BoundLabel_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("BoundLabel_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func BoundLabel_GetClientHeight(obj uintptr) int32 {
@@ -492,18 +492,18 @@ func BoundLabel_GetClientHeight(obj uintptr) int32 {
 }
 
 func BoundLabel_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("BoundLabel_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("BoundLabel_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BoundLabel_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BoundLabel_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("BoundLabel_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BoundLabel_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -513,7 +513,7 @@ func BoundLabel_GetClientWidth(obj uintptr) int32 {
 }
 
 func BoundLabel_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("BoundLabel_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetConstraints(obj uintptr) uintptr {
@@ -522,7 +522,7 @@ func BoundLabel_GetConstraints(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetConstraints").Call(obj, value)
 }
 
 func BoundLabel_GetControlState(obj uintptr) TControlState {
@@ -531,7 +531,7 @@ func BoundLabel_GetControlState(obj uintptr) TControlState {
 }
 
 func BoundLabel_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("BoundLabel_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetControlState").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetControlStyle(obj uintptr) TControlStyle {
@@ -540,7 +540,7 @@ func BoundLabel_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func BoundLabel_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("BoundLabel_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetFloating(obj uintptr) bool {
@@ -554,7 +554,7 @@ func BoundLabel_GetVisible(obj uintptr) bool {
 }
 
 func BoundLabel_SetVisible(obj uintptr, value bool) {
-	getLazyProc("BoundLabel_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BoundLabel_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func BoundLabel_GetParent(obj uintptr) uintptr {
@@ -563,7 +563,7 @@ func BoundLabel_GetParent(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetParent").Call(obj, value)
 }
 
 func BoundLabel_GetCursor(obj uintptr) TCursor {
@@ -572,7 +572,7 @@ func BoundLabel_GetCursor(obj uintptr) TCursor {
 }
 
 func BoundLabel_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("BoundLabel_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetCursor").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetHint(obj uintptr) string {
@@ -581,7 +581,7 @@ func BoundLabel_GetHint(obj uintptr) string {
 }
 
 func BoundLabel_SetHint(obj uintptr, value string) {
-	getLazyProc("BoundLabel_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func BoundLabel_GetComponentCount(obj uintptr) int32 {
@@ -595,7 +595,7 @@ func BoundLabel_GetComponentIndex(obj uintptr) int32 {
 }
 
 func BoundLabel_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("BoundLabel_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetOwner(obj uintptr) uintptr {
@@ -609,7 +609,7 @@ func BoundLabel_GetName(obj uintptr) string {
 }
 
 func BoundLabel_SetName(obj uintptr, value string) {
-	getLazyProc("BoundLabel_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func BoundLabel_GetTag(obj uintptr) int {
@@ -618,7 +618,7 @@ func BoundLabel_GetTag(obj uintptr) int {
 }
 
 func BoundLabel_SetTag(obj uintptr, value int) {
-	getLazyProc("BoundLabel_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BoundLabel_SetTag").Call(obj, uintptr(value))
 }
 
 func BoundLabel_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -627,7 +627,7 @@ func BoundLabel_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetAnchorSideLeft").Call(obj, value)
 }
 
 func BoundLabel_GetAnchorSideTop(obj uintptr) uintptr {
@@ -636,7 +636,7 @@ func BoundLabel_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetAnchorSideTop").Call(obj, value)
 }
 
 func BoundLabel_GetAnchorSideRight(obj uintptr) uintptr {
@@ -645,7 +645,7 @@ func BoundLabel_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetAnchorSideRight").Call(obj, value)
 }
 
 func BoundLabel_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -654,7 +654,7 @@ func BoundLabel_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetAnchorSideBottom").Call(obj, value)
 }
 
 func BoundLabel_GetBorderSpacing(obj uintptr) uintptr {
@@ -663,7 +663,7 @@ func BoundLabel_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func BoundLabel_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("BoundLabel_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("BoundLabel_SetBorderSpacing").Call(obj, value)
 }
 
 func BoundLabel_GetComponents(obj uintptr, AIndex int32) uintptr {

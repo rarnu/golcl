@@ -13,7 +13,7 @@ func Mouse_Create() uintptr {
 }
 
 func Mouse_Free(obj uintptr) {
-	getLazyProc("Mouse_Free").Call(obj)
+	_, _, _ = getLazyProc("Mouse_Free").Call(obj)
 }
 
 func Mouse_ClassType(obj uintptr) TClass {
@@ -53,21 +53,21 @@ func Mouse_ToString(obj uintptr) string {
 
 func Mouse_GetCapture(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("Mouse_GetCapture").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func Mouse_SetCapture(obj uintptr, value HWND) {
-	getLazyProc("Mouse_SetCapture").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Mouse_SetCapture").Call(obj, value)
 }
 
 func Mouse_GetCursorPos(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Mouse_GetCursorPos").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Mouse_GetCursorPos").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Mouse_SetCursorPos(obj uintptr, value TPoint) {
-	getLazyProc("Mouse_SetCursorPos").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Mouse_SetCursorPos").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Mouse_GetIsDragging(obj uintptr) bool {

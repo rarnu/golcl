@@ -34,7 +34,7 @@ func NewPrintDialog(owner IComponent) *TPrintDialog {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsPrintDialog(obj interface{}) *TPrintDialog {
+func AsPrintDialog(obj any) *TPrintDialog {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

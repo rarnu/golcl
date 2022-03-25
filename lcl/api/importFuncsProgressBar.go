@@ -13,15 +13,15 @@ func ProgressBar_Create(obj uintptr) uintptr {
 }
 
 func ProgressBar_Free(obj uintptr) {
-	getLazyProc("ProgressBar_Free").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_Free").Call(obj)
 }
 
 func ProgressBar_StepIt(obj uintptr) {
-	getLazyProc("ProgressBar_StepIt").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_StepIt").Call(obj)
 }
 
 func ProgressBar_StepBy(obj uintptr, Delta int32) {
-	getLazyProc("ProgressBar_StepBy").Call(obj, uintptr(Delta))
+	_, _, _ = getLazyProc("ProgressBar_StepBy").Call(obj, uintptr(Delta))
 }
 
 func ProgressBar_CanFocus(obj uintptr) bool {
@@ -40,11 +40,11 @@ func ProgressBar_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, Allow
 }
 
 func ProgressBar_DisableAlign(obj uintptr) {
-	getLazyProc("ProgressBar_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_DisableAlign").Call(obj)
 }
 
 func ProgressBar_EnableAlign(obj uintptr) {
-	getLazyProc("ProgressBar_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_EnableAlign").Call(obj)
 }
 
 func ProgressBar_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -53,7 +53,7 @@ func ProgressBar_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func ProgressBar_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("ProgressBar_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("ProgressBar_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func ProgressBar_Focused(obj uintptr) bool {
@@ -67,62 +67,62 @@ func ProgressBar_HandleAllocated(obj uintptr) bool {
 }
 
 func ProgressBar_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ProgressBar_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ProgressBar_InsertControl").Call(obj, AControl)
 }
 
 func ProgressBar_Invalidate(obj uintptr) {
-	getLazyProc("ProgressBar_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_Invalidate").Call(obj)
 }
 
 func ProgressBar_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("ProgressBar_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("ProgressBar_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func ProgressBar_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ProgressBar_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ProgressBar_RemoveControl").Call(obj, AControl)
 }
 
 func ProgressBar_Realign(obj uintptr) {
-	getLazyProc("ProgressBar_Realign").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_Realign").Call(obj)
 }
 
 func ProgressBar_Repaint(obj uintptr) {
-	getLazyProc("ProgressBar_Repaint").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_Repaint").Call(obj)
 }
 
 func ProgressBar_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("ProgressBar_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("ProgressBar_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func ProgressBar_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("ProgressBar_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("ProgressBar_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func ProgressBar_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("ProgressBar_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("ProgressBar_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func ProgressBar_SetFocus(obj uintptr) {
-	getLazyProc("ProgressBar_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_SetFocus").Call(obj)
 }
 
 func ProgressBar_Update(obj uintptr) {
-	getLazyProc("ProgressBar_Update").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_Update").Call(obj)
 }
 
 func ProgressBar_BringToFront(obj uintptr) {
-	getLazyProc("ProgressBar_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_BringToFront").Call(obj)
 }
 
 func ProgressBar_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ProgressBar_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ProgressBar_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ProgressBar_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ProgressBar_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ProgressBar_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -137,7 +137,7 @@ func ProgressBar_HasParent(obj uintptr) bool {
 }
 
 func ProgressBar_Hide(obj uintptr) {
-	getLazyProc("ProgressBar_Hide").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_Hide").Call(obj)
 }
 
 func ProgressBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -146,27 +146,27 @@ func ProgressBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) in
 }
 
 func ProgressBar_Refresh(obj uintptr) {
-	getLazyProc("ProgressBar_Refresh").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_Refresh").Call(obj)
 }
 
 func ProgressBar_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ProgressBar_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ProgressBar_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ProgressBar_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ProgressBar_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ProgressBar_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ProgressBar_SendToBack(obj uintptr) {
-	getLazyProc("ProgressBar_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_SendToBack").Call(obj)
 }
 
 func ProgressBar_Show(obj uintptr) {
-	getLazyProc("ProgressBar_Show").Call(obj)
+	_, _, _ = getLazyProc("ProgressBar_Show").Call(obj)
 }
 
 func ProgressBar_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -185,7 +185,7 @@ func ProgressBar_GetTextLen(obj uintptr) int32 {
 }
 
 func ProgressBar_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("ProgressBar_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("ProgressBar_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func ProgressBar_FindComponent(obj uintptr, AName string) uintptr {
@@ -199,7 +199,7 @@ func ProgressBar_GetNamePath(obj uintptr) string {
 }
 
 func ProgressBar_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ProgressBar_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ProgressBar_Assign").Call(obj, Source)
 }
 
 func ProgressBar_ClassType(obj uintptr) TClass {
@@ -238,31 +238,31 @@ func ProgressBar_ToString(obj uintptr) string {
 }
 
 func ProgressBar_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ProgressBar_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ProgressBar_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ProgressBar_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ProgressBar_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ProgressBar_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ProgressBar_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ProgressBar_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ProgressBar_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func ProgressBar_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ProgressBar_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ProgressBar_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func ProgressBar_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("ProgressBar_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("ProgressBar_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func ProgressBar_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("ProgressBar_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("ProgressBar_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func ProgressBar_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("ProgressBar_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("ProgressBar_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func ProgressBar_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -316,15 +316,15 @@ func ProgressBar_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func ProgressBar_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("ProgressBar_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("ProgressBar_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func ProgressBar_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("ProgressBar_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("ProgressBar_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func ProgressBar_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("ProgressBar_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("ProgressBar_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func ProgressBar_GetAlign(obj uintptr) TAlign {
@@ -333,7 +333,7 @@ func ProgressBar_GetAlign(obj uintptr) TAlign {
 }
 
 func ProgressBar_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("ProgressBar_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetAlign").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetAnchors(obj uintptr) TAnchors {
@@ -342,7 +342,7 @@ func ProgressBar_GetAnchors(obj uintptr) TAnchors {
 }
 
 func ProgressBar_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("ProgressBar_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetAnchors").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetBorderWidth(obj uintptr) int32 {
@@ -351,7 +351,7 @@ func ProgressBar_GetBorderWidth(obj uintptr) int32 {
 }
 
 func ProgressBar_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetDoubleBuffered(obj uintptr) bool {
@@ -360,7 +360,7 @@ func ProgressBar_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func ProgressBar_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetDragCursor(obj uintptr) TCursor {
@@ -369,7 +369,7 @@ func ProgressBar_GetDragCursor(obj uintptr) TCursor {
 }
 
 func ProgressBar_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("ProgressBar_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetDragKind(obj uintptr) TDragKind {
@@ -378,7 +378,7 @@ func ProgressBar_GetDragKind(obj uintptr) TDragKind {
 }
 
 func ProgressBar_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("ProgressBar_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetDragKind").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetDragMode(obj uintptr) TDragMode {
@@ -387,7 +387,7 @@ func ProgressBar_GetDragMode(obj uintptr) TDragMode {
 }
 
 func ProgressBar_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("ProgressBar_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetDragMode").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetEnabled(obj uintptr) bool {
@@ -396,7 +396,7 @@ func ProgressBar_GetEnabled(obj uintptr) bool {
 }
 
 func ProgressBar_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetHint(obj uintptr) string {
@@ -405,7 +405,7 @@ func ProgressBar_GetHint(obj uintptr) string {
 }
 
 func ProgressBar_SetHint(obj uintptr, value string) {
-	getLazyProc("ProgressBar_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func ProgressBar_GetConstraints(obj uintptr) uintptr {
@@ -414,7 +414,7 @@ func ProgressBar_GetConstraints(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetConstraints").Call(obj, value)
 }
 
 func ProgressBar_GetMin(obj uintptr) int32 {
@@ -423,7 +423,7 @@ func ProgressBar_GetMin(obj uintptr) int32 {
 }
 
 func ProgressBar_SetMin(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetMin").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetMin").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetMax(obj uintptr) int32 {
@@ -432,7 +432,7 @@ func ProgressBar_GetMax(obj uintptr) int32 {
 }
 
 func ProgressBar_SetMax(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetMax").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetMax").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetOrientation(obj uintptr) TProgressBarOrientation {
@@ -441,7 +441,7 @@ func ProgressBar_GetOrientation(obj uintptr) TProgressBarOrientation {
 }
 
 func ProgressBar_SetOrientation(obj uintptr, value TProgressBarOrientation) {
-	getLazyProc("ProgressBar_SetOrientation").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetOrientation").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetParentDoubleBuffered(obj uintptr) bool {
@@ -450,7 +450,7 @@ func ProgressBar_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func ProgressBar_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetParentShowHint(obj uintptr) bool {
@@ -459,7 +459,7 @@ func ProgressBar_GetParentShowHint(obj uintptr) bool {
 }
 
 func ProgressBar_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetPopupMenu(obj uintptr) uintptr {
@@ -468,7 +468,7 @@ func ProgressBar_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetPopupMenu").Call(obj, value)
 }
 
 func ProgressBar_GetPosition(obj uintptr) int32 {
@@ -477,7 +477,7 @@ func ProgressBar_GetPosition(obj uintptr) int32 {
 }
 
 func ProgressBar_SetPosition(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetPosition").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetPosition").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetSmooth(obj uintptr) bool {
@@ -486,7 +486,7 @@ func ProgressBar_GetSmooth(obj uintptr) bool {
 }
 
 func ProgressBar_SetSmooth(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetSmooth").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetSmooth").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetStyle(obj uintptr) TProgressBarStyle {
@@ -495,7 +495,7 @@ func ProgressBar_GetStyle(obj uintptr) TProgressBarStyle {
 }
 
 func ProgressBar_SetStyle(obj uintptr, value TProgressBarStyle) {
-	getLazyProc("ProgressBar_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetStyle").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetStep(obj uintptr) int32 {
@@ -504,7 +504,7 @@ func ProgressBar_GetStep(obj uintptr) int32 {
 }
 
 func ProgressBar_SetStep(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetStep").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetStep").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetShowHint(obj uintptr) bool {
@@ -513,7 +513,7 @@ func ProgressBar_GetShowHint(obj uintptr) bool {
 }
 
 func ProgressBar_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetTabOrder(obj uintptr) TTabOrder {
@@ -522,7 +522,7 @@ func ProgressBar_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func ProgressBar_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("ProgressBar_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetTabStop(obj uintptr) bool {
@@ -531,7 +531,7 @@ func ProgressBar_GetTabStop(obj uintptr) bool {
 }
 
 func ProgressBar_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetVisible(obj uintptr) bool {
@@ -540,51 +540,51 @@ func ProgressBar_GetVisible(obj uintptr) bool {
 }
 
 func ProgressBar_SetVisible(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func ProgressBar_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func ProgressBar_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("ProgressBar_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func ProgressBar_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ProgressBar_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func ProgressBar_GetDockClientCount(obj uintptr) int32 {
@@ -598,7 +598,7 @@ func ProgressBar_GetDockSite(obj uintptr) bool {
 }
 
 func ProgressBar_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetMouseInClient(obj uintptr) bool {
@@ -623,16 +623,16 @@ func ProgressBar_GetControlCount(obj uintptr) int32 {
 
 func ProgressBar_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ProgressBar_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ProgressBar_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ProgressBar_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ProgressBar_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("ProgressBar_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetParentWindow").Call(obj, value)
 }
 
 func ProgressBar_GetShowing(obj uintptr) bool {
@@ -646,7 +646,7 @@ func ProgressBar_GetUseDockManager(obj uintptr) bool {
 }
 
 func ProgressBar_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("ProgressBar_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ProgressBar_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetAction(obj uintptr) uintptr {
@@ -655,7 +655,7 @@ func ProgressBar_GetAction(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetAction").Call(obj, value)
 }
 
 func ProgressBar_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -664,17 +664,17 @@ func ProgressBar_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func ProgressBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("ProgressBar_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ProgressBar_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ProgressBar_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ProgressBar_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("ProgressBar_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ProgressBar_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ProgressBar_GetClientHeight(obj uintptr) int32 {
@@ -683,18 +683,18 @@ func ProgressBar_GetClientHeight(obj uintptr) int32 {
 }
 
 func ProgressBar_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ProgressBar_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ProgressBar_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ProgressBar_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ProgressBar_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ProgressBar_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -704,7 +704,7 @@ func ProgressBar_GetClientWidth(obj uintptr) int32 {
 }
 
 func ProgressBar_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetControlState(obj uintptr) TControlState {
@@ -713,7 +713,7 @@ func ProgressBar_GetControlState(obj uintptr) TControlState {
 }
 
 func ProgressBar_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("ProgressBar_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetControlState").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetControlStyle(obj uintptr) TControlStyle {
@@ -722,7 +722,7 @@ func ProgressBar_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func ProgressBar_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("ProgressBar_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetFloating(obj uintptr) bool {
@@ -736,7 +736,7 @@ func ProgressBar_GetParent(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetParent").Call(obj, value)
 }
 
 func ProgressBar_GetLeft(obj uintptr) int32 {
@@ -745,7 +745,7 @@ func ProgressBar_GetLeft(obj uintptr) int32 {
 }
 
 func ProgressBar_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetLeft").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetTop(obj uintptr) int32 {
@@ -754,7 +754,7 @@ func ProgressBar_GetTop(obj uintptr) int32 {
 }
 
 func ProgressBar_SetTop(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetTop").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetWidth(obj uintptr) int32 {
@@ -763,7 +763,7 @@ func ProgressBar_GetWidth(obj uintptr) int32 {
 }
 
 func ProgressBar_SetWidth(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetWidth").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetHeight(obj uintptr) int32 {
@@ -772,7 +772,7 @@ func ProgressBar_GetHeight(obj uintptr) int32 {
 }
 
 func ProgressBar_SetHeight(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetHeight").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetCursor(obj uintptr) TCursor {
@@ -781,7 +781,7 @@ func ProgressBar_GetCursor(obj uintptr) TCursor {
 }
 
 func ProgressBar_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("ProgressBar_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetCursor").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetComponentCount(obj uintptr) int32 {
@@ -795,7 +795,7 @@ func ProgressBar_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ProgressBar_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ProgressBar_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetOwner(obj uintptr) uintptr {
@@ -809,7 +809,7 @@ func ProgressBar_GetName(obj uintptr) string {
 }
 
 func ProgressBar_SetName(obj uintptr, value string) {
-	getLazyProc("ProgressBar_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ProgressBar_GetTag(obj uintptr) int {
@@ -818,7 +818,7 @@ func ProgressBar_GetTag(obj uintptr) int {
 }
 
 func ProgressBar_SetTag(obj uintptr, value int) {
-	getLazyProc("ProgressBar_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ProgressBar_SetTag").Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -827,7 +827,7 @@ func ProgressBar_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetAnchorSideLeft").Call(obj, value)
 }
 
 func ProgressBar_GetAnchorSideTop(obj uintptr) uintptr {
@@ -836,7 +836,7 @@ func ProgressBar_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetAnchorSideTop").Call(obj, value)
 }
 
 func ProgressBar_GetAnchorSideRight(obj uintptr) uintptr {
@@ -845,7 +845,7 @@ func ProgressBar_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetAnchorSideRight").Call(obj, value)
 }
 
 func ProgressBar_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -854,7 +854,7 @@ func ProgressBar_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetAnchorSideBottom").Call(obj, value)
 }
 
 func ProgressBar_GetChildSizing(obj uintptr) uintptr {
@@ -863,7 +863,7 @@ func ProgressBar_GetChildSizing(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetChildSizing").Call(obj, value)
 }
 
 func ProgressBar_GetBorderSpacing(obj uintptr) uintptr {
@@ -872,7 +872,7 @@ func ProgressBar_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func ProgressBar_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("ProgressBar_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("ProgressBar_SetBorderSpacing").Call(obj, value)
 }
 
 func ProgressBar_GetDockClients(obj uintptr, Index int32) uintptr {

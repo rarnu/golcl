@@ -13,7 +13,7 @@ func TreeView_Create(obj uintptr) uintptr {
 }
 
 func TreeView_Free(obj uintptr) {
-	getLazyProc("TreeView_Free").Call(obj)
+	_, _, _ = getLazyProc("TreeView_Free").Call(obj)
 }
 
 func TreeView_AlphaSort(obj uintptr, ARecurse bool) bool {
@@ -22,11 +22,11 @@ func TreeView_AlphaSort(obj uintptr, ARecurse bool) bool {
 }
 
 func TreeView_FullCollapse(obj uintptr) {
-	getLazyProc("TreeView_FullCollapse").Call(obj)
+	_, _, _ = getLazyProc("TreeView_FullCollapse").Call(obj)
 }
 
 func TreeView_FullExpand(obj uintptr) {
-	getLazyProc("TreeView_FullExpand").Call(obj)
+	_, _, _ = getLazyProc("TreeView_FullExpand").Call(obj)
 }
 
 func TreeView_GetHitTestInfoAt(obj uintptr, X int32, Y int32) THitTests {
@@ -45,23 +45,23 @@ func TreeView_IsEditing(obj uintptr) bool {
 }
 
 func TreeView_LoadFromFile(obj uintptr, FileName string) {
-	getLazyProc("TreeView_LoadFromFile").Call(obj, GoStrToDStr(FileName))
+	_, _, _ = getLazyProc("TreeView_LoadFromFile").Call(obj, GoStrToDStr(FileName))
 }
 
 func TreeView_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("TreeView_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("TreeView_LoadFromStream").Call(obj, Stream)
 }
 
 func TreeView_SaveToFile(obj uintptr, FileName string) {
-	getLazyProc("TreeView_SaveToFile").Call(obj, GoStrToDStr(FileName))
+	_, _, _ = getLazyProc("TreeView_SaveToFile").Call(obj, GoStrToDStr(FileName))
 }
 
 func TreeView_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("TreeView_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("TreeView_SaveToStream").Call(obj, Stream)
 }
 
 func TreeView_ClearSelection(obj uintptr, KeepPrimary bool) {
-	getLazyProc("TreeView_ClearSelection").Call(obj, GoBoolToDBool(KeepPrimary))
+	_, _, _ = getLazyProc("TreeView_ClearSelection").Call(obj, GoBoolToDBool(KeepPrimary))
 }
 
 func TreeView_CustomSort(obj uintptr, SortProc PFNTVCOMPARE, Data int, ARecurse bool) bool {
@@ -85,11 +85,11 @@ func TreeView_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWin
 }
 
 func TreeView_DisableAlign(obj uintptr) {
-	getLazyProc("TreeView_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("TreeView_DisableAlign").Call(obj)
 }
 
 func TreeView_EnableAlign(obj uintptr) {
-	getLazyProc("TreeView_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("TreeView_EnableAlign").Call(obj)
 }
 
 func TreeView_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -98,7 +98,7 @@ func TreeView_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func TreeView_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("TreeView_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("TreeView_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func TreeView_Focused(obj uintptr) bool {
@@ -112,62 +112,62 @@ func TreeView_HandleAllocated(obj uintptr) bool {
 }
 
 func TreeView_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("TreeView_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("TreeView_InsertControl").Call(obj, AControl)
 }
 
 func TreeView_Invalidate(obj uintptr) {
-	getLazyProc("TreeView_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("TreeView_Invalidate").Call(obj)
 }
 
 func TreeView_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("TreeView_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("TreeView_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func TreeView_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("TreeView_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("TreeView_RemoveControl").Call(obj, AControl)
 }
 
 func TreeView_Realign(obj uintptr) {
-	getLazyProc("TreeView_Realign").Call(obj)
+	_, _, _ = getLazyProc("TreeView_Realign").Call(obj)
 }
 
 func TreeView_Repaint(obj uintptr) {
-	getLazyProc("TreeView_Repaint").Call(obj)
+	_, _, _ = getLazyProc("TreeView_Repaint").Call(obj)
 }
 
 func TreeView_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("TreeView_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("TreeView_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func TreeView_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("TreeView_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("TreeView_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func TreeView_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("TreeView_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("TreeView_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func TreeView_SetFocus(obj uintptr) {
-	getLazyProc("TreeView_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("TreeView_SetFocus").Call(obj)
 }
 
 func TreeView_Update(obj uintptr) {
-	getLazyProc("TreeView_Update").Call(obj)
+	_, _, _ = getLazyProc("TreeView_Update").Call(obj)
 }
 
 func TreeView_BringToFront(obj uintptr) {
-	getLazyProc("TreeView_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("TreeView_BringToFront").Call(obj)
 }
 
 func TreeView_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("TreeView_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeView_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TreeView_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("TreeView_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeView_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -182,7 +182,7 @@ func TreeView_HasParent(obj uintptr) bool {
 }
 
 func TreeView_Hide(obj uintptr) {
-	getLazyProc("TreeView_Hide").Call(obj)
+	_, _, _ = getLazyProc("TreeView_Hide").Call(obj)
 }
 
 func TreeView_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -191,27 +191,27 @@ func TreeView_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func TreeView_Refresh(obj uintptr) {
-	getLazyProc("TreeView_Refresh").Call(obj)
+	_, _, _ = getLazyProc("TreeView_Refresh").Call(obj)
 }
 
 func TreeView_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("TreeView_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeView_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TreeView_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("TreeView_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeView_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TreeView_SendToBack(obj uintptr) {
-	getLazyProc("TreeView_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("TreeView_SendToBack").Call(obj)
 }
 
 func TreeView_Show(obj uintptr) {
-	getLazyProc("TreeView_Show").Call(obj)
+	_, _, _ = getLazyProc("TreeView_Show").Call(obj)
 }
 
 func TreeView_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -230,7 +230,7 @@ func TreeView_GetTextLen(obj uintptr) int32 {
 }
 
 func TreeView_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("TreeView_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("TreeView_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func TreeView_FindComponent(obj uintptr, AName string) uintptr {
@@ -244,7 +244,7 @@ func TreeView_GetNamePath(obj uintptr) string {
 }
 
 func TreeView_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TreeView_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TreeView_Assign").Call(obj, Source)
 }
 
 func TreeView_ClassType(obj uintptr) TClass {
@@ -283,31 +283,31 @@ func TreeView_ToString(obj uintptr) string {
 }
 
 func TreeView_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("TreeView_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("TreeView_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func TreeView_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("TreeView_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("TreeView_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func TreeView_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("TreeView_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("TreeView_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func TreeView_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("TreeView_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("TreeView_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func TreeView_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("TreeView_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("TreeView_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func TreeView_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("TreeView_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("TreeView_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func TreeView_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("TreeView_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("TreeView_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func TreeView_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -361,15 +361,15 @@ func TreeView_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func TreeView_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("TreeView_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("TreeView_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func TreeView_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("TreeView_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("TreeView_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func TreeView_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("TreeView_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("TreeView_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func TreeView_GetDefaultItemHeight(obj uintptr) int32 {
@@ -378,7 +378,7 @@ func TreeView_GetDefaultItemHeight(obj uintptr) int32 {
 }
 
 func TreeView_SetDefaultItemHeight(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetDefaultItemHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetDefaultItemHeight").Call(obj, uintptr(value))
 }
 
 func TreeView_GetExpandSignColor(obj uintptr) TColor {
@@ -387,7 +387,7 @@ func TreeView_GetExpandSignColor(obj uintptr) TColor {
 }
 
 func TreeView_SetExpandSignColor(obj uintptr, value TColor) {
-	getLazyProc("TreeView_SetExpandSignColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetExpandSignColor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetExpandSignSize(obj uintptr) int32 {
@@ -396,7 +396,7 @@ func TreeView_GetExpandSignSize(obj uintptr) int32 {
 }
 
 func TreeView_SetExpandSignSize(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetExpandSignSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetExpandSignSize").Call(obj, uintptr(value))
 }
 
 func TreeView_GetExpandSignType(obj uintptr) TTreeViewExpandSignType {
@@ -405,7 +405,7 @@ func TreeView_GetExpandSignType(obj uintptr) TTreeViewExpandSignType {
 }
 
 func TreeView_SetExpandSignType(obj uintptr, value TTreeViewExpandSignType) {
-	getLazyProc("TreeView_SetExpandSignType").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetExpandSignType").Call(obj, uintptr(value))
 }
 
 func TreeView_GetHotTrackColor(obj uintptr) TColor {
@@ -414,7 +414,7 @@ func TreeView_GetHotTrackColor(obj uintptr) TColor {
 }
 
 func TreeView_SetHotTrackColor(obj uintptr, value TColor) {
-	getLazyProc("TreeView_SetHotTrackColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetHotTrackColor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetImagesWidth(obj uintptr) int32 {
@@ -423,7 +423,7 @@ func TreeView_GetImagesWidth(obj uintptr) int32 {
 }
 
 func TreeView_SetImagesWidth(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetImagesWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetImagesWidth").Call(obj, uintptr(value))
 }
 
 func TreeView_GetOptions(obj uintptr) TTreeViewOptions {
@@ -432,7 +432,7 @@ func TreeView_GetOptions(obj uintptr) TTreeViewOptions {
 }
 
 func TreeView_SetOptions(obj uintptr, value TTreeViewOptions) {
-	getLazyProc("TreeView_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetOptions").Call(obj, uintptr(value))
 }
 
 func TreeView_GetScrollBars(obj uintptr) TScrollStyle {
@@ -441,7 +441,7 @@ func TreeView_GetScrollBars(obj uintptr) TScrollStyle {
 }
 
 func TreeView_SetScrollBars(obj uintptr, value TScrollStyle) {
-	getLazyProc("TreeView_SetScrollBars").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetScrollBars").Call(obj, uintptr(value))
 }
 
 func TreeView_GetSelectionColor(obj uintptr) TColor {
@@ -450,7 +450,7 @@ func TreeView_GetSelectionColor(obj uintptr) TColor {
 }
 
 func TreeView_SetSelectionColor(obj uintptr, value TColor) {
-	getLazyProc("TreeView_SetSelectionColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetSelectionColor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetSelectionFontColor(obj uintptr) TColor {
@@ -459,7 +459,7 @@ func TreeView_GetSelectionFontColor(obj uintptr) TColor {
 }
 
 func TreeView_SetSelectionFontColor(obj uintptr, value TColor) {
-	getLazyProc("TreeView_SetSelectionFontColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetSelectionFontColor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetSelectionFontColorUsed(obj uintptr) bool {
@@ -468,7 +468,7 @@ func TreeView_GetSelectionFontColorUsed(obj uintptr) bool {
 }
 
 func TreeView_SetSelectionFontColorUsed(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetSelectionFontColorUsed").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetSelectionFontColorUsed").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetSeparatorColor(obj uintptr) TColor {
@@ -477,7 +477,7 @@ func TreeView_GetSeparatorColor(obj uintptr) TColor {
 }
 
 func TreeView_SetSeparatorColor(obj uintptr, value TColor) {
-	getLazyProc("TreeView_SetSeparatorColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetSeparatorColor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetStateImagesWidth(obj uintptr) int32 {
@@ -486,7 +486,7 @@ func TreeView_GetStateImagesWidth(obj uintptr) int32 {
 }
 
 func TreeView_SetStateImagesWidth(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetStateImagesWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetStateImagesWidth").Call(obj, uintptr(value))
 }
 
 func TreeView_GetToolTips(obj uintptr) bool {
@@ -495,7 +495,7 @@ func TreeView_GetToolTips(obj uintptr) bool {
 }
 
 func TreeView_SetToolTips(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetToolTips").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetToolTips").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetTreeLineColor(obj uintptr) TColor {
@@ -504,7 +504,7 @@ func TreeView_GetTreeLineColor(obj uintptr) TColor {
 }
 
 func TreeView_SetTreeLineColor(obj uintptr, value TColor) {
-	getLazyProc("TreeView_SetTreeLineColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetTreeLineColor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetTreeLinePenStyle(obj uintptr) TPenStyle {
@@ -513,7 +513,7 @@ func TreeView_GetTreeLinePenStyle(obj uintptr) TPenStyle {
 }
 
 func TreeView_SetTreeLinePenStyle(obj uintptr, value TPenStyle) {
-	getLazyProc("TreeView_SetTreeLinePenStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetTreeLinePenStyle").Call(obj, uintptr(value))
 }
 
 func TreeView_GetAlign(obj uintptr) TAlign {
@@ -522,7 +522,7 @@ func TreeView_GetAlign(obj uintptr) TAlign {
 }
 
 func TreeView_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("TreeView_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetAlign").Call(obj, uintptr(value))
 }
 
 func TreeView_GetAnchors(obj uintptr) TAnchors {
@@ -531,7 +531,7 @@ func TreeView_GetAnchors(obj uintptr) TAnchors {
 }
 
 func TreeView_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("TreeView_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetAnchors").Call(obj, uintptr(value))
 }
 
 func TreeView_GetAutoExpand(obj uintptr) bool {
@@ -540,7 +540,7 @@ func TreeView_GetAutoExpand(obj uintptr) bool {
 }
 
 func TreeView_SetAutoExpand(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetAutoExpand").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetAutoExpand").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -549,7 +549,7 @@ func TreeView_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func TreeView_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("TreeView_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func TreeView_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -558,7 +558,7 @@ func TreeView_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func TreeView_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("TreeView_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func TreeView_GetBorderWidth(obj uintptr) int32 {
@@ -567,7 +567,7 @@ func TreeView_GetBorderWidth(obj uintptr) int32 {
 }
 
 func TreeView_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func TreeView_GetColor(obj uintptr) TColor {
@@ -576,7 +576,7 @@ func TreeView_GetColor(obj uintptr) TColor {
 }
 
 func TreeView_SetColor(obj uintptr, value TColor) {
-	getLazyProc("TreeView_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetColor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetConstraints(obj uintptr) uintptr {
@@ -585,7 +585,7 @@ func TreeView_GetConstraints(obj uintptr) uintptr {
 }
 
 func TreeView_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetConstraints").Call(obj, value)
 }
 
 func TreeView_GetDoubleBuffered(obj uintptr) bool {
@@ -594,7 +594,7 @@ func TreeView_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func TreeView_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetDragKind(obj uintptr) TDragKind {
@@ -603,7 +603,7 @@ func TreeView_GetDragKind(obj uintptr) TDragKind {
 }
 
 func TreeView_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("TreeView_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetDragKind").Call(obj, uintptr(value))
 }
 
 func TreeView_GetDragCursor(obj uintptr) TCursor {
@@ -612,7 +612,7 @@ func TreeView_GetDragCursor(obj uintptr) TCursor {
 }
 
 func TreeView_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("TreeView_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetDragMode(obj uintptr) TDragMode {
@@ -621,7 +621,7 @@ func TreeView_GetDragMode(obj uintptr) TDragMode {
 }
 
 func TreeView_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("TreeView_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetDragMode").Call(obj, uintptr(value))
 }
 
 func TreeView_GetEnabled(obj uintptr) bool {
@@ -630,7 +630,7 @@ func TreeView_GetEnabled(obj uintptr) bool {
 }
 
 func TreeView_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetFont(obj uintptr) uintptr {
@@ -639,7 +639,7 @@ func TreeView_GetFont(obj uintptr) uintptr {
 }
 
 func TreeView_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetFont").Call(obj, value)
 }
 
 func TreeView_GetHideSelection(obj uintptr) bool {
@@ -648,7 +648,7 @@ func TreeView_GetHideSelection(obj uintptr) bool {
 }
 
 func TreeView_SetHideSelection(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetHideSelection").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetHideSelection").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetHotTrack(obj uintptr) bool {
@@ -657,7 +657,7 @@ func TreeView_GetHotTrack(obj uintptr) bool {
 }
 
 func TreeView_SetHotTrack(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetHotTrack").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetHotTrack").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetImages(obj uintptr) uintptr {
@@ -666,7 +666,7 @@ func TreeView_GetImages(obj uintptr) uintptr {
 }
 
 func TreeView_SetImages(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetImages").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetImages").Call(obj, value)
 }
 
 func TreeView_GetIndent(obj uintptr) int32 {
@@ -675,7 +675,7 @@ func TreeView_GetIndent(obj uintptr) int32 {
 }
 
 func TreeView_SetIndent(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetIndent").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetIndent").Call(obj, uintptr(value))
 }
 
 func TreeView_GetMultiSelect(obj uintptr) bool {
@@ -684,7 +684,7 @@ func TreeView_GetMultiSelect(obj uintptr) bool {
 }
 
 func TreeView_SetMultiSelect(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetMultiSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetMultiSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetMultiSelectStyle(obj uintptr) TMultiSelectStyle {
@@ -693,7 +693,7 @@ func TreeView_GetMultiSelectStyle(obj uintptr) TMultiSelectStyle {
 }
 
 func TreeView_SetMultiSelectStyle(obj uintptr, value TMultiSelectStyle) {
-	getLazyProc("TreeView_SetMultiSelectStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetMultiSelectStyle").Call(obj, uintptr(value))
 }
 
 func TreeView_GetParentColor(obj uintptr) bool {
@@ -702,7 +702,7 @@ func TreeView_GetParentColor(obj uintptr) bool {
 }
 
 func TreeView_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetParentDoubleBuffered(obj uintptr) bool {
@@ -711,7 +711,7 @@ func TreeView_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func TreeView_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetParentFont(obj uintptr) bool {
@@ -720,7 +720,7 @@ func TreeView_GetParentFont(obj uintptr) bool {
 }
 
 func TreeView_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetParentShowHint(obj uintptr) bool {
@@ -729,7 +729,7 @@ func TreeView_GetParentShowHint(obj uintptr) bool {
 }
 
 func TreeView_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetPopupMenu(obj uintptr) uintptr {
@@ -738,7 +738,7 @@ func TreeView_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func TreeView_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetPopupMenu").Call(obj, value)
 }
 
 func TreeView_GetReadOnly(obj uintptr) bool {
@@ -747,7 +747,7 @@ func TreeView_GetReadOnly(obj uintptr) bool {
 }
 
 func TreeView_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetRightClickSelect(obj uintptr) bool {
@@ -756,7 +756,7 @@ func TreeView_GetRightClickSelect(obj uintptr) bool {
 }
 
 func TreeView_SetRightClickSelect(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetRightClickSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetRightClickSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetRowSelect(obj uintptr) bool {
@@ -765,7 +765,7 @@ func TreeView_GetRowSelect(obj uintptr) bool {
 }
 
 func TreeView_SetRowSelect(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetRowSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetRowSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetShowButtons(obj uintptr) bool {
@@ -774,7 +774,7 @@ func TreeView_GetShowButtons(obj uintptr) bool {
 }
 
 func TreeView_SetShowButtons(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetShowButtons").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetShowButtons").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetShowHint(obj uintptr) bool {
@@ -783,7 +783,7 @@ func TreeView_GetShowHint(obj uintptr) bool {
 }
 
 func TreeView_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetShowLines(obj uintptr) bool {
@@ -792,7 +792,7 @@ func TreeView_GetShowLines(obj uintptr) bool {
 }
 
 func TreeView_SetShowLines(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetShowLines").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetShowLines").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetShowRoot(obj uintptr) bool {
@@ -801,7 +801,7 @@ func TreeView_GetShowRoot(obj uintptr) bool {
 }
 
 func TreeView_SetShowRoot(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetShowRoot").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetShowRoot").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetSortType(obj uintptr) TSortType {
@@ -810,7 +810,7 @@ func TreeView_GetSortType(obj uintptr) TSortType {
 }
 
 func TreeView_SetSortType(obj uintptr, value TSortType) {
-	getLazyProc("TreeView_SetSortType").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetSortType").Call(obj, uintptr(value))
 }
 
 func TreeView_GetStateImages(obj uintptr) uintptr {
@@ -819,7 +819,7 @@ func TreeView_GetStateImages(obj uintptr) uintptr {
 }
 
 func TreeView_SetStateImages(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetStateImages").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetStateImages").Call(obj, value)
 }
 
 func TreeView_GetTabOrder(obj uintptr) TTabOrder {
@@ -828,7 +828,7 @@ func TreeView_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func TreeView_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("TreeView_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func TreeView_GetTabStop(obj uintptr) bool {
@@ -837,7 +837,7 @@ func TreeView_GetTabStop(obj uintptr) bool {
 }
 
 func TreeView_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetVisible(obj uintptr) bool {
@@ -846,135 +846,135 @@ func TreeView_GetVisible(obj uintptr) bool {
 }
 
 func TreeView_SetVisible(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func TreeView_SetOnAddition(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnAddition").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnAddition(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnAddition").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnAdvancedCustomDraw(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnAdvancedCustomDraw").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnAdvancedCustomDraw(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnAdvancedCustomDraw").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnAdvancedCustomDrawItem(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnAdvancedCustomDrawItem").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnAdvancedCustomDrawItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnAdvancedCustomDrawItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnChanging(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnChanging").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnChanging(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnChanging").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnCollapsed(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnCollapsed").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnCollapsed(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnCollapsed").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnCollapsing(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnCollapsing").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnCollapsing(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnCollapsing").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnCompare(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnCompare").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnCompare(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnCompare").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnCustomDraw(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnCustomDraw").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnCustomDraw(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnCustomDraw").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnCustomDrawItem(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnCustomDrawItem").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnCustomDrawItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnCustomDrawItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnDeletion(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnDeletion").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnDeletion(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnDeletion").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnEdited(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnEdited").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnEdited(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnEdited").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnEditing(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnEditing").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnEditing(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnEditing").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnExpanding(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnExpanding").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnExpanding(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnExpanding").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnExpanded(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnExpanded").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnExpanded(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnExpanded").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnGetSelectedIndex(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnGetSelectedIndex").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnGetSelectedIndex(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnGetSelectedIndex").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func TreeView_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("TreeView_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func TreeView_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TreeView_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func TreeView_GetItems(obj uintptr) uintptr {
@@ -983,7 +983,7 @@ func TreeView_GetItems(obj uintptr) uintptr {
 }
 
 func TreeView_SetItems(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetItems").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetItems").Call(obj, value)
 }
 
 func TreeView_GetCanvas(obj uintptr) uintptr {
@@ -997,7 +997,7 @@ func TreeView_GetDropTarget(obj uintptr) uintptr {
 }
 
 func TreeView_SetDropTarget(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetDropTarget").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetDropTarget").Call(obj, value)
 }
 
 func TreeView_GetSelected(obj uintptr) uintptr {
@@ -1006,7 +1006,7 @@ func TreeView_GetSelected(obj uintptr) uintptr {
 }
 
 func TreeView_SetSelected(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetSelected").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetSelected").Call(obj, value)
 }
 
 func TreeView_GetTopItem(obj uintptr) uintptr {
@@ -1015,7 +1015,7 @@ func TreeView_GetTopItem(obj uintptr) uintptr {
 }
 
 func TreeView_SetTopItem(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetTopItem").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetTopItem").Call(obj, value)
 }
 
 func TreeView_GetSelectionCount(obj uintptr) uint32 {
@@ -1034,7 +1034,7 @@ func TreeView_GetDockSite(obj uintptr) bool {
 }
 
 func TreeView_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetMouseInClient(obj uintptr) bool {
@@ -1059,16 +1059,16 @@ func TreeView_GetControlCount(obj uintptr) int32 {
 
 func TreeView_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("TreeView_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func TreeView_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("TreeView_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func TreeView_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("TreeView_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetParentWindow").Call(obj, value)
 }
 
 func TreeView_GetShowing(obj uintptr) bool {
@@ -1082,7 +1082,7 @@ func TreeView_GetUseDockManager(obj uintptr) bool {
 }
 
 func TreeView_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("TreeView_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeView_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetAction(obj uintptr) uintptr {
@@ -1091,17 +1091,17 @@ func TreeView_GetAction(obj uintptr) uintptr {
 }
 
 func TreeView_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetAction").Call(obj, value)
 }
 
 func TreeView_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("TreeView_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeView_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TreeView_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("TreeView_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("TreeView_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func TreeView_GetClientHeight(obj uintptr) int32 {
@@ -1110,18 +1110,18 @@ func TreeView_GetClientHeight(obj uintptr) int32 {
 }
 
 func TreeView_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func TreeView_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("TreeView_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeView_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TreeView_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("TreeView_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeView_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -1131,7 +1131,7 @@ func TreeView_GetClientWidth(obj uintptr) int32 {
 }
 
 func TreeView_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func TreeView_GetControlState(obj uintptr) TControlState {
@@ -1140,7 +1140,7 @@ func TreeView_GetControlState(obj uintptr) TControlState {
 }
 
 func TreeView_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("TreeView_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetControlState").Call(obj, uintptr(value))
 }
 
 func TreeView_GetControlStyle(obj uintptr) TControlStyle {
@@ -1149,7 +1149,7 @@ func TreeView_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func TreeView_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("TreeView_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func TreeView_GetFloating(obj uintptr) bool {
@@ -1163,7 +1163,7 @@ func TreeView_GetParent(obj uintptr) uintptr {
 }
 
 func TreeView_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetParent").Call(obj, value)
 }
 
 func TreeView_GetLeft(obj uintptr) int32 {
@@ -1172,7 +1172,7 @@ func TreeView_GetLeft(obj uintptr) int32 {
 }
 
 func TreeView_SetLeft(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetLeft").Call(obj, uintptr(value))
 }
 
 func TreeView_GetTop(obj uintptr) int32 {
@@ -1181,7 +1181,7 @@ func TreeView_GetTop(obj uintptr) int32 {
 }
 
 func TreeView_SetTop(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetTop").Call(obj, uintptr(value))
 }
 
 func TreeView_GetWidth(obj uintptr) int32 {
@@ -1190,7 +1190,7 @@ func TreeView_GetWidth(obj uintptr) int32 {
 }
 
 func TreeView_SetWidth(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetWidth").Call(obj, uintptr(value))
 }
 
 func TreeView_GetHeight(obj uintptr) int32 {
@@ -1199,7 +1199,7 @@ func TreeView_GetHeight(obj uintptr) int32 {
 }
 
 func TreeView_SetHeight(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetHeight").Call(obj, uintptr(value))
 }
 
 func TreeView_GetCursor(obj uintptr) TCursor {
@@ -1208,7 +1208,7 @@ func TreeView_GetCursor(obj uintptr) TCursor {
 }
 
 func TreeView_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("TreeView_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetCursor").Call(obj, uintptr(value))
 }
 
 func TreeView_GetHint(obj uintptr) string {
@@ -1217,7 +1217,7 @@ func TreeView_GetHint(obj uintptr) string {
 }
 
 func TreeView_SetHint(obj uintptr, value string) {
-	getLazyProc("TreeView_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TreeView_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func TreeView_GetComponentCount(obj uintptr) int32 {
@@ -1231,7 +1231,7 @@ func TreeView_GetComponentIndex(obj uintptr) int32 {
 }
 
 func TreeView_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("TreeView_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func TreeView_GetOwner(obj uintptr) uintptr {
@@ -1245,7 +1245,7 @@ func TreeView_GetName(obj uintptr) string {
 }
 
 func TreeView_SetName(obj uintptr, value string) {
-	getLazyProc("TreeView_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TreeView_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func TreeView_GetTag(obj uintptr) int {
@@ -1254,7 +1254,7 @@ func TreeView_GetTag(obj uintptr) int {
 }
 
 func TreeView_SetTag(obj uintptr, value int) {
-	getLazyProc("TreeView_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeView_SetTag").Call(obj, uintptr(value))
 }
 
 func TreeView_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -1263,7 +1263,7 @@ func TreeView_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func TreeView_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetAnchorSideLeft").Call(obj, value)
 }
 
 func TreeView_GetAnchorSideTop(obj uintptr) uintptr {
@@ -1272,7 +1272,7 @@ func TreeView_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func TreeView_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetAnchorSideTop").Call(obj, value)
 }
 
 func TreeView_GetAnchorSideRight(obj uintptr) uintptr {
@@ -1281,7 +1281,7 @@ func TreeView_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func TreeView_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetAnchorSideRight").Call(obj, value)
 }
 
 func TreeView_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -1290,7 +1290,7 @@ func TreeView_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func TreeView_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetAnchorSideBottom").Call(obj, value)
 }
 
 func TreeView_GetChildSizing(obj uintptr) uintptr {
@@ -1299,7 +1299,7 @@ func TreeView_GetChildSizing(obj uintptr) uintptr {
 }
 
 func TreeView_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetChildSizing").Call(obj, value)
 }
 
 func TreeView_GetBorderSpacing(obj uintptr) uintptr {
@@ -1308,7 +1308,7 @@ func TreeView_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func TreeView_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("TreeView_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("TreeView_SetBorderSpacing").Call(obj, value)
 }
 
 func TreeView_GetSelections(obj uintptr, Index int32) uintptr {

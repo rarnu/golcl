@@ -19,7 +19,7 @@ func NewSynAutoComplete(owner IComponent) *TSynAutoComplete {
 	return s
 }
 
-func AsSynAutoComplete(obj interface{}) *TSynAutoComplete {
+func AsSynAutoComplete(obj any) *TSynAutoComplete {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

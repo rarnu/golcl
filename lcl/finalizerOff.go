@@ -10,6 +10,6 @@
 
 package lcl
 
-func setFinalizer(obj interface{}, finalizer interface{}) {
+func setFinalizer(_ any, _ any) {
 	// no code
 }

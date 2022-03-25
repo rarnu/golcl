@@ -13,11 +13,11 @@ func HeaderControl_Create(obj uintptr) uintptr {
 }
 
 func HeaderControl_Free(obj uintptr) {
-	getLazyProc("HeaderControl_Free").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_Free").Call(obj)
 }
 
 func HeaderControl_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("HeaderControl_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("HeaderControl_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func HeaderControl_CanFocus(obj uintptr) bool {
@@ -36,11 +36,11 @@ func HeaderControl_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, All
 }
 
 func HeaderControl_DisableAlign(obj uintptr) {
-	getLazyProc("HeaderControl_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_DisableAlign").Call(obj)
 }
 
 func HeaderControl_EnableAlign(obj uintptr) {
-	getLazyProc("HeaderControl_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_EnableAlign").Call(obj)
 }
 
 func HeaderControl_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -59,62 +59,62 @@ func HeaderControl_HandleAllocated(obj uintptr) bool {
 }
 
 func HeaderControl_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("HeaderControl_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("HeaderControl_InsertControl").Call(obj, AControl)
 }
 
 func HeaderControl_Invalidate(obj uintptr) {
-	getLazyProc("HeaderControl_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_Invalidate").Call(obj)
 }
 
 func HeaderControl_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("HeaderControl_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("HeaderControl_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func HeaderControl_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("HeaderControl_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("HeaderControl_RemoveControl").Call(obj, AControl)
 }
 
 func HeaderControl_Realign(obj uintptr) {
-	getLazyProc("HeaderControl_Realign").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_Realign").Call(obj)
 }
 
 func HeaderControl_Repaint(obj uintptr) {
-	getLazyProc("HeaderControl_Repaint").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_Repaint").Call(obj)
 }
 
 func HeaderControl_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("HeaderControl_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("HeaderControl_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func HeaderControl_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("HeaderControl_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("HeaderControl_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func HeaderControl_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("HeaderControl_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("HeaderControl_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func HeaderControl_SetFocus(obj uintptr) {
-	getLazyProc("HeaderControl_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_SetFocus").Call(obj)
 }
 
 func HeaderControl_Update(obj uintptr) {
-	getLazyProc("HeaderControl_Update").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_Update").Call(obj)
 }
 
 func HeaderControl_BringToFront(obj uintptr) {
-	getLazyProc("HeaderControl_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_BringToFront").Call(obj)
 }
 
 func HeaderControl_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("HeaderControl_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("HeaderControl_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func HeaderControl_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("HeaderControl_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("HeaderControl_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -129,7 +129,7 @@ func HeaderControl_HasParent(obj uintptr) bool {
 }
 
 func HeaderControl_Hide(obj uintptr) {
-	getLazyProc("HeaderControl_Hide").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_Hide").Call(obj)
 }
 
 func HeaderControl_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -138,27 +138,27 @@ func HeaderControl_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) 
 }
 
 func HeaderControl_Refresh(obj uintptr) {
-	getLazyProc("HeaderControl_Refresh").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_Refresh").Call(obj)
 }
 
 func HeaderControl_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("HeaderControl_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("HeaderControl_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func HeaderControl_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("HeaderControl_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("HeaderControl_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func HeaderControl_SendToBack(obj uintptr) {
-	getLazyProc("HeaderControl_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_SendToBack").Call(obj)
 }
 
 func HeaderControl_Show(obj uintptr) {
-	getLazyProc("HeaderControl_Show").Call(obj)
+	_, _, _ = getLazyProc("HeaderControl_Show").Call(obj)
 }
 
 func HeaderControl_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -177,7 +177,7 @@ func HeaderControl_GetTextLen(obj uintptr) int32 {
 }
 
 func HeaderControl_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("HeaderControl_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("HeaderControl_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func HeaderControl_FindComponent(obj uintptr, AName string) uintptr {
@@ -191,7 +191,7 @@ func HeaderControl_GetNamePath(obj uintptr) string {
 }
 
 func HeaderControl_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("HeaderControl_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("HeaderControl_Assign").Call(obj, Source)
 }
 
 func HeaderControl_ClassType(obj uintptr) TClass {
@@ -230,31 +230,31 @@ func HeaderControl_ToString(obj uintptr) string {
 }
 
 func HeaderControl_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("HeaderControl_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("HeaderControl_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func HeaderControl_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("HeaderControl_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("HeaderControl_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func HeaderControl_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("HeaderControl_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("HeaderControl_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func HeaderControl_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("HeaderControl_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("HeaderControl_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func HeaderControl_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("HeaderControl_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("HeaderControl_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func HeaderControl_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("HeaderControl_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("HeaderControl_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func HeaderControl_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("HeaderControl_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("HeaderControl_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func HeaderControl_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -308,15 +308,15 @@ func HeaderControl_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func HeaderControl_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("HeaderControl_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("HeaderControl_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func HeaderControl_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("HeaderControl_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("HeaderControl_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func HeaderControl_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("HeaderControl_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("HeaderControl_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func HeaderControl_GetAlign(obj uintptr) TAlign {
@@ -325,7 +325,7 @@ func HeaderControl_GetAlign(obj uintptr) TAlign {
 }
 
 func HeaderControl_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("HeaderControl_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetAlign").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetAnchors(obj uintptr) TAnchors {
@@ -334,7 +334,7 @@ func HeaderControl_GetAnchors(obj uintptr) TAnchors {
 }
 
 func HeaderControl_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("HeaderControl_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetAnchors").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetBorderWidth(obj uintptr) int32 {
@@ -343,7 +343,7 @@ func HeaderControl_GetBorderWidth(obj uintptr) int32 {
 }
 
 func HeaderControl_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("HeaderControl_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetDoubleBuffered(obj uintptr) bool {
@@ -352,7 +352,7 @@ func HeaderControl_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func HeaderControl_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetDragCursor(obj uintptr) TCursor {
@@ -361,7 +361,7 @@ func HeaderControl_GetDragCursor(obj uintptr) TCursor {
 }
 
 func HeaderControl_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("HeaderControl_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetDragKind(obj uintptr) TDragKind {
@@ -370,7 +370,7 @@ func HeaderControl_GetDragKind(obj uintptr) TDragKind {
 }
 
 func HeaderControl_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("HeaderControl_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetDragKind").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetDragMode(obj uintptr) TDragMode {
@@ -379,7 +379,7 @@ func HeaderControl_GetDragMode(obj uintptr) TDragMode {
 }
 
 func HeaderControl_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("HeaderControl_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetDragMode").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetEnabled(obj uintptr) bool {
@@ -388,7 +388,7 @@ func HeaderControl_GetEnabled(obj uintptr) bool {
 }
 
 func HeaderControl_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetFont(obj uintptr) uintptr {
@@ -397,7 +397,7 @@ func HeaderControl_GetFont(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetFont").Call(obj, value)
 }
 
 func HeaderControl_GetImages(obj uintptr) uintptr {
@@ -406,7 +406,7 @@ func HeaderControl_GetImages(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetImages(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetImages").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetImages").Call(obj, value)
 }
 
 func HeaderControl_GetConstraints(obj uintptr) uintptr {
@@ -415,7 +415,7 @@ func HeaderControl_GetConstraints(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetConstraints").Call(obj, value)
 }
 
 func HeaderControl_GetSections(obj uintptr) uintptr {
@@ -424,7 +424,7 @@ func HeaderControl_GetSections(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetSections(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetSections").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetSections").Call(obj, value)
 }
 
 func HeaderControl_GetShowHint(obj uintptr) bool {
@@ -433,7 +433,7 @@ func HeaderControl_GetShowHint(obj uintptr) bool {
 }
 
 func HeaderControl_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetParentDoubleBuffered(obj uintptr) bool {
@@ -442,7 +442,7 @@ func HeaderControl_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func HeaderControl_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetParentFont(obj uintptr) bool {
@@ -451,7 +451,7 @@ func HeaderControl_GetParentFont(obj uintptr) bool {
 }
 
 func HeaderControl_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetParentShowHint(obj uintptr) bool {
@@ -460,7 +460,7 @@ func HeaderControl_GetParentShowHint(obj uintptr) bool {
 }
 
 func HeaderControl_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetPopupMenu(obj uintptr) uintptr {
@@ -469,7 +469,7 @@ func HeaderControl_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetPopupMenu").Call(obj, value)
 }
 
 func HeaderControl_GetVisible(obj uintptr) bool {
@@ -478,71 +478,71 @@ func HeaderControl_GetVisible(obj uintptr) bool {
 }
 
 func HeaderControl_SetVisible(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func HeaderControl_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnResize(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnResize").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnSectionClick(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnSectionClick").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnSectionClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnSectionClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnSectionResize(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnSectionResize").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnSectionResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnSectionResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnSectionTrack(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnSectionTrack").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnSectionTrack(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnSectionTrack").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnSectionDrag(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnSectionDrag").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnSectionDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnSectionDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func HeaderControl_SetOnSectionEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("HeaderControl_SetOnSectionEndDrag").Call(obj, addEventToMap(obj, fn))
+func HeaderControl_SetOnSectionEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("HeaderControl_SetOnSectionEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
 func HeaderControl_GetCanvas(obj uintptr) uintptr {
@@ -561,7 +561,7 @@ func HeaderControl_GetDockSite(obj uintptr) bool {
 }
 
 func HeaderControl_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetMouseInClient(obj uintptr) bool {
@@ -586,16 +586,16 @@ func HeaderControl_GetControlCount(obj uintptr) int32 {
 
 func HeaderControl_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("HeaderControl_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func HeaderControl_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("HeaderControl_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func HeaderControl_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("HeaderControl_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetParentWindow").Call(obj, value)
 }
 
 func HeaderControl_GetShowing(obj uintptr) bool {
@@ -609,7 +609,7 @@ func HeaderControl_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func HeaderControl_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("HeaderControl_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetTabStop(obj uintptr) bool {
@@ -618,7 +618,7 @@ func HeaderControl_GetTabStop(obj uintptr) bool {
 }
 
 func HeaderControl_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetUseDockManager(obj uintptr) bool {
@@ -627,7 +627,7 @@ func HeaderControl_GetUseDockManager(obj uintptr) bool {
 }
 
 func HeaderControl_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("HeaderControl_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("HeaderControl_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func HeaderControl_GetAction(obj uintptr) uintptr {
@@ -636,17 +636,17 @@ func HeaderControl_GetAction(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetAction").Call(obj, value)
 }
 
 func HeaderControl_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("HeaderControl_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("HeaderControl_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func HeaderControl_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("HeaderControl_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("HeaderControl_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func HeaderControl_GetClientHeight(obj uintptr) int32 {
@@ -655,18 +655,18 @@ func HeaderControl_GetClientHeight(obj uintptr) int32 {
 }
 
 func HeaderControl_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("HeaderControl_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("HeaderControl_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("HeaderControl_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func HeaderControl_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("HeaderControl_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("HeaderControl_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -676,7 +676,7 @@ func HeaderControl_GetClientWidth(obj uintptr) int32 {
 }
 
 func HeaderControl_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("HeaderControl_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetControlState(obj uintptr) TControlState {
@@ -685,7 +685,7 @@ func HeaderControl_GetControlState(obj uintptr) TControlState {
 }
 
 func HeaderControl_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("HeaderControl_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetControlState").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetControlStyle(obj uintptr) TControlStyle {
@@ -694,7 +694,7 @@ func HeaderControl_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func HeaderControl_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("HeaderControl_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetFloating(obj uintptr) bool {
@@ -708,7 +708,7 @@ func HeaderControl_GetParent(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetParent").Call(obj, value)
 }
 
 func HeaderControl_GetLeft(obj uintptr) int32 {
@@ -717,7 +717,7 @@ func HeaderControl_GetLeft(obj uintptr) int32 {
 }
 
 func HeaderControl_SetLeft(obj uintptr, value int32) {
-	getLazyProc("HeaderControl_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetLeft").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetTop(obj uintptr) int32 {
@@ -726,7 +726,7 @@ func HeaderControl_GetTop(obj uintptr) int32 {
 }
 
 func HeaderControl_SetTop(obj uintptr, value int32) {
-	getLazyProc("HeaderControl_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetTop").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetWidth(obj uintptr) int32 {
@@ -735,7 +735,7 @@ func HeaderControl_GetWidth(obj uintptr) int32 {
 }
 
 func HeaderControl_SetWidth(obj uintptr, value int32) {
-	getLazyProc("HeaderControl_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetWidth").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetHeight(obj uintptr) int32 {
@@ -744,7 +744,7 @@ func HeaderControl_GetHeight(obj uintptr) int32 {
 }
 
 func HeaderControl_SetHeight(obj uintptr, value int32) {
-	getLazyProc("HeaderControl_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetHeight").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetCursor(obj uintptr) TCursor {
@@ -753,7 +753,7 @@ func HeaderControl_GetCursor(obj uintptr) TCursor {
 }
 
 func HeaderControl_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("HeaderControl_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetCursor").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetHint(obj uintptr) string {
@@ -762,7 +762,7 @@ func HeaderControl_GetHint(obj uintptr) string {
 }
 
 func HeaderControl_SetHint(obj uintptr, value string) {
-	getLazyProc("HeaderControl_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func HeaderControl_GetComponentCount(obj uintptr) int32 {
@@ -776,7 +776,7 @@ func HeaderControl_GetComponentIndex(obj uintptr) int32 {
 }
 
 func HeaderControl_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("HeaderControl_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetOwner(obj uintptr) uintptr {
@@ -790,7 +790,7 @@ func HeaderControl_GetName(obj uintptr) string {
 }
 
 func HeaderControl_SetName(obj uintptr, value string) {
-	getLazyProc("HeaderControl_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func HeaderControl_GetTag(obj uintptr) int {
@@ -799,7 +799,7 @@ func HeaderControl_GetTag(obj uintptr) int {
 }
 
 func HeaderControl_SetTag(obj uintptr, value int) {
-	getLazyProc("HeaderControl_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderControl_SetTag").Call(obj, uintptr(value))
 }
 
 func HeaderControl_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -808,7 +808,7 @@ func HeaderControl_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetAnchorSideLeft").Call(obj, value)
 }
 
 func HeaderControl_GetAnchorSideTop(obj uintptr) uintptr {
@@ -817,7 +817,7 @@ func HeaderControl_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetAnchorSideTop").Call(obj, value)
 }
 
 func HeaderControl_GetAnchorSideRight(obj uintptr) uintptr {
@@ -826,7 +826,7 @@ func HeaderControl_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetAnchorSideRight").Call(obj, value)
 }
 
 func HeaderControl_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -835,7 +835,7 @@ func HeaderControl_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetAnchorSideBottom").Call(obj, value)
 }
 
 func HeaderControl_GetChildSizing(obj uintptr) uintptr {
@@ -844,7 +844,7 @@ func HeaderControl_GetChildSizing(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetChildSizing").Call(obj, value)
 }
 
 func HeaderControl_GetBorderSpacing(obj uintptr) uintptr {
@@ -853,7 +853,7 @@ func HeaderControl_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func HeaderControl_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("HeaderControl_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderControl_SetBorderSpacing").Call(obj, value)
 }
 
 func HeaderControl_GetDockClients(obj uintptr, Index int32) uintptr {

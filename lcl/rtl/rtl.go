@@ -36,7 +36,7 @@ func GetStringArrOf(p uintptr, index int) string {
 	return api.DGetStringArrOf(p, index)
 }
 
-func IsNil(val interface{}) bool {
+func IsNil(val any) bool {
 	return api.IsNil(val)
 }
 
@@ -208,7 +208,6 @@ func ShiftStateToWord(shift types.TShiftState) uint32 {
 	if shift.In(types.SsAlt) {
 		result += MOD_ALT
 	}
-	// lcl没不知道哪个值
 	//if shift.In(types.SsCommand) {
 	//	result += MOD_WIN
 	//}

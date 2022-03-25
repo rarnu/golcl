@@ -13,23 +13,23 @@ func Screen_Create(obj uintptr) uintptr {
 }
 
 func Screen_Free(obj uintptr) {
-	getLazyProc("Screen_Free").Call(obj)
+	_, _, _ = getLazyProc("Screen_Free").Call(obj)
 }
 
 func Screen_BeginTempCursor(obj uintptr, aCursor TCursor) {
-	getLazyProc("Screen_BeginTempCursor").Call(obj, uintptr(aCursor))
+	_, _, _ = getLazyProc("Screen_BeginTempCursor").Call(obj, uintptr(aCursor))
 }
 
 func Screen_EndTempCursor(obj uintptr, aCursor TCursor) {
-	getLazyProc("Screen_EndTempCursor").Call(obj, uintptr(aCursor))
+	_, _, _ = getLazyProc("Screen_EndTempCursor").Call(obj, uintptr(aCursor))
 }
 
 func Screen_BeginWaitCursor(obj uintptr) {
-	getLazyProc("Screen_BeginWaitCursor").Call(obj)
+	_, _, _ = getLazyProc("Screen_BeginWaitCursor").Call(obj)
 }
 
 func Screen_EndWaitCursor(obj uintptr) {
-	getLazyProc("Screen_EndWaitCursor").Call(obj)
+	_, _, _ = getLazyProc("Screen_EndWaitCursor").Call(obj)
 }
 
 func Screen_FindComponent(obj uintptr, AName string) uintptr {
@@ -48,7 +48,7 @@ func Screen_HasParent(obj uintptr) bool {
 }
 
 func Screen_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Screen_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Screen_Assign").Call(obj, Source)
 }
 
 func Screen_ClassType(obj uintptr) TClass {
@@ -117,7 +117,7 @@ func Screen_GetCursor(obj uintptr) TCursor {
 }
 
 func Screen_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Screen_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Screen_SetCursor").Call(obj, uintptr(value))
 }
 
 func Screen_GetMonitorCount(obj uintptr) int32 {
@@ -127,7 +127,7 @@ func Screen_GetMonitorCount(obj uintptr) int32 {
 
 func Screen_GetDesktopRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Screen_GetDesktopRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Screen_GetDesktopRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -153,7 +153,7 @@ func Screen_GetDesktopWidth(obj uintptr) int32 {
 
 func Screen_GetWorkAreaRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Screen_GetWorkAreaRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Screen_GetWorkAreaRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -218,7 +218,7 @@ func Screen_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Screen_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Screen_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Screen_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Screen_GetOwner(obj uintptr) uintptr {
@@ -232,7 +232,7 @@ func Screen_GetName(obj uintptr) string {
 }
 
 func Screen_SetName(obj uintptr, value string) {
-	getLazyProc("Screen_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Screen_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Screen_GetTag(obj uintptr) int {
@@ -241,16 +241,16 @@ func Screen_GetTag(obj uintptr) int {
 }
 
 func Screen_SetTag(obj uintptr, value int) {
-	getLazyProc("Screen_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Screen_SetTag").Call(obj, uintptr(value))
 }
 
 func Screen_GetCursors(obj uintptr, Index int32) HICON {
 	ret, _, _ := getLazyProc("Screen_GetCursors").Call(obj, uintptr(Index))
-	return HICON(ret)
+	return ret
 }
 
 func Screen_SetCursors(obj uintptr, Index int32, value HICON) {
-	getLazyProc("Screen_SetCursors").Call(obj, uintptr(Index), uintptr(value))
+	_, _, _ = getLazyProc("Screen_SetCursors").Call(obj, uintptr(Index), value)
 }
 
 func Screen_GetMonitors(obj uintptr, Index int32) uintptr {

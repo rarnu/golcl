@@ -12,7 +12,7 @@ type TSynPasSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynPasSyn(obj interface{}) *TSynPasSyn {
+func AsSynPasSyn(obj any) *TSynPasSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

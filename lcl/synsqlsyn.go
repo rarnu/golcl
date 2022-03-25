@@ -12,7 +12,7 @@ type TSynSQLSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynSQLSyn(obj interface{}) *TSynSQLSyn {
+func AsSynSQLSyn(obj any) *TSynSQLSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

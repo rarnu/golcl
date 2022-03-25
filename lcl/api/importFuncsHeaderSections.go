@@ -12,7 +12,7 @@ func HeaderSections_Create(obj uintptr) uintptr {
 }
 
 func HeaderSections_Free(obj uintptr) {
-	getLazyProc("HeaderSections_Free").Call(obj)
+	_, _, _ = getLazyProc("HeaderSections_Free").Call(obj)
 }
 
 func HeaderSections_Add(obj uintptr) uintptr {
@@ -36,23 +36,23 @@ func HeaderSections_Owner(obj uintptr) uintptr {
 }
 
 func HeaderSections_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("HeaderSections_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("HeaderSections_Assign").Call(obj, Source)
 }
 
 func HeaderSections_BeginUpdate(obj uintptr) {
-	getLazyProc("HeaderSections_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("HeaderSections_BeginUpdate").Call(obj)
 }
 
 func HeaderSections_Clear(obj uintptr) {
-	getLazyProc("HeaderSections_Clear").Call(obj)
+	_, _, _ = getLazyProc("HeaderSections_Clear").Call(obj)
 }
 
 func HeaderSections_Delete(obj uintptr, Index int32) {
-	getLazyProc("HeaderSections_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("HeaderSections_Delete").Call(obj, uintptr(Index))
 }
 
 func HeaderSections_EndUpdate(obj uintptr) {
-	getLazyProc("HeaderSections_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("HeaderSections_EndUpdate").Call(obj)
 }
 
 func HeaderSections_FindItemID(obj uintptr, ID int32) uintptr {
@@ -111,7 +111,7 @@ func HeaderSections_GetItems(obj uintptr, Index int32) uintptr {
 }
 
 func HeaderSections_SetItems(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("HeaderSections_SetItems").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("HeaderSections_SetItems").Call(obj, uintptr(Index), value)
 }
 
 func HeaderSections_StaticClassType() TClass {

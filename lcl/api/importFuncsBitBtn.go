@@ -13,11 +13,11 @@ func BitBtn_Create(obj uintptr) uintptr {
 }
 
 func BitBtn_Free(obj uintptr) {
-	getLazyProc("BitBtn_Free").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Free").Call(obj)
 }
 
 func BitBtn_Click(obj uintptr) {
-	getLazyProc("BitBtn_Click").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Click").Call(obj)
 }
 
 func BitBtn_CanFocus(obj uintptr) bool {
@@ -36,11 +36,11 @@ func BitBtn_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWinCo
 }
 
 func BitBtn_DisableAlign(obj uintptr) {
-	getLazyProc("BitBtn_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_DisableAlign").Call(obj)
 }
 
 func BitBtn_EnableAlign(obj uintptr) {
-	getLazyProc("BitBtn_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_EnableAlign").Call(obj)
 }
 
 func BitBtn_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -49,7 +49,7 @@ func BitBtn_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func BitBtn_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("BitBtn_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("BitBtn_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func BitBtn_Focused(obj uintptr) bool {
@@ -63,62 +63,62 @@ func BitBtn_HandleAllocated(obj uintptr) bool {
 }
 
 func BitBtn_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("BitBtn_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("BitBtn_InsertControl").Call(obj, AControl)
 }
 
 func BitBtn_Invalidate(obj uintptr) {
-	getLazyProc("BitBtn_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Invalidate").Call(obj)
 }
 
 func BitBtn_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("BitBtn_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("BitBtn_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func BitBtn_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("BitBtn_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("BitBtn_RemoveControl").Call(obj, AControl)
 }
 
 func BitBtn_Realign(obj uintptr) {
-	getLazyProc("BitBtn_Realign").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Realign").Call(obj)
 }
 
 func BitBtn_Repaint(obj uintptr) {
-	getLazyProc("BitBtn_Repaint").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Repaint").Call(obj)
 }
 
 func BitBtn_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("BitBtn_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("BitBtn_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func BitBtn_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("BitBtn_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("BitBtn_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func BitBtn_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("BitBtn_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("BitBtn_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func BitBtn_SetFocus(obj uintptr) {
-	getLazyProc("BitBtn_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_SetFocus").Call(obj)
 }
 
 func BitBtn_Update(obj uintptr) {
-	getLazyProc("BitBtn_Update").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Update").Call(obj)
 }
 
 func BitBtn_BringToFront(obj uintptr) {
-	getLazyProc("BitBtn_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_BringToFront").Call(obj)
 }
 
 func BitBtn_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("BitBtn_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BitBtn_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BitBtn_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("BitBtn_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BitBtn_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -133,7 +133,7 @@ func BitBtn_HasParent(obj uintptr) bool {
 }
 
 func BitBtn_Hide(obj uintptr) {
-	getLazyProc("BitBtn_Hide").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Hide").Call(obj)
 }
 
 func BitBtn_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -142,27 +142,27 @@ func BitBtn_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func BitBtn_Refresh(obj uintptr) {
-	getLazyProc("BitBtn_Refresh").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Refresh").Call(obj)
 }
 
 func BitBtn_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("BitBtn_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BitBtn_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BitBtn_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("BitBtn_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BitBtn_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BitBtn_SendToBack(obj uintptr) {
-	getLazyProc("BitBtn_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_SendToBack").Call(obj)
 }
 
 func BitBtn_Show(obj uintptr) {
-	getLazyProc("BitBtn_Show").Call(obj)
+	_, _, _ = getLazyProc("BitBtn_Show").Call(obj)
 }
 
 func BitBtn_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -181,7 +181,7 @@ func BitBtn_GetTextLen(obj uintptr) int32 {
 }
 
 func BitBtn_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("BitBtn_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("BitBtn_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func BitBtn_FindComponent(obj uintptr, AName string) uintptr {
@@ -195,7 +195,7 @@ func BitBtn_GetNamePath(obj uintptr) string {
 }
 
 func BitBtn_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("BitBtn_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("BitBtn_Assign").Call(obj, Source)
 }
 
 func BitBtn_ClassType(obj uintptr) TClass {
@@ -234,31 +234,31 @@ func BitBtn_ToString(obj uintptr) string {
 }
 
 func BitBtn_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("BitBtn_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("BitBtn_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func BitBtn_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("BitBtn_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("BitBtn_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func BitBtn_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("BitBtn_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("BitBtn_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func BitBtn_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("BitBtn_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("BitBtn_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func BitBtn_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("BitBtn_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("BitBtn_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func BitBtn_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("BitBtn_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("BitBtn_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func BitBtn_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("BitBtn_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("BitBtn_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func BitBtn_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -312,15 +312,15 @@ func BitBtn_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func BitBtn_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("BitBtn_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("BitBtn_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func BitBtn_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("BitBtn_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("BitBtn_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func BitBtn_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("BitBtn_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("BitBtn_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func BitBtn_GetDefaultCaption(obj uintptr) bool {
@@ -329,7 +329,7 @@ func BitBtn_GetDefaultCaption(obj uintptr) bool {
 }
 
 func BitBtn_SetDefaultCaption(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetDefaultCaption").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetDefaultCaption").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetGlyphShowMode(obj uintptr) TGlyphShowMode {
@@ -338,7 +338,7 @@ func BitBtn_GetGlyphShowMode(obj uintptr) TGlyphShowMode {
 }
 
 func BitBtn_SetGlyphShowMode(obj uintptr, value TGlyphShowMode) {
-	getLazyProc("BitBtn_SetGlyphShowMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetGlyphShowMode").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetImageIndex(obj uintptr) int32 {
@@ -347,7 +347,7 @@ func BitBtn_GetImageIndex(obj uintptr) int32 {
 }
 
 func BitBtn_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetImages(obj uintptr) uintptr {
@@ -356,7 +356,7 @@ func BitBtn_GetImages(obj uintptr) uintptr {
 }
 
 func BitBtn_SetImages(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetImages").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetImages").Call(obj, value)
 }
 
 func BitBtn_GetImageWidth(obj uintptr) int32 {
@@ -365,7 +365,7 @@ func BitBtn_GetImageWidth(obj uintptr) int32 {
 }
 
 func BitBtn_SetImageWidth(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetImageWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetImageWidth").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetAction(obj uintptr) uintptr {
@@ -374,7 +374,7 @@ func BitBtn_GetAction(obj uintptr) uintptr {
 }
 
 func BitBtn_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetAction").Call(obj, value)
 }
 
 func BitBtn_GetAlign(obj uintptr) TAlign {
@@ -383,7 +383,7 @@ func BitBtn_GetAlign(obj uintptr) TAlign {
 }
 
 func BitBtn_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("BitBtn_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetAlign").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetAnchors(obj uintptr) TAnchors {
@@ -392,7 +392,7 @@ func BitBtn_GetAnchors(obj uintptr) TAnchors {
 }
 
 func BitBtn_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("BitBtn_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetAnchors").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -401,7 +401,7 @@ func BitBtn_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func BitBtn_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("BitBtn_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetCancel(obj uintptr) bool {
@@ -410,7 +410,7 @@ func BitBtn_GetCancel(obj uintptr) bool {
 }
 
 func BitBtn_SetCancel(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetCancel").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetCancel").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetCaption(obj uintptr) string {
@@ -419,7 +419,7 @@ func BitBtn_GetCaption(obj uintptr) string {
 }
 
 func BitBtn_SetCaption(obj uintptr, value string) {
-	getLazyProc("BitBtn_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("BitBtn_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func BitBtn_GetConstraints(obj uintptr) uintptr {
@@ -428,7 +428,7 @@ func BitBtn_GetConstraints(obj uintptr) uintptr {
 }
 
 func BitBtn_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetConstraints").Call(obj, value)
 }
 
 func BitBtn_GetDefault(obj uintptr) bool {
@@ -437,7 +437,7 @@ func BitBtn_GetDefault(obj uintptr) bool {
 }
 
 func BitBtn_SetDefault(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetDefault").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetDefault").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetDoubleBuffered(obj uintptr) bool {
@@ -446,7 +446,7 @@ func BitBtn_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func BitBtn_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetEnabled(obj uintptr) bool {
@@ -455,7 +455,7 @@ func BitBtn_GetEnabled(obj uintptr) bool {
 }
 
 func BitBtn_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetFont(obj uintptr) uintptr {
@@ -464,7 +464,7 @@ func BitBtn_GetFont(obj uintptr) uintptr {
 }
 
 func BitBtn_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetFont").Call(obj, value)
 }
 
 func BitBtn_GetGlyph(obj uintptr) uintptr {
@@ -473,7 +473,7 @@ func BitBtn_GetGlyph(obj uintptr) uintptr {
 }
 
 func BitBtn_SetGlyph(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetGlyph").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetGlyph").Call(obj, value)
 }
 
 func BitBtn_GetKind(obj uintptr) TBitBtnKind {
@@ -482,7 +482,7 @@ func BitBtn_GetKind(obj uintptr) TBitBtnKind {
 }
 
 func BitBtn_SetKind(obj uintptr, value TBitBtnKind) {
-	getLazyProc("BitBtn_SetKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetKind").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetLayout(obj uintptr) TButtonLayout {
@@ -491,7 +491,7 @@ func BitBtn_GetLayout(obj uintptr) TButtonLayout {
 }
 
 func BitBtn_SetLayout(obj uintptr, value TButtonLayout) {
-	getLazyProc("BitBtn_SetLayout").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetLayout").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetModalResult(obj uintptr) TModalResult {
@@ -500,7 +500,7 @@ func BitBtn_GetModalResult(obj uintptr) TModalResult {
 }
 
 func BitBtn_SetModalResult(obj uintptr, value TModalResult) {
-	getLazyProc("BitBtn_SetModalResult").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetModalResult").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetNumGlyphs(obj uintptr) TNumGlyphs {
@@ -509,7 +509,7 @@ func BitBtn_GetNumGlyphs(obj uintptr) TNumGlyphs {
 }
 
 func BitBtn_SetNumGlyphs(obj uintptr, value TNumGlyphs) {
-	getLazyProc("BitBtn_SetNumGlyphs").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetNumGlyphs").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetParentDoubleBuffered(obj uintptr) bool {
@@ -518,7 +518,7 @@ func BitBtn_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func BitBtn_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetParentFont(obj uintptr) bool {
@@ -527,7 +527,7 @@ func BitBtn_GetParentFont(obj uintptr) bool {
 }
 
 func BitBtn_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetParentShowHint(obj uintptr) bool {
@@ -536,7 +536,7 @@ func BitBtn_GetParentShowHint(obj uintptr) bool {
 }
 
 func BitBtn_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetPopupMenu(obj uintptr) uintptr {
@@ -545,7 +545,7 @@ func BitBtn_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func BitBtn_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetPopupMenu").Call(obj, value)
 }
 
 func BitBtn_GetShowHint(obj uintptr) bool {
@@ -554,7 +554,7 @@ func BitBtn_GetShowHint(obj uintptr) bool {
 }
 
 func BitBtn_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetSpacing(obj uintptr) int32 {
@@ -563,7 +563,7 @@ func BitBtn_GetSpacing(obj uintptr) int32 {
 }
 
 func BitBtn_SetSpacing(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetSpacing").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetSpacing").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetTabOrder(obj uintptr) TTabOrder {
@@ -572,7 +572,7 @@ func BitBtn_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func BitBtn_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("BitBtn_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetTabStop(obj uintptr) bool {
@@ -581,7 +581,7 @@ func BitBtn_GetTabStop(obj uintptr) bool {
 }
 
 func BitBtn_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetVisible(obj uintptr) bool {
@@ -590,67 +590,67 @@ func BitBtn_GetVisible(obj uintptr) bool {
 }
 
 func BitBtn_SetVisible(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func BitBtn_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func BitBtn_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("BitBtn_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func BitBtn_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("BitBtn_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func BitBtn_GetDockClientCount(obj uintptr) int32 {
@@ -664,7 +664,7 @@ func BitBtn_GetDockSite(obj uintptr) bool {
 }
 
 func BitBtn_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetMouseInClient(obj uintptr) bool {
@@ -689,16 +689,16 @@ func BitBtn_GetControlCount(obj uintptr) int32 {
 
 func BitBtn_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("BitBtn_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func BitBtn_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("BitBtn_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func BitBtn_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("BitBtn_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetParentWindow").Call(obj, value)
 }
 
 func BitBtn_GetShowing(obj uintptr) bool {
@@ -712,17 +712,17 @@ func BitBtn_GetUseDockManager(obj uintptr) bool {
 }
 
 func BitBtn_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("BitBtn_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("BitBtn_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func BitBtn_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("BitBtn_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BitBtn_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BitBtn_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("BitBtn_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("BitBtn_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func BitBtn_GetClientHeight(obj uintptr) int32 {
@@ -731,18 +731,18 @@ func BitBtn_GetClientHeight(obj uintptr) int32 {
 }
 
 func BitBtn_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("BitBtn_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BitBtn_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func BitBtn_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("BitBtn_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("BitBtn_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -752,7 +752,7 @@ func BitBtn_GetClientWidth(obj uintptr) int32 {
 }
 
 func BitBtn_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetControlState(obj uintptr) TControlState {
@@ -761,7 +761,7 @@ func BitBtn_GetControlState(obj uintptr) TControlState {
 }
 
 func BitBtn_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("BitBtn_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetControlState").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetControlStyle(obj uintptr) TControlStyle {
@@ -770,7 +770,7 @@ func BitBtn_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func BitBtn_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("BitBtn_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetFloating(obj uintptr) bool {
@@ -784,7 +784,7 @@ func BitBtn_GetParent(obj uintptr) uintptr {
 }
 
 func BitBtn_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetParent").Call(obj, value)
 }
 
 func BitBtn_GetLeft(obj uintptr) int32 {
@@ -793,7 +793,7 @@ func BitBtn_GetLeft(obj uintptr) int32 {
 }
 
 func BitBtn_SetLeft(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetLeft").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetTop(obj uintptr) int32 {
@@ -802,7 +802,7 @@ func BitBtn_GetTop(obj uintptr) int32 {
 }
 
 func BitBtn_SetTop(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetTop").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetWidth(obj uintptr) int32 {
@@ -811,7 +811,7 @@ func BitBtn_GetWidth(obj uintptr) int32 {
 }
 
 func BitBtn_SetWidth(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetWidth").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetHeight(obj uintptr) int32 {
@@ -820,7 +820,7 @@ func BitBtn_GetHeight(obj uintptr) int32 {
 }
 
 func BitBtn_SetHeight(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetHeight").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetCursor(obj uintptr) TCursor {
@@ -829,7 +829,7 @@ func BitBtn_GetCursor(obj uintptr) TCursor {
 }
 
 func BitBtn_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("BitBtn_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetCursor").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetHint(obj uintptr) string {
@@ -838,7 +838,7 @@ func BitBtn_GetHint(obj uintptr) string {
 }
 
 func BitBtn_SetHint(obj uintptr, value string) {
-	getLazyProc("BitBtn_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("BitBtn_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func BitBtn_GetComponentCount(obj uintptr) int32 {
@@ -852,7 +852,7 @@ func BitBtn_GetComponentIndex(obj uintptr) int32 {
 }
 
 func BitBtn_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("BitBtn_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetOwner(obj uintptr) uintptr {
@@ -866,7 +866,7 @@ func BitBtn_GetName(obj uintptr) string {
 }
 
 func BitBtn_SetName(obj uintptr, value string) {
-	getLazyProc("BitBtn_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("BitBtn_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func BitBtn_GetTag(obj uintptr) int {
@@ -875,7 +875,7 @@ func BitBtn_GetTag(obj uintptr) int {
 }
 
 func BitBtn_SetTag(obj uintptr, value int) {
-	getLazyProc("BitBtn_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("BitBtn_SetTag").Call(obj, uintptr(value))
 }
 
 func BitBtn_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -884,7 +884,7 @@ func BitBtn_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func BitBtn_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetAnchorSideLeft").Call(obj, value)
 }
 
 func BitBtn_GetAnchorSideTop(obj uintptr) uintptr {
@@ -893,7 +893,7 @@ func BitBtn_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func BitBtn_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetAnchorSideTop").Call(obj, value)
 }
 
 func BitBtn_GetAnchorSideRight(obj uintptr) uintptr {
@@ -902,7 +902,7 @@ func BitBtn_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func BitBtn_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetAnchorSideRight").Call(obj, value)
 }
 
 func BitBtn_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -911,7 +911,7 @@ func BitBtn_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func BitBtn_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetAnchorSideBottom").Call(obj, value)
 }
 
 func BitBtn_GetChildSizing(obj uintptr) uintptr {
@@ -920,7 +920,7 @@ func BitBtn_GetChildSizing(obj uintptr) uintptr {
 }
 
 func BitBtn_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetChildSizing").Call(obj, value)
 }
 
 func BitBtn_GetBorderSpacing(obj uintptr) uintptr {
@@ -929,7 +929,7 @@ func BitBtn_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func BitBtn_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("BitBtn_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("BitBtn_SetBorderSpacing").Call(obj, value)
 }
 
 func BitBtn_GetDockClients(obj uintptr, Index int32) uintptr {

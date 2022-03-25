@@ -12,7 +12,7 @@ type TSynCustomHighlighter struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynCustomHighlighter(obj interface{}) *TSynCustomHighlighter {
+func AsSynCustomHighlighter(obj any) *TSynCustomHighlighter {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

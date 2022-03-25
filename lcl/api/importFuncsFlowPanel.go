@@ -13,7 +13,7 @@ func FlowPanel_Create(obj uintptr) uintptr {
 }
 
 func FlowPanel_Free(obj uintptr) {
-	getLazyProc("FlowPanel_Free").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_Free").Call(obj)
 }
 
 func FlowPanel_GetControlIndex(obj uintptr, AControl uintptr) int32 {
@@ -22,7 +22,7 @@ func FlowPanel_GetControlIndex(obj uintptr, AControl uintptr) int32 {
 }
 
 func FlowPanel_SetControlIndex(obj uintptr, AControl uintptr, Index int32) {
-	getLazyProc("FlowPanel_SetControlIndex").Call(obj, AControl, uintptr(Index))
+	_, _, _ = getLazyProc("FlowPanel_SetControlIndex").Call(obj, AControl, uintptr(Index))
 }
 
 func FlowPanel_CanFocus(obj uintptr) bool {
@@ -41,11 +41,11 @@ func FlowPanel_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWi
 }
 
 func FlowPanel_DisableAlign(obj uintptr) {
-	getLazyProc("FlowPanel_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_DisableAlign").Call(obj)
 }
 
 func FlowPanel_EnableAlign(obj uintptr) {
-	getLazyProc("FlowPanel_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_EnableAlign").Call(obj)
 }
 
 func FlowPanel_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -54,7 +54,7 @@ func FlowPanel_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func FlowPanel_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("FlowPanel_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("FlowPanel_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func FlowPanel_Focused(obj uintptr) bool {
@@ -68,62 +68,62 @@ func FlowPanel_HandleAllocated(obj uintptr) bool {
 }
 
 func FlowPanel_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("FlowPanel_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("FlowPanel_InsertControl").Call(obj, AControl)
 }
 
 func FlowPanel_Invalidate(obj uintptr) {
-	getLazyProc("FlowPanel_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_Invalidate").Call(obj)
 }
 
 func FlowPanel_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("FlowPanel_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("FlowPanel_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func FlowPanel_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("FlowPanel_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("FlowPanel_RemoveControl").Call(obj, AControl)
 }
 
 func FlowPanel_Realign(obj uintptr) {
-	getLazyProc("FlowPanel_Realign").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_Realign").Call(obj)
 }
 
 func FlowPanel_Repaint(obj uintptr) {
-	getLazyProc("FlowPanel_Repaint").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_Repaint").Call(obj)
 }
 
 func FlowPanel_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("FlowPanel_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("FlowPanel_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func FlowPanel_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("FlowPanel_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("FlowPanel_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func FlowPanel_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("FlowPanel_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("FlowPanel_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func FlowPanel_SetFocus(obj uintptr) {
-	getLazyProc("FlowPanel_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_SetFocus").Call(obj)
 }
 
 func FlowPanel_Update(obj uintptr) {
-	getLazyProc("FlowPanel_Update").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_Update").Call(obj)
 }
 
 func FlowPanel_BringToFront(obj uintptr) {
-	getLazyProc("FlowPanel_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_BringToFront").Call(obj)
 }
 
 func FlowPanel_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("FlowPanel_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("FlowPanel_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func FlowPanel_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("FlowPanel_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("FlowPanel_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -138,7 +138,7 @@ func FlowPanel_HasParent(obj uintptr) bool {
 }
 
 func FlowPanel_Hide(obj uintptr) {
-	getLazyProc("FlowPanel_Hide").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_Hide").Call(obj)
 }
 
 func FlowPanel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -147,27 +147,27 @@ func FlowPanel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int 
 }
 
 func FlowPanel_Refresh(obj uintptr) {
-	getLazyProc("FlowPanel_Refresh").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_Refresh").Call(obj)
 }
 
 func FlowPanel_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("FlowPanel_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("FlowPanel_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func FlowPanel_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("FlowPanel_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("FlowPanel_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func FlowPanel_SendToBack(obj uintptr) {
-	getLazyProc("FlowPanel_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_SendToBack").Call(obj)
 }
 
 func FlowPanel_Show(obj uintptr) {
-	getLazyProc("FlowPanel_Show").Call(obj)
+	_, _, _ = getLazyProc("FlowPanel_Show").Call(obj)
 }
 
 func FlowPanel_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -186,7 +186,7 @@ func FlowPanel_GetTextLen(obj uintptr) int32 {
 }
 
 func FlowPanel_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("FlowPanel_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("FlowPanel_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func FlowPanel_FindComponent(obj uintptr, AName string) uintptr {
@@ -200,7 +200,7 @@ func FlowPanel_GetNamePath(obj uintptr) string {
 }
 
 func FlowPanel_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("FlowPanel_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("FlowPanel_Assign").Call(obj, Source)
 }
 
 func FlowPanel_ClassType(obj uintptr) TClass {
@@ -239,31 +239,31 @@ func FlowPanel_ToString(obj uintptr) string {
 }
 
 func FlowPanel_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("FlowPanel_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("FlowPanel_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func FlowPanel_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("FlowPanel_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("FlowPanel_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func FlowPanel_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("FlowPanel_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("FlowPanel_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func FlowPanel_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("FlowPanel_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("FlowPanel_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func FlowPanel_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("FlowPanel_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("FlowPanel_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func FlowPanel_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("FlowPanel_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("FlowPanel_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func FlowPanel_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("FlowPanel_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("FlowPanel_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func FlowPanel_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -317,15 +317,15 @@ func FlowPanel_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func FlowPanel_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("FlowPanel_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("FlowPanel_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func FlowPanel_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("FlowPanel_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("FlowPanel_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func FlowPanel_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("FlowPanel_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("FlowPanel_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func FlowPanel_GetAlign(obj uintptr) TAlign {
@@ -334,7 +334,7 @@ func FlowPanel_GetAlign(obj uintptr) TAlign {
 }
 
 func FlowPanel_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("FlowPanel_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetAlign").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetAlignment(obj uintptr) TAlignment {
@@ -343,7 +343,7 @@ func FlowPanel_GetAlignment(obj uintptr) TAlignment {
 }
 
 func FlowPanel_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("FlowPanel_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetAlignment").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetAnchors(obj uintptr) TAnchors {
@@ -352,7 +352,7 @@ func FlowPanel_GetAnchors(obj uintptr) TAnchors {
 }
 
 func FlowPanel_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("FlowPanel_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetAnchors").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetAutoSize(obj uintptr) bool {
@@ -361,7 +361,7 @@ func FlowPanel_GetAutoSize(obj uintptr) bool {
 }
 
 func FlowPanel_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetAutoWrap(obj uintptr) bool {
@@ -370,7 +370,7 @@ func FlowPanel_GetAutoWrap(obj uintptr) bool {
 }
 
 func FlowPanel_SetAutoWrap(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetAutoWrap").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetAutoWrap").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -379,7 +379,7 @@ func FlowPanel_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func FlowPanel_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("FlowPanel_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetBorderWidth(obj uintptr) int32 {
@@ -388,7 +388,7 @@ func FlowPanel_GetBorderWidth(obj uintptr) int32 {
 }
 
 func FlowPanel_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("FlowPanel_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -397,7 +397,7 @@ func FlowPanel_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func FlowPanel_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("FlowPanel_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetCaption(obj uintptr) string {
@@ -406,7 +406,7 @@ func FlowPanel_GetCaption(obj uintptr) string {
 }
 
 func FlowPanel_SetCaption(obj uintptr, value string) {
-	getLazyProc("FlowPanel_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func FlowPanel_GetColor(obj uintptr) TColor {
@@ -415,7 +415,7 @@ func FlowPanel_GetColor(obj uintptr) TColor {
 }
 
 func FlowPanel_SetColor(obj uintptr, value TColor) {
-	getLazyProc("FlowPanel_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetColor").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetConstraints(obj uintptr) uintptr {
@@ -424,7 +424,7 @@ func FlowPanel_GetConstraints(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetConstraints").Call(obj, value)
 }
 
 func FlowPanel_GetUseDockManager(obj uintptr) bool {
@@ -433,7 +433,7 @@ func FlowPanel_GetUseDockManager(obj uintptr) bool {
 }
 
 func FlowPanel_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetDockSite(obj uintptr) bool {
@@ -442,7 +442,7 @@ func FlowPanel_GetDockSite(obj uintptr) bool {
 }
 
 func FlowPanel_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetDoubleBuffered(obj uintptr) bool {
@@ -451,7 +451,7 @@ func FlowPanel_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func FlowPanel_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetDragCursor(obj uintptr) TCursor {
@@ -460,7 +460,7 @@ func FlowPanel_GetDragCursor(obj uintptr) TCursor {
 }
 
 func FlowPanel_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("FlowPanel_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetDragKind(obj uintptr) TDragKind {
@@ -469,7 +469,7 @@ func FlowPanel_GetDragKind(obj uintptr) TDragKind {
 }
 
 func FlowPanel_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("FlowPanel_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetDragKind").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetDragMode(obj uintptr) TDragMode {
@@ -478,7 +478,7 @@ func FlowPanel_GetDragMode(obj uintptr) TDragMode {
 }
 
 func FlowPanel_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("FlowPanel_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetDragMode").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetEnabled(obj uintptr) bool {
@@ -487,7 +487,7 @@ func FlowPanel_GetEnabled(obj uintptr) bool {
 }
 
 func FlowPanel_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetFlowStyle(obj uintptr) TFlowStyle {
@@ -496,7 +496,7 @@ func FlowPanel_GetFlowStyle(obj uintptr) TFlowStyle {
 }
 
 func FlowPanel_SetFlowStyle(obj uintptr, value TFlowStyle) {
-	getLazyProc("FlowPanel_SetFlowStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetFlowStyle").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetFullRepaint(obj uintptr) bool {
@@ -505,7 +505,7 @@ func FlowPanel_GetFullRepaint(obj uintptr) bool {
 }
 
 func FlowPanel_SetFullRepaint(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetFullRepaint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetFullRepaint").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetFont(obj uintptr) uintptr {
@@ -514,7 +514,7 @@ func FlowPanel_GetFont(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetFont").Call(obj, value)
 }
 
 func FlowPanel_GetParentBackground(obj uintptr) bool {
@@ -523,7 +523,7 @@ func FlowPanel_GetParentBackground(obj uintptr) bool {
 }
 
 func FlowPanel_SetParentBackground(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetParentBackground").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetParentBackground").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetParentColor(obj uintptr) bool {
@@ -532,7 +532,7 @@ func FlowPanel_GetParentColor(obj uintptr) bool {
 }
 
 func FlowPanel_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetParentDoubleBuffered(obj uintptr) bool {
@@ -541,7 +541,7 @@ func FlowPanel_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func FlowPanel_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetParentFont(obj uintptr) bool {
@@ -550,7 +550,7 @@ func FlowPanel_GetParentFont(obj uintptr) bool {
 }
 
 func FlowPanel_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetParentShowHint(obj uintptr) bool {
@@ -559,7 +559,7 @@ func FlowPanel_GetParentShowHint(obj uintptr) bool {
 }
 
 func FlowPanel_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetPopupMenu(obj uintptr) uintptr {
@@ -568,7 +568,7 @@ func FlowPanel_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetPopupMenu").Call(obj, value)
 }
 
 func FlowPanel_GetShowHint(obj uintptr) bool {
@@ -577,7 +577,7 @@ func FlowPanel_GetShowHint(obj uintptr) bool {
 }
 
 func FlowPanel_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetTabOrder(obj uintptr) TTabOrder {
@@ -586,7 +586,7 @@ func FlowPanel_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func FlowPanel_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("FlowPanel_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetTabStop(obj uintptr) bool {
@@ -595,7 +595,7 @@ func FlowPanel_GetTabStop(obj uintptr) bool {
 }
 
 func FlowPanel_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func FlowPanel_GetVisible(obj uintptr) bool {
@@ -604,91 +604,91 @@ func FlowPanel_GetVisible(obj uintptr) bool {
 }
 
 func FlowPanel_SetVisible(obj uintptr, value bool) {
-	getLazyProc("FlowPanel_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("FlowPanel_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func FlowPanel_SetOnAlignPosition(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnAlignPosition(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnConstrainedResize(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnConstrainedResize").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnConstrainedResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnConstrainedResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnDockDrop(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnDockDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnGetSiteInfo(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnGetSiteInfo(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnResize(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnResize").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func FlowPanel_SetOnUnDock(obj uintptr, fn interface{}) {
-	getLazyProc("FlowPanel_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
+func FlowPanel_SetOnUnDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FlowPanel_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func FlowPanel_GetDockClientCount(obj uintptr) int32 {
@@ -718,16 +718,16 @@ func FlowPanel_GetControlCount(obj uintptr) int32 {
 
 func FlowPanel_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("FlowPanel_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func FlowPanel_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("FlowPanel_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func FlowPanel_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("FlowPanel_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetParentWindow").Call(obj, value)
 }
 
 func FlowPanel_GetShowing(obj uintptr) bool {
@@ -741,17 +741,17 @@ func FlowPanel_GetAction(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetAction").Call(obj, value)
 }
 
 func FlowPanel_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("FlowPanel_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("FlowPanel_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func FlowPanel_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("FlowPanel_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("FlowPanel_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func FlowPanel_GetClientHeight(obj uintptr) int32 {
@@ -760,18 +760,18 @@ func FlowPanel_GetClientHeight(obj uintptr) int32 {
 }
 
 func FlowPanel_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("FlowPanel_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("FlowPanel_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("FlowPanel_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func FlowPanel_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("FlowPanel_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("FlowPanel_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -781,7 +781,7 @@ func FlowPanel_GetClientWidth(obj uintptr) int32 {
 }
 
 func FlowPanel_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("FlowPanel_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetControlState(obj uintptr) TControlState {
@@ -790,7 +790,7 @@ func FlowPanel_GetControlState(obj uintptr) TControlState {
 }
 
 func FlowPanel_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("FlowPanel_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetControlState").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetControlStyle(obj uintptr) TControlStyle {
@@ -799,7 +799,7 @@ func FlowPanel_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func FlowPanel_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("FlowPanel_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetFloating(obj uintptr) bool {
@@ -813,7 +813,7 @@ func FlowPanel_GetParent(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetParent").Call(obj, value)
 }
 
 func FlowPanel_GetLeft(obj uintptr) int32 {
@@ -822,7 +822,7 @@ func FlowPanel_GetLeft(obj uintptr) int32 {
 }
 
 func FlowPanel_SetLeft(obj uintptr, value int32) {
-	getLazyProc("FlowPanel_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetLeft").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetTop(obj uintptr) int32 {
@@ -831,7 +831,7 @@ func FlowPanel_GetTop(obj uintptr) int32 {
 }
 
 func FlowPanel_SetTop(obj uintptr, value int32) {
-	getLazyProc("FlowPanel_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetTop").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetWidth(obj uintptr) int32 {
@@ -840,7 +840,7 @@ func FlowPanel_GetWidth(obj uintptr) int32 {
 }
 
 func FlowPanel_SetWidth(obj uintptr, value int32) {
-	getLazyProc("FlowPanel_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetWidth").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetHeight(obj uintptr) int32 {
@@ -849,7 +849,7 @@ func FlowPanel_GetHeight(obj uintptr) int32 {
 }
 
 func FlowPanel_SetHeight(obj uintptr, value int32) {
-	getLazyProc("FlowPanel_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetHeight").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetCursor(obj uintptr) TCursor {
@@ -858,7 +858,7 @@ func FlowPanel_GetCursor(obj uintptr) TCursor {
 }
 
 func FlowPanel_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("FlowPanel_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetCursor").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetHint(obj uintptr) string {
@@ -867,7 +867,7 @@ func FlowPanel_GetHint(obj uintptr) string {
 }
 
 func FlowPanel_SetHint(obj uintptr, value string) {
-	getLazyProc("FlowPanel_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func FlowPanel_GetComponentCount(obj uintptr) int32 {
@@ -881,7 +881,7 @@ func FlowPanel_GetComponentIndex(obj uintptr) int32 {
 }
 
 func FlowPanel_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("FlowPanel_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetOwner(obj uintptr) uintptr {
@@ -895,7 +895,7 @@ func FlowPanel_GetName(obj uintptr) string {
 }
 
 func FlowPanel_SetName(obj uintptr, value string) {
-	getLazyProc("FlowPanel_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func FlowPanel_GetTag(obj uintptr) int {
@@ -904,7 +904,7 @@ func FlowPanel_GetTag(obj uintptr) int {
 }
 
 func FlowPanel_SetTag(obj uintptr, value int) {
-	getLazyProc("FlowPanel_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FlowPanel_SetTag").Call(obj, uintptr(value))
 }
 
 func FlowPanel_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -913,7 +913,7 @@ func FlowPanel_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetAnchorSideLeft").Call(obj, value)
 }
 
 func FlowPanel_GetAnchorSideTop(obj uintptr) uintptr {
@@ -922,7 +922,7 @@ func FlowPanel_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetAnchorSideTop").Call(obj, value)
 }
 
 func FlowPanel_GetAnchorSideRight(obj uintptr) uintptr {
@@ -931,7 +931,7 @@ func FlowPanel_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetAnchorSideRight").Call(obj, value)
 }
 
 func FlowPanel_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -940,7 +940,7 @@ func FlowPanel_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetAnchorSideBottom").Call(obj, value)
 }
 
 func FlowPanel_GetChildSizing(obj uintptr) uintptr {
@@ -949,7 +949,7 @@ func FlowPanel_GetChildSizing(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetChildSizing").Call(obj, value)
 }
 
 func FlowPanel_GetBorderSpacing(obj uintptr) uintptr {
@@ -958,7 +958,7 @@ func FlowPanel_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func FlowPanel_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("FlowPanel_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("FlowPanel_SetBorderSpacing").Call(obj, value)
 }
 
 func FlowPanel_GetDockClients(obj uintptr, Index int32) uintptr {

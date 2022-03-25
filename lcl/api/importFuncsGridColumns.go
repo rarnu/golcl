@@ -12,7 +12,7 @@ func GridColumns_Add(obj uintptr) uintptr {
 }
 
 func GridColumns_Clear(obj uintptr) {
-	getLazyProc("GridColumns_Clear").Call(obj)
+	_, _, _ = getLazyProc("GridColumns_Clear").Call(obj)
 }
 
 func GridColumns_RealIndex(obj uintptr, Index int32) int32 {
@@ -41,19 +41,19 @@ func GridColumns_Owner(obj uintptr) uintptr {
 }
 
 func GridColumns_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("GridColumns_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("GridColumns_Assign").Call(obj, Source)
 }
 
 func GridColumns_BeginUpdate(obj uintptr) {
-	getLazyProc("GridColumns_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("GridColumns_BeginUpdate").Call(obj)
 }
 
 func GridColumns_Delete(obj uintptr, Index int32) {
-	getLazyProc("GridColumns_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("GridColumns_Delete").Call(obj, uintptr(Index))
 }
 
 func GridColumns_EndUpdate(obj uintptr) {
-	getLazyProc("GridColumns_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("GridColumns_EndUpdate").Call(obj)
 }
 
 func GridColumns_FindItemID(obj uintptr, ID int32) uintptr {
@@ -132,7 +132,7 @@ func GridColumns_GetItems(obj uintptr, Index int32) uintptr {
 }
 
 func GridColumns_SetItems(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("GridColumns_SetItems").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("GridColumns_SetItems").Call(obj, uintptr(Index), value)
 }
 
 func GridColumns_StaticClassType() TClass {

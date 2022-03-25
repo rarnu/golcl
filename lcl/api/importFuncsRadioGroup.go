@@ -13,11 +13,11 @@ func RadioGroup_Create(obj uintptr) uintptr {
 }
 
 func RadioGroup_Free(obj uintptr) {
-	getLazyProc("RadioGroup_Free").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_Free").Call(obj)
 }
 
 func RadioGroup_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("RadioGroup_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("RadioGroup_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func RadioGroup_CanFocus(obj uintptr) bool {
@@ -36,11 +36,11 @@ func RadioGroup_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowW
 }
 
 func RadioGroup_DisableAlign(obj uintptr) {
-	getLazyProc("RadioGroup_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_DisableAlign").Call(obj)
 }
 
 func RadioGroup_EnableAlign(obj uintptr) {
-	getLazyProc("RadioGroup_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_EnableAlign").Call(obj)
 }
 
 func RadioGroup_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -59,62 +59,62 @@ func RadioGroup_HandleAllocated(obj uintptr) bool {
 }
 
 func RadioGroup_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("RadioGroup_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("RadioGroup_InsertControl").Call(obj, AControl)
 }
 
 func RadioGroup_Invalidate(obj uintptr) {
-	getLazyProc("RadioGroup_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_Invalidate").Call(obj)
 }
 
 func RadioGroup_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("RadioGroup_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("RadioGroup_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func RadioGroup_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("RadioGroup_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("RadioGroup_RemoveControl").Call(obj, AControl)
 }
 
 func RadioGroup_Realign(obj uintptr) {
-	getLazyProc("RadioGroup_Realign").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_Realign").Call(obj)
 }
 
 func RadioGroup_Repaint(obj uintptr) {
-	getLazyProc("RadioGroup_Repaint").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_Repaint").Call(obj)
 }
 
 func RadioGroup_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("RadioGroup_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("RadioGroup_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func RadioGroup_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("RadioGroup_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("RadioGroup_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func RadioGroup_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("RadioGroup_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("RadioGroup_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func RadioGroup_SetFocus(obj uintptr) {
-	getLazyProc("RadioGroup_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_SetFocus").Call(obj)
 }
 
 func RadioGroup_Update(obj uintptr) {
-	getLazyProc("RadioGroup_Update").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_Update").Call(obj)
 }
 
 func RadioGroup_BringToFront(obj uintptr) {
-	getLazyProc("RadioGroup_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_BringToFront").Call(obj)
 }
 
 func RadioGroup_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("RadioGroup_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RadioGroup_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RadioGroup_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("RadioGroup_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RadioGroup_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -129,7 +129,7 @@ func RadioGroup_HasParent(obj uintptr) bool {
 }
 
 func RadioGroup_Hide(obj uintptr) {
-	getLazyProc("RadioGroup_Hide").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_Hide").Call(obj)
 }
 
 func RadioGroup_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -138,27 +138,27 @@ func RadioGroup_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int
 }
 
 func RadioGroup_Refresh(obj uintptr) {
-	getLazyProc("RadioGroup_Refresh").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_Refresh").Call(obj)
 }
 
 func RadioGroup_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("RadioGroup_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RadioGroup_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RadioGroup_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("RadioGroup_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RadioGroup_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RadioGroup_SendToBack(obj uintptr) {
-	getLazyProc("RadioGroup_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_SendToBack").Call(obj)
 }
 
 func RadioGroup_Show(obj uintptr) {
-	getLazyProc("RadioGroup_Show").Call(obj)
+	_, _, _ = getLazyProc("RadioGroup_Show").Call(obj)
 }
 
 func RadioGroup_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -177,7 +177,7 @@ func RadioGroup_GetTextLen(obj uintptr) int32 {
 }
 
 func RadioGroup_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("RadioGroup_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("RadioGroup_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func RadioGroup_FindComponent(obj uintptr, AName string) uintptr {
@@ -191,7 +191,7 @@ func RadioGroup_GetNamePath(obj uintptr) string {
 }
 
 func RadioGroup_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("RadioGroup_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("RadioGroup_Assign").Call(obj, Source)
 }
 
 func RadioGroup_ClassType(obj uintptr) TClass {
@@ -230,31 +230,31 @@ func RadioGroup_ToString(obj uintptr) string {
 }
 
 func RadioGroup_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("RadioGroup_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("RadioGroup_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func RadioGroup_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("RadioGroup_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("RadioGroup_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func RadioGroup_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("RadioGroup_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("RadioGroup_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func RadioGroup_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("RadioGroup_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("RadioGroup_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func RadioGroup_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("RadioGroup_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("RadioGroup_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func RadioGroup_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("RadioGroup_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("RadioGroup_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func RadioGroup_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("RadioGroup_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("RadioGroup_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func RadioGroup_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -308,19 +308,19 @@ func RadioGroup_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func RadioGroup_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("RadioGroup_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("RadioGroup_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func RadioGroup_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("RadioGroup_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("RadioGroup_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func RadioGroup_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("RadioGroup_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("RadioGroup_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
-func RadioGroup_SetOnSelectionChanged(obj uintptr, fn interface{}) {
-	getLazyProc("RadioGroup_SetOnSelectionChanged").Call(obj, addEventToMap(obj, fn))
+func RadioGroup_SetOnSelectionChanged(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RadioGroup_SetOnSelectionChanged").Call(obj, addEventToMap(obj, fn))
 }
 
 func RadioGroup_GetAlign(obj uintptr) TAlign {
@@ -329,7 +329,7 @@ func RadioGroup_GetAlign(obj uintptr) TAlign {
 }
 
 func RadioGroup_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("RadioGroup_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetAlign").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetAnchors(obj uintptr) TAnchors {
@@ -338,7 +338,7 @@ func RadioGroup_GetAnchors(obj uintptr) TAnchors {
 }
 
 func RadioGroup_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("RadioGroup_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetAnchors").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -347,7 +347,7 @@ func RadioGroup_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func RadioGroup_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("RadioGroup_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetCaption(obj uintptr) string {
@@ -356,7 +356,7 @@ func RadioGroup_GetCaption(obj uintptr) string {
 }
 
 func RadioGroup_SetCaption(obj uintptr, value string) {
-	getLazyProc("RadioGroup_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func RadioGroup_GetColor(obj uintptr) TColor {
@@ -365,7 +365,7 @@ func RadioGroup_GetColor(obj uintptr) TColor {
 }
 
 func RadioGroup_SetColor(obj uintptr, value TColor) {
-	getLazyProc("RadioGroup_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetColor").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetColumns(obj uintptr) int32 {
@@ -374,7 +374,7 @@ func RadioGroup_GetColumns(obj uintptr) int32 {
 }
 
 func RadioGroup_SetColumns(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetColumns").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetColumns").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetDoubleBuffered(obj uintptr) bool {
@@ -383,7 +383,7 @@ func RadioGroup_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func RadioGroup_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetDragCursor(obj uintptr) TCursor {
@@ -392,7 +392,7 @@ func RadioGroup_GetDragCursor(obj uintptr) TCursor {
 }
 
 func RadioGroup_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("RadioGroup_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetDragMode(obj uintptr) TDragMode {
@@ -401,7 +401,7 @@ func RadioGroup_GetDragMode(obj uintptr) TDragMode {
 }
 
 func RadioGroup_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("RadioGroup_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetDragMode").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetEnabled(obj uintptr) bool {
@@ -410,7 +410,7 @@ func RadioGroup_GetEnabled(obj uintptr) bool {
 }
 
 func RadioGroup_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetFont(obj uintptr) uintptr {
@@ -419,7 +419,7 @@ func RadioGroup_GetFont(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetFont").Call(obj, value)
 }
 
 func RadioGroup_GetItemIndex(obj uintptr) int32 {
@@ -428,7 +428,7 @@ func RadioGroup_GetItemIndex(obj uintptr) int32 {
 }
 
 func RadioGroup_SetItemIndex(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetItemIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetItemIndex").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetItems(obj uintptr) uintptr {
@@ -437,7 +437,7 @@ func RadioGroup_GetItems(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetItems(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetItems").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetItems").Call(obj, value)
 }
 
 func RadioGroup_GetConstraints(obj uintptr) uintptr {
@@ -446,7 +446,7 @@ func RadioGroup_GetConstraints(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetConstraints").Call(obj, value)
 }
 
 func RadioGroup_GetParentBackground(obj uintptr) bool {
@@ -455,7 +455,7 @@ func RadioGroup_GetParentBackground(obj uintptr) bool {
 }
 
 func RadioGroup_SetParentBackground(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetParentBackground").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetParentBackground").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetParentColor(obj uintptr) bool {
@@ -464,7 +464,7 @@ func RadioGroup_GetParentColor(obj uintptr) bool {
 }
 
 func RadioGroup_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetParentDoubleBuffered(obj uintptr) bool {
@@ -473,7 +473,7 @@ func RadioGroup_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func RadioGroup_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetParentFont(obj uintptr) bool {
@@ -482,7 +482,7 @@ func RadioGroup_GetParentFont(obj uintptr) bool {
 }
 
 func RadioGroup_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetParentShowHint(obj uintptr) bool {
@@ -491,7 +491,7 @@ func RadioGroup_GetParentShowHint(obj uintptr) bool {
 }
 
 func RadioGroup_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetPopupMenu(obj uintptr) uintptr {
@@ -500,7 +500,7 @@ func RadioGroup_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetPopupMenu").Call(obj, value)
 }
 
 func RadioGroup_GetShowHint(obj uintptr) bool {
@@ -509,7 +509,7 @@ func RadioGroup_GetShowHint(obj uintptr) bool {
 }
 
 func RadioGroup_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetTabOrder(obj uintptr) TTabOrder {
@@ -518,7 +518,7 @@ func RadioGroup_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func RadioGroup_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("RadioGroup_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetTabStop(obj uintptr) bool {
@@ -527,7 +527,7 @@ func RadioGroup_GetTabStop(obj uintptr) bool {
 }
 
 func RadioGroup_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetVisible(obj uintptr) bool {
@@ -536,31 +536,31 @@ func RadioGroup_GetVisible(obj uintptr) bool {
 }
 
 func RadioGroup_SetVisible(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func RadioGroup_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("RadioGroup_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func RadioGroup_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RadioGroup_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func RadioGroup_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("RadioGroup_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func RadioGroup_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RadioGroup_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func RadioGroup_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("RadioGroup_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func RadioGroup_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RadioGroup_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func RadioGroup_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("RadioGroup_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func RadioGroup_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RadioGroup_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func RadioGroup_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("RadioGroup_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func RadioGroup_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RadioGroup_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func RadioGroup_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("RadioGroup_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func RadioGroup_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RadioGroup_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
 func RadioGroup_GetDockClientCount(obj uintptr) int32 {
@@ -574,7 +574,7 @@ func RadioGroup_GetDockSite(obj uintptr) bool {
 }
 
 func RadioGroup_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetMouseInClient(obj uintptr) bool {
@@ -599,16 +599,16 @@ func RadioGroup_GetControlCount(obj uintptr) int32 {
 
 func RadioGroup_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("RadioGroup_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func RadioGroup_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("RadioGroup_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func RadioGroup_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("RadioGroup_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetParentWindow").Call(obj, value)
 }
 
 func RadioGroup_GetShowing(obj uintptr) bool {
@@ -622,7 +622,7 @@ func RadioGroup_GetUseDockManager(obj uintptr) bool {
 }
 
 func RadioGroup_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("RadioGroup_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RadioGroup_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetAction(obj uintptr) uintptr {
@@ -631,17 +631,17 @@ func RadioGroup_GetAction(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetAction").Call(obj, value)
 }
 
 func RadioGroup_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("RadioGroup_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RadioGroup_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RadioGroup_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("RadioGroup_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("RadioGroup_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func RadioGroup_GetClientHeight(obj uintptr) int32 {
@@ -650,18 +650,18 @@ func RadioGroup_GetClientHeight(obj uintptr) int32 {
 }
 
 func RadioGroup_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("RadioGroup_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RadioGroup_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RadioGroup_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("RadioGroup_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RadioGroup_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -671,7 +671,7 @@ func RadioGroup_GetClientWidth(obj uintptr) int32 {
 }
 
 func RadioGroup_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetControlState(obj uintptr) TControlState {
@@ -680,7 +680,7 @@ func RadioGroup_GetControlState(obj uintptr) TControlState {
 }
 
 func RadioGroup_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("RadioGroup_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetControlState").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetControlStyle(obj uintptr) TControlStyle {
@@ -689,7 +689,7 @@ func RadioGroup_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func RadioGroup_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("RadioGroup_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetFloating(obj uintptr) bool {
@@ -703,7 +703,7 @@ func RadioGroup_GetParent(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetParent").Call(obj, value)
 }
 
 func RadioGroup_GetLeft(obj uintptr) int32 {
@@ -712,7 +712,7 @@ func RadioGroup_GetLeft(obj uintptr) int32 {
 }
 
 func RadioGroup_SetLeft(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetLeft").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetTop(obj uintptr) int32 {
@@ -721,7 +721,7 @@ func RadioGroup_GetTop(obj uintptr) int32 {
 }
 
 func RadioGroup_SetTop(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetTop").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetWidth(obj uintptr) int32 {
@@ -730,7 +730,7 @@ func RadioGroup_GetWidth(obj uintptr) int32 {
 }
 
 func RadioGroup_SetWidth(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetWidth").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetHeight(obj uintptr) int32 {
@@ -739,7 +739,7 @@ func RadioGroup_GetHeight(obj uintptr) int32 {
 }
 
 func RadioGroup_SetHeight(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetHeight").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetCursor(obj uintptr) TCursor {
@@ -748,7 +748,7 @@ func RadioGroup_GetCursor(obj uintptr) TCursor {
 }
 
 func RadioGroup_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("RadioGroup_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetCursor").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetHint(obj uintptr) string {
@@ -757,7 +757,7 @@ func RadioGroup_GetHint(obj uintptr) string {
 }
 
 func RadioGroup_SetHint(obj uintptr, value string) {
-	getLazyProc("RadioGroup_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func RadioGroup_GetComponentCount(obj uintptr) int32 {
@@ -771,7 +771,7 @@ func RadioGroup_GetComponentIndex(obj uintptr) int32 {
 }
 
 func RadioGroup_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("RadioGroup_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetOwner(obj uintptr) uintptr {
@@ -785,7 +785,7 @@ func RadioGroup_GetName(obj uintptr) string {
 }
 
 func RadioGroup_SetName(obj uintptr, value string) {
-	getLazyProc("RadioGroup_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func RadioGroup_GetTag(obj uintptr) int {
@@ -794,7 +794,7 @@ func RadioGroup_GetTag(obj uintptr) int {
 }
 
 func RadioGroup_SetTag(obj uintptr, value int) {
-	getLazyProc("RadioGroup_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RadioGroup_SetTag").Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -803,7 +803,7 @@ func RadioGroup_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetAnchorSideLeft").Call(obj, value)
 }
 
 func RadioGroup_GetAnchorSideTop(obj uintptr) uintptr {
@@ -812,7 +812,7 @@ func RadioGroup_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetAnchorSideTop").Call(obj, value)
 }
 
 func RadioGroup_GetAnchorSideRight(obj uintptr) uintptr {
@@ -821,7 +821,7 @@ func RadioGroup_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetAnchorSideRight").Call(obj, value)
 }
 
 func RadioGroup_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -830,7 +830,7 @@ func RadioGroup_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetAnchorSideBottom").Call(obj, value)
 }
 
 func RadioGroup_GetChildSizing(obj uintptr) uintptr {
@@ -839,7 +839,7 @@ func RadioGroup_GetChildSizing(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetChildSizing").Call(obj, value)
 }
 
 func RadioGroup_GetBorderSpacing(obj uintptr) uintptr {
@@ -848,7 +848,7 @@ func RadioGroup_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func RadioGroup_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("RadioGroup_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("RadioGroup_SetBorderSpacing").Call(obj, value)
 }
 
 func RadioGroup_GetDockClients(obj uintptr, Index int32) uintptr {

@@ -12,7 +12,7 @@ func TaskDialog_Create(obj uintptr) uintptr {
 }
 
 func TaskDialog_Free(obj uintptr) {
-	getLazyProc("TaskDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("TaskDialog_Free").Call(obj)
 }
 
 func TaskDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func TaskDialog_HasParent(obj uintptr) bool {
 }
 
 func TaskDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TaskDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TaskDialog_Assign").Call(obj, Source)
 }
 
 func TaskDialog_ClassType(obj uintptr) TClass {
@@ -80,7 +80,7 @@ func TaskDialog_GetButtons(obj uintptr) uintptr {
 }
 
 func TaskDialog_SetButtons(obj uintptr, value uintptr) {
-	getLazyProc("TaskDialog_SetButtons").Call(obj, value)
+	_, _, _ = getLazyProc("TaskDialog_SetButtons").Call(obj, value)
 }
 
 func TaskDialog_GetCaption(obj uintptr) string {
@@ -89,7 +89,7 @@ func TaskDialog_GetCaption(obj uintptr) string {
 }
 
 func TaskDialog_SetCaption(obj uintptr, value string) {
-	getLazyProc("TaskDialog_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialog_GetCommonButtons(obj uintptr) TTaskDialogCommonButtons {
@@ -98,7 +98,7 @@ func TaskDialog_GetCommonButtons(obj uintptr) TTaskDialogCommonButtons {
 }
 
 func TaskDialog_SetCommonButtons(obj uintptr, value TTaskDialogCommonButtons) {
-	getLazyProc("TaskDialog_SetCommonButtons").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetCommonButtons").Call(obj, uintptr(value))
 }
 
 func TaskDialog_GetDefaultButton(obj uintptr) TTaskDialogCommonButton {
@@ -107,7 +107,7 @@ func TaskDialog_GetDefaultButton(obj uintptr) TTaskDialogCommonButton {
 }
 
 func TaskDialog_SetDefaultButton(obj uintptr, value TTaskDialogCommonButton) {
-	getLazyProc("TaskDialog_SetDefaultButton").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetDefaultButton").Call(obj, uintptr(value))
 }
 
 func TaskDialog_GetExpandButtonCaption(obj uintptr) string {
@@ -116,7 +116,7 @@ func TaskDialog_GetExpandButtonCaption(obj uintptr) string {
 }
 
 func TaskDialog_SetExpandButtonCaption(obj uintptr, value string) {
-	getLazyProc("TaskDialog_SetExpandButtonCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetExpandButtonCaption").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialog_GetExpandedText(obj uintptr) string {
@@ -125,7 +125,7 @@ func TaskDialog_GetExpandedText(obj uintptr) string {
 }
 
 func TaskDialog_SetExpandedText(obj uintptr, value string) {
-	getLazyProc("TaskDialog_SetExpandedText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetExpandedText").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialog_GetFlags(obj uintptr) TTaskDialogFlags {
@@ -134,7 +134,7 @@ func TaskDialog_GetFlags(obj uintptr) TTaskDialogFlags {
 }
 
 func TaskDialog_SetFlags(obj uintptr, value TTaskDialogFlags) {
-	getLazyProc("TaskDialog_SetFlags").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetFlags").Call(obj, uintptr(value))
 }
 
 func TaskDialog_GetFooterIcon(obj uintptr) TTaskDialogIcon {
@@ -143,7 +143,7 @@ func TaskDialog_GetFooterIcon(obj uintptr) TTaskDialogIcon {
 }
 
 func TaskDialog_SetFooterIcon(obj uintptr, value TTaskDialogIcon) {
-	getLazyProc("TaskDialog_SetFooterIcon").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetFooterIcon").Call(obj, uintptr(value))
 }
 
 func TaskDialog_GetFooterText(obj uintptr) string {
@@ -152,7 +152,7 @@ func TaskDialog_GetFooterText(obj uintptr) string {
 }
 
 func TaskDialog_SetFooterText(obj uintptr, value string) {
-	getLazyProc("TaskDialog_SetFooterText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetFooterText").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialog_GetMainIcon(obj uintptr) TTaskDialogIcon {
@@ -161,7 +161,7 @@ func TaskDialog_GetMainIcon(obj uintptr) TTaskDialogIcon {
 }
 
 func TaskDialog_SetMainIcon(obj uintptr, value TTaskDialogIcon) {
-	getLazyProc("TaskDialog_SetMainIcon").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetMainIcon").Call(obj, uintptr(value))
 }
 
 func TaskDialog_GetRadioButtons(obj uintptr) uintptr {
@@ -170,7 +170,7 @@ func TaskDialog_GetRadioButtons(obj uintptr) uintptr {
 }
 
 func TaskDialog_SetRadioButtons(obj uintptr, value uintptr) {
-	getLazyProc("TaskDialog_SetRadioButtons").Call(obj, value)
+	_, _, _ = getLazyProc("TaskDialog_SetRadioButtons").Call(obj, value)
 }
 
 func TaskDialog_GetText(obj uintptr) string {
@@ -179,7 +179,7 @@ func TaskDialog_GetText(obj uintptr) string {
 }
 
 func TaskDialog_SetText(obj uintptr, value string) {
-	getLazyProc("TaskDialog_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialog_GetTitle(obj uintptr) string {
@@ -188,7 +188,7 @@ func TaskDialog_GetTitle(obj uintptr) string {
 }
 
 func TaskDialog_SetTitle(obj uintptr, value string) {
-	getLazyProc("TaskDialog_SetTitle").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetTitle").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialog_GetVerificationText(obj uintptr) string {
@@ -197,11 +197,11 @@ func TaskDialog_GetVerificationText(obj uintptr) string {
 }
 
 func TaskDialog_SetVerificationText(obj uintptr, value string) {
-	getLazyProc("TaskDialog_SetVerificationText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetVerificationText").Call(obj, GoStrToDStr(value))
 }
 
-func TaskDialog_SetOnButtonClicked(obj uintptr, fn interface{}) {
-	getLazyProc("TaskDialog_SetOnButtonClicked").Call(obj, addEventToMap(obj, fn))
+func TaskDialog_SetOnButtonClicked(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TaskDialog_SetOnButtonClicked").Call(obj, addEventToMap(obj, fn))
 }
 
 func TaskDialog_GetButton(obj uintptr) uintptr {
@@ -210,7 +210,7 @@ func TaskDialog_GetButton(obj uintptr) uintptr {
 }
 
 func TaskDialog_SetButton(obj uintptr, value uintptr) {
-	getLazyProc("TaskDialog_SetButton").Call(obj, value)
+	_, _, _ = getLazyProc("TaskDialog_SetButton").Call(obj, value)
 }
 
 func TaskDialog_GetModalResult(obj uintptr) TModalResult {
@@ -219,7 +219,7 @@ func TaskDialog_GetModalResult(obj uintptr) TModalResult {
 }
 
 func TaskDialog_SetModalResult(obj uintptr, value TModalResult) {
-	getLazyProc("TaskDialog_SetModalResult").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetModalResult").Call(obj, uintptr(value))
 }
 
 func TaskDialog_GetRadioButton(obj uintptr) uintptr {
@@ -238,7 +238,7 @@ func TaskDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func TaskDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("TaskDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func TaskDialog_GetOwner(obj uintptr) uintptr {
@@ -252,7 +252,7 @@ func TaskDialog_GetName(obj uintptr) string {
 }
 
 func TaskDialog_SetName(obj uintptr, value string) {
-	getLazyProc("TaskDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialog_GetTag(obj uintptr) int {
@@ -261,7 +261,7 @@ func TaskDialog_GetTag(obj uintptr) int {
 }
 
 func TaskDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("TaskDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func TaskDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

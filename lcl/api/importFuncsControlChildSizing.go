@@ -7,7 +7,7 @@ import (
 //--------------------------- TControlChildSizing ---------------------------
 
 func ControlChildSizing_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ControlChildSizing_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ControlChildSizing_Assign").Call(obj, Source)
 }
 
 func ControlChildSizing_GetNamePath(obj uintptr) string {
@@ -55,8 +55,8 @@ func ControlChildSizing_GetControl(obj uintptr) uintptr {
 	return ret
 }
 
-func ControlChildSizing_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("ControlChildSizing_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func ControlChildSizing_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ControlChildSizing_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func ControlChildSizing_GetLeftRightSpacing(obj uintptr) int32 {
@@ -65,7 +65,7 @@ func ControlChildSizing_GetLeftRightSpacing(obj uintptr) int32 {
 }
 
 func ControlChildSizing_SetLeftRightSpacing(obj uintptr, value int32) {
-	getLazyProc("ControlChildSizing_SetLeftRightSpacing").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetLeftRightSpacing").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetTopBottomSpacing(obj uintptr) int32 {
@@ -74,7 +74,7 @@ func ControlChildSizing_GetTopBottomSpacing(obj uintptr) int32 {
 }
 
 func ControlChildSizing_SetTopBottomSpacing(obj uintptr, value int32) {
-	getLazyProc("ControlChildSizing_SetTopBottomSpacing").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetTopBottomSpacing").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetHorizontalSpacing(obj uintptr) int32 {
@@ -83,7 +83,7 @@ func ControlChildSizing_GetHorizontalSpacing(obj uintptr) int32 {
 }
 
 func ControlChildSizing_SetHorizontalSpacing(obj uintptr, value int32) {
-	getLazyProc("ControlChildSizing_SetHorizontalSpacing").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetHorizontalSpacing").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetVerticalSpacing(obj uintptr) int32 {
@@ -92,7 +92,7 @@ func ControlChildSizing_GetVerticalSpacing(obj uintptr) int32 {
 }
 
 func ControlChildSizing_SetVerticalSpacing(obj uintptr, value int32) {
-	getLazyProc("ControlChildSizing_SetVerticalSpacing").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetVerticalSpacing").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetEnlargeHorizontal(obj uintptr) TChildControlResizeStyle {
@@ -101,7 +101,7 @@ func ControlChildSizing_GetEnlargeHorizontal(obj uintptr) TChildControlResizeSty
 }
 
 func ControlChildSizing_SetEnlargeHorizontal(obj uintptr, value TChildControlResizeStyle) {
-	getLazyProc("ControlChildSizing_SetEnlargeHorizontal").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetEnlargeHorizontal").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetEnlargeVertical(obj uintptr) TChildControlResizeStyle {
@@ -110,7 +110,7 @@ func ControlChildSizing_GetEnlargeVertical(obj uintptr) TChildControlResizeStyle
 }
 
 func ControlChildSizing_SetEnlargeVertical(obj uintptr, value TChildControlResizeStyle) {
-	getLazyProc("ControlChildSizing_SetEnlargeVertical").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetEnlargeVertical").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetShrinkHorizontal(obj uintptr) TChildControlResizeStyle {
@@ -119,7 +119,7 @@ func ControlChildSizing_GetShrinkHorizontal(obj uintptr) TChildControlResizeStyl
 }
 
 func ControlChildSizing_SetShrinkHorizontal(obj uintptr, value TChildControlResizeStyle) {
-	getLazyProc("ControlChildSizing_SetShrinkHorizontal").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetShrinkHorizontal").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetShrinkVertical(obj uintptr) TChildControlResizeStyle {
@@ -128,7 +128,7 @@ func ControlChildSizing_GetShrinkVertical(obj uintptr) TChildControlResizeStyle 
 }
 
 func ControlChildSizing_SetShrinkVertical(obj uintptr, value TChildControlResizeStyle) {
-	getLazyProc("ControlChildSizing_SetShrinkVertical").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetShrinkVertical").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetLayout(obj uintptr) TControlChildrenLayout {
@@ -137,7 +137,7 @@ func ControlChildSizing_GetLayout(obj uintptr) TControlChildrenLayout {
 }
 
 func ControlChildSizing_SetLayout(obj uintptr, value TControlChildrenLayout) {
-	getLazyProc("ControlChildSizing_SetLayout").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetLayout").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_GetControlsPerLine(obj uintptr) int32 {
@@ -146,7 +146,7 @@ func ControlChildSizing_GetControlsPerLine(obj uintptr) int32 {
 }
 
 func ControlChildSizing_SetControlsPerLine(obj uintptr, value int32) {
-	getLazyProc("ControlChildSizing_SetControlsPerLine").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlChildSizing_SetControlsPerLine").Call(obj, uintptr(value))
 }
 
 func ControlChildSizing_StaticClassType() TClass {

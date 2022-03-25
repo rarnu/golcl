@@ -12,7 +12,7 @@ func Strings_Create() uintptr {
 }
 
 func Strings_Free(obj uintptr) {
-	getLazyProc("Strings_Free").Call(obj)
+	_, _, _ = getLazyProc("Strings_Free").Call(obj)
 }
 
 func Strings_Add(obj uintptr, S string) int32 {
@@ -26,27 +26,27 @@ func Strings_AddObject(obj uintptr, S string, AObject uintptr) int32 {
 }
 
 func Strings_Append(obj uintptr, S string) {
-	getLazyProc("Strings_Append").Call(obj, GoStrToDStr(S))
+	_, _, _ = getLazyProc("Strings_Append").Call(obj, GoStrToDStr(S))
 }
 
 func Strings_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Strings_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Strings_Assign").Call(obj, Source)
 }
 
 func Strings_BeginUpdate(obj uintptr) {
-	getLazyProc("Strings_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("Strings_BeginUpdate").Call(obj)
 }
 
 func Strings_Clear(obj uintptr) {
-	getLazyProc("Strings_Clear").Call(obj)
+	_, _, _ = getLazyProc("Strings_Clear").Call(obj)
 }
 
 func Strings_Delete(obj uintptr, Index int32) {
-	getLazyProc("Strings_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("Strings_Delete").Call(obj, uintptr(Index))
 }
 
 func Strings_EndUpdate(obj uintptr) {
-	getLazyProc("Strings_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("Strings_EndUpdate").Call(obj)
 }
 
 func Strings_Equals(obj uintptr, Strings uintptr) bool {
@@ -70,31 +70,31 @@ func Strings_IndexOfObject(obj uintptr, AObject uintptr) int32 {
 }
 
 func Strings_Insert(obj uintptr, Index int32, S string) {
-	getLazyProc("Strings_Insert").Call(obj, uintptr(Index), GoStrToDStr(S))
+	_, _, _ = getLazyProc("Strings_Insert").Call(obj, uintptr(Index), GoStrToDStr(S))
 }
 
 func Strings_InsertObject(obj uintptr, Index int32, S string, AObject uintptr) {
-	getLazyProc("Strings_InsertObject").Call(obj, uintptr(Index), GoStrToDStr(S), AObject)
+	_, _, _ = getLazyProc("Strings_InsertObject").Call(obj, uintptr(Index), GoStrToDStr(S), AObject)
 }
 
 func Strings_LoadFromFile(obj uintptr, FileName string) {
-	getLazyProc("Strings_LoadFromFile").Call(obj, GoStrToDStr(FileName))
+	_, _, _ = getLazyProc("Strings_LoadFromFile").Call(obj, GoStrToDStr(FileName))
 }
 
 func Strings_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Strings_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Strings_LoadFromStream").Call(obj, Stream)
 }
 
 func Strings_Move(obj uintptr, CurIndex int32, NewIndex int32) {
-	getLazyProc("Strings_Move").Call(obj, uintptr(CurIndex), uintptr(NewIndex))
+	_, _, _ = getLazyProc("Strings_Move").Call(obj, uintptr(CurIndex), uintptr(NewIndex))
 }
 
 func Strings_SaveToFile(obj uintptr, FileName string) {
-	getLazyProc("Strings_SaveToFile").Call(obj, GoStrToDStr(FileName))
+	_, _, _ = getLazyProc("Strings_SaveToFile").Call(obj, GoStrToDStr(FileName))
 }
 
 func Strings_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Strings_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Strings_SaveToStream").Call(obj, Stream)
 }
 
 func Strings_GetNamePath(obj uintptr) string {
@@ -138,7 +138,7 @@ func Strings_GetCapacity(obj uintptr) int32 {
 }
 
 func Strings_SetCapacity(obj uintptr, value int32) {
-	getLazyProc("Strings_SetCapacity").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Strings_SetCapacity").Call(obj, uintptr(value))
 }
 
 func Strings_GetCommaText(obj uintptr) string {
@@ -147,7 +147,7 @@ func Strings_GetCommaText(obj uintptr) string {
 }
 
 func Strings_SetCommaText(obj uintptr, value string) {
-	getLazyProc("Strings_SetCommaText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Strings_SetCommaText").Call(obj, GoStrToDStr(value))
 }
 
 func Strings_GetCount(obj uintptr) int32 {
@@ -161,7 +161,7 @@ func Strings_GetDelimiter(obj uintptr) uint16 {
 }
 
 func Strings_SetDelimiter(obj uintptr, value uint16) {
-	getLazyProc("Strings_SetDelimiter").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Strings_SetDelimiter").Call(obj, uintptr(value))
 }
 
 func Strings_GetNameValueSeparator(obj uintptr) uint16 {
@@ -170,7 +170,7 @@ func Strings_GetNameValueSeparator(obj uintptr) uint16 {
 }
 
 func Strings_SetNameValueSeparator(obj uintptr, value uint16) {
-	getLazyProc("Strings_SetNameValueSeparator").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Strings_SetNameValueSeparator").Call(obj, uintptr(value))
 }
 
 func Strings_GetText(obj uintptr) string {
@@ -179,7 +179,7 @@ func Strings_GetText(obj uintptr) string {
 }
 
 func Strings_SetText(obj uintptr, value string) {
-	getLazyProc("Strings_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Strings_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func Strings_GetObjects(obj uintptr, Index int32) uintptr {
@@ -188,7 +188,7 @@ func Strings_GetObjects(obj uintptr, Index int32) uintptr {
 }
 
 func Strings_SetObjects(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("Strings_SetObjects").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("Strings_SetObjects").Call(obj, uintptr(Index), value)
 }
 
 func Strings_GetValues(obj uintptr, Name string) string {
@@ -197,7 +197,7 @@ func Strings_GetValues(obj uintptr, Name string) string {
 }
 
 func Strings_SetValues(obj uintptr, Name string, value string) {
-	getLazyProc("Strings_SetValues").Call(obj, GoStrToDStr(Name), GoStrToDStr(value))
+	_, _, _ = getLazyProc("Strings_SetValues").Call(obj, GoStrToDStr(Name), GoStrToDStr(value))
 }
 
 func Strings_GetValueFromIndex(obj uintptr, Index int32) string {
@@ -206,7 +206,7 @@ func Strings_GetValueFromIndex(obj uintptr, Index int32) string {
 }
 
 func Strings_SetValueFromIndex(obj uintptr, Index int32, value string) {
-	getLazyProc("Strings_SetValueFromIndex").Call(obj, uintptr(Index), GoStrToDStr(value))
+	_, _, _ = getLazyProc("Strings_SetValueFromIndex").Call(obj, uintptr(Index), GoStrToDStr(value))
 }
 
 func Strings_GetStrings(obj uintptr, Index int32) string {
@@ -215,7 +215,7 @@ func Strings_GetStrings(obj uintptr, Index int32) string {
 }
 
 func Strings_SetStrings(obj uintptr, Index int32, value string) {
-	getLazyProc("Strings_SetStrings").Call(obj, uintptr(Index), GoStrToDStr(value))
+	_, _, _ = getLazyProc("Strings_SetStrings").Call(obj, uintptr(Index), GoStrToDStr(value))
 }
 
 func Strings_StaticClassType() TClass {

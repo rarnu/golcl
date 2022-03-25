@@ -12,7 +12,7 @@ func SelectDirectoryDialog_Create(obj uintptr) uintptr {
 }
 
 func SelectDirectoryDialog_Free(obj uintptr) {
-	getLazyProc("SelectDirectoryDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("SelectDirectoryDialog_Free").Call(obj)
 }
 
 func SelectDirectoryDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func SelectDirectoryDialog_HasParent(obj uintptr) bool {
 }
 
 func SelectDirectoryDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("SelectDirectoryDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("SelectDirectoryDialog_Assign").Call(obj, Source)
 }
 
 func SelectDirectoryDialog_ClassType(obj uintptr) TClass {
@@ -85,7 +85,7 @@ func SelectDirectoryDialog_GetDefaultExt(obj uintptr) string {
 }
 
 func SelectDirectoryDialog_SetDefaultExt(obj uintptr, value string) {
-	getLazyProc("SelectDirectoryDialog_SetDefaultExt").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetDefaultExt").Call(obj, GoStrToDStr(value))
 }
 
 func SelectDirectoryDialog_GetFileName(obj uintptr) string {
@@ -94,7 +94,7 @@ func SelectDirectoryDialog_GetFileName(obj uintptr) string {
 }
 
 func SelectDirectoryDialog_SetFileName(obj uintptr, value string) {
-	getLazyProc("SelectDirectoryDialog_SetFileName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetFileName").Call(obj, GoStrToDStr(value))
 }
 
 func SelectDirectoryDialog_GetFilter(obj uintptr) string {
@@ -103,7 +103,7 @@ func SelectDirectoryDialog_GetFilter(obj uintptr) string {
 }
 
 func SelectDirectoryDialog_SetFilter(obj uintptr, value string) {
-	getLazyProc("SelectDirectoryDialog_SetFilter").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetFilter").Call(obj, GoStrToDStr(value))
 }
 
 func SelectDirectoryDialog_GetFilterIndex(obj uintptr) int32 {
@@ -112,7 +112,7 @@ func SelectDirectoryDialog_GetFilterIndex(obj uintptr) int32 {
 }
 
 func SelectDirectoryDialog_SetFilterIndex(obj uintptr, value int32) {
-	getLazyProc("SelectDirectoryDialog_SetFilterIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetFilterIndex").Call(obj, uintptr(value))
 }
 
 func SelectDirectoryDialog_GetInitialDir(obj uintptr) string {
@@ -121,7 +121,7 @@ func SelectDirectoryDialog_GetInitialDir(obj uintptr) string {
 }
 
 func SelectDirectoryDialog_SetInitialDir(obj uintptr, value string) {
-	getLazyProc("SelectDirectoryDialog_SetInitialDir").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetInitialDir").Call(obj, GoStrToDStr(value))
 }
 
 func SelectDirectoryDialog_GetOptions(obj uintptr) TOpenOptions {
@@ -130,7 +130,7 @@ func SelectDirectoryDialog_GetOptions(obj uintptr) TOpenOptions {
 }
 
 func SelectDirectoryDialog_SetOptions(obj uintptr, value TOpenOptions) {
-	getLazyProc("SelectDirectoryDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetOptions").Call(obj, uintptr(value))
 }
 
 func SelectDirectoryDialog_GetTitle(obj uintptr) string {
@@ -139,20 +139,20 @@ func SelectDirectoryDialog_GetTitle(obj uintptr) string {
 }
 
 func SelectDirectoryDialog_SetTitle(obj uintptr, value string) {
-	getLazyProc("SelectDirectoryDialog_SetTitle").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetTitle").Call(obj, GoStrToDStr(value))
 }
 
 func SelectDirectoryDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("SelectDirectoryDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func SelectDirectoryDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("SelectDirectoryDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func SelectDirectoryDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func SelectDirectoryDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("SelectDirectoryDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func SelectDirectoryDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func SelectDirectoryDialog_GetComponentCount(obj uintptr) int32 {
@@ -166,7 +166,7 @@ func SelectDirectoryDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func SelectDirectoryDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("SelectDirectoryDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func SelectDirectoryDialog_GetOwner(obj uintptr) uintptr {
@@ -180,7 +180,7 @@ func SelectDirectoryDialog_GetName(obj uintptr) string {
 }
 
 func SelectDirectoryDialog_SetName(obj uintptr, value string) {
-	getLazyProc("SelectDirectoryDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func SelectDirectoryDialog_GetTag(obj uintptr) int {
@@ -189,7 +189,7 @@ func SelectDirectoryDialog_GetTag(obj uintptr) int {
 }
 
 func SelectDirectoryDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("SelectDirectoryDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SelectDirectoryDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func SelectDirectoryDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

@@ -34,7 +34,7 @@ func NewComponent(owner IComponent) *TComponent {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsComponent(obj interface{}) *TComponent {
+func AsComponent(obj any) *TComponent {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

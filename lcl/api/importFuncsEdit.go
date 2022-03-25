@@ -13,35 +13,35 @@ func Edit_Create(obj uintptr) uintptr {
 }
 
 func Edit_Free(obj uintptr) {
-	getLazyProc("Edit_Free").Call(obj)
+	_, _, _ = getLazyProc("Edit_Free").Call(obj)
 }
 
 func Edit_Clear(obj uintptr) {
-	getLazyProc("Edit_Clear").Call(obj)
+	_, _, _ = getLazyProc("Edit_Clear").Call(obj)
 }
 
 func Edit_ClearSelection(obj uintptr) {
-	getLazyProc("Edit_ClearSelection").Call(obj)
+	_, _, _ = getLazyProc("Edit_ClearSelection").Call(obj)
 }
 
 func Edit_CopyToClipboard(obj uintptr) {
-	getLazyProc("Edit_CopyToClipboard").Call(obj)
+	_, _, _ = getLazyProc("Edit_CopyToClipboard").Call(obj)
 }
 
 func Edit_CutToClipboard(obj uintptr) {
-	getLazyProc("Edit_CutToClipboard").Call(obj)
+	_, _, _ = getLazyProc("Edit_CutToClipboard").Call(obj)
 }
 
 func Edit_PasteFromClipboard(obj uintptr) {
-	getLazyProc("Edit_PasteFromClipboard").Call(obj)
+	_, _, _ = getLazyProc("Edit_PasteFromClipboard").Call(obj)
 }
 
 func Edit_Undo(obj uintptr) {
-	getLazyProc("Edit_Undo").Call(obj)
+	_, _, _ = getLazyProc("Edit_Undo").Call(obj)
 }
 
 func Edit_SelectAll(obj uintptr) {
-	getLazyProc("Edit_SelectAll").Call(obj)
+	_, _, _ = getLazyProc("Edit_SelectAll").Call(obj)
 }
 
 func Edit_CanFocus(obj uintptr) bool {
@@ -60,11 +60,11 @@ func Edit_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWinCont
 }
 
 func Edit_DisableAlign(obj uintptr) {
-	getLazyProc("Edit_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("Edit_DisableAlign").Call(obj)
 }
 
 func Edit_EnableAlign(obj uintptr) {
-	getLazyProc("Edit_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("Edit_EnableAlign").Call(obj)
 }
 
 func Edit_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -73,7 +73,7 @@ func Edit_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func Edit_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("Edit_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("Edit_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func Edit_Focused(obj uintptr) bool {
@@ -87,62 +87,62 @@ func Edit_HandleAllocated(obj uintptr) bool {
 }
 
 func Edit_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("Edit_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("Edit_InsertControl").Call(obj, AControl)
 }
 
 func Edit_Invalidate(obj uintptr) {
-	getLazyProc("Edit_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("Edit_Invalidate").Call(obj)
 }
 
 func Edit_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("Edit_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("Edit_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func Edit_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("Edit_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("Edit_RemoveControl").Call(obj, AControl)
 }
 
 func Edit_Realign(obj uintptr) {
-	getLazyProc("Edit_Realign").Call(obj)
+	_, _, _ = getLazyProc("Edit_Realign").Call(obj)
 }
 
 func Edit_Repaint(obj uintptr) {
-	getLazyProc("Edit_Repaint").Call(obj)
+	_, _, _ = getLazyProc("Edit_Repaint").Call(obj)
 }
 
 func Edit_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("Edit_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("Edit_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func Edit_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("Edit_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("Edit_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func Edit_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("Edit_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Edit_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func Edit_SetFocus(obj uintptr) {
-	getLazyProc("Edit_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("Edit_SetFocus").Call(obj)
 }
 
 func Edit_Update(obj uintptr) {
-	getLazyProc("Edit_Update").Call(obj)
+	_, _, _ = getLazyProc("Edit_Update").Call(obj)
 }
 
 func Edit_BringToFront(obj uintptr) {
-	getLazyProc("Edit_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("Edit_BringToFront").Call(obj)
 }
 
 func Edit_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Edit_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Edit_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Edit_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Edit_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Edit_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -157,7 +157,7 @@ func Edit_HasParent(obj uintptr) bool {
 }
 
 func Edit_Hide(obj uintptr) {
-	getLazyProc("Edit_Hide").Call(obj)
+	_, _, _ = getLazyProc("Edit_Hide").Call(obj)
 }
 
 func Edit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -166,27 +166,27 @@ func Edit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func Edit_Refresh(obj uintptr) {
-	getLazyProc("Edit_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Edit_Refresh").Call(obj)
 }
 
 func Edit_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Edit_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Edit_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Edit_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Edit_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Edit_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Edit_SendToBack(obj uintptr) {
-	getLazyProc("Edit_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("Edit_SendToBack").Call(obj)
 }
 
 func Edit_Show(obj uintptr) {
-	getLazyProc("Edit_Show").Call(obj)
+	_, _, _ = getLazyProc("Edit_Show").Call(obj)
 }
 
 func Edit_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -205,7 +205,7 @@ func Edit_GetTextLen(obj uintptr) int32 {
 }
 
 func Edit_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Edit_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Edit_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Edit_FindComponent(obj uintptr, AName string) uintptr {
@@ -219,7 +219,7 @@ func Edit_GetNamePath(obj uintptr) string {
 }
 
 func Edit_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Edit_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Edit_Assign").Call(obj, Source)
 }
 
 func Edit_ClassType(obj uintptr) TClass {
@@ -258,31 +258,31 @@ func Edit_ToString(obj uintptr) string {
 }
 
 func Edit_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Edit_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Edit_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Edit_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Edit_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Edit_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Edit_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Edit_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Edit_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func Edit_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Edit_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Edit_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func Edit_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("Edit_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("Edit_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func Edit_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("Edit_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("Edit_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func Edit_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("Edit_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("Edit_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func Edit_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -336,15 +336,15 @@ func Edit_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func Edit_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("Edit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("Edit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func Edit_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("Edit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("Edit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func Edit_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("Edit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("Edit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func Edit_GetAlign(obj uintptr) TAlign {
@@ -353,7 +353,7 @@ func Edit_GetAlign(obj uintptr) TAlign {
 }
 
 func Edit_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("Edit_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetAlign").Call(obj, uintptr(value))
 }
 
 func Edit_GetAlignment(obj uintptr) TAlignment {
@@ -362,7 +362,7 @@ func Edit_GetAlignment(obj uintptr) TAlignment {
 }
 
 func Edit_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("Edit_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetAlignment").Call(obj, uintptr(value))
 }
 
 func Edit_GetAnchors(obj uintptr) TAnchors {
@@ -371,7 +371,7 @@ func Edit_GetAnchors(obj uintptr) TAnchors {
 }
 
 func Edit_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("Edit_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetAnchors").Call(obj, uintptr(value))
 }
 
 func Edit_GetAutoSelect(obj uintptr) bool {
@@ -380,7 +380,7 @@ func Edit_GetAutoSelect(obj uintptr) bool {
 }
 
 func Edit_SetAutoSelect(obj uintptr, value bool) {
-	getLazyProc("Edit_SetAutoSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetAutoSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetAutoSize(obj uintptr) bool {
@@ -389,7 +389,7 @@ func Edit_GetAutoSize(obj uintptr) bool {
 }
 
 func Edit_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("Edit_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -398,7 +398,7 @@ func Edit_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func Edit_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("Edit_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func Edit_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -407,7 +407,7 @@ func Edit_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func Edit_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("Edit_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func Edit_GetCharCase(obj uintptr) TEditCharCase {
@@ -416,7 +416,7 @@ func Edit_GetCharCase(obj uintptr) TEditCharCase {
 }
 
 func Edit_SetCharCase(obj uintptr, value TEditCharCase) {
-	getLazyProc("Edit_SetCharCase").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetCharCase").Call(obj, uintptr(value))
 }
 
 func Edit_GetColor(obj uintptr) TColor {
@@ -425,7 +425,7 @@ func Edit_GetColor(obj uintptr) TColor {
 }
 
 func Edit_SetColor(obj uintptr, value TColor) {
-	getLazyProc("Edit_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetColor").Call(obj, uintptr(value))
 }
 
 func Edit_GetConstraints(obj uintptr) uintptr {
@@ -434,7 +434,7 @@ func Edit_GetConstraints(obj uintptr) uintptr {
 }
 
 func Edit_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetConstraints").Call(obj, value)
 }
 
 func Edit_GetDoubleBuffered(obj uintptr) bool {
@@ -443,7 +443,7 @@ func Edit_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func Edit_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("Edit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetDragCursor(obj uintptr) TCursor {
@@ -452,7 +452,7 @@ func Edit_GetDragCursor(obj uintptr) TCursor {
 }
 
 func Edit_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("Edit_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func Edit_GetDragKind(obj uintptr) TDragKind {
@@ -461,7 +461,7 @@ func Edit_GetDragKind(obj uintptr) TDragKind {
 }
 
 func Edit_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("Edit_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetDragKind").Call(obj, uintptr(value))
 }
 
 func Edit_GetDragMode(obj uintptr) TDragMode {
@@ -470,7 +470,7 @@ func Edit_GetDragMode(obj uintptr) TDragMode {
 }
 
 func Edit_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("Edit_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetDragMode").Call(obj, uintptr(value))
 }
 
 func Edit_GetEnabled(obj uintptr) bool {
@@ -479,7 +479,7 @@ func Edit_GetEnabled(obj uintptr) bool {
 }
 
 func Edit_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Edit_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetFont(obj uintptr) uintptr {
@@ -488,7 +488,7 @@ func Edit_GetFont(obj uintptr) uintptr {
 }
 
 func Edit_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetFont").Call(obj, value)
 }
 
 func Edit_GetHideSelection(obj uintptr) bool {
@@ -497,7 +497,7 @@ func Edit_GetHideSelection(obj uintptr) bool {
 }
 
 func Edit_SetHideSelection(obj uintptr, value bool) {
-	getLazyProc("Edit_SetHideSelection").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetHideSelection").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetMaxLength(obj uintptr) int32 {
@@ -506,7 +506,7 @@ func Edit_GetMaxLength(obj uintptr) int32 {
 }
 
 func Edit_SetMaxLength(obj uintptr, value int32) {
-	getLazyProc("Edit_SetMaxLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetMaxLength").Call(obj, uintptr(value))
 }
 
 func Edit_GetNumbersOnly(obj uintptr) bool {
@@ -515,7 +515,7 @@ func Edit_GetNumbersOnly(obj uintptr) bool {
 }
 
 func Edit_SetNumbersOnly(obj uintptr, value bool) {
-	getLazyProc("Edit_SetNumbersOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetNumbersOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetParentColor(obj uintptr) bool {
@@ -524,7 +524,7 @@ func Edit_GetParentColor(obj uintptr) bool {
 }
 
 func Edit_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("Edit_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetParentDoubleBuffered(obj uintptr) bool {
@@ -533,7 +533,7 @@ func Edit_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func Edit_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("Edit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetParentFont(obj uintptr) bool {
@@ -542,7 +542,7 @@ func Edit_GetParentFont(obj uintptr) bool {
 }
 
 func Edit_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("Edit_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetParentShowHint(obj uintptr) bool {
@@ -551,7 +551,7 @@ func Edit_GetParentShowHint(obj uintptr) bool {
 }
 
 func Edit_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("Edit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetPasswordChar(obj uintptr) uint16 {
@@ -560,7 +560,7 @@ func Edit_GetPasswordChar(obj uintptr) uint16 {
 }
 
 func Edit_SetPasswordChar(obj uintptr, value uint16) {
-	getLazyProc("Edit_SetPasswordChar").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetPasswordChar").Call(obj, uintptr(value))
 }
 
 func Edit_GetPopupMenu(obj uintptr) uintptr {
@@ -569,7 +569,7 @@ func Edit_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func Edit_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetPopupMenu").Call(obj, value)
 }
 
 func Edit_GetReadOnly(obj uintptr) bool {
@@ -578,7 +578,7 @@ func Edit_GetReadOnly(obj uintptr) bool {
 }
 
 func Edit_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("Edit_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetShowHint(obj uintptr) bool {
@@ -587,7 +587,7 @@ func Edit_GetShowHint(obj uintptr) bool {
 }
 
 func Edit_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("Edit_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetTabOrder(obj uintptr) TTabOrder {
@@ -596,7 +596,7 @@ func Edit_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func Edit_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("Edit_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func Edit_GetTabStop(obj uintptr) bool {
@@ -605,7 +605,7 @@ func Edit_GetTabStop(obj uintptr) bool {
 }
 
 func Edit_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("Edit_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetText(obj uintptr) string {
@@ -614,7 +614,7 @@ func Edit_GetText(obj uintptr) string {
 }
 
 func Edit_SetText(obj uintptr, value string) {
-	getLazyProc("Edit_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Edit_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func Edit_GetTextHint(obj uintptr) string {
@@ -623,7 +623,7 @@ func Edit_GetTextHint(obj uintptr) string {
 }
 
 func Edit_SetTextHint(obj uintptr, value string) {
-	getLazyProc("Edit_SetTextHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Edit_SetTextHint").Call(obj, GoStrToDStr(value))
 }
 
 func Edit_GetVisible(obj uintptr) bool {
@@ -632,75 +632,75 @@ func Edit_GetVisible(obj uintptr) bool {
 }
 
 func Edit_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Edit_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func Edit_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func Edit_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("Edit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func Edit_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Edit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func Edit_GetCanUndo(obj uintptr) bool {
@@ -714,7 +714,7 @@ func Edit_GetModified(obj uintptr) bool {
 }
 
 func Edit_SetModified(obj uintptr, value bool) {
-	getLazyProc("Edit_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetSelLength(obj uintptr) int32 {
@@ -723,7 +723,7 @@ func Edit_GetSelLength(obj uintptr) int32 {
 }
 
 func Edit_SetSelLength(obj uintptr, value int32) {
-	getLazyProc("Edit_SetSelLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetSelLength").Call(obj, uintptr(value))
 }
 
 func Edit_GetSelStart(obj uintptr) int32 {
@@ -732,7 +732,7 @@ func Edit_GetSelStart(obj uintptr) int32 {
 }
 
 func Edit_SetSelStart(obj uintptr, value int32) {
-	getLazyProc("Edit_SetSelStart").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetSelStart").Call(obj, uintptr(value))
 }
 
 func Edit_GetSelText(obj uintptr) string {
@@ -741,7 +741,7 @@ func Edit_GetSelText(obj uintptr) string {
 }
 
 func Edit_SetSelText(obj uintptr, value string) {
-	getLazyProc("Edit_SetSelText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Edit_SetSelText").Call(obj, GoStrToDStr(value))
 }
 
 func Edit_GetDockClientCount(obj uintptr) int32 {
@@ -755,7 +755,7 @@ func Edit_GetDockSite(obj uintptr) bool {
 }
 
 func Edit_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("Edit_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetMouseInClient(obj uintptr) bool {
@@ -780,16 +780,16 @@ func Edit_GetControlCount(obj uintptr) int32 {
 
 func Edit_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("Edit_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func Edit_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("Edit_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func Edit_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("Edit_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetParentWindow").Call(obj, value)
 }
 
 func Edit_GetShowing(obj uintptr) bool {
@@ -803,7 +803,7 @@ func Edit_GetUseDockManager(obj uintptr) bool {
 }
 
 func Edit_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("Edit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Edit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetAction(obj uintptr) uintptr {
@@ -812,17 +812,17 @@ func Edit_GetAction(obj uintptr) uintptr {
 }
 
 func Edit_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetAction").Call(obj, value)
 }
 
 func Edit_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Edit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Edit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Edit_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("Edit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Edit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Edit_GetClientHeight(obj uintptr) int32 {
@@ -831,18 +831,18 @@ func Edit_GetClientHeight(obj uintptr) int32 {
 }
 
 func Edit_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("Edit_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func Edit_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Edit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Edit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Edit_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Edit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Edit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -852,7 +852,7 @@ func Edit_GetClientWidth(obj uintptr) int32 {
 }
 
 func Edit_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("Edit_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func Edit_GetControlState(obj uintptr) TControlState {
@@ -861,7 +861,7 @@ func Edit_GetControlState(obj uintptr) TControlState {
 }
 
 func Edit_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("Edit_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetControlState").Call(obj, uintptr(value))
 }
 
 func Edit_GetControlStyle(obj uintptr) TControlStyle {
@@ -870,7 +870,7 @@ func Edit_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func Edit_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("Edit_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func Edit_GetFloating(obj uintptr) bool {
@@ -884,7 +884,7 @@ func Edit_GetParent(obj uintptr) uintptr {
 }
 
 func Edit_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetParent").Call(obj, value)
 }
 
 func Edit_GetLeft(obj uintptr) int32 {
@@ -893,7 +893,7 @@ func Edit_GetLeft(obj uintptr) int32 {
 }
 
 func Edit_SetLeft(obj uintptr, value int32) {
-	getLazyProc("Edit_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetLeft").Call(obj, uintptr(value))
 }
 
 func Edit_GetTop(obj uintptr) int32 {
@@ -902,7 +902,7 @@ func Edit_GetTop(obj uintptr) int32 {
 }
 
 func Edit_SetTop(obj uintptr, value int32) {
-	getLazyProc("Edit_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetTop").Call(obj, uintptr(value))
 }
 
 func Edit_GetWidth(obj uintptr) int32 {
@@ -911,7 +911,7 @@ func Edit_GetWidth(obj uintptr) int32 {
 }
 
 func Edit_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Edit_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetWidth").Call(obj, uintptr(value))
 }
 
 func Edit_GetHeight(obj uintptr) int32 {
@@ -920,7 +920,7 @@ func Edit_GetHeight(obj uintptr) int32 {
 }
 
 func Edit_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Edit_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetHeight").Call(obj, uintptr(value))
 }
 
 func Edit_GetCursor(obj uintptr) TCursor {
@@ -929,7 +929,7 @@ func Edit_GetCursor(obj uintptr) TCursor {
 }
 
 func Edit_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Edit_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetCursor").Call(obj, uintptr(value))
 }
 
 func Edit_GetHint(obj uintptr) string {
@@ -938,7 +938,7 @@ func Edit_GetHint(obj uintptr) string {
 }
 
 func Edit_SetHint(obj uintptr, value string) {
-	getLazyProc("Edit_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Edit_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Edit_GetComponentCount(obj uintptr) int32 {
@@ -952,7 +952,7 @@ func Edit_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Edit_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Edit_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Edit_GetOwner(obj uintptr) uintptr {
@@ -966,7 +966,7 @@ func Edit_GetName(obj uintptr) string {
 }
 
 func Edit_SetName(obj uintptr, value string) {
-	getLazyProc("Edit_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Edit_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Edit_GetTag(obj uintptr) int {
@@ -975,7 +975,7 @@ func Edit_GetTag(obj uintptr) int {
 }
 
 func Edit_SetTag(obj uintptr, value int) {
-	getLazyProc("Edit_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Edit_SetTag").Call(obj, uintptr(value))
 }
 
 func Edit_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -984,7 +984,7 @@ func Edit_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func Edit_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetAnchorSideLeft").Call(obj, value)
 }
 
 func Edit_GetAnchorSideTop(obj uintptr) uintptr {
@@ -993,7 +993,7 @@ func Edit_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func Edit_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetAnchorSideTop").Call(obj, value)
 }
 
 func Edit_GetAnchorSideRight(obj uintptr) uintptr {
@@ -1002,7 +1002,7 @@ func Edit_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func Edit_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetAnchorSideRight").Call(obj, value)
 }
 
 func Edit_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -1011,7 +1011,7 @@ func Edit_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func Edit_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetAnchorSideBottom").Call(obj, value)
 }
 
 func Edit_GetChildSizing(obj uintptr) uintptr {
@@ -1020,7 +1020,7 @@ func Edit_GetChildSizing(obj uintptr) uintptr {
 }
 
 func Edit_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetChildSizing").Call(obj, value)
 }
 
 func Edit_GetBorderSpacing(obj uintptr) uintptr {
@@ -1029,7 +1029,7 @@ func Edit_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func Edit_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("Edit_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("Edit_SetBorderSpacing").Call(obj, value)
 }
 
 func Edit_GetDockClients(obj uintptr, Index int32) uintptr {

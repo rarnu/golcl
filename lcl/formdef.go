@@ -11,7 +11,7 @@ package lcl
 import . "github.com/rarnu/golcl/lcl/api"
 
 // 从资源中创建Form，不使用Application.CreateForm
-func CreateResForm(owner IComponent, fields ...interface{}) {
+func CreateResForm(owner IComponent, fields ...any) {
 	resObjectBuild(1, owner, 0, fields...)
 }
 

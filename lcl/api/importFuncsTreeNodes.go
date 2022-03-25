@@ -12,7 +12,7 @@ func TreeNodes_Create(obj uintptr) uintptr {
 }
 
 func TreeNodes_Free(obj uintptr) {
-	getLazyProc("TreeNodes_Free").Call(obj)
+	_, _, _ = getLazyProc("TreeNodes_Free").Call(obj)
 }
 
 func TreeNodes_AddChildFirst(obj uintptr, Parent uintptr, S string) uintptr {
@@ -61,23 +61,23 @@ func TreeNodes_Add(obj uintptr, Sibling uintptr, S string) uintptr {
 }
 
 func TreeNodes_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TreeNodes_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TreeNodes_Assign").Call(obj, Source)
 }
 
 func TreeNodes_BeginUpdate(obj uintptr) {
-	getLazyProc("TreeNodes_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("TreeNodes_BeginUpdate").Call(obj)
 }
 
 func TreeNodes_Clear(obj uintptr) {
-	getLazyProc("TreeNodes_Clear").Call(obj)
+	_, _, _ = getLazyProc("TreeNodes_Clear").Call(obj)
 }
 
 func TreeNodes_Delete(obj uintptr, Node uintptr) {
-	getLazyProc("TreeNodes_Delete").Call(obj, Node)
+	_, _, _ = getLazyProc("TreeNodes_Delete").Call(obj, Node)
 }
 
 func TreeNodes_EndUpdate(obj uintptr) {
-	getLazyProc("TreeNodes_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("TreeNodes_EndUpdate").Call(obj)
 }
 
 func TreeNodes_GetFirstNode(obj uintptr) uintptr {

@@ -12,7 +12,7 @@ func ListColumns_Create(obj uintptr) uintptr {
 }
 
 func ListColumns_Free(obj uintptr) {
-	getLazyProc("ListColumns_Free").Call(obj)
+	_, _, _ = getLazyProc("ListColumns_Free").Call(obj)
 }
 
 func ListColumns_Add(obj uintptr) uintptr {
@@ -26,23 +26,23 @@ func ListColumns_Owner(obj uintptr) uintptr {
 }
 
 func ListColumns_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ListColumns_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ListColumns_Assign").Call(obj, Source)
 }
 
 func ListColumns_BeginUpdate(obj uintptr) {
-	getLazyProc("ListColumns_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("ListColumns_BeginUpdate").Call(obj)
 }
 
 func ListColumns_Clear(obj uintptr) {
-	getLazyProc("ListColumns_Clear").Call(obj)
+	_, _, _ = getLazyProc("ListColumns_Clear").Call(obj)
 }
 
 func ListColumns_Delete(obj uintptr, Index int32) {
-	getLazyProc("ListColumns_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("ListColumns_Delete").Call(obj, uintptr(Index))
 }
 
 func ListColumns_EndUpdate(obj uintptr) {
-	getLazyProc("ListColumns_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("ListColumns_EndUpdate").Call(obj)
 }
 
 func ListColumns_FindItemID(obj uintptr, ID int32) uintptr {
@@ -106,7 +106,7 @@ func ListColumns_GetItems(obj uintptr, Index int32) uintptr {
 }
 
 func ListColumns_SetItems(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("ListColumns_SetItems").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("ListColumns_SetItems").Call(obj, uintptr(Index), value)
 }
 
 func ListColumns_StaticClassType() TClass {

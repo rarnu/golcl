@@ -12,7 +12,7 @@ type TSynUNIXShellScriptSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynUNIXShellScriptSyn(obj interface{}) *TSynUNIXShellScriptSyn {
+func AsSynUNIXShellScriptSyn(obj any) *TSynUNIXShellScriptSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

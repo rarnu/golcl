@@ -12,7 +12,7 @@ type TSynHtmlSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynHtmlSyn(obj interface{}) *TSynHtmlSyn {
+func AsSynHtmlSyn(obj any) *TSynHtmlSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

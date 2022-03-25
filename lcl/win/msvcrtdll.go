@@ -56,7 +56,7 @@ func Free(pBlock uintptr) {
 	_free.Call(pBlock)
 }
 
-// System 系统命令，现在貌似不管用，以前CGO还管用的呢？Delphi也正常啊，好吧，不知道了。
+// System 系统命令
 func System(aCommand string) int {
 	if aCommand == "" {
 		return -1

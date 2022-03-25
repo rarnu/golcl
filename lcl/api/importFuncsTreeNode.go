@@ -13,7 +13,7 @@ func TreeNode_Create(obj uintptr) uintptr {
 }
 
 func TreeNode_Free(obj uintptr) {
-	getLazyProc("TreeNode_Free").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_Free").Call(obj)
 }
 
 func TreeNode_Bottom(obj uintptr) int32 {
@@ -38,7 +38,7 @@ func TreeNode_DisplayExpandSignLeft(obj uintptr) int32 {
 
 func TreeNode_DisplayExpandSignRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("TreeNode_DisplayExpandSignRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeNode_DisplayExpandSignRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -54,7 +54,7 @@ func TreeNode_DisplayIconLeft(obj uintptr) int32 {
 
 func TreeNode_DisplayRect(obj uintptr, TextOnly bool) TRect {
 	var ret TRect
-	getLazyProc("TreeNode_DisplayRect").Call(obj, GoBoolToDBool(TextOnly), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TreeNode_DisplayRect").Call(obj, GoBoolToDBool(TextOnly), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -214,59 +214,59 @@ func TreeNode_IndexOfText(obj uintptr, NodeText string) int32 {
 }
 
 func TreeNode_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TreeNode_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TreeNode_Assign").Call(obj, Source)
 }
 
 func TreeNode_Collapse(obj uintptr, Recurse bool) {
-	getLazyProc("TreeNode_Collapse").Call(obj, GoBoolToDBool(Recurse))
+	_, _, _ = getLazyProc("TreeNode_Collapse").Call(obj, GoBoolToDBool(Recurse))
 }
 
 func TreeNode_ConsistencyCheck(obj uintptr) {
-	getLazyProc("TreeNode_ConsistencyCheck").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_ConsistencyCheck").Call(obj)
 }
 
 func TreeNode_Delete(obj uintptr) {
-	getLazyProc("TreeNode_Delete").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_Delete").Call(obj)
 }
 
 func TreeNode_DeleteChildren(obj uintptr) {
-	getLazyProc("TreeNode_DeleteChildren").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_DeleteChildren").Call(obj)
 }
 
 func TreeNode_EndEdit(obj uintptr, Cancel bool) {
-	getLazyProc("TreeNode_EndEdit").Call(obj, GoBoolToDBool(Cancel))
+	_, _, _ = getLazyProc("TreeNode_EndEdit").Call(obj, GoBoolToDBool(Cancel))
 }
 
 func TreeNode_Expand(obj uintptr, Recurse bool) {
-	getLazyProc("TreeNode_Expand").Call(obj, GoBoolToDBool(Recurse))
+	_, _, _ = getLazyProc("TreeNode_Expand").Call(obj, GoBoolToDBool(Recurse))
 }
 
 func TreeNode_ExpandParents(obj uintptr) {
-	getLazyProc("TreeNode_ExpandParents").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_ExpandParents").Call(obj)
 }
 
 func TreeNode_FreeAllNodeData(obj uintptr) {
-	getLazyProc("TreeNode_FreeAllNodeData").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_FreeAllNodeData").Call(obj)
 }
 
 func TreeNode_MakeVisible(obj uintptr) {
-	getLazyProc("TreeNode_MakeVisible").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_MakeVisible").Call(obj)
 }
 
 func TreeNode_MoveTo(obj uintptr, Destination uintptr, Mode TNodeAttachMode) {
-	getLazyProc("TreeNode_MoveTo").Call(obj, Destination, uintptr(Mode))
+	_, _, _ = getLazyProc("TreeNode_MoveTo").Call(obj, Destination, uintptr(Mode))
 }
 
 func TreeNode_MultiSelectGroup(obj uintptr) {
-	getLazyProc("TreeNode_MultiSelectGroup").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_MultiSelectGroup").Call(obj)
 }
 
 func TreeNode_Update(obj uintptr) {
-	getLazyProc("TreeNode_Update").Call(obj)
+	_, _, _ = getLazyProc("TreeNode_Update").Call(obj)
 }
 
 func TreeNode_WriteDebugReport(obj uintptr, Prefix string, Recurse bool) {
-	getLazyProc("TreeNode_WriteDebugReport").Call(obj, GoStrToDStr(Prefix), GoBoolToDBool(Recurse))
+	_, _, _ = getLazyProc("TreeNode_WriteDebugReport").Call(obj, GoStrToDStr(Prefix), GoBoolToDBool(Recurse))
 }
 
 func TreeNode_CustomSort(obj uintptr, SortProc PFNTVCOMPARE, Data int, ARecurse bool) bool {
@@ -330,7 +330,7 @@ func TreeNode_GetCut(obj uintptr) bool {
 }
 
 func TreeNode_SetCut(obj uintptr, value bool) {
-	getLazyProc("TreeNode_SetCut").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeNode_SetCut").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeNode_GetData(obj uintptr) unsafe.Pointer {
@@ -339,7 +339,7 @@ func TreeNode_GetData(obj uintptr) unsafe.Pointer {
 }
 
 func TreeNode_SetData(obj uintptr, value unsafe.Pointer) {
-	getLazyProc("TreeNode_SetData").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeNode_SetData").Call(obj, uintptr(value))
 }
 
 func TreeNode_GetDeleting(obj uintptr) bool {
@@ -353,7 +353,7 @@ func TreeNode_GetDropTarget(obj uintptr) bool {
 }
 
 func TreeNode_SetDropTarget(obj uintptr, value bool) {
-	getLazyProc("TreeNode_SetDropTarget").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeNode_SetDropTarget").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeNode_GetExpanded(obj uintptr) bool {
@@ -362,7 +362,7 @@ func TreeNode_GetExpanded(obj uintptr) bool {
 }
 
 func TreeNode_SetExpanded(obj uintptr, value bool) {
-	getLazyProc("TreeNode_SetExpanded").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeNode_SetExpanded").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeNode_GetFocused(obj uintptr) bool {
@@ -371,7 +371,7 @@ func TreeNode_GetFocused(obj uintptr) bool {
 }
 
 func TreeNode_SetFocused(obj uintptr, value bool) {
-	getLazyProc("TreeNode_SetFocused").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeNode_SetFocused").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeNode_GetHandle(obj uintptr) uintptr {
@@ -385,7 +385,7 @@ func TreeNode_GetHasChildren(obj uintptr) bool {
 }
 
 func TreeNode_SetHasChildren(obj uintptr, value bool) {
-	getLazyProc("TreeNode_SetHasChildren").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeNode_SetHasChildren").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeNode_GetHeight(obj uintptr) int32 {
@@ -394,7 +394,7 @@ func TreeNode_GetHeight(obj uintptr) int32 {
 }
 
 func TreeNode_SetHeight(obj uintptr, value int32) {
-	getLazyProc("TreeNode_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeNode_SetHeight").Call(obj, uintptr(value))
 }
 
 func TreeNode_GetImageIndex(obj uintptr) int32 {
@@ -403,7 +403,7 @@ func TreeNode_GetImageIndex(obj uintptr) int32 {
 }
 
 func TreeNode_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("TreeNode_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeNode_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func TreeNode_GetIndex(obj uintptr) int32 {
@@ -412,7 +412,7 @@ func TreeNode_GetIndex(obj uintptr) int32 {
 }
 
 func TreeNode_SetIndex(obj uintptr, value int32) {
-	getLazyProc("TreeNode_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeNode_SetIndex").Call(obj, uintptr(value))
 }
 
 func TreeNode_GetIsFullHeightVisible(obj uintptr) bool {
@@ -436,7 +436,7 @@ func TreeNode_GetMultiSelected(obj uintptr) bool {
 }
 
 func TreeNode_SetMultiSelected(obj uintptr, value bool) {
-	getLazyProc("TreeNode_SetMultiSelected").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeNode_SetMultiSelected").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeNode_GetOverlayIndex(obj uintptr) int32 {
@@ -445,7 +445,7 @@ func TreeNode_GetOverlayIndex(obj uintptr) int32 {
 }
 
 func TreeNode_SetOverlayIndex(obj uintptr, value int32) {
-	getLazyProc("TreeNode_SetOverlayIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeNode_SetOverlayIndex").Call(obj, uintptr(value))
 }
 
 func TreeNode_GetOwner(obj uintptr) uintptr {
@@ -464,7 +464,7 @@ func TreeNode_GetSelected(obj uintptr) bool {
 }
 
 func TreeNode_SetSelected(obj uintptr, value bool) {
-	getLazyProc("TreeNode_SetSelected").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeNode_SetSelected").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeNode_GetSelectedIndex(obj uintptr) int32 {
@@ -473,7 +473,7 @@ func TreeNode_GetSelectedIndex(obj uintptr) int32 {
 }
 
 func TreeNode_SetSelectedIndex(obj uintptr, value int32) {
-	getLazyProc("TreeNode_SetSelectedIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeNode_SetSelectedIndex").Call(obj, uintptr(value))
 }
 
 func TreeNode_GetStateIndex(obj uintptr) int32 {
@@ -482,7 +482,7 @@ func TreeNode_GetStateIndex(obj uintptr) int32 {
 }
 
 func TreeNode_SetStateIndex(obj uintptr, value int32) {
-	getLazyProc("TreeNode_SetStateIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TreeNode_SetStateIndex").Call(obj, uintptr(value))
 }
 
 func TreeNode_GetSubTreeCount(obj uintptr) int32 {
@@ -496,7 +496,7 @@ func TreeNode_GetText(obj uintptr) string {
 }
 
 func TreeNode_SetText(obj uintptr, value string) {
-	getLazyProc("TreeNode_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TreeNode_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func TreeNode_GetTop(obj uintptr) int32 {
@@ -520,7 +520,7 @@ func TreeNode_GetVisible(obj uintptr) bool {
 }
 
 func TreeNode_SetVisible(obj uintptr, value bool) {
-	getLazyProc("TreeNode_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TreeNode_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func TreeNode_GetItems(obj uintptr, ItemIndex int32) uintptr {
@@ -529,7 +529,7 @@ func TreeNode_GetItems(obj uintptr, ItemIndex int32) uintptr {
 }
 
 func TreeNode_SetItems(obj uintptr, ItemIndex int32, value uintptr) {
-	getLazyProc("TreeNode_SetItems").Call(obj, uintptr(ItemIndex), value)
+	_, _, _ = getLazyProc("TreeNode_SetItems").Call(obj, uintptr(ItemIndex), value)
 }
 
 func TreeNode_GetItem(obj uintptr, Index int32) uintptr {
@@ -538,7 +538,7 @@ func TreeNode_GetItem(obj uintptr, Index int32) uintptr {
 }
 
 func TreeNode_SetItem(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("TreeNode_SetItem").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("TreeNode_SetItem").Call(obj, uintptr(Index), value)
 }
 
 func TreeNode_StaticClassType() TClass {

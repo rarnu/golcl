@@ -13,30 +13,30 @@ func ValueListEditor_Create(obj uintptr) uintptr {
 }
 
 func ValueListEditor_Free(obj uintptr) {
-	getLazyProc("ValueListEditor_Free").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_Free").Call(obj)
 }
 
 func ValueListEditor_DeleteRow(obj uintptr, ARow int32) {
-	getLazyProc("ValueListEditor_DeleteRow").Call(obj, uintptr(ARow))
+	_, _, _ = getLazyProc("ValueListEditor_DeleteRow").Call(obj, uintptr(ARow))
 }
 
 func ValueListEditor_Refresh(obj uintptr) {
-	getLazyProc("ValueListEditor_Refresh").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_Refresh").Call(obj)
 }
 
 func ValueListEditor_CellRect(obj uintptr, ACol int32, ARow int32) TRect {
 	var ret TRect
-	getLazyProc("ValueListEditor_CellRect").Call(obj, uintptr(ACol), uintptr(ARow), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_CellRect").Call(obj, uintptr(ACol), uintptr(ARow), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ValueListEditor_MouseToCell(obj uintptr, X int32, Y int32, ACol *int32, ARow *int32) {
-	getLazyProc("ValueListEditor_MouseToCell").Call(obj, uintptr(X), uintptr(Y), uintptr(unsafe.Pointer(ACol)), uintptr(unsafe.Pointer(ARow)))
+	_, _, _ = getLazyProc("ValueListEditor_MouseToCell").Call(obj, uintptr(X), uintptr(Y), uintptr(unsafe.Pointer(ACol)), uintptr(unsafe.Pointer(ARow)))
 }
 
 func ValueListEditor_MouseCoord(obj uintptr, X int32, Y int32) TGridCoord {
 	var ret TGridCoord
-	getLazyProc("ValueListEditor_MouseCoord").Call(obj, uintptr(X), uintptr(Y), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_MouseCoord").Call(obj, uintptr(X), uintptr(Y), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -56,11 +56,11 @@ func ValueListEditor_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, A
 }
 
 func ValueListEditor_DisableAlign(obj uintptr) {
-	getLazyProc("ValueListEditor_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_DisableAlign").Call(obj)
 }
 
 func ValueListEditor_EnableAlign(obj uintptr) {
-	getLazyProc("ValueListEditor_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_EnableAlign").Call(obj)
 }
 
 func ValueListEditor_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -69,7 +69,7 @@ func ValueListEditor_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func ValueListEditor_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("ValueListEditor_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("ValueListEditor_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func ValueListEditor_Focused(obj uintptr) bool {
@@ -83,62 +83,62 @@ func ValueListEditor_HandleAllocated(obj uintptr) bool {
 }
 
 func ValueListEditor_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ValueListEditor_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ValueListEditor_InsertControl").Call(obj, AControl)
 }
 
 func ValueListEditor_Invalidate(obj uintptr) {
-	getLazyProc("ValueListEditor_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_Invalidate").Call(obj)
 }
 
 func ValueListEditor_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("ValueListEditor_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("ValueListEditor_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func ValueListEditor_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ValueListEditor_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ValueListEditor_RemoveControl").Call(obj, AControl)
 }
 
 func ValueListEditor_Realign(obj uintptr) {
-	getLazyProc("ValueListEditor_Realign").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_Realign").Call(obj)
 }
 
 func ValueListEditor_Repaint(obj uintptr) {
-	getLazyProc("ValueListEditor_Repaint").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_Repaint").Call(obj)
 }
 
 func ValueListEditor_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("ValueListEditor_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("ValueListEditor_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func ValueListEditor_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("ValueListEditor_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("ValueListEditor_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func ValueListEditor_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("ValueListEditor_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("ValueListEditor_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func ValueListEditor_SetFocus(obj uintptr) {
-	getLazyProc("ValueListEditor_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_SetFocus").Call(obj)
 }
 
 func ValueListEditor_Update(obj uintptr) {
-	getLazyProc("ValueListEditor_Update").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_Update").Call(obj)
 }
 
 func ValueListEditor_BringToFront(obj uintptr) {
-	getLazyProc("ValueListEditor_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_BringToFront").Call(obj)
 }
 
 func ValueListEditor_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ValueListEditor_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ValueListEditor_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ValueListEditor_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -153,7 +153,7 @@ func ValueListEditor_HasParent(obj uintptr) bool {
 }
 
 func ValueListEditor_Hide(obj uintptr) {
-	getLazyProc("ValueListEditor_Hide").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_Hide").Call(obj)
 }
 
 func ValueListEditor_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -163,22 +163,22 @@ func ValueListEditor_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int
 
 func ValueListEditor_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ValueListEditor_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ValueListEditor_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ValueListEditor_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ValueListEditor_SendToBack(obj uintptr) {
-	getLazyProc("ValueListEditor_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_SendToBack").Call(obj)
 }
 
 func ValueListEditor_Show(obj uintptr) {
-	getLazyProc("ValueListEditor_Show").Call(obj)
+	_, _, _ = getLazyProc("ValueListEditor_Show").Call(obj)
 }
 
 func ValueListEditor_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -197,7 +197,7 @@ func ValueListEditor_GetTextLen(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("ValueListEditor_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("ValueListEditor_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func ValueListEditor_FindComponent(obj uintptr, AName string) uintptr {
@@ -211,7 +211,7 @@ func ValueListEditor_GetNamePath(obj uintptr) string {
 }
 
 func ValueListEditor_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ValueListEditor_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ValueListEditor_Assign").Call(obj, Source)
 }
 
 func ValueListEditor_ClassType(obj uintptr) TClass {
@@ -250,31 +250,31 @@ func ValueListEditor_ToString(obj uintptr) string {
 }
 
 func ValueListEditor_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ValueListEditor_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ValueListEditor_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ValueListEditor_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ValueListEditor_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ValueListEditor_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ValueListEditor_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ValueListEditor_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ValueListEditor_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func ValueListEditor_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ValueListEditor_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ValueListEditor_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func ValueListEditor_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("ValueListEditor_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("ValueListEditor_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func ValueListEditor_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("ValueListEditor_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("ValueListEditor_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func ValueListEditor_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("ValueListEditor_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("ValueListEditor_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func ValueListEditor_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -328,15 +328,15 @@ func ValueListEditor_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func ValueListEditor_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("ValueListEditor_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("ValueListEditor_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func ValueListEditor_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("ValueListEditor_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("ValueListEditor_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func ValueListEditor_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("ValueListEditor_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("ValueListEditor_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func ValueListEditor_GetColCount(obj uintptr) int32 {
@@ -345,7 +345,7 @@ func ValueListEditor_GetColCount(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetColCount(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetColCount").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetColCount").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetRowCount(obj uintptr) int32 {
@@ -369,7 +369,7 @@ func ValueListEditor_GetAlign(obj uintptr) TAlign {
 }
 
 func ValueListEditor_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("ValueListEditor_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetAlign").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetAnchors(obj uintptr) TAnchors {
@@ -378,7 +378,7 @@ func ValueListEditor_GetAnchors(obj uintptr) TAnchors {
 }
 
 func ValueListEditor_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("ValueListEditor_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetAnchors").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -387,7 +387,7 @@ func ValueListEditor_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func ValueListEditor_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("ValueListEditor_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -396,7 +396,7 @@ func ValueListEditor_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func ValueListEditor_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("ValueListEditor_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetColor(obj uintptr) TColor {
@@ -405,7 +405,7 @@ func ValueListEditor_GetColor(obj uintptr) TColor {
 }
 
 func ValueListEditor_SetColor(obj uintptr, value TColor) {
-	getLazyProc("ValueListEditor_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetColor").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetConstraints(obj uintptr) uintptr {
@@ -414,7 +414,7 @@ func ValueListEditor_GetConstraints(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetConstraints").Call(obj, value)
 }
 
 func ValueListEditor_GetDefaultColWidth(obj uintptr) int32 {
@@ -423,7 +423,7 @@ func ValueListEditor_GetDefaultColWidth(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetDefaultColWidth(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetDefaultColWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDefaultColWidth").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetDefaultDrawing(obj uintptr) bool {
@@ -432,7 +432,7 @@ func ValueListEditor_GetDefaultDrawing(obj uintptr) bool {
 }
 
 func ValueListEditor_SetDefaultDrawing(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetDefaultDrawing").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDefaultDrawing").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetDefaultRowHeight(obj uintptr) int32 {
@@ -441,7 +441,7 @@ func ValueListEditor_GetDefaultRowHeight(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetDefaultRowHeight(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetDefaultRowHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDefaultRowHeight").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetDoubleBuffered(obj uintptr) bool {
@@ -450,7 +450,7 @@ func ValueListEditor_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func ValueListEditor_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetDragCursor(obj uintptr) TCursor {
@@ -459,7 +459,7 @@ func ValueListEditor_GetDragCursor(obj uintptr) TCursor {
 }
 
 func ValueListEditor_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("ValueListEditor_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetDragKind(obj uintptr) TDragKind {
@@ -468,7 +468,7 @@ func ValueListEditor_GetDragKind(obj uintptr) TDragKind {
 }
 
 func ValueListEditor_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("ValueListEditor_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDragKind").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetDragMode(obj uintptr) TDragMode {
@@ -477,7 +477,7 @@ func ValueListEditor_GetDragMode(obj uintptr) TDragMode {
 }
 
 func ValueListEditor_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("ValueListEditor_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDragMode").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetDropDownRows(obj uintptr) int32 {
@@ -486,7 +486,7 @@ func ValueListEditor_GetDropDownRows(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetDropDownRows(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetDropDownRows").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDropDownRows").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetEnabled(obj uintptr) bool {
@@ -495,7 +495,7 @@ func ValueListEditor_GetEnabled(obj uintptr) bool {
 }
 
 func ValueListEditor_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetFixedColor(obj uintptr) TColor {
@@ -504,7 +504,7 @@ func ValueListEditor_GetFixedColor(obj uintptr) TColor {
 }
 
 func ValueListEditor_SetFixedColor(obj uintptr, value TColor) {
-	getLazyProc("ValueListEditor_SetFixedColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetFixedColor").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetFixedCols(obj uintptr) int32 {
@@ -513,7 +513,7 @@ func ValueListEditor_GetFixedCols(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetFixedCols(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetFixedCols").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetFixedCols").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetFont(obj uintptr) uintptr {
@@ -522,7 +522,7 @@ func ValueListEditor_GetFont(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetFont").Call(obj, value)
 }
 
 func ValueListEditor_GetGridLineWidth(obj uintptr) int32 {
@@ -531,7 +531,7 @@ func ValueListEditor_GetGridLineWidth(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetGridLineWidth(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetGridLineWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetGridLineWidth").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetOptions(obj uintptr) TGridOptions {
@@ -540,7 +540,7 @@ func ValueListEditor_GetOptions(obj uintptr) TGridOptions {
 }
 
 func ValueListEditor_SetOptions(obj uintptr, value TGridOptions) {
-	getLazyProc("ValueListEditor_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetOptions").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetParentColor(obj uintptr) bool {
@@ -549,7 +549,7 @@ func ValueListEditor_GetParentColor(obj uintptr) bool {
 }
 
 func ValueListEditor_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetParentDoubleBuffered(obj uintptr) bool {
@@ -558,7 +558,7 @@ func ValueListEditor_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func ValueListEditor_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetParentFont(obj uintptr) bool {
@@ -567,7 +567,7 @@ func ValueListEditor_GetParentFont(obj uintptr) bool {
 }
 
 func ValueListEditor_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetParentShowHint(obj uintptr) bool {
@@ -576,7 +576,7 @@ func ValueListEditor_GetParentShowHint(obj uintptr) bool {
 }
 
 func ValueListEditor_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetPopupMenu(obj uintptr) uintptr {
@@ -585,7 +585,7 @@ func ValueListEditor_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetPopupMenu").Call(obj, value)
 }
 
 func ValueListEditor_GetScrollBars(obj uintptr) TScrollStyle {
@@ -594,7 +594,7 @@ func ValueListEditor_GetScrollBars(obj uintptr) TScrollStyle {
 }
 
 func ValueListEditor_SetScrollBars(obj uintptr, value TScrollStyle) {
-	getLazyProc("ValueListEditor_SetScrollBars").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetScrollBars").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetShowHint(obj uintptr) bool {
@@ -603,7 +603,7 @@ func ValueListEditor_GetShowHint(obj uintptr) bool {
 }
 
 func ValueListEditor_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetStrings(obj uintptr) uintptr {
@@ -612,7 +612,7 @@ func ValueListEditor_GetStrings(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetStrings(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetStrings").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetStrings").Call(obj, value)
 }
 
 func ValueListEditor_GetTabOrder(obj uintptr) TTabOrder {
@@ -621,7 +621,7 @@ func ValueListEditor_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func ValueListEditor_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("ValueListEditor_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetVisible(obj uintptr) bool {
@@ -630,111 +630,111 @@ func ValueListEditor_GetVisible(obj uintptr) bool {
 }
 
 func ValueListEditor_SetVisible(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func ValueListEditor_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnDrawCell(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnDrawCell").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnDrawCell(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnDrawCell").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnGetEditMask(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnGetEditMask").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnGetEditMask(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnGetEditMask").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnGetEditText(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnGetEditText").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnGetEditText(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnGetEditText").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnMouseWheelDown(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnMouseWheelDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnMouseWheelUp(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnMouseWheelUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnSelectCell(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnSelectCell").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnSelectCell(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnSelectCell").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnSetEditText(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnSetEditText").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnSetEditText(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnSetEditText").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func ValueListEditor_SetOnTopLeftChanged(obj uintptr, fn interface{}) {
-	getLazyProc("ValueListEditor_SetOnTopLeftChanged").Call(obj, addEventToMap(obj, fn))
+func ValueListEditor_SetOnTopLeftChanged(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ValueListEditor_SetOnTopLeftChanged").Call(obj, addEventToMap(obj, fn))
 }
 
 func ValueListEditor_GetCanvas(obj uintptr) uintptr {
@@ -748,7 +748,7 @@ func ValueListEditor_GetCol(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetCol(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetCol").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetCol").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetEditorMode(obj uintptr) bool {
@@ -757,7 +757,7 @@ func ValueListEditor_GetEditorMode(obj uintptr) bool {
 }
 
 func ValueListEditor_SetEditorMode(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetEditorMode").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetEditorMode").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetGridHeight(obj uintptr) int32 {
@@ -776,17 +776,17 @@ func ValueListEditor_GetLeftCol(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetLeftCol(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetLeftCol").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetLeftCol").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetSelection(obj uintptr) TGridRect {
 	var ret TGridRect
-	getLazyProc("ValueListEditor_GetSelection").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_GetSelection").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ValueListEditor_SetSelection(obj uintptr, value TGridRect) {
-	getLazyProc("ValueListEditor_SetSelection").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ValueListEditor_SetSelection").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ValueListEditor_GetRow(obj uintptr) int32 {
@@ -795,7 +795,7 @@ func ValueListEditor_GetRow(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetRow(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetRow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetRow").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetTopRow(obj uintptr) int32 {
@@ -804,7 +804,7 @@ func ValueListEditor_GetTopRow(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetTopRow(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetTopRow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetTopRow").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetTabStop(obj uintptr) bool {
@@ -813,7 +813,7 @@ func ValueListEditor_GetTabStop(obj uintptr) bool {
 }
 
 func ValueListEditor_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetDockClientCount(obj uintptr) int32 {
@@ -827,7 +827,7 @@ func ValueListEditor_GetDockSite(obj uintptr) bool {
 }
 
 func ValueListEditor_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetMouseInClient(obj uintptr) bool {
@@ -852,16 +852,16 @@ func ValueListEditor_GetControlCount(obj uintptr) int32 {
 
 func ValueListEditor_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ValueListEditor_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ValueListEditor_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ValueListEditor_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ValueListEditor_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("ValueListEditor_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetParentWindow").Call(obj, value)
 }
 
 func ValueListEditor_GetShowing(obj uintptr) bool {
@@ -875,7 +875,7 @@ func ValueListEditor_GetUseDockManager(obj uintptr) bool {
 }
 
 func ValueListEditor_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("ValueListEditor_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func ValueListEditor_GetAction(obj uintptr) uintptr {
@@ -884,17 +884,17 @@ func ValueListEditor_GetAction(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetAction").Call(obj, value)
 }
 
 func ValueListEditor_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ValueListEditor_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ValueListEditor_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("ValueListEditor_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ValueListEditor_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ValueListEditor_GetClientHeight(obj uintptr) int32 {
@@ -903,18 +903,18 @@ func ValueListEditor_GetClientHeight(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ValueListEditor_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ValueListEditor_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ValueListEditor_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ValueListEditor_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -924,7 +924,7 @@ func ValueListEditor_GetClientWidth(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetControlState(obj uintptr) TControlState {
@@ -933,7 +933,7 @@ func ValueListEditor_GetControlState(obj uintptr) TControlState {
 }
 
 func ValueListEditor_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("ValueListEditor_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetControlState").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetControlStyle(obj uintptr) TControlStyle {
@@ -942,7 +942,7 @@ func ValueListEditor_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func ValueListEditor_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("ValueListEditor_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetFloating(obj uintptr) bool {
@@ -956,7 +956,7 @@ func ValueListEditor_GetParent(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetParent").Call(obj, value)
 }
 
 func ValueListEditor_GetLeft(obj uintptr) int32 {
@@ -965,7 +965,7 @@ func ValueListEditor_GetLeft(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetLeft").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetTop(obj uintptr) int32 {
@@ -974,7 +974,7 @@ func ValueListEditor_GetTop(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetTop(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetTop").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetWidth(obj uintptr) int32 {
@@ -983,7 +983,7 @@ func ValueListEditor_GetWidth(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetWidth(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetWidth").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetHeight(obj uintptr) int32 {
@@ -992,7 +992,7 @@ func ValueListEditor_GetHeight(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetHeight(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetHeight").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetCursor(obj uintptr) TCursor {
@@ -1001,7 +1001,7 @@ func ValueListEditor_GetCursor(obj uintptr) TCursor {
 }
 
 func ValueListEditor_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("ValueListEditor_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetCursor").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetHint(obj uintptr) string {
@@ -1010,7 +1010,7 @@ func ValueListEditor_GetHint(obj uintptr) string {
 }
 
 func ValueListEditor_SetHint(obj uintptr, value string) {
-	getLazyProc("ValueListEditor_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func ValueListEditor_GetComponentCount(obj uintptr) int32 {
@@ -1024,7 +1024,7 @@ func ValueListEditor_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ValueListEditor_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ValueListEditor_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetOwner(obj uintptr) uintptr {
@@ -1038,7 +1038,7 @@ func ValueListEditor_GetName(obj uintptr) string {
 }
 
 func ValueListEditor_SetName(obj uintptr, value string) {
-	getLazyProc("ValueListEditor_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ValueListEditor_GetTag(obj uintptr) int {
@@ -1047,7 +1047,7 @@ func ValueListEditor_GetTag(obj uintptr) int {
 }
 
 func ValueListEditor_SetTag(obj uintptr, value int) {
-	getLazyProc("ValueListEditor_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetTag").Call(obj, uintptr(value))
 }
 
 func ValueListEditor_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -1056,7 +1056,7 @@ func ValueListEditor_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetAnchorSideLeft").Call(obj, value)
 }
 
 func ValueListEditor_GetAnchorSideTop(obj uintptr) uintptr {
@@ -1065,7 +1065,7 @@ func ValueListEditor_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetAnchorSideTop").Call(obj, value)
 }
 
 func ValueListEditor_GetAnchorSideRight(obj uintptr) uintptr {
@@ -1074,7 +1074,7 @@ func ValueListEditor_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetAnchorSideRight").Call(obj, value)
 }
 
 func ValueListEditor_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -1083,7 +1083,7 @@ func ValueListEditor_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetAnchorSideBottom").Call(obj, value)
 }
 
 func ValueListEditor_GetChildSizing(obj uintptr) uintptr {
@@ -1092,7 +1092,7 @@ func ValueListEditor_GetChildSizing(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetChildSizing").Call(obj, value)
 }
 
 func ValueListEditor_GetBorderSpacing(obj uintptr) uintptr {
@@ -1101,7 +1101,7 @@ func ValueListEditor_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func ValueListEditor_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("ValueListEditor_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("ValueListEditor_SetBorderSpacing").Call(obj, value)
 }
 
 func ValueListEditor_GetCells(obj uintptr, ACol int32, ARow int32) string {
@@ -1110,7 +1110,7 @@ func ValueListEditor_GetCells(obj uintptr, ACol int32, ARow int32) string {
 }
 
 func ValueListEditor_SetCells(obj uintptr, ACol int32, ARow int32, value string) {
-	getLazyProc("ValueListEditor_SetCells").Call(obj, uintptr(ACol), uintptr(ARow), GoStrToDStr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetCells").Call(obj, uintptr(ACol), uintptr(ARow), GoStrToDStr(value))
 }
 
 func ValueListEditor_GetValues(obj uintptr, Key string) string {
@@ -1119,7 +1119,7 @@ func ValueListEditor_GetValues(obj uintptr, Key string) string {
 }
 
 func ValueListEditor_SetValues(obj uintptr, Key string, value string) {
-	getLazyProc("ValueListEditor_SetValues").Call(obj, GoStrToDStr(Key), GoStrToDStr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetValues").Call(obj, GoStrToDStr(Key), GoStrToDStr(value))
 }
 
 func ValueListEditor_GetColWidths(obj uintptr, Index int32) int32 {
@@ -1128,7 +1128,7 @@ func ValueListEditor_GetColWidths(obj uintptr, Index int32) int32 {
 }
 
 func ValueListEditor_SetColWidths(obj uintptr, Index int32, value int32) {
-	getLazyProc("ValueListEditor_SetColWidths").Call(obj, uintptr(Index), uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetColWidths").Call(obj, uintptr(Index), uintptr(value))
 }
 
 func ValueListEditor_GetRowHeights(obj uintptr, Index int32) int32 {
@@ -1137,7 +1137,7 @@ func ValueListEditor_GetRowHeights(obj uintptr, Index int32) int32 {
 }
 
 func ValueListEditor_SetRowHeights(obj uintptr, Index int32, value int32) {
-	getLazyProc("ValueListEditor_SetRowHeights").Call(obj, uintptr(Index), uintptr(value))
+	_, _, _ = getLazyProc("ValueListEditor_SetRowHeights").Call(obj, uintptr(Index), uintptr(value))
 }
 
 func ValueListEditor_GetDockClients(obj uintptr, Index int32) uintptr {

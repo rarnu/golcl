@@ -34,7 +34,7 @@ func NewSaveDialog(owner IComponent) *TSaveDialog {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsSaveDialog(obj interface{}) *TSaveDialog {
+func AsSaveDialog(obj any) *TSaveDialog {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

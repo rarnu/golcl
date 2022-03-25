@@ -13,15 +13,15 @@ func MaskEdit_Create(obj uintptr) uintptr {
 }
 
 func MaskEdit_Free(obj uintptr) {
-	getLazyProc("MaskEdit_Free").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Free").Call(obj)
 }
 
 func MaskEdit_ValidateEdit(obj uintptr) {
-	getLazyProc("MaskEdit_ValidateEdit").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_ValidateEdit").Call(obj)
 }
 
 func MaskEdit_Clear(obj uintptr) {
-	getLazyProc("MaskEdit_Clear").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Clear").Call(obj)
 }
 
 func MaskEdit_GetTextLen(obj uintptr) int32 {
@@ -30,27 +30,27 @@ func MaskEdit_GetTextLen(obj uintptr) int32 {
 }
 
 func MaskEdit_ClearSelection(obj uintptr) {
-	getLazyProc("MaskEdit_ClearSelection").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_ClearSelection").Call(obj)
 }
 
 func MaskEdit_CopyToClipboard(obj uintptr) {
-	getLazyProc("MaskEdit_CopyToClipboard").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_CopyToClipboard").Call(obj)
 }
 
 func MaskEdit_CutToClipboard(obj uintptr) {
-	getLazyProc("MaskEdit_CutToClipboard").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_CutToClipboard").Call(obj)
 }
 
 func MaskEdit_PasteFromClipboard(obj uintptr) {
-	getLazyProc("MaskEdit_PasteFromClipboard").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_PasteFromClipboard").Call(obj)
 }
 
 func MaskEdit_Undo(obj uintptr) {
-	getLazyProc("MaskEdit_Undo").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Undo").Call(obj)
 }
 
 func MaskEdit_SelectAll(obj uintptr) {
-	getLazyProc("MaskEdit_SelectAll").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_SelectAll").Call(obj)
 }
 
 func MaskEdit_CanFocus(obj uintptr) bool {
@@ -69,11 +69,11 @@ func MaskEdit_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWin
 }
 
 func MaskEdit_DisableAlign(obj uintptr) {
-	getLazyProc("MaskEdit_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_DisableAlign").Call(obj)
 }
 
 func MaskEdit_EnableAlign(obj uintptr) {
-	getLazyProc("MaskEdit_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_EnableAlign").Call(obj)
 }
 
 func MaskEdit_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -82,7 +82,7 @@ func MaskEdit_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func MaskEdit_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("MaskEdit_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("MaskEdit_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func MaskEdit_Focused(obj uintptr) bool {
@@ -96,62 +96,62 @@ func MaskEdit_HandleAllocated(obj uintptr) bool {
 }
 
 func MaskEdit_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("MaskEdit_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("MaskEdit_InsertControl").Call(obj, AControl)
 }
 
 func MaskEdit_Invalidate(obj uintptr) {
-	getLazyProc("MaskEdit_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Invalidate").Call(obj)
 }
 
 func MaskEdit_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("MaskEdit_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("MaskEdit_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func MaskEdit_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("MaskEdit_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("MaskEdit_RemoveControl").Call(obj, AControl)
 }
 
 func MaskEdit_Realign(obj uintptr) {
-	getLazyProc("MaskEdit_Realign").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Realign").Call(obj)
 }
 
 func MaskEdit_Repaint(obj uintptr) {
-	getLazyProc("MaskEdit_Repaint").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Repaint").Call(obj)
 }
 
 func MaskEdit_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("MaskEdit_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("MaskEdit_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func MaskEdit_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("MaskEdit_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("MaskEdit_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func MaskEdit_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("MaskEdit_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("MaskEdit_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func MaskEdit_SetFocus(obj uintptr) {
-	getLazyProc("MaskEdit_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_SetFocus").Call(obj)
 }
 
 func MaskEdit_Update(obj uintptr) {
-	getLazyProc("MaskEdit_Update").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Update").Call(obj)
 }
 
 func MaskEdit_BringToFront(obj uintptr) {
-	getLazyProc("MaskEdit_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_BringToFront").Call(obj)
 }
 
 func MaskEdit_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("MaskEdit_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MaskEdit_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MaskEdit_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("MaskEdit_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MaskEdit_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -166,7 +166,7 @@ func MaskEdit_HasParent(obj uintptr) bool {
 }
 
 func MaskEdit_Hide(obj uintptr) {
-	getLazyProc("MaskEdit_Hide").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Hide").Call(obj)
 }
 
 func MaskEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -175,27 +175,27 @@ func MaskEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func MaskEdit_Refresh(obj uintptr) {
-	getLazyProc("MaskEdit_Refresh").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Refresh").Call(obj)
 }
 
 func MaskEdit_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("MaskEdit_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MaskEdit_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MaskEdit_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("MaskEdit_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MaskEdit_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MaskEdit_SendToBack(obj uintptr) {
-	getLazyProc("MaskEdit_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_SendToBack").Call(obj)
 }
 
 func MaskEdit_Show(obj uintptr) {
-	getLazyProc("MaskEdit_Show").Call(obj)
+	_, _, _ = getLazyProc("MaskEdit_Show").Call(obj)
 }
 
 func MaskEdit_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -209,7 +209,7 @@ func MaskEdit_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
 }
 
 func MaskEdit_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("MaskEdit_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("MaskEdit_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func MaskEdit_FindComponent(obj uintptr, AName string) uintptr {
@@ -223,7 +223,7 @@ func MaskEdit_GetNamePath(obj uintptr) string {
 }
 
 func MaskEdit_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("MaskEdit_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("MaskEdit_Assign").Call(obj, Source)
 }
 
 func MaskEdit_ClassType(obj uintptr) TClass {
@@ -262,31 +262,31 @@ func MaskEdit_ToString(obj uintptr) string {
 }
 
 func MaskEdit_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("MaskEdit_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("MaskEdit_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func MaskEdit_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("MaskEdit_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("MaskEdit_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func MaskEdit_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("MaskEdit_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("MaskEdit_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func MaskEdit_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("MaskEdit_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("MaskEdit_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func MaskEdit_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("MaskEdit_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("MaskEdit_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func MaskEdit_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("MaskEdit_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("MaskEdit_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func MaskEdit_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("MaskEdit_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("MaskEdit_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func MaskEdit_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -340,15 +340,15 @@ func MaskEdit_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func MaskEdit_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("MaskEdit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("MaskEdit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func MaskEdit_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("MaskEdit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("MaskEdit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func MaskEdit_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("MaskEdit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("MaskEdit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func MaskEdit_GetAlign(obj uintptr) TAlign {
@@ -357,7 +357,7 @@ func MaskEdit_GetAlign(obj uintptr) TAlign {
 }
 
 func MaskEdit_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("MaskEdit_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetAlign").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetAlignment(obj uintptr) TAlignment {
@@ -366,7 +366,7 @@ func MaskEdit_GetAlignment(obj uintptr) TAlignment {
 }
 
 func MaskEdit_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("MaskEdit_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetAlignment").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetAnchors(obj uintptr) TAnchors {
@@ -375,7 +375,7 @@ func MaskEdit_GetAnchors(obj uintptr) TAnchors {
 }
 
 func MaskEdit_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("MaskEdit_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetAnchors").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetAutoSelect(obj uintptr) bool {
@@ -384,7 +384,7 @@ func MaskEdit_GetAutoSelect(obj uintptr) bool {
 }
 
 func MaskEdit_SetAutoSelect(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetAutoSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetAutoSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetAutoSize(obj uintptr) bool {
@@ -393,7 +393,7 @@ func MaskEdit_GetAutoSize(obj uintptr) bool {
 }
 
 func MaskEdit_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -402,7 +402,7 @@ func MaskEdit_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func MaskEdit_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("MaskEdit_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -411,7 +411,7 @@ func MaskEdit_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func MaskEdit_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("MaskEdit_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetCharCase(obj uintptr) TEditCharCase {
@@ -420,7 +420,7 @@ func MaskEdit_GetCharCase(obj uintptr) TEditCharCase {
 }
 
 func MaskEdit_SetCharCase(obj uintptr, value TEditCharCase) {
-	getLazyProc("MaskEdit_SetCharCase").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetCharCase").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetColor(obj uintptr) TColor {
@@ -429,7 +429,7 @@ func MaskEdit_GetColor(obj uintptr) TColor {
 }
 
 func MaskEdit_SetColor(obj uintptr, value TColor) {
-	getLazyProc("MaskEdit_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetColor").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetConstraints(obj uintptr) uintptr {
@@ -438,7 +438,7 @@ func MaskEdit_GetConstraints(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetConstraints").Call(obj, value)
 }
 
 func MaskEdit_GetDoubleBuffered(obj uintptr) bool {
@@ -447,7 +447,7 @@ func MaskEdit_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func MaskEdit_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetDragCursor(obj uintptr) TCursor {
@@ -456,7 +456,7 @@ func MaskEdit_GetDragCursor(obj uintptr) TCursor {
 }
 
 func MaskEdit_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("MaskEdit_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetDragKind(obj uintptr) TDragKind {
@@ -465,7 +465,7 @@ func MaskEdit_GetDragKind(obj uintptr) TDragKind {
 }
 
 func MaskEdit_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("MaskEdit_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetDragKind").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetDragMode(obj uintptr) TDragMode {
@@ -474,7 +474,7 @@ func MaskEdit_GetDragMode(obj uintptr) TDragMode {
 }
 
 func MaskEdit_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("MaskEdit_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetDragMode").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetEnabled(obj uintptr) bool {
@@ -483,7 +483,7 @@ func MaskEdit_GetEnabled(obj uintptr) bool {
 }
 
 func MaskEdit_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetFont(obj uintptr) uintptr {
@@ -492,7 +492,7 @@ func MaskEdit_GetFont(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetFont").Call(obj, value)
 }
 
 func MaskEdit_GetMaxLength(obj uintptr) int32 {
@@ -501,7 +501,7 @@ func MaskEdit_GetMaxLength(obj uintptr) int32 {
 }
 
 func MaskEdit_SetMaxLength(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetMaxLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetMaxLength").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetParentColor(obj uintptr) bool {
@@ -510,7 +510,7 @@ func MaskEdit_GetParentColor(obj uintptr) bool {
 }
 
 func MaskEdit_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetParentDoubleBuffered(obj uintptr) bool {
@@ -519,7 +519,7 @@ func MaskEdit_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func MaskEdit_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetParentFont(obj uintptr) bool {
@@ -528,7 +528,7 @@ func MaskEdit_GetParentFont(obj uintptr) bool {
 }
 
 func MaskEdit_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetParentShowHint(obj uintptr) bool {
@@ -537,7 +537,7 @@ func MaskEdit_GetParentShowHint(obj uintptr) bool {
 }
 
 func MaskEdit_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetPasswordChar(obj uintptr) uint16 {
@@ -546,7 +546,7 @@ func MaskEdit_GetPasswordChar(obj uintptr) uint16 {
 }
 
 func MaskEdit_SetPasswordChar(obj uintptr, value uint16) {
-	getLazyProc("MaskEdit_SetPasswordChar").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetPasswordChar").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetPopupMenu(obj uintptr) uintptr {
@@ -555,7 +555,7 @@ func MaskEdit_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetPopupMenu").Call(obj, value)
 }
 
 func MaskEdit_GetReadOnly(obj uintptr) bool {
@@ -564,7 +564,7 @@ func MaskEdit_GetReadOnly(obj uintptr) bool {
 }
 
 func MaskEdit_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetShowHint(obj uintptr) bool {
@@ -573,7 +573,7 @@ func MaskEdit_GetShowHint(obj uintptr) bool {
 }
 
 func MaskEdit_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetTabOrder(obj uintptr) TTabOrder {
@@ -582,7 +582,7 @@ func MaskEdit_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func MaskEdit_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("MaskEdit_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetTabStop(obj uintptr) bool {
@@ -591,7 +591,7 @@ func MaskEdit_GetTabStop(obj uintptr) bool {
 }
 
 func MaskEdit_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetText(obj uintptr) string {
@@ -600,7 +600,7 @@ func MaskEdit_GetText(obj uintptr) string {
 }
 
 func MaskEdit_SetText(obj uintptr, value string) {
-	getLazyProc("MaskEdit_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func MaskEdit_GetTextHint(obj uintptr) string {
@@ -609,7 +609,7 @@ func MaskEdit_GetTextHint(obj uintptr) string {
 }
 
 func MaskEdit_SetTextHint(obj uintptr, value string) {
-	getLazyProc("MaskEdit_SetTextHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetTextHint").Call(obj, GoStrToDStr(value))
 }
 
 func MaskEdit_GetVisible(obj uintptr) bool {
@@ -618,79 +618,79 @@ func MaskEdit_GetVisible(obj uintptr) bool {
 }
 
 func MaskEdit_SetVisible(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func MaskEdit_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func MaskEdit_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("MaskEdit_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func MaskEdit_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MaskEdit_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func MaskEdit_GetIsMasked(obj uintptr) bool {
@@ -704,7 +704,7 @@ func MaskEdit_GetEditText(obj uintptr) string {
 }
 
 func MaskEdit_SetEditText(obj uintptr, value string) {
-	getLazyProc("MaskEdit_SetEditText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetEditText").Call(obj, GoStrToDStr(value))
 }
 
 func MaskEdit_GetCanUndo(obj uintptr) bool {
@@ -718,7 +718,7 @@ func MaskEdit_GetModified(obj uintptr) bool {
 }
 
 func MaskEdit_SetModified(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetSelLength(obj uintptr) int32 {
@@ -727,7 +727,7 @@ func MaskEdit_GetSelLength(obj uintptr) int32 {
 }
 
 func MaskEdit_SetSelLength(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetSelLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetSelLength").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetSelStart(obj uintptr) int32 {
@@ -736,7 +736,7 @@ func MaskEdit_GetSelStart(obj uintptr) int32 {
 }
 
 func MaskEdit_SetSelStart(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetSelStart").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetSelStart").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetSelText(obj uintptr) string {
@@ -745,7 +745,7 @@ func MaskEdit_GetSelText(obj uintptr) string {
 }
 
 func MaskEdit_SetSelText(obj uintptr, value string) {
-	getLazyProc("MaskEdit_SetSelText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetSelText").Call(obj, GoStrToDStr(value))
 }
 
 func MaskEdit_GetDockClientCount(obj uintptr) int32 {
@@ -759,7 +759,7 @@ func MaskEdit_GetDockSite(obj uintptr) bool {
 }
 
 func MaskEdit_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetMouseInClient(obj uintptr) bool {
@@ -784,16 +784,16 @@ func MaskEdit_GetControlCount(obj uintptr) int32 {
 
 func MaskEdit_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("MaskEdit_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func MaskEdit_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("MaskEdit_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func MaskEdit_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("MaskEdit_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetParentWindow").Call(obj, value)
 }
 
 func MaskEdit_GetShowing(obj uintptr) bool {
@@ -807,7 +807,7 @@ func MaskEdit_GetUseDockManager(obj uintptr) bool {
 }
 
 func MaskEdit_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("MaskEdit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MaskEdit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func MaskEdit_GetAction(obj uintptr) uintptr {
@@ -816,17 +816,17 @@ func MaskEdit_GetAction(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetAction").Call(obj, value)
 }
 
 func MaskEdit_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("MaskEdit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MaskEdit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MaskEdit_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("MaskEdit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("MaskEdit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func MaskEdit_GetClientHeight(obj uintptr) int32 {
@@ -835,18 +835,18 @@ func MaskEdit_GetClientHeight(obj uintptr) int32 {
 }
 
 func MaskEdit_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("MaskEdit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MaskEdit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MaskEdit_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("MaskEdit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MaskEdit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -856,7 +856,7 @@ func MaskEdit_GetClientWidth(obj uintptr) int32 {
 }
 
 func MaskEdit_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetControlState(obj uintptr) TControlState {
@@ -865,7 +865,7 @@ func MaskEdit_GetControlState(obj uintptr) TControlState {
 }
 
 func MaskEdit_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("MaskEdit_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetControlState").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetControlStyle(obj uintptr) TControlStyle {
@@ -874,7 +874,7 @@ func MaskEdit_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func MaskEdit_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("MaskEdit_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetFloating(obj uintptr) bool {
@@ -888,7 +888,7 @@ func MaskEdit_GetParent(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetParent").Call(obj, value)
 }
 
 func MaskEdit_GetLeft(obj uintptr) int32 {
@@ -897,7 +897,7 @@ func MaskEdit_GetLeft(obj uintptr) int32 {
 }
 
 func MaskEdit_SetLeft(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetLeft").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetTop(obj uintptr) int32 {
@@ -906,7 +906,7 @@ func MaskEdit_GetTop(obj uintptr) int32 {
 }
 
 func MaskEdit_SetTop(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetTop").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetWidth(obj uintptr) int32 {
@@ -915,7 +915,7 @@ func MaskEdit_GetWidth(obj uintptr) int32 {
 }
 
 func MaskEdit_SetWidth(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetWidth").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetHeight(obj uintptr) int32 {
@@ -924,7 +924,7 @@ func MaskEdit_GetHeight(obj uintptr) int32 {
 }
 
 func MaskEdit_SetHeight(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetHeight").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetCursor(obj uintptr) TCursor {
@@ -933,7 +933,7 @@ func MaskEdit_GetCursor(obj uintptr) TCursor {
 }
 
 func MaskEdit_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("MaskEdit_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetCursor").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetHint(obj uintptr) string {
@@ -942,7 +942,7 @@ func MaskEdit_GetHint(obj uintptr) string {
 }
 
 func MaskEdit_SetHint(obj uintptr, value string) {
-	getLazyProc("MaskEdit_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func MaskEdit_GetComponentCount(obj uintptr) int32 {
@@ -956,7 +956,7 @@ func MaskEdit_GetComponentIndex(obj uintptr) int32 {
 }
 
 func MaskEdit_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("MaskEdit_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetOwner(obj uintptr) uintptr {
@@ -970,7 +970,7 @@ func MaskEdit_GetName(obj uintptr) string {
 }
 
 func MaskEdit_SetName(obj uintptr, value string) {
-	getLazyProc("MaskEdit_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func MaskEdit_GetTag(obj uintptr) int {
@@ -979,7 +979,7 @@ func MaskEdit_GetTag(obj uintptr) int {
 }
 
 func MaskEdit_SetTag(obj uintptr, value int) {
-	getLazyProc("MaskEdit_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MaskEdit_SetTag").Call(obj, uintptr(value))
 }
 
 func MaskEdit_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -988,7 +988,7 @@ func MaskEdit_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetAnchorSideLeft").Call(obj, value)
 }
 
 func MaskEdit_GetAnchorSideTop(obj uintptr) uintptr {
@@ -997,7 +997,7 @@ func MaskEdit_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetAnchorSideTop").Call(obj, value)
 }
 
 func MaskEdit_GetAnchorSideRight(obj uintptr) uintptr {
@@ -1006,7 +1006,7 @@ func MaskEdit_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetAnchorSideRight").Call(obj, value)
 }
 
 func MaskEdit_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -1015,7 +1015,7 @@ func MaskEdit_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetAnchorSideBottom").Call(obj, value)
 }
 
 func MaskEdit_GetChildSizing(obj uintptr) uintptr {
@@ -1024,7 +1024,7 @@ func MaskEdit_GetChildSizing(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetChildSizing").Call(obj, value)
 }
 
 func MaskEdit_GetBorderSpacing(obj uintptr) uintptr {
@@ -1033,7 +1033,7 @@ func MaskEdit_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func MaskEdit_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("MaskEdit_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("MaskEdit_SetBorderSpacing").Call(obj, value)
 }
 
 func MaskEdit_GetDockClients(obj uintptr, Index int32) uintptr {

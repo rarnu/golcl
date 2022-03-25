@@ -12,27 +12,27 @@ func Picture_Create() uintptr {
 }
 
 func Picture_Free(obj uintptr) {
-	getLazyProc("Picture_Free").Call(obj)
+	_, _, _ = getLazyProc("Picture_Free").Call(obj)
 }
 
 func Picture_LoadFromFile(obj uintptr, Filename string) {
-	getLazyProc("Picture_LoadFromFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("Picture_LoadFromFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func Picture_SaveToFile(obj uintptr, Filename string) {
-	getLazyProc("Picture_SaveToFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("Picture_SaveToFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func Picture_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Picture_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Picture_LoadFromStream").Call(obj, Stream)
 }
 
 func Picture_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Picture_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Picture_SaveToStream").Call(obj, Stream)
 }
 
 func Picture_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Picture_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Picture_Assign").Call(obj, Source)
 }
 
 func Picture_GetNamePath(obj uintptr) string {
@@ -81,7 +81,7 @@ func Picture_GetBitmap(obj uintptr) uintptr {
 }
 
 func Picture_SetBitmap(obj uintptr, value uintptr) {
-	getLazyProc("Picture_SetBitmap").Call(obj, value)
+	_, _, _ = getLazyProc("Picture_SetBitmap").Call(obj, value)
 }
 
 func Picture_GetGraphic(obj uintptr) uintptr {
@@ -90,7 +90,7 @@ func Picture_GetGraphic(obj uintptr) uintptr {
 }
 
 func Picture_SetGraphic(obj uintptr, value uintptr) {
-	getLazyProc("Picture_SetGraphic").Call(obj, value)
+	_, _, _ = getLazyProc("Picture_SetGraphic").Call(obj, value)
 }
 
 func Picture_GetHeight(obj uintptr) int32 {
@@ -104,7 +104,7 @@ func Picture_GetIcon(obj uintptr) uintptr {
 }
 
 func Picture_SetIcon(obj uintptr, value uintptr) {
-	getLazyProc("Picture_SetIcon").Call(obj, value)
+	_, _, _ = getLazyProc("Picture_SetIcon").Call(obj, value)
 }
 
 func Picture_GetWidth(obj uintptr) int32 {
@@ -112,8 +112,8 @@ func Picture_GetWidth(obj uintptr) int32 {
 	return int32(ret)
 }
 
-func Picture_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("Picture_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func Picture_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Picture_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func Picture_StaticClassType() TClass {

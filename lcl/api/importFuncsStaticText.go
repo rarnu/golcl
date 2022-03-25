@@ -13,7 +13,7 @@ func StaticText_Create(obj uintptr) uintptr {
 }
 
 func StaticText_Free(obj uintptr) {
-	getLazyProc("StaticText_Free").Call(obj)
+	_, _, _ = getLazyProc("StaticText_Free").Call(obj)
 }
 
 func StaticText_CanFocus(obj uintptr) bool {
@@ -32,11 +32,11 @@ func StaticText_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowW
 }
 
 func StaticText_DisableAlign(obj uintptr) {
-	getLazyProc("StaticText_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("StaticText_DisableAlign").Call(obj)
 }
 
 func StaticText_EnableAlign(obj uintptr) {
-	getLazyProc("StaticText_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("StaticText_EnableAlign").Call(obj)
 }
 
 func StaticText_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -45,7 +45,7 @@ func StaticText_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func StaticText_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("StaticText_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("StaticText_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func StaticText_Focused(obj uintptr) bool {
@@ -59,62 +59,62 @@ func StaticText_HandleAllocated(obj uintptr) bool {
 }
 
 func StaticText_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("StaticText_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("StaticText_InsertControl").Call(obj, AControl)
 }
 
 func StaticText_Invalidate(obj uintptr) {
-	getLazyProc("StaticText_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("StaticText_Invalidate").Call(obj)
 }
 
 func StaticText_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("StaticText_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("StaticText_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func StaticText_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("StaticText_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("StaticText_RemoveControl").Call(obj, AControl)
 }
 
 func StaticText_Realign(obj uintptr) {
-	getLazyProc("StaticText_Realign").Call(obj)
+	_, _, _ = getLazyProc("StaticText_Realign").Call(obj)
 }
 
 func StaticText_Repaint(obj uintptr) {
-	getLazyProc("StaticText_Repaint").Call(obj)
+	_, _, _ = getLazyProc("StaticText_Repaint").Call(obj)
 }
 
 func StaticText_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("StaticText_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("StaticText_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func StaticText_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("StaticText_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("StaticText_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func StaticText_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("StaticText_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("StaticText_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func StaticText_SetFocus(obj uintptr) {
-	getLazyProc("StaticText_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("StaticText_SetFocus").Call(obj)
 }
 
 func StaticText_Update(obj uintptr) {
-	getLazyProc("StaticText_Update").Call(obj)
+	_, _, _ = getLazyProc("StaticText_Update").Call(obj)
 }
 
 func StaticText_BringToFront(obj uintptr) {
-	getLazyProc("StaticText_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("StaticText_BringToFront").Call(obj)
 }
 
 func StaticText_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("StaticText_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("StaticText_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func StaticText_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("StaticText_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("StaticText_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -129,7 +129,7 @@ func StaticText_HasParent(obj uintptr) bool {
 }
 
 func StaticText_Hide(obj uintptr) {
-	getLazyProc("StaticText_Hide").Call(obj)
+	_, _, _ = getLazyProc("StaticText_Hide").Call(obj)
 }
 
 func StaticText_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -138,27 +138,27 @@ func StaticText_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int
 }
 
 func StaticText_Refresh(obj uintptr) {
-	getLazyProc("StaticText_Refresh").Call(obj)
+	_, _, _ = getLazyProc("StaticText_Refresh").Call(obj)
 }
 
 func StaticText_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("StaticText_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("StaticText_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func StaticText_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("StaticText_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("StaticText_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func StaticText_SendToBack(obj uintptr) {
-	getLazyProc("StaticText_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("StaticText_SendToBack").Call(obj)
 }
 
 func StaticText_Show(obj uintptr) {
-	getLazyProc("StaticText_Show").Call(obj)
+	_, _, _ = getLazyProc("StaticText_Show").Call(obj)
 }
 
 func StaticText_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -177,7 +177,7 @@ func StaticText_GetTextLen(obj uintptr) int32 {
 }
 
 func StaticText_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("StaticText_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("StaticText_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func StaticText_FindComponent(obj uintptr, AName string) uintptr {
@@ -191,7 +191,7 @@ func StaticText_GetNamePath(obj uintptr) string {
 }
 
 func StaticText_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("StaticText_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("StaticText_Assign").Call(obj, Source)
 }
 
 func StaticText_ClassType(obj uintptr) TClass {
@@ -230,31 +230,31 @@ func StaticText_ToString(obj uintptr) string {
 }
 
 func StaticText_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("StaticText_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("StaticText_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func StaticText_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("StaticText_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("StaticText_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func StaticText_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("StaticText_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("StaticText_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func StaticText_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("StaticText_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("StaticText_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func StaticText_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("StaticText_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("StaticText_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func StaticText_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("StaticText_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("StaticText_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func StaticText_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("StaticText_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("StaticText_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func StaticText_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -308,15 +308,15 @@ func StaticText_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func StaticText_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("StaticText_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("StaticText_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func StaticText_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("StaticText_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("StaticText_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func StaticText_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("StaticText_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("StaticText_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func StaticText_GetAlign(obj uintptr) TAlign {
@@ -325,7 +325,7 @@ func StaticText_GetAlign(obj uintptr) TAlign {
 }
 
 func StaticText_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("StaticText_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetAlign").Call(obj, uintptr(value))
 }
 
 func StaticText_GetAlignment(obj uintptr) TAlignment {
@@ -334,7 +334,7 @@ func StaticText_GetAlignment(obj uintptr) TAlignment {
 }
 
 func StaticText_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("StaticText_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetAlignment").Call(obj, uintptr(value))
 }
 
 func StaticText_GetAnchors(obj uintptr) TAnchors {
@@ -343,7 +343,7 @@ func StaticText_GetAnchors(obj uintptr) TAnchors {
 }
 
 func StaticText_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("StaticText_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetAnchors").Call(obj, uintptr(value))
 }
 
 func StaticText_GetAutoSize(obj uintptr) bool {
@@ -352,7 +352,7 @@ func StaticText_GetAutoSize(obj uintptr) bool {
 }
 
 func StaticText_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -361,7 +361,7 @@ func StaticText_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func StaticText_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("StaticText_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func StaticText_GetBorderStyle(obj uintptr) TStaticBorderStyle {
@@ -370,7 +370,7 @@ func StaticText_GetBorderStyle(obj uintptr) TStaticBorderStyle {
 }
 
 func StaticText_SetBorderStyle(obj uintptr, value TStaticBorderStyle) {
-	getLazyProc("StaticText_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func StaticText_GetCaption(obj uintptr) string {
@@ -379,7 +379,7 @@ func StaticText_GetCaption(obj uintptr) string {
 }
 
 func StaticText_SetCaption(obj uintptr, value string) {
-	getLazyProc("StaticText_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("StaticText_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func StaticText_GetColor(obj uintptr) TColor {
@@ -388,7 +388,7 @@ func StaticText_GetColor(obj uintptr) TColor {
 }
 
 func StaticText_SetColor(obj uintptr, value TColor) {
-	getLazyProc("StaticText_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetColor").Call(obj, uintptr(value))
 }
 
 func StaticText_GetConstraints(obj uintptr) uintptr {
@@ -397,7 +397,7 @@ func StaticText_GetConstraints(obj uintptr) uintptr {
 }
 
 func StaticText_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetConstraints").Call(obj, value)
 }
 
 func StaticText_GetDoubleBuffered(obj uintptr) bool {
@@ -406,7 +406,7 @@ func StaticText_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func StaticText_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetDragCursor(obj uintptr) TCursor {
@@ -415,7 +415,7 @@ func StaticText_GetDragCursor(obj uintptr) TCursor {
 }
 
 func StaticText_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("StaticText_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func StaticText_GetDragKind(obj uintptr) TDragKind {
@@ -424,7 +424,7 @@ func StaticText_GetDragKind(obj uintptr) TDragKind {
 }
 
 func StaticText_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("StaticText_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetDragKind").Call(obj, uintptr(value))
 }
 
 func StaticText_GetDragMode(obj uintptr) TDragMode {
@@ -433,7 +433,7 @@ func StaticText_GetDragMode(obj uintptr) TDragMode {
 }
 
 func StaticText_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("StaticText_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetDragMode").Call(obj, uintptr(value))
 }
 
 func StaticText_GetEnabled(obj uintptr) bool {
@@ -442,7 +442,7 @@ func StaticText_GetEnabled(obj uintptr) bool {
 }
 
 func StaticText_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetFocusControl(obj uintptr) uintptr {
@@ -451,7 +451,7 @@ func StaticText_GetFocusControl(obj uintptr) uintptr {
 }
 
 func StaticText_SetFocusControl(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetFocusControl").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetFocusControl").Call(obj, value)
 }
 
 func StaticText_GetFont(obj uintptr) uintptr {
@@ -460,7 +460,7 @@ func StaticText_GetFont(obj uintptr) uintptr {
 }
 
 func StaticText_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetFont").Call(obj, value)
 }
 
 func StaticText_GetParentColor(obj uintptr) bool {
@@ -469,7 +469,7 @@ func StaticText_GetParentColor(obj uintptr) bool {
 }
 
 func StaticText_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetParentDoubleBuffered(obj uintptr) bool {
@@ -478,7 +478,7 @@ func StaticText_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func StaticText_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetParentFont(obj uintptr) bool {
@@ -487,7 +487,7 @@ func StaticText_GetParentFont(obj uintptr) bool {
 }
 
 func StaticText_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetParentShowHint(obj uintptr) bool {
@@ -496,7 +496,7 @@ func StaticText_GetParentShowHint(obj uintptr) bool {
 }
 
 func StaticText_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetPopupMenu(obj uintptr) uintptr {
@@ -505,7 +505,7 @@ func StaticText_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func StaticText_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetPopupMenu").Call(obj, value)
 }
 
 func StaticText_GetShowAccelChar(obj uintptr) bool {
@@ -514,7 +514,7 @@ func StaticText_GetShowAccelChar(obj uintptr) bool {
 }
 
 func StaticText_SetShowAccelChar(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetShowAccelChar").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetShowAccelChar").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetShowHint(obj uintptr) bool {
@@ -523,7 +523,7 @@ func StaticText_GetShowHint(obj uintptr) bool {
 }
 
 func StaticText_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetTabOrder(obj uintptr) TTabOrder {
@@ -532,7 +532,7 @@ func StaticText_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func StaticText_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("StaticText_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func StaticText_GetTabStop(obj uintptr) bool {
@@ -541,7 +541,7 @@ func StaticText_GetTabStop(obj uintptr) bool {
 }
 
 func StaticText_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetTransparent(obj uintptr) bool {
@@ -550,7 +550,7 @@ func StaticText_GetTransparent(obj uintptr) bool {
 }
 
 func StaticText_SetTransparent(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetTransparent").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetTransparent").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetVisible(obj uintptr) bool {
@@ -559,51 +559,51 @@ func StaticText_GetVisible(obj uintptr) bool {
 }
 
 func StaticText_SetVisible(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func StaticText_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func StaticText_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("StaticText_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func StaticText_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("StaticText_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func StaticText_GetDockClientCount(obj uintptr) int32 {
@@ -617,7 +617,7 @@ func StaticText_GetDockSite(obj uintptr) bool {
 }
 
 func StaticText_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetMouseInClient(obj uintptr) bool {
@@ -642,16 +642,16 @@ func StaticText_GetControlCount(obj uintptr) int32 {
 
 func StaticText_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("StaticText_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func StaticText_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("StaticText_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func StaticText_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("StaticText_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetParentWindow").Call(obj, value)
 }
 
 func StaticText_GetShowing(obj uintptr) bool {
@@ -665,7 +665,7 @@ func StaticText_GetUseDockManager(obj uintptr) bool {
 }
 
 func StaticText_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("StaticText_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("StaticText_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetAction(obj uintptr) uintptr {
@@ -674,17 +674,17 @@ func StaticText_GetAction(obj uintptr) uintptr {
 }
 
 func StaticText_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetAction").Call(obj, value)
 }
 
 func StaticText_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("StaticText_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("StaticText_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func StaticText_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("StaticText_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("StaticText_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func StaticText_GetClientHeight(obj uintptr) int32 {
@@ -693,18 +693,18 @@ func StaticText_GetClientHeight(obj uintptr) int32 {
 }
 
 func StaticText_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("StaticText_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func StaticText_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("StaticText_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("StaticText_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func StaticText_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("StaticText_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("StaticText_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -714,7 +714,7 @@ func StaticText_GetClientWidth(obj uintptr) int32 {
 }
 
 func StaticText_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("StaticText_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func StaticText_GetControlState(obj uintptr) TControlState {
@@ -723,7 +723,7 @@ func StaticText_GetControlState(obj uintptr) TControlState {
 }
 
 func StaticText_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("StaticText_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetControlState").Call(obj, uintptr(value))
 }
 
 func StaticText_GetControlStyle(obj uintptr) TControlStyle {
@@ -732,7 +732,7 @@ func StaticText_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func StaticText_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("StaticText_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func StaticText_GetFloating(obj uintptr) bool {
@@ -746,7 +746,7 @@ func StaticText_GetParent(obj uintptr) uintptr {
 }
 
 func StaticText_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetParent").Call(obj, value)
 }
 
 func StaticText_GetLeft(obj uintptr) int32 {
@@ -755,7 +755,7 @@ func StaticText_GetLeft(obj uintptr) int32 {
 }
 
 func StaticText_SetLeft(obj uintptr, value int32) {
-	getLazyProc("StaticText_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetLeft").Call(obj, uintptr(value))
 }
 
 func StaticText_GetTop(obj uintptr) int32 {
@@ -764,7 +764,7 @@ func StaticText_GetTop(obj uintptr) int32 {
 }
 
 func StaticText_SetTop(obj uintptr, value int32) {
-	getLazyProc("StaticText_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetTop").Call(obj, uintptr(value))
 }
 
 func StaticText_GetWidth(obj uintptr) int32 {
@@ -773,7 +773,7 @@ func StaticText_GetWidth(obj uintptr) int32 {
 }
 
 func StaticText_SetWidth(obj uintptr, value int32) {
-	getLazyProc("StaticText_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetWidth").Call(obj, uintptr(value))
 }
 
 func StaticText_GetHeight(obj uintptr) int32 {
@@ -782,7 +782,7 @@ func StaticText_GetHeight(obj uintptr) int32 {
 }
 
 func StaticText_SetHeight(obj uintptr, value int32) {
-	getLazyProc("StaticText_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetHeight").Call(obj, uintptr(value))
 }
 
 func StaticText_GetCursor(obj uintptr) TCursor {
@@ -791,7 +791,7 @@ func StaticText_GetCursor(obj uintptr) TCursor {
 }
 
 func StaticText_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("StaticText_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetCursor").Call(obj, uintptr(value))
 }
 
 func StaticText_GetHint(obj uintptr) string {
@@ -800,7 +800,7 @@ func StaticText_GetHint(obj uintptr) string {
 }
 
 func StaticText_SetHint(obj uintptr, value string) {
-	getLazyProc("StaticText_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("StaticText_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func StaticText_GetComponentCount(obj uintptr) int32 {
@@ -814,7 +814,7 @@ func StaticText_GetComponentIndex(obj uintptr) int32 {
 }
 
 func StaticText_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("StaticText_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func StaticText_GetOwner(obj uintptr) uintptr {
@@ -828,7 +828,7 @@ func StaticText_GetName(obj uintptr) string {
 }
 
 func StaticText_SetName(obj uintptr, value string) {
-	getLazyProc("StaticText_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("StaticText_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func StaticText_GetTag(obj uintptr) int {
@@ -837,7 +837,7 @@ func StaticText_GetTag(obj uintptr) int {
 }
 
 func StaticText_SetTag(obj uintptr, value int) {
-	getLazyProc("StaticText_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StaticText_SetTag").Call(obj, uintptr(value))
 }
 
 func StaticText_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -846,7 +846,7 @@ func StaticText_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func StaticText_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetAnchorSideLeft").Call(obj, value)
 }
 
 func StaticText_GetAnchorSideTop(obj uintptr) uintptr {
@@ -855,7 +855,7 @@ func StaticText_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func StaticText_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetAnchorSideTop").Call(obj, value)
 }
 
 func StaticText_GetAnchorSideRight(obj uintptr) uintptr {
@@ -864,7 +864,7 @@ func StaticText_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func StaticText_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetAnchorSideRight").Call(obj, value)
 }
 
 func StaticText_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -873,7 +873,7 @@ func StaticText_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func StaticText_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetAnchorSideBottom").Call(obj, value)
 }
 
 func StaticText_GetChildSizing(obj uintptr) uintptr {
@@ -882,7 +882,7 @@ func StaticText_GetChildSizing(obj uintptr) uintptr {
 }
 
 func StaticText_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetChildSizing").Call(obj, value)
 }
 
 func StaticText_GetBorderSpacing(obj uintptr) uintptr {
@@ -891,7 +891,7 @@ func StaticText_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func StaticText_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("StaticText_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("StaticText_SetBorderSpacing").Call(obj, value)
 }
 
 func StaticText_GetDockClients(obj uintptr, Index int32) uintptr {

@@ -27,23 +27,23 @@ func ComboExItems_Owner(obj uintptr) uintptr {
 }
 
 func ComboExItems_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ComboExItems_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ComboExItems_Assign").Call(obj, Source)
 }
 
 func ComboExItems_BeginUpdate(obj uintptr) {
-	getLazyProc("ComboExItems_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("ComboExItems_BeginUpdate").Call(obj)
 }
 
 func ComboExItems_Clear(obj uintptr) {
-	getLazyProc("ComboExItems_Clear").Call(obj)
+	_, _, _ = getLazyProc("ComboExItems_Clear").Call(obj)
 }
 
 func ComboExItems_Delete(obj uintptr, Index int32) {
-	getLazyProc("ComboExItems_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("ComboExItems_Delete").Call(obj, uintptr(Index))
 }
 
 func ComboExItems_EndUpdate(obj uintptr) {
-	getLazyProc("ComboExItems_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("ComboExItems_EndUpdate").Call(obj)
 }
 
 func ComboExItems_FindItemID(obj uintptr, ID int32) uintptr {

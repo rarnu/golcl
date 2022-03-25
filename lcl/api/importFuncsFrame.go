@@ -13,11 +13,11 @@ func Frame_Create(obj uintptr) uintptr {
 }
 
 func Frame_Free(obj uintptr) {
-	getLazyProc("Frame_Free").Call(obj)
+	_, _, _ = getLazyProc("Frame_Free").Call(obj)
 }
 
 func Frame_ScrollInView(obj uintptr, AControl uintptr) {
-	getLazyProc("Frame_ScrollInView").Call(obj, AControl)
+	_, _, _ = getLazyProc("Frame_ScrollInView").Call(obj, AControl)
 }
 
 func Frame_CanFocus(obj uintptr) bool {
@@ -36,11 +36,11 @@ func Frame_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWinCon
 }
 
 func Frame_DisableAlign(obj uintptr) {
-	getLazyProc("Frame_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("Frame_DisableAlign").Call(obj)
 }
 
 func Frame_EnableAlign(obj uintptr) {
-	getLazyProc("Frame_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("Frame_EnableAlign").Call(obj)
 }
 
 func Frame_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -49,7 +49,7 @@ func Frame_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func Frame_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("Frame_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("Frame_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func Frame_Focused(obj uintptr) bool {
@@ -63,62 +63,62 @@ func Frame_HandleAllocated(obj uintptr) bool {
 }
 
 func Frame_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("Frame_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("Frame_InsertControl").Call(obj, AControl)
 }
 
 func Frame_Invalidate(obj uintptr) {
-	getLazyProc("Frame_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("Frame_Invalidate").Call(obj)
 }
 
 func Frame_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("Frame_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("Frame_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func Frame_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("Frame_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("Frame_RemoveControl").Call(obj, AControl)
 }
 
 func Frame_Realign(obj uintptr) {
-	getLazyProc("Frame_Realign").Call(obj)
+	_, _, _ = getLazyProc("Frame_Realign").Call(obj)
 }
 
 func Frame_Repaint(obj uintptr) {
-	getLazyProc("Frame_Repaint").Call(obj)
+	_, _, _ = getLazyProc("Frame_Repaint").Call(obj)
 }
 
 func Frame_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("Frame_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("Frame_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func Frame_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("Frame_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("Frame_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func Frame_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("Frame_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Frame_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func Frame_SetFocus(obj uintptr) {
-	getLazyProc("Frame_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("Frame_SetFocus").Call(obj)
 }
 
 func Frame_Update(obj uintptr) {
-	getLazyProc("Frame_Update").Call(obj)
+	_, _, _ = getLazyProc("Frame_Update").Call(obj)
 }
 
 func Frame_BringToFront(obj uintptr) {
-	getLazyProc("Frame_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("Frame_BringToFront").Call(obj)
 }
 
 func Frame_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Frame_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Frame_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Frame_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Frame_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Frame_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -133,7 +133,7 @@ func Frame_HasParent(obj uintptr) bool {
 }
 
 func Frame_Hide(obj uintptr) {
-	getLazyProc("Frame_Hide").Call(obj)
+	_, _, _ = getLazyProc("Frame_Hide").Call(obj)
 }
 
 func Frame_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -142,27 +142,27 @@ func Frame_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func Frame_Refresh(obj uintptr) {
-	getLazyProc("Frame_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Frame_Refresh").Call(obj)
 }
 
 func Frame_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Frame_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Frame_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Frame_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Frame_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Frame_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Frame_SendToBack(obj uintptr) {
-	getLazyProc("Frame_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("Frame_SendToBack").Call(obj)
 }
 
 func Frame_Show(obj uintptr) {
-	getLazyProc("Frame_Show").Call(obj)
+	_, _, _ = getLazyProc("Frame_Show").Call(obj)
 }
 
 func Frame_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -181,7 +181,7 @@ func Frame_GetTextLen(obj uintptr) int32 {
 }
 
 func Frame_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Frame_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Frame_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Frame_FindComponent(obj uintptr, AName string) uintptr {
@@ -195,7 +195,7 @@ func Frame_GetNamePath(obj uintptr) string {
 }
 
 func Frame_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Frame_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Frame_Assign").Call(obj, Source)
 }
 
 func Frame_ClassType(obj uintptr) TClass {
@@ -234,31 +234,31 @@ func Frame_ToString(obj uintptr) string {
 }
 
 func Frame_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Frame_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Frame_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Frame_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Frame_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Frame_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Frame_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Frame_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Frame_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func Frame_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Frame_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Frame_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func Frame_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("Frame_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("Frame_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func Frame_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("Frame_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("Frame_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func Frame_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("Frame_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("Frame_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func Frame_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -312,15 +312,15 @@ func Frame_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func Frame_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("Frame_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("Frame_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func Frame_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("Frame_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("Frame_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func Frame_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("Frame_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("Frame_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func Frame_GetDesignTimePPI(obj uintptr) int32 {
@@ -329,7 +329,7 @@ func Frame_GetDesignTimePPI(obj uintptr) int32 {
 }
 
 func Frame_SetDesignTimePPI(obj uintptr, value int32) {
-	getLazyProc("Frame_SetDesignTimePPI").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetDesignTimePPI").Call(obj, uintptr(value))
 }
 
 func Frame_GetAlign(obj uintptr) TAlign {
@@ -338,7 +338,7 @@ func Frame_GetAlign(obj uintptr) TAlign {
 }
 
 func Frame_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("Frame_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetAlign").Call(obj, uintptr(value))
 }
 
 func Frame_GetAnchors(obj uintptr) TAnchors {
@@ -347,7 +347,7 @@ func Frame_GetAnchors(obj uintptr) TAnchors {
 }
 
 func Frame_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("Frame_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetAnchors").Call(obj, uintptr(value))
 }
 
 func Frame_GetAutoScroll(obj uintptr) bool {
@@ -356,7 +356,7 @@ func Frame_GetAutoScroll(obj uintptr) bool {
 }
 
 func Frame_SetAutoScroll(obj uintptr, value bool) {
-	getLazyProc("Frame_SetAutoScroll").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetAutoScroll").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetAutoSize(obj uintptr) bool {
@@ -365,7 +365,7 @@ func Frame_GetAutoSize(obj uintptr) bool {
 }
 
 func Frame_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("Frame_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -374,7 +374,7 @@ func Frame_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func Frame_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("Frame_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func Frame_GetConstraints(obj uintptr) uintptr {
@@ -383,7 +383,7 @@ func Frame_GetConstraints(obj uintptr) uintptr {
 }
 
 func Frame_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetConstraints").Call(obj, value)
 }
 
 func Frame_GetDockSite(obj uintptr) bool {
@@ -392,7 +392,7 @@ func Frame_GetDockSite(obj uintptr) bool {
 }
 
 func Frame_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("Frame_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetDoubleBuffered(obj uintptr) bool {
@@ -401,7 +401,7 @@ func Frame_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func Frame_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("Frame_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetDragCursor(obj uintptr) TCursor {
@@ -410,7 +410,7 @@ func Frame_GetDragCursor(obj uintptr) TCursor {
 }
 
 func Frame_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("Frame_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func Frame_GetDragKind(obj uintptr) TDragKind {
@@ -419,7 +419,7 @@ func Frame_GetDragKind(obj uintptr) TDragKind {
 }
 
 func Frame_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("Frame_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetDragKind").Call(obj, uintptr(value))
 }
 
 func Frame_GetDragMode(obj uintptr) TDragMode {
@@ -428,7 +428,7 @@ func Frame_GetDragMode(obj uintptr) TDragMode {
 }
 
 func Frame_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("Frame_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetDragMode").Call(obj, uintptr(value))
 }
 
 func Frame_GetEnabled(obj uintptr) bool {
@@ -437,7 +437,7 @@ func Frame_GetEnabled(obj uintptr) bool {
 }
 
 func Frame_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Frame_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetColor(obj uintptr) TColor {
@@ -446,7 +446,7 @@ func Frame_GetColor(obj uintptr) TColor {
 }
 
 func Frame_SetColor(obj uintptr, value TColor) {
-	getLazyProc("Frame_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetColor").Call(obj, uintptr(value))
 }
 
 func Frame_GetFont(obj uintptr) uintptr {
@@ -455,7 +455,7 @@ func Frame_GetFont(obj uintptr) uintptr {
 }
 
 func Frame_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetFont").Call(obj, value)
 }
 
 func Frame_GetParentBackground(obj uintptr) bool {
@@ -464,7 +464,7 @@ func Frame_GetParentBackground(obj uintptr) bool {
 }
 
 func Frame_SetParentBackground(obj uintptr, value bool) {
-	getLazyProc("Frame_SetParentBackground").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetParentBackground").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetParentColor(obj uintptr) bool {
@@ -473,7 +473,7 @@ func Frame_GetParentColor(obj uintptr) bool {
 }
 
 func Frame_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("Frame_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetParentDoubleBuffered(obj uintptr) bool {
@@ -482,7 +482,7 @@ func Frame_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func Frame_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("Frame_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetParentFont(obj uintptr) bool {
@@ -491,7 +491,7 @@ func Frame_GetParentFont(obj uintptr) bool {
 }
 
 func Frame_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("Frame_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetParentShowHint(obj uintptr) bool {
@@ -500,7 +500,7 @@ func Frame_GetParentShowHint(obj uintptr) bool {
 }
 
 func Frame_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("Frame_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetPopupMenu(obj uintptr) uintptr {
@@ -509,7 +509,7 @@ func Frame_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func Frame_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetPopupMenu").Call(obj, value)
 }
 
 func Frame_GetShowHint(obj uintptr) bool {
@@ -518,7 +518,7 @@ func Frame_GetShowHint(obj uintptr) bool {
 }
 
 func Frame_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("Frame_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetTabOrder(obj uintptr) TTabOrder {
@@ -527,7 +527,7 @@ func Frame_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func Frame_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("Frame_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func Frame_GetTabStop(obj uintptr) bool {
@@ -536,7 +536,7 @@ func Frame_GetTabStop(obj uintptr) bool {
 }
 
 func Frame_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("Frame_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetVisible(obj uintptr) bool {
@@ -545,103 +545,103 @@ func Frame_GetVisible(obj uintptr) bool {
 }
 
 func Frame_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Frame_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func Frame_SetOnAlignPosition(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnAlignPosition(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnConstrainedResize(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnConstrainedResize").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnConstrainedResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnConstrainedResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnDockDrop(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnDockDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnGetSiteInfo(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnGetSiteInfo(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnMouseWheel(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnMouseWheel").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnMouseWheel(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnMouseWheel").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnMouseWheelDown(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnMouseWheelDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnMouseWheelUp(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnMouseWheelUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnResize(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnResize").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func Frame_SetOnUnDock(obj uintptr, fn interface{}) {
-	getLazyProc("Frame_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
+func Frame_SetOnUnDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Frame_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func Frame_GetHorzScrollBar(obj uintptr) uintptr {
@@ -650,7 +650,7 @@ func Frame_GetHorzScrollBar(obj uintptr) uintptr {
 }
 
 func Frame_SetHorzScrollBar(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetHorzScrollBar").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetHorzScrollBar").Call(obj, value)
 }
 
 func Frame_GetVertScrollBar(obj uintptr) uintptr {
@@ -659,7 +659,7 @@ func Frame_GetVertScrollBar(obj uintptr) uintptr {
 }
 
 func Frame_SetVertScrollBar(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetVertScrollBar").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetVertScrollBar").Call(obj, value)
 }
 
 func Frame_GetDockClientCount(obj uintptr) int32 {
@@ -689,16 +689,16 @@ func Frame_GetControlCount(obj uintptr) int32 {
 
 func Frame_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("Frame_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func Frame_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("Frame_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func Frame_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("Frame_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetParentWindow").Call(obj, value)
 }
 
 func Frame_GetShowing(obj uintptr) bool {
@@ -712,7 +712,7 @@ func Frame_GetUseDockManager(obj uintptr) bool {
 }
 
 func Frame_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("Frame_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Frame_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func Frame_GetAction(obj uintptr) uintptr {
@@ -721,17 +721,17 @@ func Frame_GetAction(obj uintptr) uintptr {
 }
 
 func Frame_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetAction").Call(obj, value)
 }
 
 func Frame_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Frame_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Frame_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Frame_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("Frame_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Frame_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Frame_GetClientHeight(obj uintptr) int32 {
@@ -740,18 +740,18 @@ func Frame_GetClientHeight(obj uintptr) int32 {
 }
 
 func Frame_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("Frame_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func Frame_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Frame_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Frame_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Frame_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Frame_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Frame_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -761,7 +761,7 @@ func Frame_GetClientWidth(obj uintptr) int32 {
 }
 
 func Frame_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("Frame_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func Frame_GetControlState(obj uintptr) TControlState {
@@ -770,7 +770,7 @@ func Frame_GetControlState(obj uintptr) TControlState {
 }
 
 func Frame_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("Frame_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetControlState").Call(obj, uintptr(value))
 }
 
 func Frame_GetControlStyle(obj uintptr) TControlStyle {
@@ -779,7 +779,7 @@ func Frame_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func Frame_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("Frame_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func Frame_GetFloating(obj uintptr) bool {
@@ -793,7 +793,7 @@ func Frame_GetParent(obj uintptr) uintptr {
 }
 
 func Frame_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetParent").Call(obj, value)
 }
 
 func Frame_GetLeft(obj uintptr) int32 {
@@ -802,7 +802,7 @@ func Frame_GetLeft(obj uintptr) int32 {
 }
 
 func Frame_SetLeft(obj uintptr, value int32) {
-	getLazyProc("Frame_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetLeft").Call(obj, uintptr(value))
 }
 
 func Frame_GetTop(obj uintptr) int32 {
@@ -811,7 +811,7 @@ func Frame_GetTop(obj uintptr) int32 {
 }
 
 func Frame_SetTop(obj uintptr, value int32) {
-	getLazyProc("Frame_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetTop").Call(obj, uintptr(value))
 }
 
 func Frame_GetWidth(obj uintptr) int32 {
@@ -820,7 +820,7 @@ func Frame_GetWidth(obj uintptr) int32 {
 }
 
 func Frame_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Frame_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetWidth").Call(obj, uintptr(value))
 }
 
 func Frame_GetHeight(obj uintptr) int32 {
@@ -829,7 +829,7 @@ func Frame_GetHeight(obj uintptr) int32 {
 }
 
 func Frame_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Frame_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetHeight").Call(obj, uintptr(value))
 }
 
 func Frame_GetCursor(obj uintptr) TCursor {
@@ -838,7 +838,7 @@ func Frame_GetCursor(obj uintptr) TCursor {
 }
 
 func Frame_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Frame_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetCursor").Call(obj, uintptr(value))
 }
 
 func Frame_GetHint(obj uintptr) string {
@@ -847,7 +847,7 @@ func Frame_GetHint(obj uintptr) string {
 }
 
 func Frame_SetHint(obj uintptr, value string) {
-	getLazyProc("Frame_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Frame_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Frame_GetComponentCount(obj uintptr) int32 {
@@ -861,7 +861,7 @@ func Frame_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Frame_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Frame_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Frame_GetOwner(obj uintptr) uintptr {
@@ -875,7 +875,7 @@ func Frame_GetName(obj uintptr) string {
 }
 
 func Frame_SetName(obj uintptr, value string) {
-	getLazyProc("Frame_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Frame_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Frame_GetTag(obj uintptr) int {
@@ -884,7 +884,7 @@ func Frame_GetTag(obj uintptr) int {
 }
 
 func Frame_SetTag(obj uintptr, value int) {
-	getLazyProc("Frame_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Frame_SetTag").Call(obj, uintptr(value))
 }
 
 func Frame_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -893,7 +893,7 @@ func Frame_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func Frame_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetAnchorSideLeft").Call(obj, value)
 }
 
 func Frame_GetAnchorSideTop(obj uintptr) uintptr {
@@ -902,7 +902,7 @@ func Frame_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func Frame_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetAnchorSideTop").Call(obj, value)
 }
 
 func Frame_GetAnchorSideRight(obj uintptr) uintptr {
@@ -911,7 +911,7 @@ func Frame_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func Frame_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetAnchorSideRight").Call(obj, value)
 }
 
 func Frame_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -920,7 +920,7 @@ func Frame_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func Frame_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetAnchorSideBottom").Call(obj, value)
 }
 
 func Frame_GetChildSizing(obj uintptr) uintptr {
@@ -929,7 +929,7 @@ func Frame_GetChildSizing(obj uintptr) uintptr {
 }
 
 func Frame_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetChildSizing").Call(obj, value)
 }
 
 func Frame_GetBorderSpacing(obj uintptr) uintptr {
@@ -938,7 +938,7 @@ func Frame_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func Frame_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("Frame_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("Frame_SetBorderSpacing").Call(obj, value)
 }
 
 func Frame_GetDockClients(obj uintptr, Index int32) uintptr {

@@ -12,11 +12,11 @@ func Brush_Create() uintptr {
 }
 
 func Brush_Free(obj uintptr) {
-	getLazyProc("Brush_Free").Call(obj)
+	_, _, _ = getLazyProc("Brush_Free").Call(obj)
 }
 
 func Brush_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Brush_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Brush_Assign").Call(obj, Source)
 }
 
 func Brush_GetNamePath(obj uintptr) string {
@@ -65,16 +65,16 @@ func Brush_GetBitmap(obj uintptr) uintptr {
 }
 
 func Brush_SetBitmap(obj uintptr, value uintptr) {
-	getLazyProc("Brush_SetBitmap").Call(obj, value)
+	_, _, _ = getLazyProc("Brush_SetBitmap").Call(obj, value)
 }
 
 func Brush_GetHandle(obj uintptr) HBRUSH {
 	ret, _, _ := getLazyProc("Brush_GetHandle").Call(obj)
-	return HBRUSH(ret)
+	return ret
 }
 
 func Brush_SetHandle(obj uintptr, value HBRUSH) {
-	getLazyProc("Brush_SetHandle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Brush_SetHandle").Call(obj, value)
 }
 
 func Brush_GetColor(obj uintptr) TColor {
@@ -83,7 +83,7 @@ func Brush_GetColor(obj uintptr) TColor {
 }
 
 func Brush_SetColor(obj uintptr, value TColor) {
-	getLazyProc("Brush_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Brush_SetColor").Call(obj, uintptr(value))
 }
 
 func Brush_GetStyle(obj uintptr) TBrushStyle {
@@ -92,11 +92,11 @@ func Brush_GetStyle(obj uintptr) TBrushStyle {
 }
 
 func Brush_SetStyle(obj uintptr, value TBrushStyle) {
-	getLazyProc("Brush_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Brush_SetStyle").Call(obj, uintptr(value))
 }
 
-func Brush_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("Brush_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func Brush_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Brush_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func Brush_StaticClassType() TClass {

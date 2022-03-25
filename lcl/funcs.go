@@ -29,7 +29,7 @@ func ShowMessage(msg string) {
 //
 // Show a message box with formatted text.
 //go:noinline
-func ShowMessageFmt(format string, args ...interface{}) {
+func ShowMessageFmt(format string, args ...any) {
 	ShowMessage(fmt.Sprintf(format, args...))
 }
 
@@ -44,7 +44,7 @@ func MessageDlg(Msg string, DlgType TMsgDlgType, Buttons ...uint8) int32 {
 //
 // Checks if the interface is instantiated, and returns an instance pointer if it has been instantiated.
 //go:noinline
-func CheckPtr(value interface{}) uintptr {
+func CheckPtr(value any) uintptr {
 	switch value.(type) {
 	case IObject:
 		if reflect.ValueOf(value).Pointer() == 0 {
@@ -59,7 +59,7 @@ func CheckPtr(value interface{}) uintptr {
 //
 // Simplification of As operation.
 //go:noinline
-func getInstance(value interface{}) (uintptr, unsafe.Pointer) {
+func getInstance(value any) (uintptr, unsafe.Pointer) {
 	var ptr uintptr
 	switch value.(type) {
 	case uintptr:
@@ -81,7 +81,7 @@ func getInstance(value interface{}) (uintptr, unsafe.Pointer) {
 	return ptr, unsafe.Pointer(ptr)
 }
 
-func getUIntPtr(v interface{}) uintptr {
+func getUIntPtr(v any) uintptr {
 	switch v.(type) {
 	case int:
 		return uintptr(v.(int))
@@ -171,7 +171,7 @@ func InputComboEx2(aCaption, aPrompt string, aList IStrings, allowCustomText boo
 // 简化运行。
 //
 // simplify running.
-func RunApp(values ...interface{}) {
+func RunApp(values ...any) {
 	Application.Initialize()
 	Application.SetMainFormOnTaskBar(true)
 	for i := 0; i < len(values); i++ {

@@ -13,7 +13,7 @@ func UpDown_Create(obj uintptr) uintptr {
 }
 
 func UpDown_Free(obj uintptr) {
-	getLazyProc("UpDown_Free").Call(obj)
+	_, _, _ = getLazyProc("UpDown_Free").Call(obj)
 }
 
 func UpDown_CanFocus(obj uintptr) bool {
@@ -32,11 +32,11 @@ func UpDown_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWinCo
 }
 
 func UpDown_DisableAlign(obj uintptr) {
-	getLazyProc("UpDown_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("UpDown_DisableAlign").Call(obj)
 }
 
 func UpDown_EnableAlign(obj uintptr) {
-	getLazyProc("UpDown_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("UpDown_EnableAlign").Call(obj)
 }
 
 func UpDown_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -45,7 +45,7 @@ func UpDown_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func UpDown_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("UpDown_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("UpDown_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func UpDown_Focused(obj uintptr) bool {
@@ -59,62 +59,62 @@ func UpDown_HandleAllocated(obj uintptr) bool {
 }
 
 func UpDown_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("UpDown_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("UpDown_InsertControl").Call(obj, AControl)
 }
 
 func UpDown_Invalidate(obj uintptr) {
-	getLazyProc("UpDown_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("UpDown_Invalidate").Call(obj)
 }
 
 func UpDown_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("UpDown_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("UpDown_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func UpDown_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("UpDown_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("UpDown_RemoveControl").Call(obj, AControl)
 }
 
 func UpDown_Realign(obj uintptr) {
-	getLazyProc("UpDown_Realign").Call(obj)
+	_, _, _ = getLazyProc("UpDown_Realign").Call(obj)
 }
 
 func UpDown_Repaint(obj uintptr) {
-	getLazyProc("UpDown_Repaint").Call(obj)
+	_, _, _ = getLazyProc("UpDown_Repaint").Call(obj)
 }
 
 func UpDown_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("UpDown_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("UpDown_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func UpDown_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("UpDown_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("UpDown_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func UpDown_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("UpDown_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("UpDown_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func UpDown_SetFocus(obj uintptr) {
-	getLazyProc("UpDown_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("UpDown_SetFocus").Call(obj)
 }
 
 func UpDown_Update(obj uintptr) {
-	getLazyProc("UpDown_Update").Call(obj)
+	_, _, _ = getLazyProc("UpDown_Update").Call(obj)
 }
 
 func UpDown_BringToFront(obj uintptr) {
-	getLazyProc("UpDown_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("UpDown_BringToFront").Call(obj)
 }
 
 func UpDown_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("UpDown_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("UpDown_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func UpDown_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("UpDown_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("UpDown_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -129,7 +129,7 @@ func UpDown_HasParent(obj uintptr) bool {
 }
 
 func UpDown_Hide(obj uintptr) {
-	getLazyProc("UpDown_Hide").Call(obj)
+	_, _, _ = getLazyProc("UpDown_Hide").Call(obj)
 }
 
 func UpDown_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -138,27 +138,27 @@ func UpDown_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func UpDown_Refresh(obj uintptr) {
-	getLazyProc("UpDown_Refresh").Call(obj)
+	_, _, _ = getLazyProc("UpDown_Refresh").Call(obj)
 }
 
 func UpDown_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("UpDown_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("UpDown_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func UpDown_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("UpDown_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("UpDown_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func UpDown_SendToBack(obj uintptr) {
-	getLazyProc("UpDown_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("UpDown_SendToBack").Call(obj)
 }
 
 func UpDown_Show(obj uintptr) {
-	getLazyProc("UpDown_Show").Call(obj)
+	_, _, _ = getLazyProc("UpDown_Show").Call(obj)
 }
 
 func UpDown_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -177,7 +177,7 @@ func UpDown_GetTextLen(obj uintptr) int32 {
 }
 
 func UpDown_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("UpDown_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("UpDown_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func UpDown_FindComponent(obj uintptr, AName string) uintptr {
@@ -191,7 +191,7 @@ func UpDown_GetNamePath(obj uintptr) string {
 }
 
 func UpDown_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("UpDown_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("UpDown_Assign").Call(obj, Source)
 }
 
 func UpDown_ClassType(obj uintptr) TClass {
@@ -230,31 +230,31 @@ func UpDown_ToString(obj uintptr) string {
 }
 
 func UpDown_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("UpDown_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("UpDown_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func UpDown_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("UpDown_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("UpDown_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func UpDown_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("UpDown_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("UpDown_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func UpDown_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("UpDown_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("UpDown_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func UpDown_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("UpDown_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("UpDown_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func UpDown_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("UpDown_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("UpDown_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func UpDown_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("UpDown_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("UpDown_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func UpDown_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -308,15 +308,15 @@ func UpDown_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func UpDown_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("UpDown_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("UpDown_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func UpDown_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("UpDown_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("UpDown_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func UpDown_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("UpDown_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("UpDown_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func UpDown_GetAnchors(obj uintptr) TAnchors {
@@ -325,7 +325,7 @@ func UpDown_GetAnchors(obj uintptr) TAnchors {
 }
 
 func UpDown_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("UpDown_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetAnchors").Call(obj, uintptr(value))
 }
 
 func UpDown_GetDoubleBuffered(obj uintptr) bool {
@@ -334,7 +334,7 @@ func UpDown_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func UpDown_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetEnabled(obj uintptr) bool {
@@ -343,7 +343,7 @@ func UpDown_GetEnabled(obj uintptr) bool {
 }
 
 func UpDown_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetHint(obj uintptr) string {
@@ -352,7 +352,7 @@ func UpDown_GetHint(obj uintptr) string {
 }
 
 func UpDown_SetHint(obj uintptr, value string) {
-	getLazyProc("UpDown_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("UpDown_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func UpDown_GetMin(obj uintptr) int32 {
@@ -361,7 +361,7 @@ func UpDown_GetMin(obj uintptr) int32 {
 }
 
 func UpDown_SetMin(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetMin").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetMin").Call(obj, uintptr(value))
 }
 
 func UpDown_GetMax(obj uintptr) int32 {
@@ -370,7 +370,7 @@ func UpDown_GetMax(obj uintptr) int32 {
 }
 
 func UpDown_SetMax(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetMax").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetMax").Call(obj, uintptr(value))
 }
 
 func UpDown_GetIncrement(obj uintptr) int32 {
@@ -379,7 +379,7 @@ func UpDown_GetIncrement(obj uintptr) int32 {
 }
 
 func UpDown_SetIncrement(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetIncrement").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetIncrement").Call(obj, uintptr(value))
 }
 
 func UpDown_GetConstraints(obj uintptr) uintptr {
@@ -388,7 +388,7 @@ func UpDown_GetConstraints(obj uintptr) uintptr {
 }
 
 func UpDown_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetConstraints").Call(obj, value)
 }
 
 func UpDown_GetOrientation(obj uintptr) TUDOrientation {
@@ -397,7 +397,7 @@ func UpDown_GetOrientation(obj uintptr) TUDOrientation {
 }
 
 func UpDown_SetOrientation(obj uintptr, value TUDOrientation) {
-	getLazyProc("UpDown_SetOrientation").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetOrientation").Call(obj, uintptr(value))
 }
 
 func UpDown_GetParentDoubleBuffered(obj uintptr) bool {
@@ -406,7 +406,7 @@ func UpDown_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func UpDown_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetParentShowHint(obj uintptr) bool {
@@ -415,7 +415,7 @@ func UpDown_GetParentShowHint(obj uintptr) bool {
 }
 
 func UpDown_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetPopupMenu(obj uintptr) uintptr {
@@ -424,7 +424,7 @@ func UpDown_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func UpDown_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetPopupMenu").Call(obj, value)
 }
 
 func UpDown_GetPosition(obj uintptr) int32 {
@@ -433,7 +433,7 @@ func UpDown_GetPosition(obj uintptr) int32 {
 }
 
 func UpDown_SetPosition(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetPosition").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetPosition").Call(obj, uintptr(value))
 }
 
 func UpDown_GetShowHint(obj uintptr) bool {
@@ -442,7 +442,7 @@ func UpDown_GetShowHint(obj uintptr) bool {
 }
 
 func UpDown_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetTabOrder(obj uintptr) TTabOrder {
@@ -451,7 +451,7 @@ func UpDown_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func UpDown_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("UpDown_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func UpDown_GetTabStop(obj uintptr) bool {
@@ -460,7 +460,7 @@ func UpDown_GetTabStop(obj uintptr) bool {
 }
 
 func UpDown_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetVisible(obj uintptr) bool {
@@ -469,7 +469,7 @@ func UpDown_GetVisible(obj uintptr) bool {
 }
 
 func UpDown_SetVisible(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetWrap(obj uintptr) bool {
@@ -478,47 +478,47 @@ func UpDown_GetWrap(obj uintptr) bool {
 }
 
 func UpDown_SetWrap(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetWrap").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetWrap").Call(obj, GoBoolToDBool(value))
 }
 
-func UpDown_SetOnChanging(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnChanging").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnChanging(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnChanging").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func UpDown_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("UpDown_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func UpDown_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("UpDown_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func UpDown_GetDockClientCount(obj uintptr) int32 {
@@ -532,7 +532,7 @@ func UpDown_GetDockSite(obj uintptr) bool {
 }
 
 func UpDown_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetMouseInClient(obj uintptr) bool {
@@ -557,16 +557,16 @@ func UpDown_GetControlCount(obj uintptr) int32 {
 
 func UpDown_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("UpDown_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func UpDown_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("UpDown_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func UpDown_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("UpDown_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetParentWindow").Call(obj, value)
 }
 
 func UpDown_GetShowing(obj uintptr) bool {
@@ -580,7 +580,7 @@ func UpDown_GetUseDockManager(obj uintptr) bool {
 }
 
 func UpDown_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("UpDown_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("UpDown_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetAction(obj uintptr) uintptr {
@@ -589,7 +589,7 @@ func UpDown_GetAction(obj uintptr) uintptr {
 }
 
 func UpDown_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetAction").Call(obj, value)
 }
 
 func UpDown_GetAlign(obj uintptr) TAlign {
@@ -598,7 +598,7 @@ func UpDown_GetAlign(obj uintptr) TAlign {
 }
 
 func UpDown_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("UpDown_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetAlign").Call(obj, uintptr(value))
 }
 
 func UpDown_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -607,17 +607,17 @@ func UpDown_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func UpDown_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("UpDown_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func UpDown_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("UpDown_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("UpDown_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func UpDown_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("UpDown_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("UpDown_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func UpDown_GetClientHeight(obj uintptr) int32 {
@@ -626,18 +626,18 @@ func UpDown_GetClientHeight(obj uintptr) int32 {
 }
 
 func UpDown_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func UpDown_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("UpDown_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("UpDown_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func UpDown_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("UpDown_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("UpDown_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -647,7 +647,7 @@ func UpDown_GetClientWidth(obj uintptr) int32 {
 }
 
 func UpDown_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func UpDown_GetControlState(obj uintptr) TControlState {
@@ -656,7 +656,7 @@ func UpDown_GetControlState(obj uintptr) TControlState {
 }
 
 func UpDown_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("UpDown_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetControlState").Call(obj, uintptr(value))
 }
 
 func UpDown_GetControlStyle(obj uintptr) TControlStyle {
@@ -665,7 +665,7 @@ func UpDown_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func UpDown_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("UpDown_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func UpDown_GetFloating(obj uintptr) bool {
@@ -679,7 +679,7 @@ func UpDown_GetParent(obj uintptr) uintptr {
 }
 
 func UpDown_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetParent").Call(obj, value)
 }
 
 func UpDown_GetLeft(obj uintptr) int32 {
@@ -688,7 +688,7 @@ func UpDown_GetLeft(obj uintptr) int32 {
 }
 
 func UpDown_SetLeft(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetLeft").Call(obj, uintptr(value))
 }
 
 func UpDown_GetTop(obj uintptr) int32 {
@@ -697,7 +697,7 @@ func UpDown_GetTop(obj uintptr) int32 {
 }
 
 func UpDown_SetTop(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetTop").Call(obj, uintptr(value))
 }
 
 func UpDown_GetWidth(obj uintptr) int32 {
@@ -706,7 +706,7 @@ func UpDown_GetWidth(obj uintptr) int32 {
 }
 
 func UpDown_SetWidth(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetWidth").Call(obj, uintptr(value))
 }
 
 func UpDown_GetHeight(obj uintptr) int32 {
@@ -715,7 +715,7 @@ func UpDown_GetHeight(obj uintptr) int32 {
 }
 
 func UpDown_SetHeight(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetHeight").Call(obj, uintptr(value))
 }
 
 func UpDown_GetCursor(obj uintptr) TCursor {
@@ -724,7 +724,7 @@ func UpDown_GetCursor(obj uintptr) TCursor {
 }
 
 func UpDown_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("UpDown_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetCursor").Call(obj, uintptr(value))
 }
 
 func UpDown_GetComponentCount(obj uintptr) int32 {
@@ -738,7 +738,7 @@ func UpDown_GetComponentIndex(obj uintptr) int32 {
 }
 
 func UpDown_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("UpDown_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func UpDown_GetOwner(obj uintptr) uintptr {
@@ -752,7 +752,7 @@ func UpDown_GetName(obj uintptr) string {
 }
 
 func UpDown_SetName(obj uintptr, value string) {
-	getLazyProc("UpDown_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("UpDown_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func UpDown_GetTag(obj uintptr) int {
@@ -761,7 +761,7 @@ func UpDown_GetTag(obj uintptr) int {
 }
 
 func UpDown_SetTag(obj uintptr, value int) {
-	getLazyProc("UpDown_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("UpDown_SetTag").Call(obj, uintptr(value))
 }
 
 func UpDown_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -770,7 +770,7 @@ func UpDown_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func UpDown_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetAnchorSideLeft").Call(obj, value)
 }
 
 func UpDown_GetAnchorSideTop(obj uintptr) uintptr {
@@ -779,7 +779,7 @@ func UpDown_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func UpDown_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetAnchorSideTop").Call(obj, value)
 }
 
 func UpDown_GetAnchorSideRight(obj uintptr) uintptr {
@@ -788,7 +788,7 @@ func UpDown_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func UpDown_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetAnchorSideRight").Call(obj, value)
 }
 
 func UpDown_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -797,7 +797,7 @@ func UpDown_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func UpDown_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetAnchorSideBottom").Call(obj, value)
 }
 
 func UpDown_GetChildSizing(obj uintptr) uintptr {
@@ -806,7 +806,7 @@ func UpDown_GetChildSizing(obj uintptr) uintptr {
 }
 
 func UpDown_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetChildSizing").Call(obj, value)
 }
 
 func UpDown_GetBorderSpacing(obj uintptr) uintptr {
@@ -815,7 +815,7 @@ func UpDown_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func UpDown_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("UpDown_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("UpDown_SetBorderSpacing").Call(obj, value)
 }
 
 func UpDown_GetDockClients(obj uintptr, Index int32) uintptr {

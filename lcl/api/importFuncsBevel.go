@@ -13,22 +13,22 @@ func Bevel_Create(obj uintptr) uintptr {
 }
 
 func Bevel_Free(obj uintptr) {
-	getLazyProc("Bevel_Free").Call(obj)
+	_, _, _ = getLazyProc("Bevel_Free").Call(obj)
 }
 
 func Bevel_BringToFront(obj uintptr) {
-	getLazyProc("Bevel_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("Bevel_BringToFront").Call(obj)
 }
 
 func Bevel_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Bevel_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Bevel_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Bevel_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Bevel_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Bevel_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -43,11 +43,11 @@ func Bevel_HasParent(obj uintptr) bool {
 }
 
 func Bevel_Hide(obj uintptr) {
-	getLazyProc("Bevel_Hide").Call(obj)
+	_, _, _ = getLazyProc("Bevel_Hide").Call(obj)
 }
 
 func Bevel_Invalidate(obj uintptr) {
-	getLazyProc("Bevel_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("Bevel_Invalidate").Call(obj)
 }
 
 func Bevel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -56,39 +56,39 @@ func Bevel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func Bevel_Refresh(obj uintptr) {
-	getLazyProc("Bevel_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Bevel_Refresh").Call(obj)
 }
 
 func Bevel_Repaint(obj uintptr) {
-	getLazyProc("Bevel_Repaint").Call(obj)
+	_, _, _ = getLazyProc("Bevel_Repaint").Call(obj)
 }
 
 func Bevel_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Bevel_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Bevel_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Bevel_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Bevel_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Bevel_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Bevel_SendToBack(obj uintptr) {
-	getLazyProc("Bevel_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("Bevel_SendToBack").Call(obj)
 }
 
 func Bevel_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("Bevel_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Bevel_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func Bevel_Show(obj uintptr) {
-	getLazyProc("Bevel_Show").Call(obj)
+	_, _, _ = getLazyProc("Bevel_Show").Call(obj)
 }
 
 func Bevel_Update(obj uintptr) {
-	getLazyProc("Bevel_Update").Call(obj)
+	_, _, _ = getLazyProc("Bevel_Update").Call(obj)
 }
 
 func Bevel_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -107,7 +107,7 @@ func Bevel_GetTextLen(obj uintptr) int32 {
 }
 
 func Bevel_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Bevel_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Bevel_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Bevel_FindComponent(obj uintptr, AName string) uintptr {
@@ -121,7 +121,7 @@ func Bevel_GetNamePath(obj uintptr) string {
 }
 
 func Bevel_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Bevel_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Bevel_Assign").Call(obj, Source)
 }
 
 func Bevel_ClassType(obj uintptr) TClass {
@@ -160,31 +160,31 @@ func Bevel_ToString(obj uintptr) string {
 }
 
 func Bevel_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Bevel_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Bevel_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Bevel_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Bevel_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Bevel_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Bevel_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Bevel_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Bevel_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func Bevel_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Bevel_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Bevel_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func Bevel_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("Bevel_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("Bevel_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func Bevel_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("Bevel_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("Bevel_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func Bevel_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("Bevel_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("Bevel_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func Bevel_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -238,15 +238,15 @@ func Bevel_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func Bevel_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("Bevel_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("Bevel_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func Bevel_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("Bevel_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("Bevel_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func Bevel_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("Bevel_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("Bevel_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func Bevel_GetAlign(obj uintptr) TAlign {
@@ -255,7 +255,7 @@ func Bevel_GetAlign(obj uintptr) TAlign {
 }
 
 func Bevel_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("Bevel_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetAlign").Call(obj, uintptr(value))
 }
 
 func Bevel_GetAnchors(obj uintptr) TAnchors {
@@ -264,7 +264,7 @@ func Bevel_GetAnchors(obj uintptr) TAnchors {
 }
 
 func Bevel_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("Bevel_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetAnchors").Call(obj, uintptr(value))
 }
 
 func Bevel_GetConstraints(obj uintptr) uintptr {
@@ -273,7 +273,7 @@ func Bevel_GetConstraints(obj uintptr) uintptr {
 }
 
 func Bevel_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("Bevel_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("Bevel_SetConstraints").Call(obj, value)
 }
 
 func Bevel_GetParentShowHint(obj uintptr) bool {
@@ -282,7 +282,7 @@ func Bevel_GetParentShowHint(obj uintptr) bool {
 }
 
 func Bevel_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("Bevel_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Bevel_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Bevel_GetShape(obj uintptr) TBevelShape {
@@ -291,7 +291,7 @@ func Bevel_GetShape(obj uintptr) TBevelShape {
 }
 
 func Bevel_SetShape(obj uintptr, value TBevelShape) {
-	getLazyProc("Bevel_SetShape").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetShape").Call(obj, uintptr(value))
 }
 
 func Bevel_GetShowHint(obj uintptr) bool {
@@ -300,7 +300,7 @@ func Bevel_GetShowHint(obj uintptr) bool {
 }
 
 func Bevel_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("Bevel_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Bevel_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Bevel_GetStyle(obj uintptr) TBevelStyle {
@@ -309,7 +309,7 @@ func Bevel_GetStyle(obj uintptr) TBevelStyle {
 }
 
 func Bevel_SetStyle(obj uintptr, value TBevelStyle) {
-	getLazyProc("Bevel_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetStyle").Call(obj, uintptr(value))
 }
 
 func Bevel_GetVisible(obj uintptr) bool {
@@ -318,7 +318,7 @@ func Bevel_GetVisible(obj uintptr) bool {
 }
 
 func Bevel_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Bevel_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Bevel_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func Bevel_GetEnabled(obj uintptr) bool {
@@ -327,7 +327,7 @@ func Bevel_GetEnabled(obj uintptr) bool {
 }
 
 func Bevel_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Bevel_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Bevel_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Bevel_GetAction(obj uintptr) uintptr {
@@ -336,7 +336,7 @@ func Bevel_GetAction(obj uintptr) uintptr {
 }
 
 func Bevel_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("Bevel_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("Bevel_SetAction").Call(obj, value)
 }
 
 func Bevel_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -345,17 +345,17 @@ func Bevel_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func Bevel_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("Bevel_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func Bevel_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Bevel_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Bevel_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Bevel_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("Bevel_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Bevel_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Bevel_GetClientHeight(obj uintptr) int32 {
@@ -364,18 +364,18 @@ func Bevel_GetClientHeight(obj uintptr) int32 {
 }
 
 func Bevel_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("Bevel_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func Bevel_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Bevel_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Bevel_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Bevel_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Bevel_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Bevel_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -385,7 +385,7 @@ func Bevel_GetClientWidth(obj uintptr) int32 {
 }
 
 func Bevel_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("Bevel_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func Bevel_GetControlState(obj uintptr) TControlState {
@@ -394,7 +394,7 @@ func Bevel_GetControlState(obj uintptr) TControlState {
 }
 
 func Bevel_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("Bevel_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetControlState").Call(obj, uintptr(value))
 }
 
 func Bevel_GetControlStyle(obj uintptr) TControlStyle {
@@ -403,7 +403,7 @@ func Bevel_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func Bevel_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("Bevel_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func Bevel_GetFloating(obj uintptr) bool {
@@ -417,7 +417,7 @@ func Bevel_GetParent(obj uintptr) uintptr {
 }
 
 func Bevel_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("Bevel_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("Bevel_SetParent").Call(obj, value)
 }
 
 func Bevel_GetLeft(obj uintptr) int32 {
@@ -426,7 +426,7 @@ func Bevel_GetLeft(obj uintptr) int32 {
 }
 
 func Bevel_SetLeft(obj uintptr, value int32) {
-	getLazyProc("Bevel_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetLeft").Call(obj, uintptr(value))
 }
 
 func Bevel_GetTop(obj uintptr) int32 {
@@ -435,7 +435,7 @@ func Bevel_GetTop(obj uintptr) int32 {
 }
 
 func Bevel_SetTop(obj uintptr, value int32) {
-	getLazyProc("Bevel_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetTop").Call(obj, uintptr(value))
 }
 
 func Bevel_GetWidth(obj uintptr) int32 {
@@ -444,7 +444,7 @@ func Bevel_GetWidth(obj uintptr) int32 {
 }
 
 func Bevel_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Bevel_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetWidth").Call(obj, uintptr(value))
 }
 
 func Bevel_GetHeight(obj uintptr) int32 {
@@ -453,7 +453,7 @@ func Bevel_GetHeight(obj uintptr) int32 {
 }
 
 func Bevel_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Bevel_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetHeight").Call(obj, uintptr(value))
 }
 
 func Bevel_GetCursor(obj uintptr) TCursor {
@@ -462,7 +462,7 @@ func Bevel_GetCursor(obj uintptr) TCursor {
 }
 
 func Bevel_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Bevel_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetCursor").Call(obj, uintptr(value))
 }
 
 func Bevel_GetHint(obj uintptr) string {
@@ -471,7 +471,7 @@ func Bevel_GetHint(obj uintptr) string {
 }
 
 func Bevel_SetHint(obj uintptr, value string) {
-	getLazyProc("Bevel_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Bevel_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Bevel_GetComponentCount(obj uintptr) int32 {
@@ -485,7 +485,7 @@ func Bevel_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Bevel_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Bevel_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Bevel_GetOwner(obj uintptr) uintptr {
@@ -499,7 +499,7 @@ func Bevel_GetName(obj uintptr) string {
 }
 
 func Bevel_SetName(obj uintptr, value string) {
-	getLazyProc("Bevel_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Bevel_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Bevel_GetTag(obj uintptr) int {
@@ -508,7 +508,7 @@ func Bevel_GetTag(obj uintptr) int {
 }
 
 func Bevel_SetTag(obj uintptr, value int) {
-	getLazyProc("Bevel_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bevel_SetTag").Call(obj, uintptr(value))
 }
 
 func Bevel_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -517,7 +517,7 @@ func Bevel_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func Bevel_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("Bevel_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("Bevel_SetAnchorSideLeft").Call(obj, value)
 }
 
 func Bevel_GetAnchorSideTop(obj uintptr) uintptr {
@@ -526,7 +526,7 @@ func Bevel_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func Bevel_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("Bevel_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("Bevel_SetAnchorSideTop").Call(obj, value)
 }
 
 func Bevel_GetAnchorSideRight(obj uintptr) uintptr {
@@ -535,7 +535,7 @@ func Bevel_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func Bevel_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("Bevel_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("Bevel_SetAnchorSideRight").Call(obj, value)
 }
 
 func Bevel_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -544,7 +544,7 @@ func Bevel_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func Bevel_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("Bevel_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("Bevel_SetAnchorSideBottom").Call(obj, value)
 }
 
 func Bevel_GetBorderSpacing(obj uintptr) uintptr {
@@ -553,7 +553,7 @@ func Bevel_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func Bevel_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("Bevel_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("Bevel_SetBorderSpacing").Call(obj, value)
 }
 
 func Bevel_GetComponents(obj uintptr, AIndex int32) uintptr {

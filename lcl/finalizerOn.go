@@ -12,7 +12,7 @@ package lcl
 
 import "runtime"
 
-func setFinalizer(obj interface{}, finalizer interface{}) {
+func setFinalizer(obj any, finalizer any) {
 	runtime.SetFinalizer(obj, finalizer)
 
 }

@@ -13,7 +13,7 @@ package bitmap
 import (
 	"bytes"
 	"errors"
-	lcl "github.com/rarnu/golcl/lcl"
+	"github.com/rarnu/golcl/lcl"
 	"image"
 	"image/gif"
 	"image/jpeg"

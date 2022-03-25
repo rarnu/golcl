@@ -34,7 +34,7 @@ func NewButton(owner IComponent) *TButton {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsButton(obj interface{}) *TButton {
+func AsButton(obj any) *TButton {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

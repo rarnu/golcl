@@ -13,11 +13,11 @@ func FindDialog_Create(obj uintptr) uintptr {
 }
 
 func FindDialog_Free(obj uintptr) {
-	getLazyProc("FindDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("FindDialog_Free").Call(obj)
 }
 
 func FindDialog_CloseDialog(obj uintptr) {
-	getLazyProc("FindDialog_CloseDialog").Call(obj)
+	_, _, _ = getLazyProc("FindDialog_CloseDialog").Call(obj)
 }
 
 func FindDialog_Execute(obj uintptr) bool {
@@ -41,7 +41,7 @@ func FindDialog_HasParent(obj uintptr) bool {
 }
 
 func FindDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("FindDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("FindDialog_Assign").Call(obj, Source)
 }
 
 func FindDialog_ClassType(obj uintptr) TClass {
@@ -85,17 +85,17 @@ func FindDialog_GetLeft(obj uintptr) int32 {
 }
 
 func FindDialog_SetLeft(obj uintptr, value int32) {
-	getLazyProc("FindDialog_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FindDialog_SetLeft").Call(obj, uintptr(value))
 }
 
 func FindDialog_GetPosition(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("FindDialog_GetPosition").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("FindDialog_GetPosition").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func FindDialog_SetPosition(obj uintptr, value TPoint) {
-	getLazyProc("FindDialog_SetPosition").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("FindDialog_SetPosition").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func FindDialog_GetTop(obj uintptr) int32 {
@@ -104,7 +104,7 @@ func FindDialog_GetTop(obj uintptr) int32 {
 }
 
 func FindDialog_SetTop(obj uintptr, value int32) {
-	getLazyProc("FindDialog_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FindDialog_SetTop").Call(obj, uintptr(value))
 }
 
 func FindDialog_GetFindText(obj uintptr) string {
@@ -113,7 +113,7 @@ func FindDialog_GetFindText(obj uintptr) string {
 }
 
 func FindDialog_SetFindText(obj uintptr, value string) {
-	getLazyProc("FindDialog_SetFindText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("FindDialog_SetFindText").Call(obj, GoStrToDStr(value))
 }
 
 func FindDialog_GetOptions(obj uintptr) TFindOptions {
@@ -122,24 +122,24 @@ func FindDialog_GetOptions(obj uintptr) TFindOptions {
 }
 
 func FindDialog_SetOptions(obj uintptr, value TFindOptions) {
-	getLazyProc("FindDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FindDialog_SetOptions").Call(obj, uintptr(value))
 }
 
-func FindDialog_SetOnFind(obj uintptr, fn interface{}) {
-	getLazyProc("FindDialog_SetOnFind").Call(obj, addEventToMap(obj, fn))
+func FindDialog_SetOnFind(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FindDialog_SetOnFind").Call(obj, addEventToMap(obj, fn))
 }
 
 func FindDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("FindDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func FindDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("FindDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func FindDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FindDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func FindDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("FindDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func FindDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FindDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func FindDialog_GetComponentCount(obj uintptr) int32 {
@@ -153,7 +153,7 @@ func FindDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func FindDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("FindDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FindDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func FindDialog_GetOwner(obj uintptr) uintptr {
@@ -167,7 +167,7 @@ func FindDialog_GetName(obj uintptr) string {
 }
 
 func FindDialog_SetName(obj uintptr, value string) {
-	getLazyProc("FindDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("FindDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func FindDialog_GetTag(obj uintptr) int {
@@ -176,7 +176,7 @@ func FindDialog_GetTag(obj uintptr) int {
 }
 
 func FindDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("FindDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FindDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func FindDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

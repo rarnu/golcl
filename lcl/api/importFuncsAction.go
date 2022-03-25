@@ -12,7 +12,7 @@ func Action_Create(obj uintptr) uintptr {
 }
 
 func Action_Free(obj uintptr) {
-	getLazyProc("Action_Free").Call(obj)
+	_, _, _ = getLazyProc("Action_Free").Call(obj)
 }
 
 func Action_Execute(obj uintptr) bool {
@@ -41,7 +41,7 @@ func Action_GetNamePath(obj uintptr) string {
 }
 
 func Action_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Action_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Action_Assign").Call(obj, Source)
 }
 
 func Action_ClassType(obj uintptr) TClass {
@@ -85,7 +85,7 @@ func Action_GetAutoCheck(obj uintptr) bool {
 }
 
 func Action_SetAutoCheck(obj uintptr, value bool) {
-	getLazyProc("Action_SetAutoCheck").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Action_SetAutoCheck").Call(obj, GoBoolToDBool(value))
 }
 
 func Action_GetCaption(obj uintptr) string {
@@ -94,7 +94,7 @@ func Action_GetCaption(obj uintptr) string {
 }
 
 func Action_SetCaption(obj uintptr, value string) {
-	getLazyProc("Action_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Action_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func Action_GetChecked(obj uintptr) bool {
@@ -103,7 +103,7 @@ func Action_GetChecked(obj uintptr) bool {
 }
 
 func Action_SetChecked(obj uintptr, value bool) {
-	getLazyProc("Action_SetChecked").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Action_SetChecked").Call(obj, GoBoolToDBool(value))
 }
 
 func Action_GetEnabled(obj uintptr) bool {
@@ -112,7 +112,7 @@ func Action_GetEnabled(obj uintptr) bool {
 }
 
 func Action_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Action_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Action_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Action_GetGroupIndex(obj uintptr) int32 {
@@ -121,7 +121,7 @@ func Action_GetGroupIndex(obj uintptr) int32 {
 }
 
 func Action_SetGroupIndex(obj uintptr, value int32) {
-	getLazyProc("Action_SetGroupIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Action_SetGroupIndex").Call(obj, uintptr(value))
 }
 
 func Action_GetHint(obj uintptr) string {
@@ -130,7 +130,7 @@ func Action_GetHint(obj uintptr) string {
 }
 
 func Action_SetHint(obj uintptr, value string) {
-	getLazyProc("Action_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Action_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Action_GetImageIndex(obj uintptr) int32 {
@@ -139,7 +139,7 @@ func Action_GetImageIndex(obj uintptr) int32 {
 }
 
 func Action_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("Action_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Action_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func Action_GetShortCut(obj uintptr) TShortCut {
@@ -148,7 +148,7 @@ func Action_GetShortCut(obj uintptr) TShortCut {
 }
 
 func Action_SetShortCut(obj uintptr, value TShortCut) {
-	getLazyProc("Action_SetShortCut").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Action_SetShortCut").Call(obj, uintptr(value))
 }
 
 func Action_GetVisible(obj uintptr) bool {
@@ -157,15 +157,15 @@ func Action_GetVisible(obj uintptr) bool {
 }
 
 func Action_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Action_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Action_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func Action_SetOnExecute(obj uintptr, fn interface{}) {
-	getLazyProc("Action_SetOnExecute").Call(obj, addEventToMap(obj, fn))
+func Action_SetOnExecute(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Action_SetOnExecute").Call(obj, addEventToMap(obj, fn))
 }
 
-func Action_SetOnUpdate(obj uintptr, fn interface{}) {
-	getLazyProc("Action_SetOnUpdate").Call(obj, addEventToMap(obj, fn))
+func Action_SetOnUpdate(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Action_SetOnUpdate").Call(obj, addEventToMap(obj, fn))
 }
 
 func Action_GetIndex(obj uintptr) int32 {
@@ -174,7 +174,7 @@ func Action_GetIndex(obj uintptr) int32 {
 }
 
 func Action_SetIndex(obj uintptr, value int32) {
-	getLazyProc("Action_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Action_SetIndex").Call(obj, uintptr(value))
 }
 
 func Action_GetComponentCount(obj uintptr) int32 {
@@ -188,7 +188,7 @@ func Action_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Action_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Action_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Action_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Action_GetOwner(obj uintptr) uintptr {
@@ -202,7 +202,7 @@ func Action_GetName(obj uintptr) string {
 }
 
 func Action_SetName(obj uintptr, value string) {
-	getLazyProc("Action_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Action_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Action_GetTag(obj uintptr) int {
@@ -211,7 +211,7 @@ func Action_GetTag(obj uintptr) int {
 }
 
 func Action_SetTag(obj uintptr, value int) {
-	getLazyProc("Action_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Action_SetTag").Call(obj, uintptr(value))
 }
 
 func Action_GetComponents(obj uintptr, AIndex int32) uintptr {

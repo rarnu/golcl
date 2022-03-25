@@ -8,19 +8,19 @@ import (
 //--------------------------- TGridColumnTitle ---------------------------
 
 func GridColumnTitle_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("GridColumnTitle_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("GridColumnTitle_Assign").Call(obj, Source)
 }
 
 func GridColumnTitle_FillTitleDefaultFont(obj uintptr) {
-	getLazyProc("GridColumnTitle_FillTitleDefaultFont").Call(obj)
+	_, _, _ = getLazyProc("GridColumnTitle_FillTitleDefaultFont").Call(obj)
 }
 
 func GridColumnTitle_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("GridColumnTitle_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("GridColumnTitle_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func GridColumnTitle_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("GridColumnTitle_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("GridColumnTitle_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func GridColumnTitle_IsDefault(obj uintptr) bool {
@@ -79,7 +79,7 @@ func GridColumnTitle_GetAlignment(obj uintptr) TAlignment {
 }
 
 func GridColumnTitle_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("GridColumnTitle_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumnTitle_SetAlignment").Call(obj, uintptr(value))
 }
 
 func GridColumnTitle_GetCaption(obj uintptr) string {
@@ -88,7 +88,7 @@ func GridColumnTitle_GetCaption(obj uintptr) string {
 }
 
 func GridColumnTitle_SetCaption(obj uintptr, value string) {
-	getLazyProc("GridColumnTitle_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("GridColumnTitle_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func GridColumnTitle_GetColor(obj uintptr) TColor {
@@ -97,7 +97,7 @@ func GridColumnTitle_GetColor(obj uintptr) TColor {
 }
 
 func GridColumnTitle_SetColor(obj uintptr, value TColor) {
-	getLazyProc("GridColumnTitle_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumnTitle_SetColor").Call(obj, uintptr(value))
 }
 
 func GridColumnTitle_GetFont(obj uintptr) uintptr {
@@ -106,7 +106,7 @@ func GridColumnTitle_GetFont(obj uintptr) uintptr {
 }
 
 func GridColumnTitle_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("GridColumnTitle_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("GridColumnTitle_SetFont").Call(obj, value)
 }
 
 func GridColumnTitle_GetImageIndex(obj uintptr) int32 {
@@ -115,7 +115,7 @@ func GridColumnTitle_GetImageIndex(obj uintptr) int32 {
 }
 
 func GridColumnTitle_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("GridColumnTitle_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumnTitle_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func GridColumnTitle_GetImageLayout(obj uintptr) TButtonLayout {
@@ -124,7 +124,7 @@ func GridColumnTitle_GetImageLayout(obj uintptr) TButtonLayout {
 }
 
 func GridColumnTitle_SetImageLayout(obj uintptr, value TButtonLayout) {
-	getLazyProc("GridColumnTitle_SetImageLayout").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumnTitle_SetImageLayout").Call(obj, uintptr(value))
 }
 
 func GridColumnTitle_GetLayout(obj uintptr) TTextLayout {
@@ -133,7 +133,7 @@ func GridColumnTitle_GetLayout(obj uintptr) TTextLayout {
 }
 
 func GridColumnTitle_SetLayout(obj uintptr, value TTextLayout) {
-	getLazyProc("GridColumnTitle_SetLayout").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumnTitle_SetLayout").Call(obj, uintptr(value))
 }
 
 func GridColumnTitle_GetMultiLine(obj uintptr) bool {
@@ -142,7 +142,7 @@ func GridColumnTitle_GetMultiLine(obj uintptr) bool {
 }
 
 func GridColumnTitle_SetMultiLine(obj uintptr, value bool) {
-	getLazyProc("GridColumnTitle_SetMultiLine").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("GridColumnTitle_SetMultiLine").Call(obj, GoBoolToDBool(value))
 }
 
 func GridColumnTitle_GetPrefixOption(obj uintptr) TPrefixOption {
@@ -151,7 +151,7 @@ func GridColumnTitle_GetPrefixOption(obj uintptr) TPrefixOption {
 }
 
 func GridColumnTitle_SetPrefixOption(obj uintptr, value TPrefixOption) {
-	getLazyProc("GridColumnTitle_SetPrefixOption").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumnTitle_SetPrefixOption").Call(obj, uintptr(value))
 }
 
 func GridColumnTitle_StaticClassType() TClass {

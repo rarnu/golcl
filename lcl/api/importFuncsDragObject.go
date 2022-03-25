@@ -13,19 +13,19 @@ func DragObject_Create(obj uintptr) uintptr {
 }
 
 func DragObject_Free(obj uintptr) {
-	getLazyProc("DragObject_Free").Call(obj)
+	_, _, _ = getLazyProc("DragObject_Free").Call(obj)
 }
 
 func DragObject_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("DragObject_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("DragObject_Assign").Call(obj, Source)
 }
 
 func DragObject_HideDragImage(obj uintptr) {
-	getLazyProc("DragObject_HideDragImage").Call(obj)
+	_, _, _ = getLazyProc("DragObject_HideDragImage").Call(obj)
 }
 
 func DragObject_ShowDragImage(obj uintptr) {
-	getLazyProc("DragObject_ShowDragImage").Call(obj)
+	_, _, _ = getLazyProc("DragObject_ShowDragImage").Call(obj)
 }
 
 func DragObject_ClassType(obj uintptr) TClass {
@@ -69,17 +69,17 @@ func DragObject_GetAlwaysShowDragImages(obj uintptr) bool {
 }
 
 func DragObject_SetAlwaysShowDragImages(obj uintptr, value bool) {
-	getLazyProc("DragObject_SetAlwaysShowDragImages").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DragObject_SetAlwaysShowDragImages").Call(obj, GoBoolToDBool(value))
 }
 
 func DragObject_GetDragPos(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("DragObject_GetDragPos").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DragObject_GetDragPos").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DragObject_SetDragPos(obj uintptr, value TPoint) {
-	getLazyProc("DragObject_SetDragPos").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("DragObject_SetDragPos").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func DragObject_GetDragTarget(obj uintptr) uintptr {
@@ -88,17 +88,17 @@ func DragObject_GetDragTarget(obj uintptr) uintptr {
 }
 
 func DragObject_SetDragTarget(obj uintptr, value uintptr) {
-	getLazyProc("DragObject_SetDragTarget").Call(obj, value)
+	_, _, _ = getLazyProc("DragObject_SetDragTarget").Call(obj, value)
 }
 
 func DragObject_GetDragTargetPos(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("DragObject_GetDragTargetPos").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DragObject_GetDragTargetPos").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DragObject_SetDragTargetPos(obj uintptr, value TPoint) {
-	getLazyProc("DragObject_SetDragTargetPos").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("DragObject_SetDragTargetPos").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func DragObject_GetDropped(obj uintptr) bool {

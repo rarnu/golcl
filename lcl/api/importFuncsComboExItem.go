@@ -8,7 +8,7 @@ import (
 //--------------------------- TComboExItem ---------------------------
 
 func ComboExItem_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ComboExItem_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ComboExItem_Assign").Call(obj, Source)
 }
 
 func ComboExItem_GetNamePath(obj uintptr) string {
@@ -57,7 +57,7 @@ func ComboExItem_GetIndent(obj uintptr) int32 {
 }
 
 func ComboExItem_SetIndent(obj uintptr, value int32) {
-	getLazyProc("ComboExItem_SetIndent").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboExItem_SetIndent").Call(obj, uintptr(value))
 }
 
 func ComboExItem_GetOverlayImageIndex(obj uintptr) int32 {
@@ -66,7 +66,7 @@ func ComboExItem_GetOverlayImageIndex(obj uintptr) int32 {
 }
 
 func ComboExItem_SetOverlayImageIndex(obj uintptr, value int32) {
-	getLazyProc("ComboExItem_SetOverlayImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboExItem_SetOverlayImageIndex").Call(obj, uintptr(value))
 }
 
 func ComboExItem_GetData(obj uintptr) unsafe.Pointer {
@@ -75,7 +75,7 @@ func ComboExItem_GetData(obj uintptr) unsafe.Pointer {
 }
 
 func ComboExItem_SetData(obj uintptr, value unsafe.Pointer) {
-	getLazyProc("ComboExItem_SetData").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboExItem_SetData").Call(obj, uintptr(value))
 }
 
 func ComboExItem_GetCaption(obj uintptr) string {
@@ -84,7 +84,7 @@ func ComboExItem_GetCaption(obj uintptr) string {
 }
 
 func ComboExItem_SetCaption(obj uintptr, value string) {
-	getLazyProc("ComboExItem_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ComboExItem_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func ComboExItem_GetImageIndex(obj uintptr) int32 {
@@ -93,7 +93,7 @@ func ComboExItem_GetImageIndex(obj uintptr) int32 {
 }
 
 func ComboExItem_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("ComboExItem_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboExItem_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func ComboExItem_GetCollection(obj uintptr) uintptr {
@@ -102,7 +102,7 @@ func ComboExItem_GetCollection(obj uintptr) uintptr {
 }
 
 func ComboExItem_SetCollection(obj uintptr, value uintptr) {
-	getLazyProc("ComboExItem_SetCollection").Call(obj, value)
+	_, _, _ = getLazyProc("ComboExItem_SetCollection").Call(obj, value)
 }
 
 func ComboExItem_GetIndex(obj uintptr) int32 {
@@ -111,7 +111,7 @@ func ComboExItem_GetIndex(obj uintptr) int32 {
 }
 
 func ComboExItem_SetIndex(obj uintptr, value int32) {
-	getLazyProc("ComboExItem_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboExItem_SetIndex").Call(obj, uintptr(value))
 }
 
 func ComboExItem_GetDisplayName(obj uintptr) string {
@@ -120,7 +120,7 @@ func ComboExItem_GetDisplayName(obj uintptr) string {
 }
 
 func ComboExItem_SetDisplayName(obj uintptr, value string) {
-	getLazyProc("ComboExItem_SetDisplayName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ComboExItem_SetDisplayName").Call(obj, GoStrToDStr(value))
 }
 
 func ComboExItem_StaticClassType() TClass {

@@ -76,7 +76,7 @@ func setFiledVal(name string, instance uintptr, v reflect.Value) {
 	}
 }
 
-func newGoFormInstance(out interface{}) reflect.Value {
+func newGoFormInstance(out any) reflect.Value {
 	// out是一个 **TXXForm的变量指针，未进行分配内存，表现形式为 **TXXX，每使用一个Elem()减少一个
 	vt := reflect.TypeOf(out).Elem()
 	v := reflect.New(vt.Elem())
@@ -126,7 +126,7 @@ func fullFiledVal(f IComponent, goInstance reflect.Value, fullSubComponent, afte
 }
 
 // 共用的一个从资源中加载构建对象
-func resObjectBuild(typ int, owner IComponent, appInst uintptr, fields ...interface{}) IComponent {
+func resObjectBuild(typ int, owner IComponent, appInst uintptr, fields ...any) IComponent {
 	if !DEBUG {
 		defer func() {
 			if err := recover(); err != nil {
@@ -139,7 +139,7 @@ func resObjectBuild(typ int, owner IComponent, appInst uintptr, fields ...interf
 
 	var fullSubComponent bool
 	var afterBindSubComponentsEvents bool
-	var field1 interface{}
+	var field1 any
 	var goInstance reflect.Value
 
 	// 初始创建时是否使用缩放
@@ -187,7 +187,7 @@ func resObjectBuild(typ int, owner IComponent, appInst uintptr, fields ...interf
 	}
 
 	// 查找并构建Form
-	findAndBuildForm := func(field interface{}) error {
+	findAndBuildForm := func(field any) error {
 		res, err := findFormResource(field)
 		// 找到了对应的Form资源
 		if err == nil {

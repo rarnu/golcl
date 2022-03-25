@@ -7,7 +7,7 @@ import (
 //--------------------------- TControlBorderSpacing ---------------------------
 
 func ControlBorderSpacing_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ControlBorderSpacing_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ControlBorderSpacing_Assign").Call(obj, Source)
 }
 
 func ControlBorderSpacing_GetNamePath(obj uintptr) string {
@@ -105,8 +105,8 @@ func ControlBorderSpacing_GetControlBottom(obj uintptr) int32 {
 	return int32(ret)
 }
 
-func ControlBorderSpacing_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("ControlBorderSpacing_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func ControlBorderSpacing_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func ControlBorderSpacing_GetLeft(obj uintptr) int32 {
@@ -115,7 +115,7 @@ func ControlBorderSpacing_GetLeft(obj uintptr) int32 {
 }
 
 func ControlBorderSpacing_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ControlBorderSpacing_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetLeft").Call(obj, uintptr(value))
 }
 
 func ControlBorderSpacing_GetTop(obj uintptr) int32 {
@@ -124,7 +124,7 @@ func ControlBorderSpacing_GetTop(obj uintptr) int32 {
 }
 
 func ControlBorderSpacing_SetTop(obj uintptr, value int32) {
-	getLazyProc("ControlBorderSpacing_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetTop").Call(obj, uintptr(value))
 }
 
 func ControlBorderSpacing_GetRight(obj uintptr) int32 {
@@ -133,7 +133,7 @@ func ControlBorderSpacing_GetRight(obj uintptr) int32 {
 }
 
 func ControlBorderSpacing_SetRight(obj uintptr, value int32) {
-	getLazyProc("ControlBorderSpacing_SetRight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetRight").Call(obj, uintptr(value))
 }
 
 func ControlBorderSpacing_GetBottom(obj uintptr) int32 {
@@ -142,7 +142,7 @@ func ControlBorderSpacing_GetBottom(obj uintptr) int32 {
 }
 
 func ControlBorderSpacing_SetBottom(obj uintptr, value int32) {
-	getLazyProc("ControlBorderSpacing_SetBottom").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetBottom").Call(obj, uintptr(value))
 }
 
 func ControlBorderSpacing_GetAround(obj uintptr) int32 {
@@ -151,7 +151,7 @@ func ControlBorderSpacing_GetAround(obj uintptr) int32 {
 }
 
 func ControlBorderSpacing_SetAround(obj uintptr, value int32) {
-	getLazyProc("ControlBorderSpacing_SetAround").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetAround").Call(obj, uintptr(value))
 }
 
 func ControlBorderSpacing_GetInnerBorder(obj uintptr) int32 {
@@ -160,7 +160,7 @@ func ControlBorderSpacing_GetInnerBorder(obj uintptr) int32 {
 }
 
 func ControlBorderSpacing_SetInnerBorder(obj uintptr, value int32) {
-	getLazyProc("ControlBorderSpacing_SetInnerBorder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetInnerBorder").Call(obj, uintptr(value))
 }
 
 func ControlBorderSpacing_GetCellAlignHorizontal(obj uintptr) TControlCellAlign {
@@ -169,7 +169,7 @@ func ControlBorderSpacing_GetCellAlignHorizontal(obj uintptr) TControlCellAlign 
 }
 
 func ControlBorderSpacing_SetCellAlignHorizontal(obj uintptr, value TControlCellAlign) {
-	getLazyProc("ControlBorderSpacing_SetCellAlignHorizontal").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetCellAlignHorizontal").Call(obj, uintptr(value))
 }
 
 func ControlBorderSpacing_GetCellAlignVertical(obj uintptr) TControlCellAlign {
@@ -178,7 +178,7 @@ func ControlBorderSpacing_GetCellAlignVertical(obj uintptr) TControlCellAlign {
 }
 
 func ControlBorderSpacing_SetCellAlignVertical(obj uintptr, value TControlCellAlign) {
-	getLazyProc("ControlBorderSpacing_SetCellAlignVertical").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetCellAlignVertical").Call(obj, uintptr(value))
 }
 
 func ControlBorderSpacing_GetSpace(obj uintptr, Kind TAnchorKind) int32 {
@@ -187,7 +187,7 @@ func ControlBorderSpacing_GetSpace(obj uintptr, Kind TAnchorKind) int32 {
 }
 
 func ControlBorderSpacing_SetSpace(obj uintptr, Kind TAnchorKind, value int32) {
-	getLazyProc("ControlBorderSpacing_SetSpace").Call(obj, uintptr(Kind), uintptr(value))
+	_, _, _ = getLazyProc("ControlBorderSpacing_SetSpace").Call(obj, uintptr(Kind), uintptr(value))
 }
 
 func ControlBorderSpacing_StaticClassType() TClass {

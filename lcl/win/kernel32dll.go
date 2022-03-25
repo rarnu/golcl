@@ -392,7 +392,7 @@ func GetSystemInfo(lpSystemInfo *TSystemInfo) bool {
 	return r != 0
 }
 
-func OutputDebugString(v ...interface{}) {
+func OutputDebugString(v ...any) {
 	_OutputDebugString.Call(uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(fmt.Sprintln(v...)))))
 }
 

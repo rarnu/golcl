@@ -12,7 +12,7 @@ func ListItems_Create(obj uintptr) uintptr {
 }
 
 func ListItems_Free(obj uintptr) {
-	getLazyProc("ListItems_Free").Call(obj)
+	_, _, _ = getLazyProc("ListItems_Free").Call(obj)
 }
 
 func ListItems_Add(obj uintptr) uintptr {
@@ -21,23 +21,23 @@ func ListItems_Add(obj uintptr) uintptr {
 }
 
 func ListItems_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ListItems_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ListItems_Assign").Call(obj, Source)
 }
 
 func ListItems_BeginUpdate(obj uintptr) {
-	getLazyProc("ListItems_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("ListItems_BeginUpdate").Call(obj)
 }
 
 func ListItems_Clear(obj uintptr) {
-	getLazyProc("ListItems_Clear").Call(obj)
+	_, _, _ = getLazyProc("ListItems_Clear").Call(obj)
 }
 
 func ListItems_Delete(obj uintptr, Index int32) {
-	getLazyProc("ListItems_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("ListItems_Delete").Call(obj, uintptr(Index))
 }
 
 func ListItems_EndUpdate(obj uintptr) {
-	getLazyProc("ListItems_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("ListItems_EndUpdate").Call(obj)
 }
 
 func ListItems_IndexOf(obj uintptr, Value uintptr) int32 {
@@ -96,7 +96,7 @@ func ListItems_GetCount(obj uintptr) int32 {
 }
 
 func ListItems_SetCount(obj uintptr, value int32) {
-	getLazyProc("ListItems_SetCount").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListItems_SetCount").Call(obj, uintptr(value))
 }
 
 func ListItems_GetOwner(obj uintptr) uintptr {
@@ -110,7 +110,7 @@ func ListItems_GetItem(obj uintptr, Index int32) uintptr {
 }
 
 func ListItems_SetItem(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("ListItems_SetItem").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("ListItems_SetItem").Call(obj, uintptr(Index), value)
 }
 
 func ListItems_StaticClassType() TClass {

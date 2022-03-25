@@ -10,7 +10,7 @@
 
 package lcl
 
-func (a *TApplication) SetIconResId(id int) {
+func (a *TApplication) SetIconResId(_ int) {
 	// 不支持此方法
 	// This method is not supported
 }

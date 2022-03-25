@@ -13,7 +13,7 @@ func ToolButton_Create(obj uintptr) uintptr {
 }
 
 func ToolButton_Free(obj uintptr) {
-	getLazyProc("ToolButton_Free").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_Free").Call(obj)
 }
 
 func ToolButton_CheckMenuDropdown(obj uintptr) bool {
@@ -22,26 +22,26 @@ func ToolButton_CheckMenuDropdown(obj uintptr) bool {
 }
 
 func ToolButton_Click(obj uintptr) {
-	getLazyProc("ToolButton_Click").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_Click").Call(obj)
 }
 
 func ToolButton_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("ToolButton_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("ToolButton_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func ToolButton_BringToFront(obj uintptr) {
-	getLazyProc("ToolButton_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_BringToFront").Call(obj)
 }
 
 func ToolButton_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ToolButton_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ToolButton_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ToolButton_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ToolButton_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ToolButton_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -56,11 +56,11 @@ func ToolButton_HasParent(obj uintptr) bool {
 }
 
 func ToolButton_Hide(obj uintptr) {
-	getLazyProc("ToolButton_Hide").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_Hide").Call(obj)
 }
 
 func ToolButton_Invalidate(obj uintptr) {
-	getLazyProc("ToolButton_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_Invalidate").Call(obj)
 }
 
 func ToolButton_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -69,35 +69,35 @@ func ToolButton_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int
 }
 
 func ToolButton_Refresh(obj uintptr) {
-	getLazyProc("ToolButton_Refresh").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_Refresh").Call(obj)
 }
 
 func ToolButton_Repaint(obj uintptr) {
-	getLazyProc("ToolButton_Repaint").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_Repaint").Call(obj)
 }
 
 func ToolButton_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ToolButton_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ToolButton_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ToolButton_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ToolButton_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ToolButton_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ToolButton_SendToBack(obj uintptr) {
-	getLazyProc("ToolButton_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_SendToBack").Call(obj)
 }
 
 func ToolButton_Show(obj uintptr) {
-	getLazyProc("ToolButton_Show").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_Show").Call(obj)
 }
 
 func ToolButton_Update(obj uintptr) {
-	getLazyProc("ToolButton_Update").Call(obj)
+	_, _, _ = getLazyProc("ToolButton_Update").Call(obj)
 }
 
 func ToolButton_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -116,7 +116,7 @@ func ToolButton_GetTextLen(obj uintptr) int32 {
 }
 
 func ToolButton_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("ToolButton_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("ToolButton_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func ToolButton_FindComponent(obj uintptr, AName string) uintptr {
@@ -130,7 +130,7 @@ func ToolButton_GetNamePath(obj uintptr) string {
 }
 
 func ToolButton_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ToolButton_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ToolButton_Assign").Call(obj, Source)
 }
 
 func ToolButton_ClassType(obj uintptr) TClass {
@@ -169,31 +169,31 @@ func ToolButton_ToString(obj uintptr) string {
 }
 
 func ToolButton_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ToolButton_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ToolButton_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ToolButton_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ToolButton_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ToolButton_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ToolButton_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ToolButton_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ToolButton_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func ToolButton_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ToolButton_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ToolButton_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func ToolButton_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("ToolButton_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("ToolButton_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func ToolButton_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("ToolButton_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("ToolButton_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func ToolButton_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("ToolButton_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("ToolButton_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func ToolButton_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -247,15 +247,15 @@ func ToolButton_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func ToolButton_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("ToolButton_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("ToolButton_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func ToolButton_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("ToolButton_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("ToolButton_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func ToolButton_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("ToolButton_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("ToolButton_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func ToolButton_GetIndex(obj uintptr) int32 {
@@ -269,7 +269,7 @@ func ToolButton_GetAction(obj uintptr) uintptr {
 }
 
 func ToolButton_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetAction").Call(obj, value)
 }
 
 func ToolButton_GetAllowAllUp(obj uintptr) bool {
@@ -278,7 +278,7 @@ func ToolButton_GetAllowAllUp(obj uintptr) bool {
 }
 
 func ToolButton_SetAllowAllUp(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetAllowAllUp").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetAllowAllUp").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetAutoSize(obj uintptr) bool {
@@ -287,7 +287,7 @@ func ToolButton_GetAutoSize(obj uintptr) bool {
 }
 
 func ToolButton_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetCaption(obj uintptr) string {
@@ -296,7 +296,7 @@ func ToolButton_GetCaption(obj uintptr) string {
 }
 
 func ToolButton_SetCaption(obj uintptr, value string) {
-	getLazyProc("ToolButton_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ToolButton_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func ToolButton_GetDown(obj uintptr) bool {
@@ -305,7 +305,7 @@ func ToolButton_GetDown(obj uintptr) bool {
 }
 
 func ToolButton_SetDown(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetDown").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetDown").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetDragCursor(obj uintptr) TCursor {
@@ -314,7 +314,7 @@ func ToolButton_GetDragCursor(obj uintptr) TCursor {
 }
 
 func ToolButton_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("ToolButton_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetDragKind(obj uintptr) TDragKind {
@@ -323,7 +323,7 @@ func ToolButton_GetDragKind(obj uintptr) TDragKind {
 }
 
 func ToolButton_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("ToolButton_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetDragKind").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetDragMode(obj uintptr) TDragMode {
@@ -332,7 +332,7 @@ func ToolButton_GetDragMode(obj uintptr) TDragMode {
 }
 
 func ToolButton_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("ToolButton_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetDragMode").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetDropdownMenu(obj uintptr) uintptr {
@@ -341,7 +341,7 @@ func ToolButton_GetDropdownMenu(obj uintptr) uintptr {
 }
 
 func ToolButton_SetDropdownMenu(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetDropdownMenu").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetDropdownMenu").Call(obj, value)
 }
 
 func ToolButton_GetEnabled(obj uintptr) bool {
@@ -350,7 +350,7 @@ func ToolButton_GetEnabled(obj uintptr) bool {
 }
 
 func ToolButton_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetGrouped(obj uintptr) bool {
@@ -359,7 +359,7 @@ func ToolButton_GetGrouped(obj uintptr) bool {
 }
 
 func ToolButton_SetGrouped(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetGrouped").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetGrouped").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetHeight(obj uintptr) int32 {
@@ -368,7 +368,7 @@ func ToolButton_GetHeight(obj uintptr) int32 {
 }
 
 func ToolButton_SetHeight(obj uintptr, value int32) {
-	getLazyProc("ToolButton_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetHeight").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetImageIndex(obj uintptr) int32 {
@@ -377,7 +377,7 @@ func ToolButton_GetImageIndex(obj uintptr) int32 {
 }
 
 func ToolButton_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("ToolButton_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetIndeterminate(obj uintptr) bool {
@@ -386,7 +386,7 @@ func ToolButton_GetIndeterminate(obj uintptr) bool {
 }
 
 func ToolButton_SetIndeterminate(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetIndeterminate").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetIndeterminate").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetMarked(obj uintptr) bool {
@@ -395,7 +395,7 @@ func ToolButton_GetMarked(obj uintptr) bool {
 }
 
 func ToolButton_SetMarked(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetMarked").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetMarked").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetParentShowHint(obj uintptr) bool {
@@ -404,7 +404,7 @@ func ToolButton_GetParentShowHint(obj uintptr) bool {
 }
 
 func ToolButton_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetPopupMenu(obj uintptr) uintptr {
@@ -413,7 +413,7 @@ func ToolButton_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func ToolButton_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetPopupMenu").Call(obj, value)
 }
 
 func ToolButton_GetWrap(obj uintptr) bool {
@@ -422,7 +422,7 @@ func ToolButton_GetWrap(obj uintptr) bool {
 }
 
 func ToolButton_SetWrap(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetWrap").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetWrap").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetShowHint(obj uintptr) bool {
@@ -431,7 +431,7 @@ func ToolButton_GetShowHint(obj uintptr) bool {
 }
 
 func ToolButton_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetStyle(obj uintptr) TToolButtonStyle {
@@ -440,7 +440,7 @@ func ToolButton_GetStyle(obj uintptr) TToolButtonStyle {
 }
 
 func ToolButton_SetStyle(obj uintptr, value TToolButtonStyle) {
-	getLazyProc("ToolButton_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetStyle").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetVisible(obj uintptr) bool {
@@ -449,7 +449,7 @@ func ToolButton_GetVisible(obj uintptr) bool {
 }
 
 func ToolButton_SetVisible(obj uintptr, value bool) {
-	getLazyProc("ToolButton_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ToolButton_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func ToolButton_GetWidth(obj uintptr) int32 {
@@ -458,55 +458,55 @@ func ToolButton_GetWidth(obj uintptr) int32 {
 }
 
 func ToolButton_SetWidth(obj uintptr, value int32) {
-	getLazyProc("ToolButton_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetWidth").Call(obj, uintptr(value))
 }
 
-func ToolButton_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ToolButton_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("ToolButton_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func ToolButton_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ToolButton_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func ToolButton_GetAlign(obj uintptr) TAlign {
@@ -515,7 +515,7 @@ func ToolButton_GetAlign(obj uintptr) TAlign {
 }
 
 func ToolButton_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("ToolButton_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetAlign").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetAnchors(obj uintptr) TAnchors {
@@ -524,7 +524,7 @@ func ToolButton_GetAnchors(obj uintptr) TAnchors {
 }
 
 func ToolButton_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("ToolButton_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetAnchors").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -533,17 +533,17 @@ func ToolButton_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func ToolButton_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("ToolButton_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ToolButton_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ToolButton_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ToolButton_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("ToolButton_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ToolButton_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ToolButton_GetClientHeight(obj uintptr) int32 {
@@ -552,18 +552,18 @@ func ToolButton_GetClientHeight(obj uintptr) int32 {
 }
 
 func ToolButton_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("ToolButton_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ToolButton_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ToolButton_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ToolButton_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ToolButton_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ToolButton_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -573,7 +573,7 @@ func ToolButton_GetClientWidth(obj uintptr) int32 {
 }
 
 func ToolButton_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("ToolButton_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetConstraints(obj uintptr) uintptr {
@@ -582,7 +582,7 @@ func ToolButton_GetConstraints(obj uintptr) uintptr {
 }
 
 func ToolButton_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetConstraints").Call(obj, value)
 }
 
 func ToolButton_GetControlState(obj uintptr) TControlState {
@@ -591,7 +591,7 @@ func ToolButton_GetControlState(obj uintptr) TControlState {
 }
 
 func ToolButton_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("ToolButton_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetControlState").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetControlStyle(obj uintptr) TControlStyle {
@@ -600,7 +600,7 @@ func ToolButton_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func ToolButton_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("ToolButton_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetFloating(obj uintptr) bool {
@@ -614,7 +614,7 @@ func ToolButton_GetParent(obj uintptr) uintptr {
 }
 
 func ToolButton_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetParent").Call(obj, value)
 }
 
 func ToolButton_GetLeft(obj uintptr) int32 {
@@ -623,7 +623,7 @@ func ToolButton_GetLeft(obj uintptr) int32 {
 }
 
 func ToolButton_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ToolButton_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetLeft").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetTop(obj uintptr) int32 {
@@ -632,7 +632,7 @@ func ToolButton_GetTop(obj uintptr) int32 {
 }
 
 func ToolButton_SetTop(obj uintptr, value int32) {
-	getLazyProc("ToolButton_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetTop").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetCursor(obj uintptr) TCursor {
@@ -641,7 +641,7 @@ func ToolButton_GetCursor(obj uintptr) TCursor {
 }
 
 func ToolButton_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("ToolButton_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetCursor").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetHint(obj uintptr) string {
@@ -650,7 +650,7 @@ func ToolButton_GetHint(obj uintptr) string {
 }
 
 func ToolButton_SetHint(obj uintptr, value string) {
-	getLazyProc("ToolButton_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ToolButton_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func ToolButton_GetComponentCount(obj uintptr) int32 {
@@ -664,7 +664,7 @@ func ToolButton_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ToolButton_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ToolButton_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetOwner(obj uintptr) uintptr {
@@ -678,7 +678,7 @@ func ToolButton_GetName(obj uintptr) string {
 }
 
 func ToolButton_SetName(obj uintptr, value string) {
-	getLazyProc("ToolButton_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ToolButton_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ToolButton_GetTag(obj uintptr) int {
@@ -687,7 +687,7 @@ func ToolButton_GetTag(obj uintptr) int {
 }
 
 func ToolButton_SetTag(obj uintptr, value int) {
-	getLazyProc("ToolButton_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ToolButton_SetTag").Call(obj, uintptr(value))
 }
 
 func ToolButton_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -696,7 +696,7 @@ func ToolButton_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func ToolButton_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetAnchorSideLeft").Call(obj, value)
 }
 
 func ToolButton_GetAnchorSideTop(obj uintptr) uintptr {
@@ -705,7 +705,7 @@ func ToolButton_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func ToolButton_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetAnchorSideTop").Call(obj, value)
 }
 
 func ToolButton_GetAnchorSideRight(obj uintptr) uintptr {
@@ -714,7 +714,7 @@ func ToolButton_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func ToolButton_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetAnchorSideRight").Call(obj, value)
 }
 
 func ToolButton_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -723,7 +723,7 @@ func ToolButton_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func ToolButton_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetAnchorSideBottom").Call(obj, value)
 }
 
 func ToolButton_GetBorderSpacing(obj uintptr) uintptr {
@@ -732,7 +732,7 @@ func ToolButton_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func ToolButton_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("ToolButton_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("ToolButton_SetBorderSpacing").Call(obj, value)
 }
 
 func ToolButton_GetComponents(obj uintptr, AIndex int32) uintptr {

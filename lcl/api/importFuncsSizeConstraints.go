@@ -7,7 +7,7 @@ import (
 //--------------------------- TSizeConstraints ---------------------------
 
 func SizeConstraints_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("SizeConstraints_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("SizeConstraints_Assign").Call(obj, Source)
 }
 
 func SizeConstraints_GetNamePath(obj uintptr) string {
@@ -50,8 +50,8 @@ func SizeConstraints_ToString(obj uintptr) string {
 	return DStrToGoStr(ret)
 }
 
-func SizeConstraints_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("SizeConstraints_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func SizeConstraints_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SizeConstraints_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func SizeConstraints_GetMaxHeight(obj uintptr) TConstraintSize {
@@ -60,7 +60,7 @@ func SizeConstraints_GetMaxHeight(obj uintptr) TConstraintSize {
 }
 
 func SizeConstraints_SetMaxHeight(obj uintptr, value TConstraintSize) {
-	getLazyProc("SizeConstraints_SetMaxHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SizeConstraints_SetMaxHeight").Call(obj, uintptr(value))
 }
 
 func SizeConstraints_GetMaxWidth(obj uintptr) TConstraintSize {
@@ -69,7 +69,7 @@ func SizeConstraints_GetMaxWidth(obj uintptr) TConstraintSize {
 }
 
 func SizeConstraints_SetMaxWidth(obj uintptr, value TConstraintSize) {
-	getLazyProc("SizeConstraints_SetMaxWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SizeConstraints_SetMaxWidth").Call(obj, uintptr(value))
 }
 
 func SizeConstraints_GetMinHeight(obj uintptr) TConstraintSize {
@@ -78,7 +78,7 @@ func SizeConstraints_GetMinHeight(obj uintptr) TConstraintSize {
 }
 
 func SizeConstraints_SetMinHeight(obj uintptr, value TConstraintSize) {
-	getLazyProc("SizeConstraints_SetMinHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SizeConstraints_SetMinHeight").Call(obj, uintptr(value))
 }
 
 func SizeConstraints_GetMinWidth(obj uintptr) TConstraintSize {
@@ -87,7 +87,7 @@ func SizeConstraints_GetMinWidth(obj uintptr) TConstraintSize {
 }
 
 func SizeConstraints_SetMinWidth(obj uintptr, value TConstraintSize) {
-	getLazyProc("SizeConstraints_SetMinWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SizeConstraints_SetMinWidth").Call(obj, uintptr(value))
 }
 
 func SizeConstraints_StaticClassType() TClass {

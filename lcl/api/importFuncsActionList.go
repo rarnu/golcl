@@ -12,7 +12,7 @@ func ActionList_Create(obj uintptr) uintptr {
 }
 
 func ActionList_Free(obj uintptr) {
-	getLazyProc("ActionList_Free").Call(obj)
+	_, _, _ = getLazyProc("ActionList_Free").Call(obj)
 }
 
 func ActionList_FindComponent(obj uintptr, AName string) uintptr {
@@ -31,7 +31,7 @@ func ActionList_HasParent(obj uintptr) bool {
 }
 
 func ActionList_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ActionList_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ActionList_Assign").Call(obj, Source)
 }
 
 func ActionList_ClassType(obj uintptr) TClass {
@@ -75,7 +75,7 @@ func ActionList_GetImages(obj uintptr) uintptr {
 }
 
 func ActionList_SetImages(obj uintptr, value uintptr) {
-	getLazyProc("ActionList_SetImages").Call(obj, value)
+	_, _, _ = getLazyProc("ActionList_SetImages").Call(obj, value)
 }
 
 func ActionList_GetState(obj uintptr) TActionListState {
@@ -84,11 +84,11 @@ func ActionList_GetState(obj uintptr) TActionListState {
 }
 
 func ActionList_SetState(obj uintptr, value TActionListState) {
-	getLazyProc("ActionList_SetState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ActionList_SetState").Call(obj, uintptr(value))
 }
 
-func ActionList_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("ActionList_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func ActionList_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ActionList_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func ActionList_GetComponentCount(obj uintptr) int32 {
@@ -102,7 +102,7 @@ func ActionList_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ActionList_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ActionList_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ActionList_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ActionList_GetOwner(obj uintptr) uintptr {
@@ -116,7 +116,7 @@ func ActionList_GetName(obj uintptr) string {
 }
 
 func ActionList_SetName(obj uintptr, value string) {
-	getLazyProc("ActionList_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ActionList_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ActionList_GetTag(obj uintptr) int {
@@ -125,7 +125,7 @@ func ActionList_GetTag(obj uintptr) int {
 }
 
 func ActionList_SetTag(obj uintptr, value int) {
-	getLazyProc("ActionList_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ActionList_SetTag").Call(obj, uintptr(value))
 }
 
 func ActionList_GetComponents(obj uintptr, AIndex int32) uintptr {

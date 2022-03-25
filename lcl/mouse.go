@@ -35,7 +35,7 @@ func NewMouse() *TMouse {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsMouse(obj interface{}) *TMouse {
+func AsMouse(obj any) *TMouse {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

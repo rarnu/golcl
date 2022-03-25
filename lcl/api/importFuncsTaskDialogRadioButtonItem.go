@@ -12,7 +12,7 @@ func TaskDialogRadioButtonItem_Create(obj uintptr) uintptr {
 }
 
 func TaskDialogRadioButtonItem_Free(obj uintptr) {
-	getLazyProc("TaskDialogRadioButtonItem_Free").Call(obj)
+	_, _, _ = getLazyProc("TaskDialogRadioButtonItem_Free").Call(obj)
 }
 
 func TaskDialogRadioButtonItem_GetNamePath(obj uintptr) string {
@@ -21,7 +21,7 @@ func TaskDialogRadioButtonItem_GetNamePath(obj uintptr) string {
 }
 
 func TaskDialogRadioButtonItem_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TaskDialogRadioButtonItem_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TaskDialogRadioButtonItem_Assign").Call(obj, Source)
 }
 
 func TaskDialogRadioButtonItem_ClassType(obj uintptr) TClass {
@@ -65,7 +65,7 @@ func TaskDialogRadioButtonItem_GetModalResult(obj uintptr) TModalResult {
 }
 
 func TaskDialogRadioButtonItem_SetModalResult(obj uintptr, value TModalResult) {
-	getLazyProc("TaskDialogRadioButtonItem_SetModalResult").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialogRadioButtonItem_SetModalResult").Call(obj, uintptr(value))
 }
 
 func TaskDialogRadioButtonItem_GetCaption(obj uintptr) string {
@@ -74,7 +74,7 @@ func TaskDialogRadioButtonItem_GetCaption(obj uintptr) string {
 }
 
 func TaskDialogRadioButtonItem_SetCaption(obj uintptr, value string) {
-	getLazyProc("TaskDialogRadioButtonItem_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialogRadioButtonItem_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialogRadioButtonItem_GetDefault(obj uintptr) bool {
@@ -83,7 +83,7 @@ func TaskDialogRadioButtonItem_GetDefault(obj uintptr) bool {
 }
 
 func TaskDialogRadioButtonItem_SetDefault(obj uintptr, value bool) {
-	getLazyProc("TaskDialogRadioButtonItem_SetDefault").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TaskDialogRadioButtonItem_SetDefault").Call(obj, GoBoolToDBool(value))
 }
 
 func TaskDialogRadioButtonItem_GetCollection(obj uintptr) uintptr {
@@ -92,7 +92,7 @@ func TaskDialogRadioButtonItem_GetCollection(obj uintptr) uintptr {
 }
 
 func TaskDialogRadioButtonItem_SetCollection(obj uintptr, value uintptr) {
-	getLazyProc("TaskDialogRadioButtonItem_SetCollection").Call(obj, value)
+	_, _, _ = getLazyProc("TaskDialogRadioButtonItem_SetCollection").Call(obj, value)
 }
 
 func TaskDialogRadioButtonItem_GetIndex(obj uintptr) int32 {
@@ -101,7 +101,7 @@ func TaskDialogRadioButtonItem_GetIndex(obj uintptr) int32 {
 }
 
 func TaskDialogRadioButtonItem_SetIndex(obj uintptr, value int32) {
-	getLazyProc("TaskDialogRadioButtonItem_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialogRadioButtonItem_SetIndex").Call(obj, uintptr(value))
 }
 
 func TaskDialogRadioButtonItem_GetDisplayName(obj uintptr) string {
@@ -110,7 +110,7 @@ func TaskDialogRadioButtonItem_GetDisplayName(obj uintptr) string {
 }
 
 func TaskDialogRadioButtonItem_SetDisplayName(obj uintptr, value string) {
-	getLazyProc("TaskDialogRadioButtonItem_SetDisplayName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialogRadioButtonItem_SetDisplayName").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialogRadioButtonItem_StaticClassType() TClass {

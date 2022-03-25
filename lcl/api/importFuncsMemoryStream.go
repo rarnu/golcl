@@ -13,38 +13,38 @@ func MemoryStream_Create() uintptr {
 }
 
 func MemoryStream_Free(obj uintptr) {
-	getLazyProc("MemoryStream_Free").Call(obj)
+	_, _, _ = getLazyProc("MemoryStream_Free").Call(obj)
 }
 
 func MemoryStream_Clear(obj uintptr) {
-	getLazyProc("MemoryStream_Clear").Call(obj)
+	_, _, _ = getLazyProc("MemoryStream_Clear").Call(obj)
 }
 
 func MemoryStream_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("MemoryStream_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("MemoryStream_LoadFromStream").Call(obj, Stream)
 }
 
 func MemoryStream_LoadFromFile(obj uintptr, FileName string) {
-	getLazyProc("MemoryStream_LoadFromFile").Call(obj, GoStrToDStr(FileName))
+	_, _, _ = getLazyProc("MemoryStream_LoadFromFile").Call(obj, GoStrToDStr(FileName))
 }
 
 func MemoryStream_Seek(obj uintptr, Offset int64, Origin TSeekOrigin) int64 {
 	var ret int64
-	getLazyProc("MemoryStream_Seek").Call(obj, uintptr(unsafe.Pointer(&Offset)), uintptr(Origin), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MemoryStream_Seek").Call(obj, uintptr(unsafe.Pointer(&Offset)), uintptr(Origin), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MemoryStream_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("MemoryStream_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("MemoryStream_SaveToStream").Call(obj, Stream)
 }
 
 func MemoryStream_SaveToFile(obj uintptr, FileName string) {
-	getLazyProc("MemoryStream_SaveToFile").Call(obj, GoStrToDStr(FileName))
+	_, _, _ = getLazyProc("MemoryStream_SaveToFile").Call(obj, GoStrToDStr(FileName))
 }
 
 func MemoryStream_CopyFrom(obj uintptr, Source uintptr, Count int64) int64 {
 	var ret int64
-	getLazyProc("MemoryStream_CopyFrom").Call(obj, Source, uintptr(unsafe.Pointer(&Count)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MemoryStream_CopyFrom").Call(obj, Source, uintptr(unsafe.Pointer(&Count)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -90,22 +90,22 @@ func MemoryStream_GetMemory(obj uintptr) uintptr {
 
 func MemoryStream_GetPosition(obj uintptr) int64 {
 	var ret int64
-	getLazyProc("MemoryStream_GetPosition").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MemoryStream_GetPosition").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MemoryStream_SetPosition(obj uintptr, value int64) {
-	getLazyProc("MemoryStream_SetPosition").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("MemoryStream_SetPosition").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func MemoryStream_GetSize(obj uintptr) int64 {
 	var ret int64
-	getLazyProc("MemoryStream_GetSize").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("MemoryStream_GetSize").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func MemoryStream_SetSize(obj uintptr, value int64) {
-	getLazyProc("MemoryStream_SetSize").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("MemoryStream_SetSize").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func MemoryStream_StaticClassType() TClass {

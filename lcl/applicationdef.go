@@ -80,7 +80,7 @@ import (
 // 创建一个TForm。
 //
 // Create a TForm.
-func (a *TApplication) CreateForm(fields ...interface{}) *TForm {
+func (a *TApplication) CreateForm(fields ...any) *TForm {
 	return AsForm(resObjectBuild(0, nil, a.instance, fields...))
 }
 

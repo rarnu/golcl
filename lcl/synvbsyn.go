@@ -12,7 +12,7 @@ type TSynVBSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynVBSyn(obj interface{}) *TSynVBSyn {
+func AsSynVBSyn(obj any) *TSynVBSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

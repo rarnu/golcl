@@ -34,7 +34,7 @@ func NewToolButton(owner IComponent) *TToolButton {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsToolButton(obj interface{}) *TToolButton {
+func AsToolButton(obj any) *TToolButton {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

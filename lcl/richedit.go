@@ -34,7 +34,7 @@ func NewRichEdit(owner IComponent) *TRichEdit {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsRichEdit(obj interface{}) *TRichEdit {
+func AsRichEdit(obj any) *TRichEdit {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

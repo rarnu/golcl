@@ -47,7 +47,7 @@ func Exception_GetMessage(obj uintptr) string {
 }
 
 func Exception_SetMessage(obj uintptr, value string) {
-	getLazyProc("Exception_SetMessage").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Exception_SetMessage").Call(obj, GoStrToDStr(value))
 }
 
 func Exception_StaticClassType() TClass {

@@ -34,7 +34,7 @@ func NewOpenPictureDialog(owner IComponent) *TOpenPictureDialog {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsOpenPictureDialog(obj interface{}) *TOpenPictureDialog {
+func AsOpenPictureDialog(obj any) *TOpenPictureDialog {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

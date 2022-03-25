@@ -14,7 +14,7 @@ import (
 	. "github.com/rarnu/golcl/lcl/win"
 )
 
-func showError(err interface{}) {
+func showError(err any) {
 	MessageBox(0, fmt.Sprint(err), "Error", MB_ICONERROR)
 }
 

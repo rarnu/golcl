@@ -12,7 +12,7 @@ type TSynTeXSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynTeXSyn(obj interface{}) *TSynTeXSyn {
+func AsSynTeXSyn(obj any) *TSynTeXSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

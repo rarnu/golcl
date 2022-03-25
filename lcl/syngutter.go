@@ -12,7 +12,7 @@ type TSynGutter struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynGutter(obj interface{}) *TSynGutter {
+func AsSynGutter(obj any) *TSynGutter {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

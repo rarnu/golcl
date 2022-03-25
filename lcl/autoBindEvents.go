@@ -54,7 +54,7 @@ type eventMethod struct {
 }
 
 // autoBindEvents 自动关联事件。
-func autoBindEvents(vForm reflect.Value, root IComponent, subComponentsEvent, afterBindSubComponentsEvents bool) {
+func autoBindEvents(vForm reflect.Value, root IComponent, subComponentsEvent, _ bool) {
 	if !DEBUG {
 		defer func() {
 			if err := recover(); err != nil {

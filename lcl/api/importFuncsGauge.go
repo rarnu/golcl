@@ -13,26 +13,26 @@ func Gauge_Create(obj uintptr) uintptr {
 }
 
 func Gauge_Free(obj uintptr) {
-	getLazyProc("Gauge_Free").Call(obj)
+	_, _, _ = getLazyProc("Gauge_Free").Call(obj)
 }
 
 func Gauge_AddProgress(obj uintptr, Value int32) {
-	getLazyProc("Gauge_AddProgress").Call(obj, uintptr(Value))
+	_, _, _ = getLazyProc("Gauge_AddProgress").Call(obj, uintptr(Value))
 }
 
 func Gauge_BringToFront(obj uintptr) {
-	getLazyProc("Gauge_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("Gauge_BringToFront").Call(obj)
 }
 
 func Gauge_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Gauge_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Gauge_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Gauge_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Gauge_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Gauge_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -47,11 +47,11 @@ func Gauge_HasParent(obj uintptr) bool {
 }
 
 func Gauge_Hide(obj uintptr) {
-	getLazyProc("Gauge_Hide").Call(obj)
+	_, _, _ = getLazyProc("Gauge_Hide").Call(obj)
 }
 
 func Gauge_Invalidate(obj uintptr) {
-	getLazyProc("Gauge_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("Gauge_Invalidate").Call(obj)
 }
 
 func Gauge_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -60,39 +60,39 @@ func Gauge_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func Gauge_Refresh(obj uintptr) {
-	getLazyProc("Gauge_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Gauge_Refresh").Call(obj)
 }
 
 func Gauge_Repaint(obj uintptr) {
-	getLazyProc("Gauge_Repaint").Call(obj)
+	_, _, _ = getLazyProc("Gauge_Repaint").Call(obj)
 }
 
 func Gauge_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Gauge_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Gauge_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Gauge_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Gauge_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Gauge_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Gauge_SendToBack(obj uintptr) {
-	getLazyProc("Gauge_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("Gauge_SendToBack").Call(obj)
 }
 
 func Gauge_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("Gauge_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Gauge_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func Gauge_Show(obj uintptr) {
-	getLazyProc("Gauge_Show").Call(obj)
+	_, _, _ = getLazyProc("Gauge_Show").Call(obj)
 }
 
 func Gauge_Update(obj uintptr) {
-	getLazyProc("Gauge_Update").Call(obj)
+	_, _, _ = getLazyProc("Gauge_Update").Call(obj)
 }
 
 func Gauge_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -111,7 +111,7 @@ func Gauge_GetTextLen(obj uintptr) int32 {
 }
 
 func Gauge_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Gauge_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Gauge_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Gauge_FindComponent(obj uintptr, AName string) uintptr {
@@ -125,7 +125,7 @@ func Gauge_GetNamePath(obj uintptr) string {
 }
 
 func Gauge_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Gauge_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Gauge_Assign").Call(obj, Source)
 }
 
 func Gauge_ClassType(obj uintptr) TClass {
@@ -164,31 +164,31 @@ func Gauge_ToString(obj uintptr) string {
 }
 
 func Gauge_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Gauge_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Gauge_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Gauge_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Gauge_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Gauge_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Gauge_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Gauge_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Gauge_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func Gauge_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Gauge_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Gauge_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func Gauge_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("Gauge_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("Gauge_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func Gauge_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("Gauge_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("Gauge_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func Gauge_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("Gauge_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("Gauge_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func Gauge_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -242,15 +242,15 @@ func Gauge_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func Gauge_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("Gauge_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("Gauge_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func Gauge_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("Gauge_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("Gauge_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func Gauge_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("Gauge_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("Gauge_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func Gauge_GetPercentDone(obj uintptr) int32 {
@@ -264,7 +264,7 @@ func Gauge_GetAlign(obj uintptr) TAlign {
 }
 
 func Gauge_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("Gauge_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetAlign").Call(obj, uintptr(value))
 }
 
 func Gauge_GetAnchors(obj uintptr) TAnchors {
@@ -273,7 +273,7 @@ func Gauge_GetAnchors(obj uintptr) TAnchors {
 }
 
 func Gauge_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("Gauge_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetAnchors").Call(obj, uintptr(value))
 }
 
 func Gauge_GetBackColor(obj uintptr) TColor {
@@ -282,7 +282,7 @@ func Gauge_GetBackColor(obj uintptr) TColor {
 }
 
 func Gauge_SetBackColor(obj uintptr, value TColor) {
-	getLazyProc("Gauge_SetBackColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetBackColor").Call(obj, uintptr(value))
 }
 
 func Gauge_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -291,7 +291,7 @@ func Gauge_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func Gauge_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("Gauge_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func Gauge_GetColor(obj uintptr) TColor {
@@ -300,7 +300,7 @@ func Gauge_GetColor(obj uintptr) TColor {
 }
 
 func Gauge_SetColor(obj uintptr, value TColor) {
-	getLazyProc("Gauge_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetColor").Call(obj, uintptr(value))
 }
 
 func Gauge_GetConstraints(obj uintptr) uintptr {
@@ -309,7 +309,7 @@ func Gauge_GetConstraints(obj uintptr) uintptr {
 }
 
 func Gauge_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetConstraints").Call(obj, value)
 }
 
 func Gauge_GetEnabled(obj uintptr) bool {
@@ -318,7 +318,7 @@ func Gauge_GetEnabled(obj uintptr) bool {
 }
 
 func Gauge_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Gauge_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Gauge_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Gauge_GetForeColor(obj uintptr) TColor {
@@ -327,7 +327,7 @@ func Gauge_GetForeColor(obj uintptr) TColor {
 }
 
 func Gauge_SetForeColor(obj uintptr, value TColor) {
-	getLazyProc("Gauge_SetForeColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetForeColor").Call(obj, uintptr(value))
 }
 
 func Gauge_GetFont(obj uintptr) uintptr {
@@ -336,7 +336,7 @@ func Gauge_GetFont(obj uintptr) uintptr {
 }
 
 func Gauge_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetFont").Call(obj, value)
 }
 
 func Gauge_GetKind(obj uintptr) TGaugeKind {
@@ -345,7 +345,7 @@ func Gauge_GetKind(obj uintptr) TGaugeKind {
 }
 
 func Gauge_SetKind(obj uintptr, value TGaugeKind) {
-	getLazyProc("Gauge_SetKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetKind").Call(obj, uintptr(value))
 }
 
 func Gauge_GetMinValue(obj uintptr) int32 {
@@ -354,7 +354,7 @@ func Gauge_GetMinValue(obj uintptr) int32 {
 }
 
 func Gauge_SetMinValue(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetMinValue").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetMinValue").Call(obj, uintptr(value))
 }
 
 func Gauge_GetMaxValue(obj uintptr) int32 {
@@ -363,7 +363,7 @@ func Gauge_GetMaxValue(obj uintptr) int32 {
 }
 
 func Gauge_SetMaxValue(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetMaxValue").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetMaxValue").Call(obj, uintptr(value))
 }
 
 func Gauge_GetParentColor(obj uintptr) bool {
@@ -372,7 +372,7 @@ func Gauge_GetParentColor(obj uintptr) bool {
 }
 
 func Gauge_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("Gauge_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Gauge_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func Gauge_GetParentFont(obj uintptr) bool {
@@ -381,7 +381,7 @@ func Gauge_GetParentFont(obj uintptr) bool {
 }
 
 func Gauge_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("Gauge_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Gauge_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func Gauge_GetParentShowHint(obj uintptr) bool {
@@ -390,7 +390,7 @@ func Gauge_GetParentShowHint(obj uintptr) bool {
 }
 
 func Gauge_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("Gauge_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Gauge_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Gauge_GetPopupMenu(obj uintptr) uintptr {
@@ -399,7 +399,7 @@ func Gauge_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func Gauge_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetPopupMenu").Call(obj, value)
 }
 
 func Gauge_GetProgress(obj uintptr) int32 {
@@ -408,7 +408,7 @@ func Gauge_GetProgress(obj uintptr) int32 {
 }
 
 func Gauge_SetProgress(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetProgress").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetProgress").Call(obj, uintptr(value))
 }
 
 func Gauge_GetShowHint(obj uintptr) bool {
@@ -417,7 +417,7 @@ func Gauge_GetShowHint(obj uintptr) bool {
 }
 
 func Gauge_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("Gauge_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Gauge_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Gauge_GetShowText(obj uintptr) bool {
@@ -426,7 +426,7 @@ func Gauge_GetShowText(obj uintptr) bool {
 }
 
 func Gauge_SetShowText(obj uintptr, value bool) {
-	getLazyProc("Gauge_SetShowText").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Gauge_SetShowText").Call(obj, GoBoolToDBool(value))
 }
 
 func Gauge_GetVisible(obj uintptr) bool {
@@ -435,7 +435,7 @@ func Gauge_GetVisible(obj uintptr) bool {
 }
 
 func Gauge_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Gauge_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Gauge_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func Gauge_GetAction(obj uintptr) uintptr {
@@ -444,7 +444,7 @@ func Gauge_GetAction(obj uintptr) uintptr {
 }
 
 func Gauge_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetAction").Call(obj, value)
 }
 
 func Gauge_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -453,17 +453,17 @@ func Gauge_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func Gauge_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("Gauge_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func Gauge_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Gauge_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Gauge_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Gauge_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("Gauge_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Gauge_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Gauge_GetClientHeight(obj uintptr) int32 {
@@ -472,18 +472,18 @@ func Gauge_GetClientHeight(obj uintptr) int32 {
 }
 
 func Gauge_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func Gauge_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Gauge_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Gauge_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Gauge_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Gauge_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Gauge_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -493,7 +493,7 @@ func Gauge_GetClientWidth(obj uintptr) int32 {
 }
 
 func Gauge_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func Gauge_GetControlState(obj uintptr) TControlState {
@@ -502,7 +502,7 @@ func Gauge_GetControlState(obj uintptr) TControlState {
 }
 
 func Gauge_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("Gauge_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetControlState").Call(obj, uintptr(value))
 }
 
 func Gauge_GetControlStyle(obj uintptr) TControlStyle {
@@ -511,7 +511,7 @@ func Gauge_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func Gauge_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("Gauge_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func Gauge_GetFloating(obj uintptr) bool {
@@ -525,7 +525,7 @@ func Gauge_GetParent(obj uintptr) uintptr {
 }
 
 func Gauge_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetParent").Call(obj, value)
 }
 
 func Gauge_GetLeft(obj uintptr) int32 {
@@ -534,7 +534,7 @@ func Gauge_GetLeft(obj uintptr) int32 {
 }
 
 func Gauge_SetLeft(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetLeft").Call(obj, uintptr(value))
 }
 
 func Gauge_GetTop(obj uintptr) int32 {
@@ -543,7 +543,7 @@ func Gauge_GetTop(obj uintptr) int32 {
 }
 
 func Gauge_SetTop(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetTop").Call(obj, uintptr(value))
 }
 
 func Gauge_GetWidth(obj uintptr) int32 {
@@ -552,7 +552,7 @@ func Gauge_GetWidth(obj uintptr) int32 {
 }
 
 func Gauge_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetWidth").Call(obj, uintptr(value))
 }
 
 func Gauge_GetHeight(obj uintptr) int32 {
@@ -561,7 +561,7 @@ func Gauge_GetHeight(obj uintptr) int32 {
 }
 
 func Gauge_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetHeight").Call(obj, uintptr(value))
 }
 
 func Gauge_GetCursor(obj uintptr) TCursor {
@@ -570,7 +570,7 @@ func Gauge_GetCursor(obj uintptr) TCursor {
 }
 
 func Gauge_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Gauge_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetCursor").Call(obj, uintptr(value))
 }
 
 func Gauge_GetHint(obj uintptr) string {
@@ -579,7 +579,7 @@ func Gauge_GetHint(obj uintptr) string {
 }
 
 func Gauge_SetHint(obj uintptr, value string) {
-	getLazyProc("Gauge_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Gauge_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Gauge_GetComponentCount(obj uintptr) int32 {
@@ -593,7 +593,7 @@ func Gauge_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Gauge_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Gauge_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Gauge_GetOwner(obj uintptr) uintptr {
@@ -607,7 +607,7 @@ func Gauge_GetName(obj uintptr) string {
 }
 
 func Gauge_SetName(obj uintptr, value string) {
-	getLazyProc("Gauge_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Gauge_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Gauge_GetTag(obj uintptr) int {
@@ -616,7 +616,7 @@ func Gauge_GetTag(obj uintptr) int {
 }
 
 func Gauge_SetTag(obj uintptr, value int) {
-	getLazyProc("Gauge_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Gauge_SetTag").Call(obj, uintptr(value))
 }
 
 func Gauge_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -625,7 +625,7 @@ func Gauge_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func Gauge_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetAnchorSideLeft").Call(obj, value)
 }
 
 func Gauge_GetAnchorSideTop(obj uintptr) uintptr {
@@ -634,7 +634,7 @@ func Gauge_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func Gauge_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetAnchorSideTop").Call(obj, value)
 }
 
 func Gauge_GetAnchorSideRight(obj uintptr) uintptr {
@@ -643,7 +643,7 @@ func Gauge_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func Gauge_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetAnchorSideRight").Call(obj, value)
 }
 
 func Gauge_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -652,7 +652,7 @@ func Gauge_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func Gauge_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetAnchorSideBottom").Call(obj, value)
 }
 
 func Gauge_GetBorderSpacing(obj uintptr) uintptr {
@@ -661,7 +661,7 @@ func Gauge_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func Gauge_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("Gauge_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("Gauge_SetBorderSpacing").Call(obj, value)
 }
 
 func Gauge_GetComponents(obj uintptr, AIndex int32) uintptr {

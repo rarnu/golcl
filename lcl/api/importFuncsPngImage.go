@@ -12,27 +12,27 @@ func PngImage_Create() uintptr {
 }
 
 func PngImage_Free(obj uintptr) {
-	getLazyProc("PngImage_Free").Call(obj)
+	_, _, _ = getLazyProc("PngImage_Free").Call(obj)
 }
 
 func PngImage_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("PngImage_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("PngImage_Assign").Call(obj, Source)
 }
 
 func PngImage_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("PngImage_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("PngImage_LoadFromStream").Call(obj, Stream)
 }
 
 func PngImage_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("PngImage_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("PngImage_SaveToStream").Call(obj, Stream)
 }
 
 func PngImage_LoadFromResourceName(obj uintptr, Instance uintptr, Name string) {
-	getLazyProc("PngImage_LoadFromResourceName").Call(obj, Instance, GoStrToDStr(Name))
+	_, _, _ = getLazyProc("PngImage_LoadFromResourceName").Call(obj, Instance, GoStrToDStr(Name))
 }
 
 func PngImage_LoadFromResourceID(obj uintptr, Instance uintptr, ResID int32) {
-	getLazyProc("PngImage_LoadFromResourceID").Call(obj, Instance, uintptr(ResID))
+	_, _, _ = getLazyProc("PngImage_LoadFromResourceID").Call(obj, Instance, uintptr(ResID))
 }
 
 func PngImage_Equals(obj uintptr, Obj uintptr) bool {
@@ -41,15 +41,15 @@ func PngImage_Equals(obj uintptr, Obj uintptr) bool {
 }
 
 func PngImage_LoadFromFile(obj uintptr, Filename string) {
-	getLazyProc("PngImage_LoadFromFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("PngImage_LoadFromFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func PngImage_SaveToFile(obj uintptr, Filename string) {
-	getLazyProc("PngImage_SaveToFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("PngImage_SaveToFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func PngImage_SetSize(obj uintptr, AWidth int32, AHeight int32) {
-	getLazyProc("PngImage_SetSize").Call(obj, uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("PngImage_SetSize").Call(obj, uintptr(AWidth), uintptr(AHeight))
 }
 
 func PngImage_GetNamePath(obj uintptr) string {
@@ -113,16 +113,16 @@ func PngImage_GetModified(obj uintptr) bool {
 }
 
 func PngImage_SetModified(obj uintptr, value bool) {
-	getLazyProc("PngImage_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PngImage_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func PngImage_GetPalette(obj uintptr) HPALETTE {
 	ret, _, _ := getLazyProc("PngImage_GetPalette").Call(obj)
-	return HPALETTE(ret)
+	return ret
 }
 
 func PngImage_SetPalette(obj uintptr, value HPALETTE) {
-	getLazyProc("PngImage_SetPalette").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PngImage_SetPalette").Call(obj, value)
 }
 
 func PngImage_GetPaletteModified(obj uintptr) bool {
@@ -131,7 +131,7 @@ func PngImage_GetPaletteModified(obj uintptr) bool {
 }
 
 func PngImage_SetPaletteModified(obj uintptr, value bool) {
-	getLazyProc("PngImage_SetPaletteModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PngImage_SetPaletteModified").Call(obj, GoBoolToDBool(value))
 }
 
 func PngImage_GetTransparent(obj uintptr) bool {
@@ -140,11 +140,11 @@ func PngImage_GetTransparent(obj uintptr) bool {
 }
 
 func PngImage_SetTransparent(obj uintptr, value bool) {
-	getLazyProc("PngImage_SetTransparent").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PngImage_SetTransparent").Call(obj, GoBoolToDBool(value))
 }
 
-func PngImage_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("PngImage_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func PngImage_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PngImage_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func PngImage_StaticClassType() TClass {

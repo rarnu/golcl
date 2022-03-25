@@ -34,7 +34,7 @@ func NewSpinEdit(owner IComponent) *TSpinEdit {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsSpinEdit(obj interface{}) *TSpinEdit {
+func AsSpinEdit(obj any) *TSpinEdit {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

@@ -11,6 +11,6 @@ package lcl
 // 从资源中创建TFrame。
 //
 // Create TFrame from resources.
-func CreateResFrame(owner IComponent, fields ...interface{}) {
+func CreateResFrame(owner IComponent, fields ...any) {
 	resObjectBuild(2, owner, 0, fields...)
 }

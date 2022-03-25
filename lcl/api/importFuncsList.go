@@ -12,7 +12,7 @@ func List_Create() uintptr {
 }
 
 func List_Free(obj uintptr) {
-	getLazyProc("List_Free").Call(obj)
+	_, _, _ = getLazyProc("List_Free").Call(obj)
 }
 
 func List_Add(obj uintptr, Item uintptr) int32 {
@@ -21,11 +21,11 @@ func List_Add(obj uintptr, Item uintptr) int32 {
 }
 
 func List_Clear(obj uintptr) {
-	getLazyProc("List_Clear").Call(obj)
+	_, _, _ = getLazyProc("List_Clear").Call(obj)
 }
 
 func List_Delete(obj uintptr, Index int32) {
-	getLazyProc("List_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("List_Delete").Call(obj, uintptr(Index))
 }
 
 func List_Expand(obj uintptr) uintptr {
@@ -39,11 +39,11 @@ func List_IndexOf(obj uintptr, Item uintptr) int32 {
 }
 
 func List_Insert(obj uintptr, Index int32, Item uintptr) {
-	getLazyProc("List_Insert").Call(obj, uintptr(Index), Item)
+	_, _, _ = getLazyProc("List_Insert").Call(obj, uintptr(Index), Item)
 }
 
 func List_Move(obj uintptr, CurIndex int32, NewIndex int32) {
-	getLazyProc("List_Move").Call(obj, uintptr(CurIndex), uintptr(NewIndex))
+	_, _, _ = getLazyProc("List_Move").Call(obj, uintptr(CurIndex), uintptr(NewIndex))
 }
 
 func List_ClassType(obj uintptr) TClass {
@@ -87,7 +87,7 @@ func List_GetCapacity(obj uintptr) int32 {
 }
 
 func List_SetCapacity(obj uintptr, value int32) {
-	getLazyProc("List_SetCapacity").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("List_SetCapacity").Call(obj, uintptr(value))
 }
 
 func List_GetCount(obj uintptr) int32 {
@@ -96,7 +96,7 @@ func List_GetCount(obj uintptr) int32 {
 }
 
 func List_SetCount(obj uintptr, value int32) {
-	getLazyProc("List_SetCount").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("List_SetCount").Call(obj, uintptr(value))
 }
 
 func List_GetList(obj uintptr) uintptr {
@@ -110,7 +110,7 @@ func List_GetItems(obj uintptr, Index int32) uintptr {
 }
 
 func List_SetItems(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("List_SetItems").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("List_SetItems").Call(obj, uintptr(Index), value)
 }
 
 func List_StaticClassType() TClass {

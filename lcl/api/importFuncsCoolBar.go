@@ -13,11 +13,11 @@ func CoolBar_Create(obj uintptr) uintptr {
 }
 
 func CoolBar_Free(obj uintptr) {
-	getLazyProc("CoolBar_Free").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_Free").Call(obj)
 }
 
 func CoolBar_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("CoolBar_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("CoolBar_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func CoolBar_CanFocus(obj uintptr) bool {
@@ -36,11 +36,11 @@ func CoolBar_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWinC
 }
 
 func CoolBar_DisableAlign(obj uintptr) {
-	getLazyProc("CoolBar_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_DisableAlign").Call(obj)
 }
 
 func CoolBar_EnableAlign(obj uintptr) {
-	getLazyProc("CoolBar_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_EnableAlign").Call(obj)
 }
 
 func CoolBar_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -59,58 +59,58 @@ func CoolBar_HandleAllocated(obj uintptr) bool {
 }
 
 func CoolBar_Invalidate(obj uintptr) {
-	getLazyProc("CoolBar_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_Invalidate").Call(obj)
 }
 
 func CoolBar_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("CoolBar_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("CoolBar_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func CoolBar_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("CoolBar_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("CoolBar_RemoveControl").Call(obj, AControl)
 }
 
 func CoolBar_Realign(obj uintptr) {
-	getLazyProc("CoolBar_Realign").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_Realign").Call(obj)
 }
 
 func CoolBar_Repaint(obj uintptr) {
-	getLazyProc("CoolBar_Repaint").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_Repaint").Call(obj)
 }
 
 func CoolBar_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("CoolBar_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("CoolBar_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func CoolBar_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("CoolBar_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("CoolBar_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func CoolBar_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("CoolBar_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("CoolBar_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func CoolBar_SetFocus(obj uintptr) {
-	getLazyProc("CoolBar_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_SetFocus").Call(obj)
 }
 
 func CoolBar_Update(obj uintptr) {
-	getLazyProc("CoolBar_Update").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_Update").Call(obj)
 }
 
 func CoolBar_BringToFront(obj uintptr) {
-	getLazyProc("CoolBar_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_BringToFront").Call(obj)
 }
 
 func CoolBar_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("CoolBar_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CoolBar_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CoolBar_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CoolBar_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CoolBar_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -125,7 +125,7 @@ func CoolBar_HasParent(obj uintptr) bool {
 }
 
 func CoolBar_Hide(obj uintptr) {
-	getLazyProc("CoolBar_Hide").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_Hide").Call(obj)
 }
 
 func CoolBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -134,27 +134,27 @@ func CoolBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func CoolBar_Refresh(obj uintptr) {
-	getLazyProc("CoolBar_Refresh").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_Refresh").Call(obj)
 }
 
 func CoolBar_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("CoolBar_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CoolBar_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CoolBar_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CoolBar_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CoolBar_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CoolBar_SendToBack(obj uintptr) {
-	getLazyProc("CoolBar_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_SendToBack").Call(obj)
 }
 
 func CoolBar_Show(obj uintptr) {
-	getLazyProc("CoolBar_Show").Call(obj)
+	_, _, _ = getLazyProc("CoolBar_Show").Call(obj)
 }
 
 func CoolBar_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -173,7 +173,7 @@ func CoolBar_GetTextLen(obj uintptr) int32 {
 }
 
 func CoolBar_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("CoolBar_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("CoolBar_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func CoolBar_FindComponent(obj uintptr, AName string) uintptr {
@@ -187,7 +187,7 @@ func CoolBar_GetNamePath(obj uintptr) string {
 }
 
 func CoolBar_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("CoolBar_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("CoolBar_Assign").Call(obj, Source)
 }
 
 func CoolBar_ClassType(obj uintptr) TClass {
@@ -226,31 +226,31 @@ func CoolBar_ToString(obj uintptr) string {
 }
 
 func CoolBar_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("CoolBar_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("CoolBar_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func CoolBar_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("CoolBar_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("CoolBar_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func CoolBar_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("CoolBar_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("CoolBar_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func CoolBar_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("CoolBar_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("CoolBar_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func CoolBar_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("CoolBar_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("CoolBar_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func CoolBar_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("CoolBar_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("CoolBar_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func CoolBar_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("CoolBar_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("CoolBar_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func CoolBar_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -304,15 +304,15 @@ func CoolBar_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func CoolBar_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("CoolBar_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("CoolBar_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func CoolBar_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("CoolBar_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("CoolBar_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func CoolBar_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("CoolBar_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("CoolBar_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func CoolBar_GetAlign(obj uintptr) TAlign {
@@ -321,7 +321,7 @@ func CoolBar_GetAlign(obj uintptr) TAlign {
 }
 
 func CoolBar_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("CoolBar_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetAlign").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetAnchors(obj uintptr) TAnchors {
@@ -330,7 +330,7 @@ func CoolBar_GetAnchors(obj uintptr) TAnchors {
 }
 
 func CoolBar_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("CoolBar_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetAnchors").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetAutoSize(obj uintptr) bool {
@@ -339,7 +339,7 @@ func CoolBar_GetAutoSize(obj uintptr) bool {
 }
 
 func CoolBar_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetBandBorderStyle(obj uintptr) TBorderStyle {
@@ -348,7 +348,7 @@ func CoolBar_GetBandBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func CoolBar_SetBandBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("CoolBar_SetBandBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetBandBorderStyle").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetBandMaximize(obj uintptr) TCoolBandMaximize {
@@ -357,7 +357,7 @@ func CoolBar_GetBandMaximize(obj uintptr) TCoolBandMaximize {
 }
 
 func CoolBar_SetBandMaximize(obj uintptr, value TCoolBandMaximize) {
-	getLazyProc("CoolBar_SetBandMaximize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetBandMaximize").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetBands(obj uintptr) uintptr {
@@ -366,7 +366,7 @@ func CoolBar_GetBands(obj uintptr) uintptr {
 }
 
 func CoolBar_SetBands(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetBands").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetBands").Call(obj, value)
 }
 
 func CoolBar_GetBorderWidth(obj uintptr) int32 {
@@ -375,7 +375,7 @@ func CoolBar_GetBorderWidth(obj uintptr) int32 {
 }
 
 func CoolBar_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("CoolBar_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetColor(obj uintptr) TColor {
@@ -384,7 +384,7 @@ func CoolBar_GetColor(obj uintptr) TColor {
 }
 
 func CoolBar_SetColor(obj uintptr, value TColor) {
-	getLazyProc("CoolBar_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetColor").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetConstraints(obj uintptr) uintptr {
@@ -393,7 +393,7 @@ func CoolBar_GetConstraints(obj uintptr) uintptr {
 }
 
 func CoolBar_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetConstraints").Call(obj, value)
 }
 
 func CoolBar_GetDockSite(obj uintptr) bool {
@@ -402,7 +402,7 @@ func CoolBar_GetDockSite(obj uintptr) bool {
 }
 
 func CoolBar_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetDoubleBuffered(obj uintptr) bool {
@@ -411,7 +411,7 @@ func CoolBar_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func CoolBar_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetDragCursor(obj uintptr) TCursor {
@@ -420,7 +420,7 @@ func CoolBar_GetDragCursor(obj uintptr) TCursor {
 }
 
 func CoolBar_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("CoolBar_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetDragKind(obj uintptr) TDragKind {
@@ -429,7 +429,7 @@ func CoolBar_GetDragKind(obj uintptr) TDragKind {
 }
 
 func CoolBar_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("CoolBar_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetDragKind").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetDragMode(obj uintptr) TDragMode {
@@ -438,7 +438,7 @@ func CoolBar_GetDragMode(obj uintptr) TDragMode {
 }
 
 func CoolBar_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("CoolBar_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetDragMode").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetEdgeBorders(obj uintptr) TEdgeBorders {
@@ -447,7 +447,7 @@ func CoolBar_GetEdgeBorders(obj uintptr) TEdgeBorders {
 }
 
 func CoolBar_SetEdgeBorders(obj uintptr, value TEdgeBorders) {
-	getLazyProc("CoolBar_SetEdgeBorders").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetEdgeBorders").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetEdgeInner(obj uintptr) TEdgeStyle {
@@ -456,7 +456,7 @@ func CoolBar_GetEdgeInner(obj uintptr) TEdgeStyle {
 }
 
 func CoolBar_SetEdgeInner(obj uintptr, value TEdgeStyle) {
-	getLazyProc("CoolBar_SetEdgeInner").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetEdgeInner").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetEdgeOuter(obj uintptr) TEdgeStyle {
@@ -465,7 +465,7 @@ func CoolBar_GetEdgeOuter(obj uintptr) TEdgeStyle {
 }
 
 func CoolBar_SetEdgeOuter(obj uintptr, value TEdgeStyle) {
-	getLazyProc("CoolBar_SetEdgeOuter").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetEdgeOuter").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetEnabled(obj uintptr) bool {
@@ -474,7 +474,7 @@ func CoolBar_GetEnabled(obj uintptr) bool {
 }
 
 func CoolBar_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetFixedSize(obj uintptr) bool {
@@ -483,7 +483,7 @@ func CoolBar_GetFixedSize(obj uintptr) bool {
 }
 
 func CoolBar_SetFixedSize(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetFixedSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetFixedSize").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetFixedOrder(obj uintptr) bool {
@@ -492,7 +492,7 @@ func CoolBar_GetFixedOrder(obj uintptr) bool {
 }
 
 func CoolBar_SetFixedOrder(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetFixedOrder").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetFixedOrder").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetFont(obj uintptr) uintptr {
@@ -501,7 +501,7 @@ func CoolBar_GetFont(obj uintptr) uintptr {
 }
 
 func CoolBar_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetFont").Call(obj, value)
 }
 
 func CoolBar_GetImages(obj uintptr) uintptr {
@@ -510,7 +510,7 @@ func CoolBar_GetImages(obj uintptr) uintptr {
 }
 
 func CoolBar_SetImages(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetImages").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetImages").Call(obj, value)
 }
 
 func CoolBar_GetParentColor(obj uintptr) bool {
@@ -519,7 +519,7 @@ func CoolBar_GetParentColor(obj uintptr) bool {
 }
 
 func CoolBar_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetParentDoubleBuffered(obj uintptr) bool {
@@ -528,7 +528,7 @@ func CoolBar_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func CoolBar_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetParentFont(obj uintptr) bool {
@@ -537,7 +537,7 @@ func CoolBar_GetParentFont(obj uintptr) bool {
 }
 
 func CoolBar_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetParentShowHint(obj uintptr) bool {
@@ -546,7 +546,7 @@ func CoolBar_GetParentShowHint(obj uintptr) bool {
 }
 
 func CoolBar_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetBitmap(obj uintptr) uintptr {
@@ -555,7 +555,7 @@ func CoolBar_GetBitmap(obj uintptr) uintptr {
 }
 
 func CoolBar_SetBitmap(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetBitmap").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetBitmap").Call(obj, value)
 }
 
 func CoolBar_GetPopupMenu(obj uintptr) uintptr {
@@ -564,7 +564,7 @@ func CoolBar_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func CoolBar_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetPopupMenu").Call(obj, value)
 }
 
 func CoolBar_GetShowHint(obj uintptr) bool {
@@ -573,7 +573,7 @@ func CoolBar_GetShowHint(obj uintptr) bool {
 }
 
 func CoolBar_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetShowText(obj uintptr) bool {
@@ -582,7 +582,7 @@ func CoolBar_GetShowText(obj uintptr) bool {
 }
 
 func CoolBar_SetShowText(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetShowText").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetShowText").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetVertical(obj uintptr) bool {
@@ -591,7 +591,7 @@ func CoolBar_GetVertical(obj uintptr) bool {
 }
 
 func CoolBar_SetVertical(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetVertical").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetVertical").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetVisible(obj uintptr) bool {
@@ -600,79 +600,79 @@ func CoolBar_GetVisible(obj uintptr) bool {
 }
 
 func CoolBar_SetVisible(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func CoolBar_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnDockDrop(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnDockDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnGetSiteInfo(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnGetSiteInfo(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnResize(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnResize").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func CoolBar_SetOnUnDock(obj uintptr, fn interface{}) {
-	getLazyProc("CoolBar_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
+func CoolBar_SetOnUnDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CoolBar_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func CoolBar_GetDockClientCount(obj uintptr) int32 {
@@ -702,16 +702,16 @@ func CoolBar_GetControlCount(obj uintptr) int32 {
 
 func CoolBar_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("CoolBar_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func CoolBar_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("CoolBar_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func CoolBar_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("CoolBar_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetParentWindow").Call(obj, value)
 }
 
 func CoolBar_GetShowing(obj uintptr) bool {
@@ -725,7 +725,7 @@ func CoolBar_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func CoolBar_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("CoolBar_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetTabStop(obj uintptr) bool {
@@ -734,7 +734,7 @@ func CoolBar_GetTabStop(obj uintptr) bool {
 }
 
 func CoolBar_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetUseDockManager(obj uintptr) bool {
@@ -743,7 +743,7 @@ func CoolBar_GetUseDockManager(obj uintptr) bool {
 }
 
 func CoolBar_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("CoolBar_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CoolBar_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func CoolBar_GetAction(obj uintptr) uintptr {
@@ -752,7 +752,7 @@ func CoolBar_GetAction(obj uintptr) uintptr {
 }
 
 func CoolBar_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetAction").Call(obj, value)
 }
 
 func CoolBar_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -761,17 +761,17 @@ func CoolBar_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func CoolBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("CoolBar_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("CoolBar_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CoolBar_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CoolBar_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("CoolBar_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("CoolBar_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func CoolBar_GetClientHeight(obj uintptr) int32 {
@@ -780,18 +780,18 @@ func CoolBar_GetClientHeight(obj uintptr) int32 {
 }
 
 func CoolBar_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("CoolBar_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CoolBar_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CoolBar_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CoolBar_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("CoolBar_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CoolBar_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -801,7 +801,7 @@ func CoolBar_GetClientWidth(obj uintptr) int32 {
 }
 
 func CoolBar_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("CoolBar_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetControlState(obj uintptr) TControlState {
@@ -810,7 +810,7 @@ func CoolBar_GetControlState(obj uintptr) TControlState {
 }
 
 func CoolBar_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("CoolBar_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetControlState").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetControlStyle(obj uintptr) TControlStyle {
@@ -819,7 +819,7 @@ func CoolBar_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func CoolBar_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("CoolBar_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetFloating(obj uintptr) bool {
@@ -833,7 +833,7 @@ func CoolBar_GetParent(obj uintptr) uintptr {
 }
 
 func CoolBar_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetParent").Call(obj, value)
 }
 
 func CoolBar_GetLeft(obj uintptr) int32 {
@@ -842,7 +842,7 @@ func CoolBar_GetLeft(obj uintptr) int32 {
 }
 
 func CoolBar_SetLeft(obj uintptr, value int32) {
-	getLazyProc("CoolBar_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetLeft").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetTop(obj uintptr) int32 {
@@ -851,7 +851,7 @@ func CoolBar_GetTop(obj uintptr) int32 {
 }
 
 func CoolBar_SetTop(obj uintptr, value int32) {
-	getLazyProc("CoolBar_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetTop").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetWidth(obj uintptr) int32 {
@@ -860,7 +860,7 @@ func CoolBar_GetWidth(obj uintptr) int32 {
 }
 
 func CoolBar_SetWidth(obj uintptr, value int32) {
-	getLazyProc("CoolBar_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetWidth").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetHeight(obj uintptr) int32 {
@@ -869,7 +869,7 @@ func CoolBar_GetHeight(obj uintptr) int32 {
 }
 
 func CoolBar_SetHeight(obj uintptr, value int32) {
-	getLazyProc("CoolBar_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetHeight").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetCursor(obj uintptr) TCursor {
@@ -878,7 +878,7 @@ func CoolBar_GetCursor(obj uintptr) TCursor {
 }
 
 func CoolBar_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("CoolBar_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetCursor").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetHint(obj uintptr) string {
@@ -887,7 +887,7 @@ func CoolBar_GetHint(obj uintptr) string {
 }
 
 func CoolBar_SetHint(obj uintptr, value string) {
-	getLazyProc("CoolBar_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("CoolBar_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func CoolBar_GetComponentCount(obj uintptr) int32 {
@@ -901,7 +901,7 @@ func CoolBar_GetComponentIndex(obj uintptr) int32 {
 }
 
 func CoolBar_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("CoolBar_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetOwner(obj uintptr) uintptr {
@@ -915,7 +915,7 @@ func CoolBar_GetName(obj uintptr) string {
 }
 
 func CoolBar_SetName(obj uintptr, value string) {
-	getLazyProc("CoolBar_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("CoolBar_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func CoolBar_GetTag(obj uintptr) int {
@@ -924,7 +924,7 @@ func CoolBar_GetTag(obj uintptr) int {
 }
 
 func CoolBar_SetTag(obj uintptr, value int) {
-	getLazyProc("CoolBar_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CoolBar_SetTag").Call(obj, uintptr(value))
 }
 
 func CoolBar_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -933,7 +933,7 @@ func CoolBar_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func CoolBar_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetAnchorSideLeft").Call(obj, value)
 }
 
 func CoolBar_GetAnchorSideTop(obj uintptr) uintptr {
@@ -942,7 +942,7 @@ func CoolBar_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func CoolBar_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetAnchorSideTop").Call(obj, value)
 }
 
 func CoolBar_GetAnchorSideRight(obj uintptr) uintptr {
@@ -951,7 +951,7 @@ func CoolBar_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func CoolBar_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetAnchorSideRight").Call(obj, value)
 }
 
 func CoolBar_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -960,7 +960,7 @@ func CoolBar_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func CoolBar_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetAnchorSideBottom").Call(obj, value)
 }
 
 func CoolBar_GetChildSizing(obj uintptr) uintptr {
@@ -969,7 +969,7 @@ func CoolBar_GetChildSizing(obj uintptr) uintptr {
 }
 
 func CoolBar_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetChildSizing").Call(obj, value)
 }
 
 func CoolBar_GetBorderSpacing(obj uintptr) uintptr {
@@ -978,7 +978,7 @@ func CoolBar_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func CoolBar_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("CoolBar_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("CoolBar_SetBorderSpacing").Call(obj, value)
 }
 
 func CoolBar_GetDockClients(obj uintptr, Index int32) uintptr {

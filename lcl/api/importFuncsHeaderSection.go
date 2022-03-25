@@ -12,11 +12,11 @@ func HeaderSection_Create(obj uintptr) uintptr {
 }
 
 func HeaderSection_Free(obj uintptr) {
-	getLazyProc("HeaderSection_Free").Call(obj)
+	_, _, _ = getLazyProc("HeaderSection_Free").Call(obj)
 }
 
 func HeaderSection_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("HeaderSection_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("HeaderSection_Assign").Call(obj, Source)
 }
 
 func HeaderSection_GetNamePath(obj uintptr) string {
@@ -75,7 +75,7 @@ func HeaderSection_GetAlignment(obj uintptr) TAlignment {
 }
 
 func HeaderSection_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("HeaderSection_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderSection_SetAlignment").Call(obj, uintptr(value))
 }
 
 func HeaderSection_GetImageIndex(obj uintptr) int32 {
@@ -84,7 +84,7 @@ func HeaderSection_GetImageIndex(obj uintptr) int32 {
 }
 
 func HeaderSection_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("HeaderSection_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderSection_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func HeaderSection_GetMaxWidth(obj uintptr) int32 {
@@ -93,7 +93,7 @@ func HeaderSection_GetMaxWidth(obj uintptr) int32 {
 }
 
 func HeaderSection_SetMaxWidth(obj uintptr, value int32) {
-	getLazyProc("HeaderSection_SetMaxWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderSection_SetMaxWidth").Call(obj, uintptr(value))
 }
 
 func HeaderSection_GetMinWidth(obj uintptr) int32 {
@@ -102,7 +102,7 @@ func HeaderSection_GetMinWidth(obj uintptr) int32 {
 }
 
 func HeaderSection_SetMinWidth(obj uintptr, value int32) {
-	getLazyProc("HeaderSection_SetMinWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderSection_SetMinWidth").Call(obj, uintptr(value))
 }
 
 func HeaderSection_GetText(obj uintptr) string {
@@ -111,7 +111,7 @@ func HeaderSection_GetText(obj uintptr) string {
 }
 
 func HeaderSection_SetText(obj uintptr, value string) {
-	getLazyProc("HeaderSection_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("HeaderSection_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func HeaderSection_GetWidth(obj uintptr) int32 {
@@ -120,7 +120,7 @@ func HeaderSection_GetWidth(obj uintptr) int32 {
 }
 
 func HeaderSection_SetWidth(obj uintptr, value int32) {
-	getLazyProc("HeaderSection_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderSection_SetWidth").Call(obj, uintptr(value))
 }
 
 func HeaderSection_GetCollection(obj uintptr) uintptr {
@@ -129,7 +129,7 @@ func HeaderSection_GetCollection(obj uintptr) uintptr {
 }
 
 func HeaderSection_SetCollection(obj uintptr, value uintptr) {
-	getLazyProc("HeaderSection_SetCollection").Call(obj, value)
+	_, _, _ = getLazyProc("HeaderSection_SetCollection").Call(obj, value)
 }
 
 func HeaderSection_GetIndex(obj uintptr) int32 {
@@ -138,7 +138,7 @@ func HeaderSection_GetIndex(obj uintptr) int32 {
 }
 
 func HeaderSection_SetIndex(obj uintptr, value int32) {
-	getLazyProc("HeaderSection_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("HeaderSection_SetIndex").Call(obj, uintptr(value))
 }
 
 func HeaderSection_GetDisplayName(obj uintptr) string {
@@ -147,7 +147,7 @@ func HeaderSection_GetDisplayName(obj uintptr) string {
 }
 
 func HeaderSection_SetDisplayName(obj uintptr, value string) {
-	getLazyProc("HeaderSection_SetDisplayName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("HeaderSection_SetDisplayName").Call(obj, GoStrToDStr(value))
 }
 
 func HeaderSection_StaticClassType() TClass {

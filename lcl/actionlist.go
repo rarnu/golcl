@@ -9,9 +9,10 @@
 package lcl
 
 import (
+	"unsafe"
+
 	. "github.com/rarnu/golcl/lcl/api"
 	. "github.com/rarnu/golcl/lcl/types"
-	"unsafe"
 )
 
 type TActionList struct {
@@ -30,7 +31,7 @@ func NewActionList(owner IComponent) *TActionList {
 }
 
 // AsActionList 动态转换一个已存在的对象实例。
-func AsActionList(obj interface{}) *TActionList {
+func AsActionList(obj any) *TActionList {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

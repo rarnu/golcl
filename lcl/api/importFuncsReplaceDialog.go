@@ -13,11 +13,11 @@ func ReplaceDialog_Create(obj uintptr) uintptr {
 }
 
 func ReplaceDialog_Free(obj uintptr) {
-	getLazyProc("ReplaceDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("ReplaceDialog_Free").Call(obj)
 }
 
 func ReplaceDialog_CloseDialog(obj uintptr) {
-	getLazyProc("ReplaceDialog_CloseDialog").Call(obj)
+	_, _, _ = getLazyProc("ReplaceDialog_CloseDialog").Call(obj)
 }
 
 func ReplaceDialog_Execute(obj uintptr) bool {
@@ -41,7 +41,7 @@ func ReplaceDialog_HasParent(obj uintptr) bool {
 }
 
 func ReplaceDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ReplaceDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ReplaceDialog_Assign").Call(obj, Source)
 }
 
 func ReplaceDialog_ClassType(obj uintptr) TClass {
@@ -85,11 +85,11 @@ func ReplaceDialog_GetReplaceText(obj uintptr) string {
 }
 
 func ReplaceDialog_SetReplaceText(obj uintptr, value string) {
-	getLazyProc("ReplaceDialog_SetReplaceText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ReplaceDialog_SetReplaceText").Call(obj, GoStrToDStr(value))
 }
 
-func ReplaceDialog_SetOnReplace(obj uintptr, fn interface{}) {
-	getLazyProc("ReplaceDialog_SetOnReplace").Call(obj, addEventToMap(obj, fn))
+func ReplaceDialog_SetOnReplace(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ReplaceDialog_SetOnReplace").Call(obj, addEventToMap(obj, fn))
 }
 
 func ReplaceDialog_GetLeft(obj uintptr) int32 {
@@ -98,17 +98,17 @@ func ReplaceDialog_GetLeft(obj uintptr) int32 {
 }
 
 func ReplaceDialog_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ReplaceDialog_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ReplaceDialog_SetLeft").Call(obj, uintptr(value))
 }
 
 func ReplaceDialog_GetPosition(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ReplaceDialog_GetPosition").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ReplaceDialog_GetPosition").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ReplaceDialog_SetPosition(obj uintptr, value TPoint) {
-	getLazyProc("ReplaceDialog_SetPosition").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ReplaceDialog_SetPosition").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ReplaceDialog_GetTop(obj uintptr) int32 {
@@ -117,7 +117,7 @@ func ReplaceDialog_GetTop(obj uintptr) int32 {
 }
 
 func ReplaceDialog_SetTop(obj uintptr, value int32) {
-	getLazyProc("ReplaceDialog_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ReplaceDialog_SetTop").Call(obj, uintptr(value))
 }
 
 func ReplaceDialog_GetFindText(obj uintptr) string {
@@ -126,7 +126,7 @@ func ReplaceDialog_GetFindText(obj uintptr) string {
 }
 
 func ReplaceDialog_SetFindText(obj uintptr, value string) {
-	getLazyProc("ReplaceDialog_SetFindText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ReplaceDialog_SetFindText").Call(obj, GoStrToDStr(value))
 }
 
 func ReplaceDialog_GetOptions(obj uintptr) TFindOptions {
@@ -135,24 +135,24 @@ func ReplaceDialog_GetOptions(obj uintptr) TFindOptions {
 }
 
 func ReplaceDialog_SetOptions(obj uintptr, value TFindOptions) {
-	getLazyProc("ReplaceDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ReplaceDialog_SetOptions").Call(obj, uintptr(value))
 }
 
-func ReplaceDialog_SetOnFind(obj uintptr, fn interface{}) {
-	getLazyProc("ReplaceDialog_SetOnFind").Call(obj, addEventToMap(obj, fn))
+func ReplaceDialog_SetOnFind(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ReplaceDialog_SetOnFind").Call(obj, addEventToMap(obj, fn))
 }
 
 func ReplaceDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ReplaceDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func ReplaceDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("ReplaceDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func ReplaceDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ReplaceDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func ReplaceDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("ReplaceDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func ReplaceDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ReplaceDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func ReplaceDialog_GetComponentCount(obj uintptr) int32 {
@@ -166,7 +166,7 @@ func ReplaceDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ReplaceDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ReplaceDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ReplaceDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ReplaceDialog_GetOwner(obj uintptr) uintptr {
@@ -180,7 +180,7 @@ func ReplaceDialog_GetName(obj uintptr) string {
 }
 
 func ReplaceDialog_SetName(obj uintptr, value string) {
-	getLazyProc("ReplaceDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ReplaceDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ReplaceDialog_GetTag(obj uintptr) int {
@@ -189,7 +189,7 @@ func ReplaceDialog_GetTag(obj uintptr) int {
 }
 
 func ReplaceDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("ReplaceDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ReplaceDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func ReplaceDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

@@ -13,11 +13,11 @@ func ListView_Create(obj uintptr) uintptr {
 }
 
 func ListView_Free(obj uintptr) {
-	getLazyProc("ListView_Free").Call(obj)
+	_, _, _ = getLazyProc("ListView_Free").Call(obj)
 }
 
 func ListView_AddItem(obj uintptr, Item string, AObject uintptr) {
-	getLazyProc("ListView_AddItem").Call(obj, GoStrToDStr(Item), AObject)
+	_, _, _ = getLazyProc("ListView_AddItem").Call(obj, GoStrToDStr(Item), AObject)
 }
 
 func ListView_AlphaSort(obj uintptr) bool {
@@ -26,15 +26,15 @@ func ListView_AlphaSort(obj uintptr) bool {
 }
 
 func ListView_Clear(obj uintptr) {
-	getLazyProc("ListView_Clear").Call(obj)
+	_, _, _ = getLazyProc("ListView_Clear").Call(obj)
 }
 
 func ListView_ClearSelection(obj uintptr) {
-	getLazyProc("ListView_ClearSelection").Call(obj)
+	_, _, _ = getLazyProc("ListView_ClearSelection").Call(obj)
 }
 
 func ListView_DeleteSelected(obj uintptr) {
-	getLazyProc("ListView_DeleteSelected").Call(obj)
+	_, _, _ = getLazyProc("ListView_DeleteSelected").Call(obj)
 }
 
 func ListView_GetHitTestInfoAt(obj uintptr, X int32, Y int32) THitTests {
@@ -63,7 +63,7 @@ func ListView_IsEditing(obj uintptr) bool {
 }
 
 func ListView_SelectAll(obj uintptr) {
-	getLazyProc("ListView_SelectAll").Call(obj)
+	_, _, _ = getLazyProc("ListView_SelectAll").Call(obj)
 }
 
 func ListView_CustomSort(obj uintptr, SortProc PFNLVCOMPARE, lParam int) bool {
@@ -87,11 +87,11 @@ func ListView_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWin
 }
 
 func ListView_DisableAlign(obj uintptr) {
-	getLazyProc("ListView_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("ListView_DisableAlign").Call(obj)
 }
 
 func ListView_EnableAlign(obj uintptr) {
-	getLazyProc("ListView_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("ListView_EnableAlign").Call(obj)
 }
 
 func ListView_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -100,7 +100,7 @@ func ListView_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func ListView_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("ListView_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("ListView_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func ListView_Focused(obj uintptr) bool {
@@ -114,62 +114,62 @@ func ListView_HandleAllocated(obj uintptr) bool {
 }
 
 func ListView_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ListView_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ListView_InsertControl").Call(obj, AControl)
 }
 
 func ListView_Invalidate(obj uintptr) {
-	getLazyProc("ListView_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("ListView_Invalidate").Call(obj)
 }
 
 func ListView_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("ListView_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("ListView_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func ListView_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ListView_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ListView_RemoveControl").Call(obj, AControl)
 }
 
 func ListView_Realign(obj uintptr) {
-	getLazyProc("ListView_Realign").Call(obj)
+	_, _, _ = getLazyProc("ListView_Realign").Call(obj)
 }
 
 func ListView_Repaint(obj uintptr) {
-	getLazyProc("ListView_Repaint").Call(obj)
+	_, _, _ = getLazyProc("ListView_Repaint").Call(obj)
 }
 
 func ListView_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("ListView_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("ListView_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func ListView_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("ListView_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("ListView_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func ListView_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("ListView_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("ListView_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func ListView_SetFocus(obj uintptr) {
-	getLazyProc("ListView_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("ListView_SetFocus").Call(obj)
 }
 
 func ListView_Update(obj uintptr) {
-	getLazyProc("ListView_Update").Call(obj)
+	_, _, _ = getLazyProc("ListView_Update").Call(obj)
 }
 
 func ListView_BringToFront(obj uintptr) {
-	getLazyProc("ListView_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("ListView_BringToFront").Call(obj)
 }
 
 func ListView_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ListView_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ListView_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ListView_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ListView_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ListView_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -184,7 +184,7 @@ func ListView_HasParent(obj uintptr) bool {
 }
 
 func ListView_Hide(obj uintptr) {
-	getLazyProc("ListView_Hide").Call(obj)
+	_, _, _ = getLazyProc("ListView_Hide").Call(obj)
 }
 
 func ListView_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -193,27 +193,27 @@ func ListView_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func ListView_Refresh(obj uintptr) {
-	getLazyProc("ListView_Refresh").Call(obj)
+	_, _, _ = getLazyProc("ListView_Refresh").Call(obj)
 }
 
 func ListView_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ListView_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ListView_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ListView_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ListView_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ListView_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ListView_SendToBack(obj uintptr) {
-	getLazyProc("ListView_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("ListView_SendToBack").Call(obj)
 }
 
 func ListView_Show(obj uintptr) {
-	getLazyProc("ListView_Show").Call(obj)
+	_, _, _ = getLazyProc("ListView_Show").Call(obj)
 }
 
 func ListView_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -232,7 +232,7 @@ func ListView_GetTextLen(obj uintptr) int32 {
 }
 
 func ListView_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("ListView_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("ListView_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func ListView_FindComponent(obj uintptr, AName string) uintptr {
@@ -246,7 +246,7 @@ func ListView_GetNamePath(obj uintptr) string {
 }
 
 func ListView_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ListView_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ListView_Assign").Call(obj, Source)
 }
 
 func ListView_ClassType(obj uintptr) TClass {
@@ -285,31 +285,31 @@ func ListView_ToString(obj uintptr) string {
 }
 
 func ListView_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ListView_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ListView_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ListView_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ListView_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ListView_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ListView_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ListView_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ListView_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func ListView_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ListView_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ListView_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func ListView_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("ListView_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("ListView_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func ListView_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("ListView_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("ListView_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func ListView_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("ListView_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("ListView_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func ListView_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -363,15 +363,15 @@ func ListView_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func ListView_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("ListView_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("ListView_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func ListView_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("ListView_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("ListView_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func ListView_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("ListView_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("ListView_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func ListView_GetAutoSort(obj uintptr) bool {
@@ -380,7 +380,7 @@ func ListView_GetAutoSort(obj uintptr) bool {
 }
 
 func ListView_SetAutoSort(obj uintptr, value bool) {
-	getLazyProc("ListView_SetAutoSort").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetAutoSort").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetAutoSortIndicator(obj uintptr) bool {
@@ -389,7 +389,7 @@ func ListView_GetAutoSortIndicator(obj uintptr) bool {
 }
 
 func ListView_SetAutoSortIndicator(obj uintptr, value bool) {
-	getLazyProc("ListView_SetAutoSortIndicator").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetAutoSortIndicator").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetAutoWidthLastColumn(obj uintptr) bool {
@@ -398,7 +398,7 @@ func ListView_GetAutoWidthLastColumn(obj uintptr) bool {
 }
 
 func ListView_SetAutoWidthLastColumn(obj uintptr, value bool) {
-	getLazyProc("ListView_SetAutoWidthLastColumn").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetAutoWidthLastColumn").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetSmallImagesWidth(obj uintptr) int32 {
@@ -407,7 +407,7 @@ func ListView_GetSmallImagesWidth(obj uintptr) int32 {
 }
 
 func ListView_SetSmallImagesWidth(obj uintptr, value int32) {
-	getLazyProc("ListView_SetSmallImagesWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetSmallImagesWidth").Call(obj, uintptr(value))
 }
 
 func ListView_GetSortColumn(obj uintptr) int32 {
@@ -416,7 +416,7 @@ func ListView_GetSortColumn(obj uintptr) int32 {
 }
 
 func ListView_SetSortColumn(obj uintptr, value int32) {
-	getLazyProc("ListView_SetSortColumn").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetSortColumn").Call(obj, uintptr(value))
 }
 
 func ListView_GetSortDirection(obj uintptr) TSortDirection {
@@ -425,7 +425,7 @@ func ListView_GetSortDirection(obj uintptr) TSortDirection {
 }
 
 func ListView_SetSortDirection(obj uintptr, value TSortDirection) {
-	getLazyProc("ListView_SetSortDirection").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetSortDirection").Call(obj, uintptr(value))
 }
 
 func ListView_GetLargeImagesWidth(obj uintptr) int32 {
@@ -434,7 +434,7 @@ func ListView_GetLargeImagesWidth(obj uintptr) int32 {
 }
 
 func ListView_SetLargeImagesWidth(obj uintptr, value int32) {
-	getLazyProc("ListView_SetLargeImagesWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetLargeImagesWidth").Call(obj, uintptr(value))
 }
 
 func ListView_GetStateImagesWidth(obj uintptr) int32 {
@@ -443,7 +443,7 @@ func ListView_GetStateImagesWidth(obj uintptr) int32 {
 }
 
 func ListView_SetStateImagesWidth(obj uintptr, value int32) {
-	getLazyProc("ListView_SetStateImagesWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetStateImagesWidth").Call(obj, uintptr(value))
 }
 
 func ListView_GetToolTips(obj uintptr) bool {
@@ -452,7 +452,7 @@ func ListView_GetToolTips(obj uintptr) bool {
 }
 
 func ListView_SetToolTips(obj uintptr, value bool) {
-	getLazyProc("ListView_SetToolTips").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetToolTips").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetScrollBars(obj uintptr) TScrollStyle {
@@ -461,7 +461,7 @@ func ListView_GetScrollBars(obj uintptr) TScrollStyle {
 }
 
 func ListView_SetScrollBars(obj uintptr, value TScrollStyle) {
-	getLazyProc("ListView_SetScrollBars").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetScrollBars").Call(obj, uintptr(value))
 }
 
 func ListView_GetColumnCount(obj uintptr) int32 {
@@ -475,7 +475,7 @@ func ListView_GetAction(obj uintptr) uintptr {
 }
 
 func ListView_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetAction").Call(obj, value)
 }
 
 func ListView_GetAlign(obj uintptr) TAlign {
@@ -484,7 +484,7 @@ func ListView_GetAlign(obj uintptr) TAlign {
 }
 
 func ListView_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("ListView_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetAlign").Call(obj, uintptr(value))
 }
 
 func ListView_GetAllocBy(obj uintptr) int32 {
@@ -493,7 +493,7 @@ func ListView_GetAllocBy(obj uintptr) int32 {
 }
 
 func ListView_SetAllocBy(obj uintptr, value int32) {
-	getLazyProc("ListView_SetAllocBy").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetAllocBy").Call(obj, uintptr(value))
 }
 
 func ListView_GetAnchors(obj uintptr) TAnchors {
@@ -502,7 +502,7 @@ func ListView_GetAnchors(obj uintptr) TAnchors {
 }
 
 func ListView_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("ListView_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetAnchors").Call(obj, uintptr(value))
 }
 
 func ListView_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -511,7 +511,7 @@ func ListView_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func ListView_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("ListView_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func ListView_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -520,7 +520,7 @@ func ListView_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func ListView_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("ListView_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func ListView_GetBorderWidth(obj uintptr) int32 {
@@ -529,7 +529,7 @@ func ListView_GetBorderWidth(obj uintptr) int32 {
 }
 
 func ListView_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("ListView_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func ListView_GetCheckboxes(obj uintptr) bool {
@@ -538,7 +538,7 @@ func ListView_GetCheckboxes(obj uintptr) bool {
 }
 
 func ListView_SetCheckboxes(obj uintptr, value bool) {
-	getLazyProc("ListView_SetCheckboxes").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetCheckboxes").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetColor(obj uintptr) TColor {
@@ -547,7 +547,7 @@ func ListView_GetColor(obj uintptr) TColor {
 }
 
 func ListView_SetColor(obj uintptr, value TColor) {
-	getLazyProc("ListView_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetColor").Call(obj, uintptr(value))
 }
 
 func ListView_GetColumns(obj uintptr) uintptr {
@@ -556,7 +556,7 @@ func ListView_GetColumns(obj uintptr) uintptr {
 }
 
 func ListView_SetColumns(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetColumns").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetColumns").Call(obj, value)
 }
 
 func ListView_GetColumnClick(obj uintptr) bool {
@@ -565,7 +565,7 @@ func ListView_GetColumnClick(obj uintptr) bool {
 }
 
 func ListView_SetColumnClick(obj uintptr, value bool) {
-	getLazyProc("ListView_SetColumnClick").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetColumnClick").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetConstraints(obj uintptr) uintptr {
@@ -574,7 +574,7 @@ func ListView_GetConstraints(obj uintptr) uintptr {
 }
 
 func ListView_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetConstraints").Call(obj, value)
 }
 
 func ListView_GetDoubleBuffered(obj uintptr) bool {
@@ -583,7 +583,7 @@ func ListView_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func ListView_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ListView_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetDragCursor(obj uintptr) TCursor {
@@ -592,7 +592,7 @@ func ListView_GetDragCursor(obj uintptr) TCursor {
 }
 
 func ListView_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("ListView_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func ListView_GetDragKind(obj uintptr) TDragKind {
@@ -601,7 +601,7 @@ func ListView_GetDragKind(obj uintptr) TDragKind {
 }
 
 func ListView_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("ListView_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetDragKind").Call(obj, uintptr(value))
 }
 
 func ListView_GetDragMode(obj uintptr) TDragMode {
@@ -610,7 +610,7 @@ func ListView_GetDragMode(obj uintptr) TDragMode {
 }
 
 func ListView_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("ListView_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetDragMode").Call(obj, uintptr(value))
 }
 
 func ListView_GetEnabled(obj uintptr) bool {
@@ -619,7 +619,7 @@ func ListView_GetEnabled(obj uintptr) bool {
 }
 
 func ListView_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("ListView_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetFont(obj uintptr) uintptr {
@@ -628,7 +628,7 @@ func ListView_GetFont(obj uintptr) uintptr {
 }
 
 func ListView_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetFont").Call(obj, value)
 }
 
 func ListView_GetFlatScrollBars(obj uintptr) bool {
@@ -637,7 +637,7 @@ func ListView_GetFlatScrollBars(obj uintptr) bool {
 }
 
 func ListView_SetFlatScrollBars(obj uintptr, value bool) {
-	getLazyProc("ListView_SetFlatScrollBars").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetFlatScrollBars").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetFullDrag(obj uintptr) bool {
@@ -646,7 +646,7 @@ func ListView_GetFullDrag(obj uintptr) bool {
 }
 
 func ListView_SetFullDrag(obj uintptr, value bool) {
-	getLazyProc("ListView_SetFullDrag").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetFullDrag").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetGridLines(obj uintptr) bool {
@@ -655,7 +655,7 @@ func ListView_GetGridLines(obj uintptr) bool {
 }
 
 func ListView_SetGridLines(obj uintptr, value bool) {
-	getLazyProc("ListView_SetGridLines").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetGridLines").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetHideSelection(obj uintptr) bool {
@@ -664,7 +664,7 @@ func ListView_GetHideSelection(obj uintptr) bool {
 }
 
 func ListView_SetHideSelection(obj uintptr, value bool) {
-	getLazyProc("ListView_SetHideSelection").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetHideSelection").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetHotTrack(obj uintptr) bool {
@@ -673,7 +673,7 @@ func ListView_GetHotTrack(obj uintptr) bool {
 }
 
 func ListView_SetHotTrack(obj uintptr, value bool) {
-	getLazyProc("ListView_SetHotTrack").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetHotTrack").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetIconOptions(obj uintptr) uintptr {
@@ -682,7 +682,7 @@ func ListView_GetIconOptions(obj uintptr) uintptr {
 }
 
 func ListView_SetIconOptions(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetIconOptions").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetIconOptions").Call(obj, value)
 }
 
 func ListView_GetItems(obj uintptr) uintptr {
@@ -691,7 +691,7 @@ func ListView_GetItems(obj uintptr) uintptr {
 }
 
 func ListView_SetItems(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetItems").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetItems").Call(obj, value)
 }
 
 func ListView_GetLargeImages(obj uintptr) uintptr {
@@ -700,7 +700,7 @@ func ListView_GetLargeImages(obj uintptr) uintptr {
 }
 
 func ListView_SetLargeImages(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetLargeImages").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetLargeImages").Call(obj, value)
 }
 
 func ListView_GetMultiSelect(obj uintptr) bool {
@@ -709,7 +709,7 @@ func ListView_GetMultiSelect(obj uintptr) bool {
 }
 
 func ListView_SetMultiSelect(obj uintptr, value bool) {
-	getLazyProc("ListView_SetMultiSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetMultiSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetOwnerData(obj uintptr) bool {
@@ -718,7 +718,7 @@ func ListView_GetOwnerData(obj uintptr) bool {
 }
 
 func ListView_SetOwnerData(obj uintptr, value bool) {
-	getLazyProc("ListView_SetOwnerData").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetOwnerData").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetOwnerDraw(obj uintptr) bool {
@@ -727,7 +727,7 @@ func ListView_GetOwnerDraw(obj uintptr) bool {
 }
 
 func ListView_SetOwnerDraw(obj uintptr, value bool) {
-	getLazyProc("ListView_SetOwnerDraw").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetOwnerDraw").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetReadOnly(obj uintptr) bool {
@@ -736,7 +736,7 @@ func ListView_GetReadOnly(obj uintptr) bool {
 }
 
 func ListView_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("ListView_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetRowSelect(obj uintptr) bool {
@@ -745,7 +745,7 @@ func ListView_GetRowSelect(obj uintptr) bool {
 }
 
 func ListView_SetRowSelect(obj uintptr, value bool) {
-	getLazyProc("ListView_SetRowSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetRowSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetParentColor(obj uintptr) bool {
@@ -754,7 +754,7 @@ func ListView_GetParentColor(obj uintptr) bool {
 }
 
 func ListView_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("ListView_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetParentDoubleBuffered(obj uintptr) bool {
@@ -763,7 +763,7 @@ func ListView_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func ListView_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ListView_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetParentFont(obj uintptr) bool {
@@ -772,7 +772,7 @@ func ListView_GetParentFont(obj uintptr) bool {
 }
 
 func ListView_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("ListView_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetParentShowHint(obj uintptr) bool {
@@ -781,7 +781,7 @@ func ListView_GetParentShowHint(obj uintptr) bool {
 }
 
 func ListView_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("ListView_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetPopupMenu(obj uintptr) uintptr {
@@ -790,7 +790,7 @@ func ListView_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func ListView_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetPopupMenu").Call(obj, value)
 }
 
 func ListView_GetShowColumnHeaders(obj uintptr) bool {
@@ -799,7 +799,7 @@ func ListView_GetShowColumnHeaders(obj uintptr) bool {
 }
 
 func ListView_SetShowColumnHeaders(obj uintptr, value bool) {
-	getLazyProc("ListView_SetShowColumnHeaders").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetShowColumnHeaders").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetShowHint(obj uintptr) bool {
@@ -808,7 +808,7 @@ func ListView_GetShowHint(obj uintptr) bool {
 }
 
 func ListView_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("ListView_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetSmallImages(obj uintptr) uintptr {
@@ -817,7 +817,7 @@ func ListView_GetSmallImages(obj uintptr) uintptr {
 }
 
 func ListView_SetSmallImages(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetSmallImages").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetSmallImages").Call(obj, value)
 }
 
 func ListView_GetSortType(obj uintptr) TSortType {
@@ -826,7 +826,7 @@ func ListView_GetSortType(obj uintptr) TSortType {
 }
 
 func ListView_SetSortType(obj uintptr, value TSortType) {
-	getLazyProc("ListView_SetSortType").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetSortType").Call(obj, uintptr(value))
 }
 
 func ListView_GetStateImages(obj uintptr) uintptr {
@@ -835,7 +835,7 @@ func ListView_GetStateImages(obj uintptr) uintptr {
 }
 
 func ListView_SetStateImages(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetStateImages").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetStateImages").Call(obj, value)
 }
 
 func ListView_GetTabOrder(obj uintptr) TTabOrder {
@@ -844,7 +844,7 @@ func ListView_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func ListView_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("ListView_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func ListView_GetTabStop(obj uintptr) bool {
@@ -853,7 +853,7 @@ func ListView_GetTabStop(obj uintptr) bool {
 }
 
 func ListView_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("ListView_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetViewStyle(obj uintptr) TViewStyle {
@@ -862,7 +862,7 @@ func ListView_GetViewStyle(obj uintptr) TViewStyle {
 }
 
 func ListView_SetViewStyle(obj uintptr, value TViewStyle) {
-	getLazyProc("ListView_SetViewStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetViewStyle").Call(obj, uintptr(value))
 }
 
 func ListView_GetVisible(obj uintptr) bool {
@@ -871,159 +871,159 @@ func ListView_GetVisible(obj uintptr) bool {
 }
 
 func ListView_SetVisible(obj uintptr, value bool) {
-	getLazyProc("ListView_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func ListView_SetOnAdvancedCustomDraw(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnAdvancedCustomDraw").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnAdvancedCustomDraw(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnAdvancedCustomDraw").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnAdvancedCustomDrawItem(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnAdvancedCustomDrawItem").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnAdvancedCustomDrawItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnAdvancedCustomDrawItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnAdvancedCustomDrawSubItem(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnAdvancedCustomDrawSubItem").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnAdvancedCustomDrawSubItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnAdvancedCustomDrawSubItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnColumnClick(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnColumnClick").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnColumnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnColumnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnCompare(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnCompare").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnCompare(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnCompare").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnCustomDraw(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnCustomDraw").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnCustomDraw(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnCustomDraw").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnCustomDrawItem(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnCustomDrawItem").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnCustomDrawItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnCustomDrawItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnCustomDrawSubItem(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnCustomDrawSubItem").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnCustomDrawSubItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnCustomDrawSubItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnData(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnData").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnData(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnData").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnDataFind(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnDataFind").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnDataFind(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnDataFind").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnDataHint(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnDataHint").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnDataHint(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnDataHint").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnDeletion(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnDeletion").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnDeletion(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnDeletion").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnDrawItem(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnDrawItem").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnDrawItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnDrawItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnEdited(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnEdited").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnEdited(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnEdited").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnEditing(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnEditing").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnEditing(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnEditing").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnInsert(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnInsert").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnInsert(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnInsert").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnResize(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnResize").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnSelectItem(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnSelectItem").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnSelectItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnSelectItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnItemChecked(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnItemChecked").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnItemChecked(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnItemChecked").Call(obj, addEventToMap(obj, fn))
 }
 
-func ListView_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("ListView_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func ListView_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ListView_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func ListView_GetCanvas(obj uintptr) uintptr {
@@ -1037,7 +1037,7 @@ func ListView_GetDropTarget(obj uintptr) uintptr {
 }
 
 func ListView_SetDropTarget(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetDropTarget").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetDropTarget").Call(obj, value)
 }
 
 func ListView_GetItemFocused(obj uintptr) uintptr {
@@ -1046,7 +1046,7 @@ func ListView_GetItemFocused(obj uintptr) uintptr {
 }
 
 func ListView_SetItemFocused(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetItemFocused").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetItemFocused").Call(obj, value)
 }
 
 func ListView_GetSelCount(obj uintptr) int32 {
@@ -1060,7 +1060,7 @@ func ListView_GetSelected(obj uintptr) uintptr {
 }
 
 func ListView_SetSelected(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetSelected").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetSelected").Call(obj, value)
 }
 
 func ListView_GetTopItem(obj uintptr) uintptr {
@@ -1079,7 +1079,7 @@ func ListView_GetItemIndex(obj uintptr) int32 {
 }
 
 func ListView_SetItemIndex(obj uintptr, value int32) {
-	getLazyProc("ListView_SetItemIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetItemIndex").Call(obj, uintptr(value))
 }
 
 func ListView_GetDockClientCount(obj uintptr) int32 {
@@ -1093,7 +1093,7 @@ func ListView_GetDockSite(obj uintptr) bool {
 }
 
 func ListView_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("ListView_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetMouseInClient(obj uintptr) bool {
@@ -1118,16 +1118,16 @@ func ListView_GetControlCount(obj uintptr) int32 {
 
 func ListView_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ListView_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ListView_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ListView_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ListView_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("ListView_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetParentWindow").Call(obj, value)
 }
 
 func ListView_GetShowing(obj uintptr) bool {
@@ -1141,17 +1141,17 @@ func ListView_GetUseDockManager(obj uintptr) bool {
 }
 
 func ListView_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("ListView_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListView_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ListView_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ListView_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ListView_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("ListView_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ListView_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ListView_GetClientHeight(obj uintptr) int32 {
@@ -1160,18 +1160,18 @@ func ListView_GetClientHeight(obj uintptr) int32 {
 }
 
 func ListView_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("ListView_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func ListView_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ListView_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ListView_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ListView_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ListView_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ListView_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -1181,7 +1181,7 @@ func ListView_GetClientWidth(obj uintptr) int32 {
 }
 
 func ListView_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("ListView_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func ListView_GetControlState(obj uintptr) TControlState {
@@ -1190,7 +1190,7 @@ func ListView_GetControlState(obj uintptr) TControlState {
 }
 
 func ListView_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("ListView_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetControlState").Call(obj, uintptr(value))
 }
 
 func ListView_GetControlStyle(obj uintptr) TControlStyle {
@@ -1199,7 +1199,7 @@ func ListView_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func ListView_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("ListView_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func ListView_GetFloating(obj uintptr) bool {
@@ -1213,7 +1213,7 @@ func ListView_GetParent(obj uintptr) uintptr {
 }
 
 func ListView_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetParent").Call(obj, value)
 }
 
 func ListView_GetLeft(obj uintptr) int32 {
@@ -1222,7 +1222,7 @@ func ListView_GetLeft(obj uintptr) int32 {
 }
 
 func ListView_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ListView_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetLeft").Call(obj, uintptr(value))
 }
 
 func ListView_GetTop(obj uintptr) int32 {
@@ -1231,7 +1231,7 @@ func ListView_GetTop(obj uintptr) int32 {
 }
 
 func ListView_SetTop(obj uintptr, value int32) {
-	getLazyProc("ListView_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetTop").Call(obj, uintptr(value))
 }
 
 func ListView_GetWidth(obj uintptr) int32 {
@@ -1240,7 +1240,7 @@ func ListView_GetWidth(obj uintptr) int32 {
 }
 
 func ListView_SetWidth(obj uintptr, value int32) {
-	getLazyProc("ListView_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetWidth").Call(obj, uintptr(value))
 }
 
 func ListView_GetHeight(obj uintptr) int32 {
@@ -1249,7 +1249,7 @@ func ListView_GetHeight(obj uintptr) int32 {
 }
 
 func ListView_SetHeight(obj uintptr, value int32) {
-	getLazyProc("ListView_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetHeight").Call(obj, uintptr(value))
 }
 
 func ListView_GetCursor(obj uintptr) TCursor {
@@ -1258,7 +1258,7 @@ func ListView_GetCursor(obj uintptr) TCursor {
 }
 
 func ListView_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("ListView_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetCursor").Call(obj, uintptr(value))
 }
 
 func ListView_GetHint(obj uintptr) string {
@@ -1267,7 +1267,7 @@ func ListView_GetHint(obj uintptr) string {
 }
 
 func ListView_SetHint(obj uintptr, value string) {
-	getLazyProc("ListView_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ListView_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func ListView_GetComponentCount(obj uintptr) int32 {
@@ -1281,7 +1281,7 @@ func ListView_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ListView_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ListView_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ListView_GetOwner(obj uintptr) uintptr {
@@ -1295,7 +1295,7 @@ func ListView_GetName(obj uintptr) string {
 }
 
 func ListView_SetName(obj uintptr, value string) {
-	getLazyProc("ListView_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ListView_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ListView_GetTag(obj uintptr) int {
@@ -1304,7 +1304,7 @@ func ListView_GetTag(obj uintptr) int {
 }
 
 func ListView_SetTag(obj uintptr, value int) {
-	getLazyProc("ListView_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListView_SetTag").Call(obj, uintptr(value))
 }
 
 func ListView_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -1313,7 +1313,7 @@ func ListView_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func ListView_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetAnchorSideLeft").Call(obj, value)
 }
 
 func ListView_GetAnchorSideTop(obj uintptr) uintptr {
@@ -1322,7 +1322,7 @@ func ListView_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func ListView_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetAnchorSideTop").Call(obj, value)
 }
 
 func ListView_GetAnchorSideRight(obj uintptr) uintptr {
@@ -1331,7 +1331,7 @@ func ListView_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func ListView_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetAnchorSideRight").Call(obj, value)
 }
 
 func ListView_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -1340,7 +1340,7 @@ func ListView_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func ListView_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetAnchorSideBottom").Call(obj, value)
 }
 
 func ListView_GetChildSizing(obj uintptr) uintptr {
@@ -1349,7 +1349,7 @@ func ListView_GetChildSizing(obj uintptr) uintptr {
 }
 
 func ListView_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetChildSizing").Call(obj, value)
 }
 
 func ListView_GetBorderSpacing(obj uintptr) uintptr {
@@ -1358,7 +1358,7 @@ func ListView_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func ListView_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("ListView_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("ListView_SetBorderSpacing").Call(obj, value)
 }
 
 func ListView_GetColumn(obj uintptr, Index int32) uintptr {

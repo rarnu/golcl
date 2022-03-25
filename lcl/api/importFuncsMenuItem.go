@@ -12,23 +12,23 @@ func MenuItem_Create(obj uintptr) uintptr {
 }
 
 func MenuItem_Free(obj uintptr) {
-	getLazyProc("MenuItem_Free").Call(obj)
+	_, _, _ = getLazyProc("MenuItem_Free").Call(obj)
 }
 
 func MenuItem_Insert(obj uintptr, Index int32, Item uintptr) {
-	getLazyProc("MenuItem_Insert").Call(obj, uintptr(Index), Item)
+	_, _, _ = getLazyProc("MenuItem_Insert").Call(obj, uintptr(Index), Item)
 }
 
 func MenuItem_Delete(obj uintptr, Index int32) {
-	getLazyProc("MenuItem_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("MenuItem_Delete").Call(obj, uintptr(Index))
 }
 
 func MenuItem_Clear(obj uintptr) {
-	getLazyProc("MenuItem_Clear").Call(obj)
+	_, _, _ = getLazyProc("MenuItem_Clear").Call(obj)
 }
 
 func MenuItem_Click(obj uintptr) {
-	getLazyProc("MenuItem_Click").Call(obj)
+	_, _, _ = getLazyProc("MenuItem_Click").Call(obj)
 }
 
 func MenuItem_IndexOf(obj uintptr, Item uintptr) int32 {
@@ -42,7 +42,7 @@ func MenuItem_HasParent(obj uintptr) bool {
 }
 
 func MenuItem_Add(obj uintptr, Item uintptr) {
-	getLazyProc("MenuItem_Add").Call(obj, Item)
+	_, _, _ = getLazyProc("MenuItem_Add").Call(obj, Item)
 }
 
 func MenuItem_FindComponent(obj uintptr, AName string) uintptr {
@@ -56,7 +56,7 @@ func MenuItem_GetNamePath(obj uintptr) string {
 }
 
 func MenuItem_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("MenuItem_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("MenuItem_Assign").Call(obj, Source)
 }
 
 func MenuItem_ClassType(obj uintptr) TClass {
@@ -96,7 +96,7 @@ func MenuItem_ToString(obj uintptr) string {
 
 func MenuItem_GetHandle(obj uintptr) HMENU {
 	ret, _, _ := getLazyProc("MenuItem_GetHandle").Call(obj)
-	return HMENU(ret)
+	return ret
 }
 
 func MenuItem_GetCount(obj uintptr) int32 {
@@ -115,7 +115,7 @@ func MenuItem_GetAction(obj uintptr) uintptr {
 }
 
 func MenuItem_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("MenuItem_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("MenuItem_SetAction").Call(obj, value)
 }
 
 func MenuItem_GetAutoCheck(obj uintptr) bool {
@@ -124,7 +124,7 @@ func MenuItem_GetAutoCheck(obj uintptr) bool {
 }
 
 func MenuItem_SetAutoCheck(obj uintptr, value bool) {
-	getLazyProc("MenuItem_SetAutoCheck").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MenuItem_SetAutoCheck").Call(obj, GoBoolToDBool(value))
 }
 
 func MenuItem_GetBitmap(obj uintptr) uintptr {
@@ -133,7 +133,7 @@ func MenuItem_GetBitmap(obj uintptr) uintptr {
 }
 
 func MenuItem_SetBitmap(obj uintptr, value uintptr) {
-	getLazyProc("MenuItem_SetBitmap").Call(obj, value)
+	_, _, _ = getLazyProc("MenuItem_SetBitmap").Call(obj, value)
 }
 
 func MenuItem_GetCaption(obj uintptr) string {
@@ -142,7 +142,7 @@ func MenuItem_GetCaption(obj uintptr) string {
 }
 
 func MenuItem_SetCaption(obj uintptr, value string) {
-	getLazyProc("MenuItem_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MenuItem_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func MenuItem_GetChecked(obj uintptr) bool {
@@ -151,7 +151,7 @@ func MenuItem_GetChecked(obj uintptr) bool {
 }
 
 func MenuItem_SetChecked(obj uintptr, value bool) {
-	getLazyProc("MenuItem_SetChecked").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MenuItem_SetChecked").Call(obj, GoBoolToDBool(value))
 }
 
 func MenuItem_GetDefault(obj uintptr) bool {
@@ -160,7 +160,7 @@ func MenuItem_GetDefault(obj uintptr) bool {
 }
 
 func MenuItem_SetDefault(obj uintptr, value bool) {
-	getLazyProc("MenuItem_SetDefault").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MenuItem_SetDefault").Call(obj, GoBoolToDBool(value))
 }
 
 func MenuItem_GetEnabled(obj uintptr) bool {
@@ -169,7 +169,7 @@ func MenuItem_GetEnabled(obj uintptr) bool {
 }
 
 func MenuItem_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("MenuItem_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MenuItem_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func MenuItem_GetGroupIndex(obj uintptr) uint8 {
@@ -178,7 +178,7 @@ func MenuItem_GetGroupIndex(obj uintptr) uint8 {
 }
 
 func MenuItem_SetGroupIndex(obj uintptr, value uint8) {
-	getLazyProc("MenuItem_SetGroupIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MenuItem_SetGroupIndex").Call(obj, uintptr(value))
 }
 
 func MenuItem_GetHint(obj uintptr) string {
@@ -187,7 +187,7 @@ func MenuItem_GetHint(obj uintptr) string {
 }
 
 func MenuItem_SetHint(obj uintptr, value string) {
-	getLazyProc("MenuItem_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MenuItem_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func MenuItem_GetImageIndex(obj uintptr) int32 {
@@ -196,7 +196,7 @@ func MenuItem_GetImageIndex(obj uintptr) int32 {
 }
 
 func MenuItem_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("MenuItem_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MenuItem_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func MenuItem_GetRadioItem(obj uintptr) bool {
@@ -205,7 +205,7 @@ func MenuItem_GetRadioItem(obj uintptr) bool {
 }
 
 func MenuItem_SetRadioItem(obj uintptr, value bool) {
-	getLazyProc("MenuItem_SetRadioItem").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MenuItem_SetRadioItem").Call(obj, GoBoolToDBool(value))
 }
 
 func MenuItem_GetShortCut(obj uintptr) TShortCut {
@@ -214,7 +214,7 @@ func MenuItem_GetShortCut(obj uintptr) TShortCut {
 }
 
 func MenuItem_SetShortCut(obj uintptr, value TShortCut) {
-	getLazyProc("MenuItem_SetShortCut").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MenuItem_SetShortCut").Call(obj, uintptr(value))
 }
 
 func MenuItem_GetVisible(obj uintptr) bool {
@@ -223,15 +223,15 @@ func MenuItem_GetVisible(obj uintptr) bool {
 }
 
 func MenuItem_SetVisible(obj uintptr, value bool) {
-	getLazyProc("MenuItem_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("MenuItem_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func MenuItem_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("MenuItem_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func MenuItem_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MenuItem_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func MenuItem_SetOnMeasureItem(obj uintptr, fn interface{}) {
-	getLazyProc("MenuItem_SetOnMeasureItem").Call(obj, addEventToMap(obj, fn))
+func MenuItem_SetOnMeasureItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("MenuItem_SetOnMeasureItem").Call(obj, addEventToMap(obj, fn))
 }
 
 func MenuItem_GetComponentCount(obj uintptr) int32 {
@@ -245,7 +245,7 @@ func MenuItem_GetComponentIndex(obj uintptr) int32 {
 }
 
 func MenuItem_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("MenuItem_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MenuItem_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func MenuItem_GetOwner(obj uintptr) uintptr {
@@ -259,7 +259,7 @@ func MenuItem_GetName(obj uintptr) string {
 }
 
 func MenuItem_SetName(obj uintptr, value string) {
-	getLazyProc("MenuItem_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("MenuItem_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func MenuItem_GetTag(obj uintptr) int {
@@ -268,7 +268,7 @@ func MenuItem_GetTag(obj uintptr) int {
 }
 
 func MenuItem_SetTag(obj uintptr, value int) {
-	getLazyProc("MenuItem_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("MenuItem_SetTag").Call(obj, uintptr(value))
 }
 
 func MenuItem_GetItems(obj uintptr, Index int32) uintptr {

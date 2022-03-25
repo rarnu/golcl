@@ -63,7 +63,7 @@ func (p *TParser) Error(ident string) {
 	//ErrorStr(Ident)
 }
 
-func (p *TParser) ErrorFmt(ident string, args ...interface{}) {
+func (p *TParser) ErrorFmt(ident string, args ...any) {
 	p.ErrorStr(fmt.Sprintf(ident, args...))
 }
 

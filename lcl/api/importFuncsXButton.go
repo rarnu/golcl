@@ -13,22 +13,22 @@ func XButton_Create(obj uintptr) uintptr {
 }
 
 func XButton_Free(obj uintptr) {
-	getLazyProc("XButton_Free").Call(obj)
+	_, _, _ = getLazyProc("XButton_Free").Call(obj)
 }
 
 func XButton_BringToFront(obj uintptr) {
-	getLazyProc("XButton_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("XButton_BringToFront").Call(obj)
 }
 
 func XButton_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("XButton_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("XButton_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func XButton_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("XButton_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("XButton_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -43,11 +43,11 @@ func XButton_HasParent(obj uintptr) bool {
 }
 
 func XButton_Hide(obj uintptr) {
-	getLazyProc("XButton_Hide").Call(obj)
+	_, _, _ = getLazyProc("XButton_Hide").Call(obj)
 }
 
 func XButton_Invalidate(obj uintptr) {
-	getLazyProc("XButton_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("XButton_Invalidate").Call(obj)
 }
 
 func XButton_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -56,39 +56,39 @@ func XButton_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func XButton_Refresh(obj uintptr) {
-	getLazyProc("XButton_Refresh").Call(obj)
+	_, _, _ = getLazyProc("XButton_Refresh").Call(obj)
 }
 
 func XButton_Repaint(obj uintptr) {
-	getLazyProc("XButton_Repaint").Call(obj)
+	_, _, _ = getLazyProc("XButton_Repaint").Call(obj)
 }
 
 func XButton_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("XButton_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("XButton_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func XButton_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("XButton_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("XButton_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func XButton_SendToBack(obj uintptr) {
-	getLazyProc("XButton_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("XButton_SendToBack").Call(obj)
 }
 
 func XButton_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("XButton_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("XButton_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func XButton_Show(obj uintptr) {
-	getLazyProc("XButton_Show").Call(obj)
+	_, _, _ = getLazyProc("XButton_Show").Call(obj)
 }
 
 func XButton_Update(obj uintptr) {
-	getLazyProc("XButton_Update").Call(obj)
+	_, _, _ = getLazyProc("XButton_Update").Call(obj)
 }
 
 func XButton_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -107,7 +107,7 @@ func XButton_GetTextLen(obj uintptr) int32 {
 }
 
 func XButton_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("XButton_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("XButton_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func XButton_FindComponent(obj uintptr, AName string) uintptr {
@@ -121,7 +121,7 @@ func XButton_GetNamePath(obj uintptr) string {
 }
 
 func XButton_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("XButton_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("XButton_Assign").Call(obj, Source)
 }
 
 func XButton_ClassType(obj uintptr) TClass {
@@ -160,31 +160,31 @@ func XButton_ToString(obj uintptr) string {
 }
 
 func XButton_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("XButton_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("XButton_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func XButton_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("XButton_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("XButton_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func XButton_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("XButton_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("XButton_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func XButton_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("XButton_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("XButton_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func XButton_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("XButton_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("XButton_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func XButton_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("XButton_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("XButton_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func XButton_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("XButton_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("XButton_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func XButton_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -238,15 +238,15 @@ func XButton_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func XButton_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("XButton_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("XButton_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func XButton_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("XButton_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("XButton_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func XButton_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("XButton_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("XButton_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func XButton_GetCaption(obj uintptr) string {
@@ -255,7 +255,7 @@ func XButton_GetCaption(obj uintptr) string {
 }
 
 func XButton_SetCaption(obj uintptr, value string) {
-	getLazyProc("XButton_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("XButton_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func XButton_GetShowCaption(obj uintptr) bool {
@@ -264,7 +264,7 @@ func XButton_GetShowCaption(obj uintptr) bool {
 }
 
 func XButton_SetShowCaption(obj uintptr, value bool) {
-	getLazyProc("XButton_SetShowCaption").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("XButton_SetShowCaption").Call(obj, GoBoolToDBool(value))
 }
 
 func XButton_GetBackColor(obj uintptr) TColor {
@@ -273,7 +273,7 @@ func XButton_GetBackColor(obj uintptr) TColor {
 }
 
 func XButton_SetBackColor(obj uintptr, value TColor) {
-	getLazyProc("XButton_SetBackColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetBackColor").Call(obj, uintptr(value))
 }
 
 func XButton_GetHoverColor(obj uintptr) TColor {
@@ -282,7 +282,7 @@ func XButton_GetHoverColor(obj uintptr) TColor {
 }
 
 func XButton_SetHoverColor(obj uintptr, value TColor) {
-	getLazyProc("XButton_SetHoverColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetHoverColor").Call(obj, uintptr(value))
 }
 
 func XButton_GetDownColor(obj uintptr) TColor {
@@ -291,7 +291,7 @@ func XButton_GetDownColor(obj uintptr) TColor {
 }
 
 func XButton_SetDownColor(obj uintptr, value TColor) {
-	getLazyProc("XButton_SetDownColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetDownColor").Call(obj, uintptr(value))
 }
 
 func XButton_GetBorderWidth(obj uintptr) int32 {
@@ -300,7 +300,7 @@ func XButton_GetBorderWidth(obj uintptr) int32 {
 }
 
 func XButton_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("XButton_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func XButton_GetBorderColor(obj uintptr) TColor {
@@ -309,7 +309,7 @@ func XButton_GetBorderColor(obj uintptr) TColor {
 }
 
 func XButton_SetBorderColor(obj uintptr, value TColor) {
-	getLazyProc("XButton_SetBorderColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetBorderColor").Call(obj, uintptr(value))
 }
 
 func XButton_GetPicture(obj uintptr) uintptr {
@@ -318,7 +318,7 @@ func XButton_GetPicture(obj uintptr) uintptr {
 }
 
 func XButton_SetPicture(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetPicture").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetPicture").Call(obj, value)
 }
 
 func XButton_GetDrawMode(obj uintptr) TDrawImageMode {
@@ -327,7 +327,7 @@ func XButton_GetDrawMode(obj uintptr) TDrawImageMode {
 }
 
 func XButton_SetDrawMode(obj uintptr, value TDrawImageMode) {
-	getLazyProc("XButton_SetDrawMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetDrawMode").Call(obj, uintptr(value))
 }
 
 func XButton_GetNormalFontColor(obj uintptr) TColor {
@@ -336,7 +336,7 @@ func XButton_GetNormalFontColor(obj uintptr) TColor {
 }
 
 func XButton_SetNormalFontColor(obj uintptr, value TColor) {
-	getLazyProc("XButton_SetNormalFontColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetNormalFontColor").Call(obj, uintptr(value))
 }
 
 func XButton_GetDownFontColor(obj uintptr) TColor {
@@ -345,7 +345,7 @@ func XButton_GetDownFontColor(obj uintptr) TColor {
 }
 
 func XButton_SetDownFontColor(obj uintptr, value TColor) {
-	getLazyProc("XButton_SetDownFontColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetDownFontColor").Call(obj, uintptr(value))
 }
 
 func XButton_GetHoverFontColor(obj uintptr) TColor {
@@ -354,7 +354,7 @@ func XButton_GetHoverFontColor(obj uintptr) TColor {
 }
 
 func XButton_SetHoverFontColor(obj uintptr, value TColor) {
-	getLazyProc("XButton_SetHoverFontColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetHoverFontColor").Call(obj, uintptr(value))
 }
 
 func XButton_GetAction(obj uintptr) uintptr {
@@ -363,7 +363,7 @@ func XButton_GetAction(obj uintptr) uintptr {
 }
 
 func XButton_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetAction").Call(obj, value)
 }
 
 func XButton_GetAlign(obj uintptr) TAlign {
@@ -372,7 +372,7 @@ func XButton_GetAlign(obj uintptr) TAlign {
 }
 
 func XButton_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("XButton_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetAlign").Call(obj, uintptr(value))
 }
 
 func XButton_GetAnchors(obj uintptr) TAnchors {
@@ -381,7 +381,7 @@ func XButton_GetAnchors(obj uintptr) TAnchors {
 }
 
 func XButton_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("XButton_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetAnchors").Call(obj, uintptr(value))
 }
 
 func XButton_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -390,7 +390,7 @@ func XButton_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func XButton_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("XButton_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func XButton_GetConstraints(obj uintptr) uintptr {
@@ -399,7 +399,7 @@ func XButton_GetConstraints(obj uintptr) uintptr {
 }
 
 func XButton_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetConstraints").Call(obj, value)
 }
 
 func XButton_GetEnabled(obj uintptr) bool {
@@ -408,7 +408,7 @@ func XButton_GetEnabled(obj uintptr) bool {
 }
 
 func XButton_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("XButton_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("XButton_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func XButton_GetFont(obj uintptr) uintptr {
@@ -417,7 +417,7 @@ func XButton_GetFont(obj uintptr) uintptr {
 }
 
 func XButton_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetFont").Call(obj, value)
 }
 
 func XButton_GetParentFont(obj uintptr) bool {
@@ -426,7 +426,7 @@ func XButton_GetParentFont(obj uintptr) bool {
 }
 
 func XButton_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("XButton_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("XButton_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func XButton_GetParentShowHint(obj uintptr) bool {
@@ -435,7 +435,7 @@ func XButton_GetParentShowHint(obj uintptr) bool {
 }
 
 func XButton_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("XButton_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("XButton_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func XButton_GetPopupMenu(obj uintptr) uintptr {
@@ -444,7 +444,7 @@ func XButton_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func XButton_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetPopupMenu").Call(obj, value)
 }
 
 func XButton_GetShowHint(obj uintptr) bool {
@@ -453,7 +453,7 @@ func XButton_GetShowHint(obj uintptr) bool {
 }
 
 func XButton_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("XButton_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("XButton_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func XButton_GetVisible(obj uintptr) bool {
@@ -462,45 +462,45 @@ func XButton_GetVisible(obj uintptr) bool {
 }
 
 func XButton_SetVisible(obj uintptr, value bool) {
-	getLazyProc("XButton_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("XButton_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func XButton_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("XButton_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func XButton_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("XButton_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func XButton_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("XButton_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func XButton_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("XButton_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func XButton_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("XButton_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func XButton_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("XButton_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func XButton_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("XButton_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func XButton_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("XButton_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func XButton_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("XButton_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func XButton_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("XButton_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func XButton_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("XButton_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func XButton_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("XButton_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func XButton_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("XButton_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func XButton_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("XButton_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func XButton_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("XButton_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("XButton_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func XButton_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("XButton_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("XButton_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func XButton_GetClientHeight(obj uintptr) int32 {
@@ -509,18 +509,18 @@ func XButton_GetClientHeight(obj uintptr) int32 {
 }
 
 func XButton_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("XButton_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func XButton_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("XButton_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("XButton_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func XButton_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("XButton_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("XButton_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -530,7 +530,7 @@ func XButton_GetClientWidth(obj uintptr) int32 {
 }
 
 func XButton_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("XButton_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func XButton_GetControlState(obj uintptr) TControlState {
@@ -539,7 +539,7 @@ func XButton_GetControlState(obj uintptr) TControlState {
 }
 
 func XButton_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("XButton_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetControlState").Call(obj, uintptr(value))
 }
 
 func XButton_GetControlStyle(obj uintptr) TControlStyle {
@@ -548,7 +548,7 @@ func XButton_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func XButton_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("XButton_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func XButton_GetFloating(obj uintptr) bool {
@@ -562,7 +562,7 @@ func XButton_GetParent(obj uintptr) uintptr {
 }
 
 func XButton_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetParent").Call(obj, value)
 }
 
 func XButton_GetLeft(obj uintptr) int32 {
@@ -571,7 +571,7 @@ func XButton_GetLeft(obj uintptr) int32 {
 }
 
 func XButton_SetLeft(obj uintptr, value int32) {
-	getLazyProc("XButton_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetLeft").Call(obj, uintptr(value))
 }
 
 func XButton_GetTop(obj uintptr) int32 {
@@ -580,7 +580,7 @@ func XButton_GetTop(obj uintptr) int32 {
 }
 
 func XButton_SetTop(obj uintptr, value int32) {
-	getLazyProc("XButton_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetTop").Call(obj, uintptr(value))
 }
 
 func XButton_GetWidth(obj uintptr) int32 {
@@ -589,7 +589,7 @@ func XButton_GetWidth(obj uintptr) int32 {
 }
 
 func XButton_SetWidth(obj uintptr, value int32) {
-	getLazyProc("XButton_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetWidth").Call(obj, uintptr(value))
 }
 
 func XButton_GetHeight(obj uintptr) int32 {
@@ -598,7 +598,7 @@ func XButton_GetHeight(obj uintptr) int32 {
 }
 
 func XButton_SetHeight(obj uintptr, value int32) {
-	getLazyProc("XButton_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetHeight").Call(obj, uintptr(value))
 }
 
 func XButton_GetCursor(obj uintptr) TCursor {
@@ -607,7 +607,7 @@ func XButton_GetCursor(obj uintptr) TCursor {
 }
 
 func XButton_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("XButton_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetCursor").Call(obj, uintptr(value))
 }
 
 func XButton_GetHint(obj uintptr) string {
@@ -616,7 +616,7 @@ func XButton_GetHint(obj uintptr) string {
 }
 
 func XButton_SetHint(obj uintptr, value string) {
-	getLazyProc("XButton_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("XButton_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func XButton_GetComponentCount(obj uintptr) int32 {
@@ -630,7 +630,7 @@ func XButton_GetComponentIndex(obj uintptr) int32 {
 }
 
 func XButton_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("XButton_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func XButton_GetOwner(obj uintptr) uintptr {
@@ -644,7 +644,7 @@ func XButton_GetName(obj uintptr) string {
 }
 
 func XButton_SetName(obj uintptr, value string) {
-	getLazyProc("XButton_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("XButton_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func XButton_GetTag(obj uintptr) int {
@@ -653,7 +653,7 @@ func XButton_GetTag(obj uintptr) int {
 }
 
 func XButton_SetTag(obj uintptr, value int) {
-	getLazyProc("XButton_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("XButton_SetTag").Call(obj, uintptr(value))
 }
 
 func XButton_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -662,7 +662,7 @@ func XButton_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func XButton_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetAnchorSideLeft").Call(obj, value)
 }
 
 func XButton_GetAnchorSideTop(obj uintptr) uintptr {
@@ -671,7 +671,7 @@ func XButton_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func XButton_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetAnchorSideTop").Call(obj, value)
 }
 
 func XButton_GetAnchorSideRight(obj uintptr) uintptr {
@@ -680,7 +680,7 @@ func XButton_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func XButton_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetAnchorSideRight").Call(obj, value)
 }
 
 func XButton_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -689,7 +689,7 @@ func XButton_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func XButton_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetAnchorSideBottom").Call(obj, value)
 }
 
 func XButton_GetBorderSpacing(obj uintptr) uintptr {
@@ -698,7 +698,7 @@ func XButton_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func XButton_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("XButton_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("XButton_SetBorderSpacing").Call(obj, value)
 }
 
 func XButton_GetComponents(obj uintptr, AIndex int32) uintptr {

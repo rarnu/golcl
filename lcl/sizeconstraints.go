@@ -24,7 +24,7 @@ type TSizeConstraints struct {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsSizeConstraints(obj interface{}) *TSizeConstraints {
+func AsSizeConstraints(obj any) *TSizeConstraints {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

@@ -34,7 +34,7 @@ func NewForm(owner IComponent) *TForm {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsForm(obj interface{}) *TForm {
+func AsForm(obj any) *TForm {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

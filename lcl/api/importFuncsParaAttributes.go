@@ -7,7 +7,7 @@ import (
 //--------------------------- TParaAttributes ---------------------------
 
 func ParaAttributes_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ParaAttributes_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ParaAttributes_Assign").Call(obj, Source)
 }
 
 func ParaAttributes_GetNamePath(obj uintptr) string {
@@ -56,7 +56,7 @@ func ParaAttributes_GetAlignment(obj uintptr) TAlignment {
 }
 
 func ParaAttributes_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("ParaAttributes_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ParaAttributes_SetAlignment").Call(obj, uintptr(value))
 }
 
 func ParaAttributes_GetFirstIndent(obj uintptr) int32 {
@@ -65,7 +65,7 @@ func ParaAttributes_GetFirstIndent(obj uintptr) int32 {
 }
 
 func ParaAttributes_SetFirstIndent(obj uintptr, value int32) {
-	getLazyProc("ParaAttributes_SetFirstIndent").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ParaAttributes_SetFirstIndent").Call(obj, uintptr(value))
 }
 
 func ParaAttributes_GetLeftIndent(obj uintptr) int32 {
@@ -74,7 +74,7 @@ func ParaAttributes_GetLeftIndent(obj uintptr) int32 {
 }
 
 func ParaAttributes_SetLeftIndent(obj uintptr, value int32) {
-	getLazyProc("ParaAttributes_SetLeftIndent").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ParaAttributes_SetLeftIndent").Call(obj, uintptr(value))
 }
 
 func ParaAttributes_GetNumbering(obj uintptr) TNumberingStyle {
@@ -83,7 +83,7 @@ func ParaAttributes_GetNumbering(obj uintptr) TNumberingStyle {
 }
 
 func ParaAttributes_SetNumbering(obj uintptr, value TNumberingStyle) {
-	getLazyProc("ParaAttributes_SetNumbering").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ParaAttributes_SetNumbering").Call(obj, uintptr(value))
 }
 
 func ParaAttributes_GetRightIndent(obj uintptr) int32 {
@@ -92,7 +92,7 @@ func ParaAttributes_GetRightIndent(obj uintptr) int32 {
 }
 
 func ParaAttributes_SetRightIndent(obj uintptr, value int32) {
-	getLazyProc("ParaAttributes_SetRightIndent").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ParaAttributes_SetRightIndent").Call(obj, uintptr(value))
 }
 
 func ParaAttributes_GetTabCount(obj uintptr) int32 {
@@ -101,7 +101,7 @@ func ParaAttributes_GetTabCount(obj uintptr) int32 {
 }
 
 func ParaAttributes_SetTabCount(obj uintptr, value int32) {
-	getLazyProc("ParaAttributes_SetTabCount").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ParaAttributes_SetTabCount").Call(obj, uintptr(value))
 }
 
 func ParaAttributes_GetTab(obj uintptr, Index uint8) int32 {
@@ -110,7 +110,7 @@ func ParaAttributes_GetTab(obj uintptr, Index uint8) int32 {
 }
 
 func ParaAttributes_SetTab(obj uintptr, Index uint8, value int32) {
-	getLazyProc("ParaAttributes_SetTab").Call(obj, uintptr(Index), uintptr(value))
+	_, _, _ = getLazyProc("ParaAttributes_SetTab").Call(obj, uintptr(Index), uintptr(value))
 }
 
 func ParaAttributes_StaticClassType() TClass {

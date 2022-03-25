@@ -12,11 +12,11 @@ func Icon_Create() uintptr {
 }
 
 func Icon_Free(obj uintptr) {
-	getLazyProc("Icon_Free").Call(obj)
+	_, _, _ = getLazyProc("Icon_Free").Call(obj)
 }
 
 func Icon_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Icon_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Icon_Assign").Call(obj, Source)
 }
 
 func Icon_HandleAllocated(obj uintptr) bool {
@@ -25,23 +25,23 @@ func Icon_HandleAllocated(obj uintptr) bool {
 }
 
 func Icon_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Icon_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Icon_LoadFromStream").Call(obj, Stream)
 }
 
 func Icon_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Icon_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Icon_SaveToStream").Call(obj, Stream)
 }
 
 func Icon_SetSize(obj uintptr, AWidth int32, AHeight int32) {
-	getLazyProc("Icon_SetSize").Call(obj, uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Icon_SetSize").Call(obj, uintptr(AWidth), uintptr(AHeight))
 }
 
 func Icon_LoadFromResourceName(obj uintptr, Instance uintptr, ResName string) {
-	getLazyProc("Icon_LoadFromResourceName").Call(obj, Instance, GoStrToDStr(ResName))
+	_, _, _ = getLazyProc("Icon_LoadFromResourceName").Call(obj, Instance, GoStrToDStr(ResName))
 }
 
 func Icon_LoadFromResourceID(obj uintptr, Instance uintptr, ResID int32) {
-	getLazyProc("Icon_LoadFromResourceID").Call(obj, Instance, uintptr(ResID))
+	_, _, _ = getLazyProc("Icon_LoadFromResourceID").Call(obj, Instance, uintptr(ResID))
 }
 
 func Icon_Equals(obj uintptr, Obj uintptr) bool {
@@ -50,11 +50,11 @@ func Icon_Equals(obj uintptr, Obj uintptr) bool {
 }
 
 func Icon_LoadFromFile(obj uintptr, Filename string) {
-	getLazyProc("Icon_LoadFromFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("Icon_LoadFromFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func Icon_SaveToFile(obj uintptr, Filename string) {
-	getLazyProc("Icon_SaveToFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("Icon_SaveToFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func Icon_GetNamePath(obj uintptr) string {
@@ -94,11 +94,11 @@ func Icon_ToString(obj uintptr) string {
 
 func Icon_GetHandle(obj uintptr) HICON {
 	ret, _, _ := getLazyProc("Icon_GetHandle").Call(obj)
-	return HICON(ret)
+	return ret
 }
 
 func Icon_SetHandle(obj uintptr, value HICON) {
-	getLazyProc("Icon_SetHandle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Icon_SetHandle").Call(obj, value)
 }
 
 func Icon_GetEmpty(obj uintptr) bool {
@@ -112,7 +112,7 @@ func Icon_GetHeight(obj uintptr) int32 {
 }
 
 func Icon_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Icon_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Icon_SetHeight").Call(obj, uintptr(value))
 }
 
 func Icon_GetModified(obj uintptr) bool {
@@ -121,16 +121,16 @@ func Icon_GetModified(obj uintptr) bool {
 }
 
 func Icon_SetModified(obj uintptr, value bool) {
-	getLazyProc("Icon_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Icon_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func Icon_GetPalette(obj uintptr) HPALETTE {
 	ret, _, _ := getLazyProc("Icon_GetPalette").Call(obj)
-	return HPALETTE(ret)
+	return ret
 }
 
 func Icon_SetPalette(obj uintptr, value HPALETTE) {
-	getLazyProc("Icon_SetPalette").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Icon_SetPalette").Call(obj, value)
 }
 
 func Icon_GetPaletteModified(obj uintptr) bool {
@@ -139,7 +139,7 @@ func Icon_GetPaletteModified(obj uintptr) bool {
 }
 
 func Icon_SetPaletteModified(obj uintptr, value bool) {
-	getLazyProc("Icon_SetPaletteModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Icon_SetPaletteModified").Call(obj, GoBoolToDBool(value))
 }
 
 func Icon_GetTransparent(obj uintptr) bool {
@@ -148,7 +148,7 @@ func Icon_GetTransparent(obj uintptr) bool {
 }
 
 func Icon_SetTransparent(obj uintptr, value bool) {
-	getLazyProc("Icon_SetTransparent").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Icon_SetTransparent").Call(obj, GoBoolToDBool(value))
 }
 
 func Icon_GetWidth(obj uintptr) int32 {
@@ -157,11 +157,11 @@ func Icon_GetWidth(obj uintptr) int32 {
 }
 
 func Icon_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Icon_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Icon_SetWidth").Call(obj, uintptr(value))
 }
 
-func Icon_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("Icon_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func Icon_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Icon_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func Icon_StaticClassType() TClass {

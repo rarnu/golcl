@@ -12,7 +12,7 @@ func CoolBands_Create(obj uintptr) uintptr {
 }
 
 func CoolBands_Free(obj uintptr) {
-	getLazyProc("CoolBands_Free").Call(obj)
+	_, _, _ = getLazyProc("CoolBands_Free").Call(obj)
 }
 
 func CoolBands_Add(obj uintptr) uintptr {
@@ -31,23 +31,23 @@ func CoolBands_Owner(obj uintptr) uintptr {
 }
 
 func CoolBands_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("CoolBands_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("CoolBands_Assign").Call(obj, Source)
 }
 
 func CoolBands_BeginUpdate(obj uintptr) {
-	getLazyProc("CoolBands_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("CoolBands_BeginUpdate").Call(obj)
 }
 
 func CoolBands_Clear(obj uintptr) {
-	getLazyProc("CoolBands_Clear").Call(obj)
+	_, _, _ = getLazyProc("CoolBands_Clear").Call(obj)
 }
 
 func CoolBands_Delete(obj uintptr, Index int32) {
-	getLazyProc("CoolBands_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("CoolBands_Delete").Call(obj, uintptr(Index))
 }
 
 func CoolBands_EndUpdate(obj uintptr) {
-	getLazyProc("CoolBands_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("CoolBands_EndUpdate").Call(obj)
 }
 
 func CoolBands_FindItemID(obj uintptr, ID int32) uintptr {
@@ -111,7 +111,7 @@ func CoolBands_GetItems(obj uintptr, Index int32) uintptr {
 }
 
 func CoolBands_SetItems(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("CoolBands_SetItems").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("CoolBands_SetItems").Call(obj, uintptr(Index), value)
 }
 
 func CoolBands_StaticClassType() TClass {

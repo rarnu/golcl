@@ -12,7 +12,7 @@ func Object_Create() uintptr {
 }
 
 func Object_Free(obj uintptr) {
-	getLazyProc("Object_Free").Call(obj)
+	_, _, _ = getLazyProc("Object_Free").Call(obj)
 }
 
 func Object_ClassType(obj uintptr) TClass {

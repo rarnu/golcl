@@ -287,35 +287,35 @@ func Application_SetTitle(obj uintptr, value string) {
 	_, _, _ = getLazyProc("Application_SetTitle").Call(obj, GoStrToDStr(value))
 }
 
-func Application_SetOnActivate(obj uintptr, fn interface{}) {
+func Application_SetOnActivate(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Application_SetOnActivate").Call(obj, addEventToMap(obj, fn))
 }
 
-func Application_SetOnDeactivate(obj uintptr, fn interface{}) {
+func Application_SetOnDeactivate(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Application_SetOnDeactivate").Call(obj, addEventToMap(obj, fn))
 }
 
-func Application_SetOnException(obj uintptr, fn interface{}) {
+func Application_SetOnException(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Application_SetOnException").Call(obj, addEventToMap(obj, fn))
 }
 
-func Application_SetOnHelp(obj uintptr, fn interface{}) {
+func Application_SetOnHelp(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Application_SetOnHelp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Application_SetOnHint(obj uintptr, fn interface{}) {
+func Application_SetOnHint(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Application_SetOnHint").Call(obj, addEventToMap(obj, fn))
 }
 
-func Application_SetOnMinimize(obj uintptr, fn interface{}) {
+func Application_SetOnMinimize(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Application_SetOnMinimize").Call(obj, addEventToMap(obj, fn))
 }
 
-func Application_SetOnRestore(obj uintptr, fn interface{}) {
+func Application_SetOnRestore(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Application_SetOnRestore").Call(obj, addEventToMap(obj, fn))
 }
 
-func Application_SetOnShortCut(obj uintptr, fn interface{}) {
+func Application_SetOnShortCut(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Application_SetOnShortCut").Call(obj, addEventToMap(obj, fn))
 }
 

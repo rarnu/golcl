@@ -9,9 +9,10 @@
 package lcl
 
 import (
+	"unsafe"
+
 	. "github.com/rarnu/golcl/lcl/api"
 	. "github.com/rarnu/golcl/lcl/types"
-	"unsafe"
 )
 
 type TAnchorSide struct {
@@ -24,7 +25,7 @@ type TAnchorSide struct {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsAnchorSide(obj interface{}) *TAnchorSide {
+func AsAnchorSide(obj any) *TAnchorSide {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

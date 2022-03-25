@@ -13,35 +13,35 @@ func SpinEdit_Create(obj uintptr) uintptr {
 }
 
 func SpinEdit_Free(obj uintptr) {
-	getLazyProc("SpinEdit_Free").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Free").Call(obj)
 }
 
 func SpinEdit_Clear(obj uintptr) {
-	getLazyProc("SpinEdit_Clear").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Clear").Call(obj)
 }
 
 func SpinEdit_ClearSelection(obj uintptr) {
-	getLazyProc("SpinEdit_ClearSelection").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_ClearSelection").Call(obj)
 }
 
 func SpinEdit_CopyToClipboard(obj uintptr) {
-	getLazyProc("SpinEdit_CopyToClipboard").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_CopyToClipboard").Call(obj)
 }
 
 func SpinEdit_CutToClipboard(obj uintptr) {
-	getLazyProc("SpinEdit_CutToClipboard").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_CutToClipboard").Call(obj)
 }
 
 func SpinEdit_PasteFromClipboard(obj uintptr) {
-	getLazyProc("SpinEdit_PasteFromClipboard").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_PasteFromClipboard").Call(obj)
 }
 
 func SpinEdit_Undo(obj uintptr) {
-	getLazyProc("SpinEdit_Undo").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Undo").Call(obj)
 }
 
 func SpinEdit_SelectAll(obj uintptr) {
-	getLazyProc("SpinEdit_SelectAll").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_SelectAll").Call(obj)
 }
 
 func SpinEdit_CanFocus(obj uintptr) bool {
@@ -60,11 +60,11 @@ func SpinEdit_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWin
 }
 
 func SpinEdit_DisableAlign(obj uintptr) {
-	getLazyProc("SpinEdit_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_DisableAlign").Call(obj)
 }
 
 func SpinEdit_EnableAlign(obj uintptr) {
-	getLazyProc("SpinEdit_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_EnableAlign").Call(obj)
 }
 
 func SpinEdit_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -73,7 +73,7 @@ func SpinEdit_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func SpinEdit_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("SpinEdit_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("SpinEdit_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func SpinEdit_Focused(obj uintptr) bool {
@@ -87,62 +87,62 @@ func SpinEdit_HandleAllocated(obj uintptr) bool {
 }
 
 func SpinEdit_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("SpinEdit_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("SpinEdit_InsertControl").Call(obj, AControl)
 }
 
 func SpinEdit_Invalidate(obj uintptr) {
-	getLazyProc("SpinEdit_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Invalidate").Call(obj)
 }
 
 func SpinEdit_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("SpinEdit_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("SpinEdit_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func SpinEdit_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("SpinEdit_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("SpinEdit_RemoveControl").Call(obj, AControl)
 }
 
 func SpinEdit_Realign(obj uintptr) {
-	getLazyProc("SpinEdit_Realign").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Realign").Call(obj)
 }
 
 func SpinEdit_Repaint(obj uintptr) {
-	getLazyProc("SpinEdit_Repaint").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Repaint").Call(obj)
 }
 
 func SpinEdit_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("SpinEdit_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("SpinEdit_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func SpinEdit_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("SpinEdit_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("SpinEdit_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func SpinEdit_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("SpinEdit_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("SpinEdit_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func SpinEdit_SetFocus(obj uintptr) {
-	getLazyProc("SpinEdit_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_SetFocus").Call(obj)
 }
 
 func SpinEdit_Update(obj uintptr) {
-	getLazyProc("SpinEdit_Update").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Update").Call(obj)
 }
 
 func SpinEdit_BringToFront(obj uintptr) {
-	getLazyProc("SpinEdit_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_BringToFront").Call(obj)
 }
 
 func SpinEdit_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("SpinEdit_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpinEdit_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpinEdit_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("SpinEdit_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpinEdit_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -157,7 +157,7 @@ func SpinEdit_HasParent(obj uintptr) bool {
 }
 
 func SpinEdit_Hide(obj uintptr) {
-	getLazyProc("SpinEdit_Hide").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Hide").Call(obj)
 }
 
 func SpinEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -166,27 +166,27 @@ func SpinEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func SpinEdit_Refresh(obj uintptr) {
-	getLazyProc("SpinEdit_Refresh").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Refresh").Call(obj)
 }
 
 func SpinEdit_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("SpinEdit_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpinEdit_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpinEdit_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("SpinEdit_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpinEdit_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpinEdit_SendToBack(obj uintptr) {
-	getLazyProc("SpinEdit_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_SendToBack").Call(obj)
 }
 
 func SpinEdit_Show(obj uintptr) {
-	getLazyProc("SpinEdit_Show").Call(obj)
+	_, _, _ = getLazyProc("SpinEdit_Show").Call(obj)
 }
 
 func SpinEdit_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -205,7 +205,7 @@ func SpinEdit_GetTextLen(obj uintptr) int32 {
 }
 
 func SpinEdit_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("SpinEdit_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("SpinEdit_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func SpinEdit_FindComponent(obj uintptr, AName string) uintptr {
@@ -219,7 +219,7 @@ func SpinEdit_GetNamePath(obj uintptr) string {
 }
 
 func SpinEdit_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("SpinEdit_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("SpinEdit_Assign").Call(obj, Source)
 }
 
 func SpinEdit_ClassType(obj uintptr) TClass {
@@ -258,31 +258,31 @@ func SpinEdit_ToString(obj uintptr) string {
 }
 
 func SpinEdit_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("SpinEdit_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("SpinEdit_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func SpinEdit_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("SpinEdit_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("SpinEdit_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func SpinEdit_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("SpinEdit_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("SpinEdit_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func SpinEdit_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("SpinEdit_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("SpinEdit_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func SpinEdit_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("SpinEdit_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("SpinEdit_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func SpinEdit_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("SpinEdit_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("SpinEdit_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func SpinEdit_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("SpinEdit_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("SpinEdit_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func SpinEdit_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -336,15 +336,15 @@ func SpinEdit_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func SpinEdit_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("SpinEdit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("SpinEdit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func SpinEdit_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("SpinEdit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("SpinEdit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func SpinEdit_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("SpinEdit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("SpinEdit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func SpinEdit_GetAnchors(obj uintptr) TAnchors {
@@ -353,7 +353,7 @@ func SpinEdit_GetAnchors(obj uintptr) TAnchors {
 }
 
 func SpinEdit_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("SpinEdit_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetAnchors").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetAutoSelect(obj uintptr) bool {
@@ -362,7 +362,7 @@ func SpinEdit_GetAutoSelect(obj uintptr) bool {
 }
 
 func SpinEdit_SetAutoSelect(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetAutoSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetAutoSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetAutoSize(obj uintptr) bool {
@@ -371,7 +371,7 @@ func SpinEdit_GetAutoSize(obj uintptr) bool {
 }
 
 func SpinEdit_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetColor(obj uintptr) TColor {
@@ -380,7 +380,7 @@ func SpinEdit_GetColor(obj uintptr) TColor {
 }
 
 func SpinEdit_SetColor(obj uintptr, value TColor) {
-	getLazyProc("SpinEdit_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetColor").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetConstraints(obj uintptr) uintptr {
@@ -389,7 +389,7 @@ func SpinEdit_GetConstraints(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetConstraints").Call(obj, value)
 }
 
 func SpinEdit_GetEnabled(obj uintptr) bool {
@@ -398,7 +398,7 @@ func SpinEdit_GetEnabled(obj uintptr) bool {
 }
 
 func SpinEdit_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetFont(obj uintptr) uintptr {
@@ -407,7 +407,7 @@ func SpinEdit_GetFont(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetFont").Call(obj, value)
 }
 
 func SpinEdit_GetIncrement(obj uintptr) int32 {
@@ -416,7 +416,7 @@ func SpinEdit_GetIncrement(obj uintptr) int32 {
 }
 
 func SpinEdit_SetIncrement(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetIncrement").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetIncrement").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetMaxLength(obj uintptr) int32 {
@@ -425,7 +425,7 @@ func SpinEdit_GetMaxLength(obj uintptr) int32 {
 }
 
 func SpinEdit_SetMaxLength(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetMaxLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetMaxLength").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetMaxValue(obj uintptr) int32 {
@@ -434,7 +434,7 @@ func SpinEdit_GetMaxValue(obj uintptr) int32 {
 }
 
 func SpinEdit_SetMaxValue(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetMaxValue").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetMaxValue").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetMinValue(obj uintptr) int32 {
@@ -443,7 +443,7 @@ func SpinEdit_GetMinValue(obj uintptr) int32 {
 }
 
 func SpinEdit_SetMinValue(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetMinValue").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetMinValue").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetParentColor(obj uintptr) bool {
@@ -452,7 +452,7 @@ func SpinEdit_GetParentColor(obj uintptr) bool {
 }
 
 func SpinEdit_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetParentFont(obj uintptr) bool {
@@ -461,7 +461,7 @@ func SpinEdit_GetParentFont(obj uintptr) bool {
 }
 
 func SpinEdit_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetParentShowHint(obj uintptr) bool {
@@ -470,7 +470,7 @@ func SpinEdit_GetParentShowHint(obj uintptr) bool {
 }
 
 func SpinEdit_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetPopupMenu(obj uintptr) uintptr {
@@ -479,7 +479,7 @@ func SpinEdit_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetPopupMenu").Call(obj, value)
 }
 
 func SpinEdit_GetReadOnly(obj uintptr) bool {
@@ -488,7 +488,7 @@ func SpinEdit_GetReadOnly(obj uintptr) bool {
 }
 
 func SpinEdit_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetShowHint(obj uintptr) bool {
@@ -497,7 +497,7 @@ func SpinEdit_GetShowHint(obj uintptr) bool {
 }
 
 func SpinEdit_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetTabOrder(obj uintptr) TTabOrder {
@@ -506,7 +506,7 @@ func SpinEdit_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func SpinEdit_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("SpinEdit_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetTabStop(obj uintptr) bool {
@@ -515,7 +515,7 @@ func SpinEdit_GetTabStop(obj uintptr) bool {
 }
 
 func SpinEdit_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetValue(obj uintptr) int32 {
@@ -524,7 +524,7 @@ func SpinEdit_GetValue(obj uintptr) int32 {
 }
 
 func SpinEdit_SetValue(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetValue").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetValue").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetVisible(obj uintptr) bool {
@@ -533,47 +533,47 @@ func SpinEdit_GetVisible(obj uintptr) bool {
 }
 
 func SpinEdit_SetVisible(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func SpinEdit_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpinEdit_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("SpinEdit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func SpinEdit_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpinEdit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func SpinEdit_GetAlignment(obj uintptr) TAlignment {
@@ -582,7 +582,7 @@ func SpinEdit_GetAlignment(obj uintptr) TAlignment {
 }
 
 func SpinEdit_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("SpinEdit_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetAlignment").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetCanUndo(obj uintptr) bool {
@@ -596,7 +596,7 @@ func SpinEdit_GetModified(obj uintptr) bool {
 }
 
 func SpinEdit_SetModified(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetSelLength(obj uintptr) int32 {
@@ -605,7 +605,7 @@ func SpinEdit_GetSelLength(obj uintptr) int32 {
 }
 
 func SpinEdit_SetSelLength(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetSelLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetSelLength").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetSelStart(obj uintptr) int32 {
@@ -614,7 +614,7 @@ func SpinEdit_GetSelStart(obj uintptr) int32 {
 }
 
 func SpinEdit_SetSelStart(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetSelStart").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetSelStart").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetSelText(obj uintptr) string {
@@ -623,7 +623,7 @@ func SpinEdit_GetSelText(obj uintptr) string {
 }
 
 func SpinEdit_SetSelText(obj uintptr, value string) {
-	getLazyProc("SpinEdit_SetSelText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetSelText").Call(obj, GoStrToDStr(value))
 }
 
 func SpinEdit_GetText(obj uintptr) string {
@@ -632,7 +632,7 @@ func SpinEdit_GetText(obj uintptr) string {
 }
 
 func SpinEdit_SetText(obj uintptr, value string) {
-	getLazyProc("SpinEdit_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func SpinEdit_GetTextHint(obj uintptr) string {
@@ -641,7 +641,7 @@ func SpinEdit_GetTextHint(obj uintptr) string {
 }
 
 func SpinEdit_SetTextHint(obj uintptr, value string) {
-	getLazyProc("SpinEdit_SetTextHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetTextHint").Call(obj, GoStrToDStr(value))
 }
 
 func SpinEdit_GetDockClientCount(obj uintptr) int32 {
@@ -655,7 +655,7 @@ func SpinEdit_GetDockSite(obj uintptr) bool {
 }
 
 func SpinEdit_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetDoubleBuffered(obj uintptr) bool {
@@ -664,7 +664,7 @@ func SpinEdit_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func SpinEdit_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetMouseInClient(obj uintptr) bool {
@@ -689,7 +689,7 @@ func SpinEdit_GetControlCount(obj uintptr) int32 {
 
 func SpinEdit_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("SpinEdit_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func SpinEdit_GetParentDoubleBuffered(obj uintptr) bool {
@@ -698,16 +698,16 @@ func SpinEdit_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func SpinEdit_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("SpinEdit_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func SpinEdit_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("SpinEdit_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetParentWindow").Call(obj, value)
 }
 
 func SpinEdit_GetShowing(obj uintptr) bool {
@@ -721,7 +721,7 @@ func SpinEdit_GetUseDockManager(obj uintptr) bool {
 }
 
 func SpinEdit_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("SpinEdit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpinEdit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func SpinEdit_GetAction(obj uintptr) uintptr {
@@ -730,7 +730,7 @@ func SpinEdit_GetAction(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetAction").Call(obj, value)
 }
 
 func SpinEdit_GetAlign(obj uintptr) TAlign {
@@ -739,7 +739,7 @@ func SpinEdit_GetAlign(obj uintptr) TAlign {
 }
 
 func SpinEdit_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("SpinEdit_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetAlign").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -748,17 +748,17 @@ func SpinEdit_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func SpinEdit_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("SpinEdit_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("SpinEdit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpinEdit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpinEdit_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("SpinEdit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("SpinEdit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func SpinEdit_GetClientHeight(obj uintptr) int32 {
@@ -767,18 +767,18 @@ func SpinEdit_GetClientHeight(obj uintptr) int32 {
 }
 
 func SpinEdit_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("SpinEdit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpinEdit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpinEdit_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("SpinEdit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpinEdit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -788,7 +788,7 @@ func SpinEdit_GetClientWidth(obj uintptr) int32 {
 }
 
 func SpinEdit_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetControlState(obj uintptr) TControlState {
@@ -797,7 +797,7 @@ func SpinEdit_GetControlState(obj uintptr) TControlState {
 }
 
 func SpinEdit_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("SpinEdit_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetControlState").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetControlStyle(obj uintptr) TControlStyle {
@@ -806,7 +806,7 @@ func SpinEdit_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func SpinEdit_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("SpinEdit_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetFloating(obj uintptr) bool {
@@ -820,7 +820,7 @@ func SpinEdit_GetParent(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetParent").Call(obj, value)
 }
 
 func SpinEdit_GetLeft(obj uintptr) int32 {
@@ -829,7 +829,7 @@ func SpinEdit_GetLeft(obj uintptr) int32 {
 }
 
 func SpinEdit_SetLeft(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetLeft").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetTop(obj uintptr) int32 {
@@ -838,7 +838,7 @@ func SpinEdit_GetTop(obj uintptr) int32 {
 }
 
 func SpinEdit_SetTop(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetTop").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetWidth(obj uintptr) int32 {
@@ -847,7 +847,7 @@ func SpinEdit_GetWidth(obj uintptr) int32 {
 }
 
 func SpinEdit_SetWidth(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetWidth").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetHeight(obj uintptr) int32 {
@@ -856,7 +856,7 @@ func SpinEdit_GetHeight(obj uintptr) int32 {
 }
 
 func SpinEdit_SetHeight(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetHeight").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetCursor(obj uintptr) TCursor {
@@ -865,7 +865,7 @@ func SpinEdit_GetCursor(obj uintptr) TCursor {
 }
 
 func SpinEdit_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("SpinEdit_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetCursor").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetHint(obj uintptr) string {
@@ -874,7 +874,7 @@ func SpinEdit_GetHint(obj uintptr) string {
 }
 
 func SpinEdit_SetHint(obj uintptr, value string) {
-	getLazyProc("SpinEdit_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func SpinEdit_GetComponentCount(obj uintptr) int32 {
@@ -888,7 +888,7 @@ func SpinEdit_GetComponentIndex(obj uintptr) int32 {
 }
 
 func SpinEdit_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("SpinEdit_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetOwner(obj uintptr) uintptr {
@@ -902,7 +902,7 @@ func SpinEdit_GetName(obj uintptr) string {
 }
 
 func SpinEdit_SetName(obj uintptr, value string) {
-	getLazyProc("SpinEdit_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func SpinEdit_GetTag(obj uintptr) int {
@@ -911,7 +911,7 @@ func SpinEdit_GetTag(obj uintptr) int {
 }
 
 func SpinEdit_SetTag(obj uintptr, value int) {
-	getLazyProc("SpinEdit_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpinEdit_SetTag").Call(obj, uintptr(value))
 }
 
 func SpinEdit_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -920,7 +920,7 @@ func SpinEdit_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetAnchorSideLeft").Call(obj, value)
 }
 
 func SpinEdit_GetAnchorSideTop(obj uintptr) uintptr {
@@ -929,7 +929,7 @@ func SpinEdit_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetAnchorSideTop").Call(obj, value)
 }
 
 func SpinEdit_GetAnchorSideRight(obj uintptr) uintptr {
@@ -938,7 +938,7 @@ func SpinEdit_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetAnchorSideRight").Call(obj, value)
 }
 
 func SpinEdit_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -947,7 +947,7 @@ func SpinEdit_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetAnchorSideBottom").Call(obj, value)
 }
 
 func SpinEdit_GetChildSizing(obj uintptr) uintptr {
@@ -956,7 +956,7 @@ func SpinEdit_GetChildSizing(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetChildSizing").Call(obj, value)
 }
 
 func SpinEdit_GetBorderSpacing(obj uintptr) uintptr {
@@ -965,7 +965,7 @@ func SpinEdit_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func SpinEdit_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("SpinEdit_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("SpinEdit_SetBorderSpacing").Call(obj, value)
 }
 
 func SpinEdit_GetDockClients(obj uintptr, Index int32) uintptr {

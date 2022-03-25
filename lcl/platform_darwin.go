@@ -60,7 +60,7 @@ func (n NSWindow) TitleVisibility() NSWindowTitleVisibility {
 
 func (n NSWindow) SetTitleVisibility(flag NSWindowTitleVisibility) {
 	//C.NSWindow_setTitleVisibility(unsafe.Pointer(n))
-	NSWindow_setTitleVisibility.Call(uintptr(n), uintptr(flag))
+	_, _, _ = NSWindow_setTitleVisibility.Call(uintptr(n), uintptr(flag))
 }
 
 func (n NSWindow) TitleBarAppearsTransparent() bool {
@@ -69,11 +69,11 @@ func (n NSWindow) TitleBarAppearsTransparent() bool {
 }
 
 func (n NSWindow) SetTitleBarAppearsTransparent(flag bool) {
-	NSWindow_setTitlebarAppearsTransparent.Call(uintptr(n), GoBoolToDBool(flag))
+	_, _, _ = NSWindow_setTitlebarAppearsTransparent.Call(uintptr(n), GoBoolToDBool(flag))
 }
 
 func (n NSWindow) SetRepresentedURL(url NSURL) {
-	NSWindow_setRepresentedURL.Call(uintptr(n), uintptr(url))
+	_, _, _ = NSWindow_setRepresentedURL.Call(uintptr(n), uintptr(url))
 }
 
 func (n NSWindow) StyleMask() uint {
@@ -82,5 +82,5 @@ func (n NSWindow) StyleMask() uint {
 }
 
 func (n NSWindow) SetStyleMask(mask uint) {
-	NSWindow_setStyleMask.Call(uintptr(n), uintptr(mask))
+	_, _, _ = NSWindow_setStyleMask.Call(uintptr(n), uintptr(mask))
 }

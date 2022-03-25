@@ -12,11 +12,11 @@ func Pen_Create() uintptr {
 }
 
 func Pen_Free(obj uintptr) {
-	getLazyProc("Pen_Free").Call(obj)
+	_, _, _ = getLazyProc("Pen_Free").Call(obj)
 }
 
 func Pen_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Pen_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Pen_Assign").Call(obj, Source)
 }
 
 func Pen_GetNamePath(obj uintptr) string {
@@ -61,11 +61,11 @@ func Pen_ToString(obj uintptr) string {
 
 func Pen_GetHandle(obj uintptr) HPEN {
 	ret, _, _ := getLazyProc("Pen_GetHandle").Call(obj)
-	return HPEN(ret)
+	return ret
 }
 
 func Pen_SetHandle(obj uintptr, value HPEN) {
-	getLazyProc("Pen_SetHandle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Pen_SetHandle").Call(obj, value)
 }
 
 func Pen_GetColor(obj uintptr) TColor {
@@ -74,7 +74,7 @@ func Pen_GetColor(obj uintptr) TColor {
 }
 
 func Pen_SetColor(obj uintptr, value TColor) {
-	getLazyProc("Pen_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Pen_SetColor").Call(obj, uintptr(value))
 }
 
 func Pen_GetMode(obj uintptr) TPenMode {
@@ -83,7 +83,7 @@ func Pen_GetMode(obj uintptr) TPenMode {
 }
 
 func Pen_SetMode(obj uintptr, value TPenMode) {
-	getLazyProc("Pen_SetMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Pen_SetMode").Call(obj, uintptr(value))
 }
 
 func Pen_GetStyle(obj uintptr) TPenStyle {
@@ -92,7 +92,7 @@ func Pen_GetStyle(obj uintptr) TPenStyle {
 }
 
 func Pen_SetStyle(obj uintptr, value TPenStyle) {
-	getLazyProc("Pen_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Pen_SetStyle").Call(obj, uintptr(value))
 }
 
 func Pen_GetWidth(obj uintptr) int32 {
@@ -101,11 +101,11 @@ func Pen_GetWidth(obj uintptr) int32 {
 }
 
 func Pen_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Pen_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Pen_SetWidth").Call(obj, uintptr(value))
 }
 
-func Pen_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("Pen_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func Pen_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Pen_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func Pen_StaticClassType() TClass {

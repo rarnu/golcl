@@ -12,7 +12,7 @@ func CollectionItem_Create(obj uintptr) uintptr {
 }
 
 func CollectionItem_Free(obj uintptr) {
-	getLazyProc("CollectionItem_Free").Call(obj)
+	_, _, _ = getLazyProc("CollectionItem_Free").Call(obj)
 }
 
 func CollectionItem_GetNamePath(obj uintptr) string {
@@ -21,7 +21,7 @@ func CollectionItem_GetNamePath(obj uintptr) string {
 }
 
 func CollectionItem_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("CollectionItem_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("CollectionItem_Assign").Call(obj, Source)
 }
 
 func CollectionItem_ClassType(obj uintptr) TClass {
@@ -65,7 +65,7 @@ func CollectionItem_GetCollection(obj uintptr) uintptr {
 }
 
 func CollectionItem_SetCollection(obj uintptr, value uintptr) {
-	getLazyProc("CollectionItem_SetCollection").Call(obj, value)
+	_, _, _ = getLazyProc("CollectionItem_SetCollection").Call(obj, value)
 }
 
 func CollectionItem_GetIndex(obj uintptr) int32 {
@@ -74,7 +74,7 @@ func CollectionItem_GetIndex(obj uintptr) int32 {
 }
 
 func CollectionItem_SetIndex(obj uintptr, value int32) {
-	getLazyProc("CollectionItem_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CollectionItem_SetIndex").Call(obj, uintptr(value))
 }
 
 func CollectionItem_GetDisplayName(obj uintptr) string {
@@ -83,7 +83,7 @@ func CollectionItem_GetDisplayName(obj uintptr) string {
 }
 
 func CollectionItem_SetDisplayName(obj uintptr, value string) {
-	getLazyProc("CollectionItem_SetDisplayName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("CollectionItem_SetDisplayName").Call(obj, GoStrToDStr(value))
 }
 
 func CollectionItem_StaticClassType() TClass {

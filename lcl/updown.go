@@ -34,7 +34,7 @@ func NewUpDown(owner IComponent) *TUpDown {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsUpDown(obj interface{}) *TUpDown {
+func AsUpDown(obj any) *TUpDown {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

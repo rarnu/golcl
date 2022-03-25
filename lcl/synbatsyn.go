@@ -12,7 +12,7 @@ type TSynBatSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynBatSyn(obj interface{}) *TSynBatSyn {
+func AsSynBatSyn(obj any) *TSynBatSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

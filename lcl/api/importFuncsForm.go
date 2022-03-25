@@ -381,7 +381,7 @@ func Form_SetAllowDropFiles(obj uintptr, value bool) {
 	_, _, _ = getLazyProc("Form_SetAllowDropFiles").Call(obj, GoBoolToDBool(value))
 }
 
-func Form_SetOnDropFiles(obj uintptr, fn interface{}) {
+func Form_SetOnDropFiles(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnDropFiles").Call(obj, addEventToMap(obj, fn))
 }
 
@@ -772,139 +772,139 @@ func Form_SetWindowState(obj uintptr, value TWindowState) {
 	_, _, _ = getLazyProc("Form_SetWindowState").Call(obj, uintptr(value))
 }
 
-func Form_SetOnActivate(obj uintptr, fn interface{}) {
+func Form_SetOnActivate(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnActivate").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnAlignPosition(obj uintptr, fn interface{}) {
+func Form_SetOnAlignPosition(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnClick(obj uintptr, fn interface{}) {
+func Form_SetOnClick(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnClose(obj uintptr, fn interface{}) {
+func Form_SetOnClose(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnCloseQuery(obj uintptr, fn interface{}) {
+func Form_SetOnCloseQuery(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnCloseQuery").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnConstrainedResize(obj uintptr, fn interface{}) {
+func Form_SetOnConstrainedResize(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnConstrainedResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnContextPopup(obj uintptr, fn interface{}) {
+func Form_SetOnContextPopup(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnDblClick(obj uintptr, fn interface{}) {
+func Form_SetOnDblClick(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnDestroy(obj uintptr, fn interface{}) {
+func Form_SetOnDestroy(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnDestroy").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnDeactivate(obj uintptr, fn interface{}) {
+func Form_SetOnDeactivate(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnDeactivate").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnDockDrop(obj uintptr, fn interface{}) {
+func Form_SetOnDockDrop(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnDragDrop(obj uintptr, fn interface{}) {
+func Form_SetOnDragDrop(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnDragOver(obj uintptr, fn interface{}) {
+func Form_SetOnDragOver(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnEndDock(obj uintptr, fn interface{}) {
+func Form_SetOnEndDock(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnGetSiteInfo(obj uintptr, fn interface{}) {
+func Form_SetOnGetSiteInfo(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnHide(obj uintptr, fn interface{}) {
+func Form_SetOnHide(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnHide").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnHelp(obj uintptr, fn interface{}) {
+func Form_SetOnHelp(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnHelp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnKeyDown(obj uintptr, fn interface{}) {
+func Form_SetOnKeyDown(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnKeyPress(obj uintptr, fn interface{}) {
+func Form_SetOnKeyPress(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnKeyUp(obj uintptr, fn interface{}) {
+func Form_SetOnKeyUp(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnMouseDown(obj uintptr, fn interface{}) {
+func Form_SetOnMouseDown(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnMouseEnter(obj uintptr, fn interface{}) {
+func Form_SetOnMouseEnter(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnMouseLeave(obj uintptr, fn interface{}) {
+func Form_SetOnMouseLeave(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnMouseMove(obj uintptr, fn interface{}) {
+func Form_SetOnMouseMove(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnMouseUp(obj uintptr, fn interface{}) {
+func Form_SetOnMouseUp(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnMouseWheel(obj uintptr, fn interface{}) {
+func Form_SetOnMouseWheel(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnMouseWheel").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnMouseWheelDown(obj uintptr, fn interface{}) {
+func Form_SetOnMouseWheelDown(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnMouseWheelUp(obj uintptr, fn interface{}) {
+func Form_SetOnMouseWheelUp(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnPaint(obj uintptr, fn interface{}) {
+func Form_SetOnPaint(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnPaint").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnResize(obj uintptr, fn interface{}) {
+func Form_SetOnResize(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnShortCut(obj uintptr, fn interface{}) {
+func Form_SetOnShortCut(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnShortCut").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnShow(obj uintptr, fn interface{}) {
+func Form_SetOnShow(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnStartDock(obj uintptr, fn interface{}) {
+func Form_SetOnStartDock(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func Form_SetOnUnDock(obj uintptr, fn interface{}) {
+func Form_SetOnUnDock(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Form_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
 }
 

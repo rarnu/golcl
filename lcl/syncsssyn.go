@@ -12,7 +12,7 @@ type TSynCssSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynCssSyn(obj interface{}) *TSynCssSyn {
+func AsSynCssSyn(obj any) *TSynCssSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

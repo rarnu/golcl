@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-func showError(err interface{}) {
+func showError(err any) {
 	fmt.Println(err)
 }
 

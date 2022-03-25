@@ -12,7 +12,7 @@ type TSynJScriptSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynJScriptSyn(obj interface{}) *TSynJScriptSyn {
+func AsSynJScriptSyn(obj any) *TSynJScriptSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

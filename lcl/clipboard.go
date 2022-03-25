@@ -35,7 +35,7 @@ func NewClipboard() *TClipboard {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsClipboard(obj interface{}) *TClipboard {
+func AsClipboard(obj any) *TClipboard {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

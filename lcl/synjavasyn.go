@@ -12,7 +12,7 @@ type TSynJavaSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynJavaSyn(obj interface{}) *TSynJavaSyn {
+func AsSynJavaSyn(obj any) *TSynJavaSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

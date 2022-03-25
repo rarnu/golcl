@@ -12,7 +12,7 @@ func PrinterSetupDialog_Create(obj uintptr) uintptr {
 }
 
 func PrinterSetupDialog_Free(obj uintptr) {
-	getLazyProc("PrinterSetupDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("PrinterSetupDialog_Free").Call(obj)
 }
 
 func PrinterSetupDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func PrinterSetupDialog_HasParent(obj uintptr) bool {
 }
 
 func PrinterSetupDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("PrinterSetupDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("PrinterSetupDialog_Assign").Call(obj, Source)
 }
 
 func PrinterSetupDialog_ClassType(obj uintptr) TClass {
@@ -76,15 +76,15 @@ func PrinterSetupDialog_ToString(obj uintptr) string {
 
 func PrinterSetupDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("PrinterSetupDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func PrinterSetupDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("PrinterSetupDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func PrinterSetupDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PrinterSetupDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func PrinterSetupDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("PrinterSetupDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func PrinterSetupDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PrinterSetupDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func PrinterSetupDialog_GetComponentCount(obj uintptr) int32 {
@@ -98,7 +98,7 @@ func PrinterSetupDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func PrinterSetupDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("PrinterSetupDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrinterSetupDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func PrinterSetupDialog_GetOwner(obj uintptr) uintptr {
@@ -112,7 +112,7 @@ func PrinterSetupDialog_GetName(obj uintptr) string {
 }
 
 func PrinterSetupDialog_SetName(obj uintptr, value string) {
-	getLazyProc("PrinterSetupDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("PrinterSetupDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func PrinterSetupDialog_GetTag(obj uintptr) int {
@@ -121,7 +121,7 @@ func PrinterSetupDialog_GetTag(obj uintptr) int {
 }
 
 func PrinterSetupDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("PrinterSetupDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrinterSetupDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func PrinterSetupDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

@@ -13,22 +13,22 @@ func Splitter_Create(obj uintptr) uintptr {
 }
 
 func Splitter_Free(obj uintptr) {
-	getLazyProc("Splitter_Free").Call(obj)
+	_, _, _ = getLazyProc("Splitter_Free").Call(obj)
 }
 
 func Splitter_BringToFront(obj uintptr) {
-	getLazyProc("Splitter_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("Splitter_BringToFront").Call(obj)
 }
 
 func Splitter_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Splitter_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Splitter_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Splitter_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Splitter_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Splitter_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -43,11 +43,11 @@ func Splitter_HasParent(obj uintptr) bool {
 }
 
 func Splitter_Hide(obj uintptr) {
-	getLazyProc("Splitter_Hide").Call(obj)
+	_, _, _ = getLazyProc("Splitter_Hide").Call(obj)
 }
 
 func Splitter_Invalidate(obj uintptr) {
-	getLazyProc("Splitter_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("Splitter_Invalidate").Call(obj)
 }
 
 func Splitter_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -56,39 +56,39 @@ func Splitter_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func Splitter_Refresh(obj uintptr) {
-	getLazyProc("Splitter_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Splitter_Refresh").Call(obj)
 }
 
 func Splitter_Repaint(obj uintptr) {
-	getLazyProc("Splitter_Repaint").Call(obj)
+	_, _, _ = getLazyProc("Splitter_Repaint").Call(obj)
 }
 
 func Splitter_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Splitter_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Splitter_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Splitter_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Splitter_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Splitter_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Splitter_SendToBack(obj uintptr) {
-	getLazyProc("Splitter_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("Splitter_SendToBack").Call(obj)
 }
 
 func Splitter_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("Splitter_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Splitter_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func Splitter_Show(obj uintptr) {
-	getLazyProc("Splitter_Show").Call(obj)
+	_, _, _ = getLazyProc("Splitter_Show").Call(obj)
 }
 
 func Splitter_Update(obj uintptr) {
-	getLazyProc("Splitter_Update").Call(obj)
+	_, _, _ = getLazyProc("Splitter_Update").Call(obj)
 }
 
 func Splitter_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -107,7 +107,7 @@ func Splitter_GetTextLen(obj uintptr) int32 {
 }
 
 func Splitter_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Splitter_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Splitter_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Splitter_FindComponent(obj uintptr, AName string) uintptr {
@@ -121,7 +121,7 @@ func Splitter_GetNamePath(obj uintptr) string {
 }
 
 func Splitter_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Splitter_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Splitter_Assign").Call(obj, Source)
 }
 
 func Splitter_ClassType(obj uintptr) TClass {
@@ -160,31 +160,31 @@ func Splitter_ToString(obj uintptr) string {
 }
 
 func Splitter_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Splitter_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Splitter_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Splitter_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Splitter_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Splitter_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Splitter_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Splitter_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Splitter_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func Splitter_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Splitter_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Splitter_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func Splitter_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("Splitter_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("Splitter_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func Splitter_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("Splitter_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("Splitter_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func Splitter_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("Splitter_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("Splitter_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func Splitter_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -238,15 +238,15 @@ func Splitter_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func Splitter_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("Splitter_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("Splitter_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func Splitter_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("Splitter_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("Splitter_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func Splitter_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("Splitter_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("Splitter_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func Splitter_GetResizeAnchor(obj uintptr) TAnchorKind {
@@ -255,7 +255,7 @@ func Splitter_GetResizeAnchor(obj uintptr) TAnchorKind {
 }
 
 func Splitter_SetResizeAnchor(obj uintptr, value TAnchorKind) {
-	getLazyProc("Splitter_SetResizeAnchor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetResizeAnchor").Call(obj, uintptr(value))
 }
 
 func Splitter_GetCanvas(obj uintptr) uintptr {
@@ -269,7 +269,7 @@ func Splitter_GetAlign(obj uintptr) TAlign {
 }
 
 func Splitter_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("Splitter_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetAlign").Call(obj, uintptr(value))
 }
 
 func Splitter_GetColor(obj uintptr) TColor {
@@ -278,7 +278,7 @@ func Splitter_GetColor(obj uintptr) TColor {
 }
 
 func Splitter_SetColor(obj uintptr, value TColor) {
-	getLazyProc("Splitter_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetColor").Call(obj, uintptr(value))
 }
 
 func Splitter_GetCursor(obj uintptr) TCursor {
@@ -287,7 +287,7 @@ func Splitter_GetCursor(obj uintptr) TCursor {
 }
 
 func Splitter_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Splitter_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetCursor").Call(obj, uintptr(value))
 }
 
 func Splitter_GetConstraints(obj uintptr) uintptr {
@@ -296,7 +296,7 @@ func Splitter_GetConstraints(obj uintptr) uintptr {
 }
 
 func Splitter_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("Splitter_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("Splitter_SetConstraints").Call(obj, value)
 }
 
 func Splitter_GetMinSize(obj uintptr) int32 {
@@ -305,7 +305,7 @@ func Splitter_GetMinSize(obj uintptr) int32 {
 }
 
 func Splitter_SetMinSize(obj uintptr, value int32) {
-	getLazyProc("Splitter_SetMinSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetMinSize").Call(obj, uintptr(value))
 }
 
 func Splitter_GetParentColor(obj uintptr) bool {
@@ -314,7 +314,7 @@ func Splitter_GetParentColor(obj uintptr) bool {
 }
 
 func Splitter_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("Splitter_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Splitter_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func Splitter_GetVisible(obj uintptr) bool {
@@ -323,7 +323,7 @@ func Splitter_GetVisible(obj uintptr) bool {
 }
 
 func Splitter_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Splitter_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Splitter_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func Splitter_GetWidth(obj uintptr) int32 {
@@ -332,11 +332,11 @@ func Splitter_GetWidth(obj uintptr) int32 {
 }
 
 func Splitter_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Splitter_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetWidth").Call(obj, uintptr(value))
 }
 
-func Splitter_SetOnPaint(obj uintptr, fn interface{}) {
-	getLazyProc("Splitter_SetOnPaint").Call(obj, addEventToMap(obj, fn))
+func Splitter_SetOnPaint(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Splitter_SetOnPaint").Call(obj, addEventToMap(obj, fn))
 }
 
 func Splitter_GetEnabled(obj uintptr) bool {
@@ -345,7 +345,7 @@ func Splitter_GetEnabled(obj uintptr) bool {
 }
 
 func Splitter_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Splitter_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Splitter_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Splitter_GetAction(obj uintptr) uintptr {
@@ -354,7 +354,7 @@ func Splitter_GetAction(obj uintptr) uintptr {
 }
 
 func Splitter_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("Splitter_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("Splitter_SetAction").Call(obj, value)
 }
 
 func Splitter_GetAnchors(obj uintptr) TAnchors {
@@ -363,7 +363,7 @@ func Splitter_GetAnchors(obj uintptr) TAnchors {
 }
 
 func Splitter_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("Splitter_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetAnchors").Call(obj, uintptr(value))
 }
 
 func Splitter_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -372,17 +372,17 @@ func Splitter_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func Splitter_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("Splitter_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func Splitter_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Splitter_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Splitter_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Splitter_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("Splitter_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Splitter_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Splitter_GetClientHeight(obj uintptr) int32 {
@@ -391,18 +391,18 @@ func Splitter_GetClientHeight(obj uintptr) int32 {
 }
 
 func Splitter_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("Splitter_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func Splitter_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Splitter_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Splitter_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Splitter_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Splitter_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Splitter_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -412,7 +412,7 @@ func Splitter_GetClientWidth(obj uintptr) int32 {
 }
 
 func Splitter_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("Splitter_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func Splitter_GetControlState(obj uintptr) TControlState {
@@ -421,7 +421,7 @@ func Splitter_GetControlState(obj uintptr) TControlState {
 }
 
 func Splitter_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("Splitter_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetControlState").Call(obj, uintptr(value))
 }
 
 func Splitter_GetControlStyle(obj uintptr) TControlStyle {
@@ -430,7 +430,7 @@ func Splitter_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func Splitter_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("Splitter_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func Splitter_GetFloating(obj uintptr) bool {
@@ -444,7 +444,7 @@ func Splitter_GetShowHint(obj uintptr) bool {
 }
 
 func Splitter_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("Splitter_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Splitter_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Splitter_GetParent(obj uintptr) uintptr {
@@ -453,7 +453,7 @@ func Splitter_GetParent(obj uintptr) uintptr {
 }
 
 func Splitter_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("Splitter_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("Splitter_SetParent").Call(obj, value)
 }
 
 func Splitter_GetLeft(obj uintptr) int32 {
@@ -462,7 +462,7 @@ func Splitter_GetLeft(obj uintptr) int32 {
 }
 
 func Splitter_SetLeft(obj uintptr, value int32) {
-	getLazyProc("Splitter_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetLeft").Call(obj, uintptr(value))
 }
 
 func Splitter_GetTop(obj uintptr) int32 {
@@ -471,7 +471,7 @@ func Splitter_GetTop(obj uintptr) int32 {
 }
 
 func Splitter_SetTop(obj uintptr, value int32) {
-	getLazyProc("Splitter_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetTop").Call(obj, uintptr(value))
 }
 
 func Splitter_GetHeight(obj uintptr) int32 {
@@ -480,7 +480,7 @@ func Splitter_GetHeight(obj uintptr) int32 {
 }
 
 func Splitter_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Splitter_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetHeight").Call(obj, uintptr(value))
 }
 
 func Splitter_GetHint(obj uintptr) string {
@@ -489,7 +489,7 @@ func Splitter_GetHint(obj uintptr) string {
 }
 
 func Splitter_SetHint(obj uintptr, value string) {
-	getLazyProc("Splitter_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Splitter_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Splitter_GetComponentCount(obj uintptr) int32 {
@@ -503,7 +503,7 @@ func Splitter_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Splitter_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Splitter_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Splitter_GetOwner(obj uintptr) uintptr {
@@ -517,7 +517,7 @@ func Splitter_GetName(obj uintptr) string {
 }
 
 func Splitter_SetName(obj uintptr, value string) {
-	getLazyProc("Splitter_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Splitter_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Splitter_GetTag(obj uintptr) int {
@@ -526,7 +526,7 @@ func Splitter_GetTag(obj uintptr) int {
 }
 
 func Splitter_SetTag(obj uintptr, value int) {
-	getLazyProc("Splitter_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Splitter_SetTag").Call(obj, uintptr(value))
 }
 
 func Splitter_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -535,7 +535,7 @@ func Splitter_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func Splitter_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("Splitter_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("Splitter_SetAnchorSideLeft").Call(obj, value)
 }
 
 func Splitter_GetAnchorSideTop(obj uintptr) uintptr {
@@ -544,7 +544,7 @@ func Splitter_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func Splitter_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("Splitter_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("Splitter_SetAnchorSideTop").Call(obj, value)
 }
 
 func Splitter_GetAnchorSideRight(obj uintptr) uintptr {
@@ -553,7 +553,7 @@ func Splitter_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func Splitter_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("Splitter_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("Splitter_SetAnchorSideRight").Call(obj, value)
 }
 
 func Splitter_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -562,7 +562,7 @@ func Splitter_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func Splitter_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("Splitter_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("Splitter_SetAnchorSideBottom").Call(obj, value)
 }
 
 func Splitter_GetBorderSpacing(obj uintptr) uintptr {
@@ -571,7 +571,7 @@ func Splitter_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func Splitter_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("Splitter_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("Splitter_SetBorderSpacing").Call(obj, value)
 }
 
 func Splitter_GetComponents(obj uintptr, AIndex int32) uintptr {

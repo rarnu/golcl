@@ -19,7 +19,7 @@ func NewSynEdit(owner IComponent) *TSynEdit {
 	return s
 }
 
-func AsSynEdit(obj interface{}) *TSynEdit {
+func AsSynEdit(obj any) *TSynEdit {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

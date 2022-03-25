@@ -13,22 +13,22 @@ func Image_Create(obj uintptr) uintptr {
 }
 
 func Image_Free(obj uintptr) {
-	getLazyProc("Image_Free").Call(obj)
+	_, _, _ = getLazyProc("Image_Free").Call(obj)
 }
 
 func Image_BringToFront(obj uintptr) {
-	getLazyProc("Image_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("Image_BringToFront").Call(obj)
 }
 
 func Image_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Image_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Image_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Image_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Image_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Image_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -43,11 +43,11 @@ func Image_HasParent(obj uintptr) bool {
 }
 
 func Image_Hide(obj uintptr) {
-	getLazyProc("Image_Hide").Call(obj)
+	_, _, _ = getLazyProc("Image_Hide").Call(obj)
 }
 
 func Image_Invalidate(obj uintptr) {
-	getLazyProc("Image_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("Image_Invalidate").Call(obj)
 }
 
 func Image_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -56,39 +56,39 @@ func Image_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func Image_Refresh(obj uintptr) {
-	getLazyProc("Image_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Image_Refresh").Call(obj)
 }
 
 func Image_Repaint(obj uintptr) {
-	getLazyProc("Image_Repaint").Call(obj)
+	_, _, _ = getLazyProc("Image_Repaint").Call(obj)
 }
 
 func Image_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Image_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Image_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Image_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Image_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Image_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Image_SendToBack(obj uintptr) {
-	getLazyProc("Image_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("Image_SendToBack").Call(obj)
 }
 
 func Image_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("Image_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Image_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func Image_Show(obj uintptr) {
-	getLazyProc("Image_Show").Call(obj)
+	_, _, _ = getLazyProc("Image_Show").Call(obj)
 }
 
 func Image_Update(obj uintptr) {
-	getLazyProc("Image_Update").Call(obj)
+	_, _, _ = getLazyProc("Image_Update").Call(obj)
 }
 
 func Image_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -107,7 +107,7 @@ func Image_GetTextLen(obj uintptr) int32 {
 }
 
 func Image_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Image_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Image_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Image_FindComponent(obj uintptr, AName string) uintptr {
@@ -121,7 +121,7 @@ func Image_GetNamePath(obj uintptr) string {
 }
 
 func Image_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Image_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Image_Assign").Call(obj, Source)
 }
 
 func Image_ClassType(obj uintptr) TClass {
@@ -160,31 +160,31 @@ func Image_ToString(obj uintptr) string {
 }
 
 func Image_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Image_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Image_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Image_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Image_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Image_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Image_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Image_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Image_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func Image_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Image_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Image_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func Image_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("Image_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("Image_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func Image_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("Image_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("Image_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func Image_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("Image_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("Image_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func Image_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -238,15 +238,15 @@ func Image_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func Image_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("Image_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("Image_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func Image_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("Image_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("Image_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func Image_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("Image_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("Image_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func Image_GetAntialiasingMode(obj uintptr) TAntialiasingMode {
@@ -255,7 +255,7 @@ func Image_GetAntialiasingMode(obj uintptr) TAntialiasingMode {
 }
 
 func Image_SetAntialiasingMode(obj uintptr, value TAntialiasingMode) {
-	getLazyProc("Image_SetAntialiasingMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetAntialiasingMode").Call(obj, uintptr(value))
 }
 
 func Image_GetKeepOriginXWhenClipped(obj uintptr) bool {
@@ -264,7 +264,7 @@ func Image_GetKeepOriginXWhenClipped(obj uintptr) bool {
 }
 
 func Image_SetKeepOriginXWhenClipped(obj uintptr, value bool) {
-	getLazyProc("Image_SetKeepOriginXWhenClipped").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetKeepOriginXWhenClipped").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetKeepOriginYWhenClipped(obj uintptr) bool {
@@ -273,7 +273,7 @@ func Image_GetKeepOriginYWhenClipped(obj uintptr) bool {
 }
 
 func Image_SetKeepOriginYWhenClipped(obj uintptr, value bool) {
-	getLazyProc("Image_SetKeepOriginYWhenClipped").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetKeepOriginYWhenClipped").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetStretchInEnabled(obj uintptr) bool {
@@ -282,7 +282,7 @@ func Image_GetStretchInEnabled(obj uintptr) bool {
 }
 
 func Image_SetStretchInEnabled(obj uintptr, value bool) {
-	getLazyProc("Image_SetStretchInEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetStretchInEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetStretchOutEnabled(obj uintptr) bool {
@@ -291,7 +291,7 @@ func Image_GetStretchOutEnabled(obj uintptr) bool {
 }
 
 func Image_SetStretchOutEnabled(obj uintptr, value bool) {
-	getLazyProc("Image_SetStretchOutEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetStretchOutEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetCanvas(obj uintptr) uintptr {
@@ -305,7 +305,7 @@ func Image_GetAlign(obj uintptr) TAlign {
 }
 
 func Image_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("Image_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetAlign").Call(obj, uintptr(value))
 }
 
 func Image_GetAnchors(obj uintptr) TAnchors {
@@ -314,7 +314,7 @@ func Image_GetAnchors(obj uintptr) TAnchors {
 }
 
 func Image_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("Image_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetAnchors").Call(obj, uintptr(value))
 }
 
 func Image_GetAutoSize(obj uintptr) bool {
@@ -323,7 +323,7 @@ func Image_GetAutoSize(obj uintptr) bool {
 }
 
 func Image_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("Image_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetCenter(obj uintptr) bool {
@@ -332,7 +332,7 @@ func Image_GetCenter(obj uintptr) bool {
 }
 
 func Image_SetCenter(obj uintptr, value bool) {
-	getLazyProc("Image_SetCenter").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetCenter").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetConstraints(obj uintptr) uintptr {
@@ -341,7 +341,7 @@ func Image_GetConstraints(obj uintptr) uintptr {
 }
 
 func Image_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetConstraints").Call(obj, value)
 }
 
 func Image_GetDragCursor(obj uintptr) TCursor {
@@ -350,7 +350,7 @@ func Image_GetDragCursor(obj uintptr) TCursor {
 }
 
 func Image_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("Image_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func Image_GetDragMode(obj uintptr) TDragMode {
@@ -359,7 +359,7 @@ func Image_GetDragMode(obj uintptr) TDragMode {
 }
 
 func Image_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("Image_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetDragMode").Call(obj, uintptr(value))
 }
 
 func Image_GetEnabled(obj uintptr) bool {
@@ -368,7 +368,7 @@ func Image_GetEnabled(obj uintptr) bool {
 }
 
 func Image_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Image_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetParentShowHint(obj uintptr) bool {
@@ -377,7 +377,7 @@ func Image_GetParentShowHint(obj uintptr) bool {
 }
 
 func Image_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("Image_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetPicture(obj uintptr) uintptr {
@@ -386,7 +386,7 @@ func Image_GetPicture(obj uintptr) uintptr {
 }
 
 func Image_SetPicture(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetPicture").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetPicture").Call(obj, value)
 }
 
 func Image_GetPopupMenu(obj uintptr) uintptr {
@@ -395,7 +395,7 @@ func Image_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func Image_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetPopupMenu").Call(obj, value)
 }
 
 func Image_GetProportional(obj uintptr) bool {
@@ -404,7 +404,7 @@ func Image_GetProportional(obj uintptr) bool {
 }
 
 func Image_SetProportional(obj uintptr, value bool) {
-	getLazyProc("Image_SetProportional").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetProportional").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetShowHint(obj uintptr) bool {
@@ -413,7 +413,7 @@ func Image_GetShowHint(obj uintptr) bool {
 }
 
 func Image_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("Image_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetStretch(obj uintptr) bool {
@@ -422,7 +422,7 @@ func Image_GetStretch(obj uintptr) bool {
 }
 
 func Image_SetStretch(obj uintptr, value bool) {
-	getLazyProc("Image_SetStretch").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetStretch").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetTransparent(obj uintptr) bool {
@@ -431,7 +431,7 @@ func Image_GetTransparent(obj uintptr) bool {
 }
 
 func Image_SetTransparent(obj uintptr, value bool) {
-	getLazyProc("Image_SetTransparent").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetTransparent").Call(obj, GoBoolToDBool(value))
 }
 
 func Image_GetVisible(obj uintptr) bool {
@@ -440,47 +440,47 @@ func Image_GetVisible(obj uintptr) bool {
 }
 
 func Image_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Image_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Image_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func Image_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func Image_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("Image_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func Image_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Image_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func Image_GetAction(obj uintptr) uintptr {
@@ -489,7 +489,7 @@ func Image_GetAction(obj uintptr) uintptr {
 }
 
 func Image_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetAction").Call(obj, value)
 }
 
 func Image_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -498,17 +498,17 @@ func Image_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func Image_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("Image_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func Image_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Image_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Image_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Image_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("Image_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Image_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Image_GetClientHeight(obj uintptr) int32 {
@@ -517,18 +517,18 @@ func Image_GetClientHeight(obj uintptr) int32 {
 }
 
 func Image_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("Image_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func Image_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Image_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Image_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Image_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Image_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Image_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -538,7 +538,7 @@ func Image_GetClientWidth(obj uintptr) int32 {
 }
 
 func Image_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("Image_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func Image_GetControlState(obj uintptr) TControlState {
@@ -547,7 +547,7 @@ func Image_GetControlState(obj uintptr) TControlState {
 }
 
 func Image_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("Image_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetControlState").Call(obj, uintptr(value))
 }
 
 func Image_GetControlStyle(obj uintptr) TControlStyle {
@@ -556,7 +556,7 @@ func Image_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func Image_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("Image_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func Image_GetFloating(obj uintptr) bool {
@@ -570,7 +570,7 @@ func Image_GetParent(obj uintptr) uintptr {
 }
 
 func Image_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetParent").Call(obj, value)
 }
 
 func Image_GetLeft(obj uintptr) int32 {
@@ -579,7 +579,7 @@ func Image_GetLeft(obj uintptr) int32 {
 }
 
 func Image_SetLeft(obj uintptr, value int32) {
-	getLazyProc("Image_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetLeft").Call(obj, uintptr(value))
 }
 
 func Image_GetTop(obj uintptr) int32 {
@@ -588,7 +588,7 @@ func Image_GetTop(obj uintptr) int32 {
 }
 
 func Image_SetTop(obj uintptr, value int32) {
-	getLazyProc("Image_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetTop").Call(obj, uintptr(value))
 }
 
 func Image_GetWidth(obj uintptr) int32 {
@@ -597,7 +597,7 @@ func Image_GetWidth(obj uintptr) int32 {
 }
 
 func Image_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Image_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetWidth").Call(obj, uintptr(value))
 }
 
 func Image_GetHeight(obj uintptr) int32 {
@@ -606,7 +606,7 @@ func Image_GetHeight(obj uintptr) int32 {
 }
 
 func Image_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Image_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetHeight").Call(obj, uintptr(value))
 }
 
 func Image_GetCursor(obj uintptr) TCursor {
@@ -615,7 +615,7 @@ func Image_GetCursor(obj uintptr) TCursor {
 }
 
 func Image_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Image_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetCursor").Call(obj, uintptr(value))
 }
 
 func Image_GetHint(obj uintptr) string {
@@ -624,7 +624,7 @@ func Image_GetHint(obj uintptr) string {
 }
 
 func Image_SetHint(obj uintptr, value string) {
-	getLazyProc("Image_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Image_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Image_GetComponentCount(obj uintptr) int32 {
@@ -638,7 +638,7 @@ func Image_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Image_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Image_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Image_GetOwner(obj uintptr) uintptr {
@@ -652,7 +652,7 @@ func Image_GetName(obj uintptr) string {
 }
 
 func Image_SetName(obj uintptr, value string) {
-	getLazyProc("Image_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Image_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Image_GetTag(obj uintptr) int {
@@ -661,7 +661,7 @@ func Image_GetTag(obj uintptr) int {
 }
 
 func Image_SetTag(obj uintptr, value int) {
-	getLazyProc("Image_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Image_SetTag").Call(obj, uintptr(value))
 }
 
 func Image_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -670,7 +670,7 @@ func Image_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func Image_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetAnchorSideLeft").Call(obj, value)
 }
 
 func Image_GetAnchorSideTop(obj uintptr) uintptr {
@@ -679,7 +679,7 @@ func Image_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func Image_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetAnchorSideTop").Call(obj, value)
 }
 
 func Image_GetAnchorSideRight(obj uintptr) uintptr {
@@ -688,7 +688,7 @@ func Image_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func Image_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetAnchorSideRight").Call(obj, value)
 }
 
 func Image_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -697,7 +697,7 @@ func Image_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func Image_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetAnchorSideBottom").Call(obj, value)
 }
 
 func Image_GetBorderSpacing(obj uintptr) uintptr {
@@ -706,7 +706,7 @@ func Image_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func Image_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("Image_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("Image_SetBorderSpacing").Call(obj, value)
 }
 
 func Image_GetComponents(obj uintptr, AIndex int32) uintptr {

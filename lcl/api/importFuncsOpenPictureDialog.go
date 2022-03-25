@@ -12,7 +12,7 @@ func OpenPictureDialog_Create(obj uintptr) uintptr {
 }
 
 func OpenPictureDialog_Free(obj uintptr) {
-	getLazyProc("OpenPictureDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("OpenPictureDialog_Free").Call(obj)
 }
 
 func OpenPictureDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func OpenPictureDialog_HasParent(obj uintptr) bool {
 }
 
 func OpenPictureDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("OpenPictureDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("OpenPictureDialog_Assign").Call(obj, Source)
 }
 
 func OpenPictureDialog_ClassType(obj uintptr) TClass {
@@ -80,7 +80,7 @@ func OpenPictureDialog_GetFilter(obj uintptr) string {
 }
 
 func OpenPictureDialog_SetFilter(obj uintptr, value string) {
-	getLazyProc("OpenPictureDialog_SetFilter").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetFilter").Call(obj, GoStrToDStr(value))
 }
 
 func OpenPictureDialog_GetFiles(obj uintptr) uintptr {
@@ -94,7 +94,7 @@ func OpenPictureDialog_GetDefaultExt(obj uintptr) string {
 }
 
 func OpenPictureDialog_SetDefaultExt(obj uintptr, value string) {
-	getLazyProc("OpenPictureDialog_SetDefaultExt").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetDefaultExt").Call(obj, GoStrToDStr(value))
 }
 
 func OpenPictureDialog_GetFileName(obj uintptr) string {
@@ -103,7 +103,7 @@ func OpenPictureDialog_GetFileName(obj uintptr) string {
 }
 
 func OpenPictureDialog_SetFileName(obj uintptr, value string) {
-	getLazyProc("OpenPictureDialog_SetFileName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetFileName").Call(obj, GoStrToDStr(value))
 }
 
 func OpenPictureDialog_GetFilterIndex(obj uintptr) int32 {
@@ -112,7 +112,7 @@ func OpenPictureDialog_GetFilterIndex(obj uintptr) int32 {
 }
 
 func OpenPictureDialog_SetFilterIndex(obj uintptr, value int32) {
-	getLazyProc("OpenPictureDialog_SetFilterIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetFilterIndex").Call(obj, uintptr(value))
 }
 
 func OpenPictureDialog_GetInitialDir(obj uintptr) string {
@@ -121,7 +121,7 @@ func OpenPictureDialog_GetInitialDir(obj uintptr) string {
 }
 
 func OpenPictureDialog_SetInitialDir(obj uintptr, value string) {
-	getLazyProc("OpenPictureDialog_SetInitialDir").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetInitialDir").Call(obj, GoStrToDStr(value))
 }
 
 func OpenPictureDialog_GetOptions(obj uintptr) TOpenOptions {
@@ -130,7 +130,7 @@ func OpenPictureDialog_GetOptions(obj uintptr) TOpenOptions {
 }
 
 func OpenPictureDialog_SetOptions(obj uintptr, value TOpenOptions) {
-	getLazyProc("OpenPictureDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetOptions").Call(obj, uintptr(value))
 }
 
 func OpenPictureDialog_GetTitle(obj uintptr) string {
@@ -139,20 +139,20 @@ func OpenPictureDialog_GetTitle(obj uintptr) string {
 }
 
 func OpenPictureDialog_SetTitle(obj uintptr, value string) {
-	getLazyProc("OpenPictureDialog_SetTitle").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetTitle").Call(obj, GoStrToDStr(value))
 }
 
 func OpenPictureDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("OpenPictureDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func OpenPictureDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("OpenPictureDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func OpenPictureDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("OpenPictureDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func OpenPictureDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("OpenPictureDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func OpenPictureDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("OpenPictureDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func OpenPictureDialog_GetComponentCount(obj uintptr) int32 {
@@ -166,7 +166,7 @@ func OpenPictureDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func OpenPictureDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("OpenPictureDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func OpenPictureDialog_GetOwner(obj uintptr) uintptr {
@@ -180,7 +180,7 @@ func OpenPictureDialog_GetName(obj uintptr) string {
 }
 
 func OpenPictureDialog_SetName(obj uintptr, value string) {
-	getLazyProc("OpenPictureDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func OpenPictureDialog_GetTag(obj uintptr) int {
@@ -189,7 +189,7 @@ func OpenPictureDialog_GetTag(obj uintptr) int {
 }
 
 func OpenPictureDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("OpenPictureDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("OpenPictureDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func OpenPictureDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

@@ -12,27 +12,27 @@ func Printer_Create() uintptr {
 }
 
 func Printer_Free(obj uintptr) {
-	getLazyProc("Printer_Free").Call(obj)
+	_, _, _ = getLazyProc("Printer_Free").Call(obj)
 }
 
 func Printer_Abort(obj uintptr) {
-	getLazyProc("Printer_Abort").Call(obj)
+	_, _, _ = getLazyProc("Printer_Abort").Call(obj)
 }
 
 func Printer_BeginDoc(obj uintptr) {
-	getLazyProc("Printer_BeginDoc").Call(obj)
+	_, _, _ = getLazyProc("Printer_BeginDoc").Call(obj)
 }
 
 func Printer_EndDoc(obj uintptr) {
-	getLazyProc("Printer_EndDoc").Call(obj)
+	_, _, _ = getLazyProc("Printer_EndDoc").Call(obj)
 }
 
 func Printer_NewPage(obj uintptr) {
-	getLazyProc("Printer_NewPage").Call(obj)
+	_, _, _ = getLazyProc("Printer_NewPage").Call(obj)
 }
 
 func Printer_Refresh(obj uintptr) {
-	getLazyProc("Printer_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Printer_Refresh").Call(obj)
 }
 
 func Printer_ClassType(obj uintptr) TClass {
@@ -86,7 +86,7 @@ func Printer_GetCopies(obj uintptr) int32 {
 }
 
 func Printer_SetCopies(obj uintptr, value int32) {
-	getLazyProc("Printer_SetCopies").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Printer_SetCopies").Call(obj, uintptr(value))
 }
 
 func Printer_GetFonts(obj uintptr) uintptr {
@@ -100,7 +100,7 @@ func Printer_GetOrientation(obj uintptr) TPrinterOrientation {
 }
 
 func Printer_SetOrientation(obj uintptr, value TPrinterOrientation) {
-	getLazyProc("Printer_SetOrientation").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Printer_SetOrientation").Call(obj, uintptr(value))
 }
 
 func Printer_GetPageHeight(obj uintptr) int32 {
@@ -124,7 +124,7 @@ func Printer_GetPrinterIndex(obj uintptr) int32 {
 }
 
 func Printer_SetPrinterIndex(obj uintptr, value int32) {
-	getLazyProc("Printer_SetPrinterIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Printer_SetPrinterIndex").Call(obj, uintptr(value))
 }
 
 func Printer_GetPrinting(obj uintptr) bool {
@@ -143,7 +143,7 @@ func Printer_GetTitle(obj uintptr) string {
 }
 
 func Printer_SetTitle(obj uintptr, value string) {
-	getLazyProc("Printer_SetTitle").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Printer_SetTitle").Call(obj, GoStrToDStr(value))
 }
 
 func Printer_StaticClassType() TClass {

@@ -12,31 +12,31 @@ func Bitmap_Create() uintptr {
 }
 
 func Bitmap_Free(obj uintptr) {
-	getLazyProc("Bitmap_Free").Call(obj)
+	_, _, _ = getLazyProc("Bitmap_Free").Call(obj)
 }
 
 func Bitmap_LoadFromDevice(obj uintptr, ADc HDC) {
-	getLazyProc("Bitmap_LoadFromDevice").Call(obj, uintptr(ADc))
+	_, _, _ = getLazyProc("Bitmap_LoadFromDevice").Call(obj, ADc)
 }
 
 func Bitmap_EndUpdate(obj uintptr, AStreamIsValid bool) {
-	getLazyProc("Bitmap_EndUpdate").Call(obj, GoBoolToDBool(AStreamIsValid))
+	_, _, _ = getLazyProc("Bitmap_EndUpdate").Call(obj, GoBoolToDBool(AStreamIsValid))
 }
 
 func Bitmap_BeginUpdate(obj uintptr, ACanvasOnly bool) {
-	getLazyProc("Bitmap_BeginUpdate").Call(obj, GoBoolToDBool(ACanvasOnly))
+	_, _, _ = getLazyProc("Bitmap_BeginUpdate").Call(obj, GoBoolToDBool(ACanvasOnly))
 }
 
 func Bitmap_Clear(obj uintptr) {
-	getLazyProc("Bitmap_Clear").Call(obj)
+	_, _, _ = getLazyProc("Bitmap_Clear").Call(obj)
 }
 
 func Bitmap_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Bitmap_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Bitmap_Assign").Call(obj, Source)
 }
 
 func Bitmap_FreeImage(obj uintptr) {
-	getLazyProc("Bitmap_FreeImage").Call(obj)
+	_, _, _ = getLazyProc("Bitmap_FreeImage").Call(obj)
 }
 
 func Bitmap_HandleAllocated(obj uintptr) bool {
@@ -45,23 +45,23 @@ func Bitmap_HandleAllocated(obj uintptr) bool {
 }
 
 func Bitmap_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Bitmap_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Bitmap_LoadFromStream").Call(obj, Stream)
 }
 
 func Bitmap_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Bitmap_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Bitmap_SaveToStream").Call(obj, Stream)
 }
 
 func Bitmap_SetSize(obj uintptr, AWidth int32, AHeight int32) {
-	getLazyProc("Bitmap_SetSize").Call(obj, uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Bitmap_SetSize").Call(obj, uintptr(AWidth), uintptr(AHeight))
 }
 
 func Bitmap_LoadFromResourceName(obj uintptr, Instance uintptr, ResName string) {
-	getLazyProc("Bitmap_LoadFromResourceName").Call(obj, Instance, GoStrToDStr(ResName))
+	_, _, _ = getLazyProc("Bitmap_LoadFromResourceName").Call(obj, Instance, GoStrToDStr(ResName))
 }
 
 func Bitmap_LoadFromResourceID(obj uintptr, Instance uintptr, ResID int32) {
-	getLazyProc("Bitmap_LoadFromResourceID").Call(obj, Instance, uintptr(ResID))
+	_, _, _ = getLazyProc("Bitmap_LoadFromResourceID").Call(obj, Instance, uintptr(ResID))
 }
 
 func Bitmap_Equals(obj uintptr, Obj uintptr) bool {
@@ -70,11 +70,11 @@ func Bitmap_Equals(obj uintptr, Obj uintptr) bool {
 }
 
 func Bitmap_LoadFromFile(obj uintptr, Filename string) {
-	getLazyProc("Bitmap_LoadFromFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("Bitmap_LoadFromFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func Bitmap_SaveToFile(obj uintptr, Filename string) {
-	getLazyProc("Bitmap_SaveToFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("Bitmap_SaveToFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func Bitmap_GetNamePath(obj uintptr) string {
@@ -119,11 +119,11 @@ func Bitmap_GetCanvas(obj uintptr) uintptr {
 
 func Bitmap_GetHandle(obj uintptr) HBITMAP {
 	ret, _, _ := getLazyProc("Bitmap_GetHandle").Call(obj)
-	return HBITMAP(ret)
+	return ret
 }
 
 func Bitmap_SetHandle(obj uintptr, value HBITMAP) {
-	getLazyProc("Bitmap_SetHandle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bitmap_SetHandle").Call(obj, value)
 }
 
 func Bitmap_GetHandleType(obj uintptr) TBitmapHandleType {
@@ -132,16 +132,16 @@ func Bitmap_GetHandleType(obj uintptr) TBitmapHandleType {
 }
 
 func Bitmap_SetHandleType(obj uintptr, value TBitmapHandleType) {
-	getLazyProc("Bitmap_SetHandleType").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bitmap_SetHandleType").Call(obj, uintptr(value))
 }
 
 func Bitmap_GetMaskHandle(obj uintptr) HBITMAP {
 	ret, _, _ := getLazyProc("Bitmap_GetMaskHandle").Call(obj)
-	return HBITMAP(ret)
+	return ret
 }
 
 func Bitmap_SetMaskHandle(obj uintptr, value HBITMAP) {
-	getLazyProc("Bitmap_SetMaskHandle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bitmap_SetMaskHandle").Call(obj, value)
 }
 
 func Bitmap_GetPixelFormat(obj uintptr) TPixelFormat {
@@ -150,7 +150,7 @@ func Bitmap_GetPixelFormat(obj uintptr) TPixelFormat {
 }
 
 func Bitmap_SetPixelFormat(obj uintptr, value TPixelFormat) {
-	getLazyProc("Bitmap_SetPixelFormat").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bitmap_SetPixelFormat").Call(obj, uintptr(value))
 }
 
 func Bitmap_GetTransparentMode(obj uintptr) TTransparentMode {
@@ -159,7 +159,7 @@ func Bitmap_GetTransparentMode(obj uintptr) TTransparentMode {
 }
 
 func Bitmap_SetTransparentMode(obj uintptr, value TTransparentMode) {
-	getLazyProc("Bitmap_SetTransparentMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bitmap_SetTransparentMode").Call(obj, uintptr(value))
 }
 
 func Bitmap_GetEmpty(obj uintptr) bool {
@@ -173,7 +173,7 @@ func Bitmap_GetHeight(obj uintptr) int32 {
 }
 
 func Bitmap_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Bitmap_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bitmap_SetHeight").Call(obj, uintptr(value))
 }
 
 func Bitmap_GetModified(obj uintptr) bool {
@@ -182,16 +182,16 @@ func Bitmap_GetModified(obj uintptr) bool {
 }
 
 func Bitmap_SetModified(obj uintptr, value bool) {
-	getLazyProc("Bitmap_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Bitmap_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func Bitmap_GetPalette(obj uintptr) HPALETTE {
 	ret, _, _ := getLazyProc("Bitmap_GetPalette").Call(obj)
-	return HPALETTE(ret)
+	return ret
 }
 
 func Bitmap_SetPalette(obj uintptr, value HPALETTE) {
-	getLazyProc("Bitmap_SetPalette").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bitmap_SetPalette").Call(obj, value)
 }
 
 func Bitmap_GetPaletteModified(obj uintptr) bool {
@@ -200,7 +200,7 @@ func Bitmap_GetPaletteModified(obj uintptr) bool {
 }
 
 func Bitmap_SetPaletteModified(obj uintptr, value bool) {
-	getLazyProc("Bitmap_SetPaletteModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Bitmap_SetPaletteModified").Call(obj, GoBoolToDBool(value))
 }
 
 func Bitmap_GetTransparent(obj uintptr) bool {
@@ -209,7 +209,7 @@ func Bitmap_GetTransparent(obj uintptr) bool {
 }
 
 func Bitmap_SetTransparent(obj uintptr, value bool) {
-	getLazyProc("Bitmap_SetTransparent").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Bitmap_SetTransparent").Call(obj, GoBoolToDBool(value))
 }
 
 func Bitmap_GetWidth(obj uintptr) int32 {
@@ -218,11 +218,11 @@ func Bitmap_GetWidth(obj uintptr) int32 {
 }
 
 func Bitmap_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Bitmap_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Bitmap_SetWidth").Call(obj, uintptr(value))
 }
 
-func Bitmap_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("Bitmap_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func Bitmap_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Bitmap_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func Bitmap_GetScanLine(obj uintptr, Row int32) uintptr {

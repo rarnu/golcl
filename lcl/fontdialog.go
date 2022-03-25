@@ -34,7 +34,7 @@ func NewFontDialog(owner IComponent) *TFontDialog {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsFontDialog(obj interface{}) *TFontDialog {
+func AsFontDialog(obj any) *TFontDialog {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

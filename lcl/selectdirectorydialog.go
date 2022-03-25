@@ -34,7 +34,7 @@ func NewSelectDirectoryDialog(owner IComponent) *TSelectDirectoryDialog {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsSelectDirectoryDialog(obj interface{}) *TSelectDirectoryDialog {
+func AsSelectDirectoryDialog(obj any) *TSelectDirectoryDialog {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

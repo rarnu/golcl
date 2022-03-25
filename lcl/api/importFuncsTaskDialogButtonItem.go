@@ -12,7 +12,7 @@ func TaskDialogButtonItem_Create(obj uintptr) uintptr {
 }
 
 func TaskDialogButtonItem_Free(obj uintptr) {
-	getLazyProc("TaskDialogButtonItem_Free").Call(obj)
+	_, _, _ = getLazyProc("TaskDialogButtonItem_Free").Call(obj)
 }
 
 func TaskDialogButtonItem_GetNamePath(obj uintptr) string {
@@ -21,7 +21,7 @@ func TaskDialogButtonItem_GetNamePath(obj uintptr) string {
 }
 
 func TaskDialogButtonItem_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TaskDialogButtonItem_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TaskDialogButtonItem_Assign").Call(obj, Source)
 }
 
 func TaskDialogButtonItem_ClassType(obj uintptr) TClass {
@@ -65,7 +65,7 @@ func TaskDialogButtonItem_GetModalResult(obj uintptr) TModalResult {
 }
 
 func TaskDialogButtonItem_SetModalResult(obj uintptr, value TModalResult) {
-	getLazyProc("TaskDialogButtonItem_SetModalResult").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialogButtonItem_SetModalResult").Call(obj, uintptr(value))
 }
 
 func TaskDialogButtonItem_GetCaption(obj uintptr) string {
@@ -74,7 +74,7 @@ func TaskDialogButtonItem_GetCaption(obj uintptr) string {
 }
 
 func TaskDialogButtonItem_SetCaption(obj uintptr, value string) {
-	getLazyProc("TaskDialogButtonItem_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialogButtonItem_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialogButtonItem_GetDefault(obj uintptr) bool {
@@ -83,7 +83,7 @@ func TaskDialogButtonItem_GetDefault(obj uintptr) bool {
 }
 
 func TaskDialogButtonItem_SetDefault(obj uintptr, value bool) {
-	getLazyProc("TaskDialogButtonItem_SetDefault").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TaskDialogButtonItem_SetDefault").Call(obj, GoBoolToDBool(value))
 }
 
 func TaskDialogButtonItem_GetCollection(obj uintptr) uintptr {
@@ -92,7 +92,7 @@ func TaskDialogButtonItem_GetCollection(obj uintptr) uintptr {
 }
 
 func TaskDialogButtonItem_SetCollection(obj uintptr, value uintptr) {
-	getLazyProc("TaskDialogButtonItem_SetCollection").Call(obj, value)
+	_, _, _ = getLazyProc("TaskDialogButtonItem_SetCollection").Call(obj, value)
 }
 
 func TaskDialogButtonItem_GetIndex(obj uintptr) int32 {
@@ -101,7 +101,7 @@ func TaskDialogButtonItem_GetIndex(obj uintptr) int32 {
 }
 
 func TaskDialogButtonItem_SetIndex(obj uintptr, value int32) {
-	getLazyProc("TaskDialogButtonItem_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TaskDialogButtonItem_SetIndex").Call(obj, uintptr(value))
 }
 
 func TaskDialogButtonItem_GetDisplayName(obj uintptr) string {
@@ -110,7 +110,7 @@ func TaskDialogButtonItem_GetDisplayName(obj uintptr) string {
 }
 
 func TaskDialogButtonItem_SetDisplayName(obj uintptr, value string) {
-	getLazyProc("TaskDialogButtonItem_SetDisplayName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TaskDialogButtonItem_SetDisplayName").Call(obj, GoStrToDStr(value))
 }
 
 func TaskDialogButtonItem_StaticClassType() TClass {

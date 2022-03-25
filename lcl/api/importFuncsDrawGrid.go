@@ -13,22 +13,22 @@ func DrawGrid_Create(obj uintptr) uintptr {
 }
 
 func DrawGrid_Free(obj uintptr) {
-	getLazyProc("DrawGrid_Free").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_Free").Call(obj)
 }
 
 func DrawGrid_CellRect(obj uintptr, ACol int32, ARow int32) TRect {
 	var ret TRect
-	getLazyProc("DrawGrid_CellRect").Call(obj, uintptr(ACol), uintptr(ARow), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_CellRect").Call(obj, uintptr(ACol), uintptr(ARow), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DrawGrid_MouseToCell(obj uintptr, X int32, Y int32, ACol *int32, ARow *int32) {
-	getLazyProc("DrawGrid_MouseToCell").Call(obj, uintptr(X), uintptr(Y), uintptr(unsafe.Pointer(ACol)), uintptr(unsafe.Pointer(ARow)))
+	_, _, _ = getLazyProc("DrawGrid_MouseToCell").Call(obj, uintptr(X), uintptr(Y), uintptr(unsafe.Pointer(ACol)), uintptr(unsafe.Pointer(ARow)))
 }
 
 func DrawGrid_MouseCoord(obj uintptr, X int32, Y int32) TGridCoord {
 	var ret TGridCoord
-	getLazyProc("DrawGrid_MouseCoord").Call(obj, uintptr(X), uintptr(Y), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_MouseCoord").Call(obj, uintptr(X), uintptr(Y), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -48,11 +48,11 @@ func DrawGrid_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWin
 }
 
 func DrawGrid_DisableAlign(obj uintptr) {
-	getLazyProc("DrawGrid_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_DisableAlign").Call(obj)
 }
 
 func DrawGrid_EnableAlign(obj uintptr) {
-	getLazyProc("DrawGrid_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_EnableAlign").Call(obj)
 }
 
 func DrawGrid_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -61,7 +61,7 @@ func DrawGrid_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func DrawGrid_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("DrawGrid_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("DrawGrid_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func DrawGrid_Focused(obj uintptr) bool {
@@ -75,62 +75,62 @@ func DrawGrid_HandleAllocated(obj uintptr) bool {
 }
 
 func DrawGrid_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("DrawGrid_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("DrawGrid_InsertControl").Call(obj, AControl)
 }
 
 func DrawGrid_Invalidate(obj uintptr) {
-	getLazyProc("DrawGrid_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_Invalidate").Call(obj)
 }
 
 func DrawGrid_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("DrawGrid_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("DrawGrid_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func DrawGrid_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("DrawGrid_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("DrawGrid_RemoveControl").Call(obj, AControl)
 }
 
 func DrawGrid_Realign(obj uintptr) {
-	getLazyProc("DrawGrid_Realign").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_Realign").Call(obj)
 }
 
 func DrawGrid_Repaint(obj uintptr) {
-	getLazyProc("DrawGrid_Repaint").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_Repaint").Call(obj)
 }
 
 func DrawGrid_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("DrawGrid_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("DrawGrid_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func DrawGrid_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("DrawGrid_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("DrawGrid_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func DrawGrid_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("DrawGrid_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("DrawGrid_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func DrawGrid_SetFocus(obj uintptr) {
-	getLazyProc("DrawGrid_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_SetFocus").Call(obj)
 }
 
 func DrawGrid_Update(obj uintptr) {
-	getLazyProc("DrawGrid_Update").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_Update").Call(obj)
 }
 
 func DrawGrid_BringToFront(obj uintptr) {
-	getLazyProc("DrawGrid_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_BringToFront").Call(obj)
 }
 
 func DrawGrid_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("DrawGrid_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DrawGrid_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("DrawGrid_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -145,7 +145,7 @@ func DrawGrid_HasParent(obj uintptr) bool {
 }
 
 func DrawGrid_Hide(obj uintptr) {
-	getLazyProc("DrawGrid_Hide").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_Hide").Call(obj)
 }
 
 func DrawGrid_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -154,27 +154,27 @@ func DrawGrid_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func DrawGrid_Refresh(obj uintptr) {
-	getLazyProc("DrawGrid_Refresh").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_Refresh").Call(obj)
 }
 
 func DrawGrid_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("DrawGrid_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DrawGrid_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("DrawGrid_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DrawGrid_SendToBack(obj uintptr) {
-	getLazyProc("DrawGrid_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_SendToBack").Call(obj)
 }
 
 func DrawGrid_Show(obj uintptr) {
-	getLazyProc("DrawGrid_Show").Call(obj)
+	_, _, _ = getLazyProc("DrawGrid_Show").Call(obj)
 }
 
 func DrawGrid_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -193,7 +193,7 @@ func DrawGrid_GetTextLen(obj uintptr) int32 {
 }
 
 func DrawGrid_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("DrawGrid_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("DrawGrid_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func DrawGrid_FindComponent(obj uintptr, AName string) uintptr {
@@ -207,7 +207,7 @@ func DrawGrid_GetNamePath(obj uintptr) string {
 }
 
 func DrawGrid_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("DrawGrid_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("DrawGrid_Assign").Call(obj, Source)
 }
 
 func DrawGrid_ClassType(obj uintptr) TClass {
@@ -246,31 +246,31 @@ func DrawGrid_ToString(obj uintptr) string {
 }
 
 func DrawGrid_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("DrawGrid_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("DrawGrid_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func DrawGrid_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("DrawGrid_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("DrawGrid_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func DrawGrid_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("DrawGrid_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("DrawGrid_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func DrawGrid_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("DrawGrid_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("DrawGrid_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func DrawGrid_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("DrawGrid_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("DrawGrid_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func DrawGrid_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("DrawGrid_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("DrawGrid_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func DrawGrid_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("DrawGrid_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("DrawGrid_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func DrawGrid_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -324,23 +324,23 @@ func DrawGrid_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func DrawGrid_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("DrawGrid_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("DrawGrid_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func DrawGrid_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("DrawGrid_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("DrawGrid_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func DrawGrid_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("DrawGrid_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("DrawGrid_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
-func DrawGrid_SetOnColRowMoved(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnColRowMoved").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnColRowMoved(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnColRowMoved").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnPrepareCanvas(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnPrepareCanvas").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnPrepareCanvas(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnPrepareCanvas").Call(obj, addEventToMap(obj, fn))
 }
 
 func DrawGrid_GetAlign(obj uintptr) TAlign {
@@ -349,7 +349,7 @@ func DrawGrid_GetAlign(obj uintptr) TAlign {
 }
 
 func DrawGrid_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("DrawGrid_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetAlign").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetAnchors(obj uintptr) TAnchors {
@@ -358,7 +358,7 @@ func DrawGrid_GetAnchors(obj uintptr) TAnchors {
 }
 
 func DrawGrid_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("DrawGrid_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetAnchors").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -367,7 +367,7 @@ func DrawGrid_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func DrawGrid_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("DrawGrid_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -376,7 +376,7 @@ func DrawGrid_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func DrawGrid_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("DrawGrid_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetColor(obj uintptr) TColor {
@@ -385,7 +385,7 @@ func DrawGrid_GetColor(obj uintptr) TColor {
 }
 
 func DrawGrid_SetColor(obj uintptr, value TColor) {
-	getLazyProc("DrawGrid_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetColor").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetColCount(obj uintptr) int32 {
@@ -394,7 +394,7 @@ func DrawGrid_GetColCount(obj uintptr) int32 {
 }
 
 func DrawGrid_SetColCount(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetColCount").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetColCount").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetConstraints(obj uintptr) uintptr {
@@ -403,7 +403,7 @@ func DrawGrid_GetConstraints(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetConstraints").Call(obj, value)
 }
 
 func DrawGrid_GetDefaultColWidth(obj uintptr) int32 {
@@ -412,7 +412,7 @@ func DrawGrid_GetDefaultColWidth(obj uintptr) int32 {
 }
 
 func DrawGrid_SetDefaultColWidth(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetDefaultColWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetDefaultColWidth").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetDefaultRowHeight(obj uintptr) int32 {
@@ -421,7 +421,7 @@ func DrawGrid_GetDefaultRowHeight(obj uintptr) int32 {
 }
 
 func DrawGrid_SetDefaultRowHeight(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetDefaultRowHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetDefaultRowHeight").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetDefaultDrawing(obj uintptr) bool {
@@ -430,7 +430,7 @@ func DrawGrid_GetDefaultDrawing(obj uintptr) bool {
 }
 
 func DrawGrid_SetDefaultDrawing(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetDefaultDrawing").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetDefaultDrawing").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetDoubleBuffered(obj uintptr) bool {
@@ -439,7 +439,7 @@ func DrawGrid_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func DrawGrid_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetDragCursor(obj uintptr) TCursor {
@@ -448,7 +448,7 @@ func DrawGrid_GetDragCursor(obj uintptr) TCursor {
 }
 
 func DrawGrid_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("DrawGrid_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetDragKind(obj uintptr) TDragKind {
@@ -457,7 +457,7 @@ func DrawGrid_GetDragKind(obj uintptr) TDragKind {
 }
 
 func DrawGrid_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("DrawGrid_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetDragKind").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetDragMode(obj uintptr) TDragMode {
@@ -466,7 +466,7 @@ func DrawGrid_GetDragMode(obj uintptr) TDragMode {
 }
 
 func DrawGrid_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("DrawGrid_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetDragMode").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetEnabled(obj uintptr) bool {
@@ -475,7 +475,7 @@ func DrawGrid_GetEnabled(obj uintptr) bool {
 }
 
 func DrawGrid_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetFixedColor(obj uintptr) TColor {
@@ -484,7 +484,7 @@ func DrawGrid_GetFixedColor(obj uintptr) TColor {
 }
 
 func DrawGrid_SetFixedColor(obj uintptr, value TColor) {
-	getLazyProc("DrawGrid_SetFixedColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetFixedColor").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetFixedCols(obj uintptr) int32 {
@@ -493,7 +493,7 @@ func DrawGrid_GetFixedCols(obj uintptr) int32 {
 }
 
 func DrawGrid_SetFixedCols(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetFixedCols").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetFixedCols").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetRowCount(obj uintptr) int32 {
@@ -502,7 +502,7 @@ func DrawGrid_GetRowCount(obj uintptr) int32 {
 }
 
 func DrawGrid_SetRowCount(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetRowCount").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetRowCount").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetFixedRows(obj uintptr) int32 {
@@ -511,7 +511,7 @@ func DrawGrid_GetFixedRows(obj uintptr) int32 {
 }
 
 func DrawGrid_SetFixedRows(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetFixedRows").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetFixedRows").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetFont(obj uintptr) uintptr {
@@ -520,7 +520,7 @@ func DrawGrid_GetFont(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetFont").Call(obj, value)
 }
 
 func DrawGrid_GetGridLineWidth(obj uintptr) int32 {
@@ -529,7 +529,7 @@ func DrawGrid_GetGridLineWidth(obj uintptr) int32 {
 }
 
 func DrawGrid_SetGridLineWidth(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetGridLineWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetGridLineWidth").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetOptions(obj uintptr) TGridOptions {
@@ -538,7 +538,7 @@ func DrawGrid_GetOptions(obj uintptr) TGridOptions {
 }
 
 func DrawGrid_SetOptions(obj uintptr, value TGridOptions) {
-	getLazyProc("DrawGrid_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetOptions").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetParentColor(obj uintptr) bool {
@@ -547,7 +547,7 @@ func DrawGrid_GetParentColor(obj uintptr) bool {
 }
 
 func DrawGrid_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetParentDoubleBuffered(obj uintptr) bool {
@@ -556,7 +556,7 @@ func DrawGrid_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func DrawGrid_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetParentFont(obj uintptr) bool {
@@ -565,7 +565,7 @@ func DrawGrid_GetParentFont(obj uintptr) bool {
 }
 
 func DrawGrid_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetParentShowHint(obj uintptr) bool {
@@ -574,7 +574,7 @@ func DrawGrid_GetParentShowHint(obj uintptr) bool {
 }
 
 func DrawGrid_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetPopupMenu(obj uintptr) uintptr {
@@ -583,7 +583,7 @@ func DrawGrid_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetPopupMenu").Call(obj, value)
 }
 
 func DrawGrid_GetScrollBars(obj uintptr) TScrollStyle {
@@ -592,7 +592,7 @@ func DrawGrid_GetScrollBars(obj uintptr) TScrollStyle {
 }
 
 func DrawGrid_SetScrollBars(obj uintptr, value TScrollStyle) {
-	getLazyProc("DrawGrid_SetScrollBars").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetScrollBars").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetShowHint(obj uintptr) bool {
@@ -601,7 +601,7 @@ func DrawGrid_GetShowHint(obj uintptr) bool {
 }
 
 func DrawGrid_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetTabOrder(obj uintptr) TTabOrder {
@@ -610,7 +610,7 @@ func DrawGrid_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func DrawGrid_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("DrawGrid_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetVisible(obj uintptr) bool {
@@ -619,7 +619,7 @@ func DrawGrid_GetVisible(obj uintptr) bool {
 }
 
 func DrawGrid_SetVisible(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetVisibleColCount(obj uintptr) int32 {
@@ -632,108 +632,108 @@ func DrawGrid_GetVisibleRowCount(obj uintptr) int32 {
 	return int32(ret)
 }
 
-func DrawGrid_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnDrawCell(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnDrawCell").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnDrawCell(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnDrawCell").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnGetEditMask(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnGetEditMask").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnGetEditMask(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnGetEditMask").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnGetEditText(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnGetEditText").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnGetEditText(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnGetEditText").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnMouseWheelDown(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnMouseWheelDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnMouseWheelUp(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnMouseWheelUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnSelectCell(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnSelectCell").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnSelectCell(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnSelectCell").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnSetEditText(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnSetEditText").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnSetEditText(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnSetEditText").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func DrawGrid_SetOnTopLeftChanged(obj uintptr, fn interface{}) {
-	getLazyProc("DrawGrid_SetOnTopLeftChanged").Call(obj, addEventToMap(obj, fn))
+func DrawGrid_SetOnTopLeftChanged(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DrawGrid_SetOnTopLeftChanged").Call(obj, addEventToMap(obj, fn))
 }
 
 func DrawGrid_GetCanvas(obj uintptr) uintptr {
@@ -747,7 +747,7 @@ func DrawGrid_GetCol(obj uintptr) int32 {
 }
 
 func DrawGrid_SetCol(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetCol").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetCol").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetEditorMode(obj uintptr) bool {
@@ -756,7 +756,7 @@ func DrawGrid_GetEditorMode(obj uintptr) bool {
 }
 
 func DrawGrid_SetEditorMode(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetEditorMode").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetEditorMode").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetGridHeight(obj uintptr) int32 {
@@ -775,17 +775,17 @@ func DrawGrid_GetLeftCol(obj uintptr) int32 {
 }
 
 func DrawGrid_SetLeftCol(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetLeftCol").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetLeftCol").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetSelection(obj uintptr) TGridRect {
 	var ret TGridRect
-	getLazyProc("DrawGrid_GetSelection").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_GetSelection").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DrawGrid_SetSelection(obj uintptr, value TGridRect) {
-	getLazyProc("DrawGrid_SetSelection").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("DrawGrid_SetSelection").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func DrawGrid_GetRow(obj uintptr) int32 {
@@ -794,7 +794,7 @@ func DrawGrid_GetRow(obj uintptr) int32 {
 }
 
 func DrawGrid_SetRow(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetRow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetRow").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetTopRow(obj uintptr) int32 {
@@ -803,7 +803,7 @@ func DrawGrid_GetTopRow(obj uintptr) int32 {
 }
 
 func DrawGrid_SetTopRow(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetTopRow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetTopRow").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetTabStop(obj uintptr) bool {
@@ -812,7 +812,7 @@ func DrawGrid_GetTabStop(obj uintptr) bool {
 }
 
 func DrawGrid_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetDockClientCount(obj uintptr) int32 {
@@ -826,7 +826,7 @@ func DrawGrid_GetDockSite(obj uintptr) bool {
 }
 
 func DrawGrid_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetMouseInClient(obj uintptr) bool {
@@ -851,16 +851,16 @@ func DrawGrid_GetControlCount(obj uintptr) int32 {
 
 func DrawGrid_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("DrawGrid_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func DrawGrid_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("DrawGrid_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func DrawGrid_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("DrawGrid_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetParentWindow").Call(obj, value)
 }
 
 func DrawGrid_GetShowing(obj uintptr) bool {
@@ -874,7 +874,7 @@ func DrawGrid_GetUseDockManager(obj uintptr) bool {
 }
 
 func DrawGrid_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("DrawGrid_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DrawGrid_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func DrawGrid_GetAction(obj uintptr) uintptr {
@@ -883,17 +883,17 @@ func DrawGrid_GetAction(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetAction").Call(obj, value)
 }
 
 func DrawGrid_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("DrawGrid_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DrawGrid_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("DrawGrid_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("DrawGrid_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func DrawGrid_GetClientHeight(obj uintptr) int32 {
@@ -902,18 +902,18 @@ func DrawGrid_GetClientHeight(obj uintptr) int32 {
 }
 
 func DrawGrid_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("DrawGrid_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DrawGrid_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("DrawGrid_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DrawGrid_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -923,7 +923,7 @@ func DrawGrid_GetClientWidth(obj uintptr) int32 {
 }
 
 func DrawGrid_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetControlState(obj uintptr) TControlState {
@@ -932,7 +932,7 @@ func DrawGrid_GetControlState(obj uintptr) TControlState {
 }
 
 func DrawGrid_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("DrawGrid_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetControlState").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetControlStyle(obj uintptr) TControlStyle {
@@ -941,7 +941,7 @@ func DrawGrid_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func DrawGrid_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("DrawGrid_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetFloating(obj uintptr) bool {
@@ -955,7 +955,7 @@ func DrawGrid_GetParent(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetParent").Call(obj, value)
 }
 
 func DrawGrid_GetLeft(obj uintptr) int32 {
@@ -964,7 +964,7 @@ func DrawGrid_GetLeft(obj uintptr) int32 {
 }
 
 func DrawGrid_SetLeft(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetLeft").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetTop(obj uintptr) int32 {
@@ -973,7 +973,7 @@ func DrawGrid_GetTop(obj uintptr) int32 {
 }
 
 func DrawGrid_SetTop(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetTop").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetWidth(obj uintptr) int32 {
@@ -982,7 +982,7 @@ func DrawGrid_GetWidth(obj uintptr) int32 {
 }
 
 func DrawGrid_SetWidth(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetWidth").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetHeight(obj uintptr) int32 {
@@ -991,7 +991,7 @@ func DrawGrid_GetHeight(obj uintptr) int32 {
 }
 
 func DrawGrid_SetHeight(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetHeight").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetCursor(obj uintptr) TCursor {
@@ -1000,7 +1000,7 @@ func DrawGrid_GetCursor(obj uintptr) TCursor {
 }
 
 func DrawGrid_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("DrawGrid_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetCursor").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetHint(obj uintptr) string {
@@ -1009,7 +1009,7 @@ func DrawGrid_GetHint(obj uintptr) string {
 }
 
 func DrawGrid_SetHint(obj uintptr, value string) {
-	getLazyProc("DrawGrid_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func DrawGrid_GetComponentCount(obj uintptr) int32 {
@@ -1023,7 +1023,7 @@ func DrawGrid_GetComponentIndex(obj uintptr) int32 {
 }
 
 func DrawGrid_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("DrawGrid_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetOwner(obj uintptr) uintptr {
@@ -1037,7 +1037,7 @@ func DrawGrid_GetName(obj uintptr) string {
 }
 
 func DrawGrid_SetName(obj uintptr, value string) {
-	getLazyProc("DrawGrid_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func DrawGrid_GetTag(obj uintptr) int {
@@ -1046,7 +1046,7 @@ func DrawGrid_GetTag(obj uintptr) int {
 }
 
 func DrawGrid_SetTag(obj uintptr, value int) {
-	getLazyProc("DrawGrid_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetTag").Call(obj, uintptr(value))
 }
 
 func DrawGrid_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -1055,7 +1055,7 @@ func DrawGrid_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetAnchorSideLeft").Call(obj, value)
 }
 
 func DrawGrid_GetAnchorSideTop(obj uintptr) uintptr {
@@ -1064,7 +1064,7 @@ func DrawGrid_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetAnchorSideTop").Call(obj, value)
 }
 
 func DrawGrid_GetAnchorSideRight(obj uintptr) uintptr {
@@ -1073,7 +1073,7 @@ func DrawGrid_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetAnchorSideRight").Call(obj, value)
 }
 
 func DrawGrid_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -1082,7 +1082,7 @@ func DrawGrid_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetAnchorSideBottom").Call(obj, value)
 }
 
 func DrawGrid_GetChildSizing(obj uintptr) uintptr {
@@ -1091,7 +1091,7 @@ func DrawGrid_GetChildSizing(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetChildSizing").Call(obj, value)
 }
 
 func DrawGrid_GetBorderSpacing(obj uintptr) uintptr {
@@ -1100,7 +1100,7 @@ func DrawGrid_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func DrawGrid_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("DrawGrid_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("DrawGrid_SetBorderSpacing").Call(obj, value)
 }
 
 func DrawGrid_GetColWidths(obj uintptr, Index int32) int32 {
@@ -1109,7 +1109,7 @@ func DrawGrid_GetColWidths(obj uintptr, Index int32) int32 {
 }
 
 func DrawGrid_SetColWidths(obj uintptr, Index int32, value int32) {
-	getLazyProc("DrawGrid_SetColWidths").Call(obj, uintptr(Index), uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetColWidths").Call(obj, uintptr(Index), uintptr(value))
 }
 
 func DrawGrid_GetRowHeights(obj uintptr, Index int32) int32 {
@@ -1118,7 +1118,7 @@ func DrawGrid_GetRowHeights(obj uintptr, Index int32) int32 {
 }
 
 func DrawGrid_SetRowHeights(obj uintptr, Index int32, value int32) {
-	getLazyProc("DrawGrid_SetRowHeights").Call(obj, uintptr(Index), uintptr(value))
+	_, _, _ = getLazyProc("DrawGrid_SetRowHeights").Call(obj, uintptr(Index), uintptr(value))
 }
 
 func DrawGrid_GetDockClients(obj uintptr, Index int32) uintptr {

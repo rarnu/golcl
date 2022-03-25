@@ -13,26 +13,26 @@ func SpeedButton_Create(obj uintptr) uintptr {
 }
 
 func SpeedButton_Free(obj uintptr) {
-	getLazyProc("SpeedButton_Free").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_Free").Call(obj)
 }
 
 func SpeedButton_Click(obj uintptr) {
-	getLazyProc("SpeedButton_Click").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_Click").Call(obj)
 }
 
 func SpeedButton_BringToFront(obj uintptr) {
-	getLazyProc("SpeedButton_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_BringToFront").Call(obj)
 }
 
 func SpeedButton_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("SpeedButton_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpeedButton_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpeedButton_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("SpeedButton_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpeedButton_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -47,11 +47,11 @@ func SpeedButton_HasParent(obj uintptr) bool {
 }
 
 func SpeedButton_Hide(obj uintptr) {
-	getLazyProc("SpeedButton_Hide").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_Hide").Call(obj)
 }
 
 func SpeedButton_Invalidate(obj uintptr) {
-	getLazyProc("SpeedButton_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_Invalidate").Call(obj)
 }
 
 func SpeedButton_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -60,39 +60,39 @@ func SpeedButton_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) in
 }
 
 func SpeedButton_Refresh(obj uintptr) {
-	getLazyProc("SpeedButton_Refresh").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_Refresh").Call(obj)
 }
 
 func SpeedButton_Repaint(obj uintptr) {
-	getLazyProc("SpeedButton_Repaint").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_Repaint").Call(obj)
 }
 
 func SpeedButton_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("SpeedButton_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpeedButton_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpeedButton_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("SpeedButton_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpeedButton_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpeedButton_SendToBack(obj uintptr) {
-	getLazyProc("SpeedButton_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_SendToBack").Call(obj)
 }
 
 func SpeedButton_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("SpeedButton_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("SpeedButton_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func SpeedButton_Show(obj uintptr) {
-	getLazyProc("SpeedButton_Show").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_Show").Call(obj)
 }
 
 func SpeedButton_Update(obj uintptr) {
-	getLazyProc("SpeedButton_Update").Call(obj)
+	_, _, _ = getLazyProc("SpeedButton_Update").Call(obj)
 }
 
 func SpeedButton_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -111,7 +111,7 @@ func SpeedButton_GetTextLen(obj uintptr) int32 {
 }
 
 func SpeedButton_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("SpeedButton_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("SpeedButton_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func SpeedButton_FindComponent(obj uintptr, AName string) uintptr {
@@ -125,7 +125,7 @@ func SpeedButton_GetNamePath(obj uintptr) string {
 }
 
 func SpeedButton_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("SpeedButton_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("SpeedButton_Assign").Call(obj, Source)
 }
 
 func SpeedButton_ClassType(obj uintptr) TClass {
@@ -164,31 +164,31 @@ func SpeedButton_ToString(obj uintptr) string {
 }
 
 func SpeedButton_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("SpeedButton_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("SpeedButton_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func SpeedButton_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("SpeedButton_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("SpeedButton_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func SpeedButton_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("SpeedButton_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("SpeedButton_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func SpeedButton_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("SpeedButton_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("SpeedButton_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func SpeedButton_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("SpeedButton_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("SpeedButton_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func SpeedButton_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("SpeedButton_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("SpeedButton_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func SpeedButton_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("SpeedButton_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("SpeedButton_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func SpeedButton_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -242,15 +242,15 @@ func SpeedButton_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func SpeedButton_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("SpeedButton_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("SpeedButton_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func SpeedButton_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("SpeedButton_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("SpeedButton_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func SpeedButton_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("SpeedButton_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("SpeedButton_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func SpeedButton_GetImageIndex(obj uintptr) int32 {
@@ -259,7 +259,7 @@ func SpeedButton_GetImageIndex(obj uintptr) int32 {
 }
 
 func SpeedButton_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetImages(obj uintptr) uintptr {
@@ -268,7 +268,7 @@ func SpeedButton_GetImages(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetImages(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetImages").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetImages").Call(obj, value)
 }
 
 func SpeedButton_GetImageWidth(obj uintptr) int32 {
@@ -277,7 +277,7 @@ func SpeedButton_GetImageWidth(obj uintptr) int32 {
 }
 
 func SpeedButton_SetImageWidth(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetImageWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetImageWidth").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetShowCaption(obj uintptr) bool {
@@ -286,7 +286,7 @@ func SpeedButton_GetShowCaption(obj uintptr) bool {
 }
 
 func SpeedButton_SetShowCaption(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetShowCaption").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetShowCaption").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetAction(obj uintptr) uintptr {
@@ -295,7 +295,7 @@ func SpeedButton_GetAction(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetAction").Call(obj, value)
 }
 
 func SpeedButton_GetAlign(obj uintptr) TAlign {
@@ -304,7 +304,7 @@ func SpeedButton_GetAlign(obj uintptr) TAlign {
 }
 
 func SpeedButton_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("SpeedButton_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetAlign").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetAllowAllUp(obj uintptr) bool {
@@ -313,7 +313,7 @@ func SpeedButton_GetAllowAllUp(obj uintptr) bool {
 }
 
 func SpeedButton_SetAllowAllUp(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetAllowAllUp").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetAllowAllUp").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetAnchors(obj uintptr) TAnchors {
@@ -322,7 +322,7 @@ func SpeedButton_GetAnchors(obj uintptr) TAnchors {
 }
 
 func SpeedButton_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("SpeedButton_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetAnchors").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -331,7 +331,7 @@ func SpeedButton_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func SpeedButton_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("SpeedButton_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetConstraints(obj uintptr) uintptr {
@@ -340,7 +340,7 @@ func SpeedButton_GetConstraints(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetConstraints").Call(obj, value)
 }
 
 func SpeedButton_GetGroupIndex(obj uintptr) int32 {
@@ -349,7 +349,7 @@ func SpeedButton_GetGroupIndex(obj uintptr) int32 {
 }
 
 func SpeedButton_SetGroupIndex(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetGroupIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetGroupIndex").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetDown(obj uintptr) bool {
@@ -358,7 +358,7 @@ func SpeedButton_GetDown(obj uintptr) bool {
 }
 
 func SpeedButton_SetDown(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetDown").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetDown").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetCaption(obj uintptr) string {
@@ -367,7 +367,7 @@ func SpeedButton_GetCaption(obj uintptr) string {
 }
 
 func SpeedButton_SetCaption(obj uintptr, value string) {
-	getLazyProc("SpeedButton_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func SpeedButton_GetEnabled(obj uintptr) bool {
@@ -376,7 +376,7 @@ func SpeedButton_GetEnabled(obj uintptr) bool {
 }
 
 func SpeedButton_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetFlat(obj uintptr) bool {
@@ -385,7 +385,7 @@ func SpeedButton_GetFlat(obj uintptr) bool {
 }
 
 func SpeedButton_SetFlat(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetFlat").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetFlat").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetFont(obj uintptr) uintptr {
@@ -394,7 +394,7 @@ func SpeedButton_GetFont(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetFont").Call(obj, value)
 }
 
 func SpeedButton_GetGlyph(obj uintptr) uintptr {
@@ -403,7 +403,7 @@ func SpeedButton_GetGlyph(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetGlyph(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetGlyph").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetGlyph").Call(obj, value)
 }
 
 func SpeedButton_GetLayout(obj uintptr) TButtonLayout {
@@ -412,7 +412,7 @@ func SpeedButton_GetLayout(obj uintptr) TButtonLayout {
 }
 
 func SpeedButton_SetLayout(obj uintptr, value TButtonLayout) {
-	getLazyProc("SpeedButton_SetLayout").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetLayout").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetNumGlyphs(obj uintptr) TNumGlyphs {
@@ -421,7 +421,7 @@ func SpeedButton_GetNumGlyphs(obj uintptr) TNumGlyphs {
 }
 
 func SpeedButton_SetNumGlyphs(obj uintptr, value TNumGlyphs) {
-	getLazyProc("SpeedButton_SetNumGlyphs").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetNumGlyphs").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetParentFont(obj uintptr) bool {
@@ -430,7 +430,7 @@ func SpeedButton_GetParentFont(obj uintptr) bool {
 }
 
 func SpeedButton_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetParentShowHint(obj uintptr) bool {
@@ -439,7 +439,7 @@ func SpeedButton_GetParentShowHint(obj uintptr) bool {
 }
 
 func SpeedButton_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetPopupMenu(obj uintptr) uintptr {
@@ -448,7 +448,7 @@ func SpeedButton_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetPopupMenu").Call(obj, value)
 }
 
 func SpeedButton_GetShowHint(obj uintptr) bool {
@@ -457,7 +457,7 @@ func SpeedButton_GetShowHint(obj uintptr) bool {
 }
 
 func SpeedButton_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetSpacing(obj uintptr) int32 {
@@ -466,7 +466,7 @@ func SpeedButton_GetSpacing(obj uintptr) int32 {
 }
 
 func SpeedButton_SetSpacing(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetSpacing").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetSpacing").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetTransparent(obj uintptr) bool {
@@ -475,7 +475,7 @@ func SpeedButton_GetTransparent(obj uintptr) bool {
 }
 
 func SpeedButton_SetTransparent(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetTransparent").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetTransparent").Call(obj, GoBoolToDBool(value))
 }
 
 func SpeedButton_GetVisible(obj uintptr) bool {
@@ -484,45 +484,45 @@ func SpeedButton_GetVisible(obj uintptr) bool {
 }
 
 func SpeedButton_SetVisible(obj uintptr, value bool) {
-	getLazyProc("SpeedButton_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("SpeedButton_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func SpeedButton_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("SpeedButton_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func SpeedButton_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpeedButton_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpeedButton_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("SpeedButton_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func SpeedButton_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpeedButton_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpeedButton_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("SpeedButton_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func SpeedButton_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpeedButton_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpeedButton_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("SpeedButton_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func SpeedButton_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpeedButton_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpeedButton_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("SpeedButton_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func SpeedButton_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpeedButton_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpeedButton_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("SpeedButton_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func SpeedButton_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpeedButton_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func SpeedButton_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("SpeedButton_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func SpeedButton_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SpeedButton_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func SpeedButton_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("SpeedButton_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpeedButton_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpeedButton_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("SpeedButton_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("SpeedButton_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func SpeedButton_GetClientHeight(obj uintptr) int32 {
@@ -531,18 +531,18 @@ func SpeedButton_GetClientHeight(obj uintptr) int32 {
 }
 
 func SpeedButton_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("SpeedButton_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpeedButton_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func SpeedButton_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("SpeedButton_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("SpeedButton_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -552,7 +552,7 @@ func SpeedButton_GetClientWidth(obj uintptr) int32 {
 }
 
 func SpeedButton_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetControlState(obj uintptr) TControlState {
@@ -561,7 +561,7 @@ func SpeedButton_GetControlState(obj uintptr) TControlState {
 }
 
 func SpeedButton_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("SpeedButton_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetControlState").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetControlStyle(obj uintptr) TControlStyle {
@@ -570,7 +570,7 @@ func SpeedButton_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func SpeedButton_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("SpeedButton_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetFloating(obj uintptr) bool {
@@ -584,7 +584,7 @@ func SpeedButton_GetParent(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetParent").Call(obj, value)
 }
 
 func SpeedButton_GetLeft(obj uintptr) int32 {
@@ -593,7 +593,7 @@ func SpeedButton_GetLeft(obj uintptr) int32 {
 }
 
 func SpeedButton_SetLeft(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetLeft").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetTop(obj uintptr) int32 {
@@ -602,7 +602,7 @@ func SpeedButton_GetTop(obj uintptr) int32 {
 }
 
 func SpeedButton_SetTop(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetTop").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetWidth(obj uintptr) int32 {
@@ -611,7 +611,7 @@ func SpeedButton_GetWidth(obj uintptr) int32 {
 }
 
 func SpeedButton_SetWidth(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetWidth").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetHeight(obj uintptr) int32 {
@@ -620,7 +620,7 @@ func SpeedButton_GetHeight(obj uintptr) int32 {
 }
 
 func SpeedButton_SetHeight(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetHeight").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetCursor(obj uintptr) TCursor {
@@ -629,7 +629,7 @@ func SpeedButton_GetCursor(obj uintptr) TCursor {
 }
 
 func SpeedButton_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("SpeedButton_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetCursor").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetHint(obj uintptr) string {
@@ -638,7 +638,7 @@ func SpeedButton_GetHint(obj uintptr) string {
 }
 
 func SpeedButton_SetHint(obj uintptr, value string) {
-	getLazyProc("SpeedButton_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func SpeedButton_GetComponentCount(obj uintptr) int32 {
@@ -652,7 +652,7 @@ func SpeedButton_GetComponentIndex(obj uintptr) int32 {
 }
 
 func SpeedButton_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("SpeedButton_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetOwner(obj uintptr) uintptr {
@@ -666,7 +666,7 @@ func SpeedButton_GetName(obj uintptr) string {
 }
 
 func SpeedButton_SetName(obj uintptr, value string) {
-	getLazyProc("SpeedButton_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func SpeedButton_GetTag(obj uintptr) int {
@@ -675,7 +675,7 @@ func SpeedButton_GetTag(obj uintptr) int {
 }
 
 func SpeedButton_SetTag(obj uintptr, value int) {
-	getLazyProc("SpeedButton_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SpeedButton_SetTag").Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -684,7 +684,7 @@ func SpeedButton_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetAnchorSideLeft").Call(obj, value)
 }
 
 func SpeedButton_GetAnchorSideTop(obj uintptr) uintptr {
@@ -693,7 +693,7 @@ func SpeedButton_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetAnchorSideTop").Call(obj, value)
 }
 
 func SpeedButton_GetAnchorSideRight(obj uintptr) uintptr {
@@ -702,7 +702,7 @@ func SpeedButton_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetAnchorSideRight").Call(obj, value)
 }
 
 func SpeedButton_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -711,7 +711,7 @@ func SpeedButton_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetAnchorSideBottom").Call(obj, value)
 }
 
 func SpeedButton_GetBorderSpacing(obj uintptr) uintptr {
@@ -720,7 +720,7 @@ func SpeedButton_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func SpeedButton_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("SpeedButton_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("SpeedButton_SetBorderSpacing").Call(obj, value)
 }
 
 func SpeedButton_GetComponents(obj uintptr, AIndex int32) uintptr {

@@ -14,11 +14,11 @@ func Registry_Create(obj uintptr) uintptr {
 }
 
 func Registry_Free(obj uintptr) {
-	getLazyProc("Registry_Free").Call(obj)
+	_, _, _ = getLazyProc("Registry_Free").Call(obj)
 }
 
 func Registry_CloseKey(obj uintptr) {
-	getLazyProc("Registry_CloseKey").Call(obj)
+	_, _, _ = getLazyProc("Registry_CloseKey").Call(obj)
 }
 
 func Registry_CreateKey(obj uintptr, Key string) bool {
@@ -52,7 +52,7 @@ func Registry_LoadKey(obj uintptr, Key string, FileName string) bool {
 }
 
 func Registry_MoveKey(obj uintptr, OldName string, NewName string, Delete bool) {
-	getLazyProc("Registry_MoveKey").Call(obj, GoStrToDStr(OldName), GoStrToDStr(NewName), GoBoolToDBool(Delete))
+	_, _, _ = getLazyProc("Registry_MoveKey").Call(obj, GoStrToDStr(OldName), GoStrToDStr(NewName), GoBoolToDBool(Delete))
 }
 
 func Registry_OpenKey(obj uintptr, Key string, CanCreate bool) bool {
@@ -72,19 +72,19 @@ func Registry_ReadBool(obj uintptr, Name string) bool {
 
 func Registry_ReadDate(obj uintptr, Name string) time.Time {
 	var ret int64
-	getLazyProc("Registry_ReadDate").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Registry_ReadDate").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&ret)))
 	return time.Unix(ret, 0)
 }
 
 func Registry_ReadDateTime(obj uintptr, Name string) time.Time {
 	var ret int64
-	getLazyProc("Registry_ReadDateTime").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Registry_ReadDateTime").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&ret)))
 	return time.Unix(ret, 0)
 }
 
 func Registry_ReadFloat(obj uintptr, Name string) float64 {
 	var ret float64
-	getLazyProc("Registry_ReadFloat").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Registry_ReadFloat").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -100,7 +100,7 @@ func Registry_ReadString(obj uintptr, Name string) string {
 
 func Registry_ReadTime(obj uintptr, Name string) time.Time {
 	var ret int64
-	getLazyProc("Registry_ReadTime").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Registry_ReadTime").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&ret)))
 	return time.Unix(ret, 0)
 }
 
@@ -110,7 +110,7 @@ func Registry_RegistryConnect(obj uintptr, UNCName string) bool {
 }
 
 func Registry_RenameValue(obj uintptr, OldName string, NewName string) {
-	getLazyProc("Registry_RenameValue").Call(obj, GoStrToDStr(OldName), GoStrToDStr(NewName))
+	_, _, _ = getLazyProc("Registry_RenameValue").Call(obj, GoStrToDStr(OldName), GoStrToDStr(NewName))
 }
 
 func Registry_ReplaceKey(obj uintptr, Key string, FileName string, BackUpFileName string) bool {
@@ -139,35 +139,35 @@ func Registry_ValueExists(obj uintptr, Name string) bool {
 }
 
 func Registry_WriteBool(obj uintptr, Name string, Value bool) {
-	getLazyProc("Registry_WriteBool").Call(obj, GoStrToDStr(Name), GoBoolToDBool(Value))
+	_, _, _ = getLazyProc("Registry_WriteBool").Call(obj, GoStrToDStr(Name), GoBoolToDBool(Value))
 }
 
 func Registry_WriteDate(obj uintptr, Name string, Value time.Time) {
-	getLazyProc("Registry_WriteDate").Call(obj, GoStrToDStr(Name), uintptr(Value.Unix()))
+	_, _, _ = getLazyProc("Registry_WriteDate").Call(obj, GoStrToDStr(Name), uintptr(Value.Unix()))
 }
 
 func Registry_WriteDateTime(obj uintptr, Name string, Value time.Time) {
-	getLazyProc("Registry_WriteDateTime").Call(obj, GoStrToDStr(Name), uintptr(Value.Unix()))
+	_, _, _ = getLazyProc("Registry_WriteDateTime").Call(obj, GoStrToDStr(Name), uintptr(Value.Unix()))
 }
 
 func Registry_WriteFloat(obj uintptr, Name string, Value float64) {
-	getLazyProc("Registry_WriteFloat").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&Value)))
+	_, _, _ = getLazyProc("Registry_WriteFloat").Call(obj, GoStrToDStr(Name), uintptr(unsafe.Pointer(&Value)))
 }
 
 func Registry_WriteInteger(obj uintptr, Name string, Value int32) {
-	getLazyProc("Registry_WriteInteger").Call(obj, GoStrToDStr(Name), uintptr(Value))
+	_, _, _ = getLazyProc("Registry_WriteInteger").Call(obj, GoStrToDStr(Name), uintptr(Value))
 }
 
 func Registry_WriteString(obj uintptr, Name string, Value string) {
-	getLazyProc("Registry_WriteString").Call(obj, GoStrToDStr(Name), GoStrToDStr(Value))
+	_, _, _ = getLazyProc("Registry_WriteString").Call(obj, GoStrToDStr(Name), GoStrToDStr(Value))
 }
 
 func Registry_WriteExpandString(obj uintptr, Name string, Value string) {
-	getLazyProc("Registry_WriteExpandString").Call(obj, GoStrToDStr(Name), GoStrToDStr(Value))
+	_, _, _ = getLazyProc("Registry_WriteExpandString").Call(obj, GoStrToDStr(Name), GoStrToDStr(Value))
 }
 
 func Registry_WriteTime(obj uintptr, Name string, Value time.Time) {
-	getLazyProc("Registry_WriteTime").Call(obj, GoStrToDStr(Name), uintptr(Value.Unix()))
+	_, _, _ = getLazyProc("Registry_WriteTime").Call(obj, GoStrToDStr(Name), uintptr(Value.Unix()))
 }
 
 func Registry_ClassType(obj uintptr) TClass {
@@ -207,7 +207,7 @@ func Registry_ToString(obj uintptr) string {
 
 func Registry_GetCurrentKey(obj uintptr) HKEY {
 	ret, _, _ := getLazyProc("Registry_GetCurrentKey").Call(obj)
-	return HKEY(ret)
+	return ret
 }
 
 func Registry_GetCurrentPath(obj uintptr) string {
@@ -221,7 +221,7 @@ func Registry_GetLazyWrite(obj uintptr) bool {
 }
 
 func Registry_SetLazyWrite(obj uintptr, value bool) {
-	getLazyProc("Registry_SetLazyWrite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Registry_SetLazyWrite").Call(obj, GoBoolToDBool(value))
 }
 
 func Registry_GetLastError(obj uintptr) int32 {
@@ -236,11 +236,11 @@ func Registry_GetLastErrorMsg(obj uintptr) string {
 
 func Registry_GetRootKey(obj uintptr) HKEY {
 	ret, _, _ := getLazyProc("Registry_GetRootKey").Call(obj)
-	return HKEY(ret)
+	return ret
 }
 
 func Registry_SetRootKey(obj uintptr, value HKEY) {
-	getLazyProc("Registry_SetRootKey").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Registry_SetRootKey").Call(obj, value)
 }
 
 func Registry_GetAccess(obj uintptr) uint32 {
@@ -249,7 +249,7 @@ func Registry_GetAccess(obj uintptr) uint32 {
 }
 
 func Registry_SetAccess(obj uintptr, value uint32) {
-	getLazyProc("Registry_SetAccess").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Registry_SetAccess").Call(obj, uintptr(value))
 }
 
 func Registry_StaticClassType() TClass {

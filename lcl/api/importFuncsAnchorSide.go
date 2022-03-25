@@ -7,7 +7,7 @@ import (
 //--------------------------- TAnchorSide ---------------------------
 
 func AnchorSide_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("AnchorSide_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("AnchorSide_Assign").Call(obj, Source)
 }
 
 func AnchorSide_GetNamePath(obj uintptr) string {
@@ -66,7 +66,7 @@ func AnchorSide_GetControl(obj uintptr) uintptr {
 }
 
 func AnchorSide_SetControl(obj uintptr, value uintptr) {
-	getLazyProc("AnchorSide_SetControl").Call(obj, value)
+	_, _, _ = getLazyProc("AnchorSide_SetControl").Call(obj, value)
 }
 
 func AnchorSide_GetSide(obj uintptr) TAnchorSideReference {
@@ -75,7 +75,7 @@ func AnchorSide_GetSide(obj uintptr) TAnchorSideReference {
 }
 
 func AnchorSide_SetSide(obj uintptr, value TAnchorSideReference) {
-	getLazyProc("AnchorSide_SetSide").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("AnchorSide_SetSide").Call(obj, uintptr(value))
 }
 
 func AnchorSide_StaticClassType() TClass {

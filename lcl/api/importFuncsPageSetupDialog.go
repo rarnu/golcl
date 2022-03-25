@@ -12,7 +12,7 @@ func PageSetupDialog_Create(obj uintptr) uintptr {
 }
 
 func PageSetupDialog_Free(obj uintptr) {
-	getLazyProc("PageSetupDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("PageSetupDialog_Free").Call(obj)
 }
 
 func PageSetupDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func PageSetupDialog_HasParent(obj uintptr) bool {
 }
 
 func PageSetupDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("PageSetupDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("PageSetupDialog_Assign").Call(obj, Source)
 }
 
 func PageSetupDialog_ClassType(obj uintptr) TClass {
@@ -80,7 +80,7 @@ func PageSetupDialog_GetMarginLeft(obj uintptr) int32 {
 }
 
 func PageSetupDialog_SetMarginLeft(obj uintptr, value int32) {
-	getLazyProc("PageSetupDialog_SetMarginLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetMarginLeft").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetMarginTop(obj uintptr) int32 {
@@ -89,7 +89,7 @@ func PageSetupDialog_GetMarginTop(obj uintptr) int32 {
 }
 
 func PageSetupDialog_SetMarginTop(obj uintptr, value int32) {
-	getLazyProc("PageSetupDialog_SetMarginTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetMarginTop").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetMarginRight(obj uintptr) int32 {
@@ -98,7 +98,7 @@ func PageSetupDialog_GetMarginRight(obj uintptr) int32 {
 }
 
 func PageSetupDialog_SetMarginRight(obj uintptr, value int32) {
-	getLazyProc("PageSetupDialog_SetMarginRight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetMarginRight").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetMarginBottom(obj uintptr) int32 {
@@ -107,7 +107,7 @@ func PageSetupDialog_GetMarginBottom(obj uintptr) int32 {
 }
 
 func PageSetupDialog_SetMarginBottom(obj uintptr, value int32) {
-	getLazyProc("PageSetupDialog_SetMarginBottom").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetMarginBottom").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetOptions(obj uintptr) TPageSetupDialogOptions {
@@ -116,7 +116,7 @@ func PageSetupDialog_GetOptions(obj uintptr) TPageSetupDialogOptions {
 }
 
 func PageSetupDialog_SetOptions(obj uintptr, value TPageSetupDialogOptions) {
-	getLazyProc("PageSetupDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetOptions").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetPageWidth(obj uintptr) int32 {
@@ -125,7 +125,7 @@ func PageSetupDialog_GetPageWidth(obj uintptr) int32 {
 }
 
 func PageSetupDialog_SetPageWidth(obj uintptr, value int32) {
-	getLazyProc("PageSetupDialog_SetPageWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetPageWidth").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetPageHeight(obj uintptr) int32 {
@@ -134,7 +134,7 @@ func PageSetupDialog_GetPageHeight(obj uintptr) int32 {
 }
 
 func PageSetupDialog_SetPageHeight(obj uintptr, value int32) {
-	getLazyProc("PageSetupDialog_SetPageHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetPageHeight").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetUnits(obj uintptr) TPageMeasureUnits {
@@ -144,15 +144,15 @@ func PageSetupDialog_GetUnits(obj uintptr) TPageMeasureUnits {
 
 func PageSetupDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("PageSetupDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func PageSetupDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("PageSetupDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func PageSetupDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageSetupDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageSetupDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("PageSetupDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func PageSetupDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageSetupDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func PageSetupDialog_GetComponentCount(obj uintptr) int32 {
@@ -166,7 +166,7 @@ func PageSetupDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func PageSetupDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("PageSetupDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetOwner(obj uintptr) uintptr {
@@ -180,7 +180,7 @@ func PageSetupDialog_GetName(obj uintptr) string {
 }
 
 func PageSetupDialog_SetName(obj uintptr, value string) {
-	getLazyProc("PageSetupDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func PageSetupDialog_GetTag(obj uintptr) int {
@@ -189,7 +189,7 @@ func PageSetupDialog_GetTag(obj uintptr) int {
 }
 
 func PageSetupDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("PageSetupDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageSetupDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func PageSetupDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

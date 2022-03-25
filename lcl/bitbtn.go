@@ -9,9 +9,10 @@
 package lcl
 
 import (
+	"unsafe"
+
 	. "github.com/rarnu/golcl/lcl/api"
 	. "github.com/rarnu/golcl/lcl/types"
-	"unsafe"
 )
 
 type TBitBtn struct {
@@ -34,7 +35,7 @@ func NewBitBtn(owner IComponent) *TBitBtn {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsBitBtn(obj interface{}) *TBitBtn {
+func AsBitBtn(obj any) *TBitBtn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

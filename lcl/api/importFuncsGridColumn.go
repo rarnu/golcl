@@ -8,15 +8,15 @@ import (
 //--------------------------- TGridColumn ---------------------------
 
 func GridColumn_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("GridColumn_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("GridColumn_Assign").Call(obj, Source)
 }
 
 func GridColumn_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("GridColumn_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("GridColumn_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func GridColumn_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("GridColumn_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("GridColumn_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func GridColumn_IsDefault(obj uintptr) bool {
@@ -90,7 +90,7 @@ func GridColumn_GetAlignment(obj uintptr) TAlignment {
 }
 
 func GridColumn_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("GridColumn_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetAlignment").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetButtonStyle(obj uintptr) TColumnButtonStyle {
@@ -99,7 +99,7 @@ func GridColumn_GetButtonStyle(obj uintptr) TColumnButtonStyle {
 }
 
 func GridColumn_SetButtonStyle(obj uintptr, value TColumnButtonStyle) {
-	getLazyProc("GridColumn_SetButtonStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetButtonStyle").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetColor(obj uintptr) TColor {
@@ -108,7 +108,7 @@ func GridColumn_GetColor(obj uintptr) TColor {
 }
 
 func GridColumn_SetColor(obj uintptr, value TColor) {
-	getLazyProc("GridColumn_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetColor").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetDropDownRows(obj uintptr) int32 {
@@ -117,7 +117,7 @@ func GridColumn_GetDropDownRows(obj uintptr) int32 {
 }
 
 func GridColumn_SetDropDownRows(obj uintptr, value int32) {
-	getLazyProc("GridColumn_SetDropDownRows").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetDropDownRows").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetExpanded(obj uintptr) bool {
@@ -126,7 +126,7 @@ func GridColumn_GetExpanded(obj uintptr) bool {
 }
 
 func GridColumn_SetExpanded(obj uintptr, value bool) {
-	getLazyProc("GridColumn_SetExpanded").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("GridColumn_SetExpanded").Call(obj, GoBoolToDBool(value))
 }
 
 func GridColumn_GetFont(obj uintptr) uintptr {
@@ -135,7 +135,7 @@ func GridColumn_GetFont(obj uintptr) uintptr {
 }
 
 func GridColumn_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("GridColumn_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("GridColumn_SetFont").Call(obj, value)
 }
 
 func GridColumn_GetLayout(obj uintptr) TTextLayout {
@@ -144,7 +144,7 @@ func GridColumn_GetLayout(obj uintptr) TTextLayout {
 }
 
 func GridColumn_SetLayout(obj uintptr, value TTextLayout) {
-	getLazyProc("GridColumn_SetLayout").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetLayout").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetMinSize(obj uintptr) int32 {
@@ -153,7 +153,7 @@ func GridColumn_GetMinSize(obj uintptr) int32 {
 }
 
 func GridColumn_SetMinSize(obj uintptr, value int32) {
-	getLazyProc("GridColumn_SetMinSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetMinSize").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetMaxSize(obj uintptr) int32 {
@@ -162,7 +162,7 @@ func GridColumn_GetMaxSize(obj uintptr) int32 {
 }
 
 func GridColumn_SetMaxSize(obj uintptr, value int32) {
-	getLazyProc("GridColumn_SetMaxSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetMaxSize").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetPickList(obj uintptr) uintptr {
@@ -171,7 +171,7 @@ func GridColumn_GetPickList(obj uintptr) uintptr {
 }
 
 func GridColumn_SetPickList(obj uintptr, value uintptr) {
-	getLazyProc("GridColumn_SetPickList").Call(obj, value)
+	_, _, _ = getLazyProc("GridColumn_SetPickList").Call(obj, value)
 }
 
 func GridColumn_GetReadOnly(obj uintptr) bool {
@@ -180,7 +180,7 @@ func GridColumn_GetReadOnly(obj uintptr) bool {
 }
 
 func GridColumn_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("GridColumn_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("GridColumn_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func GridColumn_GetSizePriority(obj uintptr) int32 {
@@ -189,7 +189,7 @@ func GridColumn_GetSizePriority(obj uintptr) int32 {
 }
 
 func GridColumn_SetSizePriority(obj uintptr, value int32) {
-	getLazyProc("GridColumn_SetSizePriority").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetSizePriority").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetTag(obj uintptr) int {
@@ -198,7 +198,7 @@ func GridColumn_GetTag(obj uintptr) int {
 }
 
 func GridColumn_SetTag(obj uintptr, value int) {
-	getLazyProc("GridColumn_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetTag").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetTitle(obj uintptr) uintptr {
@@ -207,7 +207,7 @@ func GridColumn_GetTitle(obj uintptr) uintptr {
 }
 
 func GridColumn_SetTitle(obj uintptr, value uintptr) {
-	getLazyProc("GridColumn_SetTitle").Call(obj, value)
+	_, _, _ = getLazyProc("GridColumn_SetTitle").Call(obj, value)
 }
 
 func GridColumn_GetWidth(obj uintptr) int32 {
@@ -216,7 +216,7 @@ func GridColumn_GetWidth(obj uintptr) int32 {
 }
 
 func GridColumn_SetWidth(obj uintptr, value int32) {
-	getLazyProc("GridColumn_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetWidth").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetVisible(obj uintptr) bool {
@@ -225,7 +225,7 @@ func GridColumn_GetVisible(obj uintptr) bool {
 }
 
 func GridColumn_SetVisible(obj uintptr, value bool) {
-	getLazyProc("GridColumn_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("GridColumn_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func GridColumn_GetValueChecked(obj uintptr) string {
@@ -234,7 +234,7 @@ func GridColumn_GetValueChecked(obj uintptr) string {
 }
 
 func GridColumn_SetValueChecked(obj uintptr, value string) {
-	getLazyProc("GridColumn_SetValueChecked").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("GridColumn_SetValueChecked").Call(obj, GoStrToDStr(value))
 }
 
 func GridColumn_GetValueUnchecked(obj uintptr) string {
@@ -243,7 +243,7 @@ func GridColumn_GetValueUnchecked(obj uintptr) string {
 }
 
 func GridColumn_SetValueUnchecked(obj uintptr, value string) {
-	getLazyProc("GridColumn_SetValueUnchecked").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("GridColumn_SetValueUnchecked").Call(obj, GoStrToDStr(value))
 }
 
 func GridColumn_GetCollection(obj uintptr) uintptr {
@@ -252,7 +252,7 @@ func GridColumn_GetCollection(obj uintptr) uintptr {
 }
 
 func GridColumn_SetCollection(obj uintptr, value uintptr) {
-	getLazyProc("GridColumn_SetCollection").Call(obj, value)
+	_, _, _ = getLazyProc("GridColumn_SetCollection").Call(obj, value)
 }
 
 func GridColumn_GetIndex(obj uintptr) int32 {
@@ -261,7 +261,7 @@ func GridColumn_GetIndex(obj uintptr) int32 {
 }
 
 func GridColumn_SetIndex(obj uintptr, value int32) {
-	getLazyProc("GridColumn_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("GridColumn_SetIndex").Call(obj, uintptr(value))
 }
 
 func GridColumn_GetDisplayName(obj uintptr) string {
@@ -270,7 +270,7 @@ func GridColumn_GetDisplayName(obj uintptr) string {
 }
 
 func GridColumn_SetDisplayName(obj uintptr, value string) {
-	getLazyProc("GridColumn_SetDisplayName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("GridColumn_SetDisplayName").Call(obj, GoStrToDStr(value))
 }
 
 func GridColumn_StaticClassType() TClass {

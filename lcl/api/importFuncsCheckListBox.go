@@ -13,27 +13,27 @@ func CheckListBox_Create(obj uintptr) uintptr {
 }
 
 func CheckListBox_Free(obj uintptr) {
-	getLazyProc("CheckListBox_Free").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Free").Call(obj)
 }
 
 func CheckListBox_CheckAll(obj uintptr, AState TCheckBoxState, AllowGrayed bool, AllowDisabled bool) {
-	getLazyProc("CheckListBox_CheckAll").Call(obj, uintptr(AState), GoBoolToDBool(AllowGrayed), GoBoolToDBool(AllowDisabled))
+	_, _, _ = getLazyProc("CheckListBox_CheckAll").Call(obj, uintptr(AState), GoBoolToDBool(AllowGrayed), GoBoolToDBool(AllowDisabled))
 }
 
 func CheckListBox_AddItem(obj uintptr, Item string, AObject uintptr) {
-	getLazyProc("CheckListBox_AddItem").Call(obj, GoStrToDStr(Item), AObject)
+	_, _, _ = getLazyProc("CheckListBox_AddItem").Call(obj, GoStrToDStr(Item), AObject)
 }
 
 func CheckListBox_Clear(obj uintptr) {
-	getLazyProc("CheckListBox_Clear").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Clear").Call(obj)
 }
 
 func CheckListBox_ClearSelection(obj uintptr) {
-	getLazyProc("CheckListBox_ClearSelection").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_ClearSelection").Call(obj)
 }
 
 func CheckListBox_DeleteSelected(obj uintptr) {
-	getLazyProc("CheckListBox_DeleteSelected").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_DeleteSelected").Call(obj)
 }
 
 func CheckListBox_ItemAtPos(obj uintptr, Pos TPoint, Existing bool) int32 {
@@ -43,12 +43,12 @@ func CheckListBox_ItemAtPos(obj uintptr, Pos TPoint, Existing bool) int32 {
 
 func CheckListBox_ItemRect(obj uintptr, Index int32) TRect {
 	var ret TRect
-	getLazyProc("CheckListBox_ItemRect").Call(obj, uintptr(Index), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckListBox_ItemRect").Call(obj, uintptr(Index), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckListBox_SelectAll(obj uintptr) {
-	getLazyProc("CheckListBox_SelectAll").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_SelectAll").Call(obj)
 }
 
 func CheckListBox_CanFocus(obj uintptr) bool {
@@ -67,11 +67,11 @@ func CheckListBox_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, Allo
 }
 
 func CheckListBox_DisableAlign(obj uintptr) {
-	getLazyProc("CheckListBox_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_DisableAlign").Call(obj)
 }
 
 func CheckListBox_EnableAlign(obj uintptr) {
-	getLazyProc("CheckListBox_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_EnableAlign").Call(obj)
 }
 
 func CheckListBox_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -80,7 +80,7 @@ func CheckListBox_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func CheckListBox_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("CheckListBox_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("CheckListBox_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func CheckListBox_Focused(obj uintptr) bool {
@@ -94,62 +94,62 @@ func CheckListBox_HandleAllocated(obj uintptr) bool {
 }
 
 func CheckListBox_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("CheckListBox_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("CheckListBox_InsertControl").Call(obj, AControl)
 }
 
 func CheckListBox_Invalidate(obj uintptr) {
-	getLazyProc("CheckListBox_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Invalidate").Call(obj)
 }
 
 func CheckListBox_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("CheckListBox_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("CheckListBox_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func CheckListBox_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("CheckListBox_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("CheckListBox_RemoveControl").Call(obj, AControl)
 }
 
 func CheckListBox_Realign(obj uintptr) {
-	getLazyProc("CheckListBox_Realign").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Realign").Call(obj)
 }
 
 func CheckListBox_Repaint(obj uintptr) {
-	getLazyProc("CheckListBox_Repaint").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Repaint").Call(obj)
 }
 
 func CheckListBox_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("CheckListBox_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("CheckListBox_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func CheckListBox_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("CheckListBox_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("CheckListBox_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func CheckListBox_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("CheckListBox_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("CheckListBox_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func CheckListBox_SetFocus(obj uintptr) {
-	getLazyProc("CheckListBox_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_SetFocus").Call(obj)
 }
 
 func CheckListBox_Update(obj uintptr) {
-	getLazyProc("CheckListBox_Update").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Update").Call(obj)
 }
 
 func CheckListBox_BringToFront(obj uintptr) {
-	getLazyProc("CheckListBox_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_BringToFront").Call(obj)
 }
 
 func CheckListBox_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("CheckListBox_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckListBox_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckListBox_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CheckListBox_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckListBox_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -164,7 +164,7 @@ func CheckListBox_HasParent(obj uintptr) bool {
 }
 
 func CheckListBox_Hide(obj uintptr) {
-	getLazyProc("CheckListBox_Hide").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Hide").Call(obj)
 }
 
 func CheckListBox_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -173,27 +173,27 @@ func CheckListBox_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) i
 }
 
 func CheckListBox_Refresh(obj uintptr) {
-	getLazyProc("CheckListBox_Refresh").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Refresh").Call(obj)
 }
 
 func CheckListBox_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("CheckListBox_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckListBox_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckListBox_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CheckListBox_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckListBox_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckListBox_SendToBack(obj uintptr) {
-	getLazyProc("CheckListBox_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_SendToBack").Call(obj)
 }
 
 func CheckListBox_Show(obj uintptr) {
-	getLazyProc("CheckListBox_Show").Call(obj)
+	_, _, _ = getLazyProc("CheckListBox_Show").Call(obj)
 }
 
 func CheckListBox_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -212,7 +212,7 @@ func CheckListBox_GetTextLen(obj uintptr) int32 {
 }
 
 func CheckListBox_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("CheckListBox_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("CheckListBox_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func CheckListBox_FindComponent(obj uintptr, AName string) uintptr {
@@ -226,7 +226,7 @@ func CheckListBox_GetNamePath(obj uintptr) string {
 }
 
 func CheckListBox_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("CheckListBox_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("CheckListBox_Assign").Call(obj, Source)
 }
 
 func CheckListBox_ClassType(obj uintptr) TClass {
@@ -265,31 +265,31 @@ func CheckListBox_ToString(obj uintptr) string {
 }
 
 func CheckListBox_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("CheckListBox_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("CheckListBox_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func CheckListBox_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("CheckListBox_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("CheckListBox_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func CheckListBox_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("CheckListBox_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("CheckListBox_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func CheckListBox_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("CheckListBox_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("CheckListBox_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func CheckListBox_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("CheckListBox_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("CheckListBox_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func CheckListBox_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("CheckListBox_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("CheckListBox_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func CheckListBox_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("CheckListBox_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("CheckListBox_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func CheckListBox_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -343,19 +343,19 @@ func CheckListBox_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func CheckListBox_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("CheckListBox_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("CheckListBox_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func CheckListBox_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("CheckListBox_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("CheckListBox_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func CheckListBox_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("CheckListBox_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("CheckListBox_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
-func CheckListBox_SetOnClickCheck(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnClickCheck").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnClickCheck(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnClickCheck").Call(obj, addEventToMap(obj, fn))
 }
 
 func CheckListBox_GetAlign(obj uintptr) TAlign {
@@ -364,7 +364,7 @@ func CheckListBox_GetAlign(obj uintptr) TAlign {
 }
 
 func CheckListBox_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("CheckListBox_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetAlign").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetAllowGrayed(obj uintptr) bool {
@@ -373,7 +373,7 @@ func CheckListBox_GetAllowGrayed(obj uintptr) bool {
 }
 
 func CheckListBox_SetAllowGrayed(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetAllowGrayed").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetAllowGrayed").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetAnchors(obj uintptr) TAnchors {
@@ -382,7 +382,7 @@ func CheckListBox_GetAnchors(obj uintptr) TAnchors {
 }
 
 func CheckListBox_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("CheckListBox_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetAnchors").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -391,7 +391,7 @@ func CheckListBox_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func CheckListBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("CheckListBox_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -400,7 +400,7 @@ func CheckListBox_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func CheckListBox_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("CheckListBox_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetColor(obj uintptr) TColor {
@@ -409,7 +409,7 @@ func CheckListBox_GetColor(obj uintptr) TColor {
 }
 
 func CheckListBox_SetColor(obj uintptr, value TColor) {
-	getLazyProc("CheckListBox_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetColor").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetColumns(obj uintptr) int32 {
@@ -418,7 +418,7 @@ func CheckListBox_GetColumns(obj uintptr) int32 {
 }
 
 func CheckListBox_SetColumns(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetColumns").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetColumns").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetConstraints(obj uintptr) uintptr {
@@ -427,7 +427,7 @@ func CheckListBox_GetConstraints(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetConstraints").Call(obj, value)
 }
 
 func CheckListBox_GetDoubleBuffered(obj uintptr) bool {
@@ -436,7 +436,7 @@ func CheckListBox_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func CheckListBox_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetDragCursor(obj uintptr) TCursor {
@@ -445,7 +445,7 @@ func CheckListBox_GetDragCursor(obj uintptr) TCursor {
 }
 
 func CheckListBox_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("CheckListBox_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetDragMode(obj uintptr) TDragMode {
@@ -454,7 +454,7 @@ func CheckListBox_GetDragMode(obj uintptr) TDragMode {
 }
 
 func CheckListBox_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("CheckListBox_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetDragMode").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetEnabled(obj uintptr) bool {
@@ -463,7 +463,7 @@ func CheckListBox_GetEnabled(obj uintptr) bool {
 }
 
 func CheckListBox_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetFont(obj uintptr) uintptr {
@@ -472,7 +472,7 @@ func CheckListBox_GetFont(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetFont").Call(obj, value)
 }
 
 func CheckListBox_GetItemHeight(obj uintptr) int32 {
@@ -481,7 +481,7 @@ func CheckListBox_GetItemHeight(obj uintptr) int32 {
 }
 
 func CheckListBox_SetItemHeight(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetItemHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetItemHeight").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetItems(obj uintptr) uintptr {
@@ -490,7 +490,7 @@ func CheckListBox_GetItems(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetItems(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetItems").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetItems").Call(obj, value)
 }
 
 func CheckListBox_GetParentColor(obj uintptr) bool {
@@ -499,7 +499,7 @@ func CheckListBox_GetParentColor(obj uintptr) bool {
 }
 
 func CheckListBox_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetParentDoubleBuffered(obj uintptr) bool {
@@ -508,7 +508,7 @@ func CheckListBox_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func CheckListBox_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetParentFont(obj uintptr) bool {
@@ -517,7 +517,7 @@ func CheckListBox_GetParentFont(obj uintptr) bool {
 }
 
 func CheckListBox_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetParentShowHint(obj uintptr) bool {
@@ -526,7 +526,7 @@ func CheckListBox_GetParentShowHint(obj uintptr) bool {
 }
 
 func CheckListBox_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetPopupMenu(obj uintptr) uintptr {
@@ -535,7 +535,7 @@ func CheckListBox_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetPopupMenu").Call(obj, value)
 }
 
 func CheckListBox_GetShowHint(obj uintptr) bool {
@@ -544,7 +544,7 @@ func CheckListBox_GetShowHint(obj uintptr) bool {
 }
 
 func CheckListBox_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetSorted(obj uintptr) bool {
@@ -553,7 +553,7 @@ func CheckListBox_GetSorted(obj uintptr) bool {
 }
 
 func CheckListBox_SetSorted(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetSorted").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetSorted").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetStyle(obj uintptr) TListBoxStyle {
@@ -562,7 +562,7 @@ func CheckListBox_GetStyle(obj uintptr) TListBoxStyle {
 }
 
 func CheckListBox_SetStyle(obj uintptr, value TListBoxStyle) {
-	getLazyProc("CheckListBox_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetStyle").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetTabOrder(obj uintptr) TTabOrder {
@@ -571,7 +571,7 @@ func CheckListBox_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func CheckListBox_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("CheckListBox_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetTabStop(obj uintptr) bool {
@@ -580,7 +580,7 @@ func CheckListBox_GetTabStop(obj uintptr) bool {
 }
 
 func CheckListBox_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetVisible(obj uintptr) bool {
@@ -589,75 +589,75 @@ func CheckListBox_GetVisible(obj uintptr) bool {
 }
 
 func CheckListBox_SetVisible(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func CheckListBox_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnMeasureItem(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnMeasureItem").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnMeasureItem(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnMeasureItem").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckListBox_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("CheckListBox_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func CheckListBox_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckListBox_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func CheckListBox_GetCanvas(obj uintptr) uintptr {
@@ -676,7 +676,7 @@ func CheckListBox_GetTopIndex(obj uintptr) int32 {
 }
 
 func CheckListBox_SetTopIndex(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetTopIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetTopIndex").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetMultiSelect(obj uintptr) bool {
@@ -685,7 +685,7 @@ func CheckListBox_GetMultiSelect(obj uintptr) bool {
 }
 
 func CheckListBox_SetMultiSelect(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetMultiSelect").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetMultiSelect").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetSelCount(obj uintptr) int32 {
@@ -699,7 +699,7 @@ func CheckListBox_GetItemIndex(obj uintptr) int32 {
 }
 
 func CheckListBox_SetItemIndex(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetItemIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetItemIndex").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetDockClientCount(obj uintptr) int32 {
@@ -713,7 +713,7 @@ func CheckListBox_GetDockSite(obj uintptr) bool {
 }
 
 func CheckListBox_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetMouseInClient(obj uintptr) bool {
@@ -738,16 +738,16 @@ func CheckListBox_GetControlCount(obj uintptr) int32 {
 
 func CheckListBox_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("CheckListBox_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func CheckListBox_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("CheckListBox_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func CheckListBox_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("CheckListBox_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetParentWindow").Call(obj, value)
 }
 
 func CheckListBox_GetShowing(obj uintptr) bool {
@@ -761,7 +761,7 @@ func CheckListBox_GetUseDockManager(obj uintptr) bool {
 }
 
 func CheckListBox_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("CheckListBox_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckListBox_GetAction(obj uintptr) uintptr {
@@ -770,17 +770,17 @@ func CheckListBox_GetAction(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetAction").Call(obj, value)
 }
 
 func CheckListBox_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("CheckListBox_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckListBox_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckListBox_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("CheckListBox_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("CheckListBox_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func CheckListBox_GetClientHeight(obj uintptr) int32 {
@@ -789,18 +789,18 @@ func CheckListBox_GetClientHeight(obj uintptr) int32 {
 }
 
 func CheckListBox_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CheckListBox_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckListBox_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckListBox_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("CheckListBox_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckListBox_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -810,7 +810,7 @@ func CheckListBox_GetClientWidth(obj uintptr) int32 {
 }
 
 func CheckListBox_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetControlState(obj uintptr) TControlState {
@@ -819,7 +819,7 @@ func CheckListBox_GetControlState(obj uintptr) TControlState {
 }
 
 func CheckListBox_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("CheckListBox_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetControlState").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetControlStyle(obj uintptr) TControlStyle {
@@ -828,7 +828,7 @@ func CheckListBox_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func CheckListBox_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("CheckListBox_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetFloating(obj uintptr) bool {
@@ -842,7 +842,7 @@ func CheckListBox_GetParent(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetParent").Call(obj, value)
 }
 
 func CheckListBox_GetLeft(obj uintptr) int32 {
@@ -851,7 +851,7 @@ func CheckListBox_GetLeft(obj uintptr) int32 {
 }
 
 func CheckListBox_SetLeft(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetLeft").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetTop(obj uintptr) int32 {
@@ -860,7 +860,7 @@ func CheckListBox_GetTop(obj uintptr) int32 {
 }
 
 func CheckListBox_SetTop(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetTop").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetWidth(obj uintptr) int32 {
@@ -869,7 +869,7 @@ func CheckListBox_GetWidth(obj uintptr) int32 {
 }
 
 func CheckListBox_SetWidth(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetWidth").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetHeight(obj uintptr) int32 {
@@ -878,7 +878,7 @@ func CheckListBox_GetHeight(obj uintptr) int32 {
 }
 
 func CheckListBox_SetHeight(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetHeight").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetCursor(obj uintptr) TCursor {
@@ -887,7 +887,7 @@ func CheckListBox_GetCursor(obj uintptr) TCursor {
 }
 
 func CheckListBox_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("CheckListBox_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetCursor").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetHint(obj uintptr) string {
@@ -896,7 +896,7 @@ func CheckListBox_GetHint(obj uintptr) string {
 }
 
 func CheckListBox_SetHint(obj uintptr, value string) {
-	getLazyProc("CheckListBox_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func CheckListBox_GetComponentCount(obj uintptr) int32 {
@@ -910,7 +910,7 @@ func CheckListBox_GetComponentIndex(obj uintptr) int32 {
 }
 
 func CheckListBox_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("CheckListBox_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetOwner(obj uintptr) uintptr {
@@ -924,7 +924,7 @@ func CheckListBox_GetName(obj uintptr) string {
 }
 
 func CheckListBox_SetName(obj uintptr, value string) {
-	getLazyProc("CheckListBox_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func CheckListBox_GetTag(obj uintptr) int {
@@ -933,7 +933,7 @@ func CheckListBox_GetTag(obj uintptr) int {
 }
 
 func CheckListBox_SetTag(obj uintptr, value int) {
-	getLazyProc("CheckListBox_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetTag").Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -942,7 +942,7 @@ func CheckListBox_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetAnchorSideLeft").Call(obj, value)
 }
 
 func CheckListBox_GetAnchorSideTop(obj uintptr) uintptr {
@@ -951,7 +951,7 @@ func CheckListBox_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetAnchorSideTop").Call(obj, value)
 }
 
 func CheckListBox_GetAnchorSideRight(obj uintptr) uintptr {
@@ -960,7 +960,7 @@ func CheckListBox_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetAnchorSideRight").Call(obj, value)
 }
 
 func CheckListBox_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -969,7 +969,7 @@ func CheckListBox_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetAnchorSideBottom").Call(obj, value)
 }
 
 func CheckListBox_GetChildSizing(obj uintptr) uintptr {
@@ -978,7 +978,7 @@ func CheckListBox_GetChildSizing(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetChildSizing").Call(obj, value)
 }
 
 func CheckListBox_GetBorderSpacing(obj uintptr) uintptr {
@@ -987,7 +987,7 @@ func CheckListBox_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func CheckListBox_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("CheckListBox_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("CheckListBox_SetBorderSpacing").Call(obj, value)
 }
 
 func CheckListBox_GetChecked(obj uintptr, Index int32) bool {
@@ -996,7 +996,7 @@ func CheckListBox_GetChecked(obj uintptr, Index int32) bool {
 }
 
 func CheckListBox_SetChecked(obj uintptr, Index int32, value bool) {
-	getLazyProc("CheckListBox_SetChecked").Call(obj, uintptr(Index), GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetChecked").Call(obj, uintptr(Index), GoBoolToDBool(value))
 }
 
 func CheckListBox_GetItemEnabled(obj uintptr, Index int32) bool {
@@ -1005,7 +1005,7 @@ func CheckListBox_GetItemEnabled(obj uintptr, Index int32) bool {
 }
 
 func CheckListBox_SetItemEnabled(obj uintptr, Index int32, value bool) {
-	getLazyProc("CheckListBox_SetItemEnabled").Call(obj, uintptr(Index), GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetItemEnabled").Call(obj, uintptr(Index), GoBoolToDBool(value))
 }
 
 func CheckListBox_GetState(obj uintptr, Index int32) TCheckBoxState {
@@ -1014,7 +1014,7 @@ func CheckListBox_GetState(obj uintptr, Index int32) TCheckBoxState {
 }
 
 func CheckListBox_SetState(obj uintptr, Index int32, value TCheckBoxState) {
-	getLazyProc("CheckListBox_SetState").Call(obj, uintptr(Index), uintptr(value))
+	_, _, _ = getLazyProc("CheckListBox_SetState").Call(obj, uintptr(Index), uintptr(value))
 }
 
 func CheckListBox_GetHeader(obj uintptr, Index int32) bool {
@@ -1023,7 +1023,7 @@ func CheckListBox_GetHeader(obj uintptr, Index int32) bool {
 }
 
 func CheckListBox_SetHeader(obj uintptr, Index int32, value bool) {
-	getLazyProc("CheckListBox_SetHeader").Call(obj, uintptr(Index), GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetHeader").Call(obj, uintptr(Index), GoBoolToDBool(value))
 }
 
 func CheckListBox_GetSelected(obj uintptr, Index int32) bool {
@@ -1032,7 +1032,7 @@ func CheckListBox_GetSelected(obj uintptr, Index int32) bool {
 }
 
 func CheckListBox_SetSelected(obj uintptr, Index int32, value bool) {
-	getLazyProc("CheckListBox_SetSelected").Call(obj, uintptr(Index), GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckListBox_SetSelected").Call(obj, uintptr(Index), GoBoolToDBool(value))
 }
 
 func CheckListBox_GetDockClients(obj uintptr, Index int32) uintptr {

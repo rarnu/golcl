@@ -35,7 +35,7 @@ func NewTaskDialogRadioButtonItem(AOwner *TCollection) *TTaskDialogRadioButtonIt
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsTaskDialogRadioButtonItem(obj interface{}) *TTaskDialogRadioButtonItem {
+func AsTaskDialogRadioButtonItem(obj any) *TTaskDialogRadioButtonItem {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

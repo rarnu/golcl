@@ -13,22 +13,22 @@ func Shape_Create(obj uintptr) uintptr {
 }
 
 func Shape_Free(obj uintptr) {
-	getLazyProc("Shape_Free").Call(obj)
+	_, _, _ = getLazyProc("Shape_Free").Call(obj)
 }
 
 func Shape_BringToFront(obj uintptr) {
-	getLazyProc("Shape_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("Shape_BringToFront").Call(obj)
 }
 
 func Shape_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Shape_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Shape_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Shape_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Shape_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Shape_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -43,11 +43,11 @@ func Shape_HasParent(obj uintptr) bool {
 }
 
 func Shape_Hide(obj uintptr) {
-	getLazyProc("Shape_Hide").Call(obj)
+	_, _, _ = getLazyProc("Shape_Hide").Call(obj)
 }
 
 func Shape_Invalidate(obj uintptr) {
-	getLazyProc("Shape_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("Shape_Invalidate").Call(obj)
 }
 
 func Shape_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -56,39 +56,39 @@ func Shape_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func Shape_Refresh(obj uintptr) {
-	getLazyProc("Shape_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Shape_Refresh").Call(obj)
 }
 
 func Shape_Repaint(obj uintptr) {
-	getLazyProc("Shape_Repaint").Call(obj)
+	_, _, _ = getLazyProc("Shape_Repaint").Call(obj)
 }
 
 func Shape_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Shape_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Shape_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Shape_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Shape_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Shape_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Shape_SendToBack(obj uintptr) {
-	getLazyProc("Shape_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("Shape_SendToBack").Call(obj)
 }
 
 func Shape_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("Shape_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Shape_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func Shape_Show(obj uintptr) {
-	getLazyProc("Shape_Show").Call(obj)
+	_, _, _ = getLazyProc("Shape_Show").Call(obj)
 }
 
 func Shape_Update(obj uintptr) {
-	getLazyProc("Shape_Update").Call(obj)
+	_, _, _ = getLazyProc("Shape_Update").Call(obj)
 }
 
 func Shape_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -107,7 +107,7 @@ func Shape_GetTextLen(obj uintptr) int32 {
 }
 
 func Shape_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Shape_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Shape_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Shape_FindComponent(obj uintptr, AName string) uintptr {
@@ -121,7 +121,7 @@ func Shape_GetNamePath(obj uintptr) string {
 }
 
 func Shape_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Shape_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Shape_Assign").Call(obj, Source)
 }
 
 func Shape_ClassType(obj uintptr) TClass {
@@ -160,31 +160,31 @@ func Shape_ToString(obj uintptr) string {
 }
 
 func Shape_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Shape_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Shape_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Shape_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Shape_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Shape_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Shape_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Shape_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Shape_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func Shape_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Shape_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Shape_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func Shape_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("Shape_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("Shape_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func Shape_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("Shape_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("Shape_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func Shape_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("Shape_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("Shape_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func Shape_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -238,15 +238,15 @@ func Shape_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func Shape_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("Shape_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("Shape_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func Shape_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("Shape_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("Shape_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func Shape_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("Shape_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("Shape_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func Shape_GetAlign(obj uintptr) TAlign {
@@ -255,7 +255,7 @@ func Shape_GetAlign(obj uintptr) TAlign {
 }
 
 func Shape_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("Shape_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetAlign").Call(obj, uintptr(value))
 }
 
 func Shape_GetAnchors(obj uintptr) TAnchors {
@@ -264,7 +264,7 @@ func Shape_GetAnchors(obj uintptr) TAnchors {
 }
 
 func Shape_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("Shape_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetAnchors").Call(obj, uintptr(value))
 }
 
 func Shape_GetBrush(obj uintptr) uintptr {
@@ -273,7 +273,7 @@ func Shape_GetBrush(obj uintptr) uintptr {
 }
 
 func Shape_SetBrush(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetBrush").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetBrush").Call(obj, value)
 }
 
 func Shape_GetDragCursor(obj uintptr) TCursor {
@@ -282,7 +282,7 @@ func Shape_GetDragCursor(obj uintptr) TCursor {
 }
 
 func Shape_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("Shape_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func Shape_GetDragKind(obj uintptr) TDragKind {
@@ -291,7 +291,7 @@ func Shape_GetDragKind(obj uintptr) TDragKind {
 }
 
 func Shape_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("Shape_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetDragKind").Call(obj, uintptr(value))
 }
 
 func Shape_GetDragMode(obj uintptr) TDragMode {
@@ -300,7 +300,7 @@ func Shape_GetDragMode(obj uintptr) TDragMode {
 }
 
 func Shape_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("Shape_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetDragMode").Call(obj, uintptr(value))
 }
 
 func Shape_GetEnabled(obj uintptr) bool {
@@ -309,7 +309,7 @@ func Shape_GetEnabled(obj uintptr) bool {
 }
 
 func Shape_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Shape_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Shape_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Shape_GetConstraints(obj uintptr) uintptr {
@@ -318,7 +318,7 @@ func Shape_GetConstraints(obj uintptr) uintptr {
 }
 
 func Shape_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetConstraints").Call(obj, value)
 }
 
 func Shape_GetParentShowHint(obj uintptr) bool {
@@ -327,7 +327,7 @@ func Shape_GetParentShowHint(obj uintptr) bool {
 }
 
 func Shape_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("Shape_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Shape_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Shape_GetPen(obj uintptr) uintptr {
@@ -336,7 +336,7 @@ func Shape_GetPen(obj uintptr) uintptr {
 }
 
 func Shape_SetPen(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetPen").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetPen").Call(obj, value)
 }
 
 func Shape_GetShape(obj uintptr) TShapeType {
@@ -345,7 +345,7 @@ func Shape_GetShape(obj uintptr) TShapeType {
 }
 
 func Shape_SetShape(obj uintptr, value TShapeType) {
-	getLazyProc("Shape_SetShape").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetShape").Call(obj, uintptr(value))
 }
 
 func Shape_GetShowHint(obj uintptr) bool {
@@ -354,7 +354,7 @@ func Shape_GetShowHint(obj uintptr) bool {
 }
 
 func Shape_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("Shape_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Shape_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Shape_GetVisible(obj uintptr) bool {
@@ -363,39 +363,39 @@ func Shape_GetVisible(obj uintptr) bool {
 }
 
 func Shape_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Shape_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Shape_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func Shape_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("Shape_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func Shape_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Shape_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Shape_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("Shape_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func Shape_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Shape_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func Shape_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("Shape_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func Shape_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Shape_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func Shape_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("Shape_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func Shape_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Shape_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Shape_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("Shape_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func Shape_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Shape_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Shape_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("Shape_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func Shape_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Shape_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func Shape_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("Shape_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func Shape_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Shape_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func Shape_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("Shape_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func Shape_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Shape_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func Shape_GetAction(obj uintptr) uintptr {
@@ -404,7 +404,7 @@ func Shape_GetAction(obj uintptr) uintptr {
 }
 
 func Shape_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetAction").Call(obj, value)
 }
 
 func Shape_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -413,17 +413,17 @@ func Shape_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func Shape_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("Shape_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func Shape_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Shape_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Shape_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Shape_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("Shape_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Shape_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Shape_GetClientHeight(obj uintptr) int32 {
@@ -432,18 +432,18 @@ func Shape_GetClientHeight(obj uintptr) int32 {
 }
 
 func Shape_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("Shape_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func Shape_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Shape_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Shape_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Shape_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Shape_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Shape_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -453,7 +453,7 @@ func Shape_GetClientWidth(obj uintptr) int32 {
 }
 
 func Shape_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("Shape_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func Shape_GetControlState(obj uintptr) TControlState {
@@ -462,7 +462,7 @@ func Shape_GetControlState(obj uintptr) TControlState {
 }
 
 func Shape_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("Shape_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetControlState").Call(obj, uintptr(value))
 }
 
 func Shape_GetControlStyle(obj uintptr) TControlStyle {
@@ -471,7 +471,7 @@ func Shape_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func Shape_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("Shape_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func Shape_GetFloating(obj uintptr) bool {
@@ -485,7 +485,7 @@ func Shape_GetParent(obj uintptr) uintptr {
 }
 
 func Shape_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetParent").Call(obj, value)
 }
 
 func Shape_GetLeft(obj uintptr) int32 {
@@ -494,7 +494,7 @@ func Shape_GetLeft(obj uintptr) int32 {
 }
 
 func Shape_SetLeft(obj uintptr, value int32) {
-	getLazyProc("Shape_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetLeft").Call(obj, uintptr(value))
 }
 
 func Shape_GetTop(obj uintptr) int32 {
@@ -503,7 +503,7 @@ func Shape_GetTop(obj uintptr) int32 {
 }
 
 func Shape_SetTop(obj uintptr, value int32) {
-	getLazyProc("Shape_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetTop").Call(obj, uintptr(value))
 }
 
 func Shape_GetWidth(obj uintptr) int32 {
@@ -512,7 +512,7 @@ func Shape_GetWidth(obj uintptr) int32 {
 }
 
 func Shape_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Shape_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetWidth").Call(obj, uintptr(value))
 }
 
 func Shape_GetHeight(obj uintptr) int32 {
@@ -521,7 +521,7 @@ func Shape_GetHeight(obj uintptr) int32 {
 }
 
 func Shape_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Shape_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetHeight").Call(obj, uintptr(value))
 }
 
 func Shape_GetCursor(obj uintptr) TCursor {
@@ -530,7 +530,7 @@ func Shape_GetCursor(obj uintptr) TCursor {
 }
 
 func Shape_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Shape_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetCursor").Call(obj, uintptr(value))
 }
 
 func Shape_GetHint(obj uintptr) string {
@@ -539,7 +539,7 @@ func Shape_GetHint(obj uintptr) string {
 }
 
 func Shape_SetHint(obj uintptr, value string) {
-	getLazyProc("Shape_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Shape_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Shape_GetComponentCount(obj uintptr) int32 {
@@ -553,7 +553,7 @@ func Shape_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Shape_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Shape_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Shape_GetOwner(obj uintptr) uintptr {
@@ -567,7 +567,7 @@ func Shape_GetName(obj uintptr) string {
 }
 
 func Shape_SetName(obj uintptr, value string) {
-	getLazyProc("Shape_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Shape_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Shape_GetTag(obj uintptr) int {
@@ -576,7 +576,7 @@ func Shape_GetTag(obj uintptr) int {
 }
 
 func Shape_SetTag(obj uintptr, value int) {
-	getLazyProc("Shape_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Shape_SetTag").Call(obj, uintptr(value))
 }
 
 func Shape_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -585,7 +585,7 @@ func Shape_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func Shape_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetAnchorSideLeft").Call(obj, value)
 }
 
 func Shape_GetAnchorSideTop(obj uintptr) uintptr {
@@ -594,7 +594,7 @@ func Shape_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func Shape_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetAnchorSideTop").Call(obj, value)
 }
 
 func Shape_GetAnchorSideRight(obj uintptr) uintptr {
@@ -603,7 +603,7 @@ func Shape_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func Shape_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetAnchorSideRight").Call(obj, value)
 }
 
 func Shape_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -612,7 +612,7 @@ func Shape_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func Shape_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetAnchorSideBottom").Call(obj, value)
 }
 
 func Shape_GetBorderSpacing(obj uintptr) uintptr {
@@ -621,7 +621,7 @@ func Shape_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func Shape_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("Shape_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("Shape_SetBorderSpacing").Call(obj, value)
 }
 
 func Shape_GetComponents(obj uintptr, AIndex int32) uintptr {

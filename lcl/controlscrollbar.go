@@ -24,7 +24,7 @@ type TControlScrollBar struct {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsControlScrollBar(obj interface{}) *TControlScrollBar {
+func AsControlScrollBar(obj any) *TControlScrollBar {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

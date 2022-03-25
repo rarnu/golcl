@@ -13,11 +13,11 @@ func RichEdit_Create(obj uintptr) uintptr {
 }
 
 func RichEdit_Free(obj uintptr) {
-	getLazyProc("RichEdit_Free").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Free").Call(obj)
 }
 
 func RichEdit_Clear(obj uintptr) {
-	getLazyProc("RichEdit_Clear").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Clear").Call(obj)
 }
 
 func RichEdit_FindText(obj uintptr, SearchStr string, StartPos int32, Length int32, Options TSearchTypes) int32 {
@@ -26,27 +26,27 @@ func RichEdit_FindText(obj uintptr, SearchStr string, StartPos int32, Length int
 }
 
 func RichEdit_ClearSelection(obj uintptr) {
-	getLazyProc("RichEdit_ClearSelection").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_ClearSelection").Call(obj)
 }
 
 func RichEdit_CopyToClipboard(obj uintptr) {
-	getLazyProc("RichEdit_CopyToClipboard").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_CopyToClipboard").Call(obj)
 }
 
 func RichEdit_CutToClipboard(obj uintptr) {
-	getLazyProc("RichEdit_CutToClipboard").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_CutToClipboard").Call(obj)
 }
 
 func RichEdit_PasteFromClipboard(obj uintptr) {
-	getLazyProc("RichEdit_PasteFromClipboard").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_PasteFromClipboard").Call(obj)
 }
 
 func RichEdit_Undo(obj uintptr) {
-	getLazyProc("RichEdit_Undo").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Undo").Call(obj)
 }
 
 func RichEdit_SelectAll(obj uintptr) {
-	getLazyProc("RichEdit_SelectAll").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_SelectAll").Call(obj)
 }
 
 func RichEdit_CanFocus(obj uintptr) bool {
@@ -65,11 +65,11 @@ func RichEdit_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWin
 }
 
 func RichEdit_DisableAlign(obj uintptr) {
-	getLazyProc("RichEdit_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_DisableAlign").Call(obj)
 }
 
 func RichEdit_EnableAlign(obj uintptr) {
-	getLazyProc("RichEdit_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_EnableAlign").Call(obj)
 }
 
 func RichEdit_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -78,7 +78,7 @@ func RichEdit_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func RichEdit_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("RichEdit_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("RichEdit_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func RichEdit_Focused(obj uintptr) bool {
@@ -92,62 +92,62 @@ func RichEdit_HandleAllocated(obj uintptr) bool {
 }
 
 func RichEdit_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("RichEdit_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("RichEdit_InsertControl").Call(obj, AControl)
 }
 
 func RichEdit_Invalidate(obj uintptr) {
-	getLazyProc("RichEdit_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Invalidate").Call(obj)
 }
 
 func RichEdit_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("RichEdit_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("RichEdit_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func RichEdit_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("RichEdit_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("RichEdit_RemoveControl").Call(obj, AControl)
 }
 
 func RichEdit_Realign(obj uintptr) {
-	getLazyProc("RichEdit_Realign").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Realign").Call(obj)
 }
 
 func RichEdit_Repaint(obj uintptr) {
-	getLazyProc("RichEdit_Repaint").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Repaint").Call(obj)
 }
 
 func RichEdit_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("RichEdit_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("RichEdit_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func RichEdit_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("RichEdit_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("RichEdit_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func RichEdit_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("RichEdit_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("RichEdit_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func RichEdit_SetFocus(obj uintptr) {
-	getLazyProc("RichEdit_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_SetFocus").Call(obj)
 }
 
 func RichEdit_Update(obj uintptr) {
-	getLazyProc("RichEdit_Update").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Update").Call(obj)
 }
 
 func RichEdit_BringToFront(obj uintptr) {
-	getLazyProc("RichEdit_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_BringToFront").Call(obj)
 }
 
 func RichEdit_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("RichEdit_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RichEdit_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RichEdit_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("RichEdit_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RichEdit_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -162,7 +162,7 @@ func RichEdit_HasParent(obj uintptr) bool {
 }
 
 func RichEdit_Hide(obj uintptr) {
-	getLazyProc("RichEdit_Hide").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Hide").Call(obj)
 }
 
 func RichEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -171,27 +171,27 @@ func RichEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func RichEdit_Refresh(obj uintptr) {
-	getLazyProc("RichEdit_Refresh").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Refresh").Call(obj)
 }
 
 func RichEdit_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("RichEdit_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RichEdit_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RichEdit_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("RichEdit_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RichEdit_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RichEdit_SendToBack(obj uintptr) {
-	getLazyProc("RichEdit_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_SendToBack").Call(obj)
 }
 
 func RichEdit_Show(obj uintptr) {
-	getLazyProc("RichEdit_Show").Call(obj)
+	_, _, _ = getLazyProc("RichEdit_Show").Call(obj)
 }
 
 func RichEdit_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -210,7 +210,7 @@ func RichEdit_GetTextLen(obj uintptr) int32 {
 }
 
 func RichEdit_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("RichEdit_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("RichEdit_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func RichEdit_FindComponent(obj uintptr, AName string) uintptr {
@@ -224,7 +224,7 @@ func RichEdit_GetNamePath(obj uintptr) string {
 }
 
 func RichEdit_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("RichEdit_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("RichEdit_Assign").Call(obj, Source)
 }
 
 func RichEdit_ClassType(obj uintptr) TClass {
@@ -263,31 +263,31 @@ func RichEdit_ToString(obj uintptr) string {
 }
 
 func RichEdit_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("RichEdit_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("RichEdit_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func RichEdit_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("RichEdit_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("RichEdit_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func RichEdit_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("RichEdit_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("RichEdit_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func RichEdit_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("RichEdit_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("RichEdit_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func RichEdit_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("RichEdit_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("RichEdit_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func RichEdit_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("RichEdit_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("RichEdit_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func RichEdit_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("RichEdit_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("RichEdit_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func RichEdit_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -341,15 +341,15 @@ func RichEdit_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func RichEdit_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("RichEdit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("RichEdit_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func RichEdit_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("RichEdit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("RichEdit_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func RichEdit_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("RichEdit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("RichEdit_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func RichEdit_GetAlign(obj uintptr) TAlign {
@@ -358,7 +358,7 @@ func RichEdit_GetAlign(obj uintptr) TAlign {
 }
 
 func RichEdit_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("RichEdit_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetAlign").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetAlignment(obj uintptr) TAlignment {
@@ -367,7 +367,7 @@ func RichEdit_GetAlignment(obj uintptr) TAlignment {
 }
 
 func RichEdit_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("RichEdit_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetAlignment").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetAnchors(obj uintptr) TAnchors {
@@ -376,7 +376,7 @@ func RichEdit_GetAnchors(obj uintptr) TAnchors {
 }
 
 func RichEdit_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("RichEdit_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetAnchors").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -385,7 +385,7 @@ func RichEdit_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func RichEdit_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("RichEdit_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -394,7 +394,7 @@ func RichEdit_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func RichEdit_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("RichEdit_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetBorderWidth(obj uintptr) int32 {
@@ -403,7 +403,7 @@ func RichEdit_GetBorderWidth(obj uintptr) int32 {
 }
 
 func RichEdit_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetColor(obj uintptr) TColor {
@@ -412,7 +412,7 @@ func RichEdit_GetColor(obj uintptr) TColor {
 }
 
 func RichEdit_SetColor(obj uintptr, value TColor) {
-	getLazyProc("RichEdit_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetColor").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetDragCursor(obj uintptr) TCursor {
@@ -421,7 +421,7 @@ func RichEdit_GetDragCursor(obj uintptr) TCursor {
 }
 
 func RichEdit_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("RichEdit_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetDragKind(obj uintptr) TDragKind {
@@ -430,7 +430,7 @@ func RichEdit_GetDragKind(obj uintptr) TDragKind {
 }
 
 func RichEdit_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("RichEdit_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetDragKind").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetDragMode(obj uintptr) TDragMode {
@@ -439,7 +439,7 @@ func RichEdit_GetDragMode(obj uintptr) TDragMode {
 }
 
 func RichEdit_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("RichEdit_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetDragMode").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetEnabled(obj uintptr) bool {
@@ -448,7 +448,7 @@ func RichEdit_GetEnabled(obj uintptr) bool {
 }
 
 func RichEdit_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetFont(obj uintptr) uintptr {
@@ -457,7 +457,7 @@ func RichEdit_GetFont(obj uintptr) uintptr {
 }
 
 func RichEdit_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetFont").Call(obj, value)
 }
 
 func RichEdit_GetHideSelection(obj uintptr) bool {
@@ -466,7 +466,7 @@ func RichEdit_GetHideSelection(obj uintptr) bool {
 }
 
 func RichEdit_SetHideSelection(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetHideSelection").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetHideSelection").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetConstraints(obj uintptr) uintptr {
@@ -475,7 +475,7 @@ func RichEdit_GetConstraints(obj uintptr) uintptr {
 }
 
 func RichEdit_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetConstraints").Call(obj, value)
 }
 
 func RichEdit_GetLines(obj uintptr) uintptr {
@@ -484,7 +484,7 @@ func RichEdit_GetLines(obj uintptr) uintptr {
 }
 
 func RichEdit_SetLines(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetLines").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetLines").Call(obj, value)
 }
 
 func RichEdit_GetMaxLength(obj uintptr) int32 {
@@ -493,7 +493,7 @@ func RichEdit_GetMaxLength(obj uintptr) int32 {
 }
 
 func RichEdit_SetMaxLength(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetMaxLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetMaxLength").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetParentColor(obj uintptr) bool {
@@ -502,7 +502,7 @@ func RichEdit_GetParentColor(obj uintptr) bool {
 }
 
 func RichEdit_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetParentFont(obj uintptr) bool {
@@ -511,7 +511,7 @@ func RichEdit_GetParentFont(obj uintptr) bool {
 }
 
 func RichEdit_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetParentShowHint(obj uintptr) bool {
@@ -520,7 +520,7 @@ func RichEdit_GetParentShowHint(obj uintptr) bool {
 }
 
 func RichEdit_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetPopupMenu(obj uintptr) uintptr {
@@ -529,7 +529,7 @@ func RichEdit_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func RichEdit_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetPopupMenu").Call(obj, value)
 }
 
 func RichEdit_GetReadOnly(obj uintptr) bool {
@@ -538,7 +538,7 @@ func RichEdit_GetReadOnly(obj uintptr) bool {
 }
 
 func RichEdit_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetScrollBars(obj uintptr) TScrollStyle {
@@ -547,7 +547,7 @@ func RichEdit_GetScrollBars(obj uintptr) TScrollStyle {
 }
 
 func RichEdit_SetScrollBars(obj uintptr, value TScrollStyle) {
-	getLazyProc("RichEdit_SetScrollBars").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetScrollBars").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetShowHint(obj uintptr) bool {
@@ -556,7 +556,7 @@ func RichEdit_GetShowHint(obj uintptr) bool {
 }
 
 func RichEdit_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetTabOrder(obj uintptr) TTabOrder {
@@ -565,7 +565,7 @@ func RichEdit_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func RichEdit_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("RichEdit_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetTabStop(obj uintptr) bool {
@@ -574,7 +574,7 @@ func RichEdit_GetTabStop(obj uintptr) bool {
 }
 
 func RichEdit_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetVisible(obj uintptr) bool {
@@ -583,7 +583,7 @@ func RichEdit_GetVisible(obj uintptr) bool {
 }
 
 func RichEdit_SetVisible(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetWantTabs(obj uintptr) bool {
@@ -592,7 +592,7 @@ func RichEdit_GetWantTabs(obj uintptr) bool {
 }
 
 func RichEdit_SetWantTabs(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetWantTabs").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetWantTabs").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetWantReturns(obj uintptr) bool {
@@ -601,7 +601,7 @@ func RichEdit_GetWantReturns(obj uintptr) bool {
 }
 
 func RichEdit_SetWantReturns(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetWantReturns").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetWantReturns").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetWordWrap(obj uintptr) bool {
@@ -610,7 +610,7 @@ func RichEdit_GetWordWrap(obj uintptr) bool {
 }
 
 func RichEdit_SetWordWrap(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetWordWrap").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetWordWrap").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetZoom(obj uintptr) int32 {
@@ -619,87 +619,87 @@ func RichEdit_GetZoom(obj uintptr) int32 {
 }
 
 func RichEdit_SetZoom(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetZoom").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetZoom").Call(obj, uintptr(value))
 }
 
-func RichEdit_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnMouseWheel(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnMouseWheel").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnMouseWheel(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnMouseWheel").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnMouseWheelDown(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnMouseWheelDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func RichEdit_SetOnMouseWheelUp(obj uintptr, fn interface{}) {
-	getLazyProc("RichEdit_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
+func RichEdit_SetOnMouseWheelUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("RichEdit_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func RichEdit_GetDefAttributes(obj uintptr) uintptr {
@@ -708,7 +708,7 @@ func RichEdit_GetDefAttributes(obj uintptr) uintptr {
 }
 
 func RichEdit_SetDefAttributes(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetDefAttributes").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetDefAttributes").Call(obj, value)
 }
 
 func RichEdit_GetSelAttributes(obj uintptr) uintptr {
@@ -717,7 +717,7 @@ func RichEdit_GetSelAttributes(obj uintptr) uintptr {
 }
 
 func RichEdit_SetSelAttributes(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetSelAttributes").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetSelAttributes").Call(obj, value)
 }
 
 func RichEdit_GetParagraph(obj uintptr) uintptr {
@@ -727,12 +727,12 @@ func RichEdit_GetParagraph(obj uintptr) uintptr {
 
 func RichEdit_GetCaretPos(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("RichEdit_GetCaretPos").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RichEdit_GetCaretPos").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RichEdit_SetCaretPos(obj uintptr, value TPoint) {
-	getLazyProc("RichEdit_SetCaretPos").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("RichEdit_SetCaretPos").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func RichEdit_GetCanUndo(obj uintptr) bool {
@@ -746,7 +746,7 @@ func RichEdit_GetModified(obj uintptr) bool {
 }
 
 func RichEdit_SetModified(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetSelLength(obj uintptr) int32 {
@@ -755,7 +755,7 @@ func RichEdit_GetSelLength(obj uintptr) int32 {
 }
 
 func RichEdit_SetSelLength(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetSelLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetSelLength").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetSelStart(obj uintptr) int32 {
@@ -764,7 +764,7 @@ func RichEdit_GetSelStart(obj uintptr) int32 {
 }
 
 func RichEdit_SetSelStart(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetSelStart").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetSelStart").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetSelText(obj uintptr) string {
@@ -773,7 +773,7 @@ func RichEdit_GetSelText(obj uintptr) string {
 }
 
 func RichEdit_SetSelText(obj uintptr, value string) {
-	getLazyProc("RichEdit_SetSelText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("RichEdit_SetSelText").Call(obj, GoStrToDStr(value))
 }
 
 func RichEdit_GetText(obj uintptr) string {
@@ -782,7 +782,7 @@ func RichEdit_GetText(obj uintptr) string {
 }
 
 func RichEdit_SetText(obj uintptr, value string) {
-	getLazyProc("RichEdit_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("RichEdit_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func RichEdit_GetTextHint(obj uintptr) string {
@@ -791,7 +791,7 @@ func RichEdit_GetTextHint(obj uintptr) string {
 }
 
 func RichEdit_SetTextHint(obj uintptr, value string) {
-	getLazyProc("RichEdit_SetTextHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("RichEdit_SetTextHint").Call(obj, GoStrToDStr(value))
 }
 
 func RichEdit_GetDockClientCount(obj uintptr) int32 {
@@ -805,7 +805,7 @@ func RichEdit_GetDockSite(obj uintptr) bool {
 }
 
 func RichEdit_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetDoubleBuffered(obj uintptr) bool {
@@ -814,7 +814,7 @@ func RichEdit_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func RichEdit_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetMouseInClient(obj uintptr) bool {
@@ -839,7 +839,7 @@ func RichEdit_GetControlCount(obj uintptr) int32 {
 
 func RichEdit_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("RichEdit_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func RichEdit_GetParentDoubleBuffered(obj uintptr) bool {
@@ -848,16 +848,16 @@ func RichEdit_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func RichEdit_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("RichEdit_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func RichEdit_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("RichEdit_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetParentWindow").Call(obj, value)
 }
 
 func RichEdit_GetShowing(obj uintptr) bool {
@@ -871,7 +871,7 @@ func RichEdit_GetUseDockManager(obj uintptr) bool {
 }
 
 func RichEdit_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("RichEdit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("RichEdit_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetAction(obj uintptr) uintptr {
@@ -880,17 +880,17 @@ func RichEdit_GetAction(obj uintptr) uintptr {
 }
 
 func RichEdit_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetAction").Call(obj, value)
 }
 
 func RichEdit_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("RichEdit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RichEdit_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RichEdit_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("RichEdit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("RichEdit_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func RichEdit_GetClientHeight(obj uintptr) int32 {
@@ -899,18 +899,18 @@ func RichEdit_GetClientHeight(obj uintptr) int32 {
 }
 
 func RichEdit_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("RichEdit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RichEdit_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func RichEdit_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("RichEdit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("RichEdit_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -920,7 +920,7 @@ func RichEdit_GetClientWidth(obj uintptr) int32 {
 }
 
 func RichEdit_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetControlState(obj uintptr) TControlState {
@@ -929,7 +929,7 @@ func RichEdit_GetControlState(obj uintptr) TControlState {
 }
 
 func RichEdit_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("RichEdit_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetControlState").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetControlStyle(obj uintptr) TControlStyle {
@@ -938,7 +938,7 @@ func RichEdit_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func RichEdit_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("RichEdit_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetFloating(obj uintptr) bool {
@@ -952,7 +952,7 @@ func RichEdit_GetParent(obj uintptr) uintptr {
 }
 
 func RichEdit_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetParent").Call(obj, value)
 }
 
 func RichEdit_GetLeft(obj uintptr) int32 {
@@ -961,7 +961,7 @@ func RichEdit_GetLeft(obj uintptr) int32 {
 }
 
 func RichEdit_SetLeft(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetLeft").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetTop(obj uintptr) int32 {
@@ -970,7 +970,7 @@ func RichEdit_GetTop(obj uintptr) int32 {
 }
 
 func RichEdit_SetTop(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetTop").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetWidth(obj uintptr) int32 {
@@ -979,7 +979,7 @@ func RichEdit_GetWidth(obj uintptr) int32 {
 }
 
 func RichEdit_SetWidth(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetWidth").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetHeight(obj uintptr) int32 {
@@ -988,7 +988,7 @@ func RichEdit_GetHeight(obj uintptr) int32 {
 }
 
 func RichEdit_SetHeight(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetHeight").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetCursor(obj uintptr) TCursor {
@@ -997,7 +997,7 @@ func RichEdit_GetCursor(obj uintptr) TCursor {
 }
 
 func RichEdit_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("RichEdit_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetCursor").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetHint(obj uintptr) string {
@@ -1006,7 +1006,7 @@ func RichEdit_GetHint(obj uintptr) string {
 }
 
 func RichEdit_SetHint(obj uintptr, value string) {
-	getLazyProc("RichEdit_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("RichEdit_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func RichEdit_GetComponentCount(obj uintptr) int32 {
@@ -1020,7 +1020,7 @@ func RichEdit_GetComponentIndex(obj uintptr) int32 {
 }
 
 func RichEdit_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("RichEdit_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetOwner(obj uintptr) uintptr {
@@ -1034,7 +1034,7 @@ func RichEdit_GetName(obj uintptr) string {
 }
 
 func RichEdit_SetName(obj uintptr, value string) {
-	getLazyProc("RichEdit_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("RichEdit_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func RichEdit_GetTag(obj uintptr) int {
@@ -1043,7 +1043,7 @@ func RichEdit_GetTag(obj uintptr) int {
 }
 
 func RichEdit_SetTag(obj uintptr, value int) {
-	getLazyProc("RichEdit_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("RichEdit_SetTag").Call(obj, uintptr(value))
 }
 
 func RichEdit_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -1052,7 +1052,7 @@ func RichEdit_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func RichEdit_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetAnchorSideLeft").Call(obj, value)
 }
 
 func RichEdit_GetAnchorSideTop(obj uintptr) uintptr {
@@ -1061,7 +1061,7 @@ func RichEdit_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func RichEdit_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetAnchorSideTop").Call(obj, value)
 }
 
 func RichEdit_GetAnchorSideRight(obj uintptr) uintptr {
@@ -1070,7 +1070,7 @@ func RichEdit_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func RichEdit_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetAnchorSideRight").Call(obj, value)
 }
 
 func RichEdit_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -1079,7 +1079,7 @@ func RichEdit_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func RichEdit_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetAnchorSideBottom").Call(obj, value)
 }
 
 func RichEdit_GetChildSizing(obj uintptr) uintptr {
@@ -1088,7 +1088,7 @@ func RichEdit_GetChildSizing(obj uintptr) uintptr {
 }
 
 func RichEdit_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetChildSizing").Call(obj, value)
 }
 
 func RichEdit_GetBorderSpacing(obj uintptr) uintptr {
@@ -1097,7 +1097,7 @@ func RichEdit_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func RichEdit_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("RichEdit_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("RichEdit_SetBorderSpacing").Call(obj, value)
 }
 
 func RichEdit_GetDockClients(obj uintptr, Index int32) uintptr {

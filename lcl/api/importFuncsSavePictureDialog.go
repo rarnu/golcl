@@ -12,7 +12,7 @@ func SavePictureDialog_Create(obj uintptr) uintptr {
 }
 
 func SavePictureDialog_Free(obj uintptr) {
-	getLazyProc("SavePictureDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("SavePictureDialog_Free").Call(obj)
 }
 
 func SavePictureDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func SavePictureDialog_HasParent(obj uintptr) bool {
 }
 
 func SavePictureDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("SavePictureDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("SavePictureDialog_Assign").Call(obj, Source)
 }
 
 func SavePictureDialog_ClassType(obj uintptr) TClass {
@@ -80,7 +80,7 @@ func SavePictureDialog_GetFilter(obj uintptr) string {
 }
 
 func SavePictureDialog_SetFilter(obj uintptr, value string) {
-	getLazyProc("SavePictureDialog_SetFilter").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetFilter").Call(obj, GoStrToDStr(value))
 }
 
 func SavePictureDialog_GetFiles(obj uintptr) uintptr {
@@ -94,7 +94,7 @@ func SavePictureDialog_GetDefaultExt(obj uintptr) string {
 }
 
 func SavePictureDialog_SetDefaultExt(obj uintptr, value string) {
-	getLazyProc("SavePictureDialog_SetDefaultExt").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetDefaultExt").Call(obj, GoStrToDStr(value))
 }
 
 func SavePictureDialog_GetFileName(obj uintptr) string {
@@ -103,7 +103,7 @@ func SavePictureDialog_GetFileName(obj uintptr) string {
 }
 
 func SavePictureDialog_SetFileName(obj uintptr, value string) {
-	getLazyProc("SavePictureDialog_SetFileName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetFileName").Call(obj, GoStrToDStr(value))
 }
 
 func SavePictureDialog_GetFilterIndex(obj uintptr) int32 {
@@ -112,7 +112,7 @@ func SavePictureDialog_GetFilterIndex(obj uintptr) int32 {
 }
 
 func SavePictureDialog_SetFilterIndex(obj uintptr, value int32) {
-	getLazyProc("SavePictureDialog_SetFilterIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetFilterIndex").Call(obj, uintptr(value))
 }
 
 func SavePictureDialog_GetInitialDir(obj uintptr) string {
@@ -121,7 +121,7 @@ func SavePictureDialog_GetInitialDir(obj uintptr) string {
 }
 
 func SavePictureDialog_SetInitialDir(obj uintptr, value string) {
-	getLazyProc("SavePictureDialog_SetInitialDir").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetInitialDir").Call(obj, GoStrToDStr(value))
 }
 
 func SavePictureDialog_GetOptions(obj uintptr) TOpenOptions {
@@ -130,7 +130,7 @@ func SavePictureDialog_GetOptions(obj uintptr) TOpenOptions {
 }
 
 func SavePictureDialog_SetOptions(obj uintptr, value TOpenOptions) {
-	getLazyProc("SavePictureDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetOptions").Call(obj, uintptr(value))
 }
 
 func SavePictureDialog_GetTitle(obj uintptr) string {
@@ -139,20 +139,20 @@ func SavePictureDialog_GetTitle(obj uintptr) string {
 }
 
 func SavePictureDialog_SetTitle(obj uintptr, value string) {
-	getLazyProc("SavePictureDialog_SetTitle").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetTitle").Call(obj, GoStrToDStr(value))
 }
 
 func SavePictureDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("SavePictureDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func SavePictureDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("SavePictureDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func SavePictureDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SavePictureDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func SavePictureDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("SavePictureDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func SavePictureDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SavePictureDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func SavePictureDialog_GetComponentCount(obj uintptr) int32 {
@@ -166,7 +166,7 @@ func SavePictureDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func SavePictureDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("SavePictureDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func SavePictureDialog_GetOwner(obj uintptr) uintptr {
@@ -180,7 +180,7 @@ func SavePictureDialog_GetName(obj uintptr) string {
 }
 
 func SavePictureDialog_SetName(obj uintptr, value string) {
-	getLazyProc("SavePictureDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func SavePictureDialog_GetTag(obj uintptr) int {
@@ -189,7 +189,7 @@ func SavePictureDialog_GetTag(obj uintptr) int {
 }
 
 func SavePictureDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("SavePictureDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SavePictureDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func SavePictureDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

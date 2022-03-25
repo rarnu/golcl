@@ -7,7 +7,7 @@ import (
 //--------------------------- TControlScrollBar ---------------------------
 
 func ControlScrollBar_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ControlScrollBar_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ControlScrollBar_Assign").Call(obj, Source)
 }
 
 func ControlScrollBar_IsScrollBarVisible(obj uintptr) bool {
@@ -71,7 +71,7 @@ func ControlScrollBar_GetIncrement(obj uintptr) TScrollBarInc {
 }
 
 func ControlScrollBar_SetIncrement(obj uintptr, value TScrollBarInc) {
-	getLazyProc("ControlScrollBar_SetIncrement").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlScrollBar_SetIncrement").Call(obj, uintptr(value))
 }
 
 func ControlScrollBar_GetPosition(obj uintptr) int32 {
@@ -80,7 +80,7 @@ func ControlScrollBar_GetPosition(obj uintptr) int32 {
 }
 
 func ControlScrollBar_SetPosition(obj uintptr, value int32) {
-	getLazyProc("ControlScrollBar_SetPosition").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlScrollBar_SetPosition").Call(obj, uintptr(value))
 }
 
 func ControlScrollBar_GetRange(obj uintptr) int32 {
@@ -89,7 +89,7 @@ func ControlScrollBar_GetRange(obj uintptr) int32 {
 }
 
 func ControlScrollBar_SetRange(obj uintptr, value int32) {
-	getLazyProc("ControlScrollBar_SetRange").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ControlScrollBar_SetRange").Call(obj, uintptr(value))
 }
 
 func ControlScrollBar_GetSmooth(obj uintptr) bool {
@@ -98,7 +98,7 @@ func ControlScrollBar_GetSmooth(obj uintptr) bool {
 }
 
 func ControlScrollBar_SetSmooth(obj uintptr, value bool) {
-	getLazyProc("ControlScrollBar_SetSmooth").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ControlScrollBar_SetSmooth").Call(obj, GoBoolToDBool(value))
 }
 
 func ControlScrollBar_GetTracking(obj uintptr) bool {
@@ -107,7 +107,7 @@ func ControlScrollBar_GetTracking(obj uintptr) bool {
 }
 
 func ControlScrollBar_SetTracking(obj uintptr, value bool) {
-	getLazyProc("ControlScrollBar_SetTracking").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ControlScrollBar_SetTracking").Call(obj, GoBoolToDBool(value))
 }
 
 func ControlScrollBar_GetVisible(obj uintptr) bool {
@@ -116,7 +116,7 @@ func ControlScrollBar_GetVisible(obj uintptr) bool {
 }
 
 func ControlScrollBar_SetVisible(obj uintptr, value bool) {
-	getLazyProc("ControlScrollBar_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ControlScrollBar_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
 func ControlScrollBar_StaticClassType() TClass {

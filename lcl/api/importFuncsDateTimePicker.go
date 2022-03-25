@@ -14,7 +14,7 @@ func DateTimePicker_Create(obj uintptr) uintptr {
 }
 
 func DateTimePicker_Free(obj uintptr) {
-	getLazyProc("DateTimePicker_Free").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_Free").Call(obj)
 }
 
 func DateTimePicker_DateIsNull(obj uintptr) bool {
@@ -23,11 +23,11 @@ func DateTimePicker_DateIsNull(obj uintptr) bool {
 }
 
 func DateTimePicker_SelectDate(obj uintptr) {
-	getLazyProc("DateTimePicker_SelectDate").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_SelectDate").Call(obj)
 }
 
 func DateTimePicker_SelectTime(obj uintptr) {
-	getLazyProc("DateTimePicker_SelectTime").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_SelectTime").Call(obj)
 }
 
 func DateTimePicker_CanFocus(obj uintptr) bool {
@@ -46,11 +46,11 @@ func DateTimePicker_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, Al
 }
 
 func DateTimePicker_DisableAlign(obj uintptr) {
-	getLazyProc("DateTimePicker_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_DisableAlign").Call(obj)
 }
 
 func DateTimePicker_EnableAlign(obj uintptr) {
-	getLazyProc("DateTimePicker_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_EnableAlign").Call(obj)
 }
 
 func DateTimePicker_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -59,7 +59,7 @@ func DateTimePicker_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func DateTimePicker_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("DateTimePicker_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("DateTimePicker_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func DateTimePicker_Focused(obj uintptr) bool {
@@ -73,62 +73,62 @@ func DateTimePicker_HandleAllocated(obj uintptr) bool {
 }
 
 func DateTimePicker_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("DateTimePicker_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("DateTimePicker_InsertControl").Call(obj, AControl)
 }
 
 func DateTimePicker_Invalidate(obj uintptr) {
-	getLazyProc("DateTimePicker_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_Invalidate").Call(obj)
 }
 
 func DateTimePicker_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("DateTimePicker_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("DateTimePicker_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func DateTimePicker_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("DateTimePicker_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("DateTimePicker_RemoveControl").Call(obj, AControl)
 }
 
 func DateTimePicker_Realign(obj uintptr) {
-	getLazyProc("DateTimePicker_Realign").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_Realign").Call(obj)
 }
 
 func DateTimePicker_Repaint(obj uintptr) {
-	getLazyProc("DateTimePicker_Repaint").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_Repaint").Call(obj)
 }
 
 func DateTimePicker_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("DateTimePicker_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("DateTimePicker_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func DateTimePicker_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("DateTimePicker_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("DateTimePicker_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func DateTimePicker_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("DateTimePicker_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("DateTimePicker_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func DateTimePicker_SetFocus(obj uintptr) {
-	getLazyProc("DateTimePicker_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_SetFocus").Call(obj)
 }
 
 func DateTimePicker_Update(obj uintptr) {
-	getLazyProc("DateTimePicker_Update").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_Update").Call(obj)
 }
 
 func DateTimePicker_BringToFront(obj uintptr) {
-	getLazyProc("DateTimePicker_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_BringToFront").Call(obj)
 }
 
 func DateTimePicker_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("DateTimePicker_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DateTimePicker_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DateTimePicker_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("DateTimePicker_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DateTimePicker_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -143,7 +143,7 @@ func DateTimePicker_HasParent(obj uintptr) bool {
 }
 
 func DateTimePicker_Hide(obj uintptr) {
-	getLazyProc("DateTimePicker_Hide").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_Hide").Call(obj)
 }
 
 func DateTimePicker_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -152,27 +152,27 @@ func DateTimePicker_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int)
 }
 
 func DateTimePicker_Refresh(obj uintptr) {
-	getLazyProc("DateTimePicker_Refresh").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_Refresh").Call(obj)
 }
 
 func DateTimePicker_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("DateTimePicker_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DateTimePicker_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DateTimePicker_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("DateTimePicker_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DateTimePicker_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DateTimePicker_SendToBack(obj uintptr) {
-	getLazyProc("DateTimePicker_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_SendToBack").Call(obj)
 }
 
 func DateTimePicker_Show(obj uintptr) {
-	getLazyProc("DateTimePicker_Show").Call(obj)
+	_, _, _ = getLazyProc("DateTimePicker_Show").Call(obj)
 }
 
 func DateTimePicker_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -191,7 +191,7 @@ func DateTimePicker_GetTextLen(obj uintptr) int32 {
 }
 
 func DateTimePicker_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("DateTimePicker_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("DateTimePicker_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func DateTimePicker_FindComponent(obj uintptr, AName string) uintptr {
@@ -205,7 +205,7 @@ func DateTimePicker_GetNamePath(obj uintptr) string {
 }
 
 func DateTimePicker_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("DateTimePicker_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("DateTimePicker_Assign").Call(obj, Source)
 }
 
 func DateTimePicker_ClassType(obj uintptr) TClass {
@@ -244,31 +244,31 @@ func DateTimePicker_ToString(obj uintptr) string {
 }
 
 func DateTimePicker_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("DateTimePicker_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("DateTimePicker_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func DateTimePicker_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("DateTimePicker_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("DateTimePicker_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func DateTimePicker_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("DateTimePicker_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("DateTimePicker_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func DateTimePicker_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("DateTimePicker_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("DateTimePicker_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func DateTimePicker_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("DateTimePicker_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("DateTimePicker_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func DateTimePicker_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("DateTimePicker_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("DateTimePicker_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func DateTimePicker_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("DateTimePicker_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("DateTimePicker_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func DateTimePicker_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -322,15 +322,15 @@ func DateTimePicker_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func DateTimePicker_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("DateTimePicker_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("DateTimePicker_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func DateTimePicker_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("DateTimePicker_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("DateTimePicker_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func DateTimePicker_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("DateTimePicker_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("DateTimePicker_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func DateTimePicker_GetArrowShape(obj uintptr) TArrowShape {
@@ -339,7 +339,7 @@ func DateTimePicker_GetArrowShape(obj uintptr) TArrowShape {
 }
 
 func DateTimePicker_SetArrowShape(obj uintptr, value TArrowShape) {
-	getLazyProc("DateTimePicker_SetArrowShape").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetArrowShape").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetAutoAdvance(obj uintptr) bool {
@@ -348,7 +348,7 @@ func DateTimePicker_GetAutoAdvance(obj uintptr) bool {
 }
 
 func DateTimePicker_SetAutoAdvance(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetAutoAdvance").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetAutoAdvance").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetAutoButtonSize(obj uintptr) bool {
@@ -357,7 +357,7 @@ func DateTimePicker_GetAutoButtonSize(obj uintptr) bool {
 }
 
 func DateTimePicker_SetAutoButtonSize(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetAutoButtonSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetAutoButtonSize").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetCascade(obj uintptr) bool {
@@ -366,7 +366,7 @@ func DateTimePicker_GetCascade(obj uintptr) bool {
 }
 
 func DateTimePicker_SetCascade(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetCascade").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetCascade").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetCenturyFrom(obj uintptr) uint16 {
@@ -375,7 +375,7 @@ func DateTimePicker_GetCenturyFrom(obj uintptr) uint16 {
 }
 
 func DateTimePicker_SetCenturyFrom(obj uintptr, value uint16) {
-	getLazyProc("DateTimePicker_SetCenturyFrom").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetCenturyFrom").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetDateDisplayOrder(obj uintptr) TDateDisplayOrder {
@@ -384,7 +384,7 @@ func DateTimePicker_GetDateDisplayOrder(obj uintptr) TDateDisplayOrder {
 }
 
 func DateTimePicker_SetDateDisplayOrder(obj uintptr, value TDateDisplayOrder) {
-	getLazyProc("DateTimePicker_SetDateDisplayOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetDateDisplayOrder").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetDateSeparator(obj uintptr) string {
@@ -393,7 +393,7 @@ func DateTimePicker_GetDateSeparator(obj uintptr) string {
 }
 
 func DateTimePicker_SetDateSeparator(obj uintptr, value string) {
-	getLazyProc("DateTimePicker_SetDateSeparator").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetDateSeparator").Call(obj, GoStrToDStr(value))
 }
 
 func DateTimePicker_GetLeadingZeros(obj uintptr) bool {
@@ -402,7 +402,7 @@ func DateTimePicker_GetLeadingZeros(obj uintptr) bool {
 }
 
 func DateTimePicker_SetLeadingZeros(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetLeadingZeros").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetLeadingZeros").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetMonthNames(obj uintptr) string {
@@ -411,7 +411,7 @@ func DateTimePicker_GetMonthNames(obj uintptr) string {
 }
 
 func DateTimePicker_SetMonthNames(obj uintptr, value string) {
-	getLazyProc("DateTimePicker_SetMonthNames").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetMonthNames").Call(obj, GoStrToDStr(value))
 }
 
 func DateTimePicker_GetShowMonthNames(obj uintptr) bool {
@@ -420,7 +420,7 @@ func DateTimePicker_GetShowMonthNames(obj uintptr) bool {
 }
 
 func DateTimePicker_SetShowMonthNames(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetShowMonthNames").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetShowMonthNames").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetNullInputAllowed(obj uintptr) bool {
@@ -429,7 +429,7 @@ func DateTimePicker_GetNullInputAllowed(obj uintptr) bool {
 }
 
 func DateTimePicker_SetNullInputAllowed(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetNullInputAllowed").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetNullInputAllowed").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetOptions(obj uintptr) TDateTimePickerOptions {
@@ -438,7 +438,7 @@ func DateTimePicker_GetOptions(obj uintptr) TDateTimePickerOptions {
 }
 
 func DateTimePicker_SetOptions(obj uintptr, value TDateTimePickerOptions) {
-	getLazyProc("DateTimePicker_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetOptions").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetShowCheckBox(obj uintptr) bool {
@@ -447,7 +447,7 @@ func DateTimePicker_GetShowCheckBox(obj uintptr) bool {
 }
 
 func DateTimePicker_SetShowCheckBox(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetShowCheckBox").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetShowCheckBox").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetReadOnly(obj uintptr) bool {
@@ -456,7 +456,7 @@ func DateTimePicker_GetReadOnly(obj uintptr) bool {
 }
 
 func DateTimePicker_SetReadOnly(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetReadOnly").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetReadOnly").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetTextForNullDate(obj uintptr) string {
@@ -465,7 +465,7 @@ func DateTimePicker_GetTextForNullDate(obj uintptr) string {
 }
 
 func DateTimePicker_SetTextForNullDate(obj uintptr, value string) {
-	getLazyProc("DateTimePicker_SetTextForNullDate").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetTextForNullDate").Call(obj, GoStrToDStr(value))
 }
 
 func DateTimePicker_GetTimeDisplay(obj uintptr) TTimeDisplay {
@@ -474,7 +474,7 @@ func DateTimePicker_GetTimeDisplay(obj uintptr) TTimeDisplay {
 }
 
 func DateTimePicker_SetTimeDisplay(obj uintptr, value TTimeDisplay) {
-	getLazyProc("DateTimePicker_SetTimeDisplay").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetTimeDisplay").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetTimeSeparator(obj uintptr) string {
@@ -483,7 +483,7 @@ func DateTimePicker_GetTimeSeparator(obj uintptr) string {
 }
 
 func DateTimePicker_SetTimeSeparator(obj uintptr, value string) {
-	getLazyProc("DateTimePicker_SetTimeSeparator").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetTimeSeparator").Call(obj, GoStrToDStr(value))
 }
 
 func DateTimePicker_GetTrailingSeparator(obj uintptr) bool {
@@ -492,7 +492,7 @@ func DateTimePicker_GetTrailingSeparator(obj uintptr) bool {
 }
 
 func DateTimePicker_SetTrailingSeparator(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetTrailingSeparator").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetTrailingSeparator").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetUseDefaultSeparators(obj uintptr) bool {
@@ -501,7 +501,7 @@ func DateTimePicker_GetUseDefaultSeparators(obj uintptr) bool {
 }
 
 func DateTimePicker_SetUseDefaultSeparators(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetUseDefaultSeparators").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetUseDefaultSeparators").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetDroppedDown(obj uintptr) bool {
@@ -511,13 +511,13 @@ func DateTimePicker_GetDroppedDown(obj uintptr) bool {
 
 func DateTimePicker_GetDateTime(obj uintptr) time.Time {
 	var ret int64
-	getLazyProc("DateTimePicker_GetDateTime").Call(obj, uintptr(unsafe.Pointer(&ret)))
-	return time.Unix(int64(ret), 0)
+	_, _, _ = getLazyProc("DateTimePicker_GetDateTime").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return time.Unix(ret, 0)
 }
 
 func DateTimePicker_SetDateTime(obj uintptr, value time.Time) {
 	tVal := value.Unix()
-	getLazyProc("DateTimePicker_SetDateTime").Call(obj, uintptr(unsafe.Pointer(&tVal)))
+	_, _, _ = getLazyProc("DateTimePicker_SetDateTime").Call(obj, uintptr(unsafe.Pointer(&tVal)))
 }
 
 func DateTimePicker_GetAlign(obj uintptr) TAlign {
@@ -526,7 +526,7 @@ func DateTimePicker_GetAlign(obj uintptr) TAlign {
 }
 
 func DateTimePicker_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("DateTimePicker_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetAlign").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetAnchors(obj uintptr) TAnchors {
@@ -535,7 +535,7 @@ func DateTimePicker_GetAnchors(obj uintptr) TAnchors {
 }
 
 func DateTimePicker_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("DateTimePicker_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetAnchors").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -544,7 +544,7 @@ func DateTimePicker_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func DateTimePicker_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("DateTimePicker_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetCalAlignment(obj uintptr) TDTCalAlignment {
@@ -553,7 +553,7 @@ func DateTimePicker_GetCalAlignment(obj uintptr) TDTCalAlignment {
 }
 
 func DateTimePicker_SetCalAlignment(obj uintptr, value TDTCalAlignment) {
-	getLazyProc("DateTimePicker_SetCalAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetCalAlignment").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetConstraints(obj uintptr) uintptr {
@@ -562,29 +562,29 @@ func DateTimePicker_GetConstraints(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetConstraints").Call(obj, value)
 }
 
 func DateTimePicker_GetDate(obj uintptr) time.Time {
 	var ret int64
-	getLazyProc("DateTimePicker_GetDate").Call(obj, uintptr(unsafe.Pointer(&ret)))
-	return time.Unix(int64(ret), 0)
+	_, _, _ = getLazyProc("DateTimePicker_GetDate").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return time.Unix(ret, 0)
 }
 
 func DateTimePicker_SetDate(obj uintptr, value time.Time) {
 	tVal := value.Unix()
-	getLazyProc("DateTimePicker_SetDate").Call(obj, uintptr(unsafe.Pointer(&tVal)))
+	_, _, _ = getLazyProc("DateTimePicker_SetDate").Call(obj, uintptr(unsafe.Pointer(&tVal)))
 }
 
 func DateTimePicker_GetTime(obj uintptr) time.Time {
 	var ret int64
-	getLazyProc("DateTimePicker_GetTime").Call(obj, uintptr(unsafe.Pointer(&ret)))
-	return time.Unix(int64(ret), 0)
+	_, _, _ = getLazyProc("DateTimePicker_GetTime").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return time.Unix(ret, 0)
 }
 
 func DateTimePicker_SetTime(obj uintptr, value time.Time) {
 	tVal := value.Unix()
-	getLazyProc("DateTimePicker_SetTime").Call(obj, uintptr(unsafe.Pointer(&tVal)))
+	_, _, _ = getLazyProc("DateTimePicker_SetTime").Call(obj, uintptr(unsafe.Pointer(&tVal)))
 }
 
 func DateTimePicker_GetChecked(obj uintptr) bool {
@@ -593,7 +593,7 @@ func DateTimePicker_GetChecked(obj uintptr) bool {
 }
 
 func DateTimePicker_SetChecked(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetChecked").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetChecked").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetColor(obj uintptr) TColor {
@@ -602,7 +602,7 @@ func DateTimePicker_GetColor(obj uintptr) TColor {
 }
 
 func DateTimePicker_SetColor(obj uintptr, value TColor) {
-	getLazyProc("DateTimePicker_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetColor").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetDateMode(obj uintptr) TDTDateMode {
@@ -611,7 +611,7 @@ func DateTimePicker_GetDateMode(obj uintptr) TDTDateMode {
 }
 
 func DateTimePicker_SetDateMode(obj uintptr, value TDTDateMode) {
-	getLazyProc("DateTimePicker_SetDateMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetDateMode").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetDoubleBuffered(obj uintptr) bool {
@@ -620,7 +620,7 @@ func DateTimePicker_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func DateTimePicker_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetEnabled(obj uintptr) bool {
@@ -629,7 +629,7 @@ func DateTimePicker_GetEnabled(obj uintptr) bool {
 }
 
 func DateTimePicker_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetFont(obj uintptr) uintptr {
@@ -638,7 +638,7 @@ func DateTimePicker_GetFont(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetFont").Call(obj, value)
 }
 
 func DateTimePicker_GetKind(obj uintptr) TDateTimeKind {
@@ -647,29 +647,29 @@ func DateTimePicker_GetKind(obj uintptr) TDateTimeKind {
 }
 
 func DateTimePicker_SetKind(obj uintptr, value TDateTimeKind) {
-	getLazyProc("DateTimePicker_SetKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetKind").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetMaxDate(obj uintptr) time.Time {
 	var ret int64
-	getLazyProc("DateTimePicker_GetMaxDate").Call(obj, uintptr(unsafe.Pointer(&ret)))
-	return time.Unix(int64(ret), 0)
+	_, _, _ = getLazyProc("DateTimePicker_GetMaxDate").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return time.Unix(ret, 0)
 }
 
 func DateTimePicker_SetMaxDate(obj uintptr, value time.Time) {
 	tVal := value.Unix()
-	getLazyProc("DateTimePicker_SetMaxDate").Call(obj, uintptr(unsafe.Pointer(&tVal)))
+	_, _, _ = getLazyProc("DateTimePicker_SetMaxDate").Call(obj, uintptr(unsafe.Pointer(&tVal)))
 }
 
 func DateTimePicker_GetMinDate(obj uintptr) time.Time {
 	var ret int64
-	getLazyProc("DateTimePicker_GetMinDate").Call(obj, uintptr(unsafe.Pointer(&ret)))
-	return time.Unix(int64(ret), 0)
+	_, _, _ = getLazyProc("DateTimePicker_GetMinDate").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return time.Unix(ret, 0)
 }
 
 func DateTimePicker_SetMinDate(obj uintptr, value time.Time) {
 	tVal := value.Unix()
-	getLazyProc("DateTimePicker_SetMinDate").Call(obj, uintptr(unsafe.Pointer(&tVal)))
+	_, _, _ = getLazyProc("DateTimePicker_SetMinDate").Call(obj, uintptr(unsafe.Pointer(&tVal)))
 }
 
 func DateTimePicker_GetParentColor(obj uintptr) bool {
@@ -678,7 +678,7 @@ func DateTimePicker_GetParentColor(obj uintptr) bool {
 }
 
 func DateTimePicker_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetParentDoubleBuffered(obj uintptr) bool {
@@ -687,7 +687,7 @@ func DateTimePicker_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func DateTimePicker_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetParentFont(obj uintptr) bool {
@@ -696,7 +696,7 @@ func DateTimePicker_GetParentFont(obj uintptr) bool {
 }
 
 func DateTimePicker_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetParentShowHint(obj uintptr) bool {
@@ -705,7 +705,7 @@ func DateTimePicker_GetParentShowHint(obj uintptr) bool {
 }
 
 func DateTimePicker_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetPopupMenu(obj uintptr) uintptr {
@@ -714,7 +714,7 @@ func DateTimePicker_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetPopupMenu").Call(obj, value)
 }
 
 func DateTimePicker_GetShowHint(obj uintptr) bool {
@@ -723,7 +723,7 @@ func DateTimePicker_GetShowHint(obj uintptr) bool {
 }
 
 func DateTimePicker_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetTabOrder(obj uintptr) TTabOrder {
@@ -732,7 +732,7 @@ func DateTimePicker_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func DateTimePicker_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("DateTimePicker_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetTabStop(obj uintptr) bool {
@@ -741,7 +741,7 @@ func DateTimePicker_GetTabStop(obj uintptr) bool {
 }
 
 func DateTimePicker_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetVisible(obj uintptr) bool {
@@ -750,55 +750,55 @@ func DateTimePicker_GetVisible(obj uintptr) bool {
 }
 
 func DateTimePicker_SetVisible(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func DateTimePicker_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnCloseUp(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnCloseUp").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnCloseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnCloseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnDropDown(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnDropDown").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnDropDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnDropDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func DateTimePicker_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("DateTimePicker_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func DateTimePicker_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("DateTimePicker_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
 func DateTimePicker_GetDockClientCount(obj uintptr) int32 {
@@ -812,7 +812,7 @@ func DateTimePicker_GetDockSite(obj uintptr) bool {
 }
 
 func DateTimePicker_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetMouseInClient(obj uintptr) bool {
@@ -837,16 +837,16 @@ func DateTimePicker_GetControlCount(obj uintptr) int32 {
 
 func DateTimePicker_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("DateTimePicker_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func DateTimePicker_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("DateTimePicker_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func DateTimePicker_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("DateTimePicker_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetParentWindow").Call(obj, value)
 }
 
 func DateTimePicker_GetShowing(obj uintptr) bool {
@@ -860,7 +860,7 @@ func DateTimePicker_GetUseDockManager(obj uintptr) bool {
 }
 
 func DateTimePicker_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("DateTimePicker_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetAction(obj uintptr) uintptr {
@@ -869,17 +869,17 @@ func DateTimePicker_GetAction(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetAction").Call(obj, value)
 }
 
 func DateTimePicker_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("DateTimePicker_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DateTimePicker_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DateTimePicker_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("DateTimePicker_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("DateTimePicker_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func DateTimePicker_GetClientHeight(obj uintptr) int32 {
@@ -888,18 +888,18 @@ func DateTimePicker_GetClientHeight(obj uintptr) int32 {
 }
 
 func DateTimePicker_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("DateTimePicker_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("DateTimePicker_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DateTimePicker_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func DateTimePicker_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("DateTimePicker_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("DateTimePicker_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -909,7 +909,7 @@ func DateTimePicker_GetClientWidth(obj uintptr) int32 {
 }
 
 func DateTimePicker_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("DateTimePicker_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetControlState(obj uintptr) TControlState {
@@ -918,7 +918,7 @@ func DateTimePicker_GetControlState(obj uintptr) TControlState {
 }
 
 func DateTimePicker_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("DateTimePicker_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetControlState").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetControlStyle(obj uintptr) TControlStyle {
@@ -927,7 +927,7 @@ func DateTimePicker_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func DateTimePicker_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("DateTimePicker_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetFloating(obj uintptr) bool {
@@ -941,7 +941,7 @@ func DateTimePicker_GetParent(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetParent").Call(obj, value)
 }
 
 func DateTimePicker_GetLeft(obj uintptr) int32 {
@@ -950,7 +950,7 @@ func DateTimePicker_GetLeft(obj uintptr) int32 {
 }
 
 func DateTimePicker_SetLeft(obj uintptr, value int32) {
-	getLazyProc("DateTimePicker_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetLeft").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetTop(obj uintptr) int32 {
@@ -959,7 +959,7 @@ func DateTimePicker_GetTop(obj uintptr) int32 {
 }
 
 func DateTimePicker_SetTop(obj uintptr, value int32) {
-	getLazyProc("DateTimePicker_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetTop").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetWidth(obj uintptr) int32 {
@@ -968,7 +968,7 @@ func DateTimePicker_GetWidth(obj uintptr) int32 {
 }
 
 func DateTimePicker_SetWidth(obj uintptr, value int32) {
-	getLazyProc("DateTimePicker_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetWidth").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetHeight(obj uintptr) int32 {
@@ -977,7 +977,7 @@ func DateTimePicker_GetHeight(obj uintptr) int32 {
 }
 
 func DateTimePicker_SetHeight(obj uintptr, value int32) {
-	getLazyProc("DateTimePicker_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetHeight").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetCursor(obj uintptr) TCursor {
@@ -986,7 +986,7 @@ func DateTimePicker_GetCursor(obj uintptr) TCursor {
 }
 
 func DateTimePicker_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("DateTimePicker_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetCursor").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetHint(obj uintptr) string {
@@ -995,7 +995,7 @@ func DateTimePicker_GetHint(obj uintptr) string {
 }
 
 func DateTimePicker_SetHint(obj uintptr, value string) {
-	getLazyProc("DateTimePicker_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func DateTimePicker_GetComponentCount(obj uintptr) int32 {
@@ -1009,7 +1009,7 @@ func DateTimePicker_GetComponentIndex(obj uintptr) int32 {
 }
 
 func DateTimePicker_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("DateTimePicker_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetOwner(obj uintptr) uintptr {
@@ -1023,7 +1023,7 @@ func DateTimePicker_GetName(obj uintptr) string {
 }
 
 func DateTimePicker_SetName(obj uintptr, value string) {
-	getLazyProc("DateTimePicker_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func DateTimePicker_GetTag(obj uintptr) int {
@@ -1032,7 +1032,7 @@ func DateTimePicker_GetTag(obj uintptr) int {
 }
 
 func DateTimePicker_SetTag(obj uintptr, value int) {
-	getLazyProc("DateTimePicker_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("DateTimePicker_SetTag").Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -1041,7 +1041,7 @@ func DateTimePicker_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetAnchorSideLeft").Call(obj, value)
 }
 
 func DateTimePicker_GetAnchorSideTop(obj uintptr) uintptr {
@@ -1050,7 +1050,7 @@ func DateTimePicker_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetAnchorSideTop").Call(obj, value)
 }
 
 func DateTimePicker_GetAnchorSideRight(obj uintptr) uintptr {
@@ -1059,7 +1059,7 @@ func DateTimePicker_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetAnchorSideRight").Call(obj, value)
 }
 
 func DateTimePicker_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -1068,7 +1068,7 @@ func DateTimePicker_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetAnchorSideBottom").Call(obj, value)
 }
 
 func DateTimePicker_GetChildSizing(obj uintptr) uintptr {
@@ -1077,7 +1077,7 @@ func DateTimePicker_GetChildSizing(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetChildSizing").Call(obj, value)
 }
 
 func DateTimePicker_GetBorderSpacing(obj uintptr) uintptr {
@@ -1086,7 +1086,7 @@ func DateTimePicker_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func DateTimePicker_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("DateTimePicker_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("DateTimePicker_SetBorderSpacing").Call(obj, value)
 }
 
 func DateTimePicker_GetDockClients(obj uintptr, Index int32) uintptr {

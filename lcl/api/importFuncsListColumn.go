@@ -12,11 +12,11 @@ func ListColumn_Create(obj uintptr) uintptr {
 }
 
 func ListColumn_Free(obj uintptr) {
-	getLazyProc("ListColumn_Free").Call(obj)
+	_, _, _ = getLazyProc("ListColumn_Free").Call(obj)
 }
 
 func ListColumn_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ListColumn_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ListColumn_Assign").Call(obj, Source)
 }
 
 func ListColumn_GetNamePath(obj uintptr) string {
@@ -65,7 +65,7 @@ func ListColumn_GetSortIndicator(obj uintptr) TSortIndicator {
 }
 
 func ListColumn_SetSortIndicator(obj uintptr, value TSortIndicator) {
-	getLazyProc("ListColumn_SetSortIndicator").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListColumn_SetSortIndicator").Call(obj, uintptr(value))
 }
 
 func ListColumn_GetAlignment(obj uintptr) TAlignment {
@@ -74,7 +74,7 @@ func ListColumn_GetAlignment(obj uintptr) TAlignment {
 }
 
 func ListColumn_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("ListColumn_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListColumn_SetAlignment").Call(obj, uintptr(value))
 }
 
 func ListColumn_GetAutoSize(obj uintptr) bool {
@@ -83,7 +83,7 @@ func ListColumn_GetAutoSize(obj uintptr) bool {
 }
 
 func ListColumn_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("ListColumn_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ListColumn_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func ListColumn_GetCaption(obj uintptr) string {
@@ -92,7 +92,7 @@ func ListColumn_GetCaption(obj uintptr) string {
 }
 
 func ListColumn_SetCaption(obj uintptr, value string) {
-	getLazyProc("ListColumn_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ListColumn_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func ListColumn_GetImageIndex(obj uintptr) int32 {
@@ -101,7 +101,7 @@ func ListColumn_GetImageIndex(obj uintptr) int32 {
 }
 
 func ListColumn_SetImageIndex(obj uintptr, value int32) {
-	getLazyProc("ListColumn_SetImageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListColumn_SetImageIndex").Call(obj, uintptr(value))
 }
 
 func ListColumn_GetMaxWidth(obj uintptr) int32 {
@@ -110,7 +110,7 @@ func ListColumn_GetMaxWidth(obj uintptr) int32 {
 }
 
 func ListColumn_SetMaxWidth(obj uintptr, value int32) {
-	getLazyProc("ListColumn_SetMaxWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListColumn_SetMaxWidth").Call(obj, uintptr(value))
 }
 
 func ListColumn_GetMinWidth(obj uintptr) int32 {
@@ -119,7 +119,7 @@ func ListColumn_GetMinWidth(obj uintptr) int32 {
 }
 
 func ListColumn_SetMinWidth(obj uintptr, value int32) {
-	getLazyProc("ListColumn_SetMinWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListColumn_SetMinWidth").Call(obj, uintptr(value))
 }
 
 func ListColumn_GetTag(obj uintptr) int32 {
@@ -128,7 +128,7 @@ func ListColumn_GetTag(obj uintptr) int32 {
 }
 
 func ListColumn_SetTag(obj uintptr, value int32) {
-	getLazyProc("ListColumn_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListColumn_SetTag").Call(obj, uintptr(value))
 }
 
 func ListColumn_GetWidth(obj uintptr) int32 {
@@ -137,7 +137,7 @@ func ListColumn_GetWidth(obj uintptr) int32 {
 }
 
 func ListColumn_SetWidth(obj uintptr, value int32) {
-	getLazyProc("ListColumn_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListColumn_SetWidth").Call(obj, uintptr(value))
 }
 
 func ListColumn_GetCollection(obj uintptr) uintptr {
@@ -146,7 +146,7 @@ func ListColumn_GetCollection(obj uintptr) uintptr {
 }
 
 func ListColumn_SetCollection(obj uintptr, value uintptr) {
-	getLazyProc("ListColumn_SetCollection").Call(obj, value)
+	_, _, _ = getLazyProc("ListColumn_SetCollection").Call(obj, value)
 }
 
 func ListColumn_GetIndex(obj uintptr) int32 {
@@ -155,7 +155,7 @@ func ListColumn_GetIndex(obj uintptr) int32 {
 }
 
 func ListColumn_SetIndex(obj uintptr, value int32) {
-	getLazyProc("ListColumn_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ListColumn_SetIndex").Call(obj, uintptr(value))
 }
 
 func ListColumn_GetDisplayName(obj uintptr) string {
@@ -164,7 +164,7 @@ func ListColumn_GetDisplayName(obj uintptr) string {
 }
 
 func ListColumn_SetDisplayName(obj uintptr, value string) {
-	getLazyProc("ListColumn_SetDisplayName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ListColumn_SetDisplayName").Call(obj, GoStrToDStr(value))
 }
 
 func ListColumn_StaticClassType() TClass {

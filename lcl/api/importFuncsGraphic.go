@@ -12,7 +12,7 @@ func Graphic_Create() uintptr {
 }
 
 func Graphic_Free(obj uintptr) {
-	getLazyProc("Graphic_Free").Call(obj)
+	_, _, _ = getLazyProc("Graphic_Free").Call(obj)
 }
 
 func Graphic_Equals(obj uintptr, Obj uintptr) bool {
@@ -21,23 +21,23 @@ func Graphic_Equals(obj uintptr, Obj uintptr) bool {
 }
 
 func Graphic_LoadFromFile(obj uintptr, Filename string) {
-	getLazyProc("Graphic_LoadFromFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("Graphic_LoadFromFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func Graphic_SaveToFile(obj uintptr, Filename string) {
-	getLazyProc("Graphic_SaveToFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("Graphic_SaveToFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func Graphic_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Graphic_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Graphic_LoadFromStream").Call(obj, Stream)
 }
 
 func Graphic_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("Graphic_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("Graphic_SaveToStream").Call(obj, Stream)
 }
 
 func Graphic_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Graphic_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Graphic_Assign").Call(obj, Source)
 }
 
 func Graphic_GetNamePath(obj uintptr) string {
@@ -86,7 +86,7 @@ func Graphic_GetHeight(obj uintptr) int32 {
 }
 
 func Graphic_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Graphic_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Graphic_SetHeight").Call(obj, uintptr(value))
 }
 
 func Graphic_GetModified(obj uintptr) bool {
@@ -95,16 +95,16 @@ func Graphic_GetModified(obj uintptr) bool {
 }
 
 func Graphic_SetModified(obj uintptr, value bool) {
-	getLazyProc("Graphic_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Graphic_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func Graphic_GetPalette(obj uintptr) HPALETTE {
 	ret, _, _ := getLazyProc("Graphic_GetPalette").Call(obj)
-	return HPALETTE(ret)
+	return ret
 }
 
 func Graphic_SetPalette(obj uintptr, value HPALETTE) {
-	getLazyProc("Graphic_SetPalette").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Graphic_SetPalette").Call(obj, value)
 }
 
 func Graphic_GetPaletteModified(obj uintptr) bool {
@@ -113,7 +113,7 @@ func Graphic_GetPaletteModified(obj uintptr) bool {
 }
 
 func Graphic_SetPaletteModified(obj uintptr, value bool) {
-	getLazyProc("Graphic_SetPaletteModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Graphic_SetPaletteModified").Call(obj, GoBoolToDBool(value))
 }
 
 func Graphic_GetTransparent(obj uintptr) bool {
@@ -122,7 +122,7 @@ func Graphic_GetTransparent(obj uintptr) bool {
 }
 
 func Graphic_SetTransparent(obj uintptr, value bool) {
-	getLazyProc("Graphic_SetTransparent").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Graphic_SetTransparent").Call(obj, GoBoolToDBool(value))
 }
 
 func Graphic_GetWidth(obj uintptr) int32 {
@@ -131,11 +131,11 @@ func Graphic_GetWidth(obj uintptr) int32 {
 }
 
 func Graphic_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Graphic_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Graphic_SetWidth").Call(obj, uintptr(value))
 }
 
-func Graphic_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("Graphic_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func Graphic_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Graphic_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func Graphic_StaticClassType() TClass {

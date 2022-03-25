@@ -25,7 +25,7 @@ var (
 	formResMap sync.Map
 )
 
-func getClassName(aClass interface{}) string {
+func getClassName(aClass any) string {
 	className := ""
 	switch aClass.(type) {
 	case string:
@@ -44,7 +44,7 @@ func getClassName(aClass interface{}) string {
 
 // 注册一个Form的资源
 // 此种方式用于不指定Form资源，直接通过类名查找方式
-func RegisterFormResource(aClass interface{}, data *[]byte) error {
+func RegisterFormResource(aClass any, data *[]byte) error {
 	className := getClassName(aClass)
 	if className == "" || data == nil {
 		return errors.New("className and data cannot be empty")
@@ -55,7 +55,7 @@ func RegisterFormResource(aClass interface{}, data *[]byte) error {
 }
 
 // 查找对应的Form资源
-func findFormResource(aClass interface{}) (*formResItem, error) {
+func findFormResource(aClass any) (*formResItem, error) {
 	className := getClassName(aClass)
 	if className != "" {
 		if val, ok := formResMap.Load(className); ok {

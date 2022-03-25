@@ -12,7 +12,7 @@ func Component_Create(obj uintptr) uintptr {
 }
 
 func Component_Free(obj uintptr) {
-	getLazyProc("Component_Free").Call(obj)
+	_, _, _ = getLazyProc("Component_Free").Call(obj)
 }
 
 func Component_FindComponent(obj uintptr, AName string) uintptr {
@@ -31,7 +31,7 @@ func Component_HasParent(obj uintptr) bool {
 }
 
 func Component_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Component_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Component_Assign").Call(obj, Source)
 }
 
 func Component_ClassType(obj uintptr) TClass {
@@ -80,7 +80,7 @@ func Component_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Component_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Component_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Component_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Component_GetOwner(obj uintptr) uintptr {
@@ -94,7 +94,7 @@ func Component_GetName(obj uintptr) string {
 }
 
 func Component_SetName(obj uintptr, value string) {
-	getLazyProc("Component_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Component_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Component_GetTag(obj uintptr) int {
@@ -103,7 +103,7 @@ func Component_GetTag(obj uintptr) int {
 }
 
 func Component_SetTag(obj uintptr, value int) {
-	getLazyProc("Component_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Component_SetTag").Call(obj, uintptr(value))
 }
 
 func Component_GetComponents(obj uintptr, AIndex int32) uintptr {

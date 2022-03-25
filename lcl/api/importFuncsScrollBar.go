@@ -13,11 +13,11 @@ func ScrollBar_Create(obj uintptr) uintptr {
 }
 
 func ScrollBar_Free(obj uintptr) {
-	getLazyProc("ScrollBar_Free").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_Free").Call(obj)
 }
 
 func ScrollBar_SetParams(obj uintptr, APosition int32, AMin int32, AMax int32) {
-	getLazyProc("ScrollBar_SetParams").Call(obj, uintptr(APosition), uintptr(AMin), uintptr(AMax))
+	_, _, _ = getLazyProc("ScrollBar_SetParams").Call(obj, uintptr(APosition), uintptr(AMin), uintptr(AMax))
 }
 
 func ScrollBar_CanFocus(obj uintptr) bool {
@@ -36,11 +36,11 @@ func ScrollBar_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWi
 }
 
 func ScrollBar_DisableAlign(obj uintptr) {
-	getLazyProc("ScrollBar_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_DisableAlign").Call(obj)
 }
 
 func ScrollBar_EnableAlign(obj uintptr) {
-	getLazyProc("ScrollBar_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_EnableAlign").Call(obj)
 }
 
 func ScrollBar_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -49,7 +49,7 @@ func ScrollBar_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func ScrollBar_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("ScrollBar_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("ScrollBar_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func ScrollBar_Focused(obj uintptr) bool {
@@ -63,62 +63,62 @@ func ScrollBar_HandleAllocated(obj uintptr) bool {
 }
 
 func ScrollBar_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ScrollBar_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ScrollBar_InsertControl").Call(obj, AControl)
 }
 
 func ScrollBar_Invalidate(obj uintptr) {
-	getLazyProc("ScrollBar_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_Invalidate").Call(obj)
 }
 
 func ScrollBar_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("ScrollBar_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("ScrollBar_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func ScrollBar_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ScrollBar_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ScrollBar_RemoveControl").Call(obj, AControl)
 }
 
 func ScrollBar_Realign(obj uintptr) {
-	getLazyProc("ScrollBar_Realign").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_Realign").Call(obj)
 }
 
 func ScrollBar_Repaint(obj uintptr) {
-	getLazyProc("ScrollBar_Repaint").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_Repaint").Call(obj)
 }
 
 func ScrollBar_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("ScrollBar_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("ScrollBar_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func ScrollBar_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("ScrollBar_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("ScrollBar_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func ScrollBar_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("ScrollBar_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("ScrollBar_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func ScrollBar_SetFocus(obj uintptr) {
-	getLazyProc("ScrollBar_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_SetFocus").Call(obj)
 }
 
 func ScrollBar_Update(obj uintptr) {
-	getLazyProc("ScrollBar_Update").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_Update").Call(obj)
 }
 
 func ScrollBar_BringToFront(obj uintptr) {
-	getLazyProc("ScrollBar_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_BringToFront").Call(obj)
 }
 
 func ScrollBar_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBar_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBar_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBar_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBar_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBar_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -133,7 +133,7 @@ func ScrollBar_HasParent(obj uintptr) bool {
 }
 
 func ScrollBar_Hide(obj uintptr) {
-	getLazyProc("ScrollBar_Hide").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_Hide").Call(obj)
 }
 
 func ScrollBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -142,27 +142,27 @@ func ScrollBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int 
 }
 
 func ScrollBar_Refresh(obj uintptr) {
-	getLazyProc("ScrollBar_Refresh").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_Refresh").Call(obj)
 }
 
 func ScrollBar_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBar_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBar_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBar_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBar_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBar_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBar_SendToBack(obj uintptr) {
-	getLazyProc("ScrollBar_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_SendToBack").Call(obj)
 }
 
 func ScrollBar_Show(obj uintptr) {
-	getLazyProc("ScrollBar_Show").Call(obj)
+	_, _, _ = getLazyProc("ScrollBar_Show").Call(obj)
 }
 
 func ScrollBar_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -181,7 +181,7 @@ func ScrollBar_GetTextLen(obj uintptr) int32 {
 }
 
 func ScrollBar_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("ScrollBar_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("ScrollBar_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func ScrollBar_FindComponent(obj uintptr, AName string) uintptr {
@@ -195,7 +195,7 @@ func ScrollBar_GetNamePath(obj uintptr) string {
 }
 
 func ScrollBar_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ScrollBar_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ScrollBar_Assign").Call(obj, Source)
 }
 
 func ScrollBar_ClassType(obj uintptr) TClass {
@@ -234,31 +234,31 @@ func ScrollBar_ToString(obj uintptr) string {
 }
 
 func ScrollBar_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ScrollBar_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ScrollBar_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ScrollBar_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ScrollBar_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ScrollBar_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ScrollBar_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ScrollBar_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ScrollBar_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func ScrollBar_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ScrollBar_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ScrollBar_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func ScrollBar_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("ScrollBar_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("ScrollBar_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func ScrollBar_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("ScrollBar_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("ScrollBar_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func ScrollBar_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("ScrollBar_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("ScrollBar_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func ScrollBar_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -312,15 +312,15 @@ func ScrollBar_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func ScrollBar_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("ScrollBar_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("ScrollBar_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func ScrollBar_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("ScrollBar_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("ScrollBar_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func ScrollBar_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("ScrollBar_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("ScrollBar_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func ScrollBar_GetAlign(obj uintptr) TAlign {
@@ -329,7 +329,7 @@ func ScrollBar_GetAlign(obj uintptr) TAlign {
 }
 
 func ScrollBar_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("ScrollBar_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetAlign").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetAnchors(obj uintptr) TAnchors {
@@ -338,7 +338,7 @@ func ScrollBar_GetAnchors(obj uintptr) TAnchors {
 }
 
 func ScrollBar_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("ScrollBar_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetAnchors").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -347,7 +347,7 @@ func ScrollBar_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func ScrollBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("ScrollBar_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetConstraints(obj uintptr) uintptr {
@@ -356,7 +356,7 @@ func ScrollBar_GetConstraints(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetConstraints").Call(obj, value)
 }
 
 func ScrollBar_GetDoubleBuffered(obj uintptr) bool {
@@ -365,7 +365,7 @@ func ScrollBar_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func ScrollBar_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBar_GetDragCursor(obj uintptr) TCursor {
@@ -374,7 +374,7 @@ func ScrollBar_GetDragCursor(obj uintptr) TCursor {
 }
 
 func ScrollBar_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("ScrollBar_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetDragKind(obj uintptr) TDragKind {
@@ -383,7 +383,7 @@ func ScrollBar_GetDragKind(obj uintptr) TDragKind {
 }
 
 func ScrollBar_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("ScrollBar_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetDragKind").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetDragMode(obj uintptr) TDragMode {
@@ -392,7 +392,7 @@ func ScrollBar_GetDragMode(obj uintptr) TDragMode {
 }
 
 func ScrollBar_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("ScrollBar_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetDragMode").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetEnabled(obj uintptr) bool {
@@ -401,7 +401,7 @@ func ScrollBar_GetEnabled(obj uintptr) bool {
 }
 
 func ScrollBar_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBar_GetKind(obj uintptr) TScrollBarKind {
@@ -410,7 +410,7 @@ func ScrollBar_GetKind(obj uintptr) TScrollBarKind {
 }
 
 func ScrollBar_SetKind(obj uintptr, value TScrollBarKind) {
-	getLazyProc("ScrollBar_SetKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetKind").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetLargeChange(obj uintptr) TScrollBarInc {
@@ -419,7 +419,7 @@ func ScrollBar_GetLargeChange(obj uintptr) TScrollBarInc {
 }
 
 func ScrollBar_SetLargeChange(obj uintptr, value TScrollBarInc) {
-	getLazyProc("ScrollBar_SetLargeChange").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetLargeChange").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetMax(obj uintptr) int32 {
@@ -428,7 +428,7 @@ func ScrollBar_GetMax(obj uintptr) int32 {
 }
 
 func ScrollBar_SetMax(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetMax").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetMax").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetMin(obj uintptr) int32 {
@@ -437,7 +437,7 @@ func ScrollBar_GetMin(obj uintptr) int32 {
 }
 
 func ScrollBar_SetMin(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetMin").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetMin").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetPageSize(obj uintptr) int32 {
@@ -446,7 +446,7 @@ func ScrollBar_GetPageSize(obj uintptr) int32 {
 }
 
 func ScrollBar_SetPageSize(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetPageSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetPageSize").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetParentDoubleBuffered(obj uintptr) bool {
@@ -455,7 +455,7 @@ func ScrollBar_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func ScrollBar_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBar_GetParentShowHint(obj uintptr) bool {
@@ -464,7 +464,7 @@ func ScrollBar_GetParentShowHint(obj uintptr) bool {
 }
 
 func ScrollBar_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBar_GetPopupMenu(obj uintptr) uintptr {
@@ -473,7 +473,7 @@ func ScrollBar_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetPopupMenu").Call(obj, value)
 }
 
 func ScrollBar_GetPosition(obj uintptr) int32 {
@@ -482,7 +482,7 @@ func ScrollBar_GetPosition(obj uintptr) int32 {
 }
 
 func ScrollBar_SetPosition(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetPosition").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetPosition").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetShowHint(obj uintptr) bool {
@@ -491,7 +491,7 @@ func ScrollBar_GetShowHint(obj uintptr) bool {
 }
 
 func ScrollBar_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBar_GetSmallChange(obj uintptr) TScrollBarInc {
@@ -500,7 +500,7 @@ func ScrollBar_GetSmallChange(obj uintptr) TScrollBarInc {
 }
 
 func ScrollBar_SetSmallChange(obj uintptr, value TScrollBarInc) {
-	getLazyProc("ScrollBar_SetSmallChange").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetSmallChange").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetTabOrder(obj uintptr) TTabOrder {
@@ -509,7 +509,7 @@ func ScrollBar_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func ScrollBar_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("ScrollBar_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetTabStop(obj uintptr) bool {
@@ -518,7 +518,7 @@ func ScrollBar_GetTabStop(obj uintptr) bool {
 }
 
 func ScrollBar_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBar_GetVisible(obj uintptr) bool {
@@ -527,47 +527,47 @@ func ScrollBar_GetVisible(obj uintptr) bool {
 }
 
 func ScrollBar_SetVisible(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func ScrollBar_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBar_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBar_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func ScrollBar_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBar_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func ScrollBar_GetDockClientCount(obj uintptr) int32 {
@@ -581,7 +581,7 @@ func ScrollBar_GetDockSite(obj uintptr) bool {
 }
 
 func ScrollBar_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBar_GetMouseInClient(obj uintptr) bool {
@@ -606,16 +606,16 @@ func ScrollBar_GetControlCount(obj uintptr) int32 {
 
 func ScrollBar_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ScrollBar_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ScrollBar_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ScrollBar_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ScrollBar_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("ScrollBar_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetParentWindow").Call(obj, value)
 }
 
 func ScrollBar_GetShowing(obj uintptr) bool {
@@ -629,7 +629,7 @@ func ScrollBar_GetUseDockManager(obj uintptr) bool {
 }
 
 func ScrollBar_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("ScrollBar_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBar_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBar_GetAction(obj uintptr) uintptr {
@@ -638,17 +638,17 @@ func ScrollBar_GetAction(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetAction").Call(obj, value)
 }
 
 func ScrollBar_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ScrollBar_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBar_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBar_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("ScrollBar_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ScrollBar_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ScrollBar_GetClientHeight(obj uintptr) int32 {
@@ -657,18 +657,18 @@ func ScrollBar_GetClientHeight(obj uintptr) int32 {
 }
 
 func ScrollBar_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBar_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBar_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBar_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ScrollBar_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBar_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -678,7 +678,7 @@ func ScrollBar_GetClientWidth(obj uintptr) int32 {
 }
 
 func ScrollBar_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetControlState(obj uintptr) TControlState {
@@ -687,7 +687,7 @@ func ScrollBar_GetControlState(obj uintptr) TControlState {
 }
 
 func ScrollBar_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("ScrollBar_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetControlState").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetControlStyle(obj uintptr) TControlStyle {
@@ -696,7 +696,7 @@ func ScrollBar_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func ScrollBar_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("ScrollBar_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetFloating(obj uintptr) bool {
@@ -710,7 +710,7 @@ func ScrollBar_GetParent(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetParent").Call(obj, value)
 }
 
 func ScrollBar_GetLeft(obj uintptr) int32 {
@@ -719,7 +719,7 @@ func ScrollBar_GetLeft(obj uintptr) int32 {
 }
 
 func ScrollBar_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetLeft").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetTop(obj uintptr) int32 {
@@ -728,7 +728,7 @@ func ScrollBar_GetTop(obj uintptr) int32 {
 }
 
 func ScrollBar_SetTop(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetTop").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetWidth(obj uintptr) int32 {
@@ -737,7 +737,7 @@ func ScrollBar_GetWidth(obj uintptr) int32 {
 }
 
 func ScrollBar_SetWidth(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetWidth").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetHeight(obj uintptr) int32 {
@@ -746,7 +746,7 @@ func ScrollBar_GetHeight(obj uintptr) int32 {
 }
 
 func ScrollBar_SetHeight(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetHeight").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetCursor(obj uintptr) TCursor {
@@ -755,7 +755,7 @@ func ScrollBar_GetCursor(obj uintptr) TCursor {
 }
 
 func ScrollBar_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("ScrollBar_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetCursor").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetHint(obj uintptr) string {
@@ -764,7 +764,7 @@ func ScrollBar_GetHint(obj uintptr) string {
 }
 
 func ScrollBar_SetHint(obj uintptr, value string) {
-	getLazyProc("ScrollBar_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func ScrollBar_GetComponentCount(obj uintptr) int32 {
@@ -778,7 +778,7 @@ func ScrollBar_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ScrollBar_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ScrollBar_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetOwner(obj uintptr) uintptr {
@@ -792,7 +792,7 @@ func ScrollBar_GetName(obj uintptr) string {
 }
 
 func ScrollBar_SetName(obj uintptr, value string) {
-	getLazyProc("ScrollBar_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ScrollBar_GetTag(obj uintptr) int {
@@ -801,7 +801,7 @@ func ScrollBar_GetTag(obj uintptr) int {
 }
 
 func ScrollBar_SetTag(obj uintptr, value int) {
-	getLazyProc("ScrollBar_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBar_SetTag").Call(obj, uintptr(value))
 }
 
 func ScrollBar_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -810,7 +810,7 @@ func ScrollBar_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetAnchorSideLeft").Call(obj, value)
 }
 
 func ScrollBar_GetAnchorSideTop(obj uintptr) uintptr {
@@ -819,7 +819,7 @@ func ScrollBar_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetAnchorSideTop").Call(obj, value)
 }
 
 func ScrollBar_GetAnchorSideRight(obj uintptr) uintptr {
@@ -828,7 +828,7 @@ func ScrollBar_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetAnchorSideRight").Call(obj, value)
 }
 
 func ScrollBar_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -837,7 +837,7 @@ func ScrollBar_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetAnchorSideBottom").Call(obj, value)
 }
 
 func ScrollBar_GetChildSizing(obj uintptr) uintptr {
@@ -846,7 +846,7 @@ func ScrollBar_GetChildSizing(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetChildSizing").Call(obj, value)
 }
 
 func ScrollBar_GetBorderSpacing(obj uintptr) uintptr {
@@ -855,7 +855,7 @@ func ScrollBar_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func ScrollBar_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBar_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBar_SetBorderSpacing").Call(obj, value)
 }
 
 func ScrollBar_GetDockClients(obj uintptr, Index int32) uintptr {

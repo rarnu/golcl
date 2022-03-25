@@ -35,7 +35,7 @@ func NewTaskDialogBaseButtonItem(AOwner *TCollection) *TTaskDialogBaseButtonItem
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsTaskDialogBaseButtonItem(obj interface{}) *TTaskDialogBaseButtonItem {
+func AsTaskDialogBaseButtonItem(obj any) *TTaskDialogBaseButtonItem {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

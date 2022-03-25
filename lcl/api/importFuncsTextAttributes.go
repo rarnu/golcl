@@ -7,7 +7,7 @@ import (
 //--------------------------- TTextAttributes ---------------------------
 
 func TextAttributes_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TextAttributes_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TextAttributes_Assign").Call(obj, Source)
 }
 
 func TextAttributes_GetNamePath(obj uintptr) string {
@@ -56,7 +56,7 @@ func TextAttributes_GetCharset(obj uintptr) TFontCharset {
 }
 
 func TextAttributes_SetCharset(obj uintptr, value TFontCharset) {
-	getLazyProc("TextAttributes_SetCharset").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TextAttributes_SetCharset").Call(obj, uintptr(value))
 }
 
 func TextAttributes_GetColor(obj uintptr) TColor {
@@ -65,7 +65,7 @@ func TextAttributes_GetColor(obj uintptr) TColor {
 }
 
 func TextAttributes_SetColor(obj uintptr, value TColor) {
-	getLazyProc("TextAttributes_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TextAttributes_SetColor").Call(obj, uintptr(value))
 }
 
 func TextAttributes_GetName(obj uintptr) string {
@@ -74,7 +74,7 @@ func TextAttributes_GetName(obj uintptr) string {
 }
 
 func TextAttributes_SetName(obj uintptr, value string) {
-	getLazyProc("TextAttributes_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TextAttributes_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func TextAttributes_GetPitch(obj uintptr) TFontPitch {
@@ -83,7 +83,7 @@ func TextAttributes_GetPitch(obj uintptr) TFontPitch {
 }
 
 func TextAttributes_SetPitch(obj uintptr, value TFontPitch) {
-	getLazyProc("TextAttributes_SetPitch").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TextAttributes_SetPitch").Call(obj, uintptr(value))
 }
 
 func TextAttributes_GetSize(obj uintptr) int32 {
@@ -92,7 +92,7 @@ func TextAttributes_GetSize(obj uintptr) int32 {
 }
 
 func TextAttributes_SetSize(obj uintptr, value int32) {
-	getLazyProc("TextAttributes_SetSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TextAttributes_SetSize").Call(obj, uintptr(value))
 }
 
 func TextAttributes_GetStyle(obj uintptr) TFontStyles {
@@ -101,7 +101,7 @@ func TextAttributes_GetStyle(obj uintptr) TFontStyles {
 }
 
 func TextAttributes_SetStyle(obj uintptr, value TFontStyles) {
-	getLazyProc("TextAttributes_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TextAttributes_SetStyle").Call(obj, uintptr(value))
 }
 
 func TextAttributes_GetHeight(obj uintptr) int32 {
@@ -110,7 +110,7 @@ func TextAttributes_GetHeight(obj uintptr) int32 {
 }
 
 func TextAttributes_SetHeight(obj uintptr, value int32) {
-	getLazyProc("TextAttributes_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TextAttributes_SetHeight").Call(obj, uintptr(value))
 }
 
 func TextAttributes_StaticClassType() TClass {

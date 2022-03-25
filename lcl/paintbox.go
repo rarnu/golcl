@@ -34,7 +34,7 @@ func NewPaintBox(owner IComponent) *TPaintBox {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsPaintBox(obj interface{}) *TPaintBox {
+func AsPaintBox(obj any) *TPaintBox {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

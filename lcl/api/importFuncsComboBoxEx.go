@@ -13,7 +13,7 @@ func ComboBoxEx_Create(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_Free(obj uintptr) {
-	getLazyProc("ComboBoxEx_Free").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Free").Call(obj)
 }
 
 func ComboBoxEx_Focused(obj uintptr) bool {
@@ -22,23 +22,23 @@ func ComboBoxEx_Focused(obj uintptr) bool {
 }
 
 func ComboBoxEx_AddItem(obj uintptr, Item string, AObject uintptr) {
-	getLazyProc("ComboBoxEx_AddItem").Call(obj, GoStrToDStr(Item), AObject)
+	_, _, _ = getLazyProc("ComboBoxEx_AddItem").Call(obj, GoStrToDStr(Item), AObject)
 }
 
 func ComboBoxEx_Clear(obj uintptr) {
-	getLazyProc("ComboBoxEx_Clear").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Clear").Call(obj)
 }
 
 func ComboBoxEx_ClearSelection(obj uintptr) {
-	getLazyProc("ComboBoxEx_ClearSelection").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_ClearSelection").Call(obj)
 }
 
 func ComboBoxEx_DeleteSelected(obj uintptr) {
-	getLazyProc("ComboBoxEx_DeleteSelected").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_DeleteSelected").Call(obj)
 }
 
 func ComboBoxEx_SelectAll(obj uintptr) {
-	getLazyProc("ComboBoxEx_SelectAll").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_SelectAll").Call(obj)
 }
 
 func ComboBoxEx_CanFocus(obj uintptr) bool {
@@ -57,11 +57,11 @@ func ComboBoxEx_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowW
 }
 
 func ComboBoxEx_DisableAlign(obj uintptr) {
-	getLazyProc("ComboBoxEx_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_DisableAlign").Call(obj)
 }
 
 func ComboBoxEx_EnableAlign(obj uintptr) {
-	getLazyProc("ComboBoxEx_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_EnableAlign").Call(obj)
 }
 
 func ComboBoxEx_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -70,7 +70,7 @@ func ComboBoxEx_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func ComboBoxEx_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("ComboBoxEx_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("ComboBoxEx_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func ComboBoxEx_HandleAllocated(obj uintptr) bool {
@@ -79,62 +79,62 @@ func ComboBoxEx_HandleAllocated(obj uintptr) bool {
 }
 
 func ComboBoxEx_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ComboBoxEx_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ComboBoxEx_InsertControl").Call(obj, AControl)
 }
 
 func ComboBoxEx_Invalidate(obj uintptr) {
-	getLazyProc("ComboBoxEx_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Invalidate").Call(obj)
 }
 
 func ComboBoxEx_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("ComboBoxEx_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("ComboBoxEx_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func ComboBoxEx_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ComboBoxEx_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ComboBoxEx_RemoveControl").Call(obj, AControl)
 }
 
 func ComboBoxEx_Realign(obj uintptr) {
-	getLazyProc("ComboBoxEx_Realign").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Realign").Call(obj)
 }
 
 func ComboBoxEx_Repaint(obj uintptr) {
-	getLazyProc("ComboBoxEx_Repaint").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Repaint").Call(obj)
 }
 
 func ComboBoxEx_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("ComboBoxEx_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("ComboBoxEx_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func ComboBoxEx_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("ComboBoxEx_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("ComboBoxEx_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func ComboBoxEx_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("ComboBoxEx_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("ComboBoxEx_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func ComboBoxEx_SetFocus(obj uintptr) {
-	getLazyProc("ComboBoxEx_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_SetFocus").Call(obj)
 }
 
 func ComboBoxEx_Update(obj uintptr) {
-	getLazyProc("ComboBoxEx_Update").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Update").Call(obj)
 }
 
 func ComboBoxEx_BringToFront(obj uintptr) {
-	getLazyProc("ComboBoxEx_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_BringToFront").Call(obj)
 }
 
 func ComboBoxEx_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ComboBoxEx_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ComboBoxEx_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ComboBoxEx_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ComboBoxEx_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ComboBoxEx_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -149,7 +149,7 @@ func ComboBoxEx_HasParent(obj uintptr) bool {
 }
 
 func ComboBoxEx_Hide(obj uintptr) {
-	getLazyProc("ComboBoxEx_Hide").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Hide").Call(obj)
 }
 
 func ComboBoxEx_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -158,27 +158,27 @@ func ComboBoxEx_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int
 }
 
 func ComboBoxEx_Refresh(obj uintptr) {
-	getLazyProc("ComboBoxEx_Refresh").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Refresh").Call(obj)
 }
 
 func ComboBoxEx_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ComboBoxEx_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ComboBoxEx_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ComboBoxEx_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ComboBoxEx_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ComboBoxEx_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ComboBoxEx_SendToBack(obj uintptr) {
-	getLazyProc("ComboBoxEx_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_SendToBack").Call(obj)
 }
 
 func ComboBoxEx_Show(obj uintptr) {
-	getLazyProc("ComboBoxEx_Show").Call(obj)
+	_, _, _ = getLazyProc("ComboBoxEx_Show").Call(obj)
 }
 
 func ComboBoxEx_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -197,7 +197,7 @@ func ComboBoxEx_GetTextLen(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("ComboBoxEx_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("ComboBoxEx_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func ComboBoxEx_FindComponent(obj uintptr, AName string) uintptr {
@@ -211,7 +211,7 @@ func ComboBoxEx_GetNamePath(obj uintptr) string {
 }
 
 func ComboBoxEx_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ComboBoxEx_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ComboBoxEx_Assign").Call(obj, Source)
 }
 
 func ComboBoxEx_ClassType(obj uintptr) TClass {
@@ -250,31 +250,31 @@ func ComboBoxEx_ToString(obj uintptr) string {
 }
 
 func ComboBoxEx_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ComboBoxEx_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ComboBoxEx_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ComboBoxEx_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ComboBoxEx_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ComboBoxEx_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ComboBoxEx_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ComboBoxEx_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ComboBoxEx_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func ComboBoxEx_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ComboBoxEx_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ComboBoxEx_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func ComboBoxEx_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("ComboBoxEx_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("ComboBoxEx_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func ComboBoxEx_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("ComboBoxEx_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("ComboBoxEx_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func ComboBoxEx_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("ComboBoxEx_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("ComboBoxEx_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func ComboBoxEx_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -328,15 +328,15 @@ func ComboBoxEx_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func ComboBoxEx_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("ComboBoxEx_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("ComboBoxEx_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func ComboBoxEx_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("ComboBoxEx_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("ComboBoxEx_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func ComboBoxEx_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("ComboBoxEx_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("ComboBoxEx_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func ComboBoxEx_GetAlign(obj uintptr) TAlign {
@@ -345,7 +345,7 @@ func ComboBoxEx_GetAlign(obj uintptr) TAlign {
 }
 
 func ComboBoxEx_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("ComboBoxEx_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetAlign").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetAutoCompleteOptions(obj uintptr) TAutoCompleteOptions {
@@ -354,7 +354,7 @@ func ComboBoxEx_GetAutoCompleteOptions(obj uintptr) TAutoCompleteOptions {
 }
 
 func ComboBoxEx_SetAutoCompleteOptions(obj uintptr, value TAutoCompleteOptions) {
-	getLazyProc("ComboBoxEx_SetAutoCompleteOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetAutoCompleteOptions").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetItemsEx(obj uintptr) uintptr {
@@ -363,7 +363,7 @@ func ComboBoxEx_GetItemsEx(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetItemsEx(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetItemsEx").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetItemsEx").Call(obj, value)
 }
 
 func ComboBoxEx_GetStyle(obj uintptr) TComboBoxExStyle {
@@ -372,7 +372,7 @@ func ComboBoxEx_GetStyle(obj uintptr) TComboBoxExStyle {
 }
 
 func ComboBoxEx_SetStyle(obj uintptr, value TComboBoxExStyle) {
-	getLazyProc("ComboBoxEx_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetStyle").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetStyleEx(obj uintptr) TComboBoxExStyles {
@@ -381,7 +381,7 @@ func ComboBoxEx_GetStyleEx(obj uintptr) TComboBoxExStyles {
 }
 
 func ComboBoxEx_SetStyleEx(obj uintptr, value TComboBoxExStyles) {
-	getLazyProc("ComboBoxEx_SetStyleEx").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetStyleEx").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetAction(obj uintptr) uintptr {
@@ -390,7 +390,7 @@ func ComboBoxEx_GetAction(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetAction").Call(obj, value)
 }
 
 func ComboBoxEx_GetAnchors(obj uintptr) TAnchors {
@@ -399,7 +399,7 @@ func ComboBoxEx_GetAnchors(obj uintptr) TAnchors {
 }
 
 func ComboBoxEx_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("ComboBoxEx_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetAnchors").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -408,7 +408,7 @@ func ComboBoxEx_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func ComboBoxEx_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("ComboBoxEx_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetColor(obj uintptr) TColor {
@@ -417,7 +417,7 @@ func ComboBoxEx_GetColor(obj uintptr) TColor {
 }
 
 func ComboBoxEx_SetColor(obj uintptr, value TColor) {
-	getLazyProc("ComboBoxEx_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetColor").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetConstraints(obj uintptr) uintptr {
@@ -426,7 +426,7 @@ func ComboBoxEx_GetConstraints(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetConstraints").Call(obj, value)
 }
 
 func ComboBoxEx_GetDoubleBuffered(obj uintptr) bool {
@@ -435,7 +435,7 @@ func ComboBoxEx_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetDragCursor(obj uintptr) TCursor {
@@ -444,7 +444,7 @@ func ComboBoxEx_GetDragCursor(obj uintptr) TCursor {
 }
 
 func ComboBoxEx_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("ComboBoxEx_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetDragKind(obj uintptr) TDragKind {
@@ -453,7 +453,7 @@ func ComboBoxEx_GetDragKind(obj uintptr) TDragKind {
 }
 
 func ComboBoxEx_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("ComboBoxEx_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetDragKind").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetDragMode(obj uintptr) TDragMode {
@@ -462,7 +462,7 @@ func ComboBoxEx_GetDragMode(obj uintptr) TDragMode {
 }
 
 func ComboBoxEx_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("ComboBoxEx_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetDragMode").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetEnabled(obj uintptr) bool {
@@ -471,7 +471,7 @@ func ComboBoxEx_GetEnabled(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetFont(obj uintptr) uintptr {
@@ -480,7 +480,7 @@ func ComboBoxEx_GetFont(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetFont").Call(obj, value)
 }
 
 func ComboBoxEx_GetItemHeight(obj uintptr) int32 {
@@ -489,7 +489,7 @@ func ComboBoxEx_GetItemHeight(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetItemHeight(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetItemHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetItemHeight").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetMaxLength(obj uintptr) int32 {
@@ -498,7 +498,7 @@ func ComboBoxEx_GetMaxLength(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetMaxLength(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetMaxLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetMaxLength").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetParentColor(obj uintptr) bool {
@@ -507,7 +507,7 @@ func ComboBoxEx_GetParentColor(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetParentDoubleBuffered(obj uintptr) bool {
@@ -516,7 +516,7 @@ func ComboBoxEx_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetParentFont(obj uintptr) bool {
@@ -525,7 +525,7 @@ func ComboBoxEx_GetParentFont(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetParentShowHint(obj uintptr) bool {
@@ -534,7 +534,7 @@ func ComboBoxEx_GetParentShowHint(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetPopupMenu(obj uintptr) uintptr {
@@ -543,7 +543,7 @@ func ComboBoxEx_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetPopupMenu").Call(obj, value)
 }
 
 func ComboBoxEx_GetShowHint(obj uintptr) bool {
@@ -552,7 +552,7 @@ func ComboBoxEx_GetShowHint(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetTabOrder(obj uintptr) TTabOrder {
@@ -561,7 +561,7 @@ func ComboBoxEx_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func ComboBoxEx_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("ComboBoxEx_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetTabStop(obj uintptr) bool {
@@ -570,7 +570,7 @@ func ComboBoxEx_GetTabStop(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetText(obj uintptr) string {
@@ -579,7 +579,7 @@ func ComboBoxEx_GetText(obj uintptr) string {
 }
 
 func ComboBoxEx_SetText(obj uintptr, value string) {
-	getLazyProc("ComboBoxEx_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func ComboBoxEx_GetVisible(obj uintptr) bool {
@@ -588,75 +588,75 @@ func ComboBoxEx_GetVisible(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetVisible(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func ComboBoxEx_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnDropDown(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnDropDown").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnDropDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnDropDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnSelect(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnSelect").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnSelect(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnSelect").Call(obj, addEventToMap(obj, fn))
 }
 
-func ComboBoxEx_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("ComboBoxEx_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func ComboBoxEx_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ComboBoxEx_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func ComboBoxEx_GetImages(obj uintptr) uintptr {
@@ -665,7 +665,7 @@ func ComboBoxEx_GetImages(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetImages(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetImages").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetImages").Call(obj, value)
 }
 
 func ComboBoxEx_GetDropDownCount(obj uintptr) int32 {
@@ -674,7 +674,7 @@ func ComboBoxEx_GetDropDownCount(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetDropDownCount(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetDropDownCount").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetDropDownCount").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetSelText(obj uintptr) string {
@@ -683,7 +683,7 @@ func ComboBoxEx_GetSelText(obj uintptr) string {
 }
 
 func ComboBoxEx_SetSelText(obj uintptr, value string) {
-	getLazyProc("ComboBoxEx_SetSelText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetSelText").Call(obj, GoStrToDStr(value))
 }
 
 func ComboBoxEx_GetCanvas(obj uintptr) uintptr {
@@ -697,7 +697,7 @@ func ComboBoxEx_GetDroppedDown(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetDroppedDown(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetDroppedDown").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetDroppedDown").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetItems(obj uintptr) uintptr {
@@ -706,7 +706,7 @@ func ComboBoxEx_GetItems(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetItems(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetItems").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetItems").Call(obj, value)
 }
 
 func ComboBoxEx_GetSelLength(obj uintptr) int32 {
@@ -715,7 +715,7 @@ func ComboBoxEx_GetSelLength(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetSelLength(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetSelLength").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetSelLength").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetSelStart(obj uintptr) int32 {
@@ -724,7 +724,7 @@ func ComboBoxEx_GetSelStart(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetSelStart(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetSelStart").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetSelStart").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetItemIndex(obj uintptr) int32 {
@@ -733,7 +733,7 @@ func ComboBoxEx_GetItemIndex(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetItemIndex(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetItemIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetItemIndex").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetDockClientCount(obj uintptr) int32 {
@@ -747,7 +747,7 @@ func ComboBoxEx_GetDockSite(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetMouseInClient(obj uintptr) bool {
@@ -772,16 +772,16 @@ func ComboBoxEx_GetControlCount(obj uintptr) int32 {
 
 func ComboBoxEx_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ComboBoxEx_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ComboBoxEx_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ComboBoxEx_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ComboBoxEx_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("ComboBoxEx_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetParentWindow").Call(obj, value)
 }
 
 func ComboBoxEx_GetShowing(obj uintptr) bool {
@@ -795,17 +795,17 @@ func ComboBoxEx_GetUseDockManager(obj uintptr) bool {
 }
 
 func ComboBoxEx_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("ComboBoxEx_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBoxEx_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ComboBoxEx_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ComboBoxEx_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ComboBoxEx_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("ComboBoxEx_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ComboBoxEx_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ComboBoxEx_GetClientHeight(obj uintptr) int32 {
@@ -814,18 +814,18 @@ func ComboBoxEx_GetClientHeight(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ComboBoxEx_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ComboBoxEx_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ComboBoxEx_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ComboBoxEx_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ComboBoxEx_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -835,7 +835,7 @@ func ComboBoxEx_GetClientWidth(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetControlState(obj uintptr) TControlState {
@@ -844,7 +844,7 @@ func ComboBoxEx_GetControlState(obj uintptr) TControlState {
 }
 
 func ComboBoxEx_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("ComboBoxEx_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetControlState").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetControlStyle(obj uintptr) TControlStyle {
@@ -853,7 +853,7 @@ func ComboBoxEx_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func ComboBoxEx_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("ComboBoxEx_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetFloating(obj uintptr) bool {
@@ -867,7 +867,7 @@ func ComboBoxEx_GetParent(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetParent").Call(obj, value)
 }
 
 func ComboBoxEx_GetLeft(obj uintptr) int32 {
@@ -876,7 +876,7 @@ func ComboBoxEx_GetLeft(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetLeft").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetTop(obj uintptr) int32 {
@@ -885,7 +885,7 @@ func ComboBoxEx_GetTop(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetTop(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetTop").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetWidth(obj uintptr) int32 {
@@ -894,7 +894,7 @@ func ComboBoxEx_GetWidth(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetWidth(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetWidth").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetHeight(obj uintptr) int32 {
@@ -903,7 +903,7 @@ func ComboBoxEx_GetHeight(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetHeight(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetHeight").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetCursor(obj uintptr) TCursor {
@@ -912,7 +912,7 @@ func ComboBoxEx_GetCursor(obj uintptr) TCursor {
 }
 
 func ComboBoxEx_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("ComboBoxEx_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetCursor").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetHint(obj uintptr) string {
@@ -921,7 +921,7 @@ func ComboBoxEx_GetHint(obj uintptr) string {
 }
 
 func ComboBoxEx_SetHint(obj uintptr, value string) {
-	getLazyProc("ComboBoxEx_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func ComboBoxEx_GetComponentCount(obj uintptr) int32 {
@@ -935,7 +935,7 @@ func ComboBoxEx_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ComboBoxEx_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ComboBoxEx_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetOwner(obj uintptr) uintptr {
@@ -949,7 +949,7 @@ func ComboBoxEx_GetName(obj uintptr) string {
 }
 
 func ComboBoxEx_SetName(obj uintptr, value string) {
-	getLazyProc("ComboBoxEx_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ComboBoxEx_GetTag(obj uintptr) int {
@@ -958,7 +958,7 @@ func ComboBoxEx_GetTag(obj uintptr) int {
 }
 
 func ComboBoxEx_SetTag(obj uintptr, value int) {
-	getLazyProc("ComboBoxEx_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ComboBoxEx_SetTag").Call(obj, uintptr(value))
 }
 
 func ComboBoxEx_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -967,7 +967,7 @@ func ComboBoxEx_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetAnchorSideLeft").Call(obj, value)
 }
 
 func ComboBoxEx_GetAnchorSideTop(obj uintptr) uintptr {
@@ -976,7 +976,7 @@ func ComboBoxEx_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetAnchorSideTop").Call(obj, value)
 }
 
 func ComboBoxEx_GetAnchorSideRight(obj uintptr) uintptr {
@@ -985,7 +985,7 @@ func ComboBoxEx_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetAnchorSideRight").Call(obj, value)
 }
 
 func ComboBoxEx_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -994,7 +994,7 @@ func ComboBoxEx_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetAnchorSideBottom").Call(obj, value)
 }
 
 func ComboBoxEx_GetChildSizing(obj uintptr) uintptr {
@@ -1003,7 +1003,7 @@ func ComboBoxEx_GetChildSizing(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetChildSizing").Call(obj, value)
 }
 
 func ComboBoxEx_GetBorderSpacing(obj uintptr) uintptr {
@@ -1012,7 +1012,7 @@ func ComboBoxEx_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func ComboBoxEx_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("ComboBoxEx_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("ComboBoxEx_SetBorderSpacing").Call(obj, value)
 }
 
 func ComboBoxEx_GetDockClients(obj uintptr, Index int32) uintptr {

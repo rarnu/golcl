@@ -35,7 +35,7 @@ func NewIcon() *TIcon {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsIcon(obj interface{}) *TIcon {
+func AsIcon(obj any) *TIcon {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

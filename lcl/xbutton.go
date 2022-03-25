@@ -34,7 +34,7 @@ func NewXButton(owner IComponent) *TXButton {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsXButton(obj interface{}) *TXButton {
+func AsXButton(obj any) *TXButton {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

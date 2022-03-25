@@ -53,7 +53,7 @@ type interfacePtr struct {
 	val *uintptr
 }
 
-func IsNil(val interface{}) bool {
+func IsNil(val any) bool {
 	ptr := (*interfacePtr)(unsafe.Pointer(&val))
 	return ptr.tpy == 0 || ptr.val == nil
 }
@@ -77,7 +77,7 @@ func GetUID(v1, v2 uintptr) uintptr {
 }
 
 // hashOf
-func hashOf(obj uintptr, val interface{}) uintptr {
+func hashOf(obj uintptr, val any) uintptr {
 	// 如果正在使用beginAddEvent和EndAddEvent则直接取这个值。
 	// 反之使用默认的行为。
 	if addingEvent {
@@ -107,18 +107,18 @@ func SetCurrentEventId(id uintptr) {
 }
 
 // 将事件添加到查找表中
-func addEventToMap(obj uintptr, f interface{}) uintptr {
+func addEventToMap(obj uintptr, f any) uintptr {
 	p := hashOf(obj, f)
 	eventCallbackMap.Store(p, f)
 	return p
 }
 
-func GetAddEventToMapFn() func(obj uintptr, f interface{}) uintptr {
+func GetAddEventToMapFn() func(obj uintptr, f any) uintptr {
 	return addEventToMap
 }
 
 // EventCallbackOf 从事件表中查找指定id的函数
-func EventCallbackOf(Id uintptr) (interface{}, bool) {
+func EventCallbackOf(Id uintptr) (any, bool) {
 	return eventCallbackMap.Load(Id)
 }
 
@@ -128,14 +128,14 @@ func RemoveEventCallbackOf(Id uintptr) {
 }
 
 // 添加消息事件到消息表中
-func addMessageEventToMap(obj uintptr, f interface{}) uintptr {
+func addMessageEventToMap(obj uintptr, f any) uintptr {
 	p := hashOf(obj, f)
 	messageCallbackMap.Store(p, f)
 	return p
 }
 
 // MessageCallbackOf 从消息表中查找指定id的函数
-func MessageCallbackOf(Id uintptr) (interface{}, bool) {
+func MessageCallbackOf(Id uintptr) (any, bool) {
 	return messageCallbackMap.Load(Id)
 }
 

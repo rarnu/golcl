@@ -34,7 +34,7 @@ func NewBoundLabel(owner IComponent) *TBoundLabel {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsBoundLabel(obj interface{}) *TBoundLabel {
+func AsBoundLabel(obj any) *TBoundLabel {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

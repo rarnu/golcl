@@ -13,7 +13,7 @@ func Form_Create2(owner uintptr, initScale bool) uintptr {
 	return ret
 }
 
-func Form_SetOnWndProc(obj uintptr, fn interface{}) {
+func Form_SetOnWndProc(obj uintptr, fn any) {
 	_, _, _ = form_SetOnWndProc.Call(obj, addMessageEventToMap(obj, fn))
 }
 

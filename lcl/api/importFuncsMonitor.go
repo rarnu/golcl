@@ -13,7 +13,7 @@ func Monitor_Create() uintptr {
 }
 
 func Monitor_Free(obj uintptr) {
-	getLazyProc("Monitor_Free").Call(obj)
+	_, _, _ = getLazyProc("Monitor_Free").Call(obj)
 }
 
 func Monitor_ClassType(obj uintptr) TClass {
@@ -53,7 +53,7 @@ func Monitor_ToString(obj uintptr) string {
 
 func Monitor_GetHandle(obj uintptr) HMONITOR {
 	ret, _, _ := getLazyProc("Monitor_GetHandle").Call(obj)
-	return HMONITOR(ret)
+	return ret
 }
 
 func Monitor_GetMonitorNum(obj uintptr) int32 {
@@ -83,13 +83,13 @@ func Monitor_GetWidth(obj uintptr) int32 {
 
 func Monitor_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Monitor_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Monitor_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Monitor_GetWorkareaRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Monitor_GetWorkareaRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Monitor_GetWorkareaRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 

@@ -12,7 +12,7 @@ func Timer_Create(obj uintptr) uintptr {
 }
 
 func Timer_Free(obj uintptr) {
-	getLazyProc("Timer_Free").Call(obj)
+	_, _, _ = getLazyProc("Timer_Free").Call(obj)
 }
 
 func Timer_FindComponent(obj uintptr, AName string) uintptr {
@@ -31,7 +31,7 @@ func Timer_HasParent(obj uintptr) bool {
 }
 
 func Timer_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Timer_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Timer_Assign").Call(obj, Source)
 }
 
 func Timer_ClassType(obj uintptr) TClass {
@@ -75,7 +75,7 @@ func Timer_GetEnabled(obj uintptr) bool {
 }
 
 func Timer_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Timer_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Timer_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Timer_GetInterval(obj uintptr) uint32 {
@@ -84,11 +84,11 @@ func Timer_GetInterval(obj uintptr) uint32 {
 }
 
 func Timer_SetInterval(obj uintptr, value uint32) {
-	getLazyProc("Timer_SetInterval").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Timer_SetInterval").Call(obj, uintptr(value))
 }
 
-func Timer_SetOnTimer(obj uintptr, fn interface{}) {
-	getLazyProc("Timer_SetOnTimer").Call(obj, addEventToMap(obj, fn))
+func Timer_SetOnTimer(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Timer_SetOnTimer").Call(obj, addEventToMap(obj, fn))
 }
 
 func Timer_GetComponentCount(obj uintptr) int32 {
@@ -102,7 +102,7 @@ func Timer_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Timer_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Timer_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Timer_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Timer_GetOwner(obj uintptr) uintptr {
@@ -116,7 +116,7 @@ func Timer_GetName(obj uintptr) string {
 }
 
 func Timer_SetName(obj uintptr, value string) {
-	getLazyProc("Timer_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Timer_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Timer_GetTag(obj uintptr) int {
@@ -125,7 +125,7 @@ func Timer_GetTag(obj uintptr) int {
 }
 
 func Timer_SetTag(obj uintptr, value int) {
-	getLazyProc("Timer_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Timer_SetTag").Call(obj, uintptr(value))
 }
 
 func Timer_GetComponents(obj uintptr, AIndex int32) uintptr {

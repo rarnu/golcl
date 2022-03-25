@@ -19,7 +19,7 @@ func NewSynCompletion(owner IComponent) *TSynCompletion {
 	return s
 }
 
-func AsSynCompletion(obj interface{}) *TSynCompletion {
+func AsSynCompletion(obj any) *TSynCompletion {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

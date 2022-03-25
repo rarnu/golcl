@@ -12,7 +12,7 @@ func PrintDialog_Create(obj uintptr) uintptr {
 }
 
 func PrintDialog_Free(obj uintptr) {
-	getLazyProc("PrintDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("PrintDialog_Free").Call(obj)
 }
 
 func PrintDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func PrintDialog_HasParent(obj uintptr) bool {
 }
 
 func PrintDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("PrintDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("PrintDialog_Assign").Call(obj, Source)
 }
 
 func PrintDialog_ClassType(obj uintptr) TClass {
@@ -80,7 +80,7 @@ func PrintDialog_GetCollate(obj uintptr) bool {
 }
 
 func PrintDialog_SetCollate(obj uintptr, value bool) {
-	getLazyProc("PrintDialog_SetCollate").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PrintDialog_SetCollate").Call(obj, GoBoolToDBool(value))
 }
 
 func PrintDialog_GetCopies(obj uintptr) int32 {
@@ -89,7 +89,7 @@ func PrintDialog_GetCopies(obj uintptr) int32 {
 }
 
 func PrintDialog_SetCopies(obj uintptr, value int32) {
-	getLazyProc("PrintDialog_SetCopies").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetCopies").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetFromPage(obj uintptr) int32 {
@@ -98,7 +98,7 @@ func PrintDialog_GetFromPage(obj uintptr) int32 {
 }
 
 func PrintDialog_SetFromPage(obj uintptr, value int32) {
-	getLazyProc("PrintDialog_SetFromPage").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetFromPage").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetMinPage(obj uintptr) int32 {
@@ -107,7 +107,7 @@ func PrintDialog_GetMinPage(obj uintptr) int32 {
 }
 
 func PrintDialog_SetMinPage(obj uintptr, value int32) {
-	getLazyProc("PrintDialog_SetMinPage").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetMinPage").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetMaxPage(obj uintptr) int32 {
@@ -116,7 +116,7 @@ func PrintDialog_GetMaxPage(obj uintptr) int32 {
 }
 
 func PrintDialog_SetMaxPage(obj uintptr, value int32) {
-	getLazyProc("PrintDialog_SetMaxPage").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetMaxPage").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetOptions(obj uintptr) TPrintDialogOptions {
@@ -125,7 +125,7 @@ func PrintDialog_GetOptions(obj uintptr) TPrintDialogOptions {
 }
 
 func PrintDialog_SetOptions(obj uintptr, value TPrintDialogOptions) {
-	getLazyProc("PrintDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetOptions").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetPrintToFile(obj uintptr) bool {
@@ -134,7 +134,7 @@ func PrintDialog_GetPrintToFile(obj uintptr) bool {
 }
 
 func PrintDialog_SetPrintToFile(obj uintptr, value bool) {
-	getLazyProc("PrintDialog_SetPrintToFile").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PrintDialog_SetPrintToFile").Call(obj, GoBoolToDBool(value))
 }
 
 func PrintDialog_GetPrintRange(obj uintptr) TPrintRange {
@@ -143,7 +143,7 @@ func PrintDialog_GetPrintRange(obj uintptr) TPrintRange {
 }
 
 func PrintDialog_SetPrintRange(obj uintptr, value TPrintRange) {
-	getLazyProc("PrintDialog_SetPrintRange").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetPrintRange").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetToPage(obj uintptr) int32 {
@@ -152,20 +152,20 @@ func PrintDialog_GetToPage(obj uintptr) int32 {
 }
 
 func PrintDialog_SetToPage(obj uintptr, value int32) {
-	getLazyProc("PrintDialog_SetToPage").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetToPage").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("PrintDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func PrintDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("PrintDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func PrintDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PrintDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func PrintDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("PrintDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func PrintDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PrintDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func PrintDialog_GetComponentCount(obj uintptr) int32 {
@@ -179,7 +179,7 @@ func PrintDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func PrintDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("PrintDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetOwner(obj uintptr) uintptr {
@@ -193,7 +193,7 @@ func PrintDialog_GetName(obj uintptr) string {
 }
 
 func PrintDialog_SetName(obj uintptr, value string) {
-	getLazyProc("PrintDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func PrintDialog_GetTag(obj uintptr) int {
@@ -202,7 +202,7 @@ func PrintDialog_GetTag(obj uintptr) int {
 }
 
 func PrintDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("PrintDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PrintDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func PrintDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

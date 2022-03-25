@@ -36,7 +36,7 @@ func NewRegistry(aAccess uint32) *TRegistry {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsRegistry(obj interface{}) *TRegistry {
+func AsRegistry(obj any) *TRegistry {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

@@ -12,7 +12,7 @@ func FontDialog_Create(obj uintptr) uintptr {
 }
 
 func FontDialog_Free(obj uintptr) {
-	getLazyProc("FontDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("FontDialog_Free").Call(obj)
 }
 
 func FontDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func FontDialog_HasParent(obj uintptr) bool {
 }
 
 func FontDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("FontDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("FontDialog_Assign").Call(obj, Source)
 }
 
 func FontDialog_ClassType(obj uintptr) TClass {
@@ -80,7 +80,7 @@ func FontDialog_GetFont(obj uintptr) uintptr {
 }
 
 func FontDialog_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("FontDialog_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("FontDialog_SetFont").Call(obj, value)
 }
 
 func FontDialog_GetOptions(obj uintptr) TFontDialogOptions {
@@ -89,20 +89,20 @@ func FontDialog_GetOptions(obj uintptr) TFontDialogOptions {
 }
 
 func FontDialog_SetOptions(obj uintptr, value TFontDialogOptions) {
-	getLazyProc("FontDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FontDialog_SetOptions").Call(obj, uintptr(value))
 }
 
 func FontDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("FontDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func FontDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("FontDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func FontDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FontDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func FontDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("FontDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func FontDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("FontDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func FontDialog_GetComponentCount(obj uintptr) int32 {
@@ -116,7 +116,7 @@ func FontDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func FontDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("FontDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FontDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func FontDialog_GetOwner(obj uintptr) uintptr {
@@ -130,7 +130,7 @@ func FontDialog_GetName(obj uintptr) string {
 }
 
 func FontDialog_SetName(obj uintptr, value string) {
-	getLazyProc("FontDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("FontDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func FontDialog_GetTag(obj uintptr) int {
@@ -139,7 +139,7 @@ func FontDialog_GetTag(obj uintptr) int {
 }
 
 func FontDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("FontDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("FontDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func FontDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

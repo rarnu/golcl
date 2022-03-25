@@ -12,11 +12,11 @@ func Font_Create() uintptr {
 }
 
 func Font_Free(obj uintptr) {
-	getLazyProc("Font_Free").Call(obj)
+	_, _, _ = getLazyProc("Font_Free").Call(obj)
 }
 
 func Font_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Font_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Font_Assign").Call(obj, Source)
 }
 
 func Font_HandleAllocated(obj uintptr) bool {
@@ -66,11 +66,11 @@ func Font_ToString(obj uintptr) string {
 
 func Font_GetHandle(obj uintptr) HFONT {
 	ret, _, _ := getLazyProc("Font_GetHandle").Call(obj)
-	return HFONT(ret)
+	return ret
 }
 
 func Font_SetHandle(obj uintptr, value HFONT) {
-	getLazyProc("Font_SetHandle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetHandle").Call(obj, value)
 }
 
 func Font_GetPixelsPerInch(obj uintptr) int32 {
@@ -79,7 +79,7 @@ func Font_GetPixelsPerInch(obj uintptr) int32 {
 }
 
 func Font_SetPixelsPerInch(obj uintptr, value int32) {
-	getLazyProc("Font_SetPixelsPerInch").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetPixelsPerInch").Call(obj, uintptr(value))
 }
 
 func Font_GetCharset(obj uintptr) TFontCharset {
@@ -88,7 +88,7 @@ func Font_GetCharset(obj uintptr) TFontCharset {
 }
 
 func Font_SetCharset(obj uintptr, value TFontCharset) {
-	getLazyProc("Font_SetCharset").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetCharset").Call(obj, uintptr(value))
 }
 
 func Font_GetColor(obj uintptr) TColor {
@@ -97,7 +97,7 @@ func Font_GetColor(obj uintptr) TColor {
 }
 
 func Font_SetColor(obj uintptr, value TColor) {
-	getLazyProc("Font_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetColor").Call(obj, uintptr(value))
 }
 
 func Font_GetHeight(obj uintptr) int32 {
@@ -106,7 +106,7 @@ func Font_GetHeight(obj uintptr) int32 {
 }
 
 func Font_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Font_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetHeight").Call(obj, uintptr(value))
 }
 
 func Font_GetName(obj uintptr) string {
@@ -115,7 +115,7 @@ func Font_GetName(obj uintptr) string {
 }
 
 func Font_SetName(obj uintptr, value string) {
-	getLazyProc("Font_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Font_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Font_GetOrientation(obj uintptr) int32 {
@@ -124,7 +124,7 @@ func Font_GetOrientation(obj uintptr) int32 {
 }
 
 func Font_SetOrientation(obj uintptr, value int32) {
-	getLazyProc("Font_SetOrientation").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetOrientation").Call(obj, uintptr(value))
 }
 
 func Font_GetPitch(obj uintptr) TFontPitch {
@@ -133,7 +133,7 @@ func Font_GetPitch(obj uintptr) TFontPitch {
 }
 
 func Font_SetPitch(obj uintptr, value TFontPitch) {
-	getLazyProc("Font_SetPitch").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetPitch").Call(obj, uintptr(value))
 }
 
 func Font_GetSize(obj uintptr) int32 {
@@ -142,7 +142,7 @@ func Font_GetSize(obj uintptr) int32 {
 }
 
 func Font_SetSize(obj uintptr, value int32) {
-	getLazyProc("Font_SetSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetSize").Call(obj, uintptr(value))
 }
 
 func Font_GetStyle(obj uintptr) TFontStyles {
@@ -151,7 +151,7 @@ func Font_GetStyle(obj uintptr) TFontStyles {
 }
 
 func Font_SetStyle(obj uintptr, value TFontStyles) {
-	getLazyProc("Font_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetStyle").Call(obj, uintptr(value))
 }
 
 func Font_GetQuality(obj uintptr) TFontQuality {
@@ -160,11 +160,11 @@ func Font_GetQuality(obj uintptr) TFontQuality {
 }
 
 func Font_SetQuality(obj uintptr, value TFontQuality) {
-	getLazyProc("Font_SetQuality").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Font_SetQuality").Call(obj, uintptr(value))
 }
 
-func Font_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("Font_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func Font_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Font_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func Font_StaticClassType() TClass {

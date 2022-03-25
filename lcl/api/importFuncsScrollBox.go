@@ -13,11 +13,11 @@ func ScrollBox_Create(obj uintptr) uintptr {
 }
 
 func ScrollBox_Free(obj uintptr) {
-	getLazyProc("ScrollBox_Free").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_Free").Call(obj)
 }
 
 func ScrollBox_ScrollInView(obj uintptr, AControl uintptr) {
-	getLazyProc("ScrollBox_ScrollInView").Call(obj, AControl)
+	_, _, _ = getLazyProc("ScrollBox_ScrollInView").Call(obj, AControl)
 }
 
 func ScrollBox_CanFocus(obj uintptr) bool {
@@ -36,11 +36,11 @@ func ScrollBox_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWi
 }
 
 func ScrollBox_DisableAlign(obj uintptr) {
-	getLazyProc("ScrollBox_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_DisableAlign").Call(obj)
 }
 
 func ScrollBox_EnableAlign(obj uintptr) {
-	getLazyProc("ScrollBox_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_EnableAlign").Call(obj)
 }
 
 func ScrollBox_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -49,7 +49,7 @@ func ScrollBox_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func ScrollBox_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("ScrollBox_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("ScrollBox_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func ScrollBox_Focused(obj uintptr) bool {
@@ -63,62 +63,62 @@ func ScrollBox_HandleAllocated(obj uintptr) bool {
 }
 
 func ScrollBox_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ScrollBox_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ScrollBox_InsertControl").Call(obj, AControl)
 }
 
 func ScrollBox_Invalidate(obj uintptr) {
-	getLazyProc("ScrollBox_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_Invalidate").Call(obj)
 }
 
 func ScrollBox_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("ScrollBox_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("ScrollBox_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func ScrollBox_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("ScrollBox_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("ScrollBox_RemoveControl").Call(obj, AControl)
 }
 
 func ScrollBox_Realign(obj uintptr) {
-	getLazyProc("ScrollBox_Realign").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_Realign").Call(obj)
 }
 
 func ScrollBox_Repaint(obj uintptr) {
-	getLazyProc("ScrollBox_Repaint").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_Repaint").Call(obj)
 }
 
 func ScrollBox_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("ScrollBox_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("ScrollBox_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func ScrollBox_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("ScrollBox_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("ScrollBox_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func ScrollBox_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("ScrollBox_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("ScrollBox_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func ScrollBox_SetFocus(obj uintptr) {
-	getLazyProc("ScrollBox_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_SetFocus").Call(obj)
 }
 
 func ScrollBox_Update(obj uintptr) {
-	getLazyProc("ScrollBox_Update").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_Update").Call(obj)
 }
 
 func ScrollBox_BringToFront(obj uintptr) {
-	getLazyProc("ScrollBox_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_BringToFront").Call(obj)
 }
 
 func ScrollBox_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBox_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBox_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBox_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBox_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBox_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -133,7 +133,7 @@ func ScrollBox_HasParent(obj uintptr) bool {
 }
 
 func ScrollBox_Hide(obj uintptr) {
-	getLazyProc("ScrollBox_Hide").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_Hide").Call(obj)
 }
 
 func ScrollBox_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -142,27 +142,27 @@ func ScrollBox_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int 
 }
 
 func ScrollBox_Refresh(obj uintptr) {
-	getLazyProc("ScrollBox_Refresh").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_Refresh").Call(obj)
 }
 
 func ScrollBox_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBox_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBox_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBox_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBox_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBox_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBox_SendToBack(obj uintptr) {
-	getLazyProc("ScrollBox_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_SendToBack").Call(obj)
 }
 
 func ScrollBox_Show(obj uintptr) {
-	getLazyProc("ScrollBox_Show").Call(obj)
+	_, _, _ = getLazyProc("ScrollBox_Show").Call(obj)
 }
 
 func ScrollBox_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -181,7 +181,7 @@ func ScrollBox_GetTextLen(obj uintptr) int32 {
 }
 
 func ScrollBox_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("ScrollBox_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("ScrollBox_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func ScrollBox_FindComponent(obj uintptr, AName string) uintptr {
@@ -195,7 +195,7 @@ func ScrollBox_GetNamePath(obj uintptr) string {
 }
 
 func ScrollBox_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("ScrollBox_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("ScrollBox_Assign").Call(obj, Source)
 }
 
 func ScrollBox_ClassType(obj uintptr) TClass {
@@ -234,31 +234,31 @@ func ScrollBox_ToString(obj uintptr) string {
 }
 
 func ScrollBox_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ScrollBox_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ScrollBox_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ScrollBox_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("ScrollBox_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("ScrollBox_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func ScrollBox_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ScrollBox_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ScrollBox_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func ScrollBox_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("ScrollBox_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("ScrollBox_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func ScrollBox_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("ScrollBox_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("ScrollBox_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func ScrollBox_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("ScrollBox_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("ScrollBox_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func ScrollBox_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("ScrollBox_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("ScrollBox_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func ScrollBox_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -312,15 +312,15 @@ func ScrollBox_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func ScrollBox_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("ScrollBox_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("ScrollBox_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func ScrollBox_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("ScrollBox_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("ScrollBox_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func ScrollBox_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("ScrollBox_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("ScrollBox_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func ScrollBox_GetAlign(obj uintptr) TAlign {
@@ -329,7 +329,7 @@ func ScrollBox_GetAlign(obj uintptr) TAlign {
 }
 
 func ScrollBox_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("ScrollBox_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetAlign").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetAnchors(obj uintptr) TAnchors {
@@ -338,7 +338,7 @@ func ScrollBox_GetAnchors(obj uintptr) TAnchors {
 }
 
 func ScrollBox_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("ScrollBox_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetAnchors").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetAutoScroll(obj uintptr) bool {
@@ -347,7 +347,7 @@ func ScrollBox_GetAutoScroll(obj uintptr) bool {
 }
 
 func ScrollBox_SetAutoScroll(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetAutoScroll").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetAutoScroll").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetAutoSize(obj uintptr) bool {
@@ -356,7 +356,7 @@ func ScrollBox_GetAutoSize(obj uintptr) bool {
 }
 
 func ScrollBox_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -365,7 +365,7 @@ func ScrollBox_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func ScrollBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("ScrollBox_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -374,7 +374,7 @@ func ScrollBox_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func ScrollBox_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("ScrollBox_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetConstraints(obj uintptr) uintptr {
@@ -383,7 +383,7 @@ func ScrollBox_GetConstraints(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetConstraints").Call(obj, value)
 }
 
 func ScrollBox_GetDockSite(obj uintptr) bool {
@@ -392,7 +392,7 @@ func ScrollBox_GetDockSite(obj uintptr) bool {
 }
 
 func ScrollBox_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetDoubleBuffered(obj uintptr) bool {
@@ -401,7 +401,7 @@ func ScrollBox_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func ScrollBox_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetDragCursor(obj uintptr) TCursor {
@@ -410,7 +410,7 @@ func ScrollBox_GetDragCursor(obj uintptr) TCursor {
 }
 
 func ScrollBox_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("ScrollBox_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetDragKind(obj uintptr) TDragKind {
@@ -419,7 +419,7 @@ func ScrollBox_GetDragKind(obj uintptr) TDragKind {
 }
 
 func ScrollBox_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("ScrollBox_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetDragKind").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetDragMode(obj uintptr) TDragMode {
@@ -428,7 +428,7 @@ func ScrollBox_GetDragMode(obj uintptr) TDragMode {
 }
 
 func ScrollBox_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("ScrollBox_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetDragMode").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetEnabled(obj uintptr) bool {
@@ -437,7 +437,7 @@ func ScrollBox_GetEnabled(obj uintptr) bool {
 }
 
 func ScrollBox_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetColor(obj uintptr) TColor {
@@ -446,7 +446,7 @@ func ScrollBox_GetColor(obj uintptr) TColor {
 }
 
 func ScrollBox_SetColor(obj uintptr, value TColor) {
-	getLazyProc("ScrollBox_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetColor").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetFont(obj uintptr) uintptr {
@@ -455,7 +455,7 @@ func ScrollBox_GetFont(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetFont").Call(obj, value)
 }
 
 func ScrollBox_GetParentBackground(obj uintptr) bool {
@@ -464,7 +464,7 @@ func ScrollBox_GetParentBackground(obj uintptr) bool {
 }
 
 func ScrollBox_SetParentBackground(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetParentBackground").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetParentBackground").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetParentColor(obj uintptr) bool {
@@ -473,7 +473,7 @@ func ScrollBox_GetParentColor(obj uintptr) bool {
 }
 
 func ScrollBox_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetParentDoubleBuffered(obj uintptr) bool {
@@ -482,7 +482,7 @@ func ScrollBox_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func ScrollBox_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetParentFont(obj uintptr) bool {
@@ -491,7 +491,7 @@ func ScrollBox_GetParentFont(obj uintptr) bool {
 }
 
 func ScrollBox_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetParentShowHint(obj uintptr) bool {
@@ -500,7 +500,7 @@ func ScrollBox_GetParentShowHint(obj uintptr) bool {
 }
 
 func ScrollBox_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetPopupMenu(obj uintptr) uintptr {
@@ -509,7 +509,7 @@ func ScrollBox_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetPopupMenu").Call(obj, value)
 }
 
 func ScrollBox_GetShowHint(obj uintptr) bool {
@@ -518,7 +518,7 @@ func ScrollBox_GetShowHint(obj uintptr) bool {
 }
 
 func ScrollBox_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetTabOrder(obj uintptr) TTabOrder {
@@ -527,7 +527,7 @@ func ScrollBox_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func ScrollBox_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("ScrollBox_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetTabStop(obj uintptr) bool {
@@ -536,7 +536,7 @@ func ScrollBox_GetTabStop(obj uintptr) bool {
 }
 
 func ScrollBox_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetVisible(obj uintptr) bool {
@@ -545,91 +545,91 @@ func ScrollBox_GetVisible(obj uintptr) bool {
 }
 
 func ScrollBox_SetVisible(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func ScrollBox_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnConstrainedResize(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnConstrainedResize").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnConstrainedResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnConstrainedResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnDockDrop(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnDockDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnGetSiteInfo(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnGetSiteInfo(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnMouseWheel(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnMouseWheel").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnMouseWheel(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnMouseWheel").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnMouseWheelDown(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnMouseWheelDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnMouseWheelDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnMouseWheelUp(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnMouseWheelUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnMouseWheelUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnResize(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnResize").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnUnDock(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnUnDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func ScrollBox_SetOnAlignPosition(obj uintptr, fn interface{}) {
-	getLazyProc("ScrollBox_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
+func ScrollBox_SetOnAlignPosition(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("ScrollBox_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
 }
 
 func ScrollBox_GetHorzScrollBar(obj uintptr) uintptr {
@@ -638,7 +638,7 @@ func ScrollBox_GetHorzScrollBar(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetHorzScrollBar(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetHorzScrollBar").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetHorzScrollBar").Call(obj, value)
 }
 
 func ScrollBox_GetVertScrollBar(obj uintptr) uintptr {
@@ -647,7 +647,7 @@ func ScrollBox_GetVertScrollBar(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetVertScrollBar(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetVertScrollBar").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetVertScrollBar").Call(obj, value)
 }
 
 func ScrollBox_GetDockClientCount(obj uintptr) int32 {
@@ -677,16 +677,16 @@ func ScrollBox_GetControlCount(obj uintptr) int32 {
 
 func ScrollBox_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ScrollBox_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ScrollBox_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("ScrollBox_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func ScrollBox_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("ScrollBox_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetParentWindow").Call(obj, value)
 }
 
 func ScrollBox_GetShowing(obj uintptr) bool {
@@ -700,7 +700,7 @@ func ScrollBox_GetUseDockManager(obj uintptr) bool {
 }
 
 func ScrollBox_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("ScrollBox_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("ScrollBox_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func ScrollBox_GetAction(obj uintptr) uintptr {
@@ -709,17 +709,17 @@ func ScrollBox_GetAction(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetAction").Call(obj, value)
 }
 
 func ScrollBox_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ScrollBox_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBox_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBox_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("ScrollBox_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("ScrollBox_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func ScrollBox_GetClientHeight(obj uintptr) int32 {
@@ -728,18 +728,18 @@ func ScrollBox_GetClientHeight(obj uintptr) int32 {
 }
 
 func ScrollBox_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("ScrollBox_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("ScrollBox_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBox_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func ScrollBox_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("ScrollBox_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("ScrollBox_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -749,7 +749,7 @@ func ScrollBox_GetClientWidth(obj uintptr) int32 {
 }
 
 func ScrollBox_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("ScrollBox_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetControlState(obj uintptr) TControlState {
@@ -758,7 +758,7 @@ func ScrollBox_GetControlState(obj uintptr) TControlState {
 }
 
 func ScrollBox_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("ScrollBox_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetControlState").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetControlStyle(obj uintptr) TControlStyle {
@@ -767,7 +767,7 @@ func ScrollBox_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func ScrollBox_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("ScrollBox_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetFloating(obj uintptr) bool {
@@ -781,7 +781,7 @@ func ScrollBox_GetParent(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetParent").Call(obj, value)
 }
 
 func ScrollBox_GetLeft(obj uintptr) int32 {
@@ -790,7 +790,7 @@ func ScrollBox_GetLeft(obj uintptr) int32 {
 }
 
 func ScrollBox_SetLeft(obj uintptr, value int32) {
-	getLazyProc("ScrollBox_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetLeft").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetTop(obj uintptr) int32 {
@@ -799,7 +799,7 @@ func ScrollBox_GetTop(obj uintptr) int32 {
 }
 
 func ScrollBox_SetTop(obj uintptr, value int32) {
-	getLazyProc("ScrollBox_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetTop").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetWidth(obj uintptr) int32 {
@@ -808,7 +808,7 @@ func ScrollBox_GetWidth(obj uintptr) int32 {
 }
 
 func ScrollBox_SetWidth(obj uintptr, value int32) {
-	getLazyProc("ScrollBox_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetWidth").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetHeight(obj uintptr) int32 {
@@ -817,7 +817,7 @@ func ScrollBox_GetHeight(obj uintptr) int32 {
 }
 
 func ScrollBox_SetHeight(obj uintptr, value int32) {
-	getLazyProc("ScrollBox_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetHeight").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetCursor(obj uintptr) TCursor {
@@ -826,7 +826,7 @@ func ScrollBox_GetCursor(obj uintptr) TCursor {
 }
 
 func ScrollBox_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("ScrollBox_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetCursor").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetHint(obj uintptr) string {
@@ -835,7 +835,7 @@ func ScrollBox_GetHint(obj uintptr) string {
 }
 
 func ScrollBox_SetHint(obj uintptr, value string) {
-	getLazyProc("ScrollBox_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func ScrollBox_GetComponentCount(obj uintptr) int32 {
@@ -849,7 +849,7 @@ func ScrollBox_GetComponentIndex(obj uintptr) int32 {
 }
 
 func ScrollBox_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("ScrollBox_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetOwner(obj uintptr) uintptr {
@@ -863,7 +863,7 @@ func ScrollBox_GetName(obj uintptr) string {
 }
 
 func ScrollBox_SetName(obj uintptr, value string) {
-	getLazyProc("ScrollBox_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func ScrollBox_GetTag(obj uintptr) int {
@@ -872,7 +872,7 @@ func ScrollBox_GetTag(obj uintptr) int {
 }
 
 func ScrollBox_SetTag(obj uintptr, value int) {
-	getLazyProc("ScrollBox_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("ScrollBox_SetTag").Call(obj, uintptr(value))
 }
 
 func ScrollBox_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -881,7 +881,7 @@ func ScrollBox_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetAnchorSideLeft").Call(obj, value)
 }
 
 func ScrollBox_GetAnchorSideTop(obj uintptr) uintptr {
@@ -890,7 +890,7 @@ func ScrollBox_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetAnchorSideTop").Call(obj, value)
 }
 
 func ScrollBox_GetAnchorSideRight(obj uintptr) uintptr {
@@ -899,7 +899,7 @@ func ScrollBox_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetAnchorSideRight").Call(obj, value)
 }
 
 func ScrollBox_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -908,7 +908,7 @@ func ScrollBox_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetAnchorSideBottom").Call(obj, value)
 }
 
 func ScrollBox_GetChildSizing(obj uintptr) uintptr {
@@ -917,7 +917,7 @@ func ScrollBox_GetChildSizing(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetChildSizing").Call(obj, value)
 }
 
 func ScrollBox_GetBorderSpacing(obj uintptr) uintptr {
@@ -926,7 +926,7 @@ func ScrollBox_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func ScrollBox_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("ScrollBox_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("ScrollBox_SetBorderSpacing").Call(obj, value)
 }
 
 func ScrollBox_GetDockClients(obj uintptr, Index int32) uintptr {

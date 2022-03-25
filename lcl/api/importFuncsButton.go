@@ -530,63 +530,63 @@ func Button_SetVisible(obj uintptr, value bool) {
 	_, _, _ = getLazyProc("Button_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func Button_SetOnClick(obj uintptr, fn interface{}) {
+func Button_SetOnClick(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnContextPopup(obj uintptr, fn interface{}) {
+func Button_SetOnContextPopup(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnDragDrop(obj uintptr, fn interface{}) {
+func Button_SetOnDragDrop(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnDragOver(obj uintptr, fn interface{}) {
+func Button_SetOnDragOver(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnEndDrag(obj uintptr, fn interface{}) {
+func Button_SetOnEndDrag(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnEnter(obj uintptr, fn interface{}) {
+func Button_SetOnEnter(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnExit(obj uintptr, fn interface{}) {
+func Button_SetOnExit(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnKeyDown(obj uintptr, fn interface{}) {
+func Button_SetOnKeyDown(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnKeyPress(obj uintptr, fn interface{}) {
+func Button_SetOnKeyPress(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnKeyUp(obj uintptr, fn interface{}) {
+func Button_SetOnKeyUp(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnMouseDown(obj uintptr, fn interface{}) {
+func Button_SetOnMouseDown(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnMouseEnter(obj uintptr, fn interface{}) {
+func Button_SetOnMouseEnter(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnMouseLeave(obj uintptr, fn interface{}) {
+func Button_SetOnMouseLeave(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnMouseMove(obj uintptr, fn interface{}) {
+func Button_SetOnMouseMove(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func Button_SetOnMouseUp(obj uintptr, fn interface{}) {
+func Button_SetOnMouseUp(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("Button_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 

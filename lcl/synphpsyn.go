@@ -12,7 +12,7 @@ type TSynPHPSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynPHPSyn(obj interface{}) *TSynPHPSyn {
+func AsSynPHPSyn(obj any) *TSynPHPSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

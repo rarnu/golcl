@@ -12,7 +12,7 @@ func Collection_Create(obj uintptr) uintptr {
 }
 
 func Collection_Free(obj uintptr) {
-	getLazyProc("Collection_Free").Call(obj)
+	_, _, _ = getLazyProc("Collection_Free").Call(obj)
 }
 
 func Collection_Owner(obj uintptr) uintptr {
@@ -26,23 +26,23 @@ func Collection_Add(obj uintptr) uintptr {
 }
 
 func Collection_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Collection_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Collection_Assign").Call(obj, Source)
 }
 
 func Collection_BeginUpdate(obj uintptr) {
-	getLazyProc("Collection_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("Collection_BeginUpdate").Call(obj)
 }
 
 func Collection_Clear(obj uintptr) {
-	getLazyProc("Collection_Clear").Call(obj)
+	_, _, _ = getLazyProc("Collection_Clear").Call(obj)
 }
 
 func Collection_Delete(obj uintptr, Index int32) {
-	getLazyProc("Collection_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("Collection_Delete").Call(obj, uintptr(Index))
 }
 
 func Collection_EndUpdate(obj uintptr) {
-	getLazyProc("Collection_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("Collection_EndUpdate").Call(obj)
 }
 
 func Collection_FindItemID(obj uintptr, ID int32) uintptr {
@@ -106,7 +106,7 @@ func Collection_GetItems(obj uintptr, Index int32) uintptr {
 }
 
 func Collection_SetItems(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("Collection_SetItems").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("Collection_SetItems").Call(obj, uintptr(Index), value)
 }
 
 func Collection_StaticClassType() TClass {

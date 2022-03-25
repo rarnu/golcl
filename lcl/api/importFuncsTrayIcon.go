@@ -12,11 +12,11 @@ func TrayIcon_Create(obj uintptr) uintptr {
 }
 
 func TrayIcon_Free(obj uintptr) {
-	getLazyProc("TrayIcon_Free").Call(obj)
+	_, _, _ = getLazyProc("TrayIcon_Free").Call(obj)
 }
 
 func TrayIcon_ShowBalloonHint(obj uintptr) {
-	getLazyProc("TrayIcon_ShowBalloonHint").Call(obj)
+	_, _, _ = getLazyProc("TrayIcon_ShowBalloonHint").Call(obj)
 }
 
 func TrayIcon_FindComponent(obj uintptr, AName string) uintptr {
@@ -35,7 +35,7 @@ func TrayIcon_HasParent(obj uintptr) bool {
 }
 
 func TrayIcon_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TrayIcon_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TrayIcon_Assign").Call(obj, Source)
 }
 
 func TrayIcon_ClassType(obj uintptr) TClass {
@@ -79,7 +79,7 @@ func TrayIcon_GetAnimateInterval(obj uintptr) uint32 {
 }
 
 func TrayIcon_SetAnimateInterval(obj uintptr, value uint32) {
-	getLazyProc("TrayIcon_SetAnimateInterval").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetAnimateInterval").Call(obj, uintptr(value))
 }
 
 func TrayIcon_GetHint(obj uintptr) string {
@@ -88,7 +88,7 @@ func TrayIcon_GetHint(obj uintptr) string {
 }
 
 func TrayIcon_SetHint(obj uintptr, value string) {
-	getLazyProc("TrayIcon_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func TrayIcon_GetBalloonHint(obj uintptr) string {
@@ -97,7 +97,7 @@ func TrayIcon_GetBalloonHint(obj uintptr) string {
 }
 
 func TrayIcon_SetBalloonHint(obj uintptr, value string) {
-	getLazyProc("TrayIcon_SetBalloonHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetBalloonHint").Call(obj, GoStrToDStr(value))
 }
 
 func TrayIcon_GetBalloonTitle(obj uintptr) string {
@@ -106,7 +106,7 @@ func TrayIcon_GetBalloonTitle(obj uintptr) string {
 }
 
 func TrayIcon_SetBalloonTitle(obj uintptr, value string) {
-	getLazyProc("TrayIcon_SetBalloonTitle").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetBalloonTitle").Call(obj, GoStrToDStr(value))
 }
 
 func TrayIcon_GetBalloonTimeout(obj uintptr) int32 {
@@ -115,7 +115,7 @@ func TrayIcon_GetBalloonTimeout(obj uintptr) int32 {
 }
 
 func TrayIcon_SetBalloonTimeout(obj uintptr, value int32) {
-	getLazyProc("TrayIcon_SetBalloonTimeout").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetBalloonTimeout").Call(obj, uintptr(value))
 }
 
 func TrayIcon_GetBalloonFlags(obj uintptr) TBalloonFlags {
@@ -124,7 +124,7 @@ func TrayIcon_GetBalloonFlags(obj uintptr) TBalloonFlags {
 }
 
 func TrayIcon_SetBalloonFlags(obj uintptr, value TBalloonFlags) {
-	getLazyProc("TrayIcon_SetBalloonFlags").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetBalloonFlags").Call(obj, uintptr(value))
 }
 
 func TrayIcon_GetIcon(obj uintptr) uintptr {
@@ -133,7 +133,7 @@ func TrayIcon_GetIcon(obj uintptr) uintptr {
 }
 
 func TrayIcon_SetIcon(obj uintptr, value uintptr) {
-	getLazyProc("TrayIcon_SetIcon").Call(obj, value)
+	_, _, _ = getLazyProc("TrayIcon_SetIcon").Call(obj, value)
 }
 
 func TrayIcon_GetPopupMenu(obj uintptr) uintptr {
@@ -142,7 +142,7 @@ func TrayIcon_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func TrayIcon_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("TrayIcon_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("TrayIcon_SetPopupMenu").Call(obj, value)
 }
 
 func TrayIcon_GetVisible(obj uintptr) bool {
@@ -151,27 +151,27 @@ func TrayIcon_GetVisible(obj uintptr) bool {
 }
 
 func TrayIcon_SetVisible(obj uintptr, value bool) {
-	getLazyProc("TrayIcon_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrayIcon_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func TrayIcon_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("TrayIcon_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func TrayIcon_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrayIcon_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrayIcon_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("TrayIcon_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func TrayIcon_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrayIcon_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrayIcon_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("TrayIcon_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func TrayIcon_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrayIcon_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrayIcon_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("TrayIcon_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func TrayIcon_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrayIcon_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrayIcon_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("TrayIcon_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func TrayIcon_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrayIcon_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
 func TrayIcon_GetComponentCount(obj uintptr) int32 {
@@ -185,7 +185,7 @@ func TrayIcon_GetComponentIndex(obj uintptr) int32 {
 }
 
 func TrayIcon_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("TrayIcon_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func TrayIcon_GetOwner(obj uintptr) uintptr {
@@ -199,7 +199,7 @@ func TrayIcon_GetName(obj uintptr) string {
 }
 
 func TrayIcon_SetName(obj uintptr, value string) {
-	getLazyProc("TrayIcon_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func TrayIcon_GetTag(obj uintptr) int {
@@ -208,7 +208,7 @@ func TrayIcon_GetTag(obj uintptr) int {
 }
 
 func TrayIcon_SetTag(obj uintptr, value int) {
-	getLazyProc("TrayIcon_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrayIcon_SetTag").Call(obj, uintptr(value))
 }
 
 func TrayIcon_GetComponents(obj uintptr, AIndex int32) uintptr {

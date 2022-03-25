@@ -35,7 +35,7 @@ func NewPicture() *TPicture {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsPicture(obj interface{}) *TPicture {
+func AsPicture(obj any) *TPicture {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

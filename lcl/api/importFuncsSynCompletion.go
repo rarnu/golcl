@@ -175,31 +175,31 @@ func SynCompletion_SetWidth(obj uintptr, value int32) {
 	_, _, _ = getLazyProc("SynCompletion_SetWidth").Call(obj, uintptr(value))
 }
 
-func SynCompletion_SetOnCodeCompletion(obj uintptr, fn interface{}) {
+func SynCompletion_SetOnCodeCompletion(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("SynCompletion_SetOnCodeCompletion").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynCompletion_SetOnExecute(obj uintptr, fn interface{}) {
+func SynCompletion_SetOnExecute(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("SynCompletion_SetOnExecute").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynCompletion_SetOnKeyCompletePrefix(obj uintptr, fn interface{}) {
+func SynCompletion_SetOnKeyCompletePrefix(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("SynCompletion_SetOnKeyCompletePrefix").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynCompletion_SetOnKeyNextChar(obj uintptr, fn interface{}) {
+func SynCompletion_SetOnKeyNextChar(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("SynCompletion_SetOnKeyNextChar").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynCompletion_SetOnKeyPrevChar(obj uintptr, fn interface{}) {
+func SynCompletion_SetOnKeyPrevChar(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("SynCompletion_SetOnKeyPrevChar").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynCompletion_SetOnPositionChanged(obj uintptr, fn interface{}) {
+func SynCompletion_SetOnPositionChanged(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("SynCompletion_SetOnPositionChanged").Call(obj, addEventToMap(obj, fn))
 }
 
-func SynCompletion_SetOnSearchPosition(obj uintptr, fn interface{}) {
+func SynCompletion_SetOnSearchPosition(obj uintptr, fn any) {
 	_, _, _ = getLazyProc("SynCompletion_SetOnSearchPosition").Call(obj, addEventToMap(obj, fn))
 }
 

@@ -13,11 +13,11 @@ func TrackBar_Create(obj uintptr) uintptr {
 }
 
 func TrackBar_Free(obj uintptr) {
-	getLazyProc("TrackBar_Free").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_Free").Call(obj)
 }
 
 func TrackBar_SetTick(obj uintptr, Value int32) {
-	getLazyProc("TrackBar_SetTick").Call(obj, uintptr(Value))
+	_, _, _ = getLazyProc("TrackBar_SetTick").Call(obj, uintptr(Value))
 }
 
 func TrackBar_CanFocus(obj uintptr) bool {
@@ -36,11 +36,11 @@ func TrackBar_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWin
 }
 
 func TrackBar_DisableAlign(obj uintptr) {
-	getLazyProc("TrackBar_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_DisableAlign").Call(obj)
 }
 
 func TrackBar_EnableAlign(obj uintptr) {
-	getLazyProc("TrackBar_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_EnableAlign").Call(obj)
 }
 
 func TrackBar_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -49,7 +49,7 @@ func TrackBar_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func TrackBar_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("TrackBar_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("TrackBar_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func TrackBar_Focused(obj uintptr) bool {
@@ -63,62 +63,62 @@ func TrackBar_HandleAllocated(obj uintptr) bool {
 }
 
 func TrackBar_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("TrackBar_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("TrackBar_InsertControl").Call(obj, AControl)
 }
 
 func TrackBar_Invalidate(obj uintptr) {
-	getLazyProc("TrackBar_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_Invalidate").Call(obj)
 }
 
 func TrackBar_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("TrackBar_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("TrackBar_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func TrackBar_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("TrackBar_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("TrackBar_RemoveControl").Call(obj, AControl)
 }
 
 func TrackBar_Realign(obj uintptr) {
-	getLazyProc("TrackBar_Realign").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_Realign").Call(obj)
 }
 
 func TrackBar_Repaint(obj uintptr) {
-	getLazyProc("TrackBar_Repaint").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_Repaint").Call(obj)
 }
 
 func TrackBar_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("TrackBar_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("TrackBar_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func TrackBar_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("TrackBar_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("TrackBar_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func TrackBar_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("TrackBar_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("TrackBar_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func TrackBar_SetFocus(obj uintptr) {
-	getLazyProc("TrackBar_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_SetFocus").Call(obj)
 }
 
 func TrackBar_Update(obj uintptr) {
-	getLazyProc("TrackBar_Update").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_Update").Call(obj)
 }
 
 func TrackBar_BringToFront(obj uintptr) {
-	getLazyProc("TrackBar_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_BringToFront").Call(obj)
 }
 
 func TrackBar_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("TrackBar_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TrackBar_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TrackBar_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("TrackBar_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TrackBar_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -133,7 +133,7 @@ func TrackBar_HasParent(obj uintptr) bool {
 }
 
 func TrackBar_Hide(obj uintptr) {
-	getLazyProc("TrackBar_Hide").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_Hide").Call(obj)
 }
 
 func TrackBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -142,27 +142,27 @@ func TrackBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func TrackBar_Refresh(obj uintptr) {
-	getLazyProc("TrackBar_Refresh").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_Refresh").Call(obj)
 }
 
 func TrackBar_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("TrackBar_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TrackBar_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TrackBar_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("TrackBar_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TrackBar_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TrackBar_SendToBack(obj uintptr) {
-	getLazyProc("TrackBar_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_SendToBack").Call(obj)
 }
 
 func TrackBar_Show(obj uintptr) {
-	getLazyProc("TrackBar_Show").Call(obj)
+	_, _, _ = getLazyProc("TrackBar_Show").Call(obj)
 }
 
 func TrackBar_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -181,7 +181,7 @@ func TrackBar_GetTextLen(obj uintptr) int32 {
 }
 
 func TrackBar_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("TrackBar_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("TrackBar_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func TrackBar_FindComponent(obj uintptr, AName string) uintptr {
@@ -195,7 +195,7 @@ func TrackBar_GetNamePath(obj uintptr) string {
 }
 
 func TrackBar_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("TrackBar_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("TrackBar_Assign").Call(obj, Source)
 }
 
 func TrackBar_ClassType(obj uintptr) TClass {
@@ -234,31 +234,31 @@ func TrackBar_ToString(obj uintptr) string {
 }
 
 func TrackBar_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("TrackBar_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("TrackBar_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func TrackBar_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("TrackBar_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("TrackBar_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func TrackBar_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("TrackBar_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("TrackBar_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func TrackBar_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("TrackBar_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("TrackBar_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func TrackBar_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("TrackBar_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("TrackBar_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func TrackBar_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("TrackBar_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("TrackBar_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func TrackBar_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("TrackBar_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("TrackBar_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func TrackBar_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -312,15 +312,15 @@ func TrackBar_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func TrackBar_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("TrackBar_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("TrackBar_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func TrackBar_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("TrackBar_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("TrackBar_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func TrackBar_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("TrackBar_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("TrackBar_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func TrackBar_GetAlign(obj uintptr) TAlign {
@@ -329,7 +329,7 @@ func TrackBar_GetAlign(obj uintptr) TAlign {
 }
 
 func TrackBar_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("TrackBar_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetAlign").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetAnchors(obj uintptr) TAnchors {
@@ -338,7 +338,7 @@ func TrackBar_GetAnchors(obj uintptr) TAnchors {
 }
 
 func TrackBar_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("TrackBar_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetAnchors").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetBorderWidth(obj uintptr) int32 {
@@ -347,7 +347,7 @@ func TrackBar_GetBorderWidth(obj uintptr) int32 {
 }
 
 func TrackBar_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetDoubleBuffered(obj uintptr) bool {
@@ -356,7 +356,7 @@ func TrackBar_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func TrackBar_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetDragCursor(obj uintptr) TCursor {
@@ -365,7 +365,7 @@ func TrackBar_GetDragCursor(obj uintptr) TCursor {
 }
 
 func TrackBar_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("TrackBar_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetDragMode(obj uintptr) TDragMode {
@@ -374,7 +374,7 @@ func TrackBar_GetDragMode(obj uintptr) TDragMode {
 }
 
 func TrackBar_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("TrackBar_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetDragMode").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetEnabled(obj uintptr) bool {
@@ -383,7 +383,7 @@ func TrackBar_GetEnabled(obj uintptr) bool {
 }
 
 func TrackBar_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetConstraints(obj uintptr) uintptr {
@@ -392,7 +392,7 @@ func TrackBar_GetConstraints(obj uintptr) uintptr {
 }
 
 func TrackBar_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetConstraints").Call(obj, value)
 }
 
 func TrackBar_GetLineSize(obj uintptr) int32 {
@@ -401,7 +401,7 @@ func TrackBar_GetLineSize(obj uintptr) int32 {
 }
 
 func TrackBar_SetLineSize(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetLineSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetLineSize").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetMax(obj uintptr) int32 {
@@ -410,7 +410,7 @@ func TrackBar_GetMax(obj uintptr) int32 {
 }
 
 func TrackBar_SetMax(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetMax").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetMax").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetMin(obj uintptr) int32 {
@@ -419,7 +419,7 @@ func TrackBar_GetMin(obj uintptr) int32 {
 }
 
 func TrackBar_SetMin(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetMin").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetMin").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetOrientation(obj uintptr) TTrackBarOrientation {
@@ -428,7 +428,7 @@ func TrackBar_GetOrientation(obj uintptr) TTrackBarOrientation {
 }
 
 func TrackBar_SetOrientation(obj uintptr, value TTrackBarOrientation) {
-	getLazyProc("TrackBar_SetOrientation").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetOrientation").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetParentDoubleBuffered(obj uintptr) bool {
@@ -437,7 +437,7 @@ func TrackBar_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func TrackBar_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetParentShowHint(obj uintptr) bool {
@@ -446,7 +446,7 @@ func TrackBar_GetParentShowHint(obj uintptr) bool {
 }
 
 func TrackBar_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetPageSize(obj uintptr) int32 {
@@ -455,7 +455,7 @@ func TrackBar_GetPageSize(obj uintptr) int32 {
 }
 
 func TrackBar_SetPageSize(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetPageSize").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetPageSize").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetPopupMenu(obj uintptr) uintptr {
@@ -464,7 +464,7 @@ func TrackBar_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func TrackBar_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetPopupMenu").Call(obj, value)
 }
 
 func TrackBar_GetFrequency(obj uintptr) int32 {
@@ -473,7 +473,7 @@ func TrackBar_GetFrequency(obj uintptr) int32 {
 }
 
 func TrackBar_SetFrequency(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetFrequency").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetFrequency").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetPosition(obj uintptr) int32 {
@@ -482,7 +482,7 @@ func TrackBar_GetPosition(obj uintptr) int32 {
 }
 
 func TrackBar_SetPosition(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetPosition").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetPosition").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetSelEnd(obj uintptr) int32 {
@@ -491,7 +491,7 @@ func TrackBar_GetSelEnd(obj uintptr) int32 {
 }
 
 func TrackBar_SetSelEnd(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetSelEnd").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetSelEnd").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetSelStart(obj uintptr) int32 {
@@ -500,7 +500,7 @@ func TrackBar_GetSelStart(obj uintptr) int32 {
 }
 
 func TrackBar_SetSelStart(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetSelStart").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetSelStart").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetShowHint(obj uintptr) bool {
@@ -509,7 +509,7 @@ func TrackBar_GetShowHint(obj uintptr) bool {
 }
 
 func TrackBar_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetShowSelRange(obj uintptr) bool {
@@ -518,7 +518,7 @@ func TrackBar_GetShowSelRange(obj uintptr) bool {
 }
 
 func TrackBar_SetShowSelRange(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetShowSelRange").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetShowSelRange").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetTabOrder(obj uintptr) TTabOrder {
@@ -527,7 +527,7 @@ func TrackBar_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func TrackBar_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("TrackBar_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetTabStop(obj uintptr) bool {
@@ -536,7 +536,7 @@ func TrackBar_GetTabStop(obj uintptr) bool {
 }
 
 func TrackBar_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetTickMarks(obj uintptr) TTickMark {
@@ -545,7 +545,7 @@ func TrackBar_GetTickMarks(obj uintptr) TTickMark {
 }
 
 func TrackBar_SetTickMarks(obj uintptr, value TTickMark) {
-	getLazyProc("TrackBar_SetTickMarks").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetTickMarks").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetTickStyle(obj uintptr) TTickStyle {
@@ -554,7 +554,7 @@ func TrackBar_GetTickStyle(obj uintptr) TTickStyle {
 }
 
 func TrackBar_SetTickStyle(obj uintptr, value TTickStyle) {
-	getLazyProc("TrackBar_SetTickStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetTickStyle").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetVisible(obj uintptr) bool {
@@ -563,47 +563,47 @@ func TrackBar_GetVisible(obj uintptr) bool {
 }
 
 func TrackBar_SetVisible(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func TrackBar_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func TrackBar_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("TrackBar_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func TrackBar_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("TrackBar_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func TrackBar_GetDockClientCount(obj uintptr) int32 {
@@ -617,7 +617,7 @@ func TrackBar_GetDockSite(obj uintptr) bool {
 }
 
 func TrackBar_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetMouseInClient(obj uintptr) bool {
@@ -642,16 +642,16 @@ func TrackBar_GetControlCount(obj uintptr) int32 {
 
 func TrackBar_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("TrackBar_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func TrackBar_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("TrackBar_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func TrackBar_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("TrackBar_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetParentWindow").Call(obj, value)
 }
 
 func TrackBar_GetShowing(obj uintptr) bool {
@@ -665,7 +665,7 @@ func TrackBar_GetUseDockManager(obj uintptr) bool {
 }
 
 func TrackBar_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("TrackBar_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("TrackBar_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func TrackBar_GetAction(obj uintptr) uintptr {
@@ -674,7 +674,7 @@ func TrackBar_GetAction(obj uintptr) uintptr {
 }
 
 func TrackBar_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetAction").Call(obj, value)
 }
 
 func TrackBar_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -683,17 +683,17 @@ func TrackBar_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func TrackBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("TrackBar_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("TrackBar_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TrackBar_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TrackBar_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("TrackBar_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("TrackBar_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func TrackBar_GetClientHeight(obj uintptr) int32 {
@@ -702,18 +702,18 @@ func TrackBar_GetClientHeight(obj uintptr) int32 {
 }
 
 func TrackBar_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("TrackBar_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TrackBar_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func TrackBar_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("TrackBar_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("TrackBar_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -723,7 +723,7 @@ func TrackBar_GetClientWidth(obj uintptr) int32 {
 }
 
 func TrackBar_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetControlState(obj uintptr) TControlState {
@@ -732,7 +732,7 @@ func TrackBar_GetControlState(obj uintptr) TControlState {
 }
 
 func TrackBar_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("TrackBar_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetControlState").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetControlStyle(obj uintptr) TControlStyle {
@@ -741,7 +741,7 @@ func TrackBar_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func TrackBar_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("TrackBar_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetFloating(obj uintptr) bool {
@@ -755,7 +755,7 @@ func TrackBar_GetParent(obj uintptr) uintptr {
 }
 
 func TrackBar_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetParent").Call(obj, value)
 }
 
 func TrackBar_GetLeft(obj uintptr) int32 {
@@ -764,7 +764,7 @@ func TrackBar_GetLeft(obj uintptr) int32 {
 }
 
 func TrackBar_SetLeft(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetLeft").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetTop(obj uintptr) int32 {
@@ -773,7 +773,7 @@ func TrackBar_GetTop(obj uintptr) int32 {
 }
 
 func TrackBar_SetTop(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetTop").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetWidth(obj uintptr) int32 {
@@ -782,7 +782,7 @@ func TrackBar_GetWidth(obj uintptr) int32 {
 }
 
 func TrackBar_SetWidth(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetWidth").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetHeight(obj uintptr) int32 {
@@ -791,7 +791,7 @@ func TrackBar_GetHeight(obj uintptr) int32 {
 }
 
 func TrackBar_SetHeight(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetHeight").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetCursor(obj uintptr) TCursor {
@@ -800,7 +800,7 @@ func TrackBar_GetCursor(obj uintptr) TCursor {
 }
 
 func TrackBar_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("TrackBar_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetCursor").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetHint(obj uintptr) string {
@@ -809,7 +809,7 @@ func TrackBar_GetHint(obj uintptr) string {
 }
 
 func TrackBar_SetHint(obj uintptr, value string) {
-	getLazyProc("TrackBar_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TrackBar_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func TrackBar_GetComponentCount(obj uintptr) int32 {
@@ -823,7 +823,7 @@ func TrackBar_GetComponentIndex(obj uintptr) int32 {
 }
 
 func TrackBar_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("TrackBar_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetOwner(obj uintptr) uintptr {
@@ -837,7 +837,7 @@ func TrackBar_GetName(obj uintptr) string {
 }
 
 func TrackBar_SetName(obj uintptr, value string) {
-	getLazyProc("TrackBar_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("TrackBar_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func TrackBar_GetTag(obj uintptr) int {
@@ -846,7 +846,7 @@ func TrackBar_GetTag(obj uintptr) int {
 }
 
 func TrackBar_SetTag(obj uintptr, value int) {
-	getLazyProc("TrackBar_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("TrackBar_SetTag").Call(obj, uintptr(value))
 }
 
 func TrackBar_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -855,7 +855,7 @@ func TrackBar_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func TrackBar_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetAnchorSideLeft").Call(obj, value)
 }
 
 func TrackBar_GetAnchorSideTop(obj uintptr) uintptr {
@@ -864,7 +864,7 @@ func TrackBar_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func TrackBar_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetAnchorSideTop").Call(obj, value)
 }
 
 func TrackBar_GetAnchorSideRight(obj uintptr) uintptr {
@@ -873,7 +873,7 @@ func TrackBar_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func TrackBar_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetAnchorSideRight").Call(obj, value)
 }
 
 func TrackBar_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -882,7 +882,7 @@ func TrackBar_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func TrackBar_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetAnchorSideBottom").Call(obj, value)
 }
 
 func TrackBar_GetChildSizing(obj uintptr) uintptr {
@@ -891,7 +891,7 @@ func TrackBar_GetChildSizing(obj uintptr) uintptr {
 }
 
 func TrackBar_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetChildSizing").Call(obj, value)
 }
 
 func TrackBar_GetBorderSpacing(obj uintptr) uintptr {
@@ -900,7 +900,7 @@ func TrackBar_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func TrackBar_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("TrackBar_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("TrackBar_SetBorderSpacing").Call(obj, value)
 }
 
 func TrackBar_GetDockClients(obj uintptr, Index int32) uintptr {

@@ -76,14 +76,14 @@ func DStrToGoStr(ustr uintptr) string {
 	return copyStr(ustr, l)
 }
 
-func getBuff(size int32) interface{} {
+func getBuff(size int32) any {
 	return make([]uint8, size+1)
 }
 
-func getBuffPtr(buff interface{}) uintptr {
+func getBuffPtr(buff any) uintptr {
 	return uintptr(unsafe.Pointer(&(buff.([]uint8))[0]))
 }
 
-func getTextBuf(strBuff interface{}, Buffer *string, slen int) {
+func getTextBuf(strBuff any, Buffer *string, slen int) {
 	*Buffer = string((strBuff.([]uint8))[:slen])
 }

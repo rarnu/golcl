@@ -12,19 +12,19 @@ func JPEGImage_Create() uintptr {
 }
 
 func JPEGImage_Free(obj uintptr) {
-	getLazyProc("JPEGImage_Free").Call(obj)
+	_, _, _ = getLazyProc("JPEGImage_Free").Call(obj)
 }
 
 func JPEGImage_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("JPEGImage_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("JPEGImage_Assign").Call(obj, Source)
 }
 
 func JPEGImage_LoadFromStream(obj uintptr, Stream uintptr) {
-	getLazyProc("JPEGImage_LoadFromStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("JPEGImage_LoadFromStream").Call(obj, Stream)
 }
 
 func JPEGImage_SaveToStream(obj uintptr, Stream uintptr) {
-	getLazyProc("JPEGImage_SaveToStream").Call(obj, Stream)
+	_, _, _ = getLazyProc("JPEGImage_SaveToStream").Call(obj, Stream)
 }
 
 func JPEGImage_Equals(obj uintptr, Obj uintptr) bool {
@@ -33,15 +33,15 @@ func JPEGImage_Equals(obj uintptr, Obj uintptr) bool {
 }
 
 func JPEGImage_LoadFromFile(obj uintptr, Filename string) {
-	getLazyProc("JPEGImage_LoadFromFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("JPEGImage_LoadFromFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func JPEGImage_SaveToFile(obj uintptr, Filename string) {
-	getLazyProc("JPEGImage_SaveToFile").Call(obj, GoStrToDStr(Filename))
+	_, _, _ = getLazyProc("JPEGImage_SaveToFile").Call(obj, GoStrToDStr(Filename))
 }
 
 func JPEGImage_SetSize(obj uintptr, AWidth int32, AHeight int32) {
-	getLazyProc("JPEGImage_SetSize").Call(obj, uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("JPEGImage_SetSize").Call(obj, uintptr(AWidth), uintptr(AHeight))
 }
 
 func JPEGImage_GetNamePath(obj uintptr) string {
@@ -85,7 +85,7 @@ func JPEGImage_GetPixelFormat(obj uintptr) TJPEGPixelFormat {
 }
 
 func JPEGImage_SetPixelFormat(obj uintptr, value TJPEGPixelFormat) {
-	getLazyProc("JPEGImage_SetPixelFormat").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("JPEGImage_SetPixelFormat").Call(obj, uintptr(value))
 }
 
 func JPEGImage_GetPerformance(obj uintptr) TJPEGPerformance {
@@ -94,7 +94,7 @@ func JPEGImage_GetPerformance(obj uintptr) TJPEGPerformance {
 }
 
 func JPEGImage_SetPerformance(obj uintptr, value TJPEGPerformance) {
-	getLazyProc("JPEGImage_SetPerformance").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("JPEGImage_SetPerformance").Call(obj, uintptr(value))
 }
 
 func JPEGImage_GetCanvas(obj uintptr) uintptr {
@@ -113,7 +113,7 @@ func JPEGImage_GetHeight(obj uintptr) int32 {
 }
 
 func JPEGImage_SetHeight(obj uintptr, value int32) {
-	getLazyProc("JPEGImage_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("JPEGImage_SetHeight").Call(obj, uintptr(value))
 }
 
 func JPEGImage_GetModified(obj uintptr) bool {
@@ -122,16 +122,16 @@ func JPEGImage_GetModified(obj uintptr) bool {
 }
 
 func JPEGImage_SetModified(obj uintptr, value bool) {
-	getLazyProc("JPEGImage_SetModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("JPEGImage_SetModified").Call(obj, GoBoolToDBool(value))
 }
 
 func JPEGImage_GetPalette(obj uintptr) HPALETTE {
 	ret, _, _ := getLazyProc("JPEGImage_GetPalette").Call(obj)
-	return HPALETTE(ret)
+	return ret
 }
 
 func JPEGImage_SetPalette(obj uintptr, value HPALETTE) {
-	getLazyProc("JPEGImage_SetPalette").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("JPEGImage_SetPalette").Call(obj, value)
 }
 
 func JPEGImage_GetPaletteModified(obj uintptr) bool {
@@ -140,7 +140,7 @@ func JPEGImage_GetPaletteModified(obj uintptr) bool {
 }
 
 func JPEGImage_SetPaletteModified(obj uintptr, value bool) {
-	getLazyProc("JPEGImage_SetPaletteModified").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("JPEGImage_SetPaletteModified").Call(obj, GoBoolToDBool(value))
 }
 
 func JPEGImage_GetTransparent(obj uintptr) bool {
@@ -149,7 +149,7 @@ func JPEGImage_GetTransparent(obj uintptr) bool {
 }
 
 func JPEGImage_SetTransparent(obj uintptr, value bool) {
-	getLazyProc("JPEGImage_SetTransparent").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("JPEGImage_SetTransparent").Call(obj, GoBoolToDBool(value))
 }
 
 func JPEGImage_GetWidth(obj uintptr) int32 {
@@ -158,11 +158,11 @@ func JPEGImage_GetWidth(obj uintptr) int32 {
 }
 
 func JPEGImage_SetWidth(obj uintptr, value int32) {
-	getLazyProc("JPEGImage_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("JPEGImage_SetWidth").Call(obj, uintptr(value))
 }
 
-func JPEGImage_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("JPEGImage_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func JPEGImage_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("JPEGImage_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func JPEGImage_StaticClassType() TClass {

@@ -7,7 +7,7 @@ import (
 //--------------------------- TIconOptions ---------------------------
 
 func IconOptions_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("IconOptions_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("IconOptions_Assign").Call(obj, Source)
 }
 
 func IconOptions_GetNamePath(obj uintptr) string {
@@ -56,7 +56,7 @@ func IconOptions_GetArrangement(obj uintptr) TIconArrangement {
 }
 
 func IconOptions_SetArrangement(obj uintptr, value TIconArrangement) {
-	getLazyProc("IconOptions_SetArrangement").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("IconOptions_SetArrangement").Call(obj, uintptr(value))
 }
 
 func IconOptions_GetAutoArrange(obj uintptr) bool {
@@ -65,7 +65,7 @@ func IconOptions_GetAutoArrange(obj uintptr) bool {
 }
 
 func IconOptions_SetAutoArrange(obj uintptr, value bool) {
-	getLazyProc("IconOptions_SetAutoArrange").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("IconOptions_SetAutoArrange").Call(obj, GoBoolToDBool(value))
 }
 
 func IconOptions_StaticClassType() TClass {

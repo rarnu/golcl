@@ -34,7 +34,7 @@ func NewRadioButton(owner IComponent) *TRadioButton {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsRadioButton(obj interface{}) *TRadioButton {
+func AsRadioButton(obj any) *TRadioButton {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

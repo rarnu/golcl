@@ -14,7 +14,7 @@ func IniFile_Create(obj uintptr) uintptr {
 }
 
 func IniFile_Free(obj uintptr) {
-	getLazyProc("IniFile_Free").Call(obj)
+	_, _, _ = getLazyProc("IniFile_Free").Call(obj)
 }
 
 func IniFile_ReadString(obj uintptr, Section string, Ident string, Default string) string {
@@ -23,27 +23,27 @@ func IniFile_ReadString(obj uintptr, Section string, Ident string, Default strin
 }
 
 func IniFile_WriteString(obj uintptr, Section string, Ident string, Value string) {
-	getLazyProc("IniFile_WriteString").Call(obj, GoStrToDStr(Section), GoStrToDStr(Ident), GoStrToDStr(Value))
+	_, _, _ = getLazyProc("IniFile_WriteString").Call(obj, GoStrToDStr(Section), GoStrToDStr(Ident), GoStrToDStr(Value))
 }
 
 func IniFile_ReadSections(obj uintptr, Strings uintptr) {
-	getLazyProc("IniFile_ReadSections").Call(obj, Strings)
+	_, _, _ = getLazyProc("IniFile_ReadSections").Call(obj, Strings)
 }
 
 func IniFile_ReadSectionValues(obj uintptr, Section string, Strings uintptr) {
-	getLazyProc("IniFile_ReadSectionValues").Call(obj, GoStrToDStr(Section), Strings)
+	_, _, _ = getLazyProc("IniFile_ReadSectionValues").Call(obj, GoStrToDStr(Section), Strings)
 }
 
 func IniFile_EraseSection(obj uintptr, Section string) {
-	getLazyProc("IniFile_EraseSection").Call(obj, GoStrToDStr(Section))
+	_, _, _ = getLazyProc("IniFile_EraseSection").Call(obj, GoStrToDStr(Section))
 }
 
 func IniFile_DeleteKey(obj uintptr, Section string, Ident string) {
-	getLazyProc("IniFile_DeleteKey").Call(obj, GoStrToDStr(Section), GoStrToDStr(Ident))
+	_, _, _ = getLazyProc("IniFile_DeleteKey").Call(obj, GoStrToDStr(Section), GoStrToDStr(Ident))
 }
 
 func IniFile_UpdateFile(obj uintptr) {
-	getLazyProc("IniFile_UpdateFile").Call(obj)
+	_, _, _ = getLazyProc("IniFile_UpdateFile").Call(obj)
 }
 
 func IniFile_SectionExists(obj uintptr, Section string) bool {
@@ -57,7 +57,7 @@ func IniFile_ReadInteger(obj uintptr, Section string, Ident string, Default int3
 }
 
 func IniFile_WriteInteger(obj uintptr, Section string, Ident string, Value int32) {
-	getLazyProc("IniFile_WriteInteger").Call(obj, GoStrToDStr(Section), GoStrToDStr(Ident), uintptr(Value))
+	_, _, _ = getLazyProc("IniFile_WriteInteger").Call(obj, GoStrToDStr(Section), GoStrToDStr(Ident), uintptr(Value))
 }
 
 func IniFile_ReadBool(obj uintptr, Section string, Ident string, Default bool) bool {
@@ -66,47 +66,47 @@ func IniFile_ReadBool(obj uintptr, Section string, Ident string, Default bool) b
 }
 
 func IniFile_WriteBool(obj uintptr, Section string, Ident string, Value bool) {
-	getLazyProc("IniFile_WriteBool").Call(obj, GoStrToDStr(Section), GoStrToDStr(Ident), GoBoolToDBool(Value))
+	_, _, _ = getLazyProc("IniFile_WriteBool").Call(obj, GoStrToDStr(Section), GoStrToDStr(Ident), GoBoolToDBool(Value))
 }
 
 func IniFile_ReadDate(obj uintptr, Section string, Name string, Default time.Time) time.Time {
 	var ret int64
-	getLazyProc("IniFile_ReadDate").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Default.Unix()), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("IniFile_ReadDate").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Default.Unix()), uintptr(unsafe.Pointer(&ret)))
 	return time.Unix(ret, 0)
 }
 
 func IniFile_ReadDateTime(obj uintptr, Section string, Name string, Default time.Time) time.Time {
 	var ret int64
-	getLazyProc("IniFile_ReadDateTime").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Default.Unix()), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("IniFile_ReadDateTime").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Default.Unix()), uintptr(unsafe.Pointer(&ret)))
 	return time.Unix(ret, 0)
 }
 
 func IniFile_ReadFloat(obj uintptr, Section string, Name string, Default float64) float64 {
 	var ret float64
-	getLazyProc("IniFile_ReadFloat").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(unsafe.Pointer(&Default)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("IniFile_ReadFloat").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(unsafe.Pointer(&Default)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func IniFile_ReadTime(obj uintptr, Section string, Name string, Default time.Time) time.Time {
 	var ret int64
-	getLazyProc("IniFile_ReadTime").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Default.Unix()), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("IniFile_ReadTime").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Default.Unix()), uintptr(unsafe.Pointer(&ret)))
 	return time.Unix(ret, 0)
 }
 
 func IniFile_WriteDate(obj uintptr, Section string, Name string, Value time.Time) {
-	getLazyProc("IniFile_WriteDate").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Value.Unix()))
+	_, _, _ = getLazyProc("IniFile_WriteDate").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Value.Unix()))
 }
 
 func IniFile_WriteDateTime(obj uintptr, Section string, Name string, Value time.Time) {
-	getLazyProc("IniFile_WriteDateTime").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Value.Unix()))
+	_, _, _ = getLazyProc("IniFile_WriteDateTime").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Value.Unix()))
 }
 
 func IniFile_WriteFloat(obj uintptr, Section string, Name string, Value float64) {
-	getLazyProc("IniFile_WriteFloat").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(unsafe.Pointer(&Value)))
+	_, _, _ = getLazyProc("IniFile_WriteFloat").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(unsafe.Pointer(&Value)))
 }
 
 func IniFile_WriteTime(obj uintptr, Section string, Name string, Value time.Time) {
-	getLazyProc("IniFile_WriteTime").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Value.Unix()))
+	_, _, _ = getLazyProc("IniFile_WriteTime").Call(obj, GoStrToDStr(Section), GoStrToDStr(Name), uintptr(Value.Unix()))
 }
 
 func IniFile_ValueExists(obj uintptr, Section string, Ident string) bool {

@@ -34,7 +34,7 @@ func NewMaskEdit(owner IComponent) *TMaskEdit {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsMaskEdit(obj interface{}) *TMaskEdit {
+func AsMaskEdit(obj any) *TMaskEdit {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

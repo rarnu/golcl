@@ -13,7 +13,7 @@ func Panel_Create(obj uintptr) uintptr {
 }
 
 func Panel_Free(obj uintptr) {
-	getLazyProc("Panel_Free").Call(obj)
+	_, _, _ = getLazyProc("Panel_Free").Call(obj)
 }
 
 func Panel_CanFocus(obj uintptr) bool {
@@ -32,11 +32,11 @@ func Panel_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWinCon
 }
 
 func Panel_DisableAlign(obj uintptr) {
-	getLazyProc("Panel_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("Panel_DisableAlign").Call(obj)
 }
 
 func Panel_EnableAlign(obj uintptr) {
-	getLazyProc("Panel_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("Panel_EnableAlign").Call(obj)
 }
 
 func Panel_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -45,7 +45,7 @@ func Panel_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func Panel_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("Panel_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("Panel_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func Panel_Focused(obj uintptr) bool {
@@ -59,62 +59,62 @@ func Panel_HandleAllocated(obj uintptr) bool {
 }
 
 func Panel_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("Panel_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("Panel_InsertControl").Call(obj, AControl)
 }
 
 func Panel_Invalidate(obj uintptr) {
-	getLazyProc("Panel_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("Panel_Invalidate").Call(obj)
 }
 
 func Panel_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("Panel_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("Panel_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func Panel_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("Panel_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("Panel_RemoveControl").Call(obj, AControl)
 }
 
 func Panel_Realign(obj uintptr) {
-	getLazyProc("Panel_Realign").Call(obj)
+	_, _, _ = getLazyProc("Panel_Realign").Call(obj)
 }
 
 func Panel_Repaint(obj uintptr) {
-	getLazyProc("Panel_Repaint").Call(obj)
+	_, _, _ = getLazyProc("Panel_Repaint").Call(obj)
 }
 
 func Panel_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("Panel_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("Panel_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func Panel_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("Panel_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("Panel_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func Panel_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("Panel_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("Panel_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func Panel_SetFocus(obj uintptr) {
-	getLazyProc("Panel_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("Panel_SetFocus").Call(obj)
 }
 
 func Panel_Update(obj uintptr) {
-	getLazyProc("Panel_Update").Call(obj)
+	_, _, _ = getLazyProc("Panel_Update").Call(obj)
 }
 
 func Panel_BringToFront(obj uintptr) {
-	getLazyProc("Panel_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("Panel_BringToFront").Call(obj)
 }
 
 func Panel_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Panel_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Panel_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Panel_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Panel_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Panel_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -129,7 +129,7 @@ func Panel_HasParent(obj uintptr) bool {
 }
 
 func Panel_Hide(obj uintptr) {
-	getLazyProc("Panel_Hide").Call(obj)
+	_, _, _ = getLazyProc("Panel_Hide").Call(obj)
 }
 
 func Panel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -138,27 +138,27 @@ func Panel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func Panel_Refresh(obj uintptr) {
-	getLazyProc("Panel_Refresh").Call(obj)
+	_, _, _ = getLazyProc("Panel_Refresh").Call(obj)
 }
 
 func Panel_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("Panel_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Panel_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Panel_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Panel_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Panel_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Panel_SendToBack(obj uintptr) {
-	getLazyProc("Panel_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("Panel_SendToBack").Call(obj)
 }
 
 func Panel_Show(obj uintptr) {
-	getLazyProc("Panel_Show").Call(obj)
+	_, _, _ = getLazyProc("Panel_Show").Call(obj)
 }
 
 func Panel_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -177,7 +177,7 @@ func Panel_GetTextLen(obj uintptr) int32 {
 }
 
 func Panel_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("Panel_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("Panel_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func Panel_FindComponent(obj uintptr, AName string) uintptr {
@@ -191,7 +191,7 @@ func Panel_GetNamePath(obj uintptr) string {
 }
 
 func Panel_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("Panel_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("Panel_Assign").Call(obj, Source)
 }
 
 func Panel_ClassType(obj uintptr) TClass {
@@ -230,31 +230,31 @@ func Panel_ToString(obj uintptr) string {
 }
 
 func Panel_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Panel_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Panel_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Panel_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("Panel_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("Panel_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func Panel_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Panel_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Panel_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func Panel_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("Panel_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("Panel_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func Panel_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("Panel_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("Panel_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func Panel_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("Panel_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("Panel_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func Panel_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("Panel_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("Panel_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func Panel_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -308,15 +308,15 @@ func Panel_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func Panel_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("Panel_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("Panel_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func Panel_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("Panel_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("Panel_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func Panel_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("Panel_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("Panel_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func Panel_GetAlign(obj uintptr) TAlign {
@@ -325,7 +325,7 @@ func Panel_GetAlign(obj uintptr) TAlign {
 }
 
 func Panel_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("Panel_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetAlign").Call(obj, uintptr(value))
 }
 
 func Panel_GetAlignment(obj uintptr) TAlignment {
@@ -334,7 +334,7 @@ func Panel_GetAlignment(obj uintptr) TAlignment {
 }
 
 func Panel_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("Panel_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetAlignment").Call(obj, uintptr(value))
 }
 
 func Panel_GetAnchors(obj uintptr) TAnchors {
@@ -343,7 +343,7 @@ func Panel_GetAnchors(obj uintptr) TAnchors {
 }
 
 func Panel_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("Panel_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetAnchors").Call(obj, uintptr(value))
 }
 
 func Panel_GetAutoSize(obj uintptr) bool {
@@ -352,7 +352,7 @@ func Panel_GetAutoSize(obj uintptr) bool {
 }
 
 func Panel_SetAutoSize(obj uintptr, value bool) {
-	getLazyProc("Panel_SetAutoSize").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetAutoSize").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetBevelInner(obj uintptr) TBevelCut {
@@ -361,7 +361,7 @@ func Panel_GetBevelInner(obj uintptr) TBevelCut {
 }
 
 func Panel_SetBevelInner(obj uintptr, value TBevelCut) {
-	getLazyProc("Panel_SetBevelInner").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetBevelInner").Call(obj, uintptr(value))
 }
 
 func Panel_GetBevelOuter(obj uintptr) TBevelCut {
@@ -370,7 +370,7 @@ func Panel_GetBevelOuter(obj uintptr) TBevelCut {
 }
 
 func Panel_SetBevelOuter(obj uintptr, value TBevelCut) {
-	getLazyProc("Panel_SetBevelOuter").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetBevelOuter").Call(obj, uintptr(value))
 }
 
 func Panel_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -379,7 +379,7 @@ func Panel_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func Panel_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("Panel_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func Panel_GetBorderWidth(obj uintptr) int32 {
@@ -388,7 +388,7 @@ func Panel_GetBorderWidth(obj uintptr) int32 {
 }
 
 func Panel_SetBorderWidth(obj uintptr, value int32) {
-	getLazyProc("Panel_SetBorderWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetBorderWidth").Call(obj, uintptr(value))
 }
 
 func Panel_GetBorderStyle(obj uintptr) TBorderStyle {
@@ -397,7 +397,7 @@ func Panel_GetBorderStyle(obj uintptr) TBorderStyle {
 }
 
 func Panel_SetBorderStyle(obj uintptr, value TBorderStyle) {
-	getLazyProc("Panel_SetBorderStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetBorderStyle").Call(obj, uintptr(value))
 }
 
 func Panel_GetCaption(obj uintptr) string {
@@ -406,7 +406,7 @@ func Panel_GetCaption(obj uintptr) string {
 }
 
 func Panel_SetCaption(obj uintptr, value string) {
-	getLazyProc("Panel_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Panel_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func Panel_GetColor(obj uintptr) TColor {
@@ -415,7 +415,7 @@ func Panel_GetColor(obj uintptr) TColor {
 }
 
 func Panel_SetColor(obj uintptr, value TColor) {
-	getLazyProc("Panel_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetColor").Call(obj, uintptr(value))
 }
 
 func Panel_GetConstraints(obj uintptr) uintptr {
@@ -424,7 +424,7 @@ func Panel_GetConstraints(obj uintptr) uintptr {
 }
 
 func Panel_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetConstraints").Call(obj, value)
 }
 
 func Panel_GetUseDockManager(obj uintptr) bool {
@@ -433,7 +433,7 @@ func Panel_GetUseDockManager(obj uintptr) bool {
 }
 
 func Panel_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("Panel_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetDockSite(obj uintptr) bool {
@@ -442,7 +442,7 @@ func Panel_GetDockSite(obj uintptr) bool {
 }
 
 func Panel_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("Panel_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetDoubleBuffered(obj uintptr) bool {
@@ -451,7 +451,7 @@ func Panel_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func Panel_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("Panel_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetDragCursor(obj uintptr) TCursor {
@@ -460,7 +460,7 @@ func Panel_GetDragCursor(obj uintptr) TCursor {
 }
 
 func Panel_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("Panel_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func Panel_GetDragKind(obj uintptr) TDragKind {
@@ -469,7 +469,7 @@ func Panel_GetDragKind(obj uintptr) TDragKind {
 }
 
 func Panel_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("Panel_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetDragKind").Call(obj, uintptr(value))
 }
 
 func Panel_GetDragMode(obj uintptr) TDragMode {
@@ -478,7 +478,7 @@ func Panel_GetDragMode(obj uintptr) TDragMode {
 }
 
 func Panel_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("Panel_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetDragMode").Call(obj, uintptr(value))
 }
 
 func Panel_GetEnabled(obj uintptr) bool {
@@ -487,7 +487,7 @@ func Panel_GetEnabled(obj uintptr) bool {
 }
 
 func Panel_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("Panel_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetFullRepaint(obj uintptr) bool {
@@ -496,7 +496,7 @@ func Panel_GetFullRepaint(obj uintptr) bool {
 }
 
 func Panel_SetFullRepaint(obj uintptr, value bool) {
-	getLazyProc("Panel_SetFullRepaint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetFullRepaint").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetFont(obj uintptr) uintptr {
@@ -505,7 +505,7 @@ func Panel_GetFont(obj uintptr) uintptr {
 }
 
 func Panel_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetFont").Call(obj, value)
 }
 
 func Panel_GetParentBackground(obj uintptr) bool {
@@ -514,7 +514,7 @@ func Panel_GetParentBackground(obj uintptr) bool {
 }
 
 func Panel_SetParentBackground(obj uintptr, value bool) {
-	getLazyProc("Panel_SetParentBackground").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetParentBackground").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetParentColor(obj uintptr) bool {
@@ -523,7 +523,7 @@ func Panel_GetParentColor(obj uintptr) bool {
 }
 
 func Panel_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("Panel_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetParentDoubleBuffered(obj uintptr) bool {
@@ -532,7 +532,7 @@ func Panel_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func Panel_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("Panel_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetParentFont(obj uintptr) bool {
@@ -541,7 +541,7 @@ func Panel_GetParentFont(obj uintptr) bool {
 }
 
 func Panel_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("Panel_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetParentShowHint(obj uintptr) bool {
@@ -550,7 +550,7 @@ func Panel_GetParentShowHint(obj uintptr) bool {
 }
 
 func Panel_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("Panel_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetPopupMenu(obj uintptr) uintptr {
@@ -559,7 +559,7 @@ func Panel_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func Panel_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetPopupMenu").Call(obj, value)
 }
 
 func Panel_GetShowHint(obj uintptr) bool {
@@ -568,7 +568,7 @@ func Panel_GetShowHint(obj uintptr) bool {
 }
 
 func Panel_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("Panel_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetTabOrder(obj uintptr) TTabOrder {
@@ -577,7 +577,7 @@ func Panel_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func Panel_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("Panel_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func Panel_GetTabStop(obj uintptr) bool {
@@ -586,7 +586,7 @@ func Panel_GetTabStop(obj uintptr) bool {
 }
 
 func Panel_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("Panel_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetVisible(obj uintptr) bool {
@@ -595,87 +595,87 @@ func Panel_GetVisible(obj uintptr) bool {
 }
 
 func Panel_SetVisible(obj uintptr, value bool) {
-	getLazyProc("Panel_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("Panel_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func Panel_SetOnAlignPosition(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnAlignPosition(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnAlignPosition").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnDockDrop(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnDockDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnDblClick(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnGetSiteInfo(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnGetSiteInfo(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnResize(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnResize").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func Panel_SetOnUnDock(obj uintptr, fn interface{}) {
-	getLazyProc("Panel_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
+func Panel_SetOnUnDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Panel_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func Panel_GetDockClientCount(obj uintptr) int32 {
@@ -705,16 +705,16 @@ func Panel_GetControlCount(obj uintptr) int32 {
 
 func Panel_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("Panel_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func Panel_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("Panel_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func Panel_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("Panel_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetParentWindow").Call(obj, value)
 }
 
 func Panel_GetShowing(obj uintptr) bool {
@@ -728,17 +728,17 @@ func Panel_GetAction(obj uintptr) uintptr {
 }
 
 func Panel_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetAction").Call(obj, value)
 }
 
 func Panel_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Panel_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Panel_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Panel_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("Panel_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("Panel_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Panel_GetClientHeight(obj uintptr) int32 {
@@ -747,18 +747,18 @@ func Panel_GetClientHeight(obj uintptr) int32 {
 }
 
 func Panel_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("Panel_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func Panel_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("Panel_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Panel_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func Panel_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("Panel_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("Panel_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -768,7 +768,7 @@ func Panel_GetClientWidth(obj uintptr) int32 {
 }
 
 func Panel_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("Panel_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func Panel_GetControlState(obj uintptr) TControlState {
@@ -777,7 +777,7 @@ func Panel_GetControlState(obj uintptr) TControlState {
 }
 
 func Panel_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("Panel_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetControlState").Call(obj, uintptr(value))
 }
 
 func Panel_GetControlStyle(obj uintptr) TControlStyle {
@@ -786,7 +786,7 @@ func Panel_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func Panel_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("Panel_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func Panel_GetFloating(obj uintptr) bool {
@@ -800,7 +800,7 @@ func Panel_GetParent(obj uintptr) uintptr {
 }
 
 func Panel_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetParent").Call(obj, value)
 }
 
 func Panel_GetLeft(obj uintptr) int32 {
@@ -809,7 +809,7 @@ func Panel_GetLeft(obj uintptr) int32 {
 }
 
 func Panel_SetLeft(obj uintptr, value int32) {
-	getLazyProc("Panel_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetLeft").Call(obj, uintptr(value))
 }
 
 func Panel_GetTop(obj uintptr) int32 {
@@ -818,7 +818,7 @@ func Panel_GetTop(obj uintptr) int32 {
 }
 
 func Panel_SetTop(obj uintptr, value int32) {
-	getLazyProc("Panel_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetTop").Call(obj, uintptr(value))
 }
 
 func Panel_GetWidth(obj uintptr) int32 {
@@ -827,7 +827,7 @@ func Panel_GetWidth(obj uintptr) int32 {
 }
 
 func Panel_SetWidth(obj uintptr, value int32) {
-	getLazyProc("Panel_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetWidth").Call(obj, uintptr(value))
 }
 
 func Panel_GetHeight(obj uintptr) int32 {
@@ -836,7 +836,7 @@ func Panel_GetHeight(obj uintptr) int32 {
 }
 
 func Panel_SetHeight(obj uintptr, value int32) {
-	getLazyProc("Panel_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetHeight").Call(obj, uintptr(value))
 }
 
 func Panel_GetCursor(obj uintptr) TCursor {
@@ -845,7 +845,7 @@ func Panel_GetCursor(obj uintptr) TCursor {
 }
 
 func Panel_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("Panel_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetCursor").Call(obj, uintptr(value))
 }
 
 func Panel_GetHint(obj uintptr) string {
@@ -854,7 +854,7 @@ func Panel_GetHint(obj uintptr) string {
 }
 
 func Panel_SetHint(obj uintptr, value string) {
-	getLazyProc("Panel_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Panel_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func Panel_GetComponentCount(obj uintptr) int32 {
@@ -868,7 +868,7 @@ func Panel_GetComponentIndex(obj uintptr) int32 {
 }
 
 func Panel_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("Panel_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func Panel_GetOwner(obj uintptr) uintptr {
@@ -882,7 +882,7 @@ func Panel_GetName(obj uintptr) string {
 }
 
 func Panel_SetName(obj uintptr, value string) {
-	getLazyProc("Panel_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("Panel_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func Panel_GetTag(obj uintptr) int {
@@ -891,7 +891,7 @@ func Panel_GetTag(obj uintptr) int {
 }
 
 func Panel_SetTag(obj uintptr, value int) {
-	getLazyProc("Panel_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("Panel_SetTag").Call(obj, uintptr(value))
 }
 
 func Panel_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -900,7 +900,7 @@ func Panel_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func Panel_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetAnchorSideLeft").Call(obj, value)
 }
 
 func Panel_GetAnchorSideTop(obj uintptr) uintptr {
@@ -909,7 +909,7 @@ func Panel_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func Panel_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetAnchorSideTop").Call(obj, value)
 }
 
 func Panel_GetAnchorSideRight(obj uintptr) uintptr {
@@ -918,7 +918,7 @@ func Panel_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func Panel_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetAnchorSideRight").Call(obj, value)
 }
 
 func Panel_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -927,7 +927,7 @@ func Panel_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func Panel_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetAnchorSideBottom").Call(obj, value)
 }
 
 func Panel_GetChildSizing(obj uintptr) uintptr {
@@ -936,7 +936,7 @@ func Panel_GetChildSizing(obj uintptr) uintptr {
 }
 
 func Panel_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetChildSizing").Call(obj, value)
 }
 
 func Panel_GetBorderSpacing(obj uintptr) uintptr {
@@ -945,7 +945,7 @@ func Panel_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func Panel_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("Panel_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("Panel_SetBorderSpacing").Call(obj, value)
 }
 
 func Panel_GetDockClients(obj uintptr, Index int32) uintptr {

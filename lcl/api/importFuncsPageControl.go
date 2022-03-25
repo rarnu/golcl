@@ -13,16 +13,16 @@ func PageControl_Create(obj uintptr) uintptr {
 }
 
 func PageControl_Free(obj uintptr) {
-	getLazyProc("PageControl_Free").Call(obj)
+	_, _, _ = getLazyProc("PageControl_Free").Call(obj)
 }
 
 func PageControl_SelectNextPage(obj uintptr, GoForward bool, CheckTabVisible bool) {
-	getLazyProc("PageControl_SelectNextPage").Call(obj, GoBoolToDBool(GoForward), GoBoolToDBool(CheckTabVisible))
+	_, _, _ = getLazyProc("PageControl_SelectNextPage").Call(obj, GoBoolToDBool(GoForward), GoBoolToDBool(CheckTabVisible))
 }
 
 func PageControl_TabRect(obj uintptr, Index int32) TRect {
 	var ret TRect
-	getLazyProc("PageControl_TabRect").Call(obj, uintptr(Index), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("PageControl_TabRect").Call(obj, uintptr(Index), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -42,11 +42,11 @@ func PageControl_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, Allow
 }
 
 func PageControl_DisableAlign(obj uintptr) {
-	getLazyProc("PageControl_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("PageControl_DisableAlign").Call(obj)
 }
 
 func PageControl_EnableAlign(obj uintptr) {
-	getLazyProc("PageControl_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("PageControl_EnableAlign").Call(obj)
 }
 
 func PageControl_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -55,7 +55,7 @@ func PageControl_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func PageControl_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("PageControl_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("PageControl_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func PageControl_Focused(obj uintptr) bool {
@@ -69,62 +69,62 @@ func PageControl_HandleAllocated(obj uintptr) bool {
 }
 
 func PageControl_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("PageControl_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("PageControl_InsertControl").Call(obj, AControl)
 }
 
 func PageControl_Invalidate(obj uintptr) {
-	getLazyProc("PageControl_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("PageControl_Invalidate").Call(obj)
 }
 
 func PageControl_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("PageControl_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("PageControl_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func PageControl_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("PageControl_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("PageControl_RemoveControl").Call(obj, AControl)
 }
 
 func PageControl_Realign(obj uintptr) {
-	getLazyProc("PageControl_Realign").Call(obj)
+	_, _, _ = getLazyProc("PageControl_Realign").Call(obj)
 }
 
 func PageControl_Repaint(obj uintptr) {
-	getLazyProc("PageControl_Repaint").Call(obj)
+	_, _, _ = getLazyProc("PageControl_Repaint").Call(obj)
 }
 
 func PageControl_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("PageControl_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("PageControl_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func PageControl_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("PageControl_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("PageControl_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func PageControl_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("PageControl_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("PageControl_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func PageControl_SetFocus(obj uintptr) {
-	getLazyProc("PageControl_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("PageControl_SetFocus").Call(obj)
 }
 
 func PageControl_Update(obj uintptr) {
-	getLazyProc("PageControl_Update").Call(obj)
+	_, _, _ = getLazyProc("PageControl_Update").Call(obj)
 }
 
 func PageControl_BringToFront(obj uintptr) {
-	getLazyProc("PageControl_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("PageControl_BringToFront").Call(obj)
 }
 
 func PageControl_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("PageControl_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("PageControl_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func PageControl_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("PageControl_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("PageControl_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -139,7 +139,7 @@ func PageControl_HasParent(obj uintptr) bool {
 }
 
 func PageControl_Hide(obj uintptr) {
-	getLazyProc("PageControl_Hide").Call(obj)
+	_, _, _ = getLazyProc("PageControl_Hide").Call(obj)
 }
 
 func PageControl_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -148,27 +148,27 @@ func PageControl_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) in
 }
 
 func PageControl_Refresh(obj uintptr) {
-	getLazyProc("PageControl_Refresh").Call(obj)
+	_, _, _ = getLazyProc("PageControl_Refresh").Call(obj)
 }
 
 func PageControl_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("PageControl_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("PageControl_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func PageControl_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("PageControl_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("PageControl_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func PageControl_SendToBack(obj uintptr) {
-	getLazyProc("PageControl_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("PageControl_SendToBack").Call(obj)
 }
 
 func PageControl_Show(obj uintptr) {
-	getLazyProc("PageControl_Show").Call(obj)
+	_, _, _ = getLazyProc("PageControl_Show").Call(obj)
 }
 
 func PageControl_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -187,7 +187,7 @@ func PageControl_GetTextLen(obj uintptr) int32 {
 }
 
 func PageControl_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("PageControl_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("PageControl_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func PageControl_FindComponent(obj uintptr, AName string) uintptr {
@@ -201,7 +201,7 @@ func PageControl_GetNamePath(obj uintptr) string {
 }
 
 func PageControl_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("PageControl_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("PageControl_Assign").Call(obj, Source)
 }
 
 func PageControl_ClassType(obj uintptr) TClass {
@@ -240,31 +240,31 @@ func PageControl_ToString(obj uintptr) string {
 }
 
 func PageControl_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("PageControl_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("PageControl_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func PageControl_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("PageControl_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("PageControl_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func PageControl_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("PageControl_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("PageControl_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func PageControl_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("PageControl_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("PageControl_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func PageControl_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("PageControl_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("PageControl_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func PageControl_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("PageControl_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("PageControl_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func PageControl_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("PageControl_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("PageControl_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func PageControl_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -318,15 +318,15 @@ func PageControl_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func PageControl_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("PageControl_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("PageControl_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func PageControl_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("PageControl_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("PageControl_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func PageControl_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("PageControl_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("PageControl_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
 func PageControl_GetOptions(obj uintptr) TCTabControlOptions {
@@ -335,7 +335,7 @@ func PageControl_GetOptions(obj uintptr) TCTabControlOptions {
 }
 
 func PageControl_SetOptions(obj uintptr, value TCTabControlOptions) {
-	getLazyProc("PageControl_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetOptions").Call(obj, uintptr(value))
 }
 
 func PageControl_GetActivePageIndex(obj uintptr) int32 {
@@ -344,7 +344,7 @@ func PageControl_GetActivePageIndex(obj uintptr) int32 {
 }
 
 func PageControl_SetActivePageIndex(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetActivePageIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetActivePageIndex").Call(obj, uintptr(value))
 }
 
 func PageControl_GetPageCount(obj uintptr) int32 {
@@ -358,7 +358,7 @@ func PageControl_GetAlign(obj uintptr) TAlign {
 }
 
 func PageControl_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("PageControl_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetAlign").Call(obj, uintptr(value))
 }
 
 func PageControl_GetAnchors(obj uintptr) TAnchors {
@@ -367,7 +367,7 @@ func PageControl_GetAnchors(obj uintptr) TAnchors {
 }
 
 func PageControl_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("PageControl_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetAnchors").Call(obj, uintptr(value))
 }
 
 func PageControl_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -376,7 +376,7 @@ func PageControl_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func PageControl_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("PageControl_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func PageControl_GetConstraints(obj uintptr) uintptr {
@@ -385,7 +385,7 @@ func PageControl_GetConstraints(obj uintptr) uintptr {
 }
 
 func PageControl_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetConstraints").Call(obj, value)
 }
 
 func PageControl_GetDockSite(obj uintptr) bool {
@@ -394,7 +394,7 @@ func PageControl_GetDockSite(obj uintptr) bool {
 }
 
 func PageControl_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetDoubleBuffered(obj uintptr) bool {
@@ -403,7 +403,7 @@ func PageControl_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func PageControl_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetDragCursor(obj uintptr) TCursor {
@@ -412,7 +412,7 @@ func PageControl_GetDragCursor(obj uintptr) TCursor {
 }
 
 func PageControl_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("PageControl_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func PageControl_GetDragKind(obj uintptr) TDragKind {
@@ -421,7 +421,7 @@ func PageControl_GetDragKind(obj uintptr) TDragKind {
 }
 
 func PageControl_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("PageControl_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetDragKind").Call(obj, uintptr(value))
 }
 
 func PageControl_GetDragMode(obj uintptr) TDragMode {
@@ -430,7 +430,7 @@ func PageControl_GetDragMode(obj uintptr) TDragMode {
 }
 
 func PageControl_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("PageControl_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetDragMode").Call(obj, uintptr(value))
 }
 
 func PageControl_GetEnabled(obj uintptr) bool {
@@ -439,7 +439,7 @@ func PageControl_GetEnabled(obj uintptr) bool {
 }
 
 func PageControl_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetFont(obj uintptr) uintptr {
@@ -448,7 +448,7 @@ func PageControl_GetFont(obj uintptr) uintptr {
 }
 
 func PageControl_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetFont").Call(obj, value)
 }
 
 func PageControl_GetImages(obj uintptr) uintptr {
@@ -457,7 +457,7 @@ func PageControl_GetImages(obj uintptr) uintptr {
 }
 
 func PageControl_SetImages(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetImages").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetImages").Call(obj, value)
 }
 
 func PageControl_GetMultiLine(obj uintptr) bool {
@@ -466,7 +466,7 @@ func PageControl_GetMultiLine(obj uintptr) bool {
 }
 
 func PageControl_SetMultiLine(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetMultiLine").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetMultiLine").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetParentDoubleBuffered(obj uintptr) bool {
@@ -475,7 +475,7 @@ func PageControl_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func PageControl_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetParentFont(obj uintptr) bool {
@@ -484,7 +484,7 @@ func PageControl_GetParentFont(obj uintptr) bool {
 }
 
 func PageControl_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetParentShowHint(obj uintptr) bool {
@@ -493,7 +493,7 @@ func PageControl_GetParentShowHint(obj uintptr) bool {
 }
 
 func PageControl_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetPopupMenu(obj uintptr) uintptr {
@@ -502,7 +502,7 @@ func PageControl_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func PageControl_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetPopupMenu").Call(obj, value)
 }
 
 func PageControl_GetShowHint(obj uintptr) bool {
@@ -511,7 +511,7 @@ func PageControl_GetShowHint(obj uintptr) bool {
 }
 
 func PageControl_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetTabHeight(obj uintptr) int16 {
@@ -520,7 +520,7 @@ func PageControl_GetTabHeight(obj uintptr) int16 {
 }
 
 func PageControl_SetTabHeight(obj uintptr, value int16) {
-	getLazyProc("PageControl_SetTabHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetTabHeight").Call(obj, uintptr(value))
 }
 
 func PageControl_GetTabIndex(obj uintptr) int32 {
@@ -529,7 +529,7 @@ func PageControl_GetTabIndex(obj uintptr) int32 {
 }
 
 func PageControl_SetTabIndex(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetTabIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetTabIndex").Call(obj, uintptr(value))
 }
 
 func PageControl_GetTabOrder(obj uintptr) TTabOrder {
@@ -538,7 +538,7 @@ func PageControl_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func PageControl_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("PageControl_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func PageControl_GetTabPosition(obj uintptr) TTabPosition {
@@ -547,7 +547,7 @@ func PageControl_GetTabPosition(obj uintptr) TTabPosition {
 }
 
 func PageControl_SetTabPosition(obj uintptr, value TTabPosition) {
-	getLazyProc("PageControl_SetTabPosition").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetTabPosition").Call(obj, uintptr(value))
 }
 
 func PageControl_GetTabStop(obj uintptr) bool {
@@ -556,7 +556,7 @@ func PageControl_GetTabStop(obj uintptr) bool {
 }
 
 func PageControl_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetTabWidth(obj uintptr) int16 {
@@ -565,7 +565,7 @@ func PageControl_GetTabWidth(obj uintptr) int16 {
 }
 
 func PageControl_SetTabWidth(obj uintptr, value int16) {
-	getLazyProc("PageControl_SetTabWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetTabWidth").Call(obj, uintptr(value))
 }
 
 func PageControl_GetVisible(obj uintptr) bool {
@@ -574,83 +574,83 @@ func PageControl_GetVisible(obj uintptr) bool {
 }
 
 func PageControl_SetVisible(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func PageControl_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnChanging(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnChanging").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnChanging(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnChanging").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnDockDrop(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnDockDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnDockDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnEndDock(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnEndDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnEndDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnGetSiteInfo(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnGetSiteInfo(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnGetSiteInfo").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnResize(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnResize").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnResize").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnStartDock(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnStartDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnStartDock").Call(obj, addEventToMap(obj, fn))
 }
 
-func PageControl_SetOnUnDock(obj uintptr, fn interface{}) {
-	getLazyProc("PageControl_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
+func PageControl_SetOnUnDock(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("PageControl_SetOnUnDock").Call(obj, addEventToMap(obj, fn))
 }
 
 func PageControl_GetDockClientCount(obj uintptr) int32 {
@@ -680,16 +680,16 @@ func PageControl_GetControlCount(obj uintptr) int32 {
 
 func PageControl_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("PageControl_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func PageControl_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("PageControl_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func PageControl_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("PageControl_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetParentWindow").Call(obj, value)
 }
 
 func PageControl_GetShowing(obj uintptr) bool {
@@ -703,7 +703,7 @@ func PageControl_GetUseDockManager(obj uintptr) bool {
 }
 
 func PageControl_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("PageControl_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("PageControl_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetAction(obj uintptr) uintptr {
@@ -712,17 +712,17 @@ func PageControl_GetAction(obj uintptr) uintptr {
 }
 
 func PageControl_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetAction").Call(obj, value)
 }
 
 func PageControl_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("PageControl_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("PageControl_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func PageControl_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("PageControl_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("PageControl_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func PageControl_GetClientHeight(obj uintptr) int32 {
@@ -731,18 +731,18 @@ func PageControl_GetClientHeight(obj uintptr) int32 {
 }
 
 func PageControl_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func PageControl_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("PageControl_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("PageControl_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func PageControl_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("PageControl_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("PageControl_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -752,7 +752,7 @@ func PageControl_GetClientWidth(obj uintptr) int32 {
 }
 
 func PageControl_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func PageControl_GetControlState(obj uintptr) TControlState {
@@ -761,7 +761,7 @@ func PageControl_GetControlState(obj uintptr) TControlState {
 }
 
 func PageControl_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("PageControl_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetControlState").Call(obj, uintptr(value))
 }
 
 func PageControl_GetControlStyle(obj uintptr) TControlStyle {
@@ -770,7 +770,7 @@ func PageControl_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func PageControl_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("PageControl_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func PageControl_GetFloating(obj uintptr) bool {
@@ -784,7 +784,7 @@ func PageControl_GetParent(obj uintptr) uintptr {
 }
 
 func PageControl_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetParent").Call(obj, value)
 }
 
 func PageControl_GetLeft(obj uintptr) int32 {
@@ -793,7 +793,7 @@ func PageControl_GetLeft(obj uintptr) int32 {
 }
 
 func PageControl_SetLeft(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetLeft").Call(obj, uintptr(value))
 }
 
 func PageControl_GetTop(obj uintptr) int32 {
@@ -802,7 +802,7 @@ func PageControl_GetTop(obj uintptr) int32 {
 }
 
 func PageControl_SetTop(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetTop").Call(obj, uintptr(value))
 }
 
 func PageControl_GetWidth(obj uintptr) int32 {
@@ -811,7 +811,7 @@ func PageControl_GetWidth(obj uintptr) int32 {
 }
 
 func PageControl_SetWidth(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetWidth").Call(obj, uintptr(value))
 }
 
 func PageControl_GetHeight(obj uintptr) int32 {
@@ -820,7 +820,7 @@ func PageControl_GetHeight(obj uintptr) int32 {
 }
 
 func PageControl_SetHeight(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetHeight").Call(obj, uintptr(value))
 }
 
 func PageControl_GetCursor(obj uintptr) TCursor {
@@ -829,7 +829,7 @@ func PageControl_GetCursor(obj uintptr) TCursor {
 }
 
 func PageControl_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("PageControl_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetCursor").Call(obj, uintptr(value))
 }
 
 func PageControl_GetHint(obj uintptr) string {
@@ -838,7 +838,7 @@ func PageControl_GetHint(obj uintptr) string {
 }
 
 func PageControl_SetHint(obj uintptr, value string) {
-	getLazyProc("PageControl_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("PageControl_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func PageControl_GetComponentCount(obj uintptr) int32 {
@@ -852,7 +852,7 @@ func PageControl_GetComponentIndex(obj uintptr) int32 {
 }
 
 func PageControl_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("PageControl_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func PageControl_GetOwner(obj uintptr) uintptr {
@@ -866,7 +866,7 @@ func PageControl_GetName(obj uintptr) string {
 }
 
 func PageControl_SetName(obj uintptr, value string) {
-	getLazyProc("PageControl_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("PageControl_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func PageControl_GetTag(obj uintptr) int {
@@ -875,7 +875,7 @@ func PageControl_GetTag(obj uintptr) int {
 }
 
 func PageControl_SetTag(obj uintptr, value int) {
-	getLazyProc("PageControl_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("PageControl_SetTag").Call(obj, uintptr(value))
 }
 
 func PageControl_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -884,7 +884,7 @@ func PageControl_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func PageControl_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetAnchorSideLeft").Call(obj, value)
 }
 
 func PageControl_GetAnchorSideTop(obj uintptr) uintptr {
@@ -893,7 +893,7 @@ func PageControl_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func PageControl_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetAnchorSideTop").Call(obj, value)
 }
 
 func PageControl_GetAnchorSideRight(obj uintptr) uintptr {
@@ -902,7 +902,7 @@ func PageControl_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func PageControl_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetAnchorSideRight").Call(obj, value)
 }
 
 func PageControl_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -911,7 +911,7 @@ func PageControl_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func PageControl_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetAnchorSideBottom").Call(obj, value)
 }
 
 func PageControl_GetChildSizing(obj uintptr) uintptr {
@@ -920,7 +920,7 @@ func PageControl_GetChildSizing(obj uintptr) uintptr {
 }
 
 func PageControl_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetChildSizing").Call(obj, value)
 }
 
 func PageControl_GetBorderSpacing(obj uintptr) uintptr {
@@ -929,7 +929,7 @@ func PageControl_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func PageControl_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("PageControl_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("PageControl_SetBorderSpacing").Call(obj, value)
 }
 
 func PageControl_GetPages(obj uintptr, Index int32) uintptr {

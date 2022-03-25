@@ -12,7 +12,7 @@ type TSynXmlSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynXmlSyn(obj interface{}) *TSynXmlSyn {
+func AsSynXmlSyn(obj any) *TSynXmlSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

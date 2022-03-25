@@ -12,7 +12,7 @@ func StatusPanels_Create(obj uintptr) uintptr {
 }
 
 func StatusPanels_Free(obj uintptr) {
-	getLazyProc("StatusPanels_Free").Call(obj)
+	_, _, _ = getLazyProc("StatusPanels_Free").Call(obj)
 }
 
 func StatusPanels_Add(obj uintptr) uintptr {
@@ -31,23 +31,23 @@ func StatusPanels_Owner(obj uintptr) uintptr {
 }
 
 func StatusPanels_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("StatusPanels_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("StatusPanels_Assign").Call(obj, Source)
 }
 
 func StatusPanels_BeginUpdate(obj uintptr) {
-	getLazyProc("StatusPanels_BeginUpdate").Call(obj)
+	_, _, _ = getLazyProc("StatusPanels_BeginUpdate").Call(obj)
 }
 
 func StatusPanels_Clear(obj uintptr) {
-	getLazyProc("StatusPanels_Clear").Call(obj)
+	_, _, _ = getLazyProc("StatusPanels_Clear").Call(obj)
 }
 
 func StatusPanels_Delete(obj uintptr, Index int32) {
-	getLazyProc("StatusPanels_Delete").Call(obj, uintptr(Index))
+	_, _, _ = getLazyProc("StatusPanels_Delete").Call(obj, uintptr(Index))
 }
 
 func StatusPanels_EndUpdate(obj uintptr) {
-	getLazyProc("StatusPanels_EndUpdate").Call(obj)
+	_, _, _ = getLazyProc("StatusPanels_EndUpdate").Call(obj)
 }
 
 func StatusPanels_FindItemID(obj uintptr, ID int32) uintptr {
@@ -101,7 +101,7 @@ func StatusPanels_GetCapacity(obj uintptr) int32 {
 }
 
 func StatusPanels_SetCapacity(obj uintptr, value int32) {
-	getLazyProc("StatusPanels_SetCapacity").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StatusPanels_SetCapacity").Call(obj, uintptr(value))
 }
 
 func StatusPanels_GetCount(obj uintptr) int32 {
@@ -115,7 +115,7 @@ func StatusPanels_GetItems(obj uintptr, Index int32) uintptr {
 }
 
 func StatusPanels_SetItems(obj uintptr, Index int32, value uintptr) {
-	getLazyProc("StatusPanels_SetItems").Call(obj, uintptr(Index), value)
+	_, _, _ = getLazyProc("StatusPanels_SetItems").Call(obj, uintptr(Index), value)
 }
 
 func StatusPanels_StaticClassType() TClass {
@@ -131,11 +131,11 @@ func StatusPanel_Create(obj uintptr) uintptr {
 }
 
 func StatusPanel_Free(obj uintptr) {
-	getLazyProc("StatusPanel_Free").Call(obj)
+	_, _, _ = getLazyProc("StatusPanel_Free").Call(obj)
 }
 
 func StatusPanel_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("StatusPanel_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("StatusPanel_Assign").Call(obj, Source)
 }
 
 func StatusPanel_GetNamePath(obj uintptr) string {
@@ -184,7 +184,7 @@ func StatusPanel_GetAlignment(obj uintptr) TAlignment {
 }
 
 func StatusPanel_SetAlignment(obj uintptr, value TAlignment) {
-	getLazyProc("StatusPanel_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StatusPanel_SetAlignment").Call(obj, uintptr(value))
 }
 
 func StatusPanel_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -193,7 +193,7 @@ func StatusPanel_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func StatusPanel_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("StatusPanel_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StatusPanel_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func StatusPanel_GetStyle(obj uintptr) TStatusPanelStyle {
@@ -202,7 +202,7 @@ func StatusPanel_GetStyle(obj uintptr) TStatusPanelStyle {
 }
 
 func StatusPanel_SetStyle(obj uintptr, value TStatusPanelStyle) {
-	getLazyProc("StatusPanel_SetStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StatusPanel_SetStyle").Call(obj, uintptr(value))
 }
 
 func StatusPanel_GetText(obj uintptr) string {
@@ -211,7 +211,7 @@ func StatusPanel_GetText(obj uintptr) string {
 }
 
 func StatusPanel_SetText(obj uintptr, value string) {
-	getLazyProc("StatusPanel_SetText").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("StatusPanel_SetText").Call(obj, GoStrToDStr(value))
 }
 
 func StatusPanel_GetWidth(obj uintptr) int32 {
@@ -220,7 +220,7 @@ func StatusPanel_GetWidth(obj uintptr) int32 {
 }
 
 func StatusPanel_SetWidth(obj uintptr, value int32) {
-	getLazyProc("StatusPanel_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StatusPanel_SetWidth").Call(obj, uintptr(value))
 }
 
 func StatusPanel_GetCollection(obj uintptr) uintptr {
@@ -229,7 +229,7 @@ func StatusPanel_GetCollection(obj uintptr) uintptr {
 }
 
 func StatusPanel_SetCollection(obj uintptr, value uintptr) {
-	getLazyProc("StatusPanel_SetCollection").Call(obj, value)
+	_, _, _ = getLazyProc("StatusPanel_SetCollection").Call(obj, value)
 }
 
 func StatusPanel_GetIndex(obj uintptr) int32 {
@@ -238,7 +238,7 @@ func StatusPanel_GetIndex(obj uintptr) int32 {
 }
 
 func StatusPanel_SetIndex(obj uintptr, value int32) {
-	getLazyProc("StatusPanel_SetIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("StatusPanel_SetIndex").Call(obj, uintptr(value))
 }
 
 func StatusPanel_GetDisplayName(obj uintptr) string {
@@ -247,7 +247,7 @@ func StatusPanel_GetDisplayName(obj uintptr) string {
 }
 
 func StatusPanel_SetDisplayName(obj uintptr, value string) {
-	getLazyProc("StatusPanel_SetDisplayName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("StatusPanel_SetDisplayName").Call(obj, GoStrToDStr(value))
 }
 
 func StatusPanel_StaticClassType() TClass {

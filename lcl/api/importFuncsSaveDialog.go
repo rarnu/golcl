@@ -12,7 +12,7 @@ func SaveDialog_Create(obj uintptr) uintptr {
 }
 
 func SaveDialog_Free(obj uintptr) {
-	getLazyProc("SaveDialog_Free").Call(obj)
+	_, _, _ = getLazyProc("SaveDialog_Free").Call(obj)
 }
 
 func SaveDialog_Execute(obj uintptr) bool {
@@ -36,7 +36,7 @@ func SaveDialog_HasParent(obj uintptr) bool {
 }
 
 func SaveDialog_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("SaveDialog_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("SaveDialog_Assign").Call(obj, Source)
 }
 
 func SaveDialog_ClassType(obj uintptr) TClass {
@@ -85,7 +85,7 @@ func SaveDialog_GetDefaultExt(obj uintptr) string {
 }
 
 func SaveDialog_SetDefaultExt(obj uintptr, value string) {
-	getLazyProc("SaveDialog_SetDefaultExt").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetDefaultExt").Call(obj, GoStrToDStr(value))
 }
 
 func SaveDialog_GetFileName(obj uintptr) string {
@@ -94,7 +94,7 @@ func SaveDialog_GetFileName(obj uintptr) string {
 }
 
 func SaveDialog_SetFileName(obj uintptr, value string) {
-	getLazyProc("SaveDialog_SetFileName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetFileName").Call(obj, GoStrToDStr(value))
 }
 
 func SaveDialog_GetFilter(obj uintptr) string {
@@ -103,7 +103,7 @@ func SaveDialog_GetFilter(obj uintptr) string {
 }
 
 func SaveDialog_SetFilter(obj uintptr, value string) {
-	getLazyProc("SaveDialog_SetFilter").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetFilter").Call(obj, GoStrToDStr(value))
 }
 
 func SaveDialog_GetFilterIndex(obj uintptr) int32 {
@@ -112,7 +112,7 @@ func SaveDialog_GetFilterIndex(obj uintptr) int32 {
 }
 
 func SaveDialog_SetFilterIndex(obj uintptr, value int32) {
-	getLazyProc("SaveDialog_SetFilterIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetFilterIndex").Call(obj, uintptr(value))
 }
 
 func SaveDialog_GetInitialDir(obj uintptr) string {
@@ -121,7 +121,7 @@ func SaveDialog_GetInitialDir(obj uintptr) string {
 }
 
 func SaveDialog_SetInitialDir(obj uintptr, value string) {
-	getLazyProc("SaveDialog_SetInitialDir").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetInitialDir").Call(obj, GoStrToDStr(value))
 }
 
 func SaveDialog_GetOptions(obj uintptr) TOpenOptions {
@@ -130,7 +130,7 @@ func SaveDialog_GetOptions(obj uintptr) TOpenOptions {
 }
 
 func SaveDialog_SetOptions(obj uintptr, value TOpenOptions) {
-	getLazyProc("SaveDialog_SetOptions").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetOptions").Call(obj, uintptr(value))
 }
 
 func SaveDialog_GetTitle(obj uintptr) string {
@@ -139,20 +139,20 @@ func SaveDialog_GetTitle(obj uintptr) string {
 }
 
 func SaveDialog_SetTitle(obj uintptr, value string) {
-	getLazyProc("SaveDialog_SetTitle").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetTitle").Call(obj, GoStrToDStr(value))
 }
 
 func SaveDialog_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("SaveDialog_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
-func SaveDialog_SetOnClose(obj uintptr, fn interface{}) {
-	getLazyProc("SaveDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
+func SaveDialog_SetOnClose(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SaveDialog_SetOnClose").Call(obj, addEventToMap(obj, fn))
 }
 
-func SaveDialog_SetOnShow(obj uintptr, fn interface{}) {
-	getLazyProc("SaveDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
+func SaveDialog_SetOnShow(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("SaveDialog_SetOnShow").Call(obj, addEventToMap(obj, fn))
 }
 
 func SaveDialog_GetComponentCount(obj uintptr) int32 {
@@ -166,7 +166,7 @@ func SaveDialog_GetComponentIndex(obj uintptr) int32 {
 }
 
 func SaveDialog_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("SaveDialog_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func SaveDialog_GetOwner(obj uintptr) uintptr {
@@ -180,7 +180,7 @@ func SaveDialog_GetName(obj uintptr) string {
 }
 
 func SaveDialog_SetName(obj uintptr, value string) {
-	getLazyProc("SaveDialog_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func SaveDialog_GetTag(obj uintptr) int {
@@ -189,7 +189,7 @@ func SaveDialog_GetTag(obj uintptr) int {
 }
 
 func SaveDialog_SetTag(obj uintptr, value int) {
-	getLazyProc("SaveDialog_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("SaveDialog_SetTag").Call(obj, uintptr(value))
 }
 
 func SaveDialog_GetComponents(obj uintptr, AIndex int32) uintptr {

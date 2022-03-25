@@ -13,7 +13,7 @@ func CheckBox_Create(obj uintptr) uintptr {
 }
 
 func CheckBox_Free(obj uintptr) {
-	getLazyProc("CheckBox_Free").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_Free").Call(obj)
 }
 
 func CheckBox_CanFocus(obj uintptr) bool {
@@ -32,11 +32,11 @@ func CheckBox_ControlAtPos(obj uintptr, Pos TPoint, AllowDisabled bool, AllowWin
 }
 
 func CheckBox_DisableAlign(obj uintptr) {
-	getLazyProc("CheckBox_DisableAlign").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_DisableAlign").Call(obj)
 }
 
 func CheckBox_EnableAlign(obj uintptr) {
-	getLazyProc("CheckBox_EnableAlign").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_EnableAlign").Call(obj)
 }
 
 func CheckBox_FindChildControl(obj uintptr, ControlName string) uintptr {
@@ -45,7 +45,7 @@ func CheckBox_FindChildControl(obj uintptr, ControlName string) uintptr {
 }
 
 func CheckBox_FlipChildren(obj uintptr, AllLevels bool) {
-	getLazyProc("CheckBox_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
+	_, _, _ = getLazyProc("CheckBox_FlipChildren").Call(obj, GoBoolToDBool(AllLevels))
 }
 
 func CheckBox_Focused(obj uintptr) bool {
@@ -59,62 +59,62 @@ func CheckBox_HandleAllocated(obj uintptr) bool {
 }
 
 func CheckBox_InsertControl(obj uintptr, AControl uintptr) {
-	getLazyProc("CheckBox_InsertControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("CheckBox_InsertControl").Call(obj, AControl)
 }
 
 func CheckBox_Invalidate(obj uintptr) {
-	getLazyProc("CheckBox_Invalidate").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_Invalidate").Call(obj)
 }
 
 func CheckBox_PaintTo(obj uintptr, DC HDC, X int32, Y int32) {
-	getLazyProc("CheckBox_PaintTo").Call(obj, uintptr(DC), uintptr(X), uintptr(Y))
+	_, _, _ = getLazyProc("CheckBox_PaintTo").Call(obj, DC, uintptr(X), uintptr(Y))
 }
 
 func CheckBox_RemoveControl(obj uintptr, AControl uintptr) {
-	getLazyProc("CheckBox_RemoveControl").Call(obj, AControl)
+	_, _, _ = getLazyProc("CheckBox_RemoveControl").Call(obj, AControl)
 }
 
 func CheckBox_Realign(obj uintptr) {
-	getLazyProc("CheckBox_Realign").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_Realign").Call(obj)
 }
 
 func CheckBox_Repaint(obj uintptr) {
-	getLazyProc("CheckBox_Repaint").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_Repaint").Call(obj)
 }
 
 func CheckBox_ScaleBy(obj uintptr, M int32, D int32) {
-	getLazyProc("CheckBox_ScaleBy").Call(obj, uintptr(M), uintptr(D))
+	_, _, _ = getLazyProc("CheckBox_ScaleBy").Call(obj, uintptr(M), uintptr(D))
 }
 
 func CheckBox_ScrollBy(obj uintptr, DeltaX int32, DeltaY int32) {
-	getLazyProc("CheckBox_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
+	_, _, _ = getLazyProc("CheckBox_ScrollBy").Call(obj, uintptr(DeltaX), uintptr(DeltaY))
 }
 
 func CheckBox_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-	getLazyProc("CheckBox_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
+	_, _, _ = getLazyProc("CheckBox_SetBounds").Call(obj, uintptr(ALeft), uintptr(ATop), uintptr(AWidth), uintptr(AHeight))
 }
 
 func CheckBox_SetFocus(obj uintptr) {
-	getLazyProc("CheckBox_SetFocus").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_SetFocus").Call(obj)
 }
 
 func CheckBox_Update(obj uintptr) {
-	getLazyProc("CheckBox_Update").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_Update").Call(obj)
 }
 
 func CheckBox_BringToFront(obj uintptr) {
-	getLazyProc("CheckBox_BringToFront").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_BringToFront").Call(obj)
 }
 
 func CheckBox_ClientToScreen(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("CheckBox_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckBox_ClientToScreen").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckBox_ClientToParent(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CheckBox_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckBox_ClientToParent").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -129,7 +129,7 @@ func CheckBox_HasParent(obj uintptr) bool {
 }
 
 func CheckBox_Hide(obj uintptr) {
-	getLazyProc("CheckBox_Hide").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_Hide").Call(obj)
 }
 
 func CheckBox_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
@@ -138,27 +138,27 @@ func CheckBox_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
 }
 
 func CheckBox_Refresh(obj uintptr) {
-	getLazyProc("CheckBox_Refresh").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_Refresh").Call(obj)
 }
 
 func CheckBox_ScreenToClient(obj uintptr, Point TPoint) TPoint {
 	var ret TPoint
-	getLazyProc("CheckBox_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckBox_ScreenToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckBox_ParentToClient(obj uintptr, Point TPoint, AParent uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CheckBox_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckBox_ParentToClient").Call(obj, uintptr(unsafe.Pointer(&Point)), AParent, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckBox_SendToBack(obj uintptr) {
-	getLazyProc("CheckBox_SendToBack").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_SendToBack").Call(obj)
 }
 
 func CheckBox_Show(obj uintptr) {
-	getLazyProc("CheckBox_Show").Call(obj)
+	_, _, _ = getLazyProc("CheckBox_Show").Call(obj)
 }
 
 func CheckBox_GetTextBuf(obj uintptr, Buffer *string, BufSize int32) int32 {
@@ -177,7 +177,7 @@ func CheckBox_GetTextLen(obj uintptr) int32 {
 }
 
 func CheckBox_SetTextBuf(obj uintptr, Buffer string) {
-	getLazyProc("CheckBox_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
+	_, _, _ = getLazyProc("CheckBox_SetTextBuf").Call(obj, GoStrToDStr(Buffer))
 }
 
 func CheckBox_FindComponent(obj uintptr, AName string) uintptr {
@@ -191,7 +191,7 @@ func CheckBox_GetNamePath(obj uintptr) string {
 }
 
 func CheckBox_Assign(obj uintptr, Source uintptr) {
-	getLazyProc("CheckBox_Assign").Call(obj, Source)
+	_, _, _ = getLazyProc("CheckBox_Assign").Call(obj, Source)
 }
 
 func CheckBox_ClassType(obj uintptr) TClass {
@@ -230,31 +230,31 @@ func CheckBox_ToString(obj uintptr) string {
 }
 
 func CheckBox_AnchorToNeighbour(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("CheckBox_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("CheckBox_AnchorToNeighbour").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func CheckBox_AnchorParallel(obj uintptr, ASide TAnchorKind, ASpace int32, ASibling uintptr) {
-	getLazyProc("CheckBox_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
+	_, _, _ = getLazyProc("CheckBox_AnchorParallel").Call(obj, uintptr(ASide), uintptr(ASpace), ASibling)
 }
 
 func CheckBox_AnchorHorizontalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("CheckBox_AnchorHorizontalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("CheckBox_AnchorHorizontalCenterTo").Call(obj, ASibling)
 }
 
 func CheckBox_AnchorVerticalCenterTo(obj uintptr, ASibling uintptr) {
-	getLazyProc("CheckBox_AnchorVerticalCenterTo").Call(obj, ASibling)
+	_, _, _ = getLazyProc("CheckBox_AnchorVerticalCenterTo").Call(obj, ASibling)
 }
 
 func CheckBox_AnchorSame(obj uintptr, ASide TAnchorKind, ASibling uintptr) {
-	getLazyProc("CheckBox_AnchorSame").Call(obj, uintptr(ASide), ASibling)
+	_, _, _ = getLazyProc("CheckBox_AnchorSame").Call(obj, uintptr(ASide), ASibling)
 }
 
 func CheckBox_AnchorAsAlign(obj uintptr, ATheAlign TAlign, ASpace int32) {
-	getLazyProc("CheckBox_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
+	_, _, _ = getLazyProc("CheckBox_AnchorAsAlign").Call(obj, uintptr(ATheAlign), uintptr(ASpace))
 }
 
 func CheckBox_AnchorClient(obj uintptr, ASpace int32) {
-	getLazyProc("CheckBox_AnchorClient").Call(obj, uintptr(ASpace))
+	_, _, _ = getLazyProc("CheckBox_AnchorClient").Call(obj, uintptr(ASpace))
 }
 
 func CheckBox_ScaleDesignToForm(obj uintptr, ASize int32) int32 {
@@ -308,19 +308,19 @@ func CheckBox_ScaleScreenTo96(obj uintptr, ASize int32) int32 {
 }
 
 func CheckBox_AutoAdjustLayout(obj uintptr, AMode TLayoutAdjustmentPolicy, AFromPPI int32, AToPPI int32, AOldFormWidth int32, ANewFormWidth int32) {
-	getLazyProc("CheckBox_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
+	_, _, _ = getLazyProc("CheckBox_AutoAdjustLayout").Call(obj, uintptr(AMode), uintptr(AFromPPI), uintptr(AToPPI), uintptr(AOldFormWidth), uintptr(ANewFormWidth))
 }
 
 func CheckBox_FixDesignFontsPPI(obj uintptr, ADesignTimePPI int32) {
-	getLazyProc("CheckBox_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
+	_, _, _ = getLazyProc("CheckBox_FixDesignFontsPPI").Call(obj, uintptr(ADesignTimePPI))
 }
 
 func CheckBox_ScaleFontsPPI(obj uintptr, AToPPI int32, AProportion float64) {
-	getLazyProc("CheckBox_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
+	_, _, _ = getLazyProc("CheckBox_ScaleFontsPPI").Call(obj, uintptr(AToPPI), uintptr(unsafe.Pointer(&AProportion)))
 }
 
-func CheckBox_SetOnChange(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnChange").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnChange(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnChange").Call(obj, addEventToMap(obj, fn))
 }
 
 func CheckBox_GetAction(obj uintptr) uintptr {
@@ -329,7 +329,7 @@ func CheckBox_GetAction(obj uintptr) uintptr {
 }
 
 func CheckBox_SetAction(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetAction").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetAction").Call(obj, value)
 }
 
 func CheckBox_GetAlign(obj uintptr) TAlign {
@@ -338,7 +338,7 @@ func CheckBox_GetAlign(obj uintptr) TAlign {
 }
 
 func CheckBox_SetAlign(obj uintptr, value TAlign) {
-	getLazyProc("CheckBox_SetAlign").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetAlign").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetAlignment(obj uintptr) TLeftRight {
@@ -347,7 +347,7 @@ func CheckBox_GetAlignment(obj uintptr) TLeftRight {
 }
 
 func CheckBox_SetAlignment(obj uintptr, value TLeftRight) {
-	getLazyProc("CheckBox_SetAlignment").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetAlignment").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetAllowGrayed(obj uintptr) bool {
@@ -356,7 +356,7 @@ func CheckBox_GetAllowGrayed(obj uintptr) bool {
 }
 
 func CheckBox_SetAllowGrayed(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetAllowGrayed").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetAllowGrayed").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetAnchors(obj uintptr) TAnchors {
@@ -365,7 +365,7 @@ func CheckBox_GetAnchors(obj uintptr) TAnchors {
 }
 
 func CheckBox_SetAnchors(obj uintptr, value TAnchors) {
-	getLazyProc("CheckBox_SetAnchors").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetAnchors").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetBiDiMode(obj uintptr) TBiDiMode {
@@ -374,7 +374,7 @@ func CheckBox_GetBiDiMode(obj uintptr) TBiDiMode {
 }
 
 func CheckBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
-	getLazyProc("CheckBox_SetBiDiMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetBiDiMode").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetCaption(obj uintptr) string {
@@ -383,7 +383,7 @@ func CheckBox_GetCaption(obj uintptr) string {
 }
 
 func CheckBox_SetCaption(obj uintptr, value string) {
-	getLazyProc("CheckBox_SetCaption").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("CheckBox_SetCaption").Call(obj, GoStrToDStr(value))
 }
 
 func CheckBox_GetChecked(obj uintptr) bool {
@@ -392,7 +392,7 @@ func CheckBox_GetChecked(obj uintptr) bool {
 }
 
 func CheckBox_SetChecked(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetChecked").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetChecked").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetColor(obj uintptr) TColor {
@@ -401,7 +401,7 @@ func CheckBox_GetColor(obj uintptr) TColor {
 }
 
 func CheckBox_SetColor(obj uintptr, value TColor) {
-	getLazyProc("CheckBox_SetColor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetColor").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetConstraints(obj uintptr) uintptr {
@@ -410,7 +410,7 @@ func CheckBox_GetConstraints(obj uintptr) uintptr {
 }
 
 func CheckBox_SetConstraints(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetConstraints").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetConstraints").Call(obj, value)
 }
 
 func CheckBox_GetDoubleBuffered(obj uintptr) bool {
@@ -419,7 +419,7 @@ func CheckBox_GetDoubleBuffered(obj uintptr) bool {
 }
 
 func CheckBox_SetDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetDragCursor(obj uintptr) TCursor {
@@ -428,7 +428,7 @@ func CheckBox_GetDragCursor(obj uintptr) TCursor {
 }
 
 func CheckBox_SetDragCursor(obj uintptr, value TCursor) {
-	getLazyProc("CheckBox_SetDragCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetDragCursor").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetDragKind(obj uintptr) TDragKind {
@@ -437,7 +437,7 @@ func CheckBox_GetDragKind(obj uintptr) TDragKind {
 }
 
 func CheckBox_SetDragKind(obj uintptr, value TDragKind) {
-	getLazyProc("CheckBox_SetDragKind").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetDragKind").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetDragMode(obj uintptr) TDragMode {
@@ -446,7 +446,7 @@ func CheckBox_GetDragMode(obj uintptr) TDragMode {
 }
 
 func CheckBox_SetDragMode(obj uintptr, value TDragMode) {
-	getLazyProc("CheckBox_SetDragMode").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetDragMode").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetEnabled(obj uintptr) bool {
@@ -455,7 +455,7 @@ func CheckBox_GetEnabled(obj uintptr) bool {
 }
 
 func CheckBox_SetEnabled(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetEnabled").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetEnabled").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetFont(obj uintptr) uintptr {
@@ -464,7 +464,7 @@ func CheckBox_GetFont(obj uintptr) uintptr {
 }
 
 func CheckBox_SetFont(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetFont").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetFont").Call(obj, value)
 }
 
 func CheckBox_GetParentColor(obj uintptr) bool {
@@ -473,7 +473,7 @@ func CheckBox_GetParentColor(obj uintptr) bool {
 }
 
 func CheckBox_SetParentColor(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetParentColor").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetParentColor").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetParentDoubleBuffered(obj uintptr) bool {
@@ -482,7 +482,7 @@ func CheckBox_GetParentDoubleBuffered(obj uintptr) bool {
 }
 
 func CheckBox_SetParentDoubleBuffered(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetParentDoubleBuffered").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetParentFont(obj uintptr) bool {
@@ -491,7 +491,7 @@ func CheckBox_GetParentFont(obj uintptr) bool {
 }
 
 func CheckBox_SetParentFont(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetParentFont").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetParentFont").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetParentShowHint(obj uintptr) bool {
@@ -500,7 +500,7 @@ func CheckBox_GetParentShowHint(obj uintptr) bool {
 }
 
 func CheckBox_SetParentShowHint(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetParentShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetParentShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetPopupMenu(obj uintptr) uintptr {
@@ -509,7 +509,7 @@ func CheckBox_GetPopupMenu(obj uintptr) uintptr {
 }
 
 func CheckBox_SetPopupMenu(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetPopupMenu").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetPopupMenu").Call(obj, value)
 }
 
 func CheckBox_GetShowHint(obj uintptr) bool {
@@ -518,7 +518,7 @@ func CheckBox_GetShowHint(obj uintptr) bool {
 }
 
 func CheckBox_SetShowHint(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetShowHint").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetShowHint").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetState(obj uintptr) TCheckBoxState {
@@ -527,7 +527,7 @@ func CheckBox_GetState(obj uintptr) TCheckBoxState {
 }
 
 func CheckBox_SetState(obj uintptr, value TCheckBoxState) {
-	getLazyProc("CheckBox_SetState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetState").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetTabOrder(obj uintptr) TTabOrder {
@@ -536,7 +536,7 @@ func CheckBox_GetTabOrder(obj uintptr) TTabOrder {
 }
 
 func CheckBox_SetTabOrder(obj uintptr, value TTabOrder) {
-	getLazyProc("CheckBox_SetTabOrder").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetTabOrder").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetTabStop(obj uintptr) bool {
@@ -545,7 +545,7 @@ func CheckBox_GetTabStop(obj uintptr) bool {
 }
 
 func CheckBox_SetTabStop(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetTabStop").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetTabStop").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetVisible(obj uintptr) bool {
@@ -554,67 +554,67 @@ func CheckBox_GetVisible(obj uintptr) bool {
 }
 
 func CheckBox_SetVisible(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetVisible").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetVisible").Call(obj, GoBoolToDBool(value))
 }
 
-func CheckBox_SetOnClick(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnClick").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnClick").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnContextPopup(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnDragDrop(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnDragOver(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnEndDrag(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnEnter(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnExit(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnExit").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnExit").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnKeyDown(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnKeyDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnKeyDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnKeyPress(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnKeyPress(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnKeyPress").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnKeyUp(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnKeyUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnKeyUp").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnMouseDown(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnMouseEnter(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnMouseLeave(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnMouseMove(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
 }
 
-func CheckBox_SetOnMouseUp(obj uintptr, fn interface{}) {
-	getLazyProc("CheckBox_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+func CheckBox_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("CheckBox_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
 }
 
 func CheckBox_GetDockClientCount(obj uintptr) int32 {
@@ -628,7 +628,7 @@ func CheckBox_GetDockSite(obj uintptr) bool {
 }
 
 func CheckBox_SetDockSite(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetDockSite").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetDockSite").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetMouseInClient(obj uintptr) bool {
@@ -653,16 +653,16 @@ func CheckBox_GetControlCount(obj uintptr) int32 {
 
 func CheckBox_GetHandle(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("CheckBox_GetHandle").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func CheckBox_GetParentWindow(obj uintptr) HWND {
 	ret, _, _ := getLazyProc("CheckBox_GetParentWindow").Call(obj)
-	return HWND(ret)
+	return ret
 }
 
 func CheckBox_SetParentWindow(obj uintptr, value HWND) {
-	getLazyProc("CheckBox_SetParentWindow").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetParentWindow").Call(obj, value)
 }
 
 func CheckBox_GetShowing(obj uintptr) bool {
@@ -676,17 +676,17 @@ func CheckBox_GetUseDockManager(obj uintptr) bool {
 }
 
 func CheckBox_SetUseDockManager(obj uintptr, value bool) {
-	getLazyProc("CheckBox_SetUseDockManager").Call(obj, GoBoolToDBool(value))
+	_, _, _ = getLazyProc("CheckBox_SetUseDockManager").Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetBoundsRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("CheckBox_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckBox_GetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckBox_SetBoundsRect(obj uintptr, value TRect) {
-	getLazyProc("CheckBox_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
+	_, _, _ = getLazyProc("CheckBox_SetBoundsRect").Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func CheckBox_GetClientHeight(obj uintptr) int32 {
@@ -695,18 +695,18 @@ func CheckBox_GetClientHeight(obj uintptr) int32 {
 }
 
 func CheckBox_SetClientHeight(obj uintptr, value int32) {
-	getLazyProc("CheckBox_SetClientHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetClientHeight").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetClientOrigin(obj uintptr) TPoint {
 	var ret TPoint
-	getLazyProc("CheckBox_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckBox_GetClientOrigin").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
 func CheckBox_GetClientRect(obj uintptr) TRect {
 	var ret TRect
-	getLazyProc("CheckBox_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	_, _, _ = getLazyProc("CheckBox_GetClientRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
 
@@ -716,7 +716,7 @@ func CheckBox_GetClientWidth(obj uintptr) int32 {
 }
 
 func CheckBox_SetClientWidth(obj uintptr, value int32) {
-	getLazyProc("CheckBox_SetClientWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetClientWidth").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetControlState(obj uintptr) TControlState {
@@ -725,7 +725,7 @@ func CheckBox_GetControlState(obj uintptr) TControlState {
 }
 
 func CheckBox_SetControlState(obj uintptr, value TControlState) {
-	getLazyProc("CheckBox_SetControlState").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetControlState").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetControlStyle(obj uintptr) TControlStyle {
@@ -734,7 +734,7 @@ func CheckBox_GetControlStyle(obj uintptr) TControlStyle {
 }
 
 func CheckBox_SetControlStyle(obj uintptr, value TControlStyle) {
-	getLazyProc("CheckBox_SetControlStyle").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetControlStyle").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetFloating(obj uintptr) bool {
@@ -748,7 +748,7 @@ func CheckBox_GetParent(obj uintptr) uintptr {
 }
 
 func CheckBox_SetParent(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetParent").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetParent").Call(obj, value)
 }
 
 func CheckBox_GetLeft(obj uintptr) int32 {
@@ -757,7 +757,7 @@ func CheckBox_GetLeft(obj uintptr) int32 {
 }
 
 func CheckBox_SetLeft(obj uintptr, value int32) {
-	getLazyProc("CheckBox_SetLeft").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetLeft").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetTop(obj uintptr) int32 {
@@ -766,7 +766,7 @@ func CheckBox_GetTop(obj uintptr) int32 {
 }
 
 func CheckBox_SetTop(obj uintptr, value int32) {
-	getLazyProc("CheckBox_SetTop").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetTop").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetWidth(obj uintptr) int32 {
@@ -775,7 +775,7 @@ func CheckBox_GetWidth(obj uintptr) int32 {
 }
 
 func CheckBox_SetWidth(obj uintptr, value int32) {
-	getLazyProc("CheckBox_SetWidth").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetWidth").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetHeight(obj uintptr) int32 {
@@ -784,7 +784,7 @@ func CheckBox_GetHeight(obj uintptr) int32 {
 }
 
 func CheckBox_SetHeight(obj uintptr, value int32) {
-	getLazyProc("CheckBox_SetHeight").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetHeight").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetCursor(obj uintptr) TCursor {
@@ -793,7 +793,7 @@ func CheckBox_GetCursor(obj uintptr) TCursor {
 }
 
 func CheckBox_SetCursor(obj uintptr, value TCursor) {
-	getLazyProc("CheckBox_SetCursor").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetCursor").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetHint(obj uintptr) string {
@@ -802,7 +802,7 @@ func CheckBox_GetHint(obj uintptr) string {
 }
 
 func CheckBox_SetHint(obj uintptr, value string) {
-	getLazyProc("CheckBox_SetHint").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("CheckBox_SetHint").Call(obj, GoStrToDStr(value))
 }
 
 func CheckBox_GetComponentCount(obj uintptr) int32 {
@@ -816,7 +816,7 @@ func CheckBox_GetComponentIndex(obj uintptr) int32 {
 }
 
 func CheckBox_SetComponentIndex(obj uintptr, value int32) {
-	getLazyProc("CheckBox_SetComponentIndex").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetComponentIndex").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetOwner(obj uintptr) uintptr {
@@ -830,7 +830,7 @@ func CheckBox_GetName(obj uintptr) string {
 }
 
 func CheckBox_SetName(obj uintptr, value string) {
-	getLazyProc("CheckBox_SetName").Call(obj, GoStrToDStr(value))
+	_, _, _ = getLazyProc("CheckBox_SetName").Call(obj, GoStrToDStr(value))
 }
 
 func CheckBox_GetTag(obj uintptr) int {
@@ -839,7 +839,7 @@ func CheckBox_GetTag(obj uintptr) int {
 }
 
 func CheckBox_SetTag(obj uintptr, value int) {
-	getLazyProc("CheckBox_SetTag").Call(obj, uintptr(value))
+	_, _, _ = getLazyProc("CheckBox_SetTag").Call(obj, uintptr(value))
 }
 
 func CheckBox_GetAnchorSideLeft(obj uintptr) uintptr {
@@ -848,7 +848,7 @@ func CheckBox_GetAnchorSideLeft(obj uintptr) uintptr {
 }
 
 func CheckBox_SetAnchorSideLeft(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetAnchorSideLeft").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetAnchorSideLeft").Call(obj, value)
 }
 
 func CheckBox_GetAnchorSideTop(obj uintptr) uintptr {
@@ -857,7 +857,7 @@ func CheckBox_GetAnchorSideTop(obj uintptr) uintptr {
 }
 
 func CheckBox_SetAnchorSideTop(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetAnchorSideTop").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetAnchorSideTop").Call(obj, value)
 }
 
 func CheckBox_GetAnchorSideRight(obj uintptr) uintptr {
@@ -866,7 +866,7 @@ func CheckBox_GetAnchorSideRight(obj uintptr) uintptr {
 }
 
 func CheckBox_SetAnchorSideRight(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetAnchorSideRight").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetAnchorSideRight").Call(obj, value)
 }
 
 func CheckBox_GetAnchorSideBottom(obj uintptr) uintptr {
@@ -875,7 +875,7 @@ func CheckBox_GetAnchorSideBottom(obj uintptr) uintptr {
 }
 
 func CheckBox_SetAnchorSideBottom(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetAnchorSideBottom").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetAnchorSideBottom").Call(obj, value)
 }
 
 func CheckBox_GetChildSizing(obj uintptr) uintptr {
@@ -884,7 +884,7 @@ func CheckBox_GetChildSizing(obj uintptr) uintptr {
 }
 
 func CheckBox_SetChildSizing(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetChildSizing").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetChildSizing").Call(obj, value)
 }
 
 func CheckBox_GetBorderSpacing(obj uintptr) uintptr {
@@ -893,7 +893,7 @@ func CheckBox_GetBorderSpacing(obj uintptr) uintptr {
 }
 
 func CheckBox_SetBorderSpacing(obj uintptr, value uintptr) {
-	getLazyProc("CheckBox_SetBorderSpacing").Call(obj, value)
+	_, _, _ = getLazyProc("CheckBox_SetBorderSpacing").Call(obj, value)
 }
 
 func CheckBox_GetDockClients(obj uintptr, Index int32) uintptr {

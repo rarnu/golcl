@@ -12,7 +12,7 @@ type TSynPythonSyn struct {
 	ptr      unsafe.Pointer
 }
 
-func AsSynPythonSyn(obj interface{}) *TSynPythonSyn {
+func AsSynPythonSyn(obj any) *TSynPythonSyn {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil

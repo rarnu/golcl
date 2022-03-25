@@ -34,7 +34,7 @@ func NewToggleBox(owner IComponent) *TToggleBox {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsToggleBox(obj interface{}) *TToggleBox {
+func AsToggleBox(obj any) *TToggleBox {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil
