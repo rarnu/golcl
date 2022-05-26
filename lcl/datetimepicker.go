@@ -35,7 +35,7 @@ func NewDateTimePicker(owner IComponent) *TDateTimePicker {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsDateTimePicker(obj any) *TDateTimePicker {
+func AsDateTimePicker(obj interface{}) *TDateTimePicker {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil
@@ -581,6 +581,14 @@ func (d *TDateTimePicker) SetDateSeparator(value string) {
 	DateTimePicker_SetDateSeparator(d.instance, value)
 }
 
+func (d *TDateTimePicker) HideDateTimeParts() TDateTimeParts {
+	return DateTimePicker_GetHideDateTimeParts(d.instance)
+}
+
+func (d *TDateTimePicker) SetHideDateTimeParts(value TDateTimeParts) {
+	DateTimePicker_SetHideDateTimeParts(d.instance, value)
+}
+
 func (d *TDateTimePicker) LeadingZeros() bool {
 	return DateTimePicker_GetLeadingZeros(d.instance)
 }
@@ -653,6 +661,14 @@ func (d *TDateTimePicker) TimeDisplay() TTimeDisplay {
 
 func (d *TDateTimePicker) SetTimeDisplay(value TTimeDisplay) {
 	DateTimePicker_SetTimeDisplay(d.instance, value)
+}
+
+func (d *TDateTimePicker) TimeFormat() TTimeFormat {
+	return DateTimePicker_GetTimeFormat(d.instance)
+}
+
+func (d *TDateTimePicker) SetTimeFormat(value TTimeFormat) {
+	DateTimePicker_SetTimeFormat(d.instance, value)
 }
 
 func (d *TDateTimePicker) TimeSeparator() string {

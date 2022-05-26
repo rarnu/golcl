@@ -915,6 +915,48 @@ func eventCallbackProc(f uintptr, args uintptr, _ int) uintptr {
 				int32(getVal(1)),
 				int32(getVal(2)),
 				TGridDrawState(getVal(3)))
+
+		case TOnMouseLinkEvent:
+			v.(TOnMouseLinkEvent)(
+				AsObject(getVal(0)),
+				int32(getVal(1)),
+				int32(getVal(2)),
+				getBoolPtr(3),
+			)
+
+		case TCodeCompletionEvent:
+			str := DStrToGoStr(getPtrVal(0))
+			v.(TCodeCompletionEvent)(
+				&str,
+				DStrToGoStr(getVal(1)),
+				getPointPtr(2),
+				getPointPtr(3),
+				DStrToGoStr(getVal(4)),
+				TShiftState(getVal(5)),
+			)
+
+		case TSynBaseCompletionSearchPosition:
+			v.(TSynBaseCompletionSearchPosition)(
+				getI32Ptr(0),
+			)
+
+		case TAcceptFileNameEvent:
+			str := DStrToGoStr(getPtrVal(1))
+			v.(TAcceptFileNameEvent)(
+				AsObject(getVal(0)), &str)
+			setPtrVal(1, GoStrToDStr(str))
+
+		// type TCheckItemChange = func(sender IObject, index int32)
+		case TCheckItemChange:
+			v.(TCheckItemChange)(
+				AsObject(getVal(0)),
+				int32(getVal(1)))
+
+		case TUTF8KeyPressEvent:
+			v.(TUTF8KeyPressEvent)(
+				AsObject(getVal(0)),
+				(*TUTF8Char)(getPtr(1)))
+
 		default:
 		}
 	}

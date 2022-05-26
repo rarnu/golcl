@@ -352,6 +352,15 @@ func PageControl_GetPageCount(obj uintptr) int32 {
 	return int32(ret)
 }
 
+func PageControl_GetActivePage(obj uintptr) uintptr {
+	ret, _, _ := getLazyProc("PageControl_GetActivePage").Call(obj)
+	return ret
+}
+
+func PageControl_SetActivePage(obj uintptr, value uintptr) {
+	_, _, _ = getLazyProc("PageControl_SetActivePage").Call(obj, value)
+}
+
 func PageControl_GetAlign(obj uintptr) TAlign {
 	ret, _, _ := getLazyProc("PageControl_GetAlign").Call(obj)
 	return TAlign(ret)

@@ -34,7 +34,7 @@ func NewPageControl(owner IComponent) *TPageControl {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsPageControl(obj any) *TPageControl {
+func AsPageControl(obj interface{}) *TPageControl {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil
@@ -538,6 +538,14 @@ func (p *TPageControl) SetActivePageIndex(value int32) {
 
 func (p *TPageControl) PageCount() int32 {
 	return PageControl_GetPageCount(p.instance)
+}
+
+func (p *TPageControl) ActivePage() *TTabSheet {
+	return AsTabSheet(PageControl_GetActivePage(p.instance))
+}
+
+func (p *TPageControl) SetActivePage(value IWinControl) {
+	PageControl_SetActivePage(p.instance, CheckPtr(value))
 }
 
 // 获取控件自动调整。

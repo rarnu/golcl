@@ -403,6 +403,10 @@ func Form_SetDesignTimePPI(obj uintptr, value int32) {
 	_, _, _ = getLazyProc("Form_SetDesignTimePPI").Call(obj, uintptr(value))
 }
 
+func Form_SetOnUTF8KeyPress(obj uintptr, fn interface{}) {
+	_, _, _ = getLazyProc("Form_SetOnUTF8KeyPress").Call(obj, addEventToMap(obj, fn))
+}
+
 func Form_GetAction(obj uintptr) uintptr {
 	ret, _, _ := getLazyProc("Form_GetAction").Call(obj)
 	return ret

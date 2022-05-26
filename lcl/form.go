@@ -34,7 +34,7 @@ func NewForm(owner IComponent) *TForm {
 // 动态转换一个已存在的对象实例。
 //
 // Dynamically convert an existing object instance.
-func AsForm(obj any) *TForm {
+func AsForm(obj interface{}) *TForm {
 	instance, ptr := getInstance(obj)
 	if instance == 0 {
 		return nil
@@ -603,6 +603,10 @@ func (f *TForm) DesignTimePPI() int32 {
 
 func (f *TForm) SetDesignTimePPI(value int32) {
 	Form_SetDesignTimePPI(f.instance, value)
+}
+
+func (f *TForm) SetOnUTF8KeyPress(fn TUTF8KeyPressEvent) {
+	Form_SetOnUTF8KeyPress(f.instance, fn)
 }
 
 func (f *TForm) Action() *TAction {

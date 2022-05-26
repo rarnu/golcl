@@ -372,3 +372,12 @@ type TCodeCompletionEvent func(value *string, sourceValue string, sourceStart *T
 
 // TSynBaseCompletionSearchPosition = procedure(var APosition :integer) of object;
 type TSynBaseCompletionSearchPosition func(aPosition *int32)
+
+// procedure (Sender : TObject; Var Value : String) of Object;
+type TAcceptFileNameEvent = func(sender IObject, value *string)
+
+// procedure(Sender: TObject; AIndex: Integer) of object;
+type TCheckItemChange = func(sender IObject, index int32)
+
+// procedure(Sender: TObject; var UTF8Key: TUTF8Char) of Object;
+type TUTF8KeyPressEvent = func(sender IObject, utf8key *TUTF8Char)

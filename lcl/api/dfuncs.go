@@ -47,6 +47,20 @@ func GoBoolToDBool(val bool) uintptr {
 	return 0
 }
 
+func GoBool(val uintptr) bool {
+	if val != 0 {
+		return true
+	}
+	return false
+}
+
+func PascalBool(val bool) uintptr {
+	if val {
+		return 1
+	}
+	return 0
+}
+
 // typedef struct { void *type; void *value; } GoInterface;
 type interfacePtr struct {
 	tpy uintptr

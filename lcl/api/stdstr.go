@@ -20,6 +20,13 @@ func StringToUTF8Ptr(s string) *uint8 {
 	return &utf8StrArr[0]
 }
 
+func PascalStr(str string) uintptr {
+	if str == "" {
+		return 0
+	}
+	return uintptr(unsafe.Pointer(StringToUTF8Ptr(str)))
+}
+
 // GoStrToDStr Go的string转换为Lazarus的string
 func GoStrToDStr(s string) uintptr {
 	if s == "" {
@@ -74,6 +81,14 @@ func DStrToGoStr(ustr uintptr) string {
 		return ""
 	}
 	return copyStr(ustr, l)
+}
+
+func GoStr(str uintptr) string {
+	l := DStrLen(str)
+	if l == 0 {
+		return ""
+	}
+	return copyStr(str, int(l))
 }
 
 func getBuff(size int32) any {
