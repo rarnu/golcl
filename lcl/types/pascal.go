@@ -15,6 +15,8 @@ type TModalResult = int32
 // TColor 常用值请见 types/colors 包
 type TColor uint32
 
+type TChartColor int64
+
 type THelpEventData = uintptr
 
 type TTabOrder = int16
@@ -42,9 +44,19 @@ type Char = uint16
 
 type TClass uintptr
 
+type TRasterImageClass uintptr
+
 type TThreadID = uintptr
 
 type TClipboardFormat = uintptr
+
+type TFPCustomImage = uintptr
+
+type TFPCustomBrush = uintptr
+
+type TFPCustomFont = uintptr
+
+type TFPCustomPen = uintptr
 
 type TGridCoord struct {
 	X int32
@@ -116,6 +128,10 @@ type TCreateParams struct {
 	Param         uintptr
 	WindowClass   TWndClass
 	WinClassName  [64]int8
+}
+
+type TFPColor struct {
+	Red, Green, Blue, Alpha Word
 }
 
 // R TColor

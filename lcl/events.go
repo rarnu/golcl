@@ -381,3 +381,36 @@ type TCheckItemChange = func(sender IObject, index int32)
 
 // procedure(Sender: TObject; var UTF8Key: TUTF8Char) of Object;
 type TUTF8KeyPressEvent = func(sender IObject, utf8key *TUTF8Char)
+
+// procedure(Sender: TChart; ADrawer: IChartDrawer; const ARect: TRect) of Object;
+type TChartAfterCustomDrawEvent = func(sender IChart, ADrawer *IChartDrawer, ARect TRect)
+
+// procedure(Sender: TChart; ADrawer: IChartDrawer) of Object;
+type TChartDrawEvent = func(sender IChart, ADrawer *IChartDrawer)
+
+// procedure(Sender: TChart; ACanvas: TCanvas; const ARect: TRect) of Object;
+type TChartAfterDrawEvent = func(sender IChart, ACanvas *TCanvas, ARect TRect)
+
+// procedure(Sender: TChart) of Object;
+type TChartEvent = func(sender IChart)
+
+// procedure(Sender: TChart; ADrawer: IChartDrawer; const ARect: TRect; var ADoDefaultDrawing: Boolean) of Object;
+type TChartBeforeCustomDrawEvent = func(sender IChart, ADrawer *IChartDrawer, ARect TRect, ADoDefaultDrawing *bool)
+
+// procedure(Sender: TChart; ACanvas: TCanvas; const ARect: TRect; var ADoDefaultDrawing: Boolean) of Object;
+type TChartBeforeDrawEvent = func(sender IChart, ACanvas *TCanvas, ARect TRect, ADoDefaultDrawing *bool)
+
+// procedure(ASender: TChart; ADrawer: IChartDrawer; ALegendItems: TChartLegendItems; ALegendItemSize: TPoint; const ALegendRect: TRect; AColCount, ARowCount: Integer) of Object;
+type TChartDrawLegendEvent = func(sender IChart, ADrawer *IChartDrawer, ALegendItems *TChartLegendItems, ALegendItemSize TPoint, ALegendRect TRect, AColCount, ARowCount int32)
+
+// procedure(Sender: TChart; var ALogicalExtent: TDoubleRect; var AllowChange: Boolean) of Object;
+type TChartExtentValidateEvent = func(sender IChart, ALogicalExtent *TDoubleRect, AllowChange *bool)
+
+// procedure(ASender: TChart; const ARect: TRect; var ADoDefaultDrawing: Boolean)of Object;
+type TChartPaintEvent = func(sender IChart, ARect TRect, ADoDefaultDrawing *bool)
+
+// procedure(ASender: TChartTextElement; const ABoundingBox: TRect; var APolygon: TPointArray) of Object;
+type TChartGetShapeEvent = func(sender IChartTextElement, ABoundingBox TRect, APolygon *[]TPoint)
+
+// procedure(Sender: TObject; var AText: String; AMark: Double) of Object;
+type TChartGetAxisMarkTextEvent = func(Sender IObject, AText *string, AMark float64)

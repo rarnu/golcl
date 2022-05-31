@@ -281,8 +281,20 @@ const (
 	FsStrikeOut
 )
 
-// TFontStyles SET:TFontStyl
+// TFontStyles SET:TFontStyle
 type TFontStyles = TSet
+
+type TChartFontStyle int32
+
+const (
+	cfsBold = iota + 0
+	cfsItalic
+	cfsUnderline
+	cfsStrikeout
+)
+
+// TChartFontStyles SET:TChartFontStyle
+type TChartFontStyles = TSet
 
 // TScrollStyle ENUM
 type TScrollStyle int32
@@ -413,6 +425,21 @@ const (
 	BsPattern
 )
 
+type TFPBrushStyle int32
+
+const (
+	bsSolid = iota + 1
+	bsClear
+	bsHorizontal
+	bsVertical
+	bsFDiagonal
+	bsBDiagonal
+	bsCross
+	bsDiagCross
+	bsImage
+	bsPattern
+)
+
 // TPenStyle ENUM
 type TPenStyle int32
 
@@ -426,6 +453,22 @@ const (
 	PsPattern
 	PsClear
 )
+
+type TFPPenStyle int32
+
+const (
+	psSolid = iota + 0
+	psDash
+	psDot
+	psDashDot
+	psDashDotDot
+	psinsideFrame
+	psPattern
+	psClear
+)
+
+// TFPPenStyleSet SET:TFPPenStyle
+type TFPPenStyleSet = TSet
 
 // TUDBtnType ENUM
 type TUDBtnType int32
@@ -2481,4 +2524,177 @@ const (
 	sqlFirebird25
 	sqlFirebird30
 	sqlFirebird40
+)
+
+type TChartAntialiasingMode int32
+
+const (
+	amDontCare = iota + 0
+	amOn
+	amOff
+)
+
+type TChartTextFormat int32
+
+const (
+	tfNormal = iota + 0
+	tfHTML
+)
+
+type TChartMarksOverlapPolicy int32
+
+const (
+	opIgnore = iota + 0
+	opHideNeighbour
+)
+
+type TChartLabelShape int32
+
+const (
+	clsRectangle = iota + 0
+	clsEllipse
+	clsRoundRect
+	clsRoundSide
+	clsUserDefined
+)
+
+type TSeriesMarksStyle int32
+
+const (
+	smsCustom            = iota + 0 // user-defined
+	smsNone                         // no labels
+	smsValue                        // 1234
+	smsPercent                      // 12 %
+	smsLabel                        // Cars
+	smsLabelPercent                 // Cars 12 %
+	smsLabelValue                   // Cars 1234
+	smsLegend                       // ?
+	smsPercentTotal                 // 12 % of 1234
+	smsLabelPercentTotal            // Cars 12 % of 1234
+	smsXValue                       // 21/6/1996
+)
+
+type TChartMarkAttachment int32
+
+const (
+	maDefault = iota + 0
+	maEdge
+	maCenter
+)
+
+type TLegendAlignment int32
+
+const (
+	laTopLeft = iota + 0
+	laCenterLeft
+	laBottomLeft
+	laTopCenter
+	laBottomCenter
+	laTopRight
+	laCenterRight
+	laBottomRight
+)
+
+type TLegendItemFillOrder int32
+
+const (
+	lfoColRow = iota + 0
+	lfoRowCol
+)
+
+type TAxisIntervalParamOption int32
+
+const (
+	aipGraphCoords = iota + 0
+	aipUseCount
+	aipUseMaxLength
+	aipUseMinLength
+	aipUseNiceSteps
+)
+
+// TAxisIntervalParamOptions SET:TAxisIntervalParamOption
+type TAxisIntervalParamOptions = TSet
+
+type TChartAxisAlignment int32
+
+const (
+	calLeft = iota + 0
+	calTop
+	calRight
+	calBottom
+)
+
+type TChartUnits int32
+
+const (
+	cuPercent = iota + 0
+	cuAxis
+	cuGraph
+	cuPixel
+)
+
+type TChartAxisHitTest int32
+
+const (
+	ahtTitle = iota + 0
+	ahtLine
+	ahtLabels
+	ahtGrid
+	ahtAxisStart
+	ahtAxisCenter
+	ahtAxisEnd
+)
+
+// TChartAxisHitTests SET:TChartAxisHitTest
+type TChartAxisHitTests = TSet
+
+type TLegendMultiplicity int32
+
+const (
+	lmSingle = iota + 0
+	lmPoint
+	lmStyle
+)
+
+type TOverrideColor int32
+
+const (
+	ocBrush = iota + 0
+	ocPen
+)
+
+// TOverrideColors SET:TOverrideColor
+type TOverrideColors = TSet
+
+type TSeriesPointerStyle int32
+
+const (
+	psNone = iota + 0
+	psRectangle
+	psCircle
+	psCross
+	psDiagCross
+	psStar
+	psLowBracket
+	psHighBracket
+	psLeftBracket
+	psRightBracket
+	psDiamond
+	psTriangle
+	psLeftTriangle
+	psRightTriangle
+	psVertBar
+	psHorBar
+	psPoint
+	psDownTriangle
+	psHexagon
+	psFullStar
+)
+
+type TPieMarkPositions int32
+
+const (
+	pmpAround = iota + 0
+	pmpInside
+	pmpLeftRight
 )

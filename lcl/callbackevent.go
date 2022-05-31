@@ -73,6 +73,10 @@ func eventCallbackProc(f uintptr, args uintptr, _ int) uintptr {
 			return (*TRect)(getPtr(i))
 		}
 
+		getDoubleRectPtr := func(i int) *TDoubleRect {
+			return (*TDoubleRect)(getPtr(i))
+		}
+
 		getPointPtr := func(i int) *TPoint {
 			return (*TPoint)(getPtr(i))
 		}
@@ -956,6 +960,88 @@ func eventCallbackProc(f uintptr, args uintptr, _ int) uintptr {
 			v.(TUTF8KeyPressEvent)(
 				AsObject(getVal(0)),
 				(*TUTF8Char)(getPtr(1)))
+
+		case TChartAfterCustomDrawEvent:
+			v.(TChartAfterCustomDrawEvent)(
+				AsChart(getVal(0)),
+				(*IChartDrawer)(unsafe.Pointer(getVal(1))),
+				*getRectPtr(2),
+			)
+
+		case TChartDrawEvent:
+			v.(TChartDrawEvent)(
+				AsChart(getVal(0)),
+				(*IChartDrawer)(unsafe.Pointer(getVal(1))),
+			)
+
+		case TChartAfterDrawEvent:
+			v.(TChartAfterDrawEvent)(
+				AsChart(getVal(0)),
+				AsCanvas(getVal(1)),
+				*getRectPtr(2),
+			)
+
+		case TChartEvent:
+			v.(TChartEvent)(
+				AsChart(getVal(0)),
+			)
+
+		case TChartBeforeCustomDrawEvent:
+			v.(TChartBeforeCustomDrawEvent)(
+				AsChart(getVal(0)),
+				(*IChartDrawer)(unsafe.Pointer(getVal(1))),
+				*getRectPtr(2),
+				getBoolPtr(3),
+			)
+
+		case TChartBeforeDrawEvent:
+			v.(TChartBeforeDrawEvent)(
+				AsChart(getVal(0)),
+				AsCanvas(getVal(1)),
+				*getRectPtr(2),
+				getBoolPtr(3),
+			)
+
+		case TChartDrawLegendEvent:
+			v.(TChartDrawLegendEvent)(
+				AsChart(getVal(0)),
+				(*IChartDrawer)(unsafe.Pointer(getVal(1))),
+				AsChartLegendItems(getVal(2)),
+				*getPointPtr(3),
+				*getRectPtr(4),
+				int32(getVal(5)),
+				int32(getVal(6)),
+			)
+
+		case TChartExtentValidateEvent:
+			v.(TChartExtentValidateEvent)(
+				AsChart(getVal(0)),
+				getDoubleRectPtr(1),
+				getBoolPtr(2),
+			)
+
+		case TChartPaintEvent:
+			v.(TChartPaintEvent)(
+				AsChart(getVal(0)),
+				*getRectPtr(1),
+				getBoolPtr(2),
+			)
+
+		case TChartGetShapeEvent:
+			v.(TChartGetShapeEvent)(
+				AsChartTextElement(getVal(0)),
+				*getRectPtr(1),
+				(*[]TPoint)(unsafe.Pointer(getVal(2))),
+			)
+
+		case TChartGetAxisMarkTextEvent:
+			str := DStrToGoStr(getPtrVal(1))
+			v.(TChartGetAxisMarkTextEvent)(
+				AsObject(getVal(0)),
+				&str,
+				*(*float64)(unsafe.Pointer(getVal(2))),
+			)
+			setPtrVal(1, GoStrToDStr(str))
 
 		default:
 		}

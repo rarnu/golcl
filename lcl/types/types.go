@@ -13,6 +13,11 @@ type TPoint struct {
 	Y int32
 }
 
+type TDoublePoint struct {
+	X float64
+	Y float64
+}
+
 type TRect struct {
 	Left   int32
 	Top    int32
@@ -20,9 +25,28 @@ type TRect struct {
 	Bottom int32
 }
 
+type TDoubleRect struct {
+	A TDoublePoint
+	B TDoublePoint
+}
+
 type TSize struct {
 	Cx int32
 	Cy int32
+}
+
+type TChartValueText struct {
+	FText  string
+	FValue float64
+}
+
+type TChartAxisGroup struct {
+	FCount     int32
+	FFirstMark int32
+	FLastMark  int32
+	FMargin    int32
+	FSize      int32
+	FTitleSize int32
 }
 
 type HWND = uintptr
@@ -88,6 +112,12 @@ type TAtom = uint16
 type SIZE_T = uintptr
 
 type DWORD_PTR = uintptr
+
+type TChartDistance int64
+
+type TChartTransparency uint8
+
+type TLegendColumnCount uint64
 
 // TSet Pascal集合类型 set of xxx
 type TSet uint32
