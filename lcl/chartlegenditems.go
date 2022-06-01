@@ -19,3 +19,5 @@ func AsChartLegendItems(obj any) *TChartLegendItems {
 	}
 	return &TChartLegendItems{instance: instance, ptr: ptr}
 }
+
+// TODO: TChartLegendItems

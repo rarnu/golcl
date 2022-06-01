@@ -5,6 +5,7 @@ import (
 )
 
 type IChartDrawer interface {
+	IObject
 	AddToFontOrientation(ADelta int32)
 	ClippingStart(AClipRect TRect)
 	ClippingStop()

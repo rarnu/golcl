@@ -328,7 +328,7 @@ func PieSeries_Extent(obj uintptr) TDoubleRect {
 	return ret
 }
 
-func PieSeries_FindYRange(obj uintptr, AXMin, AXMax float64, AYMin, AYMax float64) {
+func PieSeries_FindYRange(obj uintptr, AXMin, AXMax float64, AYMin, AYMax *float64) {
 	_, _, _ = getLazyProc("PieSeries_FindYRange").Call(obj, uintptr(unsafe.Pointer(&AXMin)), uintptr(unsafe.Pointer(&AXMax)), uintptr(unsafe.Pointer(&AYMin)), uintptr(unsafe.Pointer(&AYMax)))
 }
 
@@ -397,7 +397,7 @@ func PieSeries_Draw(obj uintptr, ADrawer uintptr) {
 	_, _, _ = getLazyProc("PieSeries_Draw").Call(obj, ADrawer)
 }
 
-func PieSeries_GetAxisBounds(obj uintptr, AAxis uintptr, AMin, AMax float64) bool {
+func PieSeries_GetAxisBounds(obj uintptr, AAxis uintptr, AMin, AMax *float64) bool {
 	ret, _, _ := getLazyProc("PieSeries_GetAxisBounds").Call(obj, AAxis, uintptr(unsafe.Pointer(&AMin)), uintptr(unsafe.Pointer(&AMax)))
 	return DBoolToGoBool(ret)
 }
@@ -413,8 +413,8 @@ func PieSeries_IsEmpty(obj uintptr) bool {
 	return DBoolToGoBool(ret)
 }
 
-func PieSeries_MovePoint(obj uintptr, AIndex int32, ANewPos TPoint) {
-	_, _, _ = getLazyProc("PieSeries_MovePoint").Call(obj, uintptr(AIndex), uintptr(unsafe.Pointer(&ANewPos)))
+func PieSeries_MovePoint(obj uintptr, AIndex *int32, ANewPos TPoint) {
+	_, _, _ = getLazyProc("PieSeries_MovePoint").Call(obj, uintptr(unsafe.Pointer(&AIndex)), uintptr(unsafe.Pointer(&ANewPos)))
 }
 
 func PieSeries_MovePointEx(obj uintptr, AIndex int32, AXIndex, AYIndex int32, ANewPos TDoublePoint) {
@@ -423,4 +423,14 @@ func PieSeries_MovePointEx(obj uintptr, AIndex int32, AXIndex, AYIndex int32, AN
 
 func PieSeries_UpdateBiDiMode(obj uintptr) {
 	_, _, _ = getLazyProc("PieSeries_UpdateBiDiMode").Call(obj)
+}
+
+func PieSeries_GetParentChart(obj uintptr) uintptr {
+	ret, _, _ := getLazyProc("PieSeries_GetParentChart").Call(obj)
+	return ret
+}
+
+func PieSeries_GetSpecialPointPos(obj uintptr) bool {
+	ret, _, _ := getLazyProc("PieSeries_GetSpecialPointPos").Call(obj)
+	return DBoolToGoBool(ret)
 }

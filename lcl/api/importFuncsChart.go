@@ -1086,7 +1086,7 @@ func Chart_Draw(obj uintptr, ADrawer uintptr, ARect TRect) {
 	_, _, _ = getLazyProc("Chart_Draw").Call(obj, ADrawer, uintptr(unsafe.Pointer(&ARect)))
 }
 
-func Chart_DrawLegendOn(obj uintptr, ACanvas uintptr, ARect TRect) {
+func Chart_DrawLegendOn(obj uintptr, ACanvas uintptr, ARect *TRect) {
 	_, _, _ = getLazyProc("Chart_DrawLegendOn").Call(obj, ACanvas, uintptr(unsafe.Pointer(&ARect)))
 }
 
@@ -1094,7 +1094,7 @@ func Chart_EnableRedrawing(obj uintptr) {
 	_, _, _ = getLazyProc("Chart_EnableRedrawing").Call(obj)
 }
 
-func Chart_GetAllSeriesAxisLimits(obj uintptr, AAxis uintptr, AMin, AMax float64) {
+func Chart_GetAllSeriesAxisLimits(obj uintptr, AAxis uintptr, AMin, AMax *float64) {
 	_, _, _ = getLazyProc("Chart_GetAllSeriesAxisLimits").Call(obj, AAxis, uintptr(unsafe.Pointer(&AMin)), uintptr(unsafe.Pointer(&AMax)))
 }
 
@@ -1181,3 +1181,185 @@ func Chart_YImageToGraph(obj uintptr, AY int32) float64 {
 	_, _, _ = getLazyProc("Chart_YImageToGraph").Call(obj, uintptr(AY), uintptr(unsafe.Pointer(&ret)))
 	return ret
 }
+
+func Chart_GetCanvas(obj uintptr) uintptr {
+	ret, _, _ := getLazyProc("Chart_GetCanvas").Call(obj)
+	return ret
+}
+
+func Chart_SetCanvas(obj uintptr, value uintptr) {
+	_, _, _ = getLazyProc("Chart_SetCanvas").Call(obj, value)
+}
+
+func Chart_GetBorderStyle(obj uintptr) TBorderStyle {
+	ret, _, _ := getLazyProc("Chart_GetBorderStyle").Call(obj)
+	return TBorderStyle(ret)
+}
+
+func Chart_SetBorderStyle(obj uintptr, value TBorderStyle) {
+	_, _, _ = getLazyProc("Chart_SetBorderStyle").Call(obj, uintptr(value))
+}
+
+func Chart_SetOnPaint(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnPaint").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnClick").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnContextPopup(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnContextPopup").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnDragDrop(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnDragDrop").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnDragOver(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnDragOver").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnEndDrag(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnEndDrag").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnEnter").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnExit(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnExit").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnDblClick(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnDblClick").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnMouseDown(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnMouseDown").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnMouseEnter(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnMouseEnter").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnMouseLeave(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnMouseLeave").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnMouseMove(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnMouseMove").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnMouseUp(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnMouseUp").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_SetOnResize(obj uintptr, fn any) {
+	_, _, _ = getLazyProc("Chart_SetOnResize").Call(obj, addEventToMap(obj, fn))
+}
+
+func Chart_GetSeries(obj uintptr) uintptr {
+	ret, _, _ := getLazyProc("Chart_GetSeries").Call(obj)
+	return ret
+}
+
+func Chart_GetActiveToolIndex(obj uintptr) int32 {
+	ret, _, _ := getLazyProc("Chart_GetActiveToolIndex").Call(obj)
+	return int32(ret)
+}
+
+func Chart_GetChartHeight(obj uintptr) int32 {
+	ret, _, _ := getLazyProc("Chart_GetChartHeight").Call(obj)
+	return int32(ret)
+}
+
+func Chart_GetChartWidth(obj uintptr) int32 {
+	ret, _, _ := getLazyProc("Chart_GetChartWidth").Call(obj)
+	return int32(ret)
+}
+
+func Chart_GetClipRect(obj uintptr) TRect {
+	var ret TRect
+	_, _, _ = getLazyProc("Chart_GetClipRect").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return ret
+}
+
+func Chart_GetHorAxis(obj uintptr) uintptr {
+	ret, _, _ := getLazyProc("Chart_GetHorAxis").Call(obj)
+	return ret
+}
+
+func Chart_GetIsZoomed(obj uintptr) bool {
+	ret, _, _ := getLazyProc("Chart_GetIsZoomed").Call(obj)
+	return DBoolToGoBool(ret)
+}
+
+func Chart_GetSeriesCount(obj uintptr) int32 {
+	ret, _, _ := getLazyProc("Chart_GetSeriesCount").Call(obj)
+	return int32(ret)
+}
+
+func Chart_GetVertAxis(obj uintptr) uintptr {
+	ret, _, _ := getLazyProc("Chart_GetVertAxis").Call(obj)
+	return ret
+}
+
+func Chart_GetXGraphMax(obj uintptr) float64 {
+	var ret float64
+	_, _, _ = getLazyProc("Chart_GetXGraphMax").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return ret
+}
+
+func Chart_GetXGraphMin(obj uintptr) float64 {
+	var ret float64
+	_, _, _ = getLazyProc("Chart_GetXGraphMin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return ret
+}
+
+func Chart_GetYGraphMax(obj uintptr) float64 {
+	var ret float64
+	_, _, _ = getLazyProc("Chart_GetYGraphMax").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return ret
+}
+
+func Chart_GetYGraphMin(obj uintptr) float64 {
+	var ret float64
+	_, _, _ = getLazyProc("Chart_GetYGraphMin").Call(obj, uintptr(unsafe.Pointer(&ret)))
+	return ret
+}
+
+func Chart_GetDrawer(obj uintptr) uintptr {
+	ret, _, _ := getLazyProc("Chart_GetDrawer").Call(obj)
+	return ret
+}
+
+func Chart_GetScalingValid(obj uintptr) bool {
+	ret, _, _ := getLazyProc("Chart_GetScalingValid").Call(obj)
+	return DBoolToGoBool(ret)
+}
+
+/*
+
+procedure Chart_LockClipRect(AObj: TChart); extdecl;
+begin
+  handleExceptionBegin
+  AObj.LockClipRect();
+  handleExceptionEnd
+end;
+
+procedure Chart_UnlockClipRect(AObj: TChart); extdecl;
+begin
+  handleExceptionBegin
+  AObj.UnlockClipRect();
+  handleExceptionEnd
+end;
+
+procedure Chart_EraseBackground(AObj: TChart; DC: HDC); extdecl;
+begin
+  handleExceptionBegin
+  AObj.EraseBackground(DC);
+  handleExceptionEnd
+end;
+*/

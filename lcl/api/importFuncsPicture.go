@@ -120,3 +120,7 @@ func Picture_StaticClassType() TClass {
 	r, _, _ := getLazyProc("Picture_StaticClassType").Call()
 	return TClass(r)
 }
+
+func Picture_Clear(obj uintptr) {
+	_, _, _ = getLazyProc("Picture_Clear").Call(obj)
+}

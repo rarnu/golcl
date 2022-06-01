@@ -254,3 +254,7 @@ func (p *TPicture) Width() int32 {
 func (p *TPicture) SetOnChange(fn TNotifyEvent) {
 	Picture_SetOnChange(p.instance, fn)
 }
+
+func (p *TPicture) Clear() {
+	Picture_Clear(p.instance)
+}

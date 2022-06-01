@@ -19,3 +19,5 @@ func AsChartTextElement(obj any) *TChartTextElement {
 	}
 	return &TChartTextElement{instance: instance, ptr: ptr}
 }
+
+// TODO: TChartTextElement
