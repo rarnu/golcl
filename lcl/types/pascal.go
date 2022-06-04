@@ -58,6 +58,8 @@ type TFPCustomFont = uintptr
 
 type TFPCustomPen = uintptr
 
+type TCefCookiePriority = int32
+
 type TGridCoord struct {
 	X int32
 	Y int32

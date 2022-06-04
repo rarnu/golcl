@@ -1043,6 +1043,19 @@ func eventCallbackProc(f uintptr, args uintptr, _ int) uintptr {
 			)
 			setPtrVal(1, GoStrToDStr(str))
 
+		case TOnOKNotifyEvent:
+			v.(TOnOKNotifyEvent)(
+				AsObject(getVal(0)),
+				DBoolToGoBool(getVal(1)),
+			)
+
+		case TOnCookieSet:
+			v.(TOnCookieSet)(
+				AsObject(getVal(0)),
+				DBoolToGoBool(getVal(1)),
+				int32(getVal(2)),
+			)
+
 		default:
 		}
 	}

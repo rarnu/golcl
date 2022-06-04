@@ -2698,3 +2698,37 @@ const (
 	pmpInside
 	pmpLeftRight
 )
+
+type TCefCookieSameSite int32
+
+const (
+	CEF_COOKIE_SAME_SITE_UNSPECIFIED = iota + 0
+	CEF_COOKIE_SAME_SITE_NO_RESTRICTION
+	CEF_COOKIE_SAME_SITE_LAX_MODE
+	CEF_COOKIE_SAME_SITE_STRICT_MODE
+)
+
+type TCefCookiePref int32
+
+const (
+	cpDefault = iota + 0
+	cpAllow
+	cpBlock
+)
+
+type TCefState int32
+
+const (
+	STATE_DEFAULT = iota + 0
+	STATE_ENABLED
+	STATE_DISABLED
+)
+
+type TCefPdfPrintMarginType int32
+
+const (
+	PDF_PRINT_MARGIN_DEFAULT = iota + 0
+	PDF_PRINT_MARGIN_NONE
+	PDF_PRINT_MARGIN_MINIMUM
+	PDF_PRINT_MARGIN_CUSTOM
+)

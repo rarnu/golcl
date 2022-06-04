@@ -414,3 +414,9 @@ type TChartGetShapeEvent = func(sender IChartTextElement, ABoundingBox TRect, AP
 
 // procedure(Sender: TObject; var AText: String; AMark: Double) of Object;
 type TChartGetAxisMarkTextEvent = func(Sender IObject, AText *string, AMark float64)
+
+// procedure(Sender: TObject; AResultOK : boolean) of Object;
+type TOnOKNotifyEvent = func(sender IObject, resultOK bool)
+
+// procedure(Sender: TObject; aSuccess : boolean; aID : integer) of Object;
+type TOnCookieSet = func(sender IObject, aSuccess bool, aID int32)
