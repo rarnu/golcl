@@ -396,7 +396,7 @@ func Chromium_SetZoomStep(obj uintptr, value int32) {
 
 func Chromium_GetOptions(obj uintptr) uintptr {
 	ret, _, _ := getLazyProc("Chromium_GetOptions").Call(obj)
-	return ret // TODO: TChromiumOptions
+	return ret
 }
 
 func Chromium_SetOptions(obj uintptr, value uintptr) {
@@ -405,7 +405,7 @@ func Chromium_SetOptions(obj uintptr, value uintptr) {
 
 func Chromium_GetFontOptions(obj uintptr) uintptr {
 	ret, _, _ := getLazyProc("Chromium_GetFontOptions").Call(obj)
-	return ret // TODO: TChromiumFontOptions
+	return ret
 }
 
 func Chromium_SetFontOptions(obj uintptr, value uintptr) {
@@ -414,7 +414,7 @@ func Chromium_SetFontOptions(obj uintptr, value uintptr) {
 
 func Chromium_GetPDFPrintOptions(obj uintptr) uintptr {
 	ret, _, _ := getLazyProc("Chromium_GetPDFPrintOptions").Call(obj)
-	return ret // TODO: TPDFPrintOptions
+	return ret
 }
 
 func Chromium_SetPDFPrintOptions(obj uintptr, value uintptr) {

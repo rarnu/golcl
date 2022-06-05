@@ -61,7 +61,6 @@ func WindowFromPoint(point TPoint) HWND {
 
 /*
 
-// TODO： 实现
 // lcl接口
 function IsWindowEnabled(handle: HWND): boolean; {$IFDEF IF_BASE_MEMBER}virtual;{$ENDIF}
 function IsWindowVisible(handle: HWND): boolean; {$IFDEF IF_BASE_MEMBER}virtual;{$ENDIF}
