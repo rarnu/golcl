@@ -1,5 +1,14 @@
 package api
 
+func CefApplication_GetGlobalCEFApp() uintptr {
+	ret, _, _ := getLazyProc("CefApplication_GetGlobalCEFApp").Call()
+	return ret
+}
+
+func CefApplication_SetGlobalCEFApp(obj uintptr) {
+	_, _, _ = getLazyProc("CefApplication_SetGlobalCEFApp").Call(obj)
+}
+
 func CefApplication_Create() uintptr {
 	ret, _, _ := getLazyProc("CefApplication_Create").Call()
 	return ret

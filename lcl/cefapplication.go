@@ -45,6 +45,14 @@ func CefApplicationFromUnsafePointer(ptr unsafe.Pointer) *TCefApplication {
 	return AsCefApplication(ptr)
 }
 
+func GetGlobalCEFApp() *TCefApplication {
+	return AsCefApplication(CefApplication_GetGlobalCEFApp())
+}
+
+func SetGlobalCEFApp(value *TCefApplication) {
+	CefApplication_SetGlobalCEFApp(CheckPtr(value))
+}
+
 // Free 释放对象。
 func (a *TCefApplication) Free() {
 	if a.instance != 0 {
